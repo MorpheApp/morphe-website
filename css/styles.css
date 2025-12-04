@@ -20,6 +20,9 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header and Navigation */
@@ -27,16 +30,13 @@ header {
     background-color: var(--background);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 nav {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -47,169 +47,154 @@ nav {
     text-decoration: none;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
 /* Main Content */
 main {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Hero Section */
-.hero, .donations-hero {
+.hero {
     text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, var(--background-alt) 0%, var(--background) 100%);
-    border-radius: 1rem;
-    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
 }
 
-.hero h1, .donations-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
     color: var(--text-color);
 }
 
-.hero p, .donations-hero p {
-    font-size: 1.25rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.875rem 2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-}
-
-/* About Section */
-.about {
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about p {
+.description {
     font-size: 1.125rem;
     color: var(--text-light);
+    margin-bottom: 2.5rem;
     max-width: 600px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Donation Options */
-.donation-options {
-    padding: 3rem 0;
-}
-
-.donation-options h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.donation-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.donation-card {
-    background-color: var(--background-alt);
-    border: 1px solid var(--border-color);
-    border-radius: 0.75rem;
-    padding: 2rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.donation-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-.donation-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.donation-card p {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-}
-
-/* Donate Button */
-.donate-button {
+/* Download Button */
+.download-button {
     display: inline-block;
     background-color: var(--primary-color);
     color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
+    padding: 1rem 3rem;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
 }
 
-.donate-button:hover {
+.download-button:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
 }
 
-.donate-button:focus {
+.download-button:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
-/* Thank You Section */
-.thank-you {
+/* Donate Section */
+.donate-section {
+    padding: 2rem;
     text-align: center;
-    padding: 3rem 2rem;
+}
+
+.donate-collapse {
+    max-width: 500px;
+    margin: 0 auto;
     background-color: var(--background-alt);
-    border-radius: 1rem;
-    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
 }
 
-.thank-you h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+.donate-toggle {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
 }
 
-.thank-you p {
+.donate-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.donate-toggle::after {
+    content: '▼';
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] .donate-toggle::after {
+    transform: rotate(180deg);
+}
+
+.donate-toggle:hover {
+    background-color: var(--border-color);
+}
+
+.crypto-options {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.crypto-link {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.crypto-link:last-child {
+    margin-bottom: 0;
+}
+
+.crypto-link:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+.crypto-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.crypto-name {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.crypto-address {
+    display: block;
+    font-size: 0.875rem;
     color: var(--text-light);
-    font-size: 1.125rem;
+    font-family: monospace;
+    word-break: break-all;
 }
 
 /* Footer */
@@ -217,8 +202,8 @@ footer {
     background-color: var(--text-color);
     color: white;
     text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
+    padding: 1.5rem;
+    margin-top: auto;
 }
 
 footer p {
@@ -232,21 +217,17 @@ footer p {
         padding: 1rem;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 1rem;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    nav ul {
-        gap: 1rem;
-    }
-
-    .hero h1, .donations-hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p, .donations-hero p {
+    .description {
         font-size: 1rem;
+    }
+
+    .download-button {
+        padding: 0.875rem 2rem;
+        font-size: 1.125rem;
     }
 
     main {
