@@ -134,12 +134,16 @@ main {
 .faq-container {
     display: flex;
     justify-content: center;
+    /* Ensure expanded content is not clipped by parent containers on mobile */
+    overflow: visible;
 }
 
 .faq {
     max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s ease-out;
+    /* Use clip instead of hidden to allow smooth transitions without clipping issues on mobile */
+    overflow: clip;
+    /* Separate transitions for different properties for smoother animation */
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out, margin 0.5s ease-out, border-width 0.5s ease-out;
     background-color: var(--background-alt);
     border-radius: 0.75rem;
     border-width: 0;
@@ -152,11 +156,13 @@ main {
 }
 
 .faq.open {
-    max-height: 1000px;
+    /* max-height is now set dynamically via JavaScript using scrollHeight to prevent clipping */
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-top: 2rem;
     border-width: 1px;
+    /* Allow content to display fully after animation completes */
+    overflow: visible;
 }
 
 .faq h2 {
@@ -165,6 +171,10 @@ main {
 
 .faq-item {
     margin-bottom: 1.5rem;
+    /* Scroll margin ensures FAQ items are visible below any fixed header when scrolled into view */
+    scroll-margin-top: 80px;
+    /* Fallback for older browsers */
+    scroll-snap-margin-top: 80px;
 }
 
 .faq-item:last-child {
@@ -173,6 +183,11 @@ main {
 
 .faq-item h3 {
     margin-bottom: 0.5rem;
+}
+
+/* FAQ link section needs scroll margin for proper positioning when FAQ opens */
+#faq-link-section {
+    scroll-margin-top: 20px;
 }
 
 
@@ -312,5 +327,17 @@ details[open] .donate-toggle::after {
 
     main {
         padding: 1rem;
+        /* Enable smooth scrolling on iOS for FAQ expansion */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Ensure FAQ container allows full content visibility on mobile */
+    .faq-container {
+        overflow: visible;
+    }
+
+    /* Prevent body scroll issues when FAQ is open on mobile */
+    .faq.open {
+        overflow: visible;
     }
 }
