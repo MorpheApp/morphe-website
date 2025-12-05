@@ -147,7 +147,8 @@ main {
     max-height: 0;
     /* Use clip instead of hidden to allow smooth transitions without clipping issues on mobile */
     overflow: clip;
-    /* Separate transitions for different properties for smoother animation - removed margin-top to prevent layout shift */
+    /* Separate transitions for different properties for smoother animation.
+       Note: margin-top is on .faq-container (not here) to prevent layout shift when FAQ opens/closes */
     transition: max-height 0.5s ease-out, padding 0.5s ease-out, border-width 0.5s ease-out;
     background-color: var(--background-alt);
     border-radius: 0.75rem;
