@@ -59,13 +59,13 @@ main {
 }
 
 /* Hero Section */
-.hero {
+.hero, .donate-hero {
     text-align: center;
     padding: 3rem 2rem;
     margin-bottom: 2rem;
 }
 
-.hero h1 {
+.hero h1, .donate-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
@@ -103,6 +103,42 @@ main {
 .download-button:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* Donate Link Section (on main page) */
+.donate-link-section {
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+.donate-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.donate-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Back Link Section (on donate page) */
+.back-link-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.back-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary-color);
 }
 
 /* Donate Section */
@@ -197,27 +233,13 @@ details[open] .donate-toggle::after {
     word-break: break-all;
 }
 
-/* Footer */
-footer {
-    background-color: var(--text-color);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-}
-
-footer p {
-    font-size: 0.875rem;
-    opacity: 0.8;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
         padding: 1rem;
     }
 
-    .hero h1 {
+    .hero h1, .donate-hero h1 {
         font-size: 2.5rem;
     }
 
