@@ -20,6 +20,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -82,6 +83,7 @@ main {
 .hero-logo {
     max-width: 90%;
     height: auto;
+    margin-bottom: 2.5rem;
 }
 
 /* Download Button */
@@ -137,20 +139,24 @@ main {
 .faq {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: all 0.5s ease-out;
     background-color: var(--background-alt);
     border-radius: 0.75rem;
-    border: 1px solid transparent;
-    margin-top: 2rem;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--border-color);
+    margin-top: 0;
     padding: 0 2rem;
     width: 100%;
-    max-width: 600px; /* Or other desired width */
+    max-width: 600px;
 }
 
 .faq.open {
-    max-height: 1000px; /* Adjust as needed */
-    padding: 2rem;
-    border-color: var(--border-color);
+    max-height: 1000px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    border-width: 1px;
 }
 
 .faq-item {
@@ -281,6 +287,11 @@ details[open] .donate-toggle::after {
         padding: 1rem;
     }
 
+    .hero, .donate-hero {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .hero h1, .donate-hero h1 {
         font-size: 2.5rem;
     }
@@ -288,7 +299,6 @@ details[open] .donate-toggle::after {
     .description {
         font-size: 1rem;
         max-width: 100%;
-        padding: 0 1rem;
     }
 
     .download-button {
