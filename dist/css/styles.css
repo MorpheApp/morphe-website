@@ -58,7 +58,8 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* Use flex-start instead of center to prevent layout shift when FAQ opens/closes */
+    justify-content: flex-start;
 }
 
 /* Hero Section */
