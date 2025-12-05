@@ -58,7 +58,8 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* Use flex-start instead of center to prevent layout shift when FAQ opens/closes */
+    justify-content: flex-start;
 }
 
 /* Hero Section */
@@ -139,20 +140,22 @@ main {
     justify-content: center;
     /* Ensure expanded content is not clipped by parent containers on mobile */
     overflow: visible;
+    /* Always reserve space for the FAQ section margin to prevent layout shift */
+    margin-top: 2rem;
 }
 
 .faq {
     max-height: 0;
     /* Use clip instead of hidden to allow smooth transitions without clipping issues on mobile */
     overflow: clip;
-    /* Separate transitions for different properties for smoother animation */
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out, margin 0.5s ease-out, border-width 0.5s ease-out;
+    /* Separate transitions for different properties for smoother animation.
+       Note: margin-top is on .faq-container (not here) to prevent layout shift when FAQ opens/closes */
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out, border-width 0.5s ease-out;
     background-color: var(--background-alt);
     border-radius: 0.75rem;
     border-width: 0;
     border-style: solid;
     border-color: var(--border-color);
-    margin-top: 0;
     padding: 0 2rem;
     width: 100%;
     max-width: 600px;
@@ -162,7 +165,6 @@ main {
     /* max-height is now set dynamically via JavaScript using scrollHeight to prevent clipping */
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-top: 2rem;
     border-width: 1px;
     /* Allow content to display fully after animation completes */
     overflow: visible;
