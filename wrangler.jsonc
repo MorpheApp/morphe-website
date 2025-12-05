@@ -1,0 +1,5 @@
+{
+  "name": "morphe-website",
+  "compatibility_date": "2025-12-05",
+  "pages_build_output_dir": "./static"
+}
