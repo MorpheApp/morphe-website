@@ -13,6 +13,9 @@
     --background: #ffffff;
     --background-alt: #f9fafb;
     --border-color: #e5e7eb;
+    /* FAQ section spacing - used for scroll margins and padding calculations */
+    --faq-scroll-margin: 80px;
+    --faq-section-padding: 2rem;
 }
 
 body {
@@ -51,7 +54,7 @@ nav {
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem; /* Reduced top padding from 2rem to 1rem */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -172,9 +175,7 @@ main {
 .faq-item {
     margin-bottom: 1.5rem;
     /* Scroll margin ensures FAQ items are visible below any fixed header when scrolled into view */
-    scroll-margin-top: 80px;
-    /* Fallback for older browsers */
-    scroll-snap-margin-top: 80px;
+    scroll-margin-top: var(--faq-scroll-margin);
 }
 
 .faq-item:last-child {
@@ -187,7 +188,7 @@ main {
 
 /* FAQ link section needs scroll margin for proper positioning when FAQ opens */
 #faq-link-section {
-    scroll-margin-top: 20px;
+    scroll-margin-top: calc(var(--faq-scroll-margin) / 4);
 }
 
 

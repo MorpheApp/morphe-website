@@ -94,8 +94,11 @@
             // Calculate the actual content height dynamically to avoid clipping
             // This replaces static max-height values which can cause content cutoff on mobile
             const scrollHeight = faqSection.scrollHeight;
-            // Add extra padding to account for paddings applied in .open state
-            const extraPadding = 64; // 2rem top + 2rem bottom padding
+            // Calculate extra padding from CSS custom property (--faq-section-padding)
+            // Default to 64px (2rem * 2 for top + bottom) if not available
+            const rootStyles = getComputedStyle(document.documentElement);
+            const sectionPadding = parseFloat(rootStyles.getPropertyValue('--faq-section-padding')) || 32;
+            const extraPadding = sectionPadding * 2; // top + bottom padding
             faqSection.style.maxHeight = (scrollHeight + extraPadding) + 'px';
             faqSection.classList.add('open');
 
@@ -105,7 +108,7 @@
                 if (event.propertyName === 'max-height') {
                     faqSection.style.maxHeight = 'none';
                     // Scroll the FAQ toggle link into view so users can see the content
-                    // Uses 'nearest' block to minimize scrolling while ensuring visibility
+                    // Uses 'start' block to position FAQ at top of viewport
                     document.getElementById('faq-link-section').scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -115,13 +118,18 @@
             });
         } else {
             // When closing, first set a fixed max-height to enable smooth transition
-            // Then immediately trigger the closing animation
+            // Then use nested requestAnimationFrame to ensure the browser applies the
+            // initial max-height before starting the closing animation
             const currentHeight = faqSection.scrollHeight;
             faqSection.style.maxHeight = currentHeight + 'px';
-            // Force a reflow to ensure the max-height is applied before removing
-            faqSection.offsetHeight; // eslint-disable-line no-unused-expressions
-            faqSection.classList.remove('open');
-            faqSection.style.maxHeight = '0';
+            // Double requestAnimationFrame ensures the browser has painted the initial state
+            // before we trigger the transition to 0
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    faqSection.classList.remove('open');
+                    faqSection.style.maxHeight = '0';
+                });
+            });
         }
     });
 </script>
