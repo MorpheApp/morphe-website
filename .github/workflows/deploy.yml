@@ -1,13 +1,14 @@
-name: Deploy to Cloudflare Pages
+name: Deploy
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
+      - dev
   pull_request:
     branches:
-      - main
-
+      - dev
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,5 +26,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: morphe-website
-          directory: .
+          directory: static
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
