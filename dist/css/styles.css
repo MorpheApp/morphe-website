@@ -159,6 +159,10 @@ main {
     border-width: 1px;
 }
 
+.faq h2 {
+    margin-bottom: 2rem;
+}
+
 .faq-item {
     margin-bottom: 1.5rem;
 }
