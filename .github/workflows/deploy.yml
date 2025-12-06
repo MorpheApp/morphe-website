@@ -21,6 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Add noindex meta tag for non-main branches
+        if: github.ref != 'refs/heads/main'
+        run: |
+          find ./dist -name "*.html" -exec sed -i 's|<head\([^>]*\)>|<head\1>\n    <meta name="robots" content="noindex, nofollow">|' {} \;
+
       - name: Install Wrangler
         run: npm install -g wrangler
 
