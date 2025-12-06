@@ -1,0 +1,68 @@
+name: Generate robots for non-main branches
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: ['**']
+
+jobs:
+  generate-robots:
+    name: Build and generate robots (safe, non-main only)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (skip if not a Node project)
+        run: |
+          if [ -f package-lock.json ] || [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json found; skipping npm install"
+          fi
+
+      - name: Build
+        # This step assumes the repo has an npm run build; if the project uses another build, adjust this command.
+        run: |
+          if [ -f package.json ]; then
+            if npm run | grep -q ' build'; then
+              npm run build
+            else
+              echo "No npm build script found; skipping build step in this workflow."
+            fi
+          else
+            echo "No package.json - build step skipped. Ensure your project's build occurs before this workflow or adapt the workflow accordingly."
+          fi
+        env:
+          CI: true
+
+      - name: Generate robots for non-main branches
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+        run: |
+          if [ -f scripts/generate-robots.js ]; then
+            node scripts/generate-robots.js
+          else
+            echo "scripts/generate-robots.js not found; skipping."
+          fi
+
+      - name: Verify robots.txt exists for non-main branches
+        if: ${{ github.ref_name != 'main' }}
+        run: |
+          echo "Branch: ${{ github.ref_name }}"
+          if [ -f dist/robots.txt ]; then
+            echo "robots.txt found:"
+            cat dist/robots.txt
+          else
+            echo "Error: dist/robots.txt not found for non-main branch."
+            ls -la dist || true
+            exit 1
+          fi
