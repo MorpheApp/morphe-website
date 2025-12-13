@@ -99,6 +99,13 @@ main {
 
 
 /* Social and Navigation Links */
+
+.plain-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer !important;
+}
+
 .social-links {
     margin-top: 2rem;
     margin-bottom: 1rem;
