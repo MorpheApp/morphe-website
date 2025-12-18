@@ -3,158 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="This is Morphe. An Android app that modifies other Android apps. And welcome to you, who has discovered Morphe.">
-    <title>Morphe</title>
+    <meta name="description" content="Morphe - Next generation Android app patching for YouTube and YouTube Music">
+    <title>Morphe - Transform Your Apps</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="https://cloud.umami.is/script.js"
-            data-website-id="faa54201-a249-4ddc-9732-88c6ac7fdf5f"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="faa54201-a249-4ddc-9732-88c6ac7fdf5f"></script>
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
 </head>
 <body>
-<main>
-    <section class="section hero-section">
-        <p class="description">From the developers that brought you the greatest modded YouTube apps,
-            comes the next generation of patching</p>
-        <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="logo">
-
-        <a href="https://morphe.software/download" class="btn btn-primary" data-umami-event="Download Button Click">
-            Download YouTube Morphe</a>
-    </section>
-
-    <section class="section social-links">
-        <a href="https://github.com/MorpheApp" target="_blank" data-umami-event="GitHub Link Click">
-            <img src="images/github.svg" alt="GitHub"></a>
-        <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="X Link Click">
-            <img src="images/X.svg" alt="X"></a>
-        <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Reddit Link Click">
-            <img src="images/reddit.svg" alt="Reddit"></a>
-    </section>
-
-    <section class="section">
-        <a href="donate" class="link" data-umami-event="Donate Link Click">Support us with a donation →</a>
-    </section>
-
-    <section class="section" id="faq-link-section">
-        <a href="#" id="faq-toggle" class="link" data-umami-event="FAQ Toggle Click">Frequently asked questions →</a>
-    </section>
-
-    <div class="faq-section">
-        <section class="faq-content" id="faq-content">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>📱 What apps can Morphe patch?</h3>
-                <p>You can patch any app you want. As long as you want YouTube or YouTube Music.</p>
-            </div>
-            <div class="faq-item">
-                <h3>🛡 Is Morphe safe?</h3>
-                <p>As safe as modifying obfuscated bytecode can be. All source code for Morphe is
-                    open source, and free for anyone to inspect.</p>
-            </div>
-            <div class="faq-item">
-                <h3>🧱 Will Morphe brick my phone?</h3>
-                <p>Only if your phone decides to brick itself. Otherwise your device will be fine.</p>
-            </div>
-            <div class="faq-item">
-                <h3>🚀 Can I use Morphe to turn my app experience up to 11?</h3>
-                <p>Yes, but don't blame Morphe if your app becomes too customized for
-                    you to handle. It's recommended to customize up to your
-                    preference level and no more.</p>
-            </div>
-            <div class="faq-item">
-                <h3>🔎 What's Morphe's privacy policy?</h3>
-                <p>This website uses
-                    <a href="https://umami.is" class="plain-link" rel="noopener noreferrer"
-                       target="_blank" data-umami-event="FAQ Umami Link Click">Umami</a>
-                    for analytics: no cookies, no personal data, nothing sold, and nothing shared.
-                    Morphe does not add analytics or data collection to any patched apps.</p>
-            </div>
-            <div class="faq-item">
-                <h3>🤔 Why the name Morphe?</h3>
-                <p>Because "Android App Modification And Transformation Tool" (AAMATT) is not
-                    very catchy. And because Morphe implies it morphs your apps.</p>
-            </div>
-            <div class="faq-item">
-                <h3>🪄 Is Morphe magic? </h3>
-                <p>No. But also yes.</p>
-            </div>
-            <div class="faq-item">
-                <h3>💖 Can I contribute to Morphe?</h3>
-                <p>Yes! See the contribution guidelines in our
-                    <a href="https://github.com/MorpheApp/" class="link" rel="noopener noreferrer"
-                       data-umami-event="FAQ GitHub Link Click">GitHub repos</a>.
-                    If you don't have any developer skills then we are always appreciative of
-                    <a href="donate" class="link" data-umami-event="FAQ Donate Link Click">donations</a>
-                    to help pay the bills.</p>
-            </div>
-        </section>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark">
+        </a>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#donate" class="nav-link">Donate</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-</main>
+</nav>
 
-<script>
-    /**
-     * FAQ Toggle Functionality
-     * 
-     * This implementation fixes mobile clipping issues by:
-     * 1. Using dynamic scrollHeight instead of static max-height (prevents content cutoff)
-     * 2. Setting max-height to 'none' after transition completes (allows flexible content)
-     * 3. Scrolling the FAQ section into view with smooth behavior
-     * 
-     * Issue context: On mobile browsers, FAQ content was being clipped because
-     * static max-height values (e.g., 1000px) may not accommodate all content,
-     * and overflow:hidden was preventing visibility of expanded items.
-     */
-    document.getElementById('faq-toggle').addEventListener('click', function(e) {
-        e.preventDefault();
-        const faqSection = document.getElementById('faq-content');
-        const isOpening = !faqSection.classList.contains('open');
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">Next Generation Patching</div>
+            <h1 class="hero-title">Transform Your <span class="gradient-text">Android Apps</span></h1>
+            <p class="hero-description">
+                From the developers that brought you the greatest modded YouTube apps,
+                comes Morphe - the powerful app modification tool that puts you in control.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://morphe.software/download" class="btn btn-primary" data-umami-event="Download Button Click">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Now
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <div class="card-icon">📱</div>
+                <div class="card-text">YouTube</div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">🎵</div>
+                <div class="card-text">YouTube Music</div>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon">⚡</div>
+                <div class="card-text">Fast Patching</div>
+            </div>
+            <div class="hero-image-container">
+                <img src="images/morphe_logo_with_frame.svg" alt="Morphe Logo" class="hero-logo">
+            </div>
+        </div>
+    </div>
 
-        if (isOpening) {
-            // Calculate the actual content height dynamically to avoid clipping
-            // This replaces static max-height values which can cause content cutoff on mobile
-            const scrollHeight = faqSection.scrollHeight;
-            // Calculate extra padding from CSS custom property (--faq-section-padding)
-            // Default to 64px (2rem * 2 for top + bottom) if not available
-            const rootStyles = getComputedStyle(document.documentElement);
-            const sectionPadding = parseFloat(rootStyles.getPropertyValue('--faq-section-padding')) || 32;
-            const extraPadding = sectionPadding * 2; // top + bottom padding
-            faqSection.style.maxHeight = (scrollHeight + extraPadding) + 'px';
-            faqSection.classList.add('open');
+    <!-- Social Links -->
+    <div class="social-section">
+        <p class="social-label">Join the Community</p>
+        <div class="social-links">
+            <a href="https://github.com/MorpheApp" target="_blank" class="social-link" data-umami-event="GitHub Link Click">
+                <img src="images/github.svg" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+            <a href="https://x.com/MorpheApp" target="_blank" class="social-link" data-umami-event="X Link Click">
+                <img src="images/X.svg" alt="X">
+                <span>X (Twitter)</span>
+            </a>
+            <a href="https://reddit.com/r/MorpheApp" target="_blank" class="social-link" data-umami-event="Reddit Link Click">
+                <img src="images/reddit.svg" alt="Reddit">
+                <span>Reddit</span>
+            </a>
+        </div>
+    </div>
+</section>
 
-            // After transition completes, set max-height to none for flexible content
-            // This ensures any dynamic content changes won't be clipped
-            faqSection.addEventListener('transitionend', function onOpenTransitionEnd(event) {
-                if (event.propertyName === 'max-height') {
-                    faqSection.style.maxHeight = 'none';
-                    // Scroll the FAQ toggle link into view so users can see the content
-                    // Uses 'start' block to position FAQ at top of viewport
-                    document.getElementById('faq-link-section').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    faqSection.removeEventListener('transitionend', onOpenTransitionEnd);
-                }
-            });
-        } else {
-            // When closing, first set a fixed max-height to enable smooth transition
-            // Then use nested requestAnimationFrame to ensure the browser applies the
-            // initial max-height before starting the closing animation
-            const currentHeight = faqSection.scrollHeight;
-            faqSection.style.maxHeight = currentHeight + 'px';
-            // Double requestAnimationFrame ensures the browser has painted the initial state
-            // before we trigger the transition to 0
-            requestAnimationFrame(function() {
-                requestAnimationFrame(function() {
-                    faqSection.classList.remove('open');
-                    faqSection.style.maxHeight = '0';
-                });
-            });
-        }
-    });
-</script>
+<!-- How It Works Section -->
+<section id="how-it-works" class="how-it-works">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">How Morphe Works</h2>
+            <p class="section-subtitle">Simple, powerful, and built for everyone</p>
+        </div>
 
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3 class="feature-title">1. Download Morphe</h3>
+                <p class="feature-description">
+                    Get the latest version of Morphe from our official download page.
+                    Install it on your Android device - no root required.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                        <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                </div>
+                <h3 class="feature-title">2. Choose Your App</h3>
+                <p class="feature-description">
+                    Currently supports YouTube and YouTube Music. Select the app you want to modify
+                    and choose from various customization options.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <h3 class="feature-title">3. Apply Patches</h3>
+                <p class="feature-description">
+                    Morphe will automatically patch your selected app with the modifications you chose.
+                    The process is fast and straightforward.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3 class="feature-title">4. Install & Enjoy</h3>
+                <p class="feature-description">
+                    Install the patched app and enjoy your customized experience.
+                    All source code is open for anyone to inspect and verify.
+                </p>
+            </div>
+        </div>
+
+        <div class="supported-apps">
+            <h3 class="supported-title">Supported Apps</h3>
+            <div class="app-badges">
+                <div class="app-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <span>YouTube</span>
+                </div>
+                <div class="app-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                    <span>YouTube Music</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="faq">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about Morphe</p>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">📱</span>
+                    <span class="faq-text">What apps can Morphe patch?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You can patch any app you want. As long as you want YouTube or YouTube Music. We're constantly working on expanding support to more apps.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">🛡</span>
+                    <span class="faq-text">Is Morphe safe?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">🧱</span>
+                    <span class="faq-text">Will Morphe brick my phone?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">🚀</span>
+                    <span class="faq-text">Can I customize apps to my preference?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">🔎</span>
+                    <span class="faq-text">What's Morphe's privacy policy?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>This website uses <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link">Umami</a> for analytics: no cookies, no personal data, nothing sold, and nothing shared. Morphe does not add analytics or data collection to any patched apps.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">🤔</span>
+                    <span class="faq-text">Why the name Morphe?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">🪄</span>
+                    <span class="faq-text">Is Morphe magic?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No. But also yes. It's advanced bytecode manipulation that feels like magic, but it's actually just really smart engineering.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-icon">💖</span>
+                    <span class="faq-text">Can I contribute to Morphe?</span>
+                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! See the contribution guidelines in our <a href="https://github.com/MorpheApp/" target="_blank" rel="noopener noreferrer" class="inline-link">GitHub repos</a>. If you don't have developer skills, we always appreciate <a href="#donate" class="inline-link">donations</a> to help pay the bills.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Donate Section -->
+<section id="donate" class="donate">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Support Morphe</h2>
+            <p class="section-subtitle">Your contribution helps us continue developing and improving Morphe</p>
+        </div>
+
+        <div class="donate-content">
+            <div class="donate-info">
+                <h3>Why Donate?</h3>
+                <ul class="donate-benefits">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Keep Morphe free and open source</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Support ongoing development</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Help cover infrastructure costs</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Enable faster bug fixes and features</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="crypto-cards">
+                <a href="bitcoin:3N97T2VLGnZH5g4gGNT4qh8LMZ7aRHdJ7Q" class="crypto-card" data-umami-event="Bitcoin Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Bitcoin</span>
+                        <span class="crypto-symbol">BTC</span>
+                    </div>
+                    <div class="crypto-address">3N97T2VLGnZH5g4gGNT4qh8LMZ7aRHdJ7Q</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="ethereum:0x4b16623bed0d8485d5368214279372bd1d3501c2" class="crypto-card" data-umami-event="Ethereum Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Ethereum</span>
+                        <span class="crypto-symbol">ETH</span>
+                    </div>
+                    <div class="crypto-address">0x4b16623bed0d8485d5368214279372bd1d3501c2</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="litecoin:MVjvqt6AA6DmDXUgXyJMg6gQe7MD6WSqpB" class="crypto-card" data-umami-event="Litecoin Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Litecoin</span>
+                        <span class="crypto-symbol">LTC</span>
+                    </div>
+                    <div class="crypto-address">MVjvqt6AA6DmDXUgXyJMg6gQe7MD6WSqpB</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="monero:48HvobHs4iiET9R8FEV37zNPeE5jGtTJ1eQpveSCwSVZ1zveU9D73VyM2FnXQc5DPLZ5wpeR9aQgjVe3oyfoXXzzDsChepf" class="crypto-card" data-umami-event="Monero Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Monero</span>
+                        <span class="crypto-symbol">XMR</span>
+                    </div>
+                    <div class="crypto-address">48HvobHs4iiET9R8FEV37zNPeE5jGtTJ1eQpveSCwSVZ1zveU9D73VyM2FnXQc5DPLZ5wpeR9aQgjVe3oyfoXXzzDsChepf</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="dogecoin:DPB88ZiBYtR4TESBXdnT7AZsiB4PRWYNHw" class="crypto-card" data-umami-event="Dogecoin Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Dogecoin</span>
+                        <span class="crypto-symbol">DOGE</span>
+                    </div>
+                    <div class="crypto-address">DPB88ZiBYtR4TESBXdnT7AZsiB4PRWYNHw</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
+                <p>Next generation Android app patching</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#home">Home</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="https://morphe.software/download">Download</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <a href="https://github.com/MorpheApp" target="_blank">GitHub</a>
+                    <a href="https://x.com/MorpheApp" target="_blank">X (Twitter)</a>
+                    <a href="https://reddit.com/r/MorpheApp" target="_blank">Reddit</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <a href="#faq">FAQ</a>
+                    <a href="#donate">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Morphe. Open source and free forever.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
