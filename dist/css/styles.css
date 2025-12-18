@@ -133,17 +133,35 @@ body {
     border: none;
     cursor: pointer;
     padding: var(--spacing-sm);
+    position: relative;
 }
 
 .mobile-menu-toggle span {
     width: 24px;
     height: 2px;
     background: var(--text-primary);
-    transition: var(--transition-base);
+    transition: all var(--transition-base);
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+    top: 8px;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+    top: 16px;
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+    top: 24px;
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    top: 16px;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .mobile-menu-toggle.active span:nth-child(2) {
@@ -151,7 +169,8 @@ body {
 }
 
 .mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    top: 16px;
+    transform: translateX(-50%) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -966,19 +985,12 @@ body {
     }
 
     .hero-visual {
-        height: 300px;
+        height: 200px;
     }
 
+    /* Hide all floating cards on mobile */
     .floating-card {
-        padding: var(--spacing-sm);
-    }
-
-    .card-icon {
-        font-size: 1.5rem;
-    }
-
-    .card-text {
-        font-size: 0.875rem;
+        display: none;
     }
 
     .section-title {
@@ -1031,10 +1043,7 @@ body {
         justify-content: center;
     }
 
-    .floating-card.card-4,
-    .floating-card.card-5,
-    .floating-card.card-6,
-    .floating-card.card-7 {
-        display: none;
+    .hero-visual {
+        height: 150px;
     }
 }
