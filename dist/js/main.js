@@ -329,14 +329,11 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     }
 
-    // Select ONLY 5 random serious and 5 random funny = 10 total
     // Every time the page loads, the selection changes
-    const selectedSerious = selectRandomTestimonials(seriousTestimonials, 5);
-    const selectedFunny = selectRandomTestimonials(funnyTestimonials, 5);
-    const displayedTestimonials = [...selectedSerious, ...selectedFunny];
+    const allTestimonials = [...seriousTestimonials, ...funnyTestimonials];
 
     // Shuffle the final list for more variety
-    const shuffledFinal = shuffleArray(displayedTestimonials);
+    const shuffledFinal = shuffleArray(allTestimonials);
 
     // Insert testimonials into DOM
     const grid = document.getElementById('testimonials-grid');
