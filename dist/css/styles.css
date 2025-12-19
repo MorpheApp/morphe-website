@@ -1070,9 +1070,33 @@ body {
         align-items: center;
     }
 
+    /* Mobile testimonials styling */
+    .testimonials-carousel {
+        padding: 0 var(--spacing-md);
+    }
+
     .testimonials-grid .testimonial-card {
-        flex: 0 0 100%;
-        min-width: 100%;
+        flex: 0 0 calc(100% - var(--spacing-xl));
+        min-width: calc(100% - var(--spacing-xl));
+        height: auto;
+        min-height: auto;
+    }
+
+    .carousel-button {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-button:hover {
+        background: rgba(255, 255, 255, 0.5);
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .author-avatar {
+        flex-shrink: 0;
+        min-width: 48px;
+        min-height: 48px;
     }
 
     .gradient-blob {
