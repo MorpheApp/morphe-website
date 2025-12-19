@@ -265,11 +265,7 @@ body {
     border-radius: var(--radius-2xl);
 }
 
-.hero-image-container {
-    display: none;
-}
-
-/* Animated Gradient Background - OPTIMIZED FOR MOBILE */
+/* Animated Gradient Background */
 .gradient-background {
     position: absolute;
     top: 0;
@@ -280,7 +276,7 @@ body {
     z-index: 0;
     border-radius: var(--radius-2xl);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
-    will-change: contents;
+    will-change: transform;
 }
 
 .gradient-blob {
@@ -288,15 +284,9 @@ body {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     opacity: 0.3;
     animation: blob-float 20s ease-in-out infinite;
-
-    /* GPU Optimization */
     will-change: transform;
     transform: translateZ(0);
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-
-    /* Optimized blur - reduced from 80px to 50px */
-    filter: blur(50px);
 }
 
 .blob-1 {
@@ -306,6 +296,7 @@ body {
     top: -10%;
     left: -10%;
     animation-delay: 0s;
+    filter: blur(50px);
 }
 
 .blob-2 {
@@ -315,6 +306,7 @@ body {
     top: 20%;
     right: -10%;
     animation-delay: 4s;
+    filter: blur(50px);
 }
 
 .blob-3 {
@@ -324,9 +316,9 @@ body {
     bottom: -10%;
     left: 30%;
     animation-delay: 2s;
+    filter: blur(50px);
 }
 
-/* Optimized keyframes - only transform, no border-radius changes */
 @keyframes blob-float {
     0%, 100% {
         transform: translate(0, 0) scale(1) translateZ(0);
@@ -391,41 +383,6 @@ body {
     color: var(--text-primary);
     text-align: center;
     transition: color var(--transition-base);
-}
-
-.floating-card {
-    display: none;
-}
-
-.card-icon {
-    font-size: 2rem;
-}
-
-.card-text {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-.floating-card.card-7 {
-    animation: float-center 3s ease-in-out infinite;
-}
-
-@keyframes float-center {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-20px);
-    }
 }
 
 /* Social Section */
@@ -634,17 +591,6 @@ body {
 
 .carousel-button.next {
     right: 0;
-}
-
-.carousel-button:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-.carousel-button:disabled:hover {
-    border-color: var(--border);
-    background: white;
-    color: inherit;
 }
 
 .testimonial-card {
@@ -1061,26 +1007,6 @@ body {
         font-size: 0.75rem;
     }
 
-    /* Mobile blob optimization */
-    .gradient-blob {
-        filter: blur(40px);
-    }
-
-    .blob-1 {
-        width: 300px;
-        height: 300px;
-    }
-
-    .blob-2 {
-        width: 250px;
-        height: 250px;
-    }
-
-    .blob-3 {
-        width: 200px;
-        height: 200px;
-    }
-
     .section-title {
         font-size: 2rem;
     }
@@ -1102,22 +1028,28 @@ body {
         align-items: center;
     }
 
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-
     .testimonials-grid .testimonial-card {
         flex: 0 0 100%;
         min-width: 100%;
     }
 
-    .carousel-button {
-        width: 40px;
-        height: 40px;
+    .gradient-blob {
+        animation: none !important;
+        filter: blur(15px) !important;
+        opacity: 0.2 !important;
     }
 
-    .testimonials-carousel {
-        padding: 0 var(--spacing-xl);
+    .blob-1, .blob-2, .blob-3 {
+        filter: blur(15px) !important;
+    }
+
+    .feature-icon-item {
+        backdrop-filter: none !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+    }
+
+    .gradient-background {
+        background: linear-gradient(to bottom, rgba(240, 248, 255, 0.9), rgba(255, 255, 255, 0.95));
     }
 }
 
@@ -1155,6 +1087,6 @@ body {
 
     /* Extra mobile optimization */
     .gradient-blob {
-        filter: blur(35px);
+        filter: blur(10px) !important;
     }
 }
