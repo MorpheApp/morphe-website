@@ -269,7 +269,7 @@ body {
     display: none;
 }
 
-/* Animated Gradient Background */
+/* Animated Gradient Background - OPTIMIZED FOR MOBILE */
 .gradient-background {
     position: absolute;
     top: 0;
@@ -280,14 +280,23 @@ body {
     z-index: 0;
     border-radius: var(--radius-2xl);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+    will-change: contents;
 }
 
 .gradient-blob {
     position: absolute;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    filter: blur(80px);
     opacity: 0.3;
     animation: blob-float 20s ease-in-out infinite;
+
+    /* GPU Optimization */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    /* Optimized blur - reduced from 80px to 50px */
+    filter: blur(50px);
 }
 
 .blob-1 {
@@ -317,18 +326,16 @@ body {
     animation-delay: 2s;
 }
 
+/* Optimized keyframes - only transform, no border-radius changes */
 @keyframes blob-float {
     0%, 100% {
-        transform: translate(0, 0) scale(1);
-        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: translate(0, 0) scale(1) translateZ(0);
     }
     33% {
-        transform: translate(30px, -50px) scale(1.1);
-        border-radius: 50% 60% 40% 70% / 60% 40% 70% 50%;
+        transform: translate(30px, -50px) scale(1.1) translateZ(0);
     }
     66% {
-        transform: translate(-20px, 20px) scale(0.9);
-        border-radius: 60% 40% 60% 40% / 50% 70% 40% 60%;
+        transform: translate(-20px, 20px) scale(0.9) translateZ(0);
     }
 }
 
@@ -1054,8 +1061,9 @@ body {
         font-size: 0.75rem;
     }
 
+    /* Mobile blob optimization */
     .gradient-blob {
-        filter: blur(60px);
+        filter: blur(40px);
     }
 
     .blob-1 {
@@ -1143,5 +1151,10 @@ body {
 
     .feature-icon-item .label {
         font-size: 0.7rem;
+    }
+
+    /* Extra mobile optimization */
+    .gradient-blob {
+        filter: blur(35px);
     }
 }
