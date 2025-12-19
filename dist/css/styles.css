@@ -368,12 +368,22 @@ body {
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-base);
     border: 2px solid transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature-icon-link {
+    cursor: pointer;
 }
 
 .feature-icon-item:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
     border-color: var(--primary-blue);
+}
+
+.feature-icon-link:hover .label {
+    color: var(--primary-blue);
 }
 
 .feature-icon-item .icon {
@@ -386,6 +396,7 @@ body {
     font-weight: 600;
     color: var(--text-primary);
     text-align: center;
+    transition: color var(--transition-base);
 }
 
 .floating-card {
