@@ -593,6 +593,17 @@ body {
     right: 0;
 }
 
+.carousel-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-button:disabled:hover {
+    border-color: var(--border);
+    background: white;
+    color: inherit;
+}
+
 .testimonial-card {
     background: white;
     padding: var(--spacing-xl);
@@ -677,6 +688,37 @@ body {
 .star {
     color: #fbbf24;
     font-size: 1rem;
+}
+
+/* Testimonials Carousel Touch/Drag Styles */
+.testimonials-grid {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.testimonials-grid {
+    cursor: grab;
+}
+
+.testimonials-grid.dragging {
+    cursor: grabbing;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        cursor: grab;
+    }
+
+    .testimonials-grid.dragging {
+        cursor: grabbing;
+    }
+
+    .testimonial-card {
+        flex-shrink: 0;
+        -webkit-user-select: none;
+    }
 }
 
 /* FAQ Section */
