@@ -193,19 +193,6 @@ body {
     gap: var(--spacing-lg);
 }
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: linear-gradient(135deg, rgba(30, 90, 168, 0.1), rgba(0, 175, 174, 0.1));
-    border: 1px solid rgba(30, 90, 168, 0.2);
-    border-radius: 999px;
-    color: var(--primary-blue);
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
