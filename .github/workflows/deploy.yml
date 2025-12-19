@@ -34,14 +34,7 @@ jobs:
         run: npm install -g wrangler
 
       - name: Deploy with Wrangler
-        run: |
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            # Production deployment (main branch → custom domain + pages.dev)
-            wrangler pages deploy ./dist --project-name=morphe-website
-          else
-            # Preview deployment (non-main branches → branch.pages.dev only)
-            wrangler pages deploy ./dist --project-name=morphe-website --branch=${{ github.ref_name }}
-          fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: wrangler pages deploy
