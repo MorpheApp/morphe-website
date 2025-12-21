@@ -180,12 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
             avatar: "S"
         },
         {
-            text: "I clicked a few buttons and my phone became cooler than me.",
-            author: "Jamie Rodriguez",
-            role: "Tech Enthusiast",
-            avatar: "J"
-        },
-        {
             text: "My 87 year old grandma asked me why my YouTube looks different. I showed her Morphe and now she's patching apps for her entire retirement community.",
             author: "David Kim",
             role: "Proud Grandson",
@@ -208,18 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
             author: "Tom Anderson",
             role: "Existential Crisis Haver",
             avatar: "T"
-        },
-        {
-            text: "I was skeptical at first, but Morphe proved me wrong. The UI is intuitive and the results are incredible. Best decision I made this year.",
-            author: "Nina Petrov",
-            role: "Software Engineer",
-            avatar: "N"
-        },
-        {
-            text: "The documentation is crystal clear and the community is incredibly helpful. I had my app patched and running in minutes.",
-            author: "Marcus Johnson",
-            role: "Android Developer",
-            avatar: "M"
         }
     ];
 
@@ -233,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             text: "Morphe is the only thing saving me from 60 second unskippable ads about toothpaste.",
             author: "Casey Morgan",
-            role: "Oral Hygiene Survivor",
+            role: "Not a Dentist",
             avatar: "C"
         },
         {
@@ -243,16 +225,16 @@ document.addEventListener('DOMContentLoaded', function() {
             avatar: "O"
         },
         {
-            text: "Before Morphe, I thought APK was a new K-pop band.",
+            text: "Before I found Morphe, I thought APK was a new K-pop band. Now I know better.",
             author: "Jeff",
             role: "Confused Uncle",
             avatar: "J"
         },
         {
-            text: "I used Morphe once and now I have superpowers. Not sure if it's related but I'm pretty sure it is.",
-            author: "Peter Chen",
-            role: "Superhero Enthusiast",
-            avatar: "P"
+            text: "When I saw Morphe is free to download, I reacted the same way as someone offering free food samples. I don't think, I act.",
+            author: "Tyler James",
+            role: "Reflex-Based Decision Maker",
+            avatar: "T"
         },
         {
             text: "Morphe fixed my WiFi, paid my taxes, and solved world hunger. Actually no, but it did patch YouTube perfectly.",
@@ -261,16 +243,16 @@ document.addEventListener('DOMContentLoaded', function() {
             avatar: "S"
         },
         {
-            text: "I showed Morphe to my dog and now he codes better than me. I think I need a new career.",
+            text: "I showed Morphe to my dog and now he’s better with using technology than I am.",
             author: "Kevin Park",
-            role: "Unemployed Developer",
+            role: "Former Tech Expert",
             avatar: "K"
         },
         {
-            text: "Morphe is so easy to use, even my grandma uses it. Now she's the coolest person in her nursing home.",
-            author: "Helen Foster",
-            role: "Proud Granddaughter",
-            avatar: "H"
+            text: "Morphe patched my apps so well that I now wonder if it can also patch my life choices.",
+            author: "Melissa Tran",
+            role: "Self‑Upgrade Enthusiast",
+            avatar: "M"
         },
         {
             text: "I clicked the wrong button and accidentally became a millionaire. Not sure how it happened but Morphe was involved.",
@@ -279,11 +261,23 @@ document.addEventListener('DOMContentLoaded', function() {
             avatar: "L"
         },
         {
-            text: "Scientists say Morphe defies the laws of physics. I'm just happy it works.",
+            text: "Thanks to Morphe's ad-blocking feature, I finally had the mental clarity to finish my research and change the course of human history. Morphe deserves the Nobel prize more than me.",
             author: "Dr. Sheldon Lee",
             role: "Theoretical Physicist",
             avatar: "D"
-        }
+        },
+        {
+            text: "I showed my friends Morphe and now they think I’m some kind of underground technology wizard. I’m not correcting them.",
+            author: "Owen Price",
+            role: "Accidental Wizard",
+            avatar: "O"
+        },
+        {
+            text: "Morphe blocked so many ads that my phone feels lighter. I think it lost emotional weight.",
+            author: "Sienna Brooks",
+            role: "Digital Minimalist",
+            avatar: "S"
+        },
     ];
 
     // Shuffle array function (Fisher-Yates)
