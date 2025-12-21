@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             text: "I used to spend hours configuring patches manually. Now I just click 'Patch' and go make coffee. By the time I'm back, it's done. Revolutionary!",
             author: "Lisa Smith",
-            role: "Coffee Lover & Developer",
+            role: "Coffee Lover",
             avatar: "L"
         },
         {
