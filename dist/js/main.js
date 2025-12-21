@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const seriousTestimonials = [
         {
             text: "I used to spend hours configuring patches manually. Now I just click 'Patch' and go make coffee. By the time I'm back, it's done. Revolutionary!",
-            author: "Lisa Park",
+            author: "Lisa Smith",
             role: "Coffee Lover & Developer",
             avatar: "L"
         },
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             text: "My cat knocked my phone off the table while Morphe was patching. The phone survived and patching still completed successfully. Cat approved.",
-            author: "Emma Williams",
+            author: "Emma Jones",
             role: "Cat Owner",
             avatar: "E"
         },
@@ -226,12 +226,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             text: "Before I found Morphe, I thought APK was a new K-pop band. Now I know better.",
-            author: "Jeff",
+            author: "Jeff Cooper",
             role: "Confused Uncle",
             avatar: "J"
         },
         {
-            text: "When I saw Morphe is free to download, I reacted the same way as someone offering free food samples. I don't think, I act.",
+            text: "When I saw Morphe is free to download, I reacted the same way as someone offering me free food samples. I don't think, I act.",
             author: "Tyler James",
             role: "Reflex-Based Decision Maker",
             avatar: "T"
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             text: "Morphe patched my apps so well that I now wonder if it can also patch my life choices.",
-            author: "Melissa Tran",
+            author: "Doug Miller",
             role: "Self‑Upgrade Enthusiast",
             avatar: "M"
         },
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             text: "I showed my friends Morphe and now they think I’m some kind of underground technology wizard. I’m not correcting them.",
             author: "Owen Price",
-            role: "Accidental Wizard",
+            role: "Wizard",
             avatar: "O"
         },
         {
