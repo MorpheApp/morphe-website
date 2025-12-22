@@ -31,15 +31,13 @@ jobs:
           fi
           # The data-website-id in the source code is now just a placeholder
           # and will be replaced during the build process.
-          sed -i "s/data-website-id=\"[a-f0-9-]*\"/data-website-id=\"$UMAMI_ID\"/" dist/index.html
+          sed -i "s/data-website-id=\"[a-f0-9-]*\"/data-website-id=\"$UMAMI_ID\"/" public/index.html
 
       - name: Generate robots.txt
         # Don't allow indexing of non-production deployments.
         run: |
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            echo -e "User-agent: *\nDisallow:" > dist/robots.txt
-          else
-            echo -e "User-agent: *\nDisallow: /" > dist/robots.txt
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo -e "User-agent: *\nDisallow: /" > public/robots.txt
           fi
 
       - name: Install Wrangler
