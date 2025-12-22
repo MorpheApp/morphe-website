@@ -21,27 +21,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Umami
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            UMAMI_ID="faa54201-a249-4ddc-9732-88c6ac7fdf5f"
+          else
+            # Non production deployment
+            UMAMI_ID="127a9e7a-1fe0-404f-bb17-915882ebd403"
+          fi
+          # The data-website-id in the source code is now just a placeholder
+          # and will be replaced during the build process.
+          sed -i "s/data-website-id=\"[a-f0-9-]*\"/data-website-id=\"$UMAMI_ID\"/" public/index.html
+
       - name: Generate robots.txt
         # Don't allow indexing of non-production deployments.
         run: |
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            echo -e "User-agent: *\nDisallow:" > dist/robots.txt
-          else
-            echo -e "User-agent: *\nDisallow: /" > dist/robots.txt
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo -e "User-agent: *\nDisallow: /" > public/robots.txt
           fi
 
       - name: Install Wrangler
         run: npm install -g wrangler
 
       - name: Deploy with Wrangler
-        run: |
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            # Production deployment (main branch → custom domain + pages.dev)
-            wrangler pages deploy ./dist --project-name=morphe-website
-          else
-            # Preview deployment (non-main branches → branch.pages.dev only)
-            wrangler pages deploy ./dist --project-name=morphe-website --branch=${{ github.ref_name }}
-          fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: wrangler pages deploy --branch "${{ github.ref_name }}"
