@@ -52,9 +52,9 @@ jobs:
           fi
           DOWNLOAD_URL="https://github.com/MorpheApp/morphe-manager/releases/download/v$VERSION/morphe-manager-$VERSION.apk"
           
-          # Create a temporary file without the download redirects, preserving other redirects
+          # Create a temporary file preserving other redirects
           # We ignore grep's exit code in case the file doesn't exist or has no matches
-          grep -v -E '^/download/?\s' public/_redirects > public/_redirects.tmp || true
+          grep -v -E '(^/download/?\s)' public/_redirects > public/_redirects.tmp || true
           
           # Now append the new redirects
           echo "/download/    $DOWNLOAD_URL    302" >> public/_redirects.tmp
