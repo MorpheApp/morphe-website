@@ -68,7 +68,8 @@ jobs:
       - name: Fetch and Update MicroG Download Link
         run: |
           MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/WSTxda/MicroG-RE/refs/heads/master/build.gradle"
-          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep -m 1 "appVersionName" | cut -d '"' -f 2)
+          # parse out "ext.appVersionName = x.xx"
+          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep "appVersionName" | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
           if [ -z "$VERSION" ]; then
             echo "Error: Could not find appVersionName in build.gradle." >&2
             exit 1
@@ -80,7 +81,7 @@ jobs:
           grep -v -E '(^/microg/download\s)' public/_redirects > public/_redirects.tmp || true
           
           # Now append the new redirect
-          echo "/microg/download     $DOWNLOAD_URL    302" >> public/_redirects.tmp
+          echo "/microg/download    $DOWNLOAD_URL    302" >> public/_redirects.tmp
           
           # Replace the original file
           mv public/_redirects.tmp public/_redirects
