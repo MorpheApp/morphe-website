@@ -77,10 +77,10 @@ jobs:
           
           # Create a temporary file preserving other redirects
           # We ignore grep's exit code in case the file doesn't exist or has no matches
-          grep -v -E '(^/download/microg\s)' public/_redirects > public/_redirects.tmp || true
+          grep -v -E '(^/microg/download\s)' public/_redirects > public/_redirects.tmp || true
           
           # Now append the new redirect
-          echo "microg/download     $DOWNLOAD_URL    302" >> public/_redirects.tmp
+          echo "/microg/download     $DOWNLOAD_URL    302" >> public/_redirects.tmp
           
           # Replace the original file
           mv public/_redirects.tmp public/_redirects
