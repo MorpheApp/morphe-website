@@ -57,7 +57,7 @@ jobs:
           grep -v -E '(^/download\s)' public/_redirects > public/_redirects.tmp || true
           
           # Now append the new redirects
-          echo "/download           $DOWNLOAD_URL    302" >> public/_redirects.tmp
+          echo "/download           $DOWNLOAD_URL    301" >> public/_redirects.tmp
           
           # Replace the original file
           mv public/_redirects.tmp public/_redirects
@@ -81,7 +81,7 @@ jobs:
           grep -v -E '(^/microg/download\s)' public/_redirects > public/_redirects.tmp || true
           
           # Now append the new redirect
-          echo "/microg/download    $DOWNLOAD_URL    302" >> public/_redirects.tmp
+          echo "/microg/download    $DOWNLOAD_URL    301" >> public/_redirects.tmp
           
           # Replace the original file
           mv public/_redirects.tmp public/_redirects
