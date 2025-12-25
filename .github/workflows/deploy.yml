@@ -40,7 +40,7 @@ jobs:
             echo -e "User-agent: *\nDisallow: /" > public/robots.txt
           fi
 
-      - name: Fetch and Update Download Link
+      - name: Fetch and Update Morphe Download Link
         run: |
           MANAGER_PROPS_URL="https://raw.githubusercontent.com/HundEdFeteTree/HappyFunTest/refs/heads/main/gradle.properties"
           # FIXME: Update this to real repo:
@@ -54,11 +54,34 @@ jobs:
           
           # Create a temporary file preserving other redirects
           # We ignore grep's exit code in case the file doesn't exist or has no matches
-          grep -v -E '(^/download/?\s)' public/_redirects > public/_redirects.tmp || true
+          grep -v -E '(^/download\s)' public/_redirects > public/_redirects.tmp || true
           
           # Now append the new redirects
-          echo "/download/    $DOWNLOAD_URL    302" >> public/_redirects.tmp
-          echo "/download     $DOWNLOAD_URL    302" >> public/_redirects.tmp
+          echo "/download           $DOWNLOAD_URL    301" >> public/_redirects.tmp
+          
+          # Replace the original file
+          mv public/_redirects.tmp public/_redirects
+          
+          echo "Updated _redirects file:"
+          cat public/_redirects
+
+      - name: Fetch and Update MicroG Download Link
+        run: |
+          MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/WSTxda/MicroG-RE/refs/heads/master/build.gradle"
+          # parse out "ext.appVersionName = x.xx"
+          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep "appVersionName" | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
+          if [ -z "$VERSION" ]; then
+            echo "Error: Could not find appVersionName in build.gradle." >&2
+            exit 1
+          fi
+          DOWNLOAD_URL="https://github.com/WSTxda/MicroG-RE/releases/download/$VERSION/microg-release.apk"
+          
+          # Create a temporary file preserving other redirects
+          # We ignore grep's exit code in case the file doesn't exist or has no matches
+          grep -v -E '(^/microg/download\s)' public/_redirects > public/_redirects.tmp || true
+          
+          # Now append the new redirect
+          echo "/microg/download    $DOWNLOAD_URL    301" >> public/_redirects.tmp
           
           # Replace the original file
           mv public/_redirects.tmp public/_redirects
