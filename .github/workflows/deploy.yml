@@ -31,7 +31,7 @@ jobs:
           fi
           # The data-website-id in the source code is now just a placeholder
           # and will be replaced during the build process.
-          sed -i "s/data-website-id=\"[a-f0-9-]*\"/data-website-id=\"$UMAMI_ID\"/" public/index.html
+          find public -name "*.html" -exec sed -i "s/data-website-id=\"[a-f0-9-]*\"/data-website-id=\"$UMAMI_ID\"/" {} +
 
       - name: Generate robots.txt
         # Don't allow indexing of non-production deployments.
