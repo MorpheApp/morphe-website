@@ -1243,9 +1243,28 @@ body {
         max-width: 90%;
     }
 
-    /* Extra mobile optimization */
     .gradient-blob {
         filter: blur(10px) !important;
+    }
+
+    .supported-apps {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .app-badges {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: var(--spacing-xs);
+    }
+
+    .app-badge {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.8125rem;
+        width: 100%;
+        max-width: none;
+        justify-content: center;
+        text-align: center;
     }
 }
 
