@@ -265,6 +265,15 @@ body {
     background: var(--gray-200);
 }
 
+.btn img {
+    display: inline;
+    margin-left: 0.25rem;
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
 /* Hero Visual */
 .hero-visual {
     position: relative;
@@ -752,21 +761,6 @@ body {
     cursor: grabbing;
 }
 
-@media (max-width: 768px) {
-    .testimonials-grid {
-        cursor: grab;
-    }
-
-    .testimonials-grid.dragging {
-        cursor: grabbing;
-    }
-
-    .testimonial-card {
-        flex-shrink: 0;
-        -webkit-user-select: none;
-    }
-}
-
 /* FAQ Section */
 .faq {
     background: white;
@@ -1197,6 +1191,28 @@ body {
     .gradient-background {
         background: linear-gradient(to bottom, rgba(240, 248, 255, 0.9), rgba(255, 255, 255, 0.95));
     }
+
+    .testimonials-grid {
+        cursor: grab;
+    }
+
+    .testimonials-grid.dragging {
+        cursor: grabbing;
+    }
+
+    .testimonial-card {
+        flex-shrink: 0;
+        -webkit-user-select: none;
+    }
+
+    .btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn img {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1265,6 +1281,19 @@ body {
         max-width: none;
         justify-content: center;
         text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        line-height: 1.4;
+    }
+
+    .btn img {
+        margin-left: 0;
+        margin-top: 0.25rem;
     }
 }
 
