@@ -42,9 +42,7 @@ jobs:
 
       - name: Fetch and Update Morphe Download Link
         run: |
-          MANAGER_PROPS_URL="https://raw.githubusercontent.com/HundEdFeteTree/HappyFunTest/refs/heads/main/gradle.properties"
-          # FIXME: Update this to real repo:
-          # MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/gradle.properties"
+          MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/gradle.properties"
           VERSION=$(curl -s $MANAGER_PROPS_URL | grep -m 1 "^\s*version\s*=" | cut -d "=" -f 2 | tr -d '[:space:]')
           if [ -z "$VERSION" ]; then
             echo "Error: Could not find version string in gradle.properties." >&2
