@@ -21,18 +21,77 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Umami
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            UMAMI_ID="faa54201-a249-4ddc-9732-88c6ac7fdf5f"
+          else
+            # Non production deployment
+            UMAMI_ID="127a9e7a-1fe0-404f-bb17-915882ebd403"
+          fi
+          # The data-website-id in the source code is now just a placeholder
+          # and will be replaced during the build process.
+          find public -name "*.html" -exec sed -i "s/data-website-id=\"[a-f0-9-]*\"/data-website-id=\"$UMAMI_ID\"/" {} +
+
+      - name: Generate robots.txt
+        # Don't allow indexing of non-production deployments.
+        run: |
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo -e "User-agent: *\nDisallow: /" > public/robots.txt
+          fi
+
+      - name: Fetch and Update Morphe Download Link
+        run: |
+          MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/gradle.properties"
+          VERSION=$(curl -s $MANAGER_PROPS_URL | grep -m 1 "^\s*version\s*=" | cut -d "=" -f 2 | tr -d '[:space:]')
+          if [ -z "$VERSION" ]; then
+            echo "Error: Could not find version string in gradle.properties." >&2
+            exit 1
+          fi
+          DOWNLOAD_URL="https://github.com/MorpheApp/morphe-manager/releases/download/v$VERSION/morphe-manager-$VERSION.apk"
+          
+          # Create a temporary file preserving other redirects
+          # We ignore grep's exit code in case the file doesn't exist or has no matches
+          grep -v -E '(^/download\s)' public/_redirects > public/_redirects.tmp || true
+          
+          # Now append the new redirects
+          echo "/download           $DOWNLOAD_URL    301" >> public/_redirects.tmp
+          
+          # Replace the original file
+          mv public/_redirects.tmp public/_redirects
+          
+          echo "Updated _redirects file:"
+          cat public/_redirects
+
+      - name: Fetch and Update MicroG Download Link
+        run: |
+          MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/WSTxda/MicroG-RE/refs/heads/master/build.gradle"
+          # parse out "ext.appVersionName = x.xx"
+          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep "appVersionName" | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
+          if [ -z "$VERSION" ]; then
+            echo "Error: Could not find appVersionName in build.gradle." >&2
+            exit 1
+          fi
+          DOWNLOAD_URL="https://github.com/WSTxda/MicroG-RE/releases/download/$VERSION/microg-release.apk"
+          
+          # Create a temporary file preserving other redirects
+          # We ignore grep's exit code in case the file doesn't exist or has no matches
+          grep -v -E '(^/microg/download\s)' public/_redirects > public/_redirects.tmp || true
+          
+          # Now append the new redirect
+          echo "/microg/download    $DOWNLOAD_URL    301" >> public/_redirects.tmp
+          
+          # Replace the original file
+          mv public/_redirects.tmp public/_redirects
+          
+          echo "Updated _redirects file:"
+          cat public/_redirects
+
       - name: Install Wrangler
         run: npm install -g wrangler
 
       - name: Deploy with Wrangler
-        run: |
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            # Production deployment (main branch → custom domain + pages.dev)
-            wrangler pages deploy ./dist --project-name=morphe-website
-          else
-            # Preview deployment (non-main branches → branch.pages.dev only)
-            wrangler pages deploy ./dist --project-name=morphe-website --branch=${{ github.ref_name }}
-          fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: wrangler pages deploy --branch "${{ github.ref_name }}"
