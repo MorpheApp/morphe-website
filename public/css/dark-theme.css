@@ -25,61 +25,14 @@
     --text-tertiary: #a1a1aa;
     --border: #3f3f46;
 
-    /* Shadows - adjusted for dark mode */
+    /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
-/* Theme Toggle Button Styles */
-.theme-toggle {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-lg);
-    background: var(--gray-100);
-    border: none;
-    cursor: pointer;
-    transition: all var(--transition-base);
-    -webkit-tap-highlight-color: transparent;
-}
-
-.theme-toggle:hover {
-    background: var(--gray-200);
-    transform: scale(1.05);
-}
-
-.theme-toggle:active {
-    transform: scale(0.95);
-}
-
-.theme-toggle svg {
-    width: 20px;
-    height: 20px;
-    color: var(--text-primary);
-    transition: all var(--transition-base);
-}
-
-.theme-icon {
-    position: absolute;
-    transition: all var(--transition-base);
-}
-
-.theme-icon.hidden {
-    opacity: 0;
-    transform: rotate(180deg) scale(0);
-}
-
-.theme-icon.visible {
-    opacity: 1;
-    transform: rotate(0) scale(1);
-}
-
-/* Dark mode specific adjustments */
+/* Dark mode component adjustments */
 [data-theme="dark"] .navbar {
     background: rgba(24, 24, 27, 0.8);
     backdrop-filter: blur(10px);
@@ -133,6 +86,16 @@
     background: var(--gray-300);
 }
 
+[data-theme="dark"] .social-link img {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity var(--transition-base);
+}
+
+[data-theme="dark"] .social-link:hover img {
+    opacity: 1;
+}
+
 [data-theme="dark"] .carousel-button {
     background: var(--surface);
     border-color: var(--border);
@@ -156,7 +119,6 @@
     background: var(--background);
 }
 
-/* FAQ text color fix */
 [data-theme="dark"] .faq-answer p {
     color: var(--text-secondary);
 }
@@ -173,7 +135,7 @@
     color: var(--primary-blue);
 }
 
-/* Footer dark theme */
+/* Footer */
 [data-theme="dark"] .footer {
     background: var(--gray-50);
 }
@@ -200,7 +162,7 @@
     color: var(--gray-500);
 }
 
-/* Dark mode gradient blobs */
+/* Gradient blobs */
 [data-theme="dark"] .blob-1 {
     background: linear-gradient(135deg, #2c4a7c, #3a5f9a);
 }
@@ -217,21 +179,13 @@
     background: linear-gradient(to bottom, rgba(24, 24, 27, 0.8), rgba(24, 24, 27, 0.95));
 }
 
-/* Keep logo colors the same in dark mode - remove filter */
-[data-theme="dark"] .nav-logo-wordmark {
-    filter: none;
-}
-
+/* Logos */
+[data-theme="dark"] .nav-logo-wordmark,
 [data-theme="dark"] .footer-logo {
     filter: none;
 }
 
-/* Social icons adjustment for dark mode */
-[data-theme="dark"] .social-link img {
-    filter: brightness(1.2);
-}
-
-/* Smooth transition for theme changes */
+/* Smooth transitions */
 body,
 .navbar,
 .hero,
@@ -270,11 +224,13 @@ body,
     }
 }
 
-/* Logo Toggling Logic for Dark Mode */
+/* Logo toggling */
 [data-theme="dark"] .logo-light {
-    display: none;
+    opacity: 0;
+    z-index: 1;
 }
 
 [data-theme="dark"] .logo-dark {
-    display: block;
+    opacity: 1;
+    z-index: 2;
 }
