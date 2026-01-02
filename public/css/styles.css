@@ -116,7 +116,6 @@ body {
     width: auto;
     opacity: 1;
     transition: opacity var(--transition-base);
-    pointer-events: none;
 }
 
 .logo-light {
