@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Morphe - Next generation Android app patching for YouTube and YouTube Music">
     <title>Morphe - Transform Your Apps</title>
+    <script>
+        (function () {
+          try {
+            const theme = localStorage.getItem('morphe-theme') || 'auto';
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const actual = theme === 'auto' ? (systemDark ? 'dark' : 'light') : theme;
+            document.documentElement.setAttribute('data-theme', actual);
+          } catch (e) {}
+        })();
+    </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark-theme.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="f6fcde7a-0660-49e1-b56d-99f8b3d6566e"></script>
@@ -44,17 +54,9 @@
                     <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                 </svg>
-
                 <!-- Moon Icon (Dark Mode) -->
                 <svg id="theme-icon-moon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-
-                <!-- Auto Icon (System Theme) -->
-                <svg id="theme-icon-auto" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
             </button>
             <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">

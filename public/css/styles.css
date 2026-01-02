@@ -1356,11 +1356,6 @@ body {
     }
 }
 
-/* Prevent FOUC */
-html:not([data-theme]) {
-    visibility: hidden;
-}
-
 html[data-theme] {
     visibility: visible;
 }

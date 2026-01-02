@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem('morphe-theme');
+                if (theme) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                }
+            } catch (e) {}
+        })();
+    </script>
     <style>
         :root {
             --primary-blue: #1E5AA8;
             --primary-teal: #00AFAE;
             --gradient-primary: linear-gradient(135deg, #1E5AA8 0%, #00AFAE 100%);
-            --gray-100: #f4f4f5;
-            --gray-200: #e4e4e7;
+
+            --bg: #ffffff;
+            --surface: #f4f4f5;
             --text-primary: #18181b;
+            --text-secondary: #52525b;
+
             --spacing-md: 1rem;
             --spacing-xl: 2rem;
             --radius-lg: 0.75rem;
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                         0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                         0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
             --transition-base: 200ms ease;
         }
+
+        /* Dark theme via data-theme */
+        :root[data-theme="dark"] {
+            --bg: #0f1115;
+            --surface: #18181b;
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+        }
+
+        /* Fallback: system dark */
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) {
+                --bg: #0f1115;
+                --surface: #18181b;
+                --text-primary: #f4f4f5;
+                --text-secondary: #a1a1aa;
+            }
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #fff;
+            background-color: var(--bg);
             color: var(--text-primary);
             margin: 0;
             display: flex;
@@ -30,10 +66,12 @@
             height: 100vh;
             text-align: center;
         }
+
         .container {
             max-width: 600px;
             padding: var(--spacing-xl);
         }
+
         h1 {
             font-size: 4rem;
             font-weight: 800;
@@ -43,11 +81,13 @@
             background-clip: text;
             margin-bottom: var(--spacing-md);
         }
+
         p {
             font-size: 1.25rem;
-            color: #52525b;
+            color: var(--text-secondary);
             margin-bottom: var(--spacing-xl);
         }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -56,16 +96,18 @@
             border-radius: var(--radius-lg);
             font-weight: 600;
             text-decoration: none;
-            transition: all var(--transition-base);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
             cursor: pointer;
             border: none;
             font-size: 1rem;
         }
+
         .btn-primary {
             background: var(--gradient-primary);
             color: white;
             box-shadow: var(--shadow-lg);
         }
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-xl);
@@ -73,10 +115,10 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>404</h1>
-        <p>The page you're looking for can't be found</p>
-        <a href="/" class="btn btn-primary">Go to Homepage</a>
-    </div>
+<div class="container">
+    <h1>404</h1>
+    <p>The page you're looking for can't be found</p>
+    <a href="/" class="btn btn-primary">Go to Homepage</a>
+</div>
 </body>
 </html>
