@@ -113,6 +113,8 @@ body {
 .nav-links {
     display: flex;
     gap: var(--spacing-xl);
+    margin-left: auto;
+    margin-right: var(--spacing-lg);
 }
 
 .nav-link {
@@ -1039,11 +1041,13 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--background);
         flex-direction: column;
         padding: var(--spacing-lg);
         box-shadow: var(--shadow-lg);
         gap: var(--spacing-md);
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .nav-links.active {
@@ -1359,4 +1363,103 @@ body {
     .features-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Theme Toggle Button Styles */
+.logo-dark {
+    display: none;
+}
+
+.logo-light {
+    display: block;
+}
+
+.theme-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    background: var(--gray-100);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:hover {
+    background: var(--gray-200);
+    transform: scale(1.05);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+    transition: all var(--transition-base);
+}
+
+.theme-icon {
+    position: absolute;
+    transition: all var(--transition-base);
+}
+
+.theme-icon.hidden {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+.theme-icon.visible {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+/* Nav container adjustment for theme toggle */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Desktop and tablet */
+@media (min-width: 769px) {
+    .theme-toggle {
+        margin-left: 0;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .nav-actions {
+        gap: var(--spacing-sm);
+    }
+
+    .theme-toggle {
+        order: 1;
+    }
+
+    .mobile-menu-toggle {
+        order: 2;
+    }
+}
+
+/* Prevent FOUC (Flash of Unstyled Content) */
+html:not([data-theme]) {
+    visibility: hidden;
+}
+
+html[data-theme] {
+    visibility: visible;
 }

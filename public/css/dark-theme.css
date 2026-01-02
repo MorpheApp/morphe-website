@@ -1,0 +1,280 @@
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    /* Brand Colors */
+    --primary-blue: #4A7FC8;
+    --primary-teal: #20CFCE;
+    --gradient-primary: linear-gradient(135deg, #4A7FC8 0%, #20CFCE 100%);
+
+    /* Neutral Colors - inverted */
+    --gray-50: #18181b;
+    --gray-100: #27272a;
+    --gray-200: #3f3f46;
+    --gray-300: #52525b;
+    --gray-400: #71717a;
+    --gray-500: #a1a1aa;
+    --gray-600: #d4d4d8;
+    --gray-700: #e4e4e7;
+    --gray-800: #f4f4f5;
+    --gray-900: #fafafa;
+
+    /* Semantic Colors */
+    --background: #18181b;
+    --surface: #27272a;
+    --text-primary: #fafafa;
+    --text-secondary: #d4d4d8;
+    --text-tertiary: #a1a1aa;
+    --border: #3f3f46;
+
+    /* Shadows - adjusted for dark mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    background: var(--gray-100);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:hover {
+    background: var(--gray-200);
+    transform: scale(1.05);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+    transition: all var(--transition-base);
+}
+
+.theme-icon {
+    position: absolute;
+    transition: all var(--transition-base);
+}
+
+.theme-icon.hidden {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+.theme-icon.visible {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .navbar {
+    background: rgba(24, 24, 27, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="dark"] .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .feature-icon-item {
+    background: rgba(39, 39, 42, 0.95);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .testimonial-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .testimonial-card::before {
+    color: var(--gray-200);
+}
+
+[data-theme="dark"] .supported-apps {
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .crypto-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .crypto-card:hover {
+    border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .social-link {
+    background: var(--gray-200);
+}
+
+[data-theme="dark"] .social-link:hover {
+    background: var(--gray-300);
+}
+
+[data-theme="dark"] .carousel-button {
+    background: var(--surface);
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .carousel-button:hover {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .how-it-works {
+    background: var(--gray-100);
+}
+
+[data-theme="dark"] .donate {
+    background: var(--gray-100);
+}
+
+[data-theme="dark"] .faq {
+    background: var(--background);
+}
+
+/* FAQ text color fix */
+[data-theme="dark"] .faq-answer p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .faq-text {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .faq-question:hover {
+    color: var(--primary-blue);
+}
+
+[data-theme="dark"] .faq-question:hover .faq-text {
+    color: var(--primary-blue);
+}
+
+/* Footer dark theme */
+[data-theme="dark"] .footer {
+    background: var(--gray-50);
+}
+
+[data-theme="dark"] .footer-column h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .footer-column a {
+    color: var(--gray-400);
+}
+
+[data-theme="dark"] .footer-column a:hover {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-top: 1px solid var(--border);
+    color: var(--gray-500);
+}
+
+[data-theme="dark"] .footer-brand p,
+[data-theme="dark"] .footer-bottom {
+    color: var(--gray-500);
+}
+
+/* Dark mode gradient blobs */
+[data-theme="dark"] .blob-1 {
+    background: linear-gradient(135deg, #2c4a7c, #3a5f9a);
+}
+
+[data-theme="dark"] .blob-2 {
+    background: linear-gradient(135deg, #1a8d8c, #2aadac);
+}
+
+[data-theme="dark"] .blob-3 {
+    background: linear-gradient(135deg, #2c4a7c, #1a8d8c);
+}
+
+[data-theme="dark"] .gradient-background {
+    background: linear-gradient(to bottom, rgba(24, 24, 27, 0.8), rgba(24, 24, 27, 0.95));
+}
+
+/* Keep logo colors the same in dark mode - remove filter */
+[data-theme="dark"] .nav-logo-wordmark {
+    filter: none;
+}
+
+[data-theme="dark"] .footer-logo {
+    filter: none;
+}
+
+/* Social icons adjustment for dark mode */
+[data-theme="dark"] .social-link img {
+    filter: brightness(1.2);
+}
+
+/* Smooth transition for theme changes */
+body,
+.navbar,
+.hero,
+.feature-card,
+.testimonial-card,
+.crypto-card,
+.social-link,
+.carousel-button,
+.how-it-works,
+.donate,
+.faq,
+.footer {
+    transition: background-color var(--transition-base),
+                color var(--transition-base),
+                border-color var(--transition-base);
+}
+
+/* Mobile dark mode adjustments */
+@media (max-width: 768px) {
+    [data-theme="dark"] .carousel-button {
+        background: rgba(39, 39, 42, 0.8);
+        backdrop-filter: blur(10px);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    [data-theme="dark"] .carousel-button:hover {
+        background: rgba(39, 39, 42, 0.9);
+    }
+
+    [data-theme="dark"] .carousel-button:active {
+        background: var(--primary-blue);
+    }
+
+    [data-theme="dark"] .feature-icon-item {
+        background: rgba(39, 39, 42, 0.98);
+    }
+}
+
+/* Logo Toggling Logic for Dark Mode */
+[data-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block;
+}
