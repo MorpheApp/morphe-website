@@ -116,7 +116,7 @@
 }
 
 [data-theme="dark"] .faq {
-    background: var(--background);
+    background: var(--gray-100);
 }
 
 [data-theme="dark"] .faq-answer p {

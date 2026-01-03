@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Morphe - Your contribution helps us continue developing and improving Morphe">
+    <title>Support Morphe - Donate</title>
+    <script>
+        (function () {
+          try {
+            const theme = localStorage.getItem('morphe-theme') || 'auto';
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const actual = theme === 'auto' ? (systemDark ? 'dark' : 'light') : theme;
+            document.documentElement.setAttribute('data-theme', actual);
+          } catch (e) {}
+        })();
+    </script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dark-theme.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="f6fcde7a-0660-49e1-b56d-99f8b3d6566e"></script>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="Morphe"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <img src="/images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
+            <img src="/images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
+        </a>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+                <!-- Sun Icon (Light Mode) -->
+                <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <!-- Moon Icon (Dark Mode) -->
+                <svg id="theme-icon-moon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-container" style="grid-template-columns: 1fr; text-align: center;">
+        <div class="hero-content" style="align-items: center;">
+            <h1 class="hero-title">Support <span class="gradient-text">Morphe</span></h1>
+            <p class="hero-description">
+                Your contribution helps us continue developing and improving Morphe
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Donate Section -->
+<section id="donate" class="donate">
+    <div class="container">
+        <div class="donate-content">
+            <div class="donate-info">
+                <h3>Why Donate?</h3>
+                <ul class="donate-benefits">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Keep Morphe free and open source</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Support ongoing development</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Help cover infrastructure costs</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Enable faster bug fixes and features</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="crypto-cards">
+                <a href="bitcoin:3N97T2VLGnZH5g4gGNT4qh8LMZ7aRHdJ7Q" class="crypto-card" data-umami-event="Bitcoin Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Bitcoin</span>
+                        <span class="crypto-symbol">BTC</span>
+                    </div>
+                    <div class="crypto-address">3N97T2VLGnZH5g4gGNT4qh8LMZ7aRHdJ7Q</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="ethereum:0x4b16623bed0d8485d5368214279372bd1d3501c2" class="crypto-card" data-umami-event="Ethereum Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Ethereum</span>
+                        <span class="crypto-symbol">ETH</span>
+                    </div>
+                    <div class="crypto-address">0x4b16623bed0d8485d5368214279372bd1d3501c2</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="litecoin:MVjvqt6AA6DmDXUgXyJMg6gQe7MD6WSqpB" class="crypto-card" data-umami-event="Litecoin Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Litecoin</span>
+                        <span class="crypto-symbol">LTC</span>
+                    </div>
+                    <div class="crypto-address">MVjvqt6AA6DmDXUgXyJMg6gQe7MD6WSqpB</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="monero:48HvobHs4iiET9R8FEV37zNPeE5jGtTJ1eQpveSCwSVZ1zveU9D73VyM2FnXQc5DPLZ5wpeR9aQgjVe3oyfoXXzzDsChepf" class="crypto-card" data-umami-event="Monero Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Monero</span>
+                        <span class="crypto-symbol">XMR</span>
+                    </div>
+                    <div class="crypto-address">48HvobHs4iiET9R8FEV37zNPeE5jGtTJ1eQpveSCwSVZ1zveU9D73VyM2FnXQc5DPLZ5wpeR9aQgjVe3oyfoXXzzDsChepf</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="dogecoin:DPB88ZiBYtR4TESBXdnT7AZsiB4PRWYNHw" class="crypto-card" data-umami-event="Dogecoin Donation Click">
+                    <div class="crypto-header">
+                        <span class="crypto-name">Dogecoin</span>
+                        <span class="crypto-symbol">DOGE</span>
+                    </div>
+                    <div class="crypto-address">DPB88ZiBYtR4TESBXdnT7AZsiB4PRWYNHw</div>
+                    <div class="crypto-action">
+                        <span>Click to open wallet</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="/images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
+                <p>Next generation Android app patching</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#home" data-umami-event="Footer Home Click">Home</a>
+                    <a href="#how-it-works" data-umami-event="Footer How It Works Click">How It Works</a>
+                    <a href="download" data-umami-event="Footer Download Click">Download</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <a href="https://github.com/MorpheApp" target="_blank" data-umami-event="Footer GitHub Click">GitHub</a>
+                    <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="Footer X Click">X (Twitter)</a>
+                    <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Footer Reddit Click">Reddit</a>
+                    <a href="https://crowdin.com/project/morphe" target="_blank" data-umami-event="Footer Crowdin Click">Crowdin</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <a href="#faq" data-umami-event="Footer FAQ Click">FAQ</a>
+                    <a href="/donate" data-umami-event="Footer Donate Click">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Morphe. Open source and free forever.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/theme-manager.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
