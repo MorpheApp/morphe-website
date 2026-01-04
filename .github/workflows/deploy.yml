@@ -62,10 +62,14 @@ jobs:
           
           echo "Updated _redirects file:"
           cat public/_redirects
+          
+          # Update index.html with the download link
+          sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/index.html
+          echo "Updated index.html with Morphe download link."
 
       - name: Fetch and Update MicroG Download Link
         run: |
-          MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/WSTxda/MicroG-RE/refs/heads/master/build.gradle"
+          MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/MorpheApp/MicroG-RE/refs/heads/master/build.gradle"
           # parse out "ext.appVersionName = x.xx"
           VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep "appVersionName" | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
           if [ -z "$VERSION" ]; then
@@ -86,6 +90,10 @@ jobs:
           
           echo "Updated _redirects file:"
           cat public/_redirects
+          
+          # Update microg/index.html with the download link
+          sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/microg/index.html
+          echo "Updated public/microg/index.html with MicroG download link."
 
       - name: Install Wrangler
         run: npm install -g wrangler

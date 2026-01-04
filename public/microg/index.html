@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download microG for Morphe YouTube - Required component for signing in">
+    <meta name="description" content="Download microG for Morphe YouTube and YT Music Morphe - Required component for signing in">
     <title>Download microG - Morphe</title>
+    <script>
+        (function () {
+          try {
+            const theme = localStorage.getItem('morphe-theme') || 'auto';
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const actual = theme === 'auto' ? (systemDark ? 'dark' : 'light') : theme;
+            document.documentElement.setAttribute('data-theme', actual);
+          } catch (e) {}
+        })();
+    </script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dark-theme.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="f6fcde7a-0660-49e1-b56d-99f8b3d6566e"></script>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
@@ -19,21 +30,42 @@
 <nav class="navbar">
     <div class="nav-container">
         <a href="/" class="nav-logo">
-            <img src="/images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark">
+            <img src="/images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
+            <img src="/images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
         </a>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+                <!-- Sun Icon (Light Mode) -->
+                <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <!-- Moon Icon (Dark Mode) -->
+                <svg id="theme-icon-moon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="hero-container">
-        <div class="hero-content">
+    <div class="hero-container" style="grid-template-columns: 1fr; text-align: center;">
+        <div class="hero-content" style="align-items: center;">
             <h1 class="hero-title">Download <span class="gradient-text">microG</span></h1>
             <p class="hero-description">
-                microG is required to use YouTube Morphe
+                microG is required to use YouTube Morphe and YT Music Morphe
             </p>
             <div class="hero-buttons">
-                <a href="/microg/download" class="btn btn-primary" data-umami-event="Download microG Button Click">
+                <a href="DOWNLOAD_URL_TEMPLATE" class="btn btn-primary" data-umami-event="Download microG Button Click">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
@@ -41,42 +73,6 @@
                     </svg>
                     Download microG
                 </a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <!-- Animated Gradient Background -->
-            <div class="gradient-background">
-                <div class="gradient-blob blob-1"></div>
-                <div class="gradient-blob blob-2"></div>
-                <div class="gradient-blob blob-3"></div>
-            </div>
-
-            <!-- Feature Icons Grid -->
-            <div class="feature-icons-grid">
-                <div class="feature-icon-item">
-                    <div class="icon">🔐</div>
-                    <div class="label">Google Sign-In</div>
-                </div>
-                <div class="feature-icon-item">
-                    <div class="icon">☁️</div>
-                    <div class="label">Cloud Sync</div>
-                </div>
-                <div class="feature-icon-item">
-                    <div class="icon">🔔</div>
-                    <div class="label">Notifications</div>
-                </div>
-                <div class="feature-icon-item">
-                    <div class="icon">📱</div>
-                    <div class="label">Lightweight</div>
-                </div>
-                <div class="feature-icon-item">
-                    <div class="icon">🚀</div>
-                    <div class="label">Fast & Stable</div>
-                </div>
-                <div class="feature-icon-item">
-                    <div class="icon">🛡️</div>
-                    <div class="label">Privacy First</div>
-                </div>
             </div>
         </div>
     </div>
@@ -99,7 +95,7 @@
                 </div>
                 <h3 class="feature-title">Google Services</h3>
                 <p class="feature-description">
-                    microG provides Google Play Services support, enabling the use of your Google account with YouTube Morphe.
+                    microG provides Google Play Services support, enabling the use of your Google account with YouTube Morphe and YT Music Morphe.
                 </p>
             </div>
 
@@ -124,7 +120,7 @@
                 </div>
                 <h3 class="feature-title">One-Time Install</h3>
                 <p class="feature-description">
-                    Install microG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe.
+                    Install microG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe.
                 </p>
             </div>
         </div>
@@ -140,6 +136,7 @@
     </div>
 </footer>
 
+<script src="/js/theme-manager.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
