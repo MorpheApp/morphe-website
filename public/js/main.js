@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             text: "I clicked the wrong button and accidentally became a millionaire. Not sure how it happened but Morphe was involved.",
             author: "Lucky Luke",
-            role: "Accidental Millionaire",
+            role: "Accidental Billionaire",
             avatar: "L"
         },
         {
