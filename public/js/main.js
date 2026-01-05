@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             text: "My 87 year old grandma asked me why my YouTube looks different. I showed her Morphe and now she's patching apps for her entire retirement community.",
-            author: "David Kim",
+            author: "David Kin",
             role: "Proud Grandson",
             avatar: "D"
         },
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             text: "I clicked the wrong button and accidentally became a millionaire. Not sure how it happened but Morphe was involved.",
             author: "Lucky Luke",
-            role: "Accidental Billionaire",
+            role: "Accidental Millionaire",
             avatar: "L"
         },
         {
