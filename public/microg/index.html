@@ -60,8 +60,8 @@
 <section id="home" class="hero">
     <div class="hero-container" style="grid-template-columns: 1fr; text-align: center;">
         <div class="hero-content" style="align-items: center;">
-            <h1 class="hero-title">Download <span class="gradient-text">microG</span></h1>
-            <p class="hero-description">
+            <h1 class="hero-title"><span data-i18n="microg.title">Download</span> <span class="gradient-text">microG</span></h1>
+            <p class="hero-description" data-i18n="microg.description">
                 microG is required to use YouTube Morphe and YT Music Morphe
             </p>
             <div class="hero-buttons">
@@ -71,7 +71,7 @@
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    Download microG
+                    <span data-i18n="microg.download">Download microG</span>
                 </a>
             </div>
         </div>
@@ -82,7 +82,7 @@
 <section id="what-is-microg" class="how-it-works">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">What is microG?</h2>
+            <h2 class="section-title" data-i18n="microg.what-title">What is microG?</h2>
         </div>
 
         <div class="features-grid">
@@ -93,8 +93,8 @@
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                     </svg>
                 </div>
-                <h3 class="feature-title">Google Services</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="microg.feature1-title">Google Services</h3>
+                <p class="feature-description" data-i18n="microg.feature1-desc">
                     microG provides Google Play Services support, enabling the use of your Google account with YouTube Morphe and YT Music Morphe.
                 </p>
             </div>
@@ -105,8 +105,8 @@
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
                 </div>
-                <h3 class="feature-title">Privacy Focused</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="microg.feature2-title">Privacy Focused</h3>
+                <p class="feature-description" data-i18n="microg.feature2-desc">
                     microG is an open-source reimplementation of Google services that respects your privacy while providing essential functionality.
                 </p>
             </div>
@@ -118,8 +118,8 @@
                         <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                 </div>
-                <h3 class="feature-title">One-Time Install</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="microg.feature3-title">One-Time Install</h3>
+                <p class="feature-description" data-i18n="microg.feature3-desc">
                     Install microG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe.
                 </p>
             </div>
@@ -131,11 +131,12 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-bottom">
-            <p>&copy; Morphe. Open source and free forever.</p>
+            <p><span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
     </div>
 </footer>
 
+<script src="/js/i18n.js"></script>
 <script src="/js/theme-manager.js"></script>
 <script src="/js/main.js"></script>
 </body>

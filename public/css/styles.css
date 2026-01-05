@@ -799,11 +799,6 @@ body {
     color: var(--primary-blue);
 }
 
-.faq-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
 .faq-text {
     flex: 1;
     font-size: 1.125rem;
@@ -961,7 +956,7 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 3fr;
     gap: var(--spacing-3xl);
     padding-bottom: var(--spacing-2xl);
 }
@@ -983,7 +978,7 @@ body {
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-xl);
 }
 
@@ -1014,6 +1009,55 @@ body {
     padding-top: var(--spacing-xl);
     text-align: center;
     color: var(--gray-500);
+}
+
+/* Language Selector */
+.language-selector-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.language-selector-container h4 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.language-selector {
+    appearance: none;
+    background-color: var(--gray-800);
+    color: var(--gray-300);
+    border: 1px solid var(--gray-700);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    padding-right: var(--spacing-2xl);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-sm) center;
+    background-size: 16px;
+}
+
+.language-selector:hover {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+    color: white;
+}
+
+.language-selector:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.1);
+}
+
+.language-selector option {
+    background-color: var(--gray-800);
+    color: var(--gray-300);
+    padding: var(--spacing-sm);
 }
 
 /* Responsive Design */
@@ -1205,6 +1249,10 @@ body {
 
     .mobile-menu-toggle {
         order: 2;
+    }
+
+    .language-selector {
+        width: 100%;
     }
 }
 
