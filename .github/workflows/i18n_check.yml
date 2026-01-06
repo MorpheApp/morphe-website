@@ -2,18 +2,18 @@ name: i18n Check
 
 on:
   workflow_dispatch:
-#  push:
-#    branches: [ main, dev ]
-#    paths:
-#      - 'public/**/*.html'
-#      - 'public/locales/*.json'
-#      - 'scripts/**'
-#  pull_request:
-#    branches: [ main, dev ]
-#    paths:
-#      - 'public/**/*.html'
-#      - 'public/locales/*.json'
-#      - 'scripts/**'
+  push:
+    branches: [ main, dev ]
+    paths:
+      - 'public/**/*.html'
+      - 'public/locales/*.json'
+      - 'scripts/**'
+  pull_request:
+    branches: [ main, dev ]
+    paths:
+      - 'public/**/*.html'
+      - 'public/locales/*.json'
+      - 'scripts/**'
 
 
 jobs:

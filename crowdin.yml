@@ -15,15 +15,15 @@ files:
     # Language mapping for region codes
     languages_mapping:
       locale_with_underscore:
+        # Ukrainian
+        uk: uk-UA
+        # Spanish
+        es: es-ES
+        # German
+        de: de-DE
+        # French
+        fr: fr-FR
         # Brazilian Portuguese
         pt-BR: pt-BR
         # European Portuguese
         pt-PT: pt-PT
-        # Ukrainian
-        uk-UA: uk-UA
-        # Spanish
-        es: es
-        # German
-        de: de
-        # French
-        fr: fr

@@ -7,6 +7,6 @@
     "precommit": "npm run i18n:extract && npm run i18n:check"
   },
   "devDependencies": {
-    "glob": "^10.3.10"
+    "glob": "^10.5.0"
   }
 }
