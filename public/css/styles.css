@@ -337,7 +337,7 @@ body {
     background: rgba(30, 90, 168, 0.05);
     border-radius: 1.5rem;
     padding: 2rem 1rem;
-    display: grid; /* Змінив на grid */
+    display: grid;
     grid-template-rows: auto auto;
     align-items: center;
     justify-items: center;
@@ -480,6 +480,13 @@ body {
     background: var(--surface);
 }
 
+.features-grid
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 calc(33.333% - var(--spacing-xl));
+    min-width: calc(33.333% - var(--spacing-xl));
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -492,11 +499,11 @@ body {
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-lg);
 }
 
@@ -532,7 +539,6 @@ body {
     padding: var(--spacing-2xl);
     background: white;
     border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-lg);
 }
 
 .supported-title {
@@ -575,6 +581,8 @@ body {
     position: relative;
     overflow: hidden;
     padding: 0 var(--spacing-3xl);
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
 }
 
 .testimonials-grid {
@@ -583,7 +591,9 @@ body {
     transition: transform var(--transition-slow);
 }
 
-.testimonials-grid .testimonial-card {
+.testimonials-grid
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 0 0 calc(33.333% - var(--spacing-xl));
     min-width: calc(33.333% - var(--spacing-xl));
 }
@@ -645,7 +655,7 @@ body {
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -663,7 +673,7 @@ body {
 }
 
 .testimonial-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-lg);
 }
 
