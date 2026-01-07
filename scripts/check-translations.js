@@ -78,15 +78,16 @@ function getValue(obj, keyPath) {
 
 /**
  * Check translation completeness
+ * Ignores testimonials section
  */
 function checkCompleteness(locales) {
-  const baseKeys = getAllKeys(locales[BASE_LOCALE]);
+  const baseKeys = getAllKeys(locales[BASE_LOCALE]).filter(key => !key.startsWith('testimonials.'));
   const results = {};
 
   Object.keys(locales).forEach(locale => {
     if (locale === BASE_LOCALE) return;
 
-    const localeKeys = getAllKeys(locales[locale]);
+    const localeKeys = getAllKeys(locales[locale]).filter(key => !key.startsWith('testimonials.'));
     const missing = baseKeys.filter(key => !localeKeys.includes(key));
     const untranslated = baseKeys.filter(key => {
       const baseValue = getValue(locales[BASE_LOCALE], key);
@@ -114,15 +115,16 @@ function checkCompleteness(locales) {
 
 /**
  * Find zombie keys (in locale but not in base)
+ * Ignores testimonials section
  */
 function findZombieKeys(locales) {
-  const baseKeys = getAllKeys(locales[BASE_LOCALE]);
+  const baseKeys = getAllKeys(locales[BASE_LOCALE]).filter(key => !key.startsWith('testimonials.'));
   const zombies = {};
 
   Object.keys(locales).forEach(locale => {
     if (locale === BASE_LOCALE) return;
 
-    const localeKeys = getAllKeys(locales[locale]);
+    const localeKeys = getAllKeys(locales[locale]).filter(key => !key.startsWith('testimonials.'));
     const zombieKeys = localeKeys.filter(key => !baseKeys.includes(key));
 
     if (zombieKeys.length > 0) {
@@ -143,8 +145,9 @@ function generateReport(locales) {
   console.log();
 
   // Base locale info
-  const baseKeys = getAllKeys(locales[BASE_LOCALE]);
-  console.log(`Base locale (${BASE_LOCALE}): ${baseKeys.length} strings\n`);
+  const baseKeys = getAllKeys(locales[BASE_LOCALE]).filter(key => !key.startsWith('testimonials.'));
+  console.log(`Base locale (${BASE_LOCALE}): ${baseKeys.length} strings`);
+  console.log('(testimonials excluded from count)\n');
 
   // Completeness check
   console.log('TRANSLATION COMPLETENESS:');

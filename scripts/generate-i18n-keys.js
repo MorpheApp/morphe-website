@@ -141,6 +141,12 @@ function mergeTranslations(existing, newKeys) {
   const result = { ...existing };
 
   Object.keys(newKeys).forEach(key => {
+    // Preserve testimonials section
+    if (key === 'testimonials' && existing.testimonials) {
+      result.testimonials = existing.testimonials;
+      return;
+    }
+
     if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
       if (!result[key] || typeof result[key] !== 'object') {
         result[key] = {};
@@ -164,6 +170,12 @@ function removeZombieKeys(existing, newKeys) {
   const result = {};
 
   Object.keys(existing).forEach(key => {
+    // Preserve testimonials section
+    if (key === 'testimonials') {
+      result.testimonials = existing.testimonials;
+      return;
+    }
+
     if (newKeys.hasOwnProperty(key)) {
       if (typeof newKeys[key] === 'object' && typeof existing[key] === 'object') {
         result[key] = removeZombieKeys(existing[key], newKeys[key]);
@@ -202,6 +214,9 @@ function generateLocaleFiles(keys) {
       }
     }
 
+    // Preserve testimonials section for ALL locales
+    const existingTestimonials = translations.testimonials;
+
     // For base locale (English), use extracted values
     if (locale.code === BASE_LOCALE) {
       // Merge new keys with existing translations
@@ -213,6 +228,11 @@ function generateLocaleFiles(keys) {
       const placeholders = JSON.parse(JSON.stringify(nestedKeys)); // Deep clone
       translations = mergeTranslations(translations, placeholders);
       translations = removeZombieKeys(translations, nestedKeys);
+    }
+
+    // Restore testimonials section if it existed
+    if (existingTestimonials) {
+      translations.testimonials = existingTestimonials;
     }
 
     // Write updated translations
@@ -268,8 +288,8 @@ function main() {
   console.log('\n✓ Done! All locale files have been updated.');
   console.log('\nNext steps:');
   console.log('1. Review generated files in public/locales/');
-  console.log('2. Upload to Crowdin for translation');
-  console.log('3. Download translated files back to public/locales/');
+//  console.log('2. Upload to Crowdin for translation');
+  console.log('2. Download translated files back to public/locales/');
 }
 
 // Run the script
