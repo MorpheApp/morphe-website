@@ -186,16 +186,28 @@
         updateCarousel();
     }
 
-    // Initialize testimonials
+    // Initialize testimonials with event-based approach
     function init() {
-        if (!window.i18n) {
-            setTimeout(init, 100);
-            return;
-        }
+        window.addEventListener('i18nReady', function(event) {
+            console.log('i18n ready event received:', event.detail);
+            const testimonials = loadTestimonials();
+            renderTestimonials(testimonials);
 
-        const testimonials = loadTestimonials();
-        renderTestimonials(testimonials);
-        initializeCarousel();
+            // Initialize carousel after render
+            setTimeout(() => {
+                initializeCarousel();
+            }, 100);
+        });
+
+        if (window.i18n && window.i18n.translations && window.i18n.translations.testimonials) {
+            console.log('i18n already ready, loading immediately');
+            const testimonials = loadTestimonials();
+            renderTestimonials(testimonials);
+
+            setTimeout(() => {
+                initializeCarousel();
+            }, 100);
+        }
     }
 
     // Reload on language change

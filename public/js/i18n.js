@@ -36,6 +36,13 @@
             await this.loadTranslations(this.currentLang);
             this.applyTranslations();
             this.setupLanguageSelector();
+
+            window.dispatchEvent(new CustomEvent('i18nReady', {
+                detail: {
+                    lang: this.currentLang,
+                    hasTestimonials: !!this.translations.testimonials
+                }
+            }));
         }
 
         /**
@@ -131,6 +138,13 @@
             if (typeof window.reloadTestimonials === 'function') {
                 window.reloadTestimonials();
             }
+
+            window.dispatchEvent(new CustomEvent('i18nLanguageChanged', {
+                detail: {
+                    lang: this.currentLang,
+                    hasTestimonials: !!this.translations.testimonials
+                }
+            }));
         }
 
         translate(key) {
