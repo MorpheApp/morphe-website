@@ -52,7 +52,13 @@
 
 [data-theme="dark"] .feature-icon-item {
     background: rgba(39, 39, 42, 0.95);
-    border-color: var(--border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(100, 100, 110, 0.3);
+}
+
+[data-theme="dark"] .feature-icon-item .label {
+    color: var(--text-primary);
+
 }
 
 [data-theme="dark"] .testimonial-card {
