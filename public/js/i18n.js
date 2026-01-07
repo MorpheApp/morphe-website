@@ -4,13 +4,22 @@
 
     const I18N_KEY = 'morphe-language';
     const SUPPORTED_LOCALES = [
-        { code: 'en', name: 'English' },
-        { code: 'uk-UA', name: 'Українська' },
-        { code: 'es-ES', name: 'Español' },
-        { code: 'de-DE', name: 'Deutsch' },
-        { code: 'fr-FR', name: 'Français' },
-        { code: 'pt-BR', name: 'Português (Brasil)' },
-        { code: 'pt-PT', name: 'Português (Portugal)' }
+    { code: 'en', name: 'English' },
+    { code: 'es-ES', name: 'Español' },
+    { code: 'de-DE', name: 'Deutsch' },
+    { code: 'fr-FR', name: 'Français' },
+    { code: 'pl-PL', name: 'Polski' },
+    { code: 'uk-UA', name: 'Українська' },
+    { code: 'it-IT', name: 'Italiano' },
+    { code: 'nl-NL', name: 'Nederlands' },
+    { code: 'pt-BR', name: 'Português (Brasil)' },
+    { code: 'pt-PT', name: 'Português (Portugal)' },
+    { code: 'tr-TR', name: 'Türkçe' },
+    { code: 'cs-CZ', name: 'Čeština' },
+    { code: 'sk-SK', name: 'Slovenčina' },
+    { code: 'zh-CN', name: '中文 (简体)' },
+    { code: 'ja-JP', name: '日本語' },
+    { code: 'ko-KR', name: '한국어' }
     ];
     const DEFAULT_LANGUAGE = 'en';
 

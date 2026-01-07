@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Início",
+    "how-it-works": "Como funciona",
+    "testimonials": "Testemunhos",
+    "faq": "FAQ",
+    "donate": "Doar"
+  },
+  "hero": {
+    "title": "Transforma as tuas",
+    "title-highlight": "Apps Android",
+    "description": "Dos criadores das melhores apps modificadas do YouTube, chega o Morphe — a poderosa ferramenta de modificação de aplicações que te dá controlo total",
+    "download": "Transferir Morphe",
+    "learn-more": "Saber mais",
+    "social-label": "Junta-te à comunidade"
+  },
+  "feature": {
+    "ad-blocking": "Bloqueio de anúncios",
+    "ad-blocking-desc": "Bloqueia todos os anúncios e desfruta de conteúdo sem interrupções",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Ignora automaticamente segmentos patrocinados pela comunidade",
+    "show-dislikes": "Mostrar dislikes",
+    "show-dislikes-desc": "Vê a contagem real de dislikes",
+    "swipe-controls": "Controlos por gesto",
+    "swipe-controls-desc": "Controla volume e brilho com gestos intuitivos",
+    "custom-themes": "Temas personalizados",
+    "custom-themes-desc": "Personaliza a app com temas e cores",
+    "hide-content": "Ocultar conteúdo",
+    "hide-content-desc": "Oculta conteúdo indesejado, Shorts e recomendações"
+  },
+  "how-it-works": {
+    "title": "Como funciona o Morphe",
+    "subtitle": "Simples, poderoso e para todos",
+    "step1-title": "1. Transferir Morphe",
+    "step1-desc": "Transfere a versão mais recente do Morphe e instala no teu dispositivo Android.",
+    "step2-title": "2. Escolhe a app",
+    "step2-desc": "Seleciona a app a modificar. Atualmente são suportados YouTube e YouTube Music.",
+    "step3-title": "3. Aplicar patches",
+    "step3-desc": "O Morphe irá modificar automaticamente a app selecionada.",
+    "step4-title": "4. Instalar e desfrutar",
+    "step4-desc": "Instala a app modificada e desfruta da experiência.",
+    "supported-title": "Apps suportadas"
+  },
+  "testimonials": {
+    "title": "O que dizem os utilizadores",
+    "subtitle": "Opiniões reais — definitivamente não inventadas"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que precisas de saber sobre o Morphe",
+    "q1": "Que apps o Morphe pode modificar?",
+    "a1": "Podes modificar qualquer app, desde que seja YouTube ou YouTube Music.",
+    "q2": "O Morphe é seguro?",
+    "a2": "Tão seguro quanto a modificação de bytecode ofuscado permite.",
+    "q3": "O Morphe pode danificar o meu telemóvel?",
+    "a3": "Apenas se o telemóvel decidir avariar sozinho.",
+    "q4": "Posso personalizar as apps?",
+    "a4": "Sim, mas sem exageros.",
+    "q5": "Qual é a política de privacidade do Morphe?",
+    "a5-part1": "Este site utiliza",
+    "a5-part2": "para análises: sem cookies nem dados pessoais.",
+    "q6": "Porque o nome Morphe?",
+    "a6": "Porque AAMATT não é apelativo.",
+    "q7": "O Morphe é magia?",
+    "a7": "Não. Mas também sim.",
+    "q8": "Posso contribuir para o Morphe?",
+    "a8-part1": "Sim! Consulta os nossos",
+    "a8-github": "repositórios GitHub",
+    "a8-part2": ". Também apreciamos",
+    "a8-donate": "donativos",
+    "a8-part3": "."
+  },
+  "footer": {
+    "description": "Patching de aplicações Android de nova geração",
+    "product": "Produto",
+    "product-home": "Início",
+    "product-microg": "Transferir microG",
+    "product-translate": "Ajudar a traduzir",
+    "community": "Comunidade",
+    "support": "Suporte",
+    "support-faq": "FAQ",
+    "support-how": "Como funciona o Morphe",
+    "support-donate": "Doar",
+    "copyright": "Open source e gratuito para sempre.",
+    "language": "Idioma"
+  },
+  "donate": {
+    "title": "Suporte",
+    "description": "A tua contribuição ajuda a melhorar o Morphe",
+    "why-title": "Porquê doar?",
+    "why-1": "Manter o Morphe gratuito e open source",
+    "why-2": "Apoiar o desenvolvimento contínuo",
+    "why-3": "Cobrir custos de infraestrutura",
+    "why-4": "Correções e funcionalidades mais rápidas",
+    "crypto-click": "Clica para abrir a carteira"
+  },
+  "microg": {
+    "title": "Transferir",
+    "description": "microG é necessário para YouTube Morphe e YT Music Morphe",
+    "download": "Transferir microG",
+    "what-title": "O que é o microG?",
+    "feature1-title": "Serviços Google",
+    "feature1-desc": "Suporte ao Google Play Services.",
+    "feature2-title": "Privacidade",
+    "feature2-desc": "Implementação open source dos serviços Google.",
+    "feature3-title": "Instalação única",
+    "feature3-desc": "Funciona com todas as apps Morphe."
+  },
+  "translate": {
+    "title": "Ajuda-nos a traduzir",
+    "description": "Ajuda a tornar o Morphe acessível globalmente",
+    "cta": "Começar a traduzir em",
+    "how-title": "Como contribuir",
+    "step1-title": "1. Regista-te no Crowdin",
+    "step1-desc": "Cria uma conta gratuita no Crowdin.",
+    "step2-title": "2. Escolhe o idioma",
+    "step2-desc": "Seleciona o idioma a traduzir.",
+    "step3-title": "3. Traduz",
+    "step3-desc": "Traduz usando a interface simples.",
+    "step4-title": "4. Vê o impacto",
+    "step4-desc": "As traduções serão incluídas futuramente.",
+    "why-title": "Porquê traduzir?",
+    "why-1": "Ajudar a comunidade",
+    "why-2": "Tornar o Morphe global",
+    "why-3": "Contribuir para open source"
+  },
+  "error": {
+    "404-title": "404 - Página não encontrada",
+    "not-found": "A página não foi encontrada",
+    "go-home": "Ir para a página inicial"
+  }
+}

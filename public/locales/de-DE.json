@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "how-it-works": "So funktioniert es",
+    "testimonials": "Erfahrungsberichte",
+    "faq": "FAQ",
+    "donate": "Unterstützen"
+  },
+  "hero": {
+    "title": "Transformiere deine",
+    "title-highlight": "Android-Apps",
+    "description": "Von den Entwicklern der besten modifizierten YouTube-Apps kommt Morphe – ein leistungsstarkes Tool zur App-Modifikation, das dir die volle Kontrolle gibt",
+    "download": "Morphe herunterladen",
+    "learn-more": "Mehr erfahren",
+    "social-label": "Community beitreten"
+  },
+  "feature": {
+    "ad-blocking": "Werbeblocker",
+    "ad-blocking-desc": "Blockiere alle Werbeanzeigen und genieße unterbrechungsfreie Inhalte in deinen Apps",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Überspringe gesponserte Segmente automatisch dank Community-Zeitstempeln",
+    "show-dislikes": "Dislikes anzeigen",
+    "show-dislikes-desc": "Sieh die echte Anzahl an Dislikes für bessere Entscheidungen",
+    "swipe-controls": "Wischsteuerung",
+    "swipe-controls-desc": "Steuere Lautstärke und Helligkeit mit intuitiven Wischgesten",
+    "custom-themes": "Eigene Designs",
+    "custom-themes-desc": "Personalisiere deine App mit schönen Designs und Farben",
+    "hide-content": "Inhalte ausblenden",
+    "hide-content-desc": "Blende unerwünschte Inhalte, Shorts und Empfehlungen für einen aufgeräumten Feed aus"
+  },
+  "how-it-works": {
+    "title": "So funktioniert Morphe",
+    "subtitle": "Einfach, leistungsstark und für alle gemacht",
+    "step1-title": "1. Morphe herunterladen",
+    "step1-desc": "Lade die neueste Version von Morphe herunter und installiere sie auf deinem Android-Gerät.",
+    "step2-title": "2. App auswählen",
+    "step2-desc": "Wähle die App aus, die du modifizieren möchtest. Aktuell unterstützt Morphe YouTube und YouTube Music.",
+    "step3-title": "3. Patches anwenden",
+    "step3-desc": "Morphe patcht die ausgewählte App automatisch.",
+    "step4-title": "4. Installieren & genießen",
+    "step4-desc": "Installiere die gepatchte App und genieße dein personalisiertes Erlebnis.",
+    "supported-title": "Unterstützte Apps"
+  },
+  "testimonials": {
+    "title": "Was Nutzer sagen",
+    "subtitle": "Feedback von echten Nutzern – definitiv nicht erfunden"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was du über Morphe wissen musst",
+    "q1": "Welche Apps kann Morphe patchen?",
+    "a1": "Du kannst jede App patchen. Vorausgesetzt, es handelt sich um YouTube oder YouTube Music. Wir arbeiten kontinuierlich daran, weitere Apps zu unterstützen.",
+    "q2": "Ist Morphe sicher?",
+    "a2": "So sicher, wie die Modifikation von obfuskiertem Bytecode sein kann. Der gesamte Quellcode von Morphe ist Open Source und öffentlich einsehbar. Die Community prüft und erweitert ihn aktiv.",
+    "q3": "Kann Morphe mein Handy beschädigen?",
+    "a3": "Nur wenn dein Handy selbst beschließt, kaputtzugehen. Ansonsten bleibt dein Gerät unversehrt. Morphe verändert nur App-Pakete und greift nicht auf Systemdateien zu.",
+    "q4": "Kann ich Apps nach meinen Wünschen anpassen?",
+    "a4": "Ja, aber gib Morphe nicht die Schuld, wenn deine App zu stark angepasst ist. Es wird empfohlen, maßvoll zu personalisieren.",
+    "q5": "Wie sieht Morphes Datenschutzrichtlinie aus?",
+    "a5-part1": "Diese Website verwendet",
+    "a5-part2": "für Analysen: keine Cookies, keine personenbezogenen Daten, nichts wird verkauft oder weitergegeben. Morphe fügt gepatchten Apps keine Analyse- oder Trackingfunktionen hinzu.",
+    "q6": "Warum der Name Morphe?",
+    "a6": "Weil „Android App Modification And Transformation Tool“ nicht besonders eingängig ist. Morphe steht für das Verwandeln von Apps in etwas Besseres.",
+    "q7": "Ist Morphe Magie?",
+    "a7": "Nein. Aber irgendwie doch. Es ist fortgeschrittene Bytecode-Manipulation, die sich wie Magie anfühlt.",
+    "q8": "Kann ich zu Morphe beitragen?",
+    "a8-part1": "Ja! Sieh dir die Beitragsrichtlinien in unseren",
+    "a8-github": "GitHub-Repositories",
+    "a8-part2": "an. Wenn du kein Entwickler bist, freuen wir uns immer über",
+    "a8-donate": "Spenden",
+    "a8-part3": ", um die laufenden Kosten zu decken."
+  },
+  "footer": {
+    "description": "Android-App-Patching der nächsten Generation",
+    "product": "Produkt",
+    "product-home": "Startseite",
+    "product-microg": "microG herunterladen",
+    "product-translate": "Beim Übersetzen helfen",
+    "community": "Community",
+    "support": "Support",
+    "support-faq": "FAQ",
+    "support-how": "So funktioniert Morphe",
+    "support-donate": "Spenden",
+    "copyright": "Open Source und für immer kostenlos.",
+    "language": "Sprache"
+  },
+  "donate": {
+    "title": "Unterstützung",
+    "description": "Dein Beitrag hilft uns, Morphe weiterzuentwickeln und zu verbessern",
+    "why-title": "Warum spenden?",
+    "why-1": "Morphe kostenlos und Open Source halten",
+    "why-2": "Laufende Entwicklung unterstützen",
+    "why-3": "Infrastrukturkosten decken",
+    "why-4": "Schnellere Bugfixes und neue Funktionen ermöglichen",
+    "crypto-click": "Klicken, um Wallet zu öffnen"
+  },
+  "microg": {
+    "title": "Herunterladen",
+    "description": "microG wird benötigt, um YouTube Morphe und YT Music Morphe zu nutzen",
+    "download": "microG herunterladen",
+    "what-title": "Was ist microG?",
+    "feature1-title": "Google-Dienste",
+    "feature1-desc": "microG bietet Unterstützung für Google Play Services und ermöglicht die Nutzung deines Google-Kontos mit YouTube Morphe und YT Music Morphe.",
+    "feature2-title": "Datenschutzorientiert",
+    "feature2-desc": "microG ist eine Open-Source-Neuimplementierung von Google-Diensten, die deine Privatsphäre respektiert und gleichzeitig wichtige Funktionen bereitstellt.",
+    "feature3-title": "Einmalige Installation",
+    "feature3-desc": "Installiere microG einmal und es funktioniert mit allen Morphe-Apps. Keine Neuinstallation bei Updates erforderlich."
+  },
+  "translate": {
+    "title": "Hilf uns beim Übersetzen",
+    "description": "Mache Morphe für Millionen von Nutzern weltweit zugänglich, indem du es in deine Sprache übersetzt",
+    "cta": "Übersetzen starten auf",
+    "how-title": "So kannst du mitmachen",
+    "step1-title": "1. Bei Crowdin registrieren",
+    "step1-desc": "Erstelle ein kostenloses Crowdin-Konto. Das dauert nur eine Minute und ermöglicht dir, Morphe und andere Open-Source-Projekte zu übersetzen.",
+    "step2-title": "2. Sprache auswählen",
+    "step2-desc": "Wähle die Sprache, in die du übersetzen möchtest. Du kannst neue Übersetzungen erstellen oder bestehende verbessern.",
+    "step3-title": "3. Mit dem Übersetzen beginnen",
+    "step3-desc": "Nutze die intuitive Crowdin-Oberfläche zum Übersetzen der Texte. Jeder Beitrag zählt.",
+    "step4-title": "4. Wirkung sehen",
+    "step4-desc": "Deine Übersetzungen werden geprüft und in zukünftige Morphe-Versionen aufgenommen.",
+    "why-title": "Warum übersetzen?",
+    "why-1": "Hilf deiner Community",
+    "why-2": "Mache Morphe global",
+    "why-3": "Trage zu Open Source bei"
+  },
+  "error": {
+    "404-title": "404 – Seite nicht gefunden",
+    "not-found": "Die gesuchte Seite konnte nicht gefunden werden",
+    "go-home": "Zur Startseite"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "how-it-works": "Jak to działa",
+    "testimonials": "Opinie",
+    "faq": "FAQ",
+    "donate": "Wesprzyj"
+  },
+  "hero": {
+    "title": "Przekształć swoje",
+    "title-highlight": "aplikacje Android",
+    "description": "Od twórców najlepszych zmodyfikowanych aplikacji YouTube — Morphe to potężne narzędzie do modyfikacji aplikacji, które daje Ci pełną kontrolę",
+    "download": "Pobierz Morphe",
+    "learn-more": "Dowiedz się więcej",
+    "social-label": "Dołącz do społeczności"
+  },
+  "feature": {
+    "ad-blocking": "Blokowanie reklam",
+    "ad-blocking-desc": "Blokuj wszystkie reklamy i ciesz się nieprzerwanym korzystaniem z aplikacji",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Automatycznie pomijaj sponsorowane fragmenty dzięki społeczności",
+    "show-dislikes": "Pokaż dislikes",
+    "show-dislikes-desc": "Zobacz prawdziwą liczbę ocen negatywnych",
+    "swipe-controls": "Sterowanie gestami",
+    "swipe-controls-desc": "Steruj głośnością i jasnością za pomocą gestów",
+    "custom-themes": "Motywy niestandardowe",
+    "custom-themes-desc": "Personalizuj aplikację za pomocą motywów i kolorów",
+    "hide-content": "Ukrywanie treści",
+    "hide-content-desc": "Ukrywaj niechciane treści, Shorts i rekomendacje"
+  },
+  "how-it-works": {
+    "title": "Jak działa Morphe",
+    "subtitle": "Prosto, potężnie i dla każdego",
+    "step1-title": "1. Pobierz Morphe",
+    "step1-desc": "Pobierz najnowszą wersję Morphe i zainstaluj ją na swoim urządzeniu z Androidem.",
+    "step2-title": "2. Wybierz aplikację",
+    "step2-desc": "Wybierz aplikację do modyfikacji. Obecnie obsługiwane są YouTube i YouTube Music.",
+    "step3-title": "3. Zastosuj patche",
+    "step3-desc": "Morphe automatycznie zmodyfikuje wybraną aplikację.",
+    "step4-title": "4. Zainstaluj i korzystaj",
+    "step4-desc": "Zainstaluj zmodyfikowaną aplikację i ciesz się doświadczeniem.",
+    "supported-title": "Obsługiwane aplikacje"
+  },
+  "testimonials": {
+    "title": "Opinie użytkowników",
+    "subtitle": "Opinie prawdziwych użytkowników, zdecydowanie nie zmyślone"
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o Morphe",
+    "q1": "Jakie aplikacje Morphe może modyfikować?",
+    "a1": "Możesz modyfikować dowolną aplikację, o ile jest to YouTube lub YouTube Music.",
+    "q2": "Czy Morphe jest bezpieczne?",
+    "a2": "Tak bezpieczne, jak modyfikacja obfuskowanego bytecode.",
+    "q3": "Czy Morphe może uszkodzić telefon?",
+    "a3": "Tylko jeśli telefon sam zdecyduje się zepsuć.",
+    "q4": "Czy mogę dostosować aplikacje?",
+    "a4": "Tak, ale zalecamy umiarkowaną personalizację.",
+    "q5": "Jaka jest polityka prywatności Morphe?",
+    "a5-part1": "Ta strona używa",
+    "a5-part2": "do analityki: bez cookies i danych osobowych.",
+    "q6": "Dlaczego nazwa Morphe?",
+    "a6": "Ponieważ skrót AAMATT nie brzmi atrakcyjnie.",
+    "q7": "Czy Morphe to magia?",
+    "a7": "Nie. Ale trochę tak.",
+    "q8": "Czy mogę pomóc w rozwoju Morphe?",
+    "a8-part1": "Tak! Sprawdź nasze",
+    "a8-github": "repozytoria GitHub",
+    "a8-part2": ". Doceniamy także",
+    "a8-donate": "darowizny",
+    "a8-part3": "."
+  },
+  "footer": {
+    "description": "Nowa generacja modyfikacji aplikacji Android",
+    "product": "Produkt",
+    "product-home": "Strona główna",
+    "product-microg": "Pobierz microG",
+    "product-translate": "Pomóż w tłumaczeniu",
+    "community": "Społeczność",
+    "support": "Wsparcie",
+    "support-faq": "FAQ",
+    "support-how": "Jak działa Morphe",
+    "support-donate": "Wesprzyj",
+    "copyright": "Open source i zawsze darmowe.",
+    "language": "Język"
+  },
+  "donate": {
+    "title": "Wsparcie",
+    "description": "Twoje wsparcie pomaga rozwijać Morphe",
+    "why-title": "Dlaczego warto wesprzeć?",
+    "why-1": "Zachować Morphe darmowe i open source",
+    "why-2": "Wspierać rozwój",
+    "why-3": "Pokryć koszty infrastruktury",
+    "why-4": "Szybsze poprawki i nowe funkcje",
+    "crypto-click": "Kliknij, aby otworzyć portfel"
+  },
+  "microg": {
+    "title": "Pobierz",
+    "description": "microG jest wymagane do YouTube Morphe i YT Music Morphe",
+    "download": "Pobierz microG",
+    "what-title": "Czym jest microG?",
+    "feature1-title": "Usługi Google",
+    "feature1-desc": "Obsługa Google Play Services.",
+    "feature2-title": "Prywatność",
+    "feature2-desc": "Otwartoźródłowa implementacja usług Google.",
+    "feature3-title": "Jednorazowa instalacja",
+    "feature3-desc": "Jedna instalacja dla wszystkich aplikacji Morphe."
+  },
+  "translate": {
+    "title": "Pomóż w tłumaczeniu",
+    "description": "Pomóż udostępnić Morphe użytkownikom na całym świecie",
+    "cta": "Rozpocznij tłumaczenie na",
+    "how-title": "Jak pomóc",
+    "step1-title": "1. Zarejestruj się w Crowdin",
+    "step1-desc": "Załóż darmowe konto Crowdin.",
+    "step2-title": "2. Wybierz język",
+    "step2-desc": "Wybierz język do tłumaczenia.",
+    "step3-title": "3. Tłumacz",
+    "step3-desc": "Tłumacz teksty w prostym interfejsie.",
+    "step4-title": "4. Zobacz efekt",
+    "step4-desc": "Twoje tłumaczenia trafią do kolejnych wersji.",
+    "why-title": "Dlaczego tłumaczyć?",
+    "why-1": "Pomoc społeczności",
+    "why-2": "Globalny zasięg",
+    "why-3": "Wsparcie open source"
+  },
+  "error": {
+    "404-title": "404 - Nie znaleziono strony",
+    "not-found": "Nie można znaleźć strony",
+    "go-home": "Wróć na stronę główną"
+  }
+}

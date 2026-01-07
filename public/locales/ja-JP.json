@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "how-it-works": "仕組み",
+    "testimonials": "ユーザーレビュー",
+    "faq": "よくある質問",
+    "donate": "寄付"
+  },
+  "hero": {
+    "title": "あなたの",
+    "title-highlight": "Androidアプリを変革",
+    "description": "最高の改造版YouTubeアプリを提供してきた開発者から、Morphe - あなたがコントロールできる強力なアプリ改造ツール",
+    "download": "Morpheをダウンロード",
+    "learn-more": "詳細を見る",
+    "social-label": "コミュニティに参加"
+  },
+  "feature": {
+    "ad-blocking": "広告ブロック",
+    "ad-blocking-desc": "すべての広告をブロックして、中断のないコンテンツをお楽しみください",
+    "sponsorblock": "スポンサーブロック",
+    "sponsorblock-desc": "コミュニティ提供のタイムスタンプでスポンサーセグメントを自動スキップ",
+    "show-dislikes": "低評価を表示",
+    "show-dislikes-desc": "実際の低評価数を確認して、より良い視聴判断を",
+    "swipe-controls": "スワイプコントロール",
+    "swipe-controls-desc": "直感的なスワイプジェスチャーで音量と明るさを調整",
+    "custom-themes": "カスタムテーマ",
+    "custom-themes-desc": "美しいカスタムテーマと色でアプリをパーソナライズ",
+    "hide-content": "コンテンツを非表示",
+    "hide-content-desc": "不要なコンテンツ、ショート動画、おすすめをすっきり非表示"
+  },
+  "how-it-works": {
+    "title": "Morpheの仕組み",
+    "subtitle": "シンプル、パワフル、そして誰でも使える",
+    "step1-title": "1. Morpheをダウンロード",
+    "step1-desc": "最新版のMorpheをダウンロードし、Androidデバイスにインストールします。",
+    "step2-title": "2. アプリを選択",
+    "step2-desc": "改造したいアプリを選択します。現在MorpheはYouTubeとYouTube Musicに対応しています。",
+    "step3-title": "3. パッチを適用",
+    "step3-desc": "Morpheが選択したアプリに自動的にパッチを適用します。",
+    "step4-title": "4. インストールして楽しむ",
+    "step4-desc": "パッチを適用したアプリをインストールし、カスタマイズされた体験をお楽しみください。",
+    "supported-title": "対応アプリ"
+  },
+  "testimonials": {
+    "title": "ユーザーの声",
+    "subtitle": "実際のユーザーからのフィードバック、絶対に作り話ではありません"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "Morpheについて知っておくべきすべて",
+    "q1": "Morpheはどのアプリにパッチを適用できますか？",
+    "a1": "お好きなアプリにパッチを適用できます。YouTubeかYouTube Musicであれば。より多くのアプリへの対応拡大に常に取り組んでいます。",
+    "q2": "Morpheは安全ですか？",
+    "a2": "難読化されたバイトコードを改造する限り安全です。Morpheのすべてのソースコードはオープンソースで、誰でも自由に検査できます。コミュニティが積極的にコードベースをレビューし、貢献しています。",
+    "q3": "Morpheで端末が壊れますか？",
+    "a3": "端末が自ら壊れようと決めた場合のみです。それ以外はデバイスは問題ありません。Morpheはアプリパッケージのみを改造し、システムファイルには触れません。",
+    "q4": "好みに合わせてアプリをカスタマイズできますか？",
+    "a4": "できます。ただし、アプリがカスタマイズしすぎて扱えなくなってもMorpheのせいにしないでください。好みのレベルまでカスタマイズし、それ以上はしないことをお勧めします。",
+    "q5": "Morpheのプライバシーポリシーは？",
+    "a5-part1": "このウェブサイトは",
+    "a5-part2": "を分析に使用：Cookie なし、個人データなし、販売なし、共有なし。Morpheはパッチを適用したアプリに分析やデータ収集を追加しません。",
+    "q6": "なぜMorpheという名前ですか？",
+    "a6": "「Android App Modification And Transformation Tool」(AAMATT)はあまりキャッチーではないからです。そしてMorpheはアプリをより良いものに変形させることを意味しています。",
+    "q7": "Morpheは魔法ですか？",
+    "a7": "いいえ。でもはい。魔法のように感じる高度なバイトコード操作です。",
+    "q8": "Morpheに貢献できますか？",
+    "a8-part1": "できます！",
+    "a8-github": "GitHubリポジトリ",
+    "a8-part2": "の貢献ガイドラインをご覧ください。開発スキルがない場合でも、費用を支払うための",
+    "a8-donate": "寄付",
+    "a8-part3": "は常に歓迎しています。"
+  },
+  "footer": {
+    "description": "次世代のAndroidアプリパッチング",
+    "product": "プロダクト",
+    "product-home": "ホーム",
+    "product-microg": "microGをダウンロード",
+    "product-translate": "翻訳を手伝う",
+    "community": "コミュニティ",
+    "support": "サポート",
+    "support-faq": "よくある質問",
+    "support-how": "Morpheの仕組み",
+    "support-donate": "寄付",
+    "copyright": "永久にオープンソースで無料。",
+    "language": "言語"
+  },
+  "donate": {
+    "title": "サポート",
+    "description": "あなたの貢献がMorpheの開発と改善を続けることを支えます",
+    "why-title": "なぜ寄付するのですか？",
+    "why-1": "Morpheを無料でオープンソースに保つ",
+    "why-2": "継続的な開発をサポート",
+    "why-3": "インフラコストの負担を助ける",
+    "why-4": "より迅速なバグ修正と機能追加を実現",
+    "crypto-click": "クリックしてウォレットを開く"
+  },
+  "microg": {
+    "title": "ダウンロード",
+    "description": "YouTube MorpheとYT Music Morpheを使用するにはmicroGが必要です",
+    "download": "microGをダウンロード",
+    "what-title": "microGとは？",
+    "feature1-title": "Googleサービス",
+    "feature1-desc": "microGはGoogle Play開発者サービスのサポートを提供し、YouTube MorpheとYT Music MorpheでGoogleアカウントを使用できるようにします。",
+    "feature2-title": "プライバシー重視",
+    "feature2-desc": "microGはプライバシーを尊重しながら必須機能を提供する、Googleサービスのオープンソース再実装です。",
+    "feature3-title": "一度のインストール",
+    "feature3-desc": "microGを一度インストールすれば、すべてのMorpheアプリで動作します。YouTube MorpheとYT Music Morpheを更新する際に再インストールは不要です。"
+  },
+  "translate": {
+    "title": "翻訳にご協力ください",
+    "description": "あなたの言語に翻訳して、Morpheを世界中の何百万ものユーザーに届けましょう",
+    "cta": "翻訳を開始",
+    "how-title": "貢献方法",
+    "step1-title": "1. Crowdinにサインアップ",
+    "step1-desc": "無料のCrowdinアカウントを作成します。わずか1分で、Morpheや他のオープンソースプロジェクトの翻訳にアクセスできます。",
+    "step2-title": "2. 言語を選択",
+    "step2-desc": "翻訳したい言語を選択します。新しい翻訳に貢献したり、既存の翻訳を改善したりできます。",
+    "step3-title": "3. 翻訳を開始",
+    "step3-desc": "Crowdinの直感的なインターフェースを使用して文字列を翻訳します。すべての貢献がMorpheをより多くのユーザーに届けることを助けます。",
+    "step4-title": "4. あなたの影響を確認",
+    "step4-desc": "あなたの翻訳はレビューされ、将来のMorpheリリースに含まれ、世界中のユーザーを助けます。",
+    "why-title": "なぜ翻訳するのですか？",
+    "why-1": "コミュニティを助ける",
+    "why-2": "Morpheをグローバルにする",
+    "why-3": "オープンソースに貢献する"
+  },
+  "error": {
+    "404-title": "404 - ページが見つかりません",
+    "not-found": "お探しのページが見つかりません",
+    "go-home": "ホームページへ"
+  }
+}

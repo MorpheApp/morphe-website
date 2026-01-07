@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "how-it-works": "Nasıl Çalışır",
+    "testimonials": "Yorumlar",
+    "faq": "SSS",
+    "donate": "Bağış Yap"
+  },
+  "hero": {
+    "title": "Android",
+    "title-highlight": "Uygulamalarını Dönüştür",
+    "description": "En iyi modlu YouTube uygulamalarının geliştiricilerinden Morphe geliyor — kontrolü elinize veren güçlü uygulama düzenleme aracı",
+    "download": "Morphe İndir",
+    "learn-more": "Daha Fazla Bilgi",
+    "social-label": "Topluluğa Katıl"
+  },
+  "feature": {
+    "ad-blocking": "Reklam Engelleme",
+    "ad-blocking-desc": "Tüm reklamları engelle ve kesintisiz içerik izle",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Topluluk destekli sponsorlu bölümleri otomatik atla",
+    "show-dislikes": "Dislike Göster",
+    "show-dislikes-desc": "Gerçek dislike sayılarını gör",
+    "swipe-controls": "Kaydırma Kontrolleri",
+    "swipe-controls-desc": "Kaydırma hareketleriyle ses ve parlaklığı kontrol et",
+    "custom-themes": "Özel Temalar",
+    "custom-themes-desc": "Uygulamanı temalar ve renklerle kişiselleştir",
+    "hide-content": "İçeriği Gizle",
+    "hide-content-desc": "İstenmeyen içerikleri ve önerileri gizle"
+  },
+  "how-it-works": {
+    "title": "Morphe Nasıl Çalışır",
+    "subtitle": "Basit, güçlü ve herkes için",
+    "step1-title": "1. Morphe İndir",
+    "step1-desc": "Morphe'nin en son sürümünü indir ve Android cihazına kur.",
+    "step2-title": "2. Uygulamanı Seç",
+    "step2-desc": "Değiştirmek istediğin uygulamayı seç. Şu anda YouTube ve YouTube Music destekleniyor.",
+    "step3-title": "3. Yamaları Uygula",
+    "step3-desc": "Morphe otomatik olarak yamaları uygular.",
+    "step4-title": "4. Kur ve Keyfini Çıkar",
+    "step4-desc": "Yamalanmış uygulamayı kur ve keyfini çıkar.",
+    "supported-title": "Desteklenen Uygulamalar"
+  },
+  "testimonials": {
+    "title": "Kullanıcılar Ne Diyor",
+    "subtitle": "Gerçek yorumlar, kesinlikle uydurma değil"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Morphe hakkında bilmen gereken her şey",
+    "q1": "Morphe hangi uygulamaları değiştirebilir?",
+    "a1": "YouTube veya YouTube Music olan her uygulamayı değiştirebilirsin.",
+    "q2": "Morphe güvenli mi?",
+    "a2": "Bytecode düzenlemenin mümkün olduğu kadar güvenli.",
+    "q3": "Morphe telefonuma zarar verir mi?",
+    "a3": "Telefonun kendi kendine bozulmazsa hayır.",
+    "q4": "Uygulamaları özelleştirebilir miyim?",
+    "a4": "Evet, ama abartma.",
+    "q5": "Morphe'nin gizlilik politikası nedir?",
+    "a5-part1": "Bu site",
+    "a5-part2": "analitik için kullanır: çerez yok, kişisel veri yok.",
+    "q6": "Neden Morphe ismi?",
+    "a6": "Çünkü AAMATT kulağa hoş gelmiyor.",
+    "q7": "Morphe sihir mi?",
+    "a7": "Hayır. Ama biraz evet.",
+    "q8": "Morphe'ye katkıda bulunabilir miyim?",
+    "a8-part1": "Evet! ",
+    "a8-github": "GitHub depolarımıza",
+    "a8-part2": " bak.",
+    "a8-donate": "Bağışlar",
+    "a8-part3": " da memnuniyetle karşılanır."
+  },
+  "footer": {
+    "description": "Yeni nesil Android uygulama yamalama",
+    "product": "Ürün",
+    "product-home": "Ana Sayfa",
+    "product-microg": "microG İndir",
+    "product-translate": "Çeviriye yardım et",
+    "community": "Topluluk",
+    "support": "Destek",
+    "support-faq": "SSS",
+    "support-how": "Morphe Nasıl Çalışır",
+    "support-donate": "Bağış Yap",
+    "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
+    "language": "Dil"
+  },
+  "donate": {
+    "title": "Destek",
+    "description": "Katkın Morphe'nin gelişmesine yardımcı olur",
+    "why-title": "Neden bağış?",
+    "why-1": "Morphe'yi ücretsiz ve açık kaynak tutmak",
+    "why-2": "Sürekli geliştirmeyi desteklemek",
+    "why-3": "Altyapı maliyetlerini karşılamak",
+    "why-4": "Daha hızlı hata düzeltmeleri",
+    "crypto-click": "Cüzdanı açmak için tıkla"
+  },
+  "microg": {
+    "title": "İndir",
+    "description": "microG, YouTube Morphe ve YT Music Morphe için gereklidir",
+    "download": "microG İndir",
+    "what-title": "microG nedir?",
+    "feature1-title": "Google Servisleri",
+    "feature1-desc": "Google Play Hizmetleri desteği sağlar.",
+    "feature2-title": "Gizlilik Odaklı",
+    "feature2-desc": "Google servislerinin açık kaynaklı yeniden uygulaması.",
+    "feature3-title": "Tek Seferlik Kurulum",
+    "feature3-desc": "Tüm Morphe uygulamalarıyla çalışır."
+  },
+  "translate": {
+    "title": "Çeviriye Yardım Et",
+    "description": "Morphe'yi dünya çapında erişilebilir hale getir",
+    "cta": "Şurada çevirmeye başla",
+    "how-title": "Nasıl katkı sağlanır",
+    "step1-title": "1. Crowdin'e Kaydol",
+    "step1-desc": "Ücretsiz bir Crowdin hesabı oluştur.",
+    "step2-title": "2. Dilini Seç",
+    "step2-desc": "Çevirmek istediğin dili seç.",
+    "step3-title": "3. Çevirmeye Başla",
+    "step3-desc": "Crowdin'in basit arayüzünü kullan.",
+    "step4-title": "4. Etkini Gör",
+    "step4-desc": "Çeviriler gelecekteki sürümlere eklenecek.",
+    "why-title": "Neden çeviri?",
+    "why-1": "Topluluğuna yardım et",
+    "why-2": "Morphe'yi küresel yap",
+    "why-3": "Açık kaynağa katkı sağla"
+  },
+  "error": {
+    "404-title": "404 - Sayfa Bulunamadı",
+    "not-found": "Aradığınız sayfa bulunamadı",
+    "go-home": "Ana sayfaya dön"
+  }
+}

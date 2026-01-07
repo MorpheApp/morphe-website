@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Domů",
+    "how-it-works": "Jak to funguje",
+    "testimonials": "Reference",
+    "faq": "FAQ",
+    "donate": "Darovat"
+  },
+  "hero": {
+    "title": "Proměň své",
+    "title-highlight": "Android aplikace",
+    "description": "Od vývojářů nejlepších upravených aplikací YouTube přichází Morphe — výkonný nástroj pro úpravu aplikací",
+    "download": "Stáhnout Morphe",
+    "learn-more": "Zjistit více",
+    "social-label": "Připoj se ke komunitě"
+  },
+  "feature": {
+    "ad-blocking": "Blokování reklam",
+    "ad-blocking-desc": "Blokuj všechny reklamy a užívej si obsah bez přerušení",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Automaticky přeskakuj sponzorované části",
+    "show-dislikes": "Zobrazit nelíbí se",
+    "show-dislikes-desc": "Zobraz skutečný počet nelíbí se",
+    "swipe-controls": "Ovládání gesty",
+    "swipe-controls-desc": "Ovládej hlasitost a jas gesty",
+    "custom-themes": "Vlastní motivy",
+    "custom-themes-desc": "Přizpůsob aplikaci pomocí motivů",
+    "hide-content": "Skrýt obsah",
+    "hide-content-desc": "Skrývej nechtěný obsah a doporučení"
+  },
+  "how-it-works": {
+    "title": "Jak Morphe funguje",
+    "subtitle": "Jednoduché, výkonné a pro každého",
+    "step1-title": "1. Stáhni Morphe",
+    "step1-desc": "Stáhni nejnovější verzi Morphe a nainstaluj ji do Android zařízení.",
+    "step2-title": "2. Vyber aplikaci",
+    "step2-desc": "Vyber aplikaci k úpravě. Podporovány jsou YouTube a YouTube Music.",
+    "step3-title": "3. Použij záplaty",
+    "step3-desc": "Morphe automaticky upraví aplikaci.",
+    "step4-title": "4. Nainstaluj a užívej",
+    "step4-desc": "Nainstaluj upravenou aplikaci a užívej si.",
+    "supported-title": "Podporované aplikace"
+  },
+  "testimonials": {
+    "title": "Co říkají uživatelé",
+    "subtitle": "Skutečné recenze, rozhodně ne vymyšlené"
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebuješ vědět o Morphe",
+    "q1": "Jaké aplikace může Morphe upravit?",
+    "a1": "Jakoukoli aplikaci, pokud je to YouTube nebo YouTube Music.",
+    "q2": "Je Morphe bezpečný?",
+    "a2": "Tak bezpečný, jak jen může být úprava bytecode.",
+    "q3": "Může Morphe poškodit telefon?",
+    "a3": "Pouze pokud se telefon rozhodne sám pokazit.",
+    "q4": "Mohu aplikace přizpůsobit?",
+    "a4": "Ano, ale s mírou.",
+    "q5": "Jaká je politika ochrany soukromí Morphe?",
+    "a5-part1": "Tento web používá",
+    "a5-part2": "pro analytiku: žádné cookies ani osobní údaje.",
+    "q6": "Proč se jmenuje Morphe?",
+    "a6": "Protože AAMATT nezní dobře.",
+    "q7": "Je Morphe magie?",
+    "a7": "Ne. Ale trochu ano.",
+    "q8": "Mohu přispět Morphe?",
+    "a8-part1": "Ano! Podívej se na naše",
+    "a8-github": "GitHub repozitáře",
+    "a8-part2": ". Vítáme také",
+    "a8-donate": "dary",
+    "a8-part3": "."
+  },
+  "footer": {
+    "description": "Patchování Android aplikací nové generace",
+    "product": "Produkt",
+    "product-home": "Domů",
+    "product-microg": "Stáhnout microG",
+    "product-translate": "Pomoz přeložit",
+    "community": "Komunita",
+    "support": "Podpora",
+    "support-faq": "FAQ",
+    "support-how": "Jak Morphe funguje",
+    "support-donate": "Darovat",
+    "copyright": "Open source a navždy zdarma.",
+    "language": "Jazyk"
+  },
+  "donate": {
+    "title": "Podpora",
+    "description": "Tvůj příspěvek pomáhá zlepšovat Morphe",
+    "why-title": "Proč darovat?",
+    "why-1": "Udržet Morphe zdarma a open source",
+    "why-2": "Podpořit další vývoj",
+    "why-3": "Pokrytí nákladů na infrastrukturu",
+    "why-4": "Rychlejší opravy chyb",
+    "crypto-click": "Klikni pro otevření peněženky"
+  },
+  "microg": {
+    "title": "Stáhnout",
+    "description": "microG je vyžadován pro YouTube Morphe a YT Music Morphe",
+    "download": "Stáhnout microG",
+    "what-title": "Co je microG?",
+    "feature1-title": "Google služby",
+    "feature1-desc": "Podpora Google Play Services.",
+    "feature2-title": "Soukromí",
+    "feature2-desc": "Open source implementace Google služeb.",
+    "feature3-title": "Jednorázová instalace",
+    "feature3-desc": "Funguje se všemi aplikacemi Morphe."
+  },
+  "translate": {
+    "title": "Pomoz přeložit",
+    "description": "Zpřístupni Morphe po celém světě",
+    "cta": "Začni překládat na",
+    "how-title": "Jak přispět",
+    "step1-title": "1. Zaregistruj se na Crowdin",
+    "step1-desc": "Vytvoř si bezplatný účet.",
+    "step2-title": "2. Vyber jazyk",
+    "step2-desc": "Zvol jazyk k překladu.",
+    "step3-title": "3. Začni překládat",
+    "step3-desc": "Použij jednoduché rozhraní Crowdin.",
+    "step4-title": "4. Sleduj dopad",
+    "step4-desc": "Překlady budou zahrnuty v dalších verzích.",
+    "why-title": "Proč překládat?",
+    "why-1": "Pomoz komunitě",
+    "why-2": "Udělej Morphe globálním",
+    "why-3": "Přispěj k open source"
+  },
+  "error": {
+    "404-title": "404 - Stránka nenalezena",
+    "not-found": "Požadovaná stránka nebyla nalezena",
+    "go-home": "Zpět na hlavní stránku"
+  }
+}
