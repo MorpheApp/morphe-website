@@ -136,25 +136,26 @@
         // Mouse events
         grid.addEventListener('mousedown', (e) => {
             isDragging = true;
-            touchStartX = e.screenX;
-            grid.style.transition = 'none';
+            touchStartX = e.clientX;
             grid.style.cursor = 'grabbing';
+            e.preventDefault(); // Prevent text selection
         });
 
-        document.addEventListener('mouseup', (e) => {
+        const handleMouseUp = (e) => {
             if (!isDragging) return;
+
             isDragging = false;
-            const deltaX = touchStartX - e.screenX;
+            const deltaX = touchStartX - e.clientX;
             handleSwipe(deltaX);
             grid.style.cursor = 'grab';
-        });
+        };
 
-        grid.addEventListener('mouseleave', () => {
-            if (isDragging) {
-                isDragging = false;
-                updateCarousel();
-                grid.style.cursor = 'grab';
-            }
+        // Attach to document so it works outside grid too
+        document.addEventListener('mouseup', handleMouseUp);
+
+        // Cleanup listener on unload
+        window.addEventListener('beforeunload', () => {
+            document.removeEventListener('mouseup', handleMouseUp);
         });
 
         // Button controls
