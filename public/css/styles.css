@@ -580,7 +580,7 @@ body {
 .testimonials-carousel {
     position: relative;
     overflow: hidden;
-    padding: 0 var(--spacing-3xl);
+    padding: var(--spacing-3xl);
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
 }
@@ -1158,7 +1158,7 @@ body {
     }
 
     .testimonials-carousel {
-        padding: 0 var(--spacing-md);
+        padding: var(--spacing-md);
     }
 
     .testimonials-grid .testimonial-card {
@@ -1290,7 +1290,7 @@ body {
 
 @media (max-width: 896px) and (max-height: 414px) and (orientation: landscape) {
     .testimonials-carousel {
-        padding: 0 var(--spacing-xl);
+        padding: var(--spacing-xl);
     }
 
     .testimonials-grid .testimonial-card {
