@@ -1039,13 +1039,6 @@ body {
         gap: var(--spacing-2xl);
     }
 
-    .feature-icons-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: min(600px, 100%);
-        grid-template-rows: auto;
-        gap: var(--spacing-md);
-    }
-
     .feature-icon-item {
         padding: var(--spacing-lg) var(--spacing-md);
     }
@@ -1103,6 +1096,7 @@ body {
     .feature-icons-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
+        row-gap: var(--spacing-lg);
         padding: 0;
         max-width: min(400px, 100%);
         grid-template-rows: auto;
@@ -1220,7 +1214,8 @@ body {
 
     .feature-icons-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-sm);
+        gap: var(--spacing-md);
+        row-gap: var(--spacing-lg);
         padding: 0;
         max-width: min(350px, 100%);
     }
