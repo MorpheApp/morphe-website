@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             text: "My 87 year old grandma asked me why my YouTube looks different. I showed her Morphe and now she's patching apps for her entire retirement community.",
-            author: "David Kim",
+            author: "David Kin",
             role: "Proud Grandson",
             avatar: "D"
         },
