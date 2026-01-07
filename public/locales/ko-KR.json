@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "사용자 후기",
-    "subtitle": "실제 사용자의 피드백이며 절대 꾸며낸 것이 아닙니다"
+    "subtitle": "실제 사용자들의 피드백이며, 절대 꾸며낸 것이 아닙니다",
+    "quote_1": {
+      "text": "예전에는 패치를 수동으로 설정하는 데 몇 시간을 보내곤 했습니다. 이제는 'Patch'를 클릭하고 커피를 마시러 가면 됩니다. 돌아오면 완료되어 있습니다. 혁명적이에요!",
+      "author": "Lisa Smith",
+      "role": "커피 애호가"
+    },
+    "quote_2": {
+      "text": "다른 패처들은 눈을 가리고 뇌 수술을 하는 느낌이에요. 하지만 Morphe는 몇 번의 클릭만으로 패치된 앱이 이전보다 훨씬 강력해집니다.",
+      "author": "Alex Chen",
+      "role": "파워 유저"
+    },
+    "quote_3": {
+      "text": "Vanced 같지만 더 좋고, 이상한 회사 파티 분위기는 없습니다.",
+      "author": "Sarah Johnson",
+      "role": "전 Vanced 사용자"
+    },
+    "quote_4": {
+      "text": "87세 할머니께서 제 유튜브가 왜 다르게 보이냐고 물으셨어요. Morphe를 보여드렸더니 지금은 은퇴자 커뮤니티 전체를 위해 앱을 패치하고 계십니다.",
+      "author": "David Kin",
+      "role": "자랑스러운 손자"
+    },
+    "quote_5": {
+      "text": "다른 패처를 시도했더니 제 핸드폰이 불탔어요. Morphe를 쓰니 핸드폰이 완벽하게 수정되었습니다. 10/10 — 다시는 자발적으로 폭발하지 않을 겁니다.",
+      "author": "Ryan Martinez",
+      "role": "화재 안전 옹호자"
+    },
+    "quote_6": {
+      "text": "Morphe가 패치 중일 때 제 고양이가 핸드폰을 테이블에서 떨어뜨렸어요. 핸드폰은 살아남았고 패치도 성공적으로 완료되었습니다. 고양이 승인.",
+      "author": "Emma Jones",
+      "role": "고양이 주인"
+    },
+    "quote_7": {
+      "text": "기술 문외한인 아버지에게 Morphe를 보여드렸어요. 이제 아버지가 저보다 앱을 더 잘 패치합니다. 제 IT 경력을 의심하게 되네요.",
+      "author": "Tom Anderson",
+      "role": "존재적 위기 경험자"
+    },
+    "quote_8": {
+      "text": "제가 Morphe를 사용하기 시작한 후 전 여자친구가 다시 돌아왔습니다. 우연일까요? 아니라고 생각해요!",
+      "author": "Mike Thompson",
+      "role": "연애 전문가"
+    },
+    "quote_9": {
+      "text": "Morphe는 60초짜리 스킵 불가 치약 광고로부터 저를 구해주는 유일한 존재입니다.",
+      "author": "Casey Morgan",
+      "role": "치과의사 아님"
+    },
+    "quote_10": {
+      "text": "처음엔 Morphe가 무명의 그리스 신인 줄 알았어요. 그런데 훨씬 좋더군요.",
+      "author": "Oliver Grant",
+      "role": "역사 전공 대학생"
+    },
+    "quote_11": {
+      "text": "Morphe를 알기 전에는 APK가 새로운 K-pop 밴드인 줄 알았어요. 이제는 다릅니다.",
+      "author": "Jeff Cooper",
+      "role": "혼란스러운 삼촌"
+    },
+    "quote_12": {
+      "text": "Morphe가 무료 다운로드라는 사실을 보고, 무료 음식 샘플을 제공받았을 때와 같은 반응을 보였습니다. 생각하지 않고 행동합니다.",
+      "author": "Tyler James",
+      "role": "반사적 의사결정자"
+    },
+    "quote_13": {
+      "text": "Morphe가 제 와이파이를 고치고 세금을 납부하며 세계 기아 문제를 해결했습니다. 사실은 아니지만 YouTube는 완벽하게 패치했습니다.",
+      "author": "Sarah Williams",
+      "role": "과장쟁이"
+    },
+    "quote_14": {
+      "text": "제가 Morphe를 제 개에게 보여줬더니 이제 개가 저보다 기술을 더 잘 다룹니다.",
+      "author": "Kevin Park",
+      "role": "전 기술 전문가"
+    },
+    "quote_15": {
+      "text": "Morphe가 제 앱을 너무 잘 패치해서, 이제 제 인생 선택까지 패치할 수 있는지 궁금합니다.",
+      "author": "Doug Miller",
+      "role": "자기 계발 애호가"
+    },
+    "quote_16": {
+      "text": "잘못된 버튼을 눌러 우연히 백만장자가 되었습니다. 어떻게 된 건지 모르겠지만 Morphe가 관련되어 있네요.",
+      "author": "Lucky Luke",
+      "role": "우연한 억만장자"
+    },
+    "quote_17": {
+      "text": "Morphe의 광고 차단 기능 덕분에 연구를 마치고 인류 역사 흐름을 바꿀 정신적 명확성을 얻었습니다. Morphe가 저보다 노벨상을 받을 자격이 있습니다.",
+      "author": "Dr. Sheldon Lee",
+      "role": "이론 물리학자"
+    },
+    "quote_18": {
+      "text": "친구들에게 Morphe를 보여줬더니 이제 저를 지하 기술 마법사로 생각합니다. 고치지 않아요.",
+      "author": "Owen Price",
+      "role": "마법사"
+    },
+    "quote_19": {
+      "text": "Morphe가 너무 많은 광고를 차단해서 제 핸드폰이 더 가벼워진 느낌이에요. 감정적 무게를 잃은 것 같아요.",
+      "author": "Sienna Brooks",
+      "role": "디지털 미니멀리스트"
+    }
   },
   "faq": {
     "title": "자주 묻는 질문",

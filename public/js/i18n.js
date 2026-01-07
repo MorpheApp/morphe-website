@@ -81,6 +81,16 @@
                     throw new Error(`Failed to load translations for ${lang}`);
                 }
                 this.translations = await response.json();
+
+                // If testimonials section is missing, load from English
+                if (!this.translations.testimonials && lang !== DEFAULT_LANGUAGE) {
+                    console.log('Loading testimonials from English as fallback');
+                    const enResponse = await fetch(`/locales/${DEFAULT_LANGUAGE}.json`);
+                    const enTranslations = await enResponse.json();
+                    if (enTranslations.testimonials) {
+                        this.translations.testimonials = enTranslations.testimonials;
+                    }
+                }
             } catch (error) {
                 console.error('Error loading translations:', error);
 

@@ -160,185 +160,138 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Testimonials Carousel
 document.addEventListener('DOMContentLoaded', function() {
-    const seriousTestimonials = [
-        {
-            text: "I used to spend hours configuring patches manually. Now I just click 'Patch' and go make coffee. By the time I'm back, it's done. Revolutionary!",
-            author: "Lisa Smith",
-            role: "Coffee Lover",
-            avatar: "L"
-        },
-        {
-            text: "Every other patcher feels like performing blindfolded brain surgery. But with Morphe it's a few clicks and my patched app is supercharged and greater than ever.",
-            author: "Alex Chen",
-            role: "Power User",
-            avatar: "A"
-        },
-        {
-            text: "It's like Vanced, but better, and without the weird corporate party vibes.",
-            author: "Sarah Johnson",
-            role: "Former Vanced User",
-            avatar: "S"
-        },
-        {
-            text: "My 87 year old grandma asked me why my YouTube looks different. I showed her Morphe and now she's patching apps for her entire retirement community.",
-            author: "David Kin",
-            role: "Proud Grandson",
-            avatar: "D"
-        },
-        {
-            text: "I tried other patchers and my phone caught fire. With Morphe, my phone is just perfectly modified. 10/10 would not spontaneously combust again.",
-            author: "Ryan Martinez",
-            role: "Fire Safety Advocate",
-            avatar: "R"
-        },
-        {
-            text: "My cat knocked my phone off the table while Morphe was patching. The phone survived and patching still completed successfully. Cat approved.",
-            author: "Emma Jones",
-            role: "Cat Owner",
-            avatar: "E"
-        },
-        {
-            text: "I showed Morphe to my tech-illiterate dad. He now patches apps better than I do. I'm questioning my entire career in IT.",
-            author: "Tom Anderson",
-            role: "Existential Crisis Haver",
-            avatar: "T"
+    // Wait for i18n to be loaded
+    const loadTestimonials = () => {
+        if (!window.i18n || !window.i18n.translations || !window.i18n.translations.testimonials) {
+            // i18n not ready yet, try again in 100ms
+            setTimeout(loadTestimonials, 100);
+            return;
         }
-    ];
 
-    const funnyTestimonials = [
-        {
-            text: "My ex-girlfriend got back together with me after I started using Morphe. Coincidence? I think not!",
-            author: "Mike Thompson",
-            role: "Relationship Expert",
-            avatar: "M"
-        },
-        {
-            text: "Morphe is the only thing saving me from 60 second unskippable ads about toothpaste.",
-            author: "Casey Morgan",
-            role: "Not a Dentist",
-            avatar: "C"
-        },
-        {
-            text: "I thought Morphe was an obscure Greek god. Turns out it's better.",
-            author: "Oliver Grant",
-            role: "College History Major",
-            avatar: "O"
-        },
-        {
-            text: "Before I found Morphe, I thought APK was a new K-pop band. Now I know better.",
-            author: "Jeff Cooper",
-            role: "Confused Uncle",
-            avatar: "J"
-        },
-        {
-            text: "When I saw Morphe is free to download, I reacted the same way as someone offering me free food samples. I don't think, I act.",
-            author: "Tyler James",
-            role: "Reflex-Based Decision Maker",
-            avatar: "T"
-        },
-        {
-            text: "Morphe fixed my WiFi, paid my taxes, and solved world hunger. Actually no, but it did patch YouTube perfectly.",
-            author: "Sarah Williams",
-            role: "Over-Exaggerator",
-            avatar: "S"
-        },
-        {
-            text: "I showed Morphe to my dog and now he’s better with using technology than I am.",
-            author: "Kevin Park",
-            role: "Former Tech Expert",
-            avatar: "K"
-        },
-        {
-            text: "Morphe patched my apps so well that I now wonder if it can also patch my life choices.",
-            author: "Doug Miller",
-            role: "Self‑Upgrade Enthusiast",
-            avatar: "M"
-        },
-        {
-            text: "I clicked the wrong button and accidentally became a millionaire. Not sure how it happened but Morphe was involved.",
-            author: "Lucky Luke",
-            role: "Accidental Billionaire",
-            avatar: "L"
-        },
-        {
-            text: "Thanks to Morphe's ad-blocking feature, I finally had the mental clarity to finish my research and change the course of human history. Morphe deserves the Nobel prize more than me.",
-            author: "Dr. Sheldon Lee",
-            role: "Theoretical Physicist",
-            avatar: "D"
-        },
-        {
-            text: "I showed my friends Morphe and now they think I’m some kind of underground technology wizard. I’m not correcting them.",
-            author: "Owen Price",
-            role: "Wizard",
-            avatar: "O"
-        },
-        {
-            text: "Morphe blocked so many ads that my phone feels lighter. I think it lost emotional weight.",
-            author: "Sienna Brooks",
-            role: "Digital Minimalist",
-            avatar: "S"
-        },
-    ];
+        const testimonialsData = loadTestimonialsFromI18n();
+        renderTestimonials(testimonialsData);
+        initializeCarousel();
+    };
 
-    // Shuffle array function (Fisher-Yates)
-    function shuffleArray(array) {
-        const newArray = [...array];
-        for (let i = newArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-        }
-        return newArray;
-    }
-
-    // Select N random testimonials from array
-    function selectRandomTestimonials(array, count) {
-        const shuffled = shuffleArray(array);
-        return shuffled.slice(0, count);
-    }
-
-    // Create testimonial card HTML structure
-    function createTestimonialCard(testimonial) {
-        return `
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p class="testimonial-text">
-                        ${testimonial.text}
-                    </p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">${testimonial.avatar}</div>
-                    <div class="author-info">
-                        <div class="author-name">${testimonial.author}</div>
-                        <div class="author-role">${testimonial.role}</div>
-                    </div>
-                </div>
-                <div class="testimonial-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-            </div>
-        `;
-    }
-
-    // Every time the page loads, the selection changes
-    const allTestimonials = [...seriousTestimonials, ...funnyTestimonials];
-
-    // Shuffle the final list for more variety
-    const shuffledFinal = shuffleArray(allTestimonials);
-
-    // Insert testimonials into DOM
-    const grid = document.getElementById('testimonials-grid');
-    if (grid) {
-        grid.innerHTML = shuffledFinal.map(t => createTestimonialCard(t)).join('');
-    }
-
-    // Initialize carousel with touch/swipe support
-    initializeCarousel();
+    loadTestimonials();
 });
 
+/**
+ * Load testimonials from i18n translations with sync fallback
+ */
+function loadTestimonialsFromI18n() {
+    const testimonials = [];
+    let testimonialsSection = window.i18n.translations.testimonials;
+
+    // If no testimonials in current language, return empty
+    if (!testimonialsSection) {
+        console.warn('Testimonials section not found in current language');
+        return testimonials;
+    }
+
+    return extractTestimonials(testimonialsSection);
+}
+
+/**
+ * Extract testimonials from a testimonials section object
+ */
+function extractTestimonials(testimonialsSection) {
+    const testimonials = [];
+    let index = 1;
+
+    // Keep looking for quote_N until we don't find one
+    while (testimonialsSection[`quote_${index}`]) {
+        const quote = testimonialsSection[`quote_${index}`];
+
+        // Get first letter for avatar
+        const avatar = quote.author ? quote.author.charAt(0).toUpperCase() : '?';
+
+        testimonials.push({
+            text: quote.text || '',
+            author: quote.author || 'Unknown',
+            role: quote.role || '',
+            avatar: avatar
+        });
+
+        index++;
+    }
+
+    // Shuffle testimonials for variety
+    return shuffleArray(testimonials);
+}
+
+/**
+ * Shuffle array using Fisher-Yates algorithm
+ */
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+/**
+ * Create testimonial card HTML structure
+ */
+function createTestimonialCard(testimonial) {
+    return `
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p class="testimonial-text">
+                    ${testimonial.text}
+                </p>
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">${testimonial.avatar}</div>
+                <div class="author-info">
+                    <div class="author-name">${testimonial.author}</div>
+                    <div class="author-role">${testimonial.role}</div>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Render testimonials into DOM
+ */
+function renderTestimonials(testimonials) {
+    const grid = document.getElementById('testimonials-grid');
+    if (!grid) {
+        console.error('Testimonials grid element not found');
+        return;
+    }
+
+    if (testimonials.length === 0) {
+        console.warn('No testimonials to display');
+        grid.innerHTML = '<p>No testimonials available</p>';
+        return;
+    }
+
+    grid.innerHTML = testimonials.map(t => createTestimonialCard(t)).join('');
+}
+
+/**
+ * Reload testimonials when language changes
+ * This function is called by i18n.js when language is changed
+ */
+window.reloadTestimonials = function() {
+    const testimonialsData = loadTestimonialsFromI18n();
+    renderTestimonials(testimonialsData);
+};
+
+/**
+ * Initialize carousel with touch/swipe support
+ */
 function initializeCarousel() {
     const carousel = document.querySelector('.testimonials-carousel');
     if (!carousel) return;
@@ -351,7 +304,7 @@ function initializeCarousel() {
     if (cards.length === 0) return;
 
     let currentIndex = 0;
-    const totalCards = cards.length; // 10 testimonials
+    const totalCards = cards.length;
     const isMobile = window.innerWidth <= 768;
     const cardsToShow = isMobile ? 1 : 3;
 
@@ -389,7 +342,7 @@ function initializeCarousel() {
         handleSwipe();
     }, false);
 
-    // Mouse events for desktop testing (also works as drag alternative)
+    // Mouse events for desktop
     grid.addEventListener('mousedown', function(e) {
         isDragging = true;
         touchStartX = e.screenX;

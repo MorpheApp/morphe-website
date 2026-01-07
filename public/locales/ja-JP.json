@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "ユーザーの声",
-    "subtitle": "実際のユーザーからのフィードバック、絶対に作り話ではありません"
+    "subtitle": "実際のユーザーからのフィードバックで、決して作り話ではありません",
+    "quote_1": {
+      "text": "以前はパッチを手動で設定するのに何時間もかかっていました。今は『Patch』をクリックしてコーヒーを淹れに行くだけ。戻ってきたときには完了しています。革命的です！",
+      "author": "Lisa Smith",
+      "role": "コーヒー愛好家"
+    },
+    "quote_2": {
+      "text": "他のパッチャーは目隠しして脳手術をするような感覚ですが、Morpheなら数クリックでパッチ済みアプリが以前よりも強化されます。",
+      "author": "Alex Chen",
+      "role": "パワーユーザー"
+    },
+    "quote_3": {
+      "text": "Vancedのようですが、より良く、変な会社のパーティーの雰囲気はありません。",
+      "author": "Sarah Johnson",
+      "role": "元Vancedユーザー"
+    },
+    "quote_4": {
+      "text": "87歳の祖母が、なぜ私のYouTubeが違って見えるのか尋ねました。Morpheを見せたら、今では退職者コミュニティ全体のアプリをパッチしています。",
+      "author": "David Kin",
+      "role": "誇り高き孫"
+    },
+    "quote_5": {
+      "text": "他のパッチャーを試したら、スマホが火を吹きました。Morpheではスマホは完璧に改造されています。10/10 – 二度と自然発火しません。",
+      "author": "Ryan Martinez",
+      "role": "火災安全活動家"
+    },
+    "quote_6": {
+      "text": "Morpheがパッチ中に猫がスマホをテーブルから落としました。スマホは無事で、パッチは成功しました。猫も納得。",
+      "author": "Emma Jones",
+      "role": "猫の飼い主"
+    },
+    "quote_7": {
+      "text": "技術音痴の父にMorpheを見せました。今では私より上手にアプリをパッチしています。ITキャリア全体を疑っています。",
+      "author": "Tom Anderson",
+      "role": "存在的危機を抱える者"
+    },
+    "quote_8": {
+      "text": "Morpheを使い始めてから元カノが戻ってきました。偶然？そんなはずはありません！",
+      "author": "Mike Thompson",
+      "role": "恋愛専門家"
+    },
+    "quote_9": {
+      "text": "Morpheは、60秒のスキップできない歯磨き粉の広告から私を救う唯一の存在です。",
+      "author": "Casey Morgan",
+      "role": "歯医者ではない"
+    },
+    "quote_10": {
+      "text": "Morpheは無名のギリシャ神だと思っていました。実際はそれより良いです。",
+      "author": "Oliver Grant",
+      "role": "歴史専攻の学生"
+    },
+    "quote_11": {
+      "text": "Morpheを知る前は、APKは新しいK-popバンドだと思っていました。今では違います。",
+      "author": "Jeff Cooper",
+      "role": "混乱した叔父"
+    },
+    "quote_12": {
+      "text": "Morpheが無料でダウンロードできると知ったとき、無料サンプルの食べ物を勧められたときの反応と同じでした。考えずに行動します。",
+      "author": "Tyler James",
+      "role": "反射型意思決定者"
+    },
+    "quote_13": {
+      "text": "MorpheはWiFiを直し、税金を支払い、世界の飢餓を解決しました。実際には違いますが、YouTubeのパッチは完璧です。",
+      "author": "Sarah Williams",
+      "role": "大げさな人"
+    },
+    "quote_14": {
+      "text": "Morpheを犬に見せたら、今では私よりもテクノロジーに強くなりました。",
+      "author": "Kevin Park",
+      "role": "元テクノロジー専門家"
+    },
+    "quote_15": {
+      "text": "Morpheは私のアプリを完璧にパッチしたので、人生の選択もパッチできるか気になります。",
+      "author": "Doug Miller",
+      "role": "自己改善愛好家"
+    },
+    "quote_16": {
+      "text": "間違ったボタンを押して、偶然億万長者になりました。どうなったか分かりませんが、Morpheが関わっています。",
+      "author": "Lucky Luke",
+      "role": "偶然の億万長者"
+    },
+    "quote_17": {
+      "text": "Morpheの広告ブロック機能のおかげで、研究を終えて人類史の流れを変えるための精神的明瞭さを得られました。ノーベル賞は私よりMorpheに値します。",
+      "author": "Dr. Sheldon Lee",
+      "role": "理論物理学者"
+    },
+    "quote_18": {
+      "text": "友達にMorpheを見せたら、私が地下テクノロジーの魔法使いだと思っています。訂正はしません。",
+      "author": "Owen Price",
+      "role": "魔法使い"
+    },
+    "quote_19": {
+      "text": "Morpheはあまりにも多くの広告をブロックしたので、スマホが軽く感じます。感情の重さが減った気がします。",
+      "author": "Sienna Brooks",
+      "role": "デジタルミニマリスト"
+    }
   },
   "faq": {
     "title": "よくある質問",

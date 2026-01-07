@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "Wat gebruikers zeggen",
-    "subtitle": "Echte feedback, absoluut niet verzonnen"
+    "subtitle": "Feedback van echte gebruikers en zeker niet verzonnen",
+    "quote_1": {
+      "text": "Vroeger besteedde ik uren aan het handmatig configureren van patches. Nu klik ik gewoon op 'Patch' en ga een kop koffie zetten. Als ik terugkom, is het klaar. Revolutionair!",
+      "author": "Lisa Smith",
+      "role": "Koffieliefhebber"
+    },
+    "quote_2": {
+      "text": "Elke andere patcher voelt als een hersenoperatie met geblinddoekte ogen. Met Morphe is het een paar klikken en mijn gepatchte app is krachtiger dan ooit.",
+      "author": "Alex Chen",
+      "role": "Powergebruiker"
+    },
+    "quote_3": {
+      "text": "Het is als Vanced, maar beter en zonder die rare bedrijfsfeest-sfeer.",
+      "author": "Sarah Johnson",
+      "role": "Voormalige Vanced-gebruiker"
+    },
+    "quote_4": {
+      "text": "Mijn 87-jarige oma vroeg me waarom mijn YouTube er anders uitziet. Ik liet haar Morphe zien en nu patcht ze apps voor haar hele gepensioneerde gemeenschap.",
+      "author": "David Kin",
+      "role": "Trots kleinzoon"
+    },
+    "quote_5": {
+      "text": "Ik probeerde andere patchers en mijn telefoon vatte vlam. Met Morphe is mijn telefoon perfect aangepast. 10/10 – zou niet spontaan ontbranden.",
+      "author": "Ryan Martinez",
+      "role": "Voorstander van brandveiligheid"
+    },
+    "quote_6": {
+      "text": "Mijn kat duwde mijn telefoon van tafel terwijl Morphe aan het patchen was. De telefoon overleefde en het patchen werd succesvol voltooid. Kat-goedgekeurd.",
+      "author": "Emma Jones",
+      "role": "Kattenbezitter"
+    },
+    "quote_7": {
+      "text": "Ik liet Morphe zien aan mijn technisch onbekwame vader. Nu patcht hij apps beter dan ik. Ik twijfel aan mijn hele IT-carrière.",
+      "author": "Tom Anderson",
+      "role": "Existentiële crisis"
+    },
+    "quote_8": {
+      "text": "Mijn ex-vriendin kwam weer bij me terug nadat ik Morphe begon te gebruiken. Toeval? Ik denk het niet!",
+      "author": "Mike Thompson",
+      "role": "Relatie-expert"
+    },
+    "quote_9": {
+      "text": "Morphe is het enige dat me redt van 60 seconden niet-over-slaan-tandpasta-advertenties.",
+      "author": "Casey Morgan",
+      "role": "Geen tandarts"
+    },
+    "quote_10": {
+      "text": "Ik dacht dat Morphe een obscure Griekse god was. Blijkt dat het beter is.",
+      "author": "Oliver Grant",
+      "role": "Geschiedenisstudent"
+    },
+    "quote_11": {
+      "text": "Voordat ik Morphe ontdekte, dacht ik dat APK een nieuwe K-pop band was. Nu weet ik beter.",
+      "author": "Jeff Cooper",
+      "role": "Verwarde oom"
+    },
+    "quote_12": {
+      "text": "Toen ik zag dat Morphe gratis te downloaden is, reageerde ik zoals bij gratis voedselmonsters. Ik denk niet, ik handel.",
+      "author": "Tyler James",
+      "role": "Reflex-gebaseerde beslisser"
+    },
+    "quote_13": {
+      "text": "Morphe heeft mijn WiFi gerepareerd, mijn belastingen betaald en de honger in de wereld opgelost. Nou ja, niet echt – maar YouTube perfect gepatcht.",
+      "author": "Sarah Williams",
+      "role": "Overdrijver"
+    },
+    "quote_14": {
+      "text": "Ik liet Morphe aan mijn hond zien en nu kan hij beter met technologie omgaan dan ik.",
+      "author": "Kevin Park",
+      "role": "Voormalig tech-expert"
+    },
+    "quote_15": {
+      "text": "Morphe heeft mijn apps zo goed gepatcht dat ik me afvraag of het ook mijn levenskeuzes kan patchen.",
+      "author": "Doug Miller",
+      "role": "Zelfverbetering-enthousiast"
+    },
+    "quote_16": {
+      "text": "Ik klikte op de verkeerde knop en werd per ongeluk miljonair. Geen idee hoe, maar Morphe was betrokken.",
+      "author": "Lucky Luke",
+      "role": "Per ongeluk miljardair"
+    },
+    "quote_17": {
+      "text": "Dankzij Morphe's advertentieblokkering had ik eindelijk de mentale helderheid om mijn onderzoek af te ronden en de loop van de menselijke geschiedenis te veranderen. Morphe verdient de Nobelprijs meer dan ik.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Theoretisch fysicus"
+    },
+    "quote_18": {
+      "text": "Ik liet Morphe aan mijn vrienden zien en nu denken ze dat ik een soort underground technologie-tovenaar ben. Ik corrigeer ze niet.",
+      "author": "Owen Price",
+      "role": "Tovenaar"
+    },
+    "quote_19": {
+      "text": "Morphe blokkeerde zoveel advertenties dat mijn telefoon lichter aanvoelt. Ik denk dat hij emotioneel gewicht verloor.",
+      "author": "Sienna Brooks",
+      "role": "Digitale minimalist"
+    }
   },
   "faq": {
     "title": "Veelgestelde vragen",

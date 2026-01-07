@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "Čo hovoria používatelia",
-    "subtitle": "Skutočné recenzie, určite nie vymyslené"
+    "subtitle": "Spätná väzba od skutočných používateľov a určite nie vymyslená",
+    "quote_1": {
+      "text": "Skôr som trávil hodiny manuálnym nastavovaním patchov. Teraz stačí kliknúť na 'Patch' a ísť si dať kávu. Keď sa vrátim, je hotovo. Revolučné!",
+      "author": "Lisa Smith",
+      "role": "Milovníčka kávy"
+    },
+    "quote_2": {
+      "text": "Každý iný patcher je ako operácia mozgu so zavretými očami. Ale s Morphe je to pár kliknutí a moja patchnutá aplikácia je silnejšia než kedykoľvek predtým.",
+      "author": "Alex Chen",
+      "role": "Pokročilý používateľ"
+    },
+    "quote_3": {
+      "text": "Je to ako Vanced, ale lepšie a bez tej divnej firemnej párty atmosféry.",
+      "author": "Sarah Johnson",
+      "role": "Bývalá používateľka Vanced"
+    },
+    "quote_4": {
+      "text": "Moja 87-ročná stará mama sa ma spýtala, prečo môj YouTube vyzerá inak. Ukázal som jej Morphe a teraz patchuje aplikácie pre celú svoju komunitu dôchodcov.",
+      "author": "David Kin",
+      "role": "Hrdý vnuk"
+    },
+    "quote_5": {
+      "text": "Skúšal som iné patchery a môj telefón začal horieť. S Morphe je telefón dokonale upravený. 10/10 – už by sa spontánne nezapálil.",
+      "author": "Ryan Martinez",
+      "role": "Zástanca požiarnej bezpečnosti"
+    },
+    "quote_6": {
+      "text": "Moja mačka zhodila môj telefón zo stola, keď Morphe patchoval. Telefón prežil a patch sa úspešne dokončil. Mačka schválila.",
+      "author": "Emma Jones",
+      "role": "Majiteľka mačky"
+    },
+    "quote_7": {
+      "text": "Ukázal som Morphe môjmu technologicky negramotnému otcovi. Teraz patchuje aplikácie lepšie než ja. Spochybňujem celú svoju IT kariéru.",
+      "author": "Tom Anderson",
+      "role": "Existenciálna kríza"
+    },
+    "quote_8": {
+      "text": "Moja bývalá priateľka sa ku mne vrátila po tom, čo som začal používať Morphe. Náhoda? Myslím, že nie!",
+      "author": "Mike Thompson",
+      "role": "Expert na vzťahy"
+    },
+    "quote_9": {
+      "text": "Morphe je jediná vec, ktorá ma zachraňuje pred 60-sekundovými reklamným videami na zubnú pastu, ktoré sa nedajú preskočiť.",
+      "author": "Casey Morgan",
+      "role": "Nie zubár"
+    },
+    "quote_10": {
+      "text": "Myslel som si, že Morphe je neznámy grécky boh. Ukázalo sa, že je lepší.",
+      "author": "Oliver Grant",
+      "role": "Študent histórie"
+    },
+    "quote_11": {
+      "text": "Predtým než som našiel Morphe, myslel som si, že APK je nová K-pop kapela. Teraz viem lepšie.",
+      "author": "Jeff Cooper",
+      "role": "Zmätený strýko"
+    },
+    "quote_12": {
+      "text": "Keď som videl, že Morphe je zadarmo na stiahnutie, zareagoval som rovnako, ako keby mi niekto ponúkol zdarma ochutnávky jedla. Nerozmýšľam, konám.",
+      "author": "Tyler James",
+      "role": "Reflexný rozhodovateľ"
+    },
+    "quote_13": {
+      "text": "Morphe opravil moje WiFi, zaplatil moje dane a vyriešil hlad vo svete. Vlastne nie — ale YouTube patchol dokonale.",
+      "author": "Sarah Williams",
+      "role": "Preháňačka"
+    },
+    "quote_14": {
+      "text": "Ukázal som Morphe môjmu psovi a teraz sa lepšie vyzná v technológii než ja.",
+      "author": "Kevin Park",
+      "role": "Bývalý technologický expert"
+    },
+    "quote_15": {
+      "text": "Morphe patchol moje aplikácie tak dobre, že sa teraz pýtam, či môže patchovať aj moje životné rozhodnutia.",
+      "author": "Doug Miller",
+      "role": "Nadšenec sebarozvoja"
+    },
+    "quote_16": {
+      "text": "Klikol som na nesprávne tlačidlo a náhodou som sa stal milionárom. Neviem, ako sa to stalo, ale Morphe bol zapojený.",
+      "author": "Lucky Luke",
+      "role": "Náhodný miliardár"
+    },
+    "quote_17": {
+      "text": "Vďaka funkcii blokovania reklám Morphe som konečne mal mentálnu jasnosť dokončiť svoj výskum a zmeniť priebeh ľudskej histórie. Morphe si Nobelovu cenu zaslúži viac než ja.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Teoretický fyzik"
+    },
+    "quote_18": {
+      "text": "Ukázal som Morphe svojim priateľom a teraz si myslia, že som nejaký podzemný technologický mág. Nekorigujem ich.",
+      "author": "Owen Price",
+      "role": "Mág"
+    },
+    "quote_19": {
+      "text": "Morphe zablokoval toľko reklám, že môj telefón pôsobí ľahšie. Myslím, že stratil emocionálnu váhu.",
+      "author": "Sienna Brooks",
+      "role": "Digitálny minimalista"
+    }
   },
   "faq": {
     "title": "Často kladené otázky",

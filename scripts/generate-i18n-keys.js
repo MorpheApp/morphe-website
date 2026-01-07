@@ -20,13 +20,22 @@ const BASE_LOCALE = 'en';
 
 // Supported locales with region codes
 const SUPPORTED_LOCALES = [
-  { code: 'en', name: 'English' },
-  { code: 'uk-UA', name: 'Ukrainian' },
-  { code: 'es-ES', name: 'Spanish' },
-  { code: 'de-DE', name: 'Deutsch' },
-  { code: 'fr-FR', name: 'French' },
-  { code: 'pt-BR', name: 'Brazilian Portuguese' },
-  { code: 'pt-PT', name: 'Portuguese' }
+{ code: 'en', name: 'English' },
+{ code: 'es-ES', name: 'Español' },
+{ code: 'de-DE', name: 'Deutsch' },
+{ code: 'fr-FR', name: 'Français' },
+{ code: 'pl-PL', name: 'Polski' },
+{ code: 'uk-UA', name: 'Українська' },
+{ code: 'it-IT', name: 'Italiano' },
+{ code: 'nl-NL', name: 'Nederlands' },
+{ code: 'pt-BR', name: 'Português (Brasil)' },
+{ code: 'pt-PT', name: 'Português (Portugal)' },
+{ code: 'tr-TR', name: 'Türkçe' },
+{ code: 'cs-CZ', name: 'Čeština' },
+{ code: 'sk-SK', name: 'Slovenčina' },
+{ code: 'zh-CN', name: '中文 (简体)' },
+{ code: 'ja-JP', name: '日本語' },
+{ code: 'ko-KR', name: '한국어' }
 ];
 
 /**

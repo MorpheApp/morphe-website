@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "用户评价",
-    "subtitle": "来自真实用户的反馈，绝对不是编造的"
+    "subtitle": "真实用户的反馈，绝非虚构",
+    "quote_1": {
+      "text": "我以前需要花几个小时手动配置补丁。现在我只需点击“Patch”，去喝杯咖啡。等我回来，一切已完成。革命性！",
+      "author": "Lisa Smith",
+      "role": "咖啡爱好者"
+    },
+    "quote_2": {
+      "text": "其他补丁工具就像蒙眼做脑部手术。但用 Morphe，只需几下点击，我的应用就被增强得比以往更强大。",
+      "author": "Alex Chen",
+      "role": "高级用户"
+    },
+    "quote_3": {
+      "text": "它就像 Vanced，但更好，没有奇怪的公司派对氛围。",
+      "author": "Sarah Johnson",
+      "role": "前 Vanced 用户"
+    },
+    "quote_4": {
+      "text": "我87岁的奶奶问我为什么我的 YouTube 看起来不一样。我给她展示了 Morphe，现在她为整个退休社区修补应用。",
+      "author": "David Kin",
+      "role": "骄傲的孙子"
+    },
+    "quote_5": {
+      "text": "我尝试过其他补丁工具，结果手机着火了。用 Morphe，我的手机被完美修改。10/10——不会再自燃。",
+      "author": "Ryan Martinez",
+      "role": "消防安全倡导者"
+    },
+    "quote_6": {
+      "text": "我的猫在 Morphe 修补时把手机从桌上推下去。手机幸存，补丁仍成功完成。猫认可。",
+      "author": "Emma Jones",
+      "role": "猫主人"
+    },
+    "quote_7": {
+      "text": "我给技术盲的爸爸展示了 Morphe。现在他补丁应用比我还好。我开始怀疑自己的 IT 职业生涯。",
+      "author": "Tom Anderson",
+      "role": "存在危机者"
+    },
+    "quote_8": {
+      "text": "自从我开始使用 Morphe，我的前女友又回到了我身边。巧合？我觉得不是！",
+      "author": "Mike Thompson",
+      "role": "恋爱专家"
+    },
+    "quote_9": {
+      "text": "Morphe 是唯一能让我避免 60 秒无法跳过的牙膏广告的东西。",
+      "author": "Casey Morgan",
+      "role": "非牙医"
+    },
+    "quote_10": {
+      "text": "我以为 Morphe 是一个不为人知的希腊神。结果它更好。",
+      "author": "Oliver Grant",
+      "role": "历史专业学生"
+    },
+    "quote_11": {
+      "text": "在找到 Morphe 之前，我以为 APK 是一个新的 K-pop 乐队。现在我知道了。",
+      "author": "Jeff Cooper",
+      "role": "迷惑的叔叔"
+    },
+    "quote_12": {
+      "text": "当我看到 Morphe 可以免费下载时，我的反应就像有人给我免费食物样品。我不思考，我行动。",
+      "author": "Tyler James",
+      "role": "反射型决策者"
+    },
+    "quote_13": {
+      "text": "Morphe 修复了我的 WiFi，支付了我的税款，并解决了世界饥饿。实际上没有——但它完美修补了 YouTube。",
+      "author": "Sarah Williams",
+      "role": "夸张者"
+    },
+    "quote_14": {
+      "text": "我把 Morphe 给我的狗看，现在它比我更擅长使用科技。",
+      "author": "Kevin Park",
+      "role": "前科技专家"
+    },
+    "quote_15": {
+      "text": "Morphe 修补了我的应用程序如此完美，我现在想知道它是否也能修补我的人生选择。",
+      "author": "Doug Miller",
+      "role": "自我提升爱好者"
+    },
+    "quote_16": {
+      "text": "我点击了错误的按钮，意外成为了百万富翁。不知道怎么发生的，但 Morphe 参与其中。",
+      "author": "Lucky Luke",
+      "role": "意外亿万富翁"
+    },
+    "quote_17": {
+      "text": "多亏了 Morphe 的广告屏蔽功能，我终于有了清晰的思路完成研究并改变人类历史的进程。Morphe 比我更值得诺贝尔奖。",
+      "author": "Dr. Sheldon Lee",
+      "role": "理论物理学家"
+    },
+    "quote_18": {
+      "text": "我给朋友们展示了 Morphe，现在他们认为我是某种地下科技巫师。我没有纠正他们。",
+      "author": "Owen Price",
+      "role": "巫师"
+    },
+    "quote_19": {
+      "text": "Morphe 阻挡了这么多广告，我的手机感觉更轻了。我想它失去了情感重量。",
+      "author": "Sienna Brooks",
+      "role": "数字极简主义者"
+    }
   },
   "faq": {
     "title": "常见问题",

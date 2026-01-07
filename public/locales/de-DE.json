@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "Was Nutzer sagen",
-    "subtitle": "Feedback von echten Nutzern – definitiv nicht erfunden"
+    "subtitle": "Feedback von echten Nutzern und definitiv nicht erfunden",
+    "quote_1": {
+      "text": "Früher habe ich Stunden damit verbracht, Patches manuell zu konfigurieren. Jetzt klicke ich einfach auf „Patch“ und gehe mir einen Kaffee machen. Wenn ich zurückkomme, ist alles fertig. Revolutionär!",
+      "author": "Lisa Smith",
+      "role": "Kaffeeliebhaberin"
+    },
+    "quote_2": {
+      "text": "Alle anderen Patcher fühlen sich an wie eine Gehirnoperation mit verbundenen Augen. Mit Morphe sind es nur ein paar Klicks und die gepatchte App ist leistungsstärker als je zuvor.",
+      "author": "Alex Chen",
+      "role": "Power-User"
+    },
+    "quote_3": {
+      "text": "Es ist wie Vanced, nur besser – und ohne diese seltsame Corporate-Party-Stimmung.",
+      "author": "Sarah Johnson",
+      "role": "Ehemalige Vanced-Nutzerin"
+    },
+    "quote_4": {
+      "text": "Meine 87-jährige Oma fragte mich, warum mein YouTube anders aussieht. Ich zeigte ihr Morphe und jetzt patcht sie Apps für ihre gesamte Rentnergemeinschaft.",
+      "author": "David Kin",
+      "role": "Stolzer Enkel"
+    },
+    "quote_5": {
+      "text": "Ich habe andere Patcher ausprobiert und mein Handy fing Feuer. Mit Morphe ist mein Handy einfach perfekt modifiziert. 10/10 – würde nicht wieder spontan explodieren.",
+      "author": "Ryan Martinez",
+      "role": "Verfechter der Brandsicherheit"
+    },
+    "quote_6": {
+      "text": "Meine Katze hat mein Handy vom Tisch gestoßen, während Morphe patchte. Das Handy hat überlebt und das Patchen wurde erfolgreich abgeschlossen. Katze genehmigt.",
+      "author": "Emma Jones",
+      "role": "Katzenbesitzerin"
+    },
+    "quote_7": {
+      "text": "Ich habe Morphe meinem technisch völlig ahnungslosen Vater gezeigt. Jetzt patcht er Apps besser als ich. Ich hinterfrage meine gesamte IT-Karriere.",
+      "author": "Tom Anderson",
+      "role": "In einer existenziellen Krise"
+    },
+    "quote_8": {
+      "text": "Meine Ex-Freundin kam wieder mit mir zusammen, nachdem ich angefangen habe, Morphe zu benutzen. Zufall? Ich glaube nicht!",
+      "author": "Mike Thompson",
+      "role": "Beziehungsexperte"
+    },
+    "quote_9": {
+      "text": "Morphe ist das Einzige, was mich vor 60-sekündiger, nicht überspringbarer Zahnpasta-Werbung rettet.",
+      "author": "Casey Morgan",
+      "role": "Kein Zahnarzt"
+    },
+    "quote_10": {
+      "text": "Ich dachte, Morphe sei ein obskurer griechischer Gott. Stellt sich heraus: Es ist besser.",
+      "author": "Oliver Grant",
+      "role": "Geschichtsstudent"
+    },
+    "quote_11": {
+      "text": "Bevor ich Morphe kannte, dachte ich, APK sei eine neue K-Pop-Band. Jetzt weiß ich es besser.",
+      "author": "Jeff Cooper",
+      "role": "Verwirrter Onkel"
+    },
+    "quote_12": {
+      "text": "Als ich sah, dass Morphe kostenlos ist, reagierte ich wie bei kostenlosen Essensproben. Ich denke nicht nach – ich handle.",
+      "author": "Tyler James",
+      "role": "Reflexbasierter Entscheider"
+    },
+    "quote_13": {
+      "text": "Morphe hat mein WLAN repariert, meine Steuern bezahlt und den Welthunger beendet. Na ja, eigentlich nicht – aber YouTube perfekt gepatcht.",
+      "author": "Sarah Williams",
+      "role": "Übertreiberin"
+    },
+    "quote_14": {
+      "text": "Ich habe Morphe meinem Hund gezeigt und jetzt kann er besser mit Technik umgehen als ich.",
+      "author": "Kevin Park",
+      "role": "Ehemaliger Technikexperte"
+    },
+    "quote_15": {
+      "text": "Morphe hat meine Apps so gut gepatcht, dass ich mich frage, ob es auch meine Lebensentscheidungen patchen kann.",
+      "author": "Doug Miller",
+      "role": "Selbstoptimierungs-Enthusiast"
+    },
+    "quote_16": {
+      "text": "Ich habe den falschen Knopf gedrückt und bin versehentlich Millionär geworden. Keine Ahnung wie, aber Morphe war beteiligt.",
+      "author": "Lucky Luke",
+      "role": "Zufälliger Milliardär"
+    },
+    "quote_17": {
+      "text": "Dank Morphes Werbeblocker hatte ich endlich die geistige Klarheit, meine Forschung abzuschließen und den Lauf der Menschheitsgeschichte zu verändern. Morphe verdient den Nobelpreis mehr als ich.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Theoretischer Physiker"
+    },
+    "quote_18": {
+      "text": "Ich habe meinen Freunden Morphe gezeigt und jetzt halten sie mich für eine Art Untergrund-Technologiezauberer. Ich widerspreche nicht.",
+      "author": "Owen Price",
+      "role": "Zauberer"
+    },
+    "quote_19": {
+      "text": "Morphe hat so viele Anzeigen blockiert, dass sich mein Handy leichter anfühlt. Ich glaube, es hat emotionales Gewicht verloren.",
+      "author": "Sienna Brooks",
+      "role": "Digitale Minimalistin"
+    }
   },
   "faq": {
     "title": "Häufig gestellte Fragen",

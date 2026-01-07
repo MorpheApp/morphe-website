@@ -43,7 +43,102 @@
   },
   "testimonials": {
     "title": "Kullanıcılar Ne Diyor",
-    "subtitle": "Gerçek yorumlar, kesinlikle uydurma değil"
+    "subtitle": "Gerçek kullanıcıların geri bildirimleri ve kesinlikle uydurma değil",
+    "quote_1": {
+      "text": "Eskiden yamaları manuel olarak ayarlamak için saatler harcardım. Şimdi sadece 'Patch' butonuna tıklayıp kahve yapmaya gidiyorum. Döndüğümde her şey hazır. Devrim gibi!",
+      "author": "Lisa Smith",
+      "role": "Kahve Sever"
+    },
+    "quote_2": {
+      "text": "Diğer tüm patcher'lar gözleri kapalı beyin ameliyatı yapmak gibi hissettiriyor. Ama Morphe ile sadece birkaç tık ve patchlenmiş uygulamam her zamankinden güçlü.",
+      "author": "Alex Chen",
+      "role": "Gelişmiş Kullanıcı"
+    },
+    "quote_3": {
+      "text": "Vanced gibi ama daha iyi ve o garip kurumsal parti havası yok.",
+      "author": "Sarah Johnson",
+      "role": "Eski Vanced Kullanıcısı"
+    },
+    "quote_4": {
+      "text": "87 yaşındaki büyükannem YouTube’umun neden farklı göründüğünü sordu. Ona Morphe’u gösterdim ve şimdi tüm emekliler topluluğu için uygulamaları patchliyor.",
+      "author": "David Kin",
+      "role": "Gururlu Torun"
+    },
+    "quote_5": {
+      "text": "Diğer patcher'ları denedim ve telefonum yandı. Morphe ile telefonum mükemmel şekilde modifiye edildi. 10/10 — bir daha kendiliğinden yanmaz.",
+      "author": "Ryan Martinez",
+      "role": "Yangın Güvenliği Savunucusu"
+    },
+    "quote_6": {
+      "text": "Kedim Morphe patch yaparken telefonumu masadan düşürdü. Telefon hayatta kaldı ve patch başarıyla tamamlandı. Kedi onayladı.",
+      "author": "Emma Jones",
+      "role": "Kedi Sahibi"
+    },
+    "quote_7": {
+      "text": "Morphe’u teknoloji bilmeyen babama gösterdim. Artık uygulamaları benden daha iyi patchliyor. Tüm IT kariyerimi sorguluyorum.",
+      "author": "Tom Anderson",
+      "role": "Varoluşsal Kriz Yaşayan"
+    },
+    "quote_8": {
+      "text": "Eski kız arkadaşım Morphe kullanmaya başladıktan sonra geri döndü. Tesadüf mü? Sanmam!",
+      "author": "Mike Thompson",
+      "role": "İlişki Uzmanı"
+    },
+    "quote_9": {
+      "text": "Morphe, 60 saniyelik atlanamayan diş macunu reklamlarından kurtaran tek şey.",
+      "author": "Casey Morgan",
+      "role": "Diş Hekimi Değil"
+    },
+    "quote_10": {
+      "text": "Morphe'un bilinmeyen bir Yunan tanrısı olduğunu düşünüyordum. Meğerse daha iyiymiş.",
+      "author": "Oliver Grant",
+      "role": "Tarih Öğrencisi"
+    },
+    "quote_11": {
+      "text": "Morphe’u bulana kadar APK’nın yeni bir K-pop grubu olduğunu sanıyordum. Artık daha iyi biliyorum.",
+      "author": "Jeff Cooper",
+      "role": "Kafası Karışık Amca"
+    },
+    "quote_12": {
+      "text": "Morphe’un ücretsiz indirilebildiğini görünce, ücretsiz yiyecek numuneleri teklif eden birine verdiğim tepkiyi verdim. Düşünmem, harekete geçerim.",
+      "author": "Tyler James",
+      "role": "Refleks Temelli Karar Verici"
+    },
+    "quote_13": {
+      "text": "Morphe WiFi’ımı düzeltti, vergilerimi ödedi ve dünya açlığını çözdü. Aslında hayır — ama YouTube’u mükemmel patchledi.",
+      "author": "Sarah Williams",
+      "role": "Abartıcı"
+    },
+    "quote_14": {
+      "text": "Morphe’u köpeğime gösterdim ve artık teknolojiyle benden daha iyi ilgileniyor.",
+      "author": "Kevin Park",
+      "role": "Eski Teknoloji Uzmanı"
+    },
+    "quote_15": {
+      "text": "Morphe uygulamalarımı o kadar iyi patchledi ki şimdi merak ediyorum hayat seçimlerimi de patchleyebilir mi.",
+      "author": "Doug Miller",
+      "role": "Kendini Geliştirme Meraklısı"
+    },
+    "quote_16": {
+      "text": "Yanlış butona tıkladım ve yanlışlıkla milyoner oldum. Nasıl oldu bilmiyorum ama Morphe işin içindeydi.",
+      "author": "Lucky Luke",
+      "role": "Kazara Milyarder"
+    },
+    "quote_17": {
+      "text": "Morphe’un reklam engelleme özelliği sayesinde nihayet araştırmamı bitirmek ve insanlık tarihinin seyrini değiştirmek için zihinsel netliğe sahip oldum. Morphe Nobel’i benden daha fazla hak ediyor.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Teorik Fizikçi"
+    },
+    "quote_18": {
+      "text": "Morphe’u arkadaşlarıma gösterdim ve şimdi beni bir tür yeraltı teknoloji sihirbazı sanıyorlar. Düzeltmiyorum.",
+      "author": "Owen Price",
+      "role": "Sihirbaz"
+    },
+    "quote_19": {
+      "text": "Morphe o kadar çok reklam engelledi ki telefonum daha hafif hissettiriyor. Sanırım duygusal ağırlığını kaybetti.",
+      "author": "Sienna Brooks",
+      "role": "Dijital Minimalist"
+    }
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular",
