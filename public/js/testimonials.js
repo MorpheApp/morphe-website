@@ -112,9 +112,9 @@
             }
 
             if (deltaX > 0) {
-                currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
-            } else {
                 currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+            } else {
+                currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
             }
             updateCarousel();
         }
