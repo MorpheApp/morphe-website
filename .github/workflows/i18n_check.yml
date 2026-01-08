@@ -56,9 +56,9 @@ jobs:
           echo "avg_completion=$AVG" >> $GITHUB_OUTPUT
           
           # Check for specific issues
-          MISSING=$(grep -c "missing" translation-report.txt || echo "0")
-          UNTRANSLATED=$(grep -c "untranslated" translation-report.txt || echo "0")
-          ZOMBIES=$(grep -c "zombie" translation-report.txt || echo "0")
+          MISSING=$(grep -E "^\s+\d+/\d+ translated, [1-9]\d* missing" translation-report.txt | wc -l || echo "0")
+          UNTRANSLATED=$(grep -E "^\s+\d+/\d+ translated, \d+ missing, [1-9]\d* untranslated" translation-report.txt | wc -l || echo "0")
+          ZOMBIES=$(grep -E "^[a-z-]+: \d+ zombie key" translation-report.txt | wc -l || echo "0")
           
           echo "missing_count=$MISSING" >> $GITHUB_OUTPUT
           echo "untranslated_count=$UNTRANSLATED" >> $GITHUB_OUTPUT
