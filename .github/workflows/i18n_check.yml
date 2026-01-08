@@ -15,7 +15,6 @@ on:
       - 'public/locales/*.json'
       - 'scripts/**'
 
-
 jobs:
   check-translations:
     runs-on: ubuntu-latest
@@ -39,78 +38,220 @@ jobs:
       - name: Check for changes in en.json
         id: check_changes
         run: |
-          git diff --exit-code public/locales/en.json || echo "changes=true" >> $GITHUB_OUTPUT
-
-      - name: Comment on PR if en.json needs update
-        if: steps.check_changes.outputs.changes == 'true' && github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '⚠️ The `en.json` file needs to be updated. Please run `npm run i18n:extract` and commit the changes.'
-            })
+          if git diff --exit-code public/locales/en.json; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Check translation completeness
-        run: npm run i18n:check
-
-      - name: Upload translation report
-        if: always()
+        id: check_status
         run: |
+          # Run check and save output
           npm run i18n:check > translation-report.txt
           cat translation-report.txt
+          
+          # Extract average completion
+          AVG=$(grep "Average completion" translation-report.txt | grep -oP '\d+' || echo "0")
+          echo "avg_completion=$AVG" >> $GITHUB_OUTPUT
+          
+          # Check for specific issues
+          MISSING=$(grep -c "missing" translation-report.txt || echo "0")
+          UNTRANSLATED=$(grep -c "untranslated" translation-report.txt || echo "0")
+          ZOMBIES=$(grep -c "zombie" translation-report.txt || echo "0")
+          
+          echo "missing_count=$MISSING" >> $GITHUB_OUTPUT
+          echo "untranslated_count=$UNTRANSLATED" >> $GITHUB_OUTPUT
+          echo "zombie_count=$ZOMBIES" >> $GITHUB_OUTPUT
+          
+          # Determine if there are issues
+          if [ "$AVG" -eq 100 ] && [ "$MISSING" -eq 0 ] && [ "$ZOMBIES" -eq 0 ]; then
+            echo "has_issues=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_issues=true" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Comment translation status on PR
+      - name: Generate PR comment
+        id: generate_comment
+        if: github.event_name == 'pull_request'
+        run: |
+          AVG="${{ steps.check_status.outputs.avg_completion }}"
+          HAS_ISSUES="${{ steps.check_status.outputs.has_issues }}"
+          EN_CHANGES="${{ steps.check_changes.outputs.changes }}"
+          MISSING="${{ steps.check_status.outputs.missing_count }}"
+          ZOMBIES="${{ steps.check_status.outputs.zombie_count }}"
+          
+          # Start building comment
+          echo "## 🌐 i18n Status Report" > comment.md
+          echo "" >> comment.md
+          
+          # En.json update warning
+          if [ "$EN_CHANGES" = "true" ]; then
+            echo "### ⚠️ English Translation Base Updated" >> comment.md
+            echo "" >> comment.md
+            echo "The \`en.json\` file has been modified. Please run:" >> comment.md
+            echo "\`\`\`bash" >> comment.md
+            echo "npm run i18n:extract" >> comment.md
+            echo "git add public/locales/en.json" >> comment.md
+            echo "git commit -m 'chore: update en.json baseline'" >> comment.md
+            echo "\`\`\`" >> comment.md
+            echo "" >> comment.md
+          fi
+          
+          # Translation status
+          if [ "$HAS_ISSUES" = "false" ]; then
+            echo "### ✅ Translations: Perfect!" >> comment.md
+            echo "" >> comment.md
+            echo "**Average Completion:** ${AVG}% 🎉" >> comment.md
+            echo "" >> comment.md
+            echo "All translations are complete with no issues detected." >> comment.md
+          else
+            echo "### 📊 Translations: ${AVG}% Complete" >> comment.md
+            echo "" >> comment.md
+          
+            # Status badges
+            if [ "$AVG" -ge 95 ]; then
+              echo "![Status](https://img.shields.io/badge/status-excellent-success)" >> comment.md
+            elif [ "$AVG" -ge 85 ]; then
+              echo "![Status](https://img.shields.io/badge/status-good-yellow)" >> comment.md
+            else
+              echo "![Status](https://img.shields.io/badge/status-needs_work-red)" >> comment.md
+            fi
+            echo "" >> comment.md
+          
+            # Issues summary
+            if [ "$MISSING" -gt 0 ]; then
+              echo "- ⚠️ **$MISSING** missing translation(s)" >> comment.md
+            fi
+            if [ "$ZOMBIES" -gt 0 ]; then
+              echo "- 🧟 **$ZOMBIES** zombie key(s) found" >> comment.md
+            fi
+            echo "" >> comment.md
+          
+            # Detailed report in collapsible section
+            echo "<details>" >> comment.md
+            echo "<summary>📋 View detailed report</summary>" >> comment.md
+            echo "" >> comment.md
+            echo "\`\`\`" >> comment.md
+            cat translation-report.txt >> comment.md
+            echo "\`\`\`" >> comment.md
+            echo "" >> comment.md
+            echo "</details>" >> comment.md
+            echo "" >> comment.md
+          
+            # Action items
+            echo "### 🔧 Action Items" >> comment.md
+            echo "" >> comment.md
+            if [ "$AVG" -lt 100 ]; then
+              echo "- Complete missing translations for all locales" >> comment.md
+            fi
+            if [ "$ZOMBIES" -gt 0 ]; then
+              echo "- Remove unused translation keys from locale files" >> comment.md
+            fi
+            echo "- Run \`npm run i18n:check\` locally for full details" >> comment.md
+          fi
+          
+          # Footer
+          echo "" >> comment.md
+          echo "---" >> comment.md
+          echo "*This report is automatically generated on every push*" >> comment.md
+
+      - name: Find existing comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/find-comment@v3
+        id: find_comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: '🌐 i18n Status Report'
+
+      - name: Create or update comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: comment.md
+          edit-mode: replace
+
+      - name: Set commit status
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            let report = 'Translation status not available';
-            try {
-              report = fs.readFileSync('translation-report.txt', 'utf8');
-            } catch (e) {}
+            const avg = parseInt('${{ steps.check_status.outputs.avg_completion }}');
+            const hasIssues = '${{ steps.check_status.outputs.has_issues }}' === 'true';
+            const enChanges = '${{ steps.check_changes.outputs.changes }}' === 'true';
             
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            // Determine status
+            let state, description;
+            
+            if (enChanges) {
+              state = 'failure';
+              description = '❌ en.json needs to be committed';
+            } else if (avg === 100 && !hasIssues) {
+              state = 'success';
+              description = '✅ All translations complete';
+            } else if (avg >= 90) {
+              state = 'success';
+              description = `⚠️ ${avg}% complete - minor issues`;
+            } else if (avg >= 75) {
+              state = 'failure';
+              description = `❌ ${avg}% complete - needs work`;
+            } else {
+              state = 'failure';
+              description = `❌ ${avg}% complete - critical`;
+            }
+            
+            await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '## Translation Status\n\n```\n' + report + '\n```'
-            })
+              sha: context.payload.pull_request.head.sha,
+              state: state,
+              target_url: `https://github.com/${context.repo.owner}/${context.repo.repo}/pull/${context.issue.number}`,
+              description: description,
+              context: 'i18n / Translation Completeness'
+            });
 
-  # Crowdin sync job
-#  sync-crowdin:
-#    runs-on: ubuntu-latest
-#    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-#    needs: check-translations
-#
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v4
-#
-#      - name: Crowdin push
-#        uses: crowdin/github-action@v1
-#        with:
-#          upload_sources: true
-#          upload_translations: false
-#          download_translations: true
-#          crowdin_branch_name: main
-#        env:
-#          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-#          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
-#
-#      - name: Create Pull Request with translations
-#        if: success()
-#        uses: peter-evans/create-pull-request@v5
-#        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-#          commit-message: 'chore: update translations from Crowdin'
-#          title: 'Update translations from Crowdin'
-#          body: |
-#            Automated PR with latest translations from Crowdin.
-#
-#            Please review the changes before merging.
-#          branch: crowdin-translations
-#          base: main
+      - name: Upload translation report as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: translation-report
+          path: translation-report.txt
+          retention-days: 30
+
+  # Crowdin sync job (commented out - uncomment when ready)
+  # sync-crowdin:
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  #   needs: check-translations
+  #
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Crowdin push
+  #       uses: crowdin/github-action@v1
+  #       with:
+  #         upload_sources: true
+  #         upload_translations: false
+  #         download_translations: true
+  #         crowdin_branch_name: main
+  #       env:
+  #         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+  #         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
+  #
+  #     - name: Create Pull Request with translations
+  #       if: success()
+  #       uses: peter-evans/create-pull-request@v5
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  #         commit-message: 'chore: update translations from Crowdin'
+  #         title: 'Update translations from Crowdin'
+  #         body: |
+  #           Automated PR with latest translations from Crowdin.
+  #
+  #           Please review the changes before merging.
+  #         branch: crowdin-translations
+  #         base: main
