@@ -38,21 +38,12 @@
     backdrop-filter: blur(10px);
 }
 
-[data-theme="dark"] .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 [data-theme="dark"] .feature-card {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .feature-icon-item {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .feature-icon-item .label {
@@ -61,7 +52,6 @@
 
 [data-theme="dark"] .testimonial-card {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .testimonial-card::before {
@@ -70,12 +60,10 @@
 
 [data-theme="dark"] .supported-apps {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .crypto-card {
     background: var(--surface);
-    border-color: var(--border);
 }
 
 [data-theme="dark"] .crypto-card:hover {
@@ -104,11 +92,6 @@
     background: var(--surface);
     border-color: var(--border);
     color: var(--text-secondary);
-}
-
-[data-theme="dark"] .carousel-button:hover {
-    background: var(--primary-blue);
-    border-color: var(--primary-blue);
 }
 
 [data-theme="dark"] .how-it-works {

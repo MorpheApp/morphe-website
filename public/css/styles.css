@@ -11,6 +11,7 @@
     --primary-blue: #1E5AA8;
     --primary-teal: #00AFAE;
     --gradient-primary: linear-gradient(135deg, #1E5AA8 0%, #00AFAE 100%);
+    --primary-light-blue: rgba(30, 90, 168, 0.05);
 
     /* Neutral Colors */
     --gray-50: #fafafa;
@@ -138,7 +139,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--text-secondary);
-    font-weight: 500;
+    font-weight: 600;
     transition: color var(--transition-base);
 }
 
@@ -262,7 +263,8 @@ body {
 }
 
 .btn-secondary {
-    background: var(--surface);
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     color: var(--text-primary);
 }
 
@@ -320,7 +322,7 @@ body {
 .hero-visual {
     display: flex;
     justify-content: center;
-    padding: 4rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-md);
 }
 
 .feature-icons-grid {
@@ -334,7 +336,8 @@ body {
 }
 
 .feature-icon-item {
-    background: rgba(30, 90, 168, 0.05);
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
     display: grid;
@@ -346,7 +349,6 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     box-shadow: var(--shadow-sm);
-    border: none;
     gap: var(--spacing-md);
 }
 
@@ -433,6 +435,8 @@ body {
 }
 
 .social-link {
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
@@ -440,8 +444,8 @@ body {
     border-radius: var(--radius-lg);
     text-decoration: none;
     color: var(--text-secondary);
-    background: var(--gray-100);
     transition: background var(--transition-base), color var(--transition-base), transform var(--transition-base);
+    font-weight: 500;
 }
 
 .social-link:hover {
@@ -478,6 +482,7 @@ body {
 .section-subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
+    font-weight: 400;
 }
 
 /* How It Works Section */
@@ -500,7 +505,8 @@ body {
 }
 
 .feature-card {
-    background: white;
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
@@ -536,13 +542,15 @@ body {
 .feature-description {
     color: var(--text-secondary);
     line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Supported Apps */
 .supported-apps {
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     text-align: center;
     padding: var(--spacing-2xl);
-    background: white;
     border-radius: var(--radius-2xl);
 }
 
@@ -606,9 +614,8 @@ body {
 .carousel-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background: white;
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -616,24 +623,41 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background var(--transition-base), border-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     color: var(--gray-600);
+    overflow: hidden;
+    margin-top: -24px;
 }
 
-.carousel-button:hover {
-    border-color: var(--primary-blue);
-    background: var(--primary-blue);
+.carousel-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+}
+
+.carousel-button svg {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-button:hover::before {
+    opacity: 1;
+}
+
+.carousel-button:hover svg {
     color: white;
 }
 
 .carousel-button:active {
-    transform: translateY(-50%) scale(0.95);
-    background: var(--primary-blue);
-    border-color: var(--primary-blue);
-    color: white;
+    transform: scale(0.95);
 }
 
 .carousel-button.prev {
@@ -647,16 +671,25 @@ body {
 .carousel-button:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+    box-shadow: var(--shadow-sm);
 }
 
 .carousel-button:disabled:hover {
-    border-color: var(--border);
-    background: white;
-    color: inherit;
+    transform: scale(1);
+    box-shadow: var(--shadow-sm);
+}
+
+.carousel-button:disabled:hover::before {
+    opacity: 0;
+}
+
+.carousel-button:disabled:hover svg {
+    color: var(--gray-600);
 }
 
 .testimonial-card {
-    background: white;
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
@@ -671,7 +704,7 @@ body {
     top: -10px;
     left: 20px;
     font-size: 120px;
-    color: var(--gray-100);
+    color: var(--gray-200);
     font-family: Georgia, serif;
     line-height: 1;
     z-index: 0;
@@ -694,6 +727,7 @@ body {
     line-height: 1.6;
     font-style: italic;
     margin-bottom: var(--spacing-lg);
+    font-weight: 400;
 }
 
 .testimonial-author {
@@ -729,6 +763,7 @@ body {
 .author-role {
     font-size: 0.875rem;
     color: var(--text-tertiary);
+    font-weight: 400;
 }
 
 .testimonial-rating {
@@ -837,6 +872,7 @@ body {
     padding-bottom: var(--spacing-xl);
     color: var(--text-secondary);
     line-height: 1.6;
+    font-weight: 400;
 }
 
 .inline-link {
@@ -880,6 +916,7 @@ body {
     align-items: center;
     gap: var(--spacing-sm);
     color: var(--text-secondary);
+    font-weight: 400;
 }
 
 .donate-benefits svg {
@@ -894,7 +931,8 @@ body {
 }
 
 .crypto-card {
-    background: white;
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     border: 2px solid var(--border);
@@ -927,8 +965,9 @@ body {
     font-size: 0.875rem;
     color: var(--text-tertiary);
     background: var(--gray-100);
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem var(--spacing-xs);
     border-radius: var(--radius-sm);
+    font-weight: 500;
 }
 
 .crypto-address {
@@ -937,6 +976,7 @@ body {
     color: var(--text-secondary);
     word-break: break-all;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 .crypto-action {
@@ -982,6 +1022,7 @@ body {
 
 .footer-brand p {
     color: var(--gray-400);
+    font-weight: 400;
 }
 
 .footer-links {
@@ -1006,6 +1047,7 @@ body {
     color: var(--gray-400);
     text-decoration: none;
     transition: color var(--transition-base);
+    font-weight: 400;
 }
 
 .footer-column a:hover {
@@ -1017,6 +1059,7 @@ body {
     padding-top: var(--spacing-xl);
     text-align: center;
     color: var(--gray-500);
+    font-weight: 400;
 }
 
 /* Language Selector */
@@ -1215,26 +1258,6 @@ body {
     .testimonials-grid .testimonial-card {
         flex: 0 0 calc(100% - var(--spacing-xl));
         min-width: calc(100% - var(--spacing-xl));
-    }
-
-    .carousel-button {
-        background: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        color: var(--gray-700);
-    }
-
-    .carousel-button:hover {
-        background: rgba(255, 255, 255, 0.5);
-        border-color: rgba(0, 0, 0, 0.2);
-        color: var(--gray-700);
-    }
-
-    .carousel-button:active {
-        transform: translateY(-50%) scale(0.9);
-        background: var(--primary-blue);
-        border-color: var(--primary-blue);
-        color: white;
     }
 
     .nav-actions {
