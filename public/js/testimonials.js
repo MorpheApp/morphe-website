@@ -4,6 +4,8 @@
 (function() {
     'use strict';
 
+    let carouselInstance = null; // Store carousel instance globally
+
     // Testimonial card template
     function createTestimonialCard(testimonial) {
         const avatar = testimonial.author ? testimonial.author.charAt(0).toUpperCase() : '?';
@@ -75,8 +77,41 @@
         grid.innerHTML = testimonials.map(createTestimonialCard).join('');
     }
 
+    // Destroy existing carousel instance
+    function destroyCarousel() {
+        if (carouselInstance) {
+            // Remove event listeners
+            const { grid, prevBtn, nextBtn, mouseUpHandler } = carouselInstance;
+
+            if (grid) {
+                grid.removeEventListener('touchstart', carouselInstance.touchStart);
+                grid.removeEventListener('touchend', carouselInstance.touchEnd);
+                grid.removeEventListener('mousedown', carouselInstance.mouseDown);
+            }
+
+            if (prevBtn) {
+                prevBtn.removeEventListener('click', carouselInstance.prevClick);
+            }
+
+            if (nextBtn) {
+                nextBtn.removeEventListener('click', carouselInstance.nextClick);
+            }
+
+            if (mouseUpHandler) {
+                document.removeEventListener('mouseup', mouseUpHandler);
+            }
+
+            window.removeEventListener('resize', carouselInstance.resizeHandler);
+
+            carouselInstance = null;
+        }
+    }
+
     // Initialize carousel
     function initializeCarousel() {
+        // Destroy existing carousel first
+        destroyCarousel();
+
         const carousel = document.querySelector('.testimonials-carousel');
         if (!carousel) return;
 
@@ -97,6 +132,7 @@
         let isDragging = false;
 
         function updateCarousel() {
+            // Recalculate on each update to ensure correct dimensions
             const cardWidth = cards[0].offsetWidth;
             const gap = parseInt(getComputedStyle(grid).gap) || 16;
             const offset = currentIndex * (cardWidth + gap);
@@ -120,28 +156,31 @@
         }
 
         // Touch events
-        grid.addEventListener('touchstart', (e) => {
+        const touchStart = (e) => {
             isDragging = true;
             touchStartX = e.touches[0].screenX;
             grid.style.transition = 'none';
-        });
+        };
 
-        grid.addEventListener('touchend', (e) => {
+        const touchEnd = (e) => {
             if (!isDragging) return;
             isDragging = false;
             const deltaX = touchStartX - e.changedTouches[0].screenX;
             handleSwipe(deltaX);
-        });
+        };
+
+        grid.addEventListener('touchstart', touchStart);
+        grid.addEventListener('touchend', touchEnd);
 
         // Mouse events
-        grid.addEventListener('mousedown', (e) => {
+        const mouseDown = (e) => {
             isDragging = true;
             touchStartX = e.clientX;
             grid.style.cursor = 'grabbing';
-            e.preventDefault(); // Prevent text selection
-        });
+            e.preventDefault();
+        };
 
-        const handleMouseUp = (e) => {
+        const mouseUpHandler = (e) => {
             if (!isDragging) return;
 
             isDragging = false;
@@ -150,30 +189,28 @@
             grid.style.cursor = 'grab';
         };
 
-        // Attach to document so it works outside grid too
-        document.addEventListener('mouseup', handleMouseUp);
-
-        // Cleanup listener on unload
-        window.addEventListener('beforeunload', () => {
-            document.removeEventListener('mouseup', handleMouseUp);
-        });
+        grid.addEventListener('mousedown', mouseDown);
+        document.addEventListener('mouseup', mouseUpHandler);
 
         // Button controls
-        nextBtn.addEventListener('click', (e) => {
+        const nextClick = (e) => {
             e.preventDefault();
             currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
             updateCarousel();
-        });
+        };
 
-        prevBtn.addEventListener('click', (e) => {
+        const prevClick = (e) => {
             e.preventDefault();
             currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
             updateCarousel();
-        });
+        };
+
+        nextBtn.addEventListener('click', nextClick);
+        prevBtn.addEventListener('click', prevClick);
 
         // Responsive resize
         let resizeTimer;
-        window.addEventListener('resize', () => {
+        const resizeHandler = () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 const newIsMobile = window.innerWidth <= 768;
@@ -182,10 +219,40 @@
                 }
                 updateCarousel();
             }, 250);
-        });
+        };
 
-        updateCarousel();
+        window.addEventListener('resize', resizeHandler);
+
+        // Store instance for cleanup
+        carouselInstance = {
+            grid,
+            prevBtn,
+            nextBtn,
+            touchStart,
+            touchEnd,
+            mouseDown,
+            mouseUpHandler,
+            nextClick,
+            prevClick,
+            resizeHandler
+        };
+
+        // Initial update - use requestAnimationFrame to ensure DOM is ready
+        requestAnimationFrame(() => {
+            updateCarousel();
+        });
     }
+
+    // Reload testimonials on language change
+    window.reloadTestimonials = function() {
+        const testimonials = loadTestimonials();
+        renderTestimonials(testimonials);
+
+        // Wait for DOM to update, then reinitialize carousel
+        setTimeout(() => {
+            initializeCarousel();
+        }, 100);
+    };
 
     // Initialize testimonials with event-based approach
     function init() {
@@ -200,6 +267,7 @@
             }, 100);
         });
 
+        // Also check if i18n is already ready
         if (window.i18n && window.i18n.translations && window.i18n.translations.testimonials) {
             console.log('i18n already ready, loading immediately');
             const testimonials = loadTestimonials();
@@ -210,12 +278,6 @@
             }, 100);
         }
     }
-
-    // Reload on language change
-    window.reloadTestimonials = function() {
-        const testimonials = loadTestimonials();
-        renderTestimonials(testimonials);
-    };
 
     // Start when DOM is ready
     if (document.readyState === 'loading') {
