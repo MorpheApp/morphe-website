@@ -166,23 +166,6 @@
     color: var(--gray-500);
 }
 
-/* Gradient blobs */
-[data-theme="dark"] .blob-1 {
-    background: linear-gradient(135deg, #2c4a7c, #3a5f9a);
-}
-
-[data-theme="dark"] .blob-2 {
-    background: linear-gradient(135deg, #1a8d8c, #2aadac);
-}
-
-[data-theme="dark"] .blob-3 {
-    background: linear-gradient(135deg, #2c4a7c, #1a8d8c);
-}
-
-[data-theme="dark"] .gradient-background {
-    background: linear-gradient(to bottom, rgba(24, 24, 27, 0.8), rgba(24, 24, 27, 0.95));
-}
-
 /* Logos */
 [data-theme="dark"] .nav-logo-wordmark,
 [data-theme="dark"] .footer-logo {
