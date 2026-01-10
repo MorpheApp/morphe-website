@@ -69,7 +69,7 @@ jobs:
 
       - name: Fetch and Update MicroG Download Link
         run: |
-          MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/MorpheApp/MicroG-RE/refs/heads/master/build.gradle"
+          MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/MorpheApp/MicroG-RE/refs/heads/main/build.gradle"
           # parse out "ext.appVersionName = x.xx"
           VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep "appVersionName" | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
           if [ -z "$VERSION" ]; then
