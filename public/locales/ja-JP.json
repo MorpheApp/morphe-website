@@ -169,7 +169,7 @@
     "description": "次世代のAndroidアプリパッチング",
     "product": "プロダクト",
     "product-home": "ホーム",
-    "product-microg": "microGをダウンロード",
+    "product-microg": "MicroGをダウンロード",
     "product-translate": "翻訳を手伝う",
     "community": "コミュニティ",
     "support": "サポート",
@@ -191,15 +191,15 @@
   },
   "microg": {
     "title": "ダウンロード",
-    "description": "YouTube MorpheとYT Music Morpheを使用するにはmicroGが必要です",
-    "download": "microGをダウンロード",
-    "what-title": "microGとは？",
+    "description": "YouTube MorpheとYT Music Morpheを使用するにはMicroGが必要です",
+    "download": "MicroGをダウンロード",
+    "what-title": "MicroGとは？",
     "feature1-title": "Googleサービス",
-    "feature1-desc": "microGはGoogle Play開発者サービスのサポートを提供し、YouTube MorpheとYT Music MorpheでGoogleアカウントを使用できるようにします。",
+    "feature1-desc": "MicroGはGoogle Play開発者サービスのサポートを提供し、YouTube MorpheとYT Music MorpheでGoogleアカウントを使用できるようにします。",
     "feature2-title": "プライバシー重視",
-    "feature2-desc": "microGはプライバシーを尊重しながら必須機能を提供する、Googleサービスのオープンソース再実装です。",
+    "feature2-desc": "MicroGはプライバシーを尊重しながら必須機能を提供する、Googleサービスのオープンソース再実装です。",
     "feature3-title": "一度のインストール",
-    "feature3-desc": "microGを一度インストールすれば、すべてのMorpheアプリで動作します。YouTube MorpheとYT Music Morpheを更新する際に再インストールは不要です。"
+    "feature3-desc": "MicroGを一度インストールすれば、すべてのMorpheアプリで動作します。YouTube MorpheとYT Music Morpheを更新する際に再インストールは不要です。"
   },
   "translate": {
     "title": "翻訳にご協力ください",

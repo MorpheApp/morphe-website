@@ -169,7 +169,7 @@
     "description": "Android-App-Patching der nächsten Generation",
     "product": "Produkt",
     "product-home": "Startseite",
-    "product-microg": "microG herunterladen",
+    "product-microg": "MicroG herunterladen",
     "product-translate": "Beim Übersetzen helfen",
     "community": "Community",
     "support": "Support",
@@ -191,15 +191,15 @@
   },
   "microg": {
     "title": "Herunterladen",
-    "description": "microG wird benötigt, um YouTube Morphe und YT Music Morphe zu nutzen",
-    "download": "microG herunterladen",
-    "what-title": "Was ist microG?",
+    "description": "MicroG wird benötigt, um YouTube Morphe und YT Music Morphe zu nutzen",
+    "download": "MicroG herunterladen",
+    "what-title": "Was ist MicroG?",
     "feature1-title": "Google-Dienste",
-    "feature1-desc": "microG bietet Unterstützung für Google Play Services und ermöglicht die Nutzung deines Google-Kontos mit YouTube Morphe und YT Music Morphe.",
+    "feature1-desc": "MicroG bietet Unterstützung für Google Play Services und ermöglicht die Nutzung deines Google-Kontos mit YouTube Morphe und YT Music Morphe.",
     "feature2-title": "Datenschutzorientiert",
-    "feature2-desc": "microG ist eine Open-Source-Neuimplementierung von Google-Diensten, die deine Privatsphäre respektiert und gleichzeitig wichtige Funktionen bereitstellt.",
+    "feature2-desc": "MicroG ist eine Open-Source-Neuimplementierung von Google-Diensten, die deine Privatsphäre respektiert und gleichzeitig wichtige Funktionen bereitstellt.",
     "feature3-title": "Einmalige Installation",
-    "feature3-desc": "Installiere microG einmal und es funktioniert mit allen Morphe-Apps. Keine Neuinstallation bei Updates erforderlich."
+    "feature3-desc": "Installiere MicroG einmal und es funktioniert mit allen Morphe-Apps. Keine Neuinstallation bei Updates erforderlich."
   },
   "translate": {
     "title": "Hilf uns beim Übersetzen",

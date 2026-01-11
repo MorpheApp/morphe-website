@@ -169,7 +169,7 @@
     "description": "차세대 Android 앱 패칭",
     "product": "제품",
     "product-home": "홈",
-    "product-microg": "microG 다운로드",
+    "product-microg": "MicroG 다운로드",
     "product-translate": "번역 돕기",
     "community": "커뮤니티",
     "support": "지원",
@@ -191,15 +191,15 @@
   },
   "microg": {
     "title": "다운로드",
-    "description": "YouTube Morphe와 YT Music Morphe를 사용하려면 microG가 필요합니다",
-    "download": "microG 다운로드",
-    "what-title": "microG란?",
+    "description": "YouTube Morphe와 YT Music Morphe를 사용하려면 MicroG가 필요합니다",
+    "download": "MicroG 다운로드",
+    "what-title": "MicroG란?",
     "feature1-title": "Google 서비스",
-    "feature1-desc": "microG는 Google Play 서비스 지원을 제공하여 YouTube Morphe와 YT Music Morphe에서 Google 계정을 사용할 수 있게 합니다.",
+    "feature1-desc": "MicroG는 Google Play 서비스 지원을 제공하여 YouTube Morphe와 YT Music Morphe에서 Google 계정을 사용할 수 있게 합니다.",
     "feature2-title": "개인정보 보호 중심",
-    "feature2-desc": "microG는 필수 기능을 제공하면서 개인정보를 존중하는 Google 서비스의 오픈 소스 재구현입니다.",
+    "feature2-desc": "MicroG는 필수 기능을 제공하면서 개인정보를 존중하는 Google 서비스의 오픈 소스 재구현입니다.",
     "feature3-title": "한 번만 설치",
-    "feature3-desc": "microG를 한 번만 설치하면 모든 Morphe 앱에서 작동합니다. YouTube Morphe와 YT Music Morphe를 업데이트할 때 재설치할 필요가 없습니다."
+    "feature3-desc": "MicroG를 한 번만 설치하면 모든 Morphe 앱에서 작동합니다. YouTube Morphe와 YT Music Morphe를 업데이트할 때 재설치할 필요가 없습니다."
   },
   "translate": {
     "title": "번역 도와주기",

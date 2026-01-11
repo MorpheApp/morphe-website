@@ -169,7 +169,7 @@
     "description": "Патчінг Android-застосунків нового покоління",
     "product": "Продукт",
     "product-home": "Головна",
-    "product-microg": "Завантажити microG",
+    "product-microg": "Завантажити MicroG",
     "product-translate": "Допомогти з перекладом",
     "community": "Спільнота",
     "support": "Підтримка",
@@ -191,15 +191,15 @@
   },
   "microg": {
     "title": "Завантажити",
-    "description": "microG необхідний для використання YouTube Morphe та YT Music Morphe",
-    "download": "Завантажити microG",
-    "what-title": "Що таке microG?",
+    "description": "MicroG необхідний для використання YouTube Morphe та YT Music Morphe",
+    "download": "Завантажити MicroG",
+    "what-title": "Що таке MicroG?",
     "feature1-title": "Сервіси Google",
-    "feature1-desc": "microG надає підтримку Google Play Services, дозволяючи використовувати ваш Google акаунт з YouTube Morphe та YT Music Morphe.",
+    "feature1-desc": "MicroG надає підтримку Google Play Services, дозволяючи використовувати ваш Google акаунт з YouTube Morphe та YT Music Morphe.",
     "feature2-title": "Орієнтований на приватність",
-    "feature2-desc": "microG - це відкрита реімплементація сервісів Google, яка поважає вашу приватність, надаючи необхідний функціонал.",
+    "feature2-desc": "MicroG - це відкрита реімплементація сервісів Google, яка поважає вашу приватність, надаючи необхідний функціонал.",
     "feature3-title": "Одноразове встановлення",
-    "feature3-desc": "Встановіть microG один раз і він працюватиме з усіма вашими Morphe застосунками. Не потрібно перевстановлювати при оновленні YouTube Morphe та YT Music Morphe."
+    "feature3-desc": "Встановіть MicroG один раз і він працюватиме з усіма вашими Morphe застосунками. Не потрібно перевстановлювати при оновленні YouTube Morphe та YT Music Morphe."
   },
   "translate": {
     "title": "Допоможіть нам перекласти",

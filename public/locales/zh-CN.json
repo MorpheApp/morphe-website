@@ -169,7 +169,7 @@
     "description": "新一代Android应用打补丁工具",
     "product": "产品",
     "product-home": "首页",
-    "product-microg": "下载microG",
+    "product-microg": "下载MicroG",
     "product-translate": "帮助翻译",
     "community": "社区",
     "support": "支持",
@@ -191,15 +191,15 @@
   },
   "microg": {
     "title": "下载",
-    "description": "使用YouTube Morphe和YT Music Morphe需要microG",
-    "download": "下载microG",
-    "what-title": "什么是microG？",
+    "description": "使用YouTube Morphe和YT Music Morphe需要MicroG",
+    "download": "下载MicroG",
+    "what-title": "什么是MicroG？",
     "feature1-title": "Google服务",
-    "feature1-desc": "microG提供Google Play服务支持，让您能够在YouTube Morphe和YT Music Morphe中使用Google账户。",
+    "feature1-desc": "MicroG提供Google Play服务支持，让您能够在YouTube Morphe和YT Music Morphe中使用Google账户。",
     "feature2-title": "注重隐私",
-    "feature2-desc": "microG是Google服务的开源重新实现，在提供基本功能的同时尊重您的隐私。",
+    "feature2-desc": "MicroG是Google服务的开源重新实现，在提供基本功能的同时尊重您的隐私。",
     "feature3-title": "一次性安装",
-    "feature3-desc": "安装一次microG即可在所有Morphe应用中使用。更新YouTube Morphe和YT Music Morphe时无需重新安装。"
+    "feature3-desc": "安装一次MicroG即可在所有Morphe应用中使用。更新YouTube Morphe和YT Music Morphe时无需重新安装。"
   },
   "translate": {
     "title": "帮助我们翻译",

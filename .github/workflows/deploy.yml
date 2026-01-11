@@ -24,10 +24,10 @@ jobs:
       - name: Configure Umami
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            UMAMI_ID="faa54201-a249-4ddc-9732-88c6ac7fdf5f"
+            UMAMI_ID="0d563b9d-f076-4a41-b4c6-1afd4e3f2c0f"
           else
             # Non production deployment
-            UMAMI_ID="127a9e7a-1fe0-404f-bb17-915882ebd403"
+            UMAMI_ID="87620d09-e7f3-4d2d-bc7a-2af95d7775ea"
           fi
           # The data-website-id in the source code is now just a placeholder
           # and will be replaced during the build process.
