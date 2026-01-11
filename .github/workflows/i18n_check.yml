@@ -220,38 +220,3 @@ jobs:
           name: translation-report
           path: translation-report.txt
           retention-days: 30
-
-  # Crowdin sync job (commented out - uncomment when ready)
-  # sync-crowdin:
-  #   runs-on: ubuntu-latest
-  #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-  #   needs: check-translations
-  #
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
-  #
-  #     - name: Crowdin push
-  #       uses: crowdin/github-action@v1
-  #       with:
-  #         upload_sources: true
-  #         upload_translations: false
-  #         download_translations: true
-  #         crowdin_branch_name: main
-  #       env:
-  #         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-  #         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
-  #
-  #     - name: Create Pull Request with translations
-  #       if: success()
-  #       uses: peter-evans/create-pull-request@v5
-  #       with:
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-  #         commit-message: 'chore: update translations from Crowdin'
-  #         title: 'Update translations from Crowdin'
-  #         body: |
-  #           Automated PR with latest translations from Crowdin.
-  #
-  #           Please review the changes before merging.
-  #         branch: crowdin-translations
-  #         base: main
