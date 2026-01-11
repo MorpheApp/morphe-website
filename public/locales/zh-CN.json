@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "home": "首页",
+    "how-it-works": "工作原理",
+    "testimonials": "用户评价",
+    "faq": "常见问题",
+    "donate": "捐赠"
+  },
+  "hero": {
+    "title": "改造您的",
+    "title-highlight": "Android应用",
+    "description": "来自为您带来最佳改版YouTube应用的开发者，Morphe - 强大的应用修改工具，让您掌控一切",
+    "download": "下载Morphe",
+    "learn-more": "了解更多",
+    "social-label": "加入社区"
+  },
+  "feature": {
+    "ad-blocking": "广告拦截",
+    "ad-blocking-desc": "拦截所有广告，畅享不间断的应用内容",
+    "sponsorblock": "跳过赞助",
+    "sponsorblock-desc": "通过社区提供的时间戳自动跳过赞助片段",
+    "show-dislikes": "显示踩数",
+    "show-dislikes-desc": "查看真实的踩数，做出更好的观看决策",
+    "swipe-controls": "滑动控制",
+    "swipe-controls-desc": "通过直观的滑动手势控制音量和亮度",
+    "custom-themes": "自定义主题",
+    "custom-themes-desc": "使用精美的自定义主题和颜色个性化您的应用",
+    "hide-content": "隐藏内容",
+    "hide-content-desc": "隐藏不需要的内容、短视频和推荐，获得更清爽的界面"
+  },
+  "how-it-works": {
+    "title": "Morphe工作原理",
+    "subtitle": "简单、强大、为所有人打造",
+    "step1-title": "1. 下载Morphe",
+    "step1-desc": "下载最新版本的Morphe并安装到您的Android设备上。",
+    "step2-title": "2. 选择应用",
+    "step2-desc": "选择您想要修改的应用。目前Morphe支持YouTube和YouTube Music。",
+    "step3-title": "3. 应用补丁",
+    "step3-desc": "Morphe将自动为您选择的应用打补丁。",
+    "step4-title": "4. 安装并享受",
+    "step4-desc": "安装已打补丁的应用，享受您的定制体验。",
+    "supported-title": "支持的应用"
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "真实用户的反馈，绝非虚构",
+    "quote_1": {
+      "text": "我以前需要花几个小时手动配置补丁。现在我只需点击“Patch”，去喝杯咖啡。等我回来，一切已完成。革命性！",
+      "author": "Lisa Smith",
+      "role": "咖啡爱好者"
+    },
+    "quote_2": {
+      "text": "其他补丁工具就像蒙眼做脑部手术。但用 Morphe，只需几下点击，我的应用就被增强得比以往更强大。",
+      "author": "Alex Chen",
+      "role": "高级用户"
+    },
+    "quote_3": {
+      "text": "它就像 Vanced，但更好，没有奇怪的公司派对氛围。",
+      "author": "Sarah Johnson",
+      "role": "前 Vanced 用户"
+    },
+    "quote_4": {
+      "text": "我87岁的奶奶问我为什么我的 YouTube 看起来不一样。我给她展示了 Morphe，现在她为整个退休社区修补应用。",
+      "author": "David Kin",
+      "role": "骄傲的孙子"
+    },
+    "quote_5": {
+      "text": "我尝试过其他补丁工具，结果手机着火了。用 Morphe，我的手机被完美修改。10/10——不会再自燃。",
+      "author": "Ryan Martinez",
+      "role": "消防安全倡导者"
+    },
+    "quote_6": {
+      "text": "我的猫在 Morphe 修补时把手机从桌上推下去。手机幸存，补丁仍成功完成。猫认可。",
+      "author": "Emma Jones",
+      "role": "猫主人"
+    },
+    "quote_7": {
+      "text": "我给技术盲的爸爸展示了 Morphe。现在他补丁应用比我还好。我开始怀疑自己的 IT 职业生涯。",
+      "author": "Tom Anderson",
+      "role": "存在危机者"
+    },
+    "quote_8": {
+      "text": "自从我开始使用 Morphe，我的前女友又回到了我身边。巧合？我觉得不是！",
+      "author": "Mike Thompson",
+      "role": "恋爱专家"
+    },
+    "quote_9": {
+      "text": "Morphe 是唯一能让我避免 60 秒无法跳过的牙膏广告的东西。",
+      "author": "Casey Morgan",
+      "role": "非牙医"
+    },
+    "quote_10": {
+      "text": "我以为 Morphe 是一个不为人知的希腊神。结果它更好。",
+      "author": "Oliver Grant",
+      "role": "历史专业学生"
+    },
+    "quote_11": {
+      "text": "在找到 Morphe 之前，我以为 APK 是一个新的 K-pop 乐队。现在我知道了。",
+      "author": "Jeff Cooper",
+      "role": "迷惑的叔叔"
+    },
+    "quote_12": {
+      "text": "当我看到 Morphe 可以免费下载时，我的反应就像有人给我免费食物样品。我不思考，我行动。",
+      "author": "Tyler James",
+      "role": "反射型决策者"
+    },
+    "quote_13": {
+      "text": "Morphe 修复了我的 WiFi，支付了我的税款，并解决了世界饥饿。实际上没有——但它完美修补了 YouTube。",
+      "author": "Sarah Williams",
+      "role": "夸张者"
+    },
+    "quote_14": {
+      "text": "我把 Morphe 给我的狗看，现在它比我更擅长使用科技。",
+      "author": "Kevin Park",
+      "role": "前科技专家"
+    },
+    "quote_15": {
+      "text": "Morphe 修补了我的应用程序如此完美，我现在想知道它是否也能修补我的人生选择。",
+      "author": "Doug Miller",
+      "role": "自我提升爱好者"
+    },
+    "quote_16": {
+      "text": "我点击了错误的按钮，意外成为了百万富翁。不知道怎么发生的，但 Morphe 参与其中。",
+      "author": "Lucky Luke",
+      "role": "意外亿万富翁"
+    },
+    "quote_17": {
+      "text": "多亏了 Morphe 的广告屏蔽功能，我终于有了清晰的思路完成研究并改变人类历史的进程。Morphe 比我更值得诺贝尔奖。",
+      "author": "Dr. Sheldon Lee",
+      "role": "理论物理学家"
+    },
+    "quote_18": {
+      "text": "我给朋友们展示了 Morphe，现在他们认为我是某种地下科技巫师。我没有纠正他们。",
+      "author": "Owen Price",
+      "role": "巫师"
+    },
+    "quote_19": {
+      "text": "Morphe 阻挡了这么多广告，我的手机感觉更轻了。我想它失去了情感重量。",
+      "author": "Sienna Brooks",
+      "role": "数字极简主义者"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于Morphe您需要知道的一切",
+    "q1": "Morphe可以修改哪些应用？",
+    "a1": "您可以修改任何您想要的应用。只要您想要YouTube或YouTube Music。我们正在不断努力扩展对更多应用的支持。",
+    "q2": "Morphe安全吗？",
+    "a2": "和修改混淆字节码一样安全。Morphe的所有源代码都是开源的，任何人都可以自由检查。我们的社区积极审查并为代码库做出贡献。",
+    "q3": "Morphe会使我的手机变砖吗？",
+    "a3": "只有在您的手机决定自己变砖的情况下才会。否则您的设备会很好。Morphe只修改应用包，不会触及系统文件。",
+    "q4": "我可以根据自己的喜好自定义应用吗？",
+    "a4": "可以，但如果您的应用过于定制化而无法处理，请不要怪Morphe。建议将自定义程度控制在您的喜好水平内，不要过度。",
+    "q5": "Morphe的隐私政策是什么？",
+    "a5-part1": "本网站使用",
+    "a5-part2": "进行分析：无cookie、无个人数据、不出售任何信息、不共享任何信息。Morphe不会向任何修改后的应用添加分析或数据收集功能。",
+    "q6": "为什么叫Morphe？",
+    "a6": "因为\"Android应用修改和转换工具\"（AAMATT）不太好听。而且Morphe暗示它将您的应用变形为更好的东西。",
+    "q7": "Morphe是魔法吗？",
+    "a7": "不是。但也是。它是像魔法一样的高级字节码操作。",
+    "q8": "我可以为Morphe做贡献吗？",
+    "a8-part1": "可以！请参阅我们",
+    "a8-github": "GitHub仓库",
+    "a8-part2": "中的贡献指南。如果您没有开发技能，我们随时欢迎",
+    "a8-donate": "捐赠",
+    "a8-part3": "来帮助支付费用。"
+  },
+  "footer": {
+    "description": "新一代Android应用打补丁工具",
+    "product": "产品",
+    "product-home": "首页",
+    "product-microg": "下载microG",
+    "product-translate": "帮助翻译",
+    "community": "社区",
+    "support": "支持",
+    "support-faq": "常见问题",
+    "support-how": "Morphe工作原理",
+    "support-donate": "捐赠",
+    "copyright": "永久开源和免费。",
+    "language": "语言"
+  },
+  "donate": {
+    "title": "支持",
+    "description": "您的贡献帮助我们继续开发和改进Morphe",
+    "why-title": "为什么捐赠？",
+    "why-1": "保持Morphe免费和开源",
+    "why-2": "支持持续开发",
+    "why-3": "帮助支付基础设施成本",
+    "why-4": "实现更快的错误修复和功能开发",
+    "crypto-click": "点击打开钱包"
+  },
+  "microg": {
+    "title": "下载",
+    "description": "使用YouTube Morphe和YT Music Morphe需要microG",
+    "download": "下载microG",
+    "what-title": "什么是microG？",
+    "feature1-title": "Google服务",
+    "feature1-desc": "microG提供Google Play服务支持，让您能够在YouTube Morphe和YT Music Morphe中使用Google账户。",
+    "feature2-title": "注重隐私",
+    "feature2-desc": "microG是Google服务的开源重新实现，在提供基本功能的同时尊重您的隐私。",
+    "feature3-title": "一次性安装",
+    "feature3-desc": "安装一次microG即可在所有Morphe应用中使用。更新YouTube Morphe和YT Music Morphe时无需重新安装。"
+  },
+  "translate": {
+    "title": "帮助我们翻译",
+    "description": "通过将Morphe翻译成您的语言，让全球数百万用户都能使用",
+    "cta": "开始翻译于",
+    "how-title": "如何贡献",
+    "step1-title": "1. 注册Crowdin",
+    "step1-desc": "创建免费的Crowdin账户。只需一分钟，即可访问Morphe和其他开源项目的翻译。",
+    "step2-title": "2. 选择您的语言",
+    "step2-desc": "选择您想要翻译的语言。您可以贡献新翻译或改进现有翻译。",
+    "step3-title": "3. 开始翻译",
+    "step3-desc": "使用Crowdin的直观界面翻译字符串。每一份贡献都能让更多用户使用Morphe。",
+    "step4-title": "4. 看到您的影响",
+    "step4-desc": "您的翻译将被审核并包含在未来的Morphe版本中，帮助世界各地的用户。",
+    "why-title": "为什么翻译？",
+    "why-1": "帮助您的社区",
+    "why-2": "让Morphe全球化",
+    "why-3": "为开源做贡献"
+  },
+  "error": {
+    "404-title": "404 - 页面未找到",
+    "not-found": "找不到您要查找的页面",
+    "go-home": "返回首页"
+  }
+}

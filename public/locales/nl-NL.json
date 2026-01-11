@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "home": "Home",
+    "how-it-works": "Hoe het werkt",
+    "testimonials": "Getuigenissen",
+    "faq": "FAQ",
+    "donate": "Doneren"
+  },
+  "hero": {
+    "title": "Transformeer je",
+    "title-highlight": "Android-apps",
+    "description": "Van de makers van de beste aangepaste YouTube-apps komt Morphe — de krachtige tool waarmee jij de controle hebt",
+    "download": "Morphe downloaden",
+    "learn-more": "Meer informatie",
+    "social-label": "Word lid van de community"
+  },
+  "feature": {
+    "ad-blocking": "Advertentieblokkering",
+    "ad-blocking-desc": "Blokkeer alle advertenties en geniet zonder onderbrekingen",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Sla gesponsorde segmenten automatisch over",
+    "show-dislikes": "Dislikes tonen",
+    "show-dislikes-desc": "Bekijk het echte aantal dislikes",
+    "swipe-controls": "Swipebediening",
+    "swipe-controls-desc": "Bedien volume en helderheid met swipes",
+    "custom-themes": "Aangepaste thema's",
+    "custom-themes-desc": "Personaliseer je app met thema's en kleuren",
+    "hide-content": "Inhoud verbergen",
+    "hide-content-desc": "Verberg ongewenste inhoud, Shorts en aanbevelingen"
+  },
+  "how-it-works": {
+    "title": "Hoe Morphe werkt",
+    "subtitle": "Eenvoudig, krachtig en voor iedereen",
+    "step1-title": "1. Download Morphe",
+    "step1-desc": "Download de nieuwste versie van Morphe en installeer deze op je Android-apparaat.",
+    "step2-title": "2. Kies je app",
+    "step2-desc": "Selecteer de app die je wilt aanpassen. Momenteel worden YouTube en YouTube Music ondersteund.",
+    "step3-title": "3. Patches toepassen",
+    "step3-desc": "Morphe past automatisch patches toe.",
+    "step4-title": "4. Installeren en genieten",
+    "step4-desc": "Installeer de aangepaste app en geniet.",
+    "supported-title": "Ondersteunde apps"
+  },
+  "testimonials": {
+    "title": "Wat gebruikers zeggen",
+    "subtitle": "Feedback van echte gebruikers en zeker niet verzonnen",
+    "quote_1": {
+      "text": "Vroeger besteedde ik uren aan het handmatig configureren van patches. Nu klik ik gewoon op 'Patch' en ga een kop koffie zetten. Als ik terugkom, is het klaar. Revolutionair!",
+      "author": "Lisa Smith",
+      "role": "Koffieliefhebber"
+    },
+    "quote_2": {
+      "text": "Elke andere patcher voelt als een hersenoperatie met geblinddoekte ogen. Met Morphe is het een paar klikken en mijn gepatchte app is krachtiger dan ooit.",
+      "author": "Alex Chen",
+      "role": "Powergebruiker"
+    },
+    "quote_3": {
+      "text": "Het is als Vanced, maar beter en zonder die rare bedrijfsfeest-sfeer.",
+      "author": "Sarah Johnson",
+      "role": "Voormalige Vanced-gebruiker"
+    },
+    "quote_4": {
+      "text": "Mijn 87-jarige oma vroeg me waarom mijn YouTube er anders uitziet. Ik liet haar Morphe zien en nu patcht ze apps voor haar hele gepensioneerde gemeenschap.",
+      "author": "David Kin",
+      "role": "Trots kleinzoon"
+    },
+    "quote_5": {
+      "text": "Ik probeerde andere patchers en mijn telefoon vatte vlam. Met Morphe is mijn telefoon perfect aangepast. 10/10 – zou niet spontaan ontbranden.",
+      "author": "Ryan Martinez",
+      "role": "Voorstander van brandveiligheid"
+    },
+    "quote_6": {
+      "text": "Mijn kat duwde mijn telefoon van tafel terwijl Morphe aan het patchen was. De telefoon overleefde en het patchen werd succesvol voltooid. Kat-goedgekeurd.",
+      "author": "Emma Jones",
+      "role": "Kattenbezitter"
+    },
+    "quote_7": {
+      "text": "Ik liet Morphe zien aan mijn technisch onbekwame vader. Nu patcht hij apps beter dan ik. Ik twijfel aan mijn hele IT-carrière.",
+      "author": "Tom Anderson",
+      "role": "Existentiële crisis"
+    },
+    "quote_8": {
+      "text": "Mijn ex-vriendin kwam weer bij me terug nadat ik Morphe begon te gebruiken. Toeval? Ik denk het niet!",
+      "author": "Mike Thompson",
+      "role": "Relatie-expert"
+    },
+    "quote_9": {
+      "text": "Morphe is het enige dat me redt van 60 seconden niet-over-slaan-tandpasta-advertenties.",
+      "author": "Casey Morgan",
+      "role": "Geen tandarts"
+    },
+    "quote_10": {
+      "text": "Ik dacht dat Morphe een obscure Griekse god was. Blijkt dat het beter is.",
+      "author": "Oliver Grant",
+      "role": "Geschiedenisstudent"
+    },
+    "quote_11": {
+      "text": "Voordat ik Morphe ontdekte, dacht ik dat APK een nieuwe K-pop band was. Nu weet ik beter.",
+      "author": "Jeff Cooper",
+      "role": "Verwarde oom"
+    },
+    "quote_12": {
+      "text": "Toen ik zag dat Morphe gratis te downloaden is, reageerde ik zoals bij gratis voedselmonsters. Ik denk niet, ik handel.",
+      "author": "Tyler James",
+      "role": "Reflex-gebaseerde beslisser"
+    },
+    "quote_13": {
+      "text": "Morphe heeft mijn WiFi gerepareerd, mijn belastingen betaald en de honger in de wereld opgelost. Nou ja, niet echt – maar YouTube perfect gepatcht.",
+      "author": "Sarah Williams",
+      "role": "Overdrijver"
+    },
+    "quote_14": {
+      "text": "Ik liet Morphe aan mijn hond zien en nu kan hij beter met technologie omgaan dan ik.",
+      "author": "Kevin Park",
+      "role": "Voormalig tech-expert"
+    },
+    "quote_15": {
+      "text": "Morphe heeft mijn apps zo goed gepatcht dat ik me afvraag of het ook mijn levenskeuzes kan patchen.",
+      "author": "Doug Miller",
+      "role": "Zelfverbetering-enthousiast"
+    },
+    "quote_16": {
+      "text": "Ik klikte op de verkeerde knop en werd per ongeluk miljonair. Geen idee hoe, maar Morphe was betrokken.",
+      "author": "Lucky Luke",
+      "role": "Per ongeluk miljardair"
+    },
+    "quote_17": {
+      "text": "Dankzij Morphe's advertentieblokkering had ik eindelijk de mentale helderheid om mijn onderzoek af te ronden en de loop van de menselijke geschiedenis te veranderen. Morphe verdient de Nobelprijs meer dan ik.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Theoretisch fysicus"
+    },
+    "quote_18": {
+      "text": "Ik liet Morphe aan mijn vrienden zien en nu denken ze dat ik een soort underground technologie-tovenaar ben. Ik corrigeer ze niet.",
+      "author": "Owen Price",
+      "role": "Tovenaar"
+    },
+    "quote_19": {
+      "text": "Morphe blokkeerde zoveel advertenties dat mijn telefoon lichter aanvoelt. Ik denk dat hij emotioneel gewicht verloor.",
+      "author": "Sienna Brooks",
+      "role": "Digitale minimalist"
+    }
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat je moet weten over Morphe",
+    "q1": "Welke apps kan Morphe aanpassen?",
+    "a1": "Je kunt elke app aanpassen zolang het YouTube of YouTube Music is.",
+    "q2": "Is Morphe veilig?",
+    "a2": "Zo veilig als bytecode-modificatie kan zijn.",
+    "q3": "Kan Morphe mijn telefoon beschadigen?",
+    "a3": "Alleen als je telefoon dat zelf besluit.",
+    "q4": "Kan ik apps aanpassen?",
+    "a4": "Ja, maar met mate.",
+    "q5": "Wat is het privacybeleid van Morphe?",
+    "a5-part1": "Deze website gebruikt",
+    "a5-part2": "voor analyses: geen cookies en geen persoonlijke gegevens.",
+    "q6": "Waarom de naam Morphe?",
+    "a6": "Omdat AAMATT niet goed klinkt.",
+    "q7": "Is Morphe magie?",
+    "a7": "Nee. Maar ook ja.",
+    "q8": "Kan ik bijdragen aan Morphe?",
+    "a8-part1": "Ja! Bekijk onze",
+    "a8-github": "GitHub-repositories",
+    "a8-part2": ". We waarderen ook",
+    "a8-donate": "donaties",
+    "a8-part3": "."
+  },
+  "footer": {
+    "description": "Android-app patching van de volgende generatie",
+    "product": "Product",
+    "product-home": "Home",
+    "product-microg": "microG downloaden",
+    "product-translate": "Help vertalen",
+    "community": "Community",
+    "support": "Ondersteuning",
+    "support-faq": "FAQ",
+    "support-how": "Hoe Morphe werkt",
+    "support-donate": "Doneren",
+    "copyright": "Open source en voor altijd gratis.",
+    "language": "Taal"
+  },
+  "donate": {
+    "title": "Ondersteuning",
+    "description": "Je bijdrage helpt Morphe verbeteren",
+    "why-title": "Waarom doneren?",
+    "why-1": "Morphe gratis en open source houden",
+    "why-2": "Doorlopende ontwikkeling ondersteunen",
+    "why-3": "Infrastructuurkosten dekken",
+    "why-4": "Snellere fixes en functies",
+    "crypto-click": "Klik om wallet te openen"
+  },
+  "microg": {
+    "title": "Downloaden",
+    "description": "microG is vereist voor YouTube Morphe en YT Music Morphe",
+    "download": "microG downloaden",
+    "what-title": "Wat is microG?",
+    "feature1-title": "Google-diensten",
+    "feature1-desc": "Ondersteuning voor Google Play Services.",
+    "feature2-title": "Privacygericht",
+    "feature2-desc": "Open source herimplementatie van Google-diensten.",
+    "feature3-title": "Eenmalige installatie",
+    "feature3-desc": "Werkt met alle Morphe-apps."
+  },
+  "translate": {
+    "title": "Help ons vertalen",
+    "description": "Maak Morphe wereldwijd toegankelijk",
+    "cta": "Begin met vertalen op",
+    "how-title": "Hoe bijdragen",
+    "step1-title": "1. Meld je aan bij Crowdin",
+    "step1-desc": "Maak een gratis Crowdin-account aan.",
+    "step2-title": "2. Kies je taal",
+    "step2-desc": "Selecteer de taal om te vertalen.",
+    "step3-title": "3. Begin met vertalen",
+    "step3-desc": "Gebruik de eenvoudige Crowdin-interface.",
+    "step4-title": "4. Zie het effect",
+    "step4-desc": "Vertalingen worden in toekomstige versies opgenomen.",
+    "why-title": "Waarom vertalen?",
+    "why-1": "Help je community",
+    "why-2": "Maak Morphe wereldwijd",
+    "why-3": "Draag bij aan open source"
+  },
+  "error": {
+    "404-title": "404 - Pagina niet gevonden",
+    "not-found": "De pagina is niet gevonden",
+    "go-home": "Ga naar de homepage"
+  }
+}

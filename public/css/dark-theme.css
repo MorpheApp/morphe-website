@@ -38,26 +38,20 @@
     backdrop-filter: blur(10px);
 }
 
-[data-theme="dark"] .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 [data-theme="dark"] .feature-card {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .feature-icon-item {
-    background: rgba(39, 39, 42, 0.95);
-    border-color: var(--border);
+    background: var(--surface);
+}
+
+[data-theme="dark"] .feature-icon-item .label {
+    color: var(--text-primary);
 }
 
 [data-theme="dark"] .testimonial-card {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .testimonial-card::before {
@@ -66,12 +60,10 @@
 
 [data-theme="dark"] .supported-apps {
     background: var(--surface);
-    border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .crypto-card {
     background: var(--surface);
-    border-color: var(--border);
 }
 
 [data-theme="dark"] .crypto-card:hover {
@@ -100,11 +92,6 @@
     background: var(--surface);
     border-color: var(--border);
     color: var(--text-secondary);
-}
-
-[data-theme="dark"] .carousel-button:hover {
-    background: var(--primary-blue);
-    border-color: var(--primary-blue);
 }
 
 [data-theme="dark"] .how-it-works {
@@ -162,23 +149,6 @@
     color: var(--gray-500);
 }
 
-/* Gradient blobs */
-[data-theme="dark"] .blob-1 {
-    background: linear-gradient(135deg, #2c4a7c, #3a5f9a);
-}
-
-[data-theme="dark"] .blob-2 {
-    background: linear-gradient(135deg, #1a8d8c, #2aadac);
-}
-
-[data-theme="dark"] .blob-3 {
-    background: linear-gradient(135deg, #2c4a7c, #1a8d8c);
-}
-
-[data-theme="dark"] .gradient-background {
-    background: linear-gradient(to bottom, rgba(24, 24, 27, 0.8), rgba(24, 24, 27, 0.95));
-}
-
 /* Logos */
 [data-theme="dark"] .nav-logo-wordmark,
 [data-theme="dark"] .footer-logo {
@@ -233,4 +203,21 @@ body,
 [data-theme="dark"] .logo-dark {
     opacity: 1;
     z-index: 2;
+}
+
+[data-theme="dark"] .language-selector {
+    background-color: var(--gray-200);
+    color: var(--text-secondary);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .language-selector:hover {
+    background-color: var(--gray-300);
+    border-color: var(--gray-400);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .language-selector option {
+    background-color: var(--gray-200);
+    color: var(--text-secondary);
 }
