@@ -34,11 +34,11 @@
             <img src="/images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
         </a>
         <div class="nav-links">
-            <a href="#home" class="nav-link" data-umami-event="Nav Home Click">Home</a>
-            <a href="#how-it-works" class="nav-link" data-umami-event="Nav How It Works Click">How It Works</a>
-            <a href="#testimonials" class="nav-link" data-umami-event="Nav Testimonials Click">Testimonials</a>
-            <a href="#faq" class="nav-link" data-umami-event="Nav FAQ Click">FAQ</a>
-            <a href="/donate" class="nav-link" data-umami-event="Nav Donate Click">Donate</a>
+            <a href="#home" class="nav-link" data-i18n="nav.home" data-umami-event="Nav Home Click">Home</a>
+            <a href="#how-it-works" class="nav-link" data-i18n="nav.how-it-works" data-umami-event="Nav How It Works Click">How It Works</a>
+            <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials" data-umami-event="Nav Testimonials Click">Testimonials</a>
+            <a href="#faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
+            <a href="/donate" class="nav-link" data-i18n="nav.donate" data-umami-event="Nav Donate Click">Donate</a>
         </div>
         <div class="nav-actions">
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
@@ -72,8 +72,8 @@
 <section id="home" class="hero">
     <div class="hero-container">
         <div class="hero-content">
-            <h1 class="hero-title">Transform Your <span class="gradient-text">Android Apps</span></h1>
-            <p class="hero-description">
+            <h1 class="hero-title"><span data-i18n="hero.title">Transform Your</span> <span class="gradient-text" data-i18n="hero.title-highlight">Android Apps</span></h1>
+            <p class="hero-description" data-i18n="hero.description">
                 From the developers that brought you the greatest modded YouTube apps,
                 comes Morphe - the powerful app modification tool that puts you in control
             </p>
@@ -84,10 +84,10 @@
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    Download YouTube Morphe
+                    <span data-i18n="hero.download">Download YouTube Morphe</span>
                 </a>
                 <a href="#how-it-works" class="btn btn-secondary" data-umami-event="Learn More Button Click">
-                    Learn More
+                    <span data-i18n="hero.learn-more">Learn More</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
@@ -100,62 +100,50 @@
             <div class="feature-icons-grid">
                 <div class="feature-icon-item">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="M479.92-55Q392-55 314.5-88.5 237-122 179-180T88-315.38Q55-392.75 55-482q0-86.64 33.67-164.48 33.68-77.84 90.76-135.16 57.09-57.32 134.78-90.84Q391.91-906 479.95-906q88.05 0 165.77 33.52 77.72 33.52 134.81 90.84 57.1 57.32 91.29 135.16Q906-568.64 906-482q0 89.25-33.5 166.62Q839-238 781-180T645.42-88.5Q567.83-55 479.92-55Zm.08-94q55.01 0 107.01-16.5Q639-182 680-218L216-680q-33 42-50 93.17T149-482q0 139.37 96.31 236.19Q341.63-149 480-149Zm264-134q30-42 48.5-92.99Q811-426.99 811-482q0-137.51-96.31-233.26Q618.38-811 480-811q-54.66 0-104.83 16.5T282-745l462 462ZM480-482Z"/>
-                        </svg>
+                        <img src="/images/icons/ad-blocking.svg" alt="Ad Blocking">
                     </div>
-                    <div class="label">Ad Blocking</div>
-                    <div class="description">Block all ads and enjoy uninterrupted content across your apps</div>
+                    <div class="label" data-i18n="feature.ad-blocking">Ad Blocking</div>
+                    <div class="description" data-i18n="feature.ad-blocking-desc">Block all ads and enjoy uninterrupted content across your apps</div>
                 </div>
 
                 <div class="feature-icon-item">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="M479.94-55Q329.1-92.81 232.05-227.41 135-362.01 135-522.67v-255.79L480-907l346 128.57V-523q0 160.79-97.62 295.49Q630.77-92.81 479.94-55Zm.06-96q110-43 180.5-144T731-522.71V-712l-251-95-251 95.48v188.35Q229-396 299.5-295 370-194 480-151Zm0-328Z"/>
-                        </svg>
+                        <img src="/images/icons/sponsorblock.svg" alt="SponsorBlock">
                     </div>
-                    <div class="label">SponsorBlock</div>
-                    <div class="description">Skip sponsored segments automatically with community-powered timestamps</div>
+                    <div class="label" data-i18n="feature.sponsorblock">SponsorBlock</div>
+                    <div class="description" data-i18n="feature.sponsorblock-desc">Skip sponsored segments automatically with community-powered timestamps</div>
                 </div>
 
                 <div class="feature-icon-item">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="M245-814h449v541L427 3l-59.18-42.4Q359-46 354.5-59 350-72 350-89v-2l42-182H103q-37 0-65.5-29.2T9-368v-35.84q0-8.99-1.5-18.57Q6-432 10-440l131-303q11.88-30.25 42.19-50.63Q213.5-814 245-814Zm365 95H232L105-415v47h392l-44 212 157-168v-395Zm0 395v-395 395Zm84 51v-95h109v-351H694v-95h204v541H694Z"/>
-                        </svg>
+                        <img src="/images/icons/show-dislikes.svg" alt="Show Dislikes">
                     </div>
-                    <div class="label">Show Dislikes</div>
-                    <div class="description">See real dislike counts to make better viewing decisions</div>
+                    <div class="label" data-i18n="feature.show-dislikes">Show Dislikes</div>
+                    <div class="description" data-i18n="feature.show-dislikes-desc">See real dislike counts to make better viewing decisions</div>
                 </div>
 
                 <div class="feature-icon-item">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="M20-55v-67h79Q40-200 8-291t-32-189q0-98 32-189t91-170H20v-67h207v200h-67v-101q-55 72-86 154.5T43-480q0 90 31 172.5T160-153v-101h67v199H20Zm609-100q-22 9-46 8t-46-12L249-299l-1-11q8-32 33-52.5t58-21.5l86-4-116-317q-5-15 2-30t22-21q16-5 31 2t21 22l151 414-135 5 171 82q7 4 15 3.5t16-2.5l220-81q36-13 51.5-46t2.5-69l-69-191q-6-15 1-30.5t23-21.5q15-5 30 2t21 22l69 191q24 67-5.5 130T850-236l-221 81Zm-72-300-65-175q-5-16 2-30.5t22-20.5q16-6 30.5 1.5T567-657l64 176-74 26Zm136-49-50-138q-6-15 1.5-30.5T667-694q15-5 30 1.5t21 21.5l51 141-76 26Zm13 104Z"/>
-                        </svg>
+                        <img src="/images/icons/swipe-controls.svg" alt="Swipe Controls">
                     </div>
-                    <div class="label">Swipe Controls</div>
-                    <div class="description">Control volume and brightness with intuitive swipe gestures</div>
+                    <div class="label" data-i18n="feature.swipe-controls">Swipe Controls</div>
+                    <div class="description" data-i18n="feature.swipe-controls-desc">Control volume and brightness with intuitive swipe gestures</div>
                 </div>
 
                 <div class="feature-icon-item">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="M480-55q-87.04 0-164.52-33.5T180-180q-58-58-91.5-135.46Q55-392.92 55-479.93 55-570 88.45-647.28q33.44-77.27 92.5-135Q240-840 318.77-873t168.61-33q83.62 0 159.41 28.46 75.79 28.45 133.5 79Q838-748 872-678.8q34 69.2 34 149.8 0 114-64 187t-178 73h-58q-16 0-28 13t-12 29q0 25 10 35t10 31q0 44-29.8 75T480-55Zm0-425Zm-224 26q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm121.5-163q20.5 0 35.5-15t15-35q0-21-15-35.5T378-717q-21 0-35.5 14.5t-14.5 35q0 20.5 14.5 35.5t35 15Zm205 0q20.5 0 35.5-15t15-35q0-21-15-35.5T583-717q-21 0-35.5 14.5t-14.5 35q0 20.5 14.5 35.5t35 15ZM707-454q20 0 35-15t15-35q0-20-15-35t-35-15q-21 0-35.5 15T657-504q0 20 14.5 35t35.5 15ZM476-149q7.75 0 11.88-3.55 4.12-3.54 4.12-12.01 0-14.44-15-23.69-15-9.25-15-47.75 0-49.17 32.98-88.09Q527.96-363 576.75-363H664q74 0 110.5-44T811-523q0-132-98.59-210-98.6-78-224.83-78-141.68 0-240.13 96.37Q149-618.26 149-479.52 149-342 244.96-245.5T476-149Z"/>
-                        </svg>
+                        <img src="/images/icons/custom-themes.svg" alt="Custom Themes">
                     </div>
-                    <div class="label">Custom Themes</div>
-                    <div class="description">Personalize your app with beautiful custom themes and colors</div>
+                    <div class="label" data-i18n="feature.custom-themes">Custom Themes</div>
+                    <div class="description" data-i18n="feature.custom-themes-desc">Personalize your app with beautiful custom themes and colors</div>
                 </div>
 
                 <div class="feature-icon-item">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="m634-432-77-76q21-44-12.5-69t-62.5-6l-70-71q15-8 33-12t35-4q71 0 120.5 49.5T650-500q0 16-4 36t-12 32Zm148 150-55-56q44-35 76.5-77t52.5-85q-52-110-150.5-175T490-740q-42 0-82 7t-59 16l-66-66q35-16 92.5-28T485-823q147 0 272 85t186 238q-25 66-67.5 121.5T782-282Zm25 227L653-207q-35 14-80 22t-93 8q-151 0-276.5-85.5T17-500q18-51 55-103t86-100L35-824l50-52 769 769-47 52ZM216-646q-36 29-66 68.5T104-500q52 111 153 175.5T488-260q27 0 55.5-3t44.5-11l-64-64q-8 4-20.5 6t-23.5 2q-70 0-120-49t-50-121q0-11 1.5-23t4.5-21L216-646Zm323 128Zm-137 69Z"/>
-                        </svg>
+                        <img src="/images/icons/hide-content.svg" alt="Hide Content">
                     </div>
-                    <div class="label">Hide Content</div>
-                    <div class="description">Hide unwanted content, Shorts, and recommendations for a cleaner feed</div>
+                    <div class="label" data-i18n="feature.hide-content">Hide Content</div>
+                    <div class="description" data-i18n="feature.hide-content-desc">Hide unwanted content, Shorts, and recommendations for a cleaner feed</div>
                 </div>
             </div>
         </div>
@@ -163,7 +151,7 @@
 
     <!-- Social Links -->
     <div class="social-section">
-        <p class="social-label">Join the Community</p>
+        <p class="social-label" data-i18n="hero.social-label">Join the Community</p>
         <div class="social-links">
             <a href="https://github.com/MorpheApp" target="_blank" class="social-link" data-umami-event="GitHub Link Click">
                 <img src="images/github.svg" alt="GitHub">
@@ -189,8 +177,8 @@
 <section id="how-it-works" class="how-it-works">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">How Morphe Works</h2>
-            <p class="section-subtitle">Simple, powerful, and built for everyone</p>
+            <h2 class="section-title" data-i18n="how-it-works.title">How Morphe Works</h2>
+            <p class="section-subtitle" data-i18n="how-it-works.subtitle">Simple, powerful, and built for everyone</p>
         </div>
 
         <div class="features-grid">
@@ -202,8 +190,8 @@
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
                 </div>
-                <h3 class="feature-title">1. Download Morphe</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="how-it-works.step1-title">1. Download Morphe</h3>
+                <p class="feature-description" data-i18n="how-it-works.step1-desc">
                     Download the latest version of Morphe and install it on your your Android device.
                 </p>
             </div>
@@ -216,8 +204,8 @@
                         <polyline points="21 15 16 10 5 21"></polyline>
                     </svg>
                 </div>
-                <h3 class="feature-title">2. Choose Your App</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="how-it-works.step2-title">2. Choose Your App</h3>
+                <p class="feature-description" data-i18n="how-it-works.step2-desc">
                     Select the app you want to modify. Currently Morphe supports YouTube and YouTube Music.
                 </p>
             </div>
@@ -229,8 +217,8 @@
                         <circle cx="12" cy="12" r="3"></circle>
                     </svg>
                 </div>
-                <h3 class="feature-title">3. Apply Patches</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="how-it-works.step3-title">3. Apply Patches</h3>
+                <p class="feature-description" data-i18n="how-it-works.step3-desc">
                     Morphe will automatically patch your selected app.
                 </p>
             </div>
@@ -241,15 +229,15 @@
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                 </div>
-                <h3 class="feature-title">4. Install & Enjoy</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-i18n="how-it-works.step4-title">4. Install & Enjoy</h3>
+                <p class="feature-description" data-i18n="how-it-works.step4-desc">
                     Install the patched app and enjoy your customized experience.
                 </p>
             </div>
         </div>
 
         <div class="supported-apps">
-            <h3 class="supported-title">Supported Apps</h3>
+            <h3 class="supported-title" data-i18n="how-it-works.supported-title">Supported Apps</h3>
             <div class="app-badges">
                 <div class="app-badge">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -272,8 +260,8 @@
 <section id="testimonials" class="testimonials">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">What Users Say</h2>
-            <p class="section-subtitle">Feedback from real users and definitely not made up</p>
+            <h2 class="section-title" data-i18n="testimonials.title">What Users Say</h2>
+            <p class="section-subtitle" data-i18n="testimonials.subtitle">Feedback from real users and definitely not made up</p>
         </div>
 
         <div class="testimonials-carousel">
@@ -300,112 +288,125 @@
 <section id="faq" class="faq">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know about Morphe</p>
+            <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+            <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about Morphe</p>
         </div>
 
         <div class="faq-list">
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What apps can Morphe patch?">
-                    <span class="faq-icon">📱</span>
-                    <span class="faq-text">What apps can Morphe patch?</span>
+                    <div class="faq-number">1</div>
+                    <span class="faq-text" data-i18n="faq.q1">What apps can Morphe patch?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>You can patch any app you want. As long as you want YouTube or YouTube Music. We're constantly working on expanding support to more apps.</p>
+                    <p data-i18n="faq.a1">You can patch any app you want. As long as you want YouTube or YouTube Music. We're constantly working on expanding support to more apps.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
-                    <span class="faq-icon">🛡️</span>
-                    <span class="faq-text">Is Morphe safe?</span>
+                    <div class="faq-number">2</div>
+                    <span class="faq-text" data-i18n="faq.q2">Is Morphe safe?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
+                    <p data-i18n="faq.a2">As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
-                    <span class="faq-icon">🧱</span>
-                    <span class="faq-text">Will Morphe brick my phone?</span>
+                    <div class="faq-number">3</div>
+                    <span class="faq-text" data-i18n="faq.q3">Will Morphe brick my phone?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
+                    <p data-i18n="faq.a3">Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I customize apps to my preference?">
-                    <span class="faq-icon">🚀</span>
-                    <span class="faq-text">Can I customize apps to my preference?</span>
+                    <div class="faq-number">4</div>
+                    <span class="faq-text" data-i18n="faq.q4">Can I customize apps to my preference?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
+                    <p data-i18n="faq.a4">Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
-                    <span class="faq-icon">🔎</span>
-                    <span class="faq-text">What's Morphe's privacy policy?</span>
+                    <div class="faq-number">5</div>
+                    <span class="faq-text" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>This website uses <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">Umami</a> for analytics: no cookies, no personal data, nothing sold, and nothing shared. Morphe does not add analytics or data collection to any patched apps.</p>
+                    <p>
+                        <span data-i18n="faq.a5-part1">This website uses</span>
+                        <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">
+                            <span>Umami</span></a>
+                        <span data-i18n="faq.a5-part2">for analytics: no cookies, no personal data, nothing sold, and nothing shared. Morphe does not add analytics or data collection to any patched apps.</span>
+                    </p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Why the name Morphe?">
-                    <span class="faq-icon">🤔</span>
-                    <span class="faq-text">Why the name Morphe?</span>
+                    <div class="faq-number">6</div>
+                    <span class="faq-text" data-i18n="faq.q6">Why the name Morphe?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
+                    <p data-i18n="faq.a6">Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe magic?">
-                    <span class="faq-icon">🪄</span>
-                    <span class="faq-text">Is Morphe magic?</span>
+                    <div class="faq-number">7</div>
+                    <span class="faq-text" data-i18n="faq.q7">Is Morphe magic?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>No. But also yes. It's advanced bytecode manipulation that feels like magic.</p>
+                    <p data-i18n="faq.a7">No. But also yes. It's advanced bytecode manipulation that feels like magic.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I contribute to Morphe?">
-                    <span class="faq-icon">💖</span>
-                    <span class="faq-text">Can I contribute to Morphe?</span>
+                    <div class="faq-number">8</div>
+                    <span class="faq-text" data-i18n="faq.q8">Can I contribute to Morphe?</span>
                     <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
                 <div class="faq-answer">
-                    <p>Yes! See the contribution guidelines in our <a href="https://github.com/MorpheApp/" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="GitHub Contribution Click">GitHub repos</a>. If you don't have developer skills, we always appreciate <a href="/donate" class="inline-link" data-umami-event="FAQ Donate Link Click">donations</a> to help pay the bills.</p>
+                    <p>
+                        <span data-i18n="faq.a8-part1">Yes! See the contribution guidelines in our</span>
+                        <a href="https://github.com/MorpheApp/" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="GitHub Contribution Click">
+                            <span data-i18n="faq.a8-github">GitHub repos</span></a>
+                        <span data-i18n="faq.a8-part2">. If you don't have developer skills, we always appreciate</span>
+                        <a href="/donate" class="inline-link" data-umami-event="FAQ Donate Link Click">
+                            <span data-i18n="faq.a8-donate">donations</span></a>
+                        <span data-i18n="faq.a8-part3">to help pay the bills.</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -417,41 +418,49 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
-                <p>Next generation Android app patching</p>
+                <img src="/images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
+                <p data-i18n="footer.description">Next generation Android app patching</p>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
-                    <h4>Product</h4>
-                    <a href="#home" data-umami-event="Footer Home Click">Home</a>
-                    <a href="microg" data-umami-event="Footer microG Click">Download microG</a>
-                    <a href="translate" data-umami-event="Footer Translate Click">Help translate</a>
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <a href="#home" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
+                    <a href="/microg" data-i18n="footer.product-microg" data-umami-event="Footer microG Click">Download microG</a>
+                    <a href="/translate" data-i18n="footer.product-translate" data-umami-event="Footer Translate Click">Help translate</a>
                 </div>
                 <div class="footer-column">
-                    <h4>Community</h4>
+                    <h4 data-i18n="footer.community">Community</h4>
                     <a href="https://github.com/MorpheApp" target="_blank" data-umami-event="Footer GitHub Click">GitHub</a>
                     <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="Footer X Click">X (Twitter)</a>
                     <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Footer Reddit Click">Reddit</a>
                     <a href="https://crowdin.com/project/morphe" target="_blank" data-umami-event="Footer Crowdin Click">Crowdin</a>
                 </div>
                 <div class="footer-column">
-                    <h4>Support</h4>
-                    <a href="#faq" data-umami-event="Footer FAQ Click">FAQ</a>
-                    <a href="#how-it-works" data-umami-event="Footer How Morphe Works Click">How Morphe Works</a>
-                    <a href="/donate" data-umami-event="Footer Donate Click">Donate</a>
+                    <h4 data-i18n="footer.support">Support</h4>
+                    <a href="#faq" data-i18n="footer.support-faq" data-umami-event="Footer FAQ Click">FAQ</a>
+                    <a href="#how-it-works" data-i18n="footer.support-how" data-umami-event="Footer How Morphe Works Click">How Morphe Works</a>
+                    <a href="/donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
                     <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b" title="DMCA.com Protection Status" class="dmca-badge">
                         <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b" alt="DMCA.com Protection Status" />
                     </a><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
                 </div>
+                <div class="footer-column language-selector-container">
+                    <h4 data-i18n="footer.language">Language</h4>
+                    <select id="language-selector" class="language-selector" data-umami-event="Language Change">
+                        <!-- Options will be populated dynamically by i18n.js -->
+                    </select>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; Morphe. Open source and free forever.</p>
+            <p>&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
     </div>
 </footer>
 
-<script src="js/theme-manager.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/theme-manager.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/testimonials.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

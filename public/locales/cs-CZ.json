@@ -1,0 +1,227 @@
+{
+  "nav": {
+    "home": "Domů",
+    "how-it-works": "Jak to funguje",
+    "testimonials": "Reference",
+    "faq": "FAQ",
+    "donate": "Darovat"
+  },
+  "hero": {
+    "title": "Proměň své",
+    "title-highlight": "Android aplikace",
+    "description": "Od vývojářů nejlepších upravených aplikací YouTube přichází Morphe — výkonný nástroj pro úpravu aplikací",
+    "download": "Stáhnout Morphe",
+    "learn-more": "Zjistit více",
+    "social-label": "Připoj se ke komunitě"
+  },
+  "feature": {
+    "ad-blocking": "Blokování reklam",
+    "ad-blocking-desc": "Blokuj všechny reklamy a užívej si obsah bez přerušení",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Automaticky přeskakuj sponzorované části",
+    "show-dislikes": "Zobrazit nelíbí se",
+    "show-dislikes-desc": "Zobraz skutečný počet nelíbí se",
+    "swipe-controls": "Ovládání gesty",
+    "swipe-controls-desc": "Ovládej hlasitost a jas gesty",
+    "custom-themes": "Vlastní motivy",
+    "custom-themes-desc": "Přizpůsob aplikaci pomocí motivů",
+    "hide-content": "Skrýt obsah",
+    "hide-content-desc": "Skrývej nechtěný obsah a doporučení"
+  },
+  "how-it-works": {
+    "title": "Jak Morphe funguje",
+    "subtitle": "Jednoduché, výkonné a pro každého",
+    "step1-title": "1. Stáhni Morphe",
+    "step1-desc": "Stáhni nejnovější verzi Morphe a nainstaluj ji do Android zařízení.",
+    "step2-title": "2. Vyber aplikaci",
+    "step2-desc": "Vyber aplikaci k úpravě. Podporovány jsou YouTube a YouTube Music.",
+    "step3-title": "3. Použij záplaty",
+    "step3-desc": "Morphe automaticky upraví aplikaci.",
+    "step4-title": "4. Nainstaluj a užívej",
+    "step4-desc": "Nainstaluj upravenou aplikaci a užívej si.",
+    "supported-title": "Podporované aplikace"
+  },
+  "testimonials": {
+    "title": "Co říkají uživatelé",
+    "subtitle": "Ohlasy od skutečných uživatelů, rozhodně nevymyšlené",
+    "quote_1": {
+      "text": "Dříve jsem hodiny ručně konfiguroval patche. Teď jen kliknu na „Patch“ a jdu si udělat kávu. Když se vrátím, je hotovo. Revoluční!",
+      "author": "Lisa Smith",
+      "role": "Milovnice kávy"
+    },
+    "quote_2": {
+      "text": "Každý jiný patcher je jako operace mozku se zavázanýma očima. Ale s Morphe to jsou jen pár kliknutí a moje patchnutá aplikace je silnější než kdy dříve.",
+      "author": "Alex Chen",
+      "role": "Pokročilý uživatel"
+    },
+    "quote_3": {
+      "text": "Je to jako Vanced, ale lepší, a bez té divné firemní párty atmosféry.",
+      "author": "Sarah Johnson",
+      "role": "Bývalá uživatelka Vanced"
+    },
+    "quote_4": {
+      "text": "Moje 87letá babička se mě zeptala, proč můj YouTube vypadá jinak. Ukázal jsem jí Morphe a teď patchuje aplikace pro celou svou komunitu seniorů.",
+      "author": "David Kin",
+      "role": "Pyšný vnuk"
+    },
+    "quote_5": {
+      "text": "Zkoušel jsem jiné patchery a můj telefon vzplál. S Morphe je telefon perfektně upraven. 10/10 — už se spontánně nezapálí.",
+      "author": "Ryan Martinez",
+      "role": "Zastánce požární bezpečnosti"
+    },
+    "quote_6": {
+      "text": "Moje kočka strčila můj telefon ze stolu, když Morphe patchoval. Telefon přežil a patch byl úspěšně dokončen. Kočka schválila.",
+      "author": "Emma Jones",
+      "role": "Majitelka kočky"
+    },
+    "quote_7": {
+      "text": "Ukázal jsem Morphe svému technicky negramotnému otci. Teď patchuje aplikace lépe než já. Zpochybňuji celou svou kariéru v IT.",
+      "author": "Tom Anderson",
+      "role": "Prožívající existenční krizi"
+    },
+    "quote_8": {
+      "text": "Moje bývalá přítelkyně se se mnou vrátila, když jsem začal používat Morphe. Náhoda? Nemyslím si!",
+      "author": "Mike Thompson",
+      "role": "Odborník na vztahy"
+    },
+    "quote_9": {
+      "text": "Morphe je jediná věc, která mě zachraňuje před 60sekundovými nepřeskočitelnými reklamami na zubní pastu.",
+      "author": "Casey Morgan",
+      "role": "Ne zubař"
+    },
+    "quote_10": {
+      "text": "Myslel jsem, že Morphe je nějaký málo známý řecký bůh. Ukázalo se, že je lepší.",
+      "author": "Oliver Grant",
+      "role": "Student historie"
+    },
+    "quote_11": {
+      "text": "Než jsem našel Morphe, myslel jsem, že APK je nová K-pop skupina. Teď vím lépe.",
+      "author": "Jeff Cooper",
+      "role": "Zmatený strýc"
+    },
+    "quote_12": {
+      "text": "Když jsem viděl, že Morphe je zdarma ke stažení, zareagoval jsem stejně, jako kdyby mi někdo nabídl zdarma ochutnávky jídla. Nemyslím, jednám.",
+      "author": "Tyler James",
+      "role": "Rozhodovatel založený na reflexu"
+    },
+    "quote_13": {
+      "text": "Morphe opravil mé WiFi, zaplatil mé daně a vyřešil hlad ve světě. Vlastně ne — ale YouTube perfektně patchnul.",
+      "author": "Sarah Williams",
+      "role": "Přeháněčka"
+    },
+    "quote_14": {
+      "text": "Ukázal jsem Morphe svému psu a teď se lépe vyzná v technologii než já.",
+      "author": "Kevin Park",
+      "role": "Bývalý technologický expert"
+    },
+    "quote_15": {
+      "text": "Morphe patchnul mé aplikace tak dobře, že teď přemýšlím, jestli by mohl patchnout i moje životní rozhodnutí.",
+      "author": "Doug Miller",
+      "role": "Nadšenec do sebezdokonalování"
+    },
+    "quote_16": {
+      "text": "Klikl jsem na špatné tlačítko a náhodou se stal milionářem. Nevím, jak se to stalo, ale Morphe byl zapojen.",
+      "author": "Lucky Luke",
+      "role": "Náhodný miliardář"
+    },
+    "quote_17": {
+      "text": "Díky blokování reklam od Morphe jsem konečně měl mentální jasnost dokončit svůj výzkum a změnit běh lidských dějin. Morphe si Nobelovu cenu zaslouží víc než já.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Teoretický fyzik"
+    },
+    "quote_18": {
+      "text": "Ukázal jsem Morphe svým přátelům a teď si myslí, že jsem nějaký podzemní technologický mág. Nekorekcuji je.",
+      "author": "Owen Price",
+      "role": "Mág"
+    },
+    "quote_19": {
+      "text": "Morphe zablokoval tolik reklam, že se mi telefon zdá lehčí. Myslím, že ztratil emocionální váhu.",
+      "author": "Sienna Brooks",
+      "role": "Digitální minimalistka"
+    }
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebuješ vědět o Morphe",
+    "q1": "Jaké aplikace může Morphe upravit?",
+    "a1": "Jakoukoli aplikaci, pokud je to YouTube nebo YouTube Music.",
+    "q2": "Je Morphe bezpečný?",
+    "a2": "Tak bezpečný, jak jen může být úprava bytecode.",
+    "q3": "Může Morphe poškodit telefon?",
+    "a3": "Pouze pokud se telefon rozhodne sám pokazit.",
+    "q4": "Mohu aplikace přizpůsobit?",
+    "a4": "Ano, ale s mírou.",
+    "q5": "Jaká je politika ochrany soukromí Morphe?",
+    "a5-part1": "Tento web používá",
+    "a5-part2": "pro analytiku: žádné cookies ani osobní údaje.",
+    "q6": "Proč se jmenuje Morphe?",
+    "a6": "Protože AAMATT nezní dobře.",
+    "q7": "Je Morphe magie?",
+    "a7": "Ne. Ale trochu ano.",
+    "q8": "Mohu přispět Morphe?",
+    "a8-part1": "Ano! Podívej se na naše",
+    "a8-github": "GitHub repozitáře",
+    "a8-part2": ". Vítáme také",
+    "a8-donate": "dary",
+    "a8-part3": "."
+  },
+  "footer": {
+    "description": "Patchování Android aplikací nové generace",
+    "product": "Produkt",
+    "product-home": "Domů",
+    "product-microg": "Stáhnout microG",
+    "product-translate": "Pomoz přeložit",
+    "community": "Komunita",
+    "support": "Podpora",
+    "support-faq": "FAQ",
+    "support-how": "Jak Morphe funguje",
+    "support-donate": "Darovat",
+    "copyright": "Open source a navždy zdarma.",
+    "language": "Jazyk"
+  },
+  "donate": {
+    "title": "Podpora",
+    "description": "Tvůj příspěvek pomáhá zlepšovat Morphe",
+    "why-title": "Proč darovat?",
+    "why-1": "Udržet Morphe zdarma a open source",
+    "why-2": "Podpořit další vývoj",
+    "why-3": "Pokrytí nákladů na infrastrukturu",
+    "why-4": "Rychlejší opravy chyb",
+    "crypto-click": "Klikni pro otevření peněženky"
+  },
+  "microg": {
+    "title": "Stáhnout",
+    "description": "microG je vyžadován pro YouTube Morphe a YT Music Morphe",
+    "download": "Stáhnout microG",
+    "what-title": "Co je microG?",
+    "feature1-title": "Google služby",
+    "feature1-desc": "Podpora Google Play Services.",
+    "feature2-title": "Soukromí",
+    "feature2-desc": "Open source implementace Google služeb.",
+    "feature3-title": "Jednorázová instalace",
+    "feature3-desc": "Funguje se všemi aplikacemi Morphe."
+  },
+  "translate": {
+    "title": "Pomoz přeložit",
+    "description": "Zpřístupni Morphe po celém světě",
+    "cta": "Začni překládat na",
+    "how-title": "Jak přispět",
+    "step1-title": "1. Zaregistruj se na Crowdin",
+    "step1-desc": "Vytvoř si bezplatný účet.",
+    "step2-title": "2. Vyber jazyk",
+    "step2-desc": "Zvol jazyk k překladu.",
+    "step3-title": "3. Začni překládat",
+    "step3-desc": "Použij jednoduché rozhraní Crowdin.",
+    "step4-title": "4. Sleduj dopad",
+    "step4-desc": "Překlady budou zahrnuty v dalších verzích.",
+    "why-title": "Proč překládat?",
+    "why-1": "Pomoz komunitě",
+    "why-2": "Udělej Morphe globálním",
+    "why-3": "Přispěj k open source"
+  },
+  "error": {
+    "404-title": "404 - Stránka nenalezena",
+    "not-found": "Požadovaná stránka nebyla nalezena",
+    "go-home": "Zpět na hlavní stránku"
+  }
+}
