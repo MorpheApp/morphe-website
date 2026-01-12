@@ -18,6 +18,15 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark-theme.css">
     <script defer src="https://analytics.morphe.software/script.js" data-website-id="87620d09-e7f3-4d2d-bc7a-2af95d7775ea"></script>
+    <script>
+        window.addEventListener('load', () => {
+          if (window.umami) {
+            umami.track('Browser language', {
+              language: navigator.language
+            });
+          }
+        });
+    </script>
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="shortcut icon" href="favicon.ico"/>
