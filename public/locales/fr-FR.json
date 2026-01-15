@@ -152,8 +152,6 @@
     "q4": "Puis-je personnaliser les applications selon mes préférences ?",
     "a4": "Oui, mais ne blâmez pas Morphe si votre application devient trop personnalisée. Il est recommandé de rester raisonnable.",
     "q5": "Quelle est la politique de confidentialité de Morphe ?",
-    "a5-part1": "Ce site utilise",
-    "a5-part2": "pour l’analytique : aucun cookie, aucune donnée personnelle, rien n’est vendu ni partagé. Morphe n’ajoute aucune analyse ou collecte de données aux applications modifiées.",
     "q6": "Pourquoi le nom Morphe ?",
     "a6": "Parce que « Android App Modification And Transformation Tool » n’est pas très accrocheur. Morphe évoque la transformation des applications en quelque chose de meilleur.",
     "q7": "Morphe est-il magique ?",
@@ -178,6 +176,11 @@
     "support-donate": "Faire un don",
     "copyright": "Open source et gratuit pour toujours.",
     "language": "Langue"
+  },
+  "analytics": {
+    "title": "Analytique",
+    "part1": "Ce site utilise ",
+    "part2": "et Google Analytics 4 : Pas de cookies, pas de publicité, pas de profilage et aucune donnée n'est vendue ou partagée. Morphe n'ajoute aucune analyse ni collecte de données aux applications patchées."
   },
   "donate": {
     "title": "Soutien",

@@ -152,8 +152,6 @@
     "q4": "Mohu aplikace přizpůsobit?",
     "a4": "Ano, ale s mírou.",
     "q5": "Jaká je politika ochrany soukromí Morphe?",
-    "a5-part1": "Tento web používá",
-    "a5-part2": "pro analytiku: žádné cookies ani osobní údaje.",
     "q6": "Proč se jmenuje Morphe?",
     "a6": "Protože AAMATT nezní dobře.",
     "q7": "Je Morphe magie?",
@@ -179,6 +177,11 @@
     "copyright": "Open source a navždy zdarma.",
     "language": "Jazyk"
   },
+  "analytics": {
+    "title": "Analytika",
+    "part1": "Tato webová stránka používá ",
+    "part2": "a Google Analytics 4: Žádné cookies, žádná reklama, žádné profilování a žádná data nejsou prodávána ani sdílena. Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat."
+  },
   "donate": {
     "title": "Podpora",
     "description": "Tvůj příspěvek pomáhá zlepšovat Morphe",
@@ -190,9 +193,9 @@
     "crypto-click": "Klikni pro otevření peněženky"
   },
   "microg": {
-    "title": "Stáhnout",
+    "title": "Stáhnuť",
     "description": "MicroG je vyžadován pro YouTube Morphe a YT Music Morphe",
-    "download": "Stáhnout MicroG",
+    "download": "Stiahnuť MicroG",
     "what-title": "Co je MicroG?",
     "feature1-title": "Google služby",
     "feature1-desc": "Podpora Google Play Services.",

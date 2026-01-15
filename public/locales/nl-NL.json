@@ -152,8 +152,6 @@
     "q4": "Kan ik apps aanpassen?",
     "a4": "Ja, maar met mate.",
     "q5": "Wat is het privacybeleid van Morphe?",
-    "a5-part1": "Deze website gebruikt",
-    "a5-part2": "voor analyses: geen cookies en geen persoonlijke gegevens.",
     "q6": "Waarom de naam Morphe?",
     "a6": "Omdat AAMATT niet goed klinkt.",
     "q7": "Is Morphe magie?",
@@ -178,6 +176,11 @@
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
     "language": "Taal"
+  },
+  "analytics": {
+    "title": "Analyse",
+    "part1": "Deze website gebruikt ",
+    "part2": "en Google Analytics 4: Geen cookies, geen reclame, geen profilering en geen gegevens worden verkocht of gedeeld. Morphe voegt geen analyses of gegevensverzameling toe aan gepatchte apps."
   },
   "donate": {
     "title": "Ondersteuning",

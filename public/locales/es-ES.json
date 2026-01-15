@@ -152,8 +152,6 @@
     "q4": "¿Puedo personalizar las aplicaciones a mi gusto?",
     "a4": "Sí, pero no culpes a Morphe si tu aplicación queda demasiado personalizada. Se recomienda personalizar solo hasta tu nivel de comodidad.",
     "q5": "¿Cuál es la política de privacidad de Morphe?",
-    "a5-part1": "Este sitio web utiliza",
-    "a5-part2": "para analíticas: sin cookies, sin datos personales, nada se vende ni se comparte. Morphe no añade analíticas ni recopilación de datos a las aplicaciones parcheadas.",
     "q6": "¿Por qué el nombre Morphe?",
     "a6": "Porque \"Android App Modification And Transformation Tool\" (AAMATT) no suena muy atractivo. Y porque Morphe implica transformar tus aplicaciones en algo mejor.",
     "q7": "¿Morphe es magia?",
@@ -178,6 +176,11 @@
     "support-donate": "Donar",
     "copyright": "Código abierto y gratuito para siempre.",
     "language": "Idioma"
+  },
+  "analytics": {
+    "title": "Analítica",
+    "part1": "Este sitio web utiliza ",
+    "part2": "y Google Analytics 4: Sin cookies, sin publicidad, sin creación de perfiles y sin venta ni compartición de datos. Morphe no añade analíticas ni recolección de datos a ninguna aplicación parcheada."
   },
   "donate": {
     "title": "Soporte",

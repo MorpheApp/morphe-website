@@ -152,8 +152,6 @@
     "q4": "Môžem aplikácie prispôsobiť?",
     "a4": "Áno, ale s mierou.",
     "q5": "Aká je politika ochrany súkromia Morphe?",
-    "a5-part1": "Táto stránka používa",
-    "a5-part2": "na analytiku: žiadne cookies ani osobné údaje.",
     "q6": "Prečo názov Morphe?",
     "a6": "Pretože AAMATT neznie dobre.",
     "q7": "Je Morphe mágia?",
@@ -178,6 +176,11 @@
     "support-donate": "Darovať",
     "copyright": "Open source a navždy zadarmo.",
     "language": "Jazyk"
+  },
+  "analytics": {
+    "title": "Analytika",
+    "part1": "Táto webová stránka používa ",
+    "part2": "a Google Analytics 4: Žiadne cookies, žiadna reklama, žiadne profilovanie a žiadne dáta sa nepredávajú ani nezdieľajú. Morphe nepridáva analytiku ani zber dát do žiadnych upravených aplikácií."
   },
   "donate": {
     "title": "Podpora",

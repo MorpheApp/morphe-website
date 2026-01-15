@@ -152,8 +152,6 @@
     "q4": "Posso personalizar as apps?",
     "a4": "Sim, mas sem exageros.",
     "q5": "Qual é a política de privacidade do Morphe?",
-    "a5-part1": "Este site utiliza",
-    "a5-part2": "para análises: sem cookies nem dados pessoais.",
     "q6": "Porque o nome Morphe?",
     "a6": "Porque AAMATT não é apelativo.",
     "q7": "O Morphe é magia?",
@@ -178,6 +176,11 @@
     "support-donate": "Doar",
     "copyright": "Open source e gratuito para sempre.",
     "language": "Idioma"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "part1": "Este site utiliza ",
+    "part2": "e Google Analytics 4: Sem cookies, sem publicidade, sem criação de perfis e sem venda ou partilha de dados. A Morphe não adiciona análise nem recolha de dados a aplicações corrigidas."
   },
   "donate": {
     "title": "Suporte",

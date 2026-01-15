@@ -152,8 +152,6 @@
     "q4": "Uygulamaları özelleştirebilir miyim?",
     "a4": "Evet, ama abartma.",
     "q5": "Morphe'nin gizlilik politikası nedir?",
-    "a5-part1": "Bu site",
-    "a5-part2": "analitik için kullanır: çerez yok, kişisel veri yok.",
     "q6": "Neden Morphe ismi?",
     "a6": "Çünkü AAMATT kulağa hoş gelmiyor.",
     "q7": "Morphe sihir mi?",
@@ -178,6 +176,11 @@
     "support-donate": "Bağış Yap",
     "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
     "language": "Dil"
+  },
+  "analytics": {
+    "title": "Analitik",
+    "part1": "Bu web sitesi ",
+    "part2": "ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz. Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez."
   },
   "donate": {
     "title": "Destek",

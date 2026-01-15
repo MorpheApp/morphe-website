@@ -1062,6 +1062,10 @@ body {
     font-weight: 400;
 }
 
+.footer-copyright {
+    margin-top: 1rem;
+}
+
 /* Language Selector */
 .language-selector-container {
     display: flex;

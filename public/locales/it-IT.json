@@ -152,8 +152,6 @@
     "q4": "Posso personalizzare le app?",
     "a4": "Sì, ma senza esagerare.",
     "q5": "Qual è la politica sulla privacy di Morphe?",
-    "a5-part1": "Questo sito utilizza",
-    "a5-part2": "per analisi: nessun cookie e nessun dato personale.",
     "q6": "Perché il nome Morphe?",
     "a6": "Perché AAMATT non suona bene.",
     "q7": "Morphe è magia?",
@@ -178,6 +176,11 @@
     "support-donate": "Dona",
     "copyright": "Open source e gratuito per sempre.",
     "language": "Lingua"
+  },
+  "analytics": {
+    "title": "Analisi",
+    "part1": "Questo sito web utilizza ",
+    "part2": "e Google Analytics 4: Nessun cookie, nessuna pubblicità, nessun profiling e nessun dato viene venduto o condiviso. Morphe non aggiunge analisi o raccolta dati ad alcuna app patchata."
   },
   "donate": {
     "title": "Supporto",

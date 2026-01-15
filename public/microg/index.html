@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="/js/analytics.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Download MicroG for Morphe YouTube and YT Music Morphe - Required component for signing in">
@@ -17,7 +18,6 @@
     </script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/dark-theme.css">
-    <script defer src="https://analytics.morphe.software/script.js" data-website-id="87620d09-e7f3-4d2d-bc7a-2af95d7775ea"></script>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <link rel="shortcut icon" href="/favicon.ico"/>
@@ -131,7 +131,15 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-bottom">
-            <p>&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
+            <details>
+                <summary data-i18n="analytics.title">Analytics</summary>
+                <span data-i18n="analytics.part1">This website uses </span>
+                <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">
+                    <span>Umami</span></a>
+                <span data-i18n="analytics.part2">and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared. Morphe does not add analytics or data collection to any patched apps.</span>
+            </details>
+
+            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
     </div>
 </footer>
