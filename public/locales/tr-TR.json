@@ -180,7 +180,8 @@
   "analytics": {
     "title": "Analitik",
     "part1": "Bu web sitesi ",
-    "part2": "ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz. Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez."
+    "part2": "ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz.",
+    "part3": "Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez."
   },
   "donate": {
     "title": "Destek",

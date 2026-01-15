@@ -180,7 +180,8 @@
   "analytics": {
     "title": "分析",
     "part1": "本网站使用 ",
-    "part2": "和 Google Analytics 4：无 Cookie、无广告、无行为分析，数据不会出售或共享。Morphe 不会在任何已修补的应用中添加分析或数据收集。"
+    "part2": "和 Google Analytics 4：无 Cookie、无广告、无行为分析，数据不会出售或共享。",
+    "part3": "Morphe 不会在任何已修补的应用中添加分析或数据收集。"
   },
   "donate": {
     "title": "支持",

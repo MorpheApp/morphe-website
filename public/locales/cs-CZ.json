@@ -180,7 +180,8 @@
   "analytics": {
     "title": "Analytika",
     "part1": "Tato webová stránka používá ",
-    "part2": "a Google Analytics 4: Žádné cookies, žádná reklama, žádné profilování a žádná data nejsou prodávána ani sdílena. Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat."
+    "part2": "a Google Analytics 4: Žádné cookies, žádná reklama, žádné profilování a žádná data nejsou prodávána ani sdílena. Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat.",
+    "part3": "Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat."
   },
   "donate": {
     "title": "Podpora",

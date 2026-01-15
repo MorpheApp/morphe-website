@@ -180,7 +180,8 @@
   "analytics": {
     "title": "Analyse",
     "part1": "Deze website gebruikt ",
-    "part2": "en Google Analytics 4: Geen cookies, geen reclame, geen profilering en geen gegevens worden verkocht of gedeeld. Morphe voegt geen analyses of gegevensverzameling toe aan gepatchte apps."
+    "part2": "en Google Analytics 4: Geen cookies, geen reclame, geen profilering en geen gegevens worden verkocht of gedeeld.",
+    "part3": "Morphe voegt geen analyses of gegevensverzameling toe aan gepatchte apps."
   },
   "donate": {
     "title": "Ondersteuning",

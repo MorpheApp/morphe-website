@@ -180,7 +180,8 @@
   "analytics": {
     "title": "Analytics",
     "part1": "Diese Website verwendet ",
-    "part2": "und Google Analytics 4: Keine Cookies, keine Werbung, kein Profiling, und keine Daten werden verkauft oder geteilt. Morphe fügt keinen Analyse- oder Datensammlungsmechanismus zu gepatchten Apps hinzu."
+    "part2": "und Google Analytics 4: Keine Cookies, keine Werbung, kein Profiling, und keine Daten werden verkauft oder geteilt.",
+    "part3": "Morphe fügt keinen Analyse- oder Datensammlungsmechanismus zu gepatchten Apps hinzu."
   },
   "donate": {
     "title": "Unterstützung",

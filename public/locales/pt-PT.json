@@ -180,7 +180,8 @@
   "analytics": {
     "title": "Analytics",
     "part1": "Este site utiliza ",
-    "part2": "e Google Analytics 4: Sem cookies, sem publicidade, sem criação de perfis e sem venda ou partilha de dados. A Morphe não adiciona análise nem recolha de dados a aplicações corrigidas."
+    "part2": "e Google Analytics 4: Sem cookies, sem publicidade, sem criação de perfis e sem venda ou partilha de dados.",
+    "part3": "A Morphe não adiciona análise nem recolha de dados a aplicações corrigidas."
   },
   "donate": {
     "title": "Suporte",
