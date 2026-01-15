@@ -1,5 +1,3 @@
-// analytics.js
-
 (function() {
   // --- Umami ---
   (function() {
@@ -14,29 +12,28 @@
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
 
-  // Default consent: no cookies, no ads, no personalization
-  gtag('consent', 'default', {
-    ad_storage: 'denied',
-    analytics_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied'
-  });
-
-  // Load GA4 script after consent is set
+  // Load GA4 script
   const gaScript = document.createElement('script');
   gaScript.async = true;
   gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1BRTT4J6ML';
   gaScript.onload = function() {
-    // Initialize GA4
+    // --- Set consent for cookieless analytics ---
+    gtag('consent', 'default', {
+      ad_storage: 'denied',           // No ads cookies
+      analytics_storage: 'granted'    // Allow GA4 in cookieless mode
+    });
+
+    // --- Initialize GA4 ---
     gtag('js', new Date());
 
     // Configure GA4 in cookieless mode
     gtag('config', 'G-1BRTT4J6ML', {
-      allow_google_signals: false,
+      allow_google_signals: false,    // No cross-device linking
       allow_ad_personalization_signals: false,
       cookie_update: false,
-      cookie_domain: 'none'
+      cookie_domain: 'none'           // Cookieless mode
     });
   };
+
   document.head.appendChild(gaScript);
 })();
