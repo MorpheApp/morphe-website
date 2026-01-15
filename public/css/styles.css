@@ -350,6 +350,12 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     box-shadow: var(--shadow-sm);
     gap: var(--spacing-md);
+    /* Safari Fixes */
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .feature-icon-item:hover {
