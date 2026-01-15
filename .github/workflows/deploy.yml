@@ -76,7 +76,7 @@ jobs:
             echo "Error: Could not find appVersionName in build.gradle." >&2
             exit 1
           fi
-          DOWNLOAD_URL="https://github.com/MorpheApp/MicroG-RE/releases/download/$VERSION/microg-release.apk"
+          DOWNLOAD_URL="https://github.com/MorpheApp/MicroG-RE/releases/download/$VERSION/microg-$VERSION.apk"
           
           # Create a temporary file preserving other redirects
           # We ignore grep's exit code in case the file doesn't exist or has no matches
