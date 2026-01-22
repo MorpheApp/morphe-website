@@ -5,12 +5,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://morphe.software/microg/</loc>
+        <loc>https://morphe.software/microg</loc>
     </url>
     <url>
-        <loc>https://morphe.software/translate/</loc>
+        <loc>https://morphe.software/translate</loc>
     </url>
     <url>
-        <loc>https://morphe.software/donate/</loc>
+        <loc>https://morphe.software/donate</loc>
     </url>
 </urlset>
