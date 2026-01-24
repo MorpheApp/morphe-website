@@ -47,6 +47,7 @@
             <a href="#how-it-works" class="nav-link" data-i18n="nav.how-it-works" data-umami-event="Nav How It Works Click">How It Works</a>
             <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials" data-umami-event="Nav Testimonials Click">Testimonials</a>
             <a href="#faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
+            <a href="#changelogs" class="nav-link" data-i18n="nav.changelogs" data-umami-event="What's New Click">What's New</a>
             <a href="/donate" class="nav-link" data-i18n="nav.donate" data-umami-event="Nav Donate Click">Donate</a>
         </div>
         <div class="nav-actions">
@@ -422,6 +423,53 @@
     </div>
 </section>
 
+<!-- Changelog Section -->
+<section id="changelog" class="changelog">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="changelog.title">What's New</h2>
+            <p class="section-subtitle" data-i18n="changelog.subtitle">Latest updates and improvements</p>
+        </div>
+
+        <div class="changelog-tabs">
+            <button class="changelog-tab active" data-tab="manager" data-umami-event="Changelog Tab Manager">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+                <div class="tab-content">
+                    <span data-i18n="changelog.manager">Manager</span>
+                    <span class="tab-version" id="manager-version">Loading...</span>
+                </div>
+            </button>
+            <button class="changelog-tab" data-tab="patches" data-umami-event="Changelog Tab Patches">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <div class="tab-content">
+                    <span data-i18n="changelog.patches">Patches</span>
+                    <span class="tab-version" id="patches-version">Loading...</span>
+                </div>
+            </button>
+        </div>
+
+        <div id="manager-content" class="changelog-content active">
+            <div class="changelog-loading">
+                <div class="loading-spinner"></div>
+                <p data-i18n="changelog.loading">Loading changelog...</p>
+            </div>
+        </div>
+
+        <div id="patches-content" class="changelog-content">
+            <div class="changelog-loading">
+                <div class="loading-spinner"></div>
+                <p data-i18n="changelog.loading">Loading changelog...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
@@ -470,6 +518,7 @@
 <script src="/js/theme-manager.js"></script>
 <script src="/js/i18n.js"></script>
 <script src="/js/testimonials.js"></script>
+<script src="/js/changelog.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>

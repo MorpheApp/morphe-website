@@ -4,7 +4,8 @@
     "how-it-works": "Hoe het werkt",
     "testimonials": "Getuigenissen",
     "faq": "FAQ",
-    "donate": "Doneren"
+    "donate": "Doneren",
+    "changelogs": "Wat is er nieuw"
   },
   "hero": {
     "title": "Transformeer je",
@@ -227,5 +228,12 @@
     "404-title": "404 - Pagina niet gevonden",
     "not-found": "De pagina is niet gevonden",
     "go-home": "Ga naar de homepage"
+  },
+  "changelog": {
+    "title": "Wat is er nieuw",
+    "subtitle": "Laatste updates en verbeteringen",
+    "manager": "Beheerder",
+    "patches": "Patches",
+    "loading": "Changelog laden..."
   }
 }

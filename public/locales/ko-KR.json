@@ -4,7 +4,8 @@
     "how-it-works": "작동 원리",
     "testimonials": "사용자 후기",
     "faq": "자주 묻는 질문",
-    "donate": "후원하기"
+    "donate": "후원하기",
+    "changelogs": "새로운 소식"
   },
   "hero": {
     "title": "당신의",
@@ -227,5 +228,12 @@
     "404-title": "404 - 페이지를 찾을 수 없음",
     "not-found": "찾으시는 페이지를 찾을 수 없습니다",
     "go-home": "홈페이지로 가기"
+  },
+  "changelog": {
+    "title": "새로운 소식",
+    "subtitle": "최신 업데이트 및 개선 사항",
+    "manager": "관리자",
+    "patches": "패치",
+    "loading": "변경 로그를 불러오는 중..."
   }
 }

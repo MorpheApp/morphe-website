@@ -4,7 +4,8 @@
     "how-it-works": "Jak to funguje",
     "testimonials": "Reference",
     "faq": "FAQ",
-    "donate": "Darovat"
+    "donate": "Darovat",
+    "changelogs": "Co je nového"
   },
   "hero": {
     "title": "Proměň své",
@@ -227,5 +228,12 @@
     "404-title": "404 - Stránka nenalezena",
     "not-found": "Požadovaná stránka nebyla nalezena",
     "go-home": "Zpět na hlavní stránku"
+  },
+  "changelog": {
+    "title": "Co je nového",
+    "subtitle": "Nejnovější aktualizace a vylepšení",
+    "manager": "Správce",
+    "patches": "Záplaty",
+    "loading": "Načítání změn..."
   }
 }

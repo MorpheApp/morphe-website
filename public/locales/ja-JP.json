@@ -4,7 +4,8 @@
     "how-it-works": "仕組み",
     "testimonials": "ユーザーレビュー",
     "faq": "よくある質問",
-    "donate": "寄付"
+    "donate": "寄付",
+    "changelogs": "最新情報"
   },
   "hero": {
     "title": "あなたの",
@@ -227,5 +228,12 @@
     "404-title": "404 - ページが見つかりません",
     "not-found": "お探しのページが見つかりません",
     "go-home": "ホームページへ"
+  },
+  "changelog": {
+    "title": "最新情報",
+    "subtitle": "最新のアップデートと改善",
+    "manager": "マネージャー",
+    "patches": "パッチ",
+    "loading": "変更履歴を読み込んでいます..."
   }
 }

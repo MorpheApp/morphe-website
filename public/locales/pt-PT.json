@@ -4,7 +4,8 @@
     "how-it-works": "Como funciona",
     "testimonials": "Testemunhos",
     "faq": "FAQ",
-    "donate": "Doar"
+    "donate": "Doar",
+    "changelogs": "Novidades"
   },
   "hero": {
     "title": "Transforma as tuas",
@@ -227,5 +228,12 @@
     "404-title": "404 - Página não encontrada",
     "not-found": "A página não foi encontrada",
     "go-home": "Ir para a página inicial"
+  },
+  "changelog": {
+    "title": "Novidades",
+    "subtitle": "Últimas atualizações e melhorias",
+    "manager": "Gestor",
+    "patches": "Patches",
+    "loading": "A carregar registo de alterações..."
   }
 }

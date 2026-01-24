@@ -4,7 +4,8 @@
     "how-it-works": "工作原理",
     "testimonials": "用户评价",
     "faq": "常见问题",
-    "donate": "捐赠"
+    "donate": "捐赠",
+    "changelogs": "更新内容"
   },
   "hero": {
     "title": "改造您的",
@@ -227,5 +228,12 @@
     "404-title": "404 - 页面未找到",
     "not-found": "找不到您要查找的页面",
     "go-home": "返回首页"
+  },
+  "changelog": {
+    "title": "更新内容",
+    "subtitle": "最新更新和改进",
+    "manager": "管理器",
+    "patches": "补丁",
+    "loading": "正在加载更新日志..."
   }
 }

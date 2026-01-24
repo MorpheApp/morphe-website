@@ -4,7 +4,8 @@
     "how-it-works": "Comment ça marche",
     "testimonials": "Témoignages",
     "faq": "FAQ",
-    "donate": "Soutenir"
+    "donate": "Soutenir",
+    "changelogs": "Nouveautés"
   },
   "hero": {
     "title": "Transformez vos",
@@ -227,5 +228,12 @@
     "404-title": "404 - Page non trouvée",
     "not-found": "La page que vous recherchez est introuvable",
     "go-home": "Aller à l’accueil"
+  },
+  "changelog": {
+    "title": "Nouveautés",
+    "subtitle": "Dernières mises à jour et améliorations",
+    "manager": "Gestionnaire",
+    "patches": "Correctifs",
+    "loading": "Chargement du journal des modifications..."
   }
 }

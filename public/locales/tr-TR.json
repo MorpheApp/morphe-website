@@ -4,7 +4,8 @@
     "how-it-works": "Nasıl Çalışır",
     "testimonials": "Yorumlar",
     "faq": "SSS",
-    "donate": "Bağış Yap"
+    "donate": "Bağış Yap",
+    "changelogs": "Yenilikler"
   },
   "hero": {
     "title": "Android",
@@ -227,5 +228,12 @@
     "404-title": "404 - Sayfa Bulunamadı",
     "not-found": "Aradığınız sayfa bulunamadı",
     "go-home": "Ana sayfaya dön"
+  },
+  "changelog": {
+    "title": "Yenilikler",
+    "subtitle": "En son güncellemeler ve iyileştirmeler",
+    "manager": "Yönetici",
+    "patches": "Yamalar",
+    "loading": "Değişiklik günlüğü yükleniyor..."
   }
 }

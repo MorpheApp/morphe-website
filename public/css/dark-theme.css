@@ -122,6 +122,53 @@
     color: var(--primary-blue);
 }
 
+/* Changelogs */
+[data-theme="dark"] .changelog {
+    background: var(--gray-100);
+}
+
+[data-theme="dark"] .changelog-tab.active {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+[data-theme="dark"] .version-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .version-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .version-header {
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .change-list li code {
+    background: var(--gray-200);
+    color: var(--primary-teal);
+}
+
+[data-theme="dark"] .expand-button {
+    background: linear-gradient(to top, var(--surface) 60%, transparent);
+}
+
+[data-theme="dark"] .version-card:hover .expand-button {
+    background: linear-gradient(to top, var(--surface) 60%, transparent);
+}
+
+[data-theme="dark"] .version-card:hover .change-list li code {
+    background: var(--gray-200);
+}
+
+[data-theme="dark"] .changelog-error {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+}
+
 /* Footer */
 [data-theme="dark"] .footer {
     background: var(--gray-50);
