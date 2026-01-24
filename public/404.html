@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="error.404-title">404 - Page Not Found</title>
+    <script src="/js/analytics.js"></script>
     <script>
         (function () {
             try {
@@ -110,6 +111,12 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow-xl);
         }
+
+        .footer {
+            color: var(--text-secondary);
+            padding-top: 150px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -117,6 +124,16 @@
     <h1>404</h1>
     <p data-i18n="error.not-found">The page you're looking for can't be found</p>
     <a href="/" class="btn btn-primary" data-i18n="error.go-home">Go to Homepage</a>
+
+    <footer class="footer">
+        <details>
+            <summary data-i18n="analytics.title">Analytics</summary>
+            <span data-i18n="analytics.part1">This website uses </span>
+            <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">
+                <span>Umami</span></a>
+            <span data-i18n="analytics.part2">and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
+        </details>
+    </footer>
 </div>
 <script src="/js/i18n.js"></script>
 </body>
