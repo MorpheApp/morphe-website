@@ -1598,22 +1598,25 @@ body {
     }
 
     .changelog-filters {
-        flex-direction: column;
-        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .filter-group {
-        flex-direction: column;
-        align-items: stretch;
+        flex: 0 0 auto;
+        display: flex;
+        gap: var(--spacing-md);
     }
 
     .filter-buttons {
-        width: 100%;
+        flex-wrap: nowrap;
+        gap: var(--spacing-sm);
     }
 
     .filter-btn {
-        flex: 1;
-        text-align: center;
+        white-space: nowrap;
     }
 
     .show-more-buttons {
