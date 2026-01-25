@@ -2,10 +2,19 @@ const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
 
-const MANAGER_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/app/CHANGELOG.md';
-const PATCHES_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-patches/refs/heads/main/CHANGELOG.md';
-const MANAGER_REPO = 'https://github.com/MorpheApp/morphe-manager';
-const PATCHES_REPO = 'https://github.com/MorpheApp/morphe-patches';
+const MANAGER_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/dev/app/CHANGELOG.md';
+const PATCHES_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-patches/refs/heads/dev/CHANGELOG.md';
+
+function repoUrlFromRaw(rawUrl) {
+    const match = rawUrl.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\//);
+    if (!match) throw new Error(`Invalid raw GitHub URL: ${rawUrl}`);
+    const [, owner, repo] = match;
+    return `https://github.com/${owner}/${repo}`;
+}
+
+const MANAGER_REPO = repoUrlFromRaw(MANAGER_URL);
+const PATCHES_REPO = repoUrlFromRaw(PATCHES_URL);
+
 const MAX_MANAGER_RELEASES = 10;
 const MAX_PATCHES_RELEASES = 10;
 
@@ -47,8 +56,6 @@ function parseChangelog(markdown, type) {
         line = line.trim();
         if (!line) continue;
 
-        // Manager: ## app [1.3.2](link) (date)
-        // Patches: # [1.8.0](link) (date)
         const versionMatch = line.match(/^#{1,2}\s+(?:app\s+)?\[([^\]]+)\]\(([^)]+)\)\s*\(?([^)]+)\)?/);
 
         if (versionMatch) {
@@ -189,7 +196,6 @@ async function generateChangelog() {
     const managerVersions = parseChangelog(managerMd, 'manager');
     const patchesVersions = parseChangelog(patchesMd, 'patches');
 
-    // Combine and sort by date
     function limitStableWithDev(versions, maxStable) {
         const stable = versions
             .filter(v => !v.isDev)
@@ -203,38 +209,25 @@ async function generateChangelog() {
         return [...stable, ...dev];
     }
 
-    const limitedManagerVersions = limitStableWithDev(
-        managerVersions,
-        MAX_MANAGER_RELEASES
-    );
+    const limitedManagerVersions = limitStableWithDev(managerVersions, MAX_MANAGER_RELEASES);
+    const limitedPatchesVersions = limitStableWithDev(patchesVersions, MAX_PATCHES_RELEASES);
 
-    const limitedPatchesVersions = limitStableWithDev(
-        patchesVersions,
-        MAX_PATCHES_RELEASES
-    );
-
-    // Combine and sort again (without limiting)
     const allVersions = [...limitedManagerVersions, ...limitedPatchesVersions]
         .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-
     console.log(`✅ Found ${allVersions.length} releases`);
 
-    // Generate HTML
     let html = '';
     allVersions.forEach(version => {
         const repoUrl = version.type === 'manager' ? MANAGER_REPO : PATCHES_REPO;
         html += generateVersionCard(version, repoUrl);
     });
 
-    // Read template
     const templatePath = path.join(__dirname, '../public/changelog/template.html');
     let template = await fs.readFile(templatePath, 'utf8');
 
-    // Replace placeholder
     template = template.replace('{{CHANGELOG_CONTENT}}', html);
 
-    // Write output
     const outputPath = path.join(__dirname, '../public/changelog/index.html');
     await fs.writeFile(outputPath, template, 'utf8');
 
