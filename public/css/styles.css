@@ -1151,7 +1151,6 @@ body {
     padding: 0.15rem 0.5rem;
     border-radius: var(--radius-sm);
     font-family: 'Courier New', monospace;
-    font-size: 0.9375em;
     color: var(--primary-blue);
     word-break: break-all;
 }
@@ -1742,7 +1741,6 @@ body {
     }
 
     .change-list li code {
-        font-size: 0.8125em;
         padding: 0.1rem 0.4rem;
     }
 
