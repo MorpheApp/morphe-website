@@ -6,7 +6,8 @@ const MANAGER_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-manager/
 const PATCHES_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-patches/refs/heads/main/CHANGELOG.md';
 const MANAGER_REPO = 'https://github.com/MorpheApp/morphe-manager';
 const PATCHES_REPO = 'https://github.com/MorpheApp/morphe-patches';
-const MAX_RELEASES = 10;
+const MAX_MANAGER_RELEASES = 10;
+const MAX_PATCHES_RELEASES = 10;
 
 const categoryConfig = {
     'added': { icon: '✨', class: 'icon-added' },
@@ -189,9 +190,18 @@ async function generateChangelog() {
     const patchesVersions = parseChangelog(patchesMd, 'patches');
 
     // Combine and sort by date
-    const allVersions = [...managerVersions, ...patchesVersions]
+    const limitedManagerVersions = managerVersions
         .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, MAX_RELEASES);
+        .slice(0, MAX_MANAGER_RELEASES);
+
+    const limitedPatchesVersions = patchesVersions
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, MAX_PATCHES_RELEASES);
+
+    // Combine and sort again (without limiting)
+    const allVersions = [...limitedManagerVersions, ...limitedPatchesVersions]
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
 
     console.log(`✅ Found ${allVersions.length} releases`);
 
