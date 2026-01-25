@@ -1597,6 +1597,14 @@ body {
         width: 100%;
     }
 
+    .changelog-page {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .changelog-page .container {
+        padding: 0;
+    }
+
     .changelog-filters {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -1619,12 +1627,24 @@ body {
         white-space: nowrap;
     }
 
+    .show-more-section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
     .show-more-buttons {
         flex-direction: column;
     }
 
     .show-more-buttons .btn {
         width: 100%;
+    }
+
+    .version-card {
+        padding: var(--spacing-lg);
+    }
+
+    .version-link {
+        font-size: 1.25rem;
     }
 }
 
