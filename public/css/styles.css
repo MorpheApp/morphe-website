@@ -1151,6 +1151,7 @@ body {
     padding: 0.15rem 0.5rem;
     border-radius: var(--radius-sm);
     font-family: 'Courier New', monospace;
+    font-size: 0.95em;
     color: var(--primary-blue);
     word-break: break-all;
 }
