@@ -190,13 +190,28 @@ async function generateChangelog() {
     const patchesVersions = parseChangelog(patchesMd, 'patches');
 
     // Combine and sort by date
-    const limitedManagerVersions = managerVersions
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, MAX_MANAGER_RELEASES);
+    function limitStableWithDev(versions, maxStable) {
+        const stable = versions
+            .filter(v => !v.isDev)
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, maxStable);
 
-    const limitedPatchesVersions = patchesVersions
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, MAX_PATCHES_RELEASES);
+        const dev = versions
+            .filter(v => v.isDev)
+            .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        return [...stable, ...dev];
+    }
+
+    const limitedManagerVersions = limitStableWithDev(
+        managerVersions,
+        MAX_MANAGER_RELEASES
+    );
+
+    const limitedPatchesVersions = limitStableWithDev(
+        patchesVersions,
+        MAX_PATCHES_RELEASES
+    );
 
     // Combine and sort again (without limiting)
     const allVersions = [...limitedManagerVersions, ...limitedPatchesVersions]
