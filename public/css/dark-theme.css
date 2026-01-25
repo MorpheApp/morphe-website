@@ -123,10 +123,6 @@
 }
 
 /* Changelogs */
-[data-theme="dark"] .changelog {
-    background: var(--gray-100);
-}
-
 [data-theme="dark"] .changelog-filters {
     background: var(--surface);
 }
@@ -146,14 +142,6 @@
 [data-theme="dark"] .version-card {
     background: var(--surface);
     border-color: var(--border);
-}
-
-[data-theme="dark"] .version-card[data-type="manager"] {
-    border-left-color: #1E5AA8;
-}
-
-[data-theme="dark"] .version-card[data-type="patches"] {
-    border-left-color: #00AFAE;
 }
 
 [data-theme="dark"] .version-header {
