@@ -148,6 +148,14 @@
     border-color: var(--border);
 }
 
+[data-theme="dark"] .version-card[data-type="manager"] {
+    border-left-color: #1E5AA8;
+}
+
+[data-theme="dark"] .version-card[data-type="patches"] {
+    border-left-color: #00AFAE;
+}
+
 [data-theme="dark"] .version-header {
     border-bottom-color: var(--border);
 }
