@@ -55,26 +55,26 @@
 </nav>
 
 <!-- Changelog Page -->
-<section class="changelog-page">
+<section class="changelog">
     <div class="container">
         <div class="section-header">
-            <h1 class="section-title" data-i18n="changelog-page.title">Changelog</h1>
-            <p class="section-subtitle" data-i18n="changelog-page.subtitle">Complete history of updates and improvements</p>
+            <h1 class="section-title" data-i18n="changelog.title">What's New</h1>
+            <p class="section-subtitle" data-i18n="changelog.subtitle">Complete history of updates and improvements</p>
         </div>
 
         <!-- Filters -->
         <div class="changelog-filters">
             <div class="filter-group">
-                <label class="filter-label" data-i18n="changelog-page.filter-type">Type:</label>
+                <label class="filter-label" data-i18n="changelog.filter-type">Type:</label>
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all" data-umami-event="Changelog Filter All">
-                        <span data-i18n="changelog-page.filter-all">All</span>
+                        <span data-i18n="changelog.filter-all">All</span>
                     </button>
                     <button class="filter-btn" data-filter="manager" data-umami-event="Changelog Filter Manager">
-                        <span data-i18n="changelog-page.filter-manager">Manager</span>
+                        <span data-i18n="changelog.filter-manager">Manager</span>
                     </button>
                     <button class="filter-btn" data-filter="patches" data-umami-event="Changelog Filter Patches">
-                        <span data-i18n="changelog-page.filter-patches">Patches</span>
+                        <span data-i18n="changelog.filter-patches">Patches</span>
                     </button>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <label class="filter-toggle">
                     <input type="checkbox" id="show-dev" data-umami-event="Changelog Toggle Dev">
                     <span class="toggle-slider"></span>
-                    <span class="toggle-label" data-i18n="changelog-page.show-dev">Show dev releases</span>
+                    <span class="toggle-label" data-i18n="changelog.show-dev">Show dev releases</span>
                 </label>
             </div>
         </div>
@@ -96,24 +96,24 @@
 
         <!-- Show More Button -->
         <div class="show-more-section">
-            <p class="show-more-text" data-i18n="changelog-page.older-releases">Looking for older releases?</p>
+            <p class="show-more-text" data-i18n="changelog.older-releases">Looking for older releases?</p>
             <div class="show-more-buttons">
-                <a href="https://github.com/MorpheApp/morphe-manager/releases?page=2"
+                <a href="https://github.com/MorpheApp/morphe-manager/releases"
                    target="_blank"
                    class="btn btn-secondary"
                    data-umami-event="Changelog Show More Manager">
-                    <span data-i18n="changelog-page.view-manager">View Manager Releases</span>
+                    <span data-i18n="changelog.view-manager">View Manager Releases</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         <polyline points="15 3 21 3 21 9"></polyline>
                         <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
                 </a>
-                <a href="https://github.com/MorpheApp/morphe-patches/releases?page=2"
+                <a href="https://github.com/MorpheApp/morphe-patches/releases?"
                    target="_blank"
                    class="btn btn-secondary"
                    data-umami-event="Changelog Show More Patches">
-                    <span data-i18n="changelog-page.view-patches">View Patches Releases</span>
+                    <span data-i18n="changelog.view-patches">View Patches Releases</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         <polyline points="15 3 21 3 21 9"></polyline>
@@ -136,6 +136,6 @@
 
 <script src="/js/theme-manager.js"></script>
 <script src="/js/i18n.js"></script>
-<script src="/js/changelog-page.js"></script>
+<script src="/js/changelog.js"></script>
 </body>
 </html>

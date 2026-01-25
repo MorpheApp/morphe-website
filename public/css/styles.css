@@ -902,7 +902,7 @@ body {
 }
 
 /* Changelog Page */
-.changelog-page {
+.changelog {
     min-height: calc(100vh - 200px);
     padding: var(--spacing-3xl) var(--spacing-xl);
     background: var(--surface);

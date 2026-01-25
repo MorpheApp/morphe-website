@@ -123,7 +123,7 @@
 }
 
 /* Changelogs */
-[data-theme="dark"] .changelog-page {
+[data-theme="dark"] .changelog {
     background: var(--gray-100);
 }
 
