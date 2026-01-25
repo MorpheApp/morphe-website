@@ -237,7 +237,7 @@
     "filter-all": "전체",
     "filter-manager": "Manager",
     "filter-patches": "패치",
-    "show-dev": "개발 버전 표시",
+    "show-dev": "사전 릴리스를 표시",
     "older-releases": "이전 릴리스를 찾고 계신가요?",
     "view-manager": "Manager 릴리스 보기",
     "view-patches": "패치 릴리스 보기"

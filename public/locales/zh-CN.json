@@ -237,7 +237,7 @@
     "filter-all": "全部",
     "filter-manager": "Manager",
     "filter-patches": "补丁",
-    "show-dev": "显示开发版",
+    "show-dev": "显示预发布版本",
     "older-releases": "在找更早的版本吗？",
     "view-manager": "查看 Manager 版本",
     "view-patches": "查看补丁版本"

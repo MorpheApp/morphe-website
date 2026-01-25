@@ -237,7 +237,7 @@
     "filter-all": "Todos",
     "filter-manager": "Manager",
     "filter-patches": "Parches",
-    "show-dev": "Mostrar versiones dev",
+    "show-dev": "Mostrar versiones previas",
     "older-releases": "¿Buscas versiones anteriores?",
     "view-manager": "Ver versiones de Manager",
     "view-patches": "Ver versiones de Parches"
