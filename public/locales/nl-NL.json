@@ -176,7 +176,8 @@
     "support-how": "Hoe Morphe werkt",
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
-    "language": "Taal"
+    "language": "Taal",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "Analyse",
@@ -229,11 +230,16 @@
     "not-found": "De pagina is niet gevonden",
     "go-home": "Ga naar de homepage"
   },
-  "changelog": {
-    "title": "Wat is er nieuw",
-    "subtitle": "Laatste updates en verbeteringen",
-    "manager": "Beheerder",
-    "patches": "Patches",
-    "loading": "Changelog laden..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

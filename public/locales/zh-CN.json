@@ -176,7 +176,8 @@
     "support-how": "Morphe工作原理",
     "support-donate": "捐赠",
     "copyright": "永久开源和免费。",
-    "language": "语言"
+    "language": "语言",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "分析",
@@ -229,11 +230,16 @@
     "not-found": "找不到您要查找的页面",
     "go-home": "返回首页"
   },
-  "changelog": {
-    "title": "更新内容",
-    "subtitle": "最新更新和改进",
-    "manager": "管理器",
-    "patches": "补丁",
-    "loading": "正在加载更新日志..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

@@ -176,7 +176,8 @@
     "support-how": "Come funziona Morphe",
     "support-donate": "Dona",
     "copyright": "Open source e gratuito per sempre.",
-    "language": "Lingua"
+    "language": "Lingua",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "Analisi",
@@ -229,11 +230,16 @@
     "not-found": "La pagina non è stata trovata",
     "go-home": "Vai alla homepage"
   },
-  "changelog": {
-    "title": "Novità",
-    "subtitle": "Ultimi aggiornamenti e miglioramenti",
-    "manager": "Gestore",
-    "patches": "Patch",
-    "loading": "Caricamento del registro delle modifiche..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

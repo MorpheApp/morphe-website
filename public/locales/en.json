@@ -176,7 +176,8 @@
     "support-how": "How Morphe Works",
     "support-donate": "Donate",
     "copyright": "Open source and free forever.",
-    "language": "Language"
+    "language": "Language",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "Analytics",
@@ -229,11 +230,16 @@
     "not-found": "The page you're looking for can't be found",
     "go-home": "Go to Homepage"
   },
-  "changelog": {
-    "title": "What's New",
-    "subtitle": "Latest updates and improvements",
-    "manager": "Manager",
-    "patches": "Patches",
-    "loading": "Loading changelog..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

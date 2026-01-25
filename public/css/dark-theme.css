@@ -123,23 +123,29 @@
 }
 
 /* Changelogs */
-[data-theme="dark"] .changelog {
+[data-theme="dark"] .changelog-page {
     background: var(--gray-100);
 }
 
-[data-theme="dark"] .changelog-tab.active {
-    background: var(--gradient-primary);
-    color: white;
+[data-theme="dark"] .changelog-filters {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .filter-buttons {
+    background: var(--gray-200);
+}
+
+[data-theme="dark"] .filter-btn.active {
+    background: var(--gray-100);
+}
+
+[data-theme="dark"] .toggle-slider {
+    background: var(--gray-600);
 }
 
 [data-theme="dark"] .version-card {
     background: var(--surface);
     border-color: var(--border);
-}
-
-[data-theme="dark"] .version-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-lg);
 }
 
 [data-theme="dark"] .version-header {
@@ -151,22 +157,9 @@
     color: var(--primary-teal);
 }
 
-[data-theme="dark"] .expand-button {
-    background: linear-gradient(to top, var(--surface) 60%, transparent);
-}
-
-[data-theme="dark"] .version-card:hover .expand-button {
-    background: linear-gradient(to top, var(--surface) 60%, transparent);
-}
-
-[data-theme="dark"] .version-card:hover .change-list li code {
-    background: var(--gray-200);
-}
-
-[data-theme="dark"] .changelog-error {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: rgba(239, 68, 68, 0.3);
-    color: #fca5a5;
+[data-theme="dark"] .show-more-section {
+    background: var(--surface);
+    border-color: var(--border);
 }
 
 /* Footer */

@@ -176,7 +176,8 @@
     "support-how": "Як працює Morphe",
     "support-donate": "Підтримати",
     "copyright": "Відкритий код. Вільний назавжди.",
-    "language": "Мова"
+    "language": "Мова",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "Аналітика",
@@ -229,11 +230,16 @@
     "not-found": "Сторінку, яку ви шукаєте, не знайдено",
     "go-home": "Перейти на головну"
   },
-  "changelog": {
-    "title": "Що нового",
-    "subtitle": "Останні оновлення та покращення",
-    "manager": "Менеджер",
-    "patches": "Патчі",
-    "loading": "Завантаження журналу змін..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

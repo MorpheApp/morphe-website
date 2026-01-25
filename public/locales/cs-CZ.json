@@ -176,7 +176,8 @@
     "support-how": "Jak Morphe funguje",
     "support-donate": "Darovat",
     "copyright": "Open source a navždy zdarma.",
-    "language": "Jazyk"
+    "language": "Jazyk",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "Analytika",
@@ -229,11 +230,16 @@
     "not-found": "Požadovaná stránka nebyla nalezena",
     "go-home": "Zpět na hlavní stránku"
   },
-  "changelog": {
-    "title": "Co je nového",
-    "subtitle": "Nejnovější aktualizace a vylepšení",
-    "manager": "Správce",
-    "patches": "Záplaty",
-    "loading": "Načítání změn..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

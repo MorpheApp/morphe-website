@@ -176,7 +176,8 @@
     "support-how": "Morphe Nasıl Çalışır",
     "support-donate": "Bağış Yap",
     "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
-    "language": "Dil"
+    "language": "Dil",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "Analitik",
@@ -229,11 +230,16 @@
     "not-found": "Aradığınız sayfa bulunamadı",
     "go-home": "Ana sayfaya dön"
   },
-  "changelog": {
-    "title": "Yenilikler",
-    "subtitle": "En son güncellemeler ve iyileştirmeler",
-    "manager": "Yönetici",
-    "patches": "Yamalar",
-    "loading": "Değişiklik günlüğü yükleniyor..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

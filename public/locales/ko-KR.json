@@ -176,7 +176,8 @@
     "support-how": "Morphe 작동 원리",
     "support-donate": "후원하기",
     "copyright": "영원히 오픈 소스이며 무료입니다.",
-    "language": "언어"
+    "language": "언어",
+    "product-changelog": "Changelog"
   },
   "analytics": {
     "title": "분석",
@@ -229,11 +230,16 @@
     "not-found": "찾으시는 페이지를 찾을 수 없습니다",
     "go-home": "홈페이지로 가기"
   },
-  "changelog": {
-    "title": "새로운 소식",
-    "subtitle": "최신 업데이트 및 개선 사항",
-    "manager": "관리자",
-    "patches": "패치",
-    "loading": "변경 로그를 불러오는 중..."
+  "changelog-page": {
+    "title": "Changelog",
+    "subtitle": "Complete history of updates and improvements",
+    "filter-type": "Type:",
+    "filter-all": "All",
+    "filter-manager": "Manager",
+    "filter-patches": "Patches",
+    "show-dev": "Show dev releases",
+    "older-releases": "Looking for older releases?",
+    "view-manager": "View Manager Releases",
+    "view-patches": "View Patches Releases"
   }
 }

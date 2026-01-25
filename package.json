@@ -4,7 +4,8 @@
   "scripts": {
     "i18n:extract": "node scripts/generate-i18n-keys.js",
     "i18n:check": "node scripts/check-translations.js",
-    "precommit": "npm run i18n:extract && npm run i18n:check"
+    "precommit": "npm run i18n:extract && npm run i18n:check",
+    "changelog:generate": "node scripts/generate-changelog.js"
   },
   "devDependencies": {
     "glob": "^10.5.0"
