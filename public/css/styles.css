@@ -1640,16 +1640,17 @@ body {
     }
 
     .filter-group:first-child {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .filter-label {
         width: 100%;
+        text-align: center;
     }
 
     .filter-buttons {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         padding: 6px;
@@ -1676,7 +1677,8 @@ body {
     }
 
     .filter-toggle {
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
     .toggle-label {
