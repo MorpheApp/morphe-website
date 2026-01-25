@@ -19,13 +19,9 @@ const MAX_MANAGER_RELEASES = 10;
 const MAX_PATCHES_RELEASES = 10;
 
 const categoryConfig = {
-    'added': { icon: '✨', class: 'icon-added' },
-    'changed': { icon: '🔄', class: 'icon-changed' },
-    'fixed': { icon: '🐛', class: 'icon-fixed' },
-    'removed': { icon: '🗑️', class: 'icon-removed' },
-    'security': { icon: '🔒', class: 'icon-security' },
     'features': { icon: '✨', class: 'icon-added' },
-    'bug fixes': { icon: '🐛', class: 'icon-fixed' }
+    'bug fixes': { icon: '🐛', class: 'icon-fixed' },
+    'perf': { icon: '⚡', class: 'icon-perf' }
 };
 
 function fetchUrl(url) {
@@ -223,12 +219,12 @@ async function generateChangelog() {
         html += generateVersionCard(version, repoUrl);
     });
 
-    const templatePath = path.join(__dirname, '../public/changelog/template.html');
+    const templatePath = path.join(__dirname, '../public/changelog_template.html');
     let template = await fs.readFile(templatePath, 'utf8');
 
     template = template.replace('{{CHANGELOG_CONTENT}}', html);
 
-    const outputPath = path.join(__dirname, '../public/changelog/index.html');
+    const outputPath = path.join(__dirname, '../public/changelog.html');
     await fs.writeFile(outputPath, template, 'utf8');
 
     console.log('✨ Changelog generated successfully!');

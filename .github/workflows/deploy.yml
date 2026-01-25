@@ -47,9 +47,9 @@ jobs:
 
       - name: Generate Changelog HTML
         run: |
-          echo "📦 Generating changelog..."
+          echo "Generating changelog..."
           node scripts/generate-changelog.js
-          echo "✅ Changelog generated"
+          echo "Changelog generated"
 
       - name: Fetch and Update Morphe Download Link
         run: |
