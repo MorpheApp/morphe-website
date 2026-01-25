@@ -177,7 +177,7 @@
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
     "language": "Taal",
-    "product-changelog": "Changelog"
+    "product-changelog": "Wat is er nieuw"
   },
   "analytics": {
     "title": "Analyse",
@@ -230,16 +230,16 @@
     "not-found": "De pagina is niet gevonden",
     "go-home": "Ga naar de homepage"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
+  "changelog": {
+    "title": "Wat is er nieuw",
+    "subtitle": "Volledige geschiedenis van updates en verbeteringen",
     "filter-type": "Type:",
-    "filter-all": "All",
+    "filter-all": "Alles",
     "filter-manager": "Manager",
     "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "show-dev": "Dev-releases tonen",
+    "older-releases": "Op zoek naar oudere releases?",
+    "view-manager": "Manager-releases bekijken",
+    "view-patches": "Patch-releases bekijken"
   }
 }

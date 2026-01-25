@@ -5,7 +5,7 @@
     "testimonials": "Referencie",
     "faq": "FAQ",
     "donate": "Darovať",
-    "changelogs": "Čo je nové"
+    "changelogs": "Novinky"
   },
   "hero": {
     "title": "Premeň svoje",
@@ -177,7 +177,7 @@
     "support-donate": "Darovať",
     "copyright": "Open source a navždy zadarmo.",
     "language": "Jazyk",
-    "product-changelog": "Changelog"
+    "product-changelog": "Novinky"
   },
   "analytics": {
     "title": "Analytika",
@@ -230,16 +230,16 @@
     "not-found": "Požadovaná stránka nebola nájdená",
     "go-home": "Späť na domovskú stránku"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "Novinky",
+    "subtitle": "Kompletná história aktualizácií a vylepšení",
+    "filter-type": "Typ:",
+    "filter-all": "Všetky",
     "filter-manager": "Manager",
-    "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "filter-patches": "Záplaty",
+    "show-dev": "Zobraziť dev verzie",
+    "older-releases": "Hľadáte staršie verzie?",
+    "view-manager": "Zobraziť verzie Manager",
+    "view-patches": "Zobraziť verzie Záplat"
   }
 }

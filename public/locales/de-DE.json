@@ -177,7 +177,7 @@
     "support-donate": "Spenden",
     "copyright": "Open Source und für immer kostenlos.",
     "language": "Sprache",
-    "product-changelog": "Changelog"
+    "product-changelog": "Neuigkeiten"
   },
   "analytics": {
     "title": "Analytics",
@@ -230,16 +230,16 @@
     "not-found": "Die gesuchte Seite konnte nicht gefunden werden",
     "go-home": "Zur Startseite"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "Neuigkeiten",
+    "subtitle": "Vollständige Historie aller Updates und Verbesserungen",
+    "filter-type": "Typ:",
+    "filter-all": "Alle",
     "filter-manager": "Manager",
     "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "show-dev": "Dev-Versionen anzeigen",
+    "older-releases": "Ältere Versionen suchen?",
+    "view-manager": "Manager-Versionen anzeigen",
+    "view-patches": "Patch-Versionen anzeigen"
   }
 }

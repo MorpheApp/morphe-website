@@ -5,7 +5,7 @@
     "testimonials": "Opinie",
     "faq": "FAQ",
     "donate": "Wesprzyj",
-    "changelogs": "Co nowego"
+    "changelogs": "Nowości"
   },
   "hero": {
     "title": "Przekształć swoje",
@@ -177,7 +177,7 @@
     "support-donate": "Wesprzyj",
     "copyright": "Open source i zawsze darmowe.",
     "language": "Język",
-    "product-changelog": "Changelog"
+    "product-changelog": "Nowości"
   },
   "analytics": {
     "title": "Analityka",
@@ -230,16 +230,16 @@
     "not-found": "Nie można znaleźć strony",
     "go-home": "Wróć na stronę główną"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "Nowości",
+    "subtitle": "Pełna historia aktualizacji i ulepszeń",
+    "filter-type": "Typ:",
+    "filter-all": "Wszystkie",
     "filter-manager": "Manager",
-    "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "filter-patches": "Łatki",
+    "show-dev": "Pokaż wersje dev",
+    "older-releases": "Szukasz starszych wersji?",
+    "view-manager": "Zobacz wersje Managera",
+    "view-patches": "Zobacz wersje Łatek"
   }
 }

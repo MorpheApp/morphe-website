@@ -5,7 +5,7 @@
     "testimonials": "ユーザーレビュー",
     "faq": "よくある質問",
     "donate": "寄付",
-    "changelogs": "最新情報"
+    "changelogs": "新着情報"
   },
   "hero": {
     "title": "あなたの",
@@ -177,7 +177,7 @@
     "support-donate": "寄付",
     "copyright": "永久にオープンソースで無料。",
     "language": "言語",
-    "product-changelog": "Changelog"
+    "product-changelog": "新着情報"
   },
   "analytics": {
     "title": "アナリティクス",
@@ -230,16 +230,16 @@
     "not-found": "お探しのページが見つかりません",
     "go-home": "ホームページへ"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "新着情報",
+    "subtitle": "アップデートと改善の完全な履歴",
+    "filter-type": "種類：",
+    "filter-all": "すべて",
     "filter-manager": "Manager",
-    "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "filter-patches": "パッチ",
+    "show-dev": "開発版を表示",
+    "older-releases": "古いリリースをお探しですか？",
+    "view-manager": "Manager リリースを見る",
+    "view-patches": "パッチリリースを見る"
   }
 }

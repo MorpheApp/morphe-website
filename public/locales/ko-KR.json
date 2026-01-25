@@ -5,7 +5,7 @@
     "testimonials": "사용자 후기",
     "faq": "자주 묻는 질문",
     "donate": "후원하기",
-    "changelogs": "새로운 소식"
+    "changelogs": "새 소식"
   },
   "hero": {
     "title": "당신의",
@@ -177,7 +177,7 @@
     "support-donate": "후원하기",
     "copyright": "영원히 오픈 소스이며 무료입니다.",
     "language": "언어",
-    "product-changelog": "Changelog"
+    "product-changelog": "새 소식"
   },
   "analytics": {
     "title": "분석",
@@ -230,16 +230,16 @@
     "not-found": "찾으시는 페이지를 찾을 수 없습니다",
     "go-home": "홈페이지로 가기"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "새 소식",
+    "subtitle": "업데이트 및 개선 사항의 전체 기록",
+    "filter-type": "유형:",
+    "filter-all": "전체",
     "filter-manager": "Manager",
-    "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "filter-patches": "패치",
+    "show-dev": "개발 버전 표시",
+    "older-releases": "이전 릴리스를 찾고 계신가요?",
+    "view-manager": "Manager 릴리스 보기",
+    "view-patches": "패치 릴리스 보기"
   }
 }

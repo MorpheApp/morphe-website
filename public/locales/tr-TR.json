@@ -177,7 +177,7 @@
     "support-donate": "Bağış Yap",
     "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
     "language": "Dil",
-    "product-changelog": "Changelog"
+    "product-changelog": "Yenilikler"
   },
   "analytics": {
     "title": "Analitik",
@@ -230,16 +230,16 @@
     "not-found": "Aradığınız sayfa bulunamadı",
     "go-home": "Ana sayfaya dön"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "Yenilikler",
+    "subtitle": "Güncellemelerin ve iyileştirmelerin tam geçmişi",
+    "filter-type": "Tür:",
+    "filter-all": "Tümü",
     "filter-manager": "Manager",
-    "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "filter-patches": "Yamalar",
+    "show-dev": "Dev sürümlerini göster",
+    "older-releases": "Eski sürümleri mi arıyorsunuz?",
+    "view-manager": "Manager sürümlerini görüntüle",
+    "view-patches": "Yama sürümlerini görüntüle"
   }
 }

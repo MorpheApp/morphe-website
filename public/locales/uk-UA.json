@@ -177,7 +177,7 @@
     "support-donate": "Підтримати",
     "copyright": "Відкритий код. Вільний назавжди.",
     "language": "Мова",
-    "product-changelog": "Changelog"
+    "product-changelog": "Що нового"
   },
   "analytics": {
     "title": "Аналітика",
@@ -230,16 +230,16 @@
     "not-found": "Сторінку, яку ви шукаєте, не знайдено",
     "go-home": "Перейти на головну"
   },
-  "changelog-page": {
-    "title": "Changelog",
-    "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
-    "filter-all": "All",
+  "changelog": {
+    "title": "Що нового",
+    "subtitle": "Повна історія оновлень та покращень",
+    "filter-type": "Тип:",
+    "filter-all": "Усі",
     "filter-manager": "Manager",
     "filter-patches": "Patches",
-    "show-dev": "Show dev releases",
-    "older-releases": "Looking for older releases?",
-    "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases"
+    "show-dev": "Показати dev-релізи",
+    "older-releases": "Шукаєте старіші релізи?",
+    "view-manager": "Переглянути релізи Manager",
+    "view-patches": "Переглянути релізи Patches"
   }
 }

@@ -177,7 +177,7 @@
     "support-donate": "Donate",
     "copyright": "Open source and free forever.",
     "language": "Language",
-    "product-changelog": "Changelog"
+    "product-changelog": "What's New"
   },
   "analytics": {
     "title": "Analytics",
@@ -230,8 +230,8 @@
     "not-found": "The page you're looking for can't be found",
     "go-home": "Go to Homepage"
   },
-  "changelog-page": {
-    "title": "Changelog",
+  "changelog": {
+    "title": "What's New",
     "subtitle": "Complete history of updates and improvements",
     "filter-type": "Type:",
     "filter-all": "All",
