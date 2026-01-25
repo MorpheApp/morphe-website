@@ -219,13 +219,12 @@ async function generateChangelog() {
         html += generateVersionCard(version, repoUrl);
     });
 
-    const templatePath = path.join(__dirname, '../public/changelog_template.html');
-    let template = await fs.readFile(templatePath, 'utf8');
+    const changelogPath = path.join(__dirname, '../public/changelog.html');
+    let template = await fs.readFile(changelogPath, 'utf8');
 
     template = template.replace('{{CHANGELOG_CONTENT}}', html);
 
-    const outputPath = path.join(__dirname, '../public/changelog.html');
-    await fs.writeFile(outputPath, template, 'utf8');
+    await fs.writeFile(changelogPath, template, 'utf8');
 
     console.log('✨ Changelog generated successfully!');
 }
