@@ -126,3 +126,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.feature-card, .faq-item, .crypto-card, .testimonial-card');
     elements.forEach(el => observer.observe(el));
 });
+
+// Scroll to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    if (!scrollToTopBtn) return;
+
+    // Show/hide button based on scroll position
+    function toggleScrollButton() {
+        const scrollThreshold = 400; // Show after scrolling 400px
+
+        if (window.pageYOffset > scrollThreshold) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+
+    // Smooth scroll to top
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Event listeners
+    window.addEventListener('scroll', toggleScrollButton);
+    scrollToTopBtn.addEventListener('click', scrollToTop);
+
+    // Initial check
+    toggleScrollButton();
+});
