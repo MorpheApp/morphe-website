@@ -20,7 +20,8 @@
     { code: 'sk-SK', name: 'Slovenčina' },
     { code: 'zh-CN', name: '中文 (简体)' },
     { code: 'ja-JP', name: '日本語' },
-    { code: 'ko-KR', name: '한국어' }
+    { code: 'ko-KR', name: '한국어' },
+    { code: 'vi-VN', name: 'Tiếng Việt' }
     ];
     const DEFAULT_LANGUAGE = 'en';
 
