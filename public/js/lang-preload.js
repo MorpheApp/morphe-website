@@ -6,7 +6,7 @@
 (function() {
     'use strict';
 
-    const SUPPORTED_LOCALES = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'tr-TR', 'uk-UA', 'vi-VN', 'ja-JP', 'ko-KR', 'zh-CN'];
+    const SUPPORTED_LOCALES = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'vi-VN', 'tr-TR', 'uk-UA', 'ja-JP', 'ko-KR', 'zh-CN'];
 
     const STORAGE_KEY = 'morphe-language';
 
