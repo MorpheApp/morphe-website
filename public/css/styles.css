@@ -61,6 +61,16 @@
     --transition-slow: 300ms ease;
 }
 
+/* i18n Loading State */
+html.i18n-loading body {
+    opacity: 0;
+}
+
+html:not(.i18n-loading) body {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+
 /* Base Styles */
 html {
     scroll-behavior: smooth;

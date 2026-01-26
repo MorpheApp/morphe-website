@@ -244,6 +244,74 @@ function generateLocaleFiles(keys, baseLocale, locales) {
 }
 
 /**
+ * Generate lang-preload.js file
+ * This prevents language flash on page load
+ */
+function generateLangPreloadScript() {
+  const { baseLocale, locales } = loadSupportedLocales();
+  const localeCodes = locales.map(l => `'${l.code}'`).join(', ');
+
+  const script = `// Language Preloader - prevents flash of wrong language
+// This must be loaded synchronously in <head> before any content renders
+// AUTO-GENERATED - DO NOT EDIT MANUALLY
+// Run 'npm run generate-i18n-keys' to update this file
+
+(function() {
+    'use strict';
+
+    const SUPPORTED_LOCALES = [${localeCodes}];
+
+    const STORAGE_KEY = 'morphe-language';
+
+    try {
+        let lang = '${baseLocale}';
+
+        // Check saved preference
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved && SUPPORTED_LOCALES.includes(saved)) {
+            lang = saved;
+        } else {
+            // Detect from browser
+            const browserLang = navigator.language;
+
+            if (SUPPORTED_LOCALES.includes(browserLang)) {
+                lang = browserLang;
+            } else {
+                const base = browserLang.split('-')[0];
+                const regional = SUPPORTED_LOCALES.find(l => l.startsWith(base + '-'));
+
+                if (regional) {
+                    lang = regional;
+                } else if (SUPPORTED_LOCALES.includes(base)) {
+                    lang = base;
+                }
+            }
+        }
+
+        // Set language attribute immediately
+        document.documentElement.lang = lang;
+
+        // Hide content until i18n loads
+        document.documentElement.classList.add('i18n-loading');
+
+    } catch (e) {
+        console.error('Language preload failed:', e);
+    }
+})();
+`;
+
+  // Ensure js directory exists
+  const jsDir = path.join(HTML_DIR, 'js');
+  if (!fs.existsSync(jsDir)) {
+    fs.mkdirSync(jsDir, { recursive: true });
+  }
+
+  const outputPath = path.join(jsDir, 'lang-preload.js');
+  fs.writeFileSync(outputPath, script, 'utf8');
+  console.log(`✓ Generated ${outputPath}`);
+}
+
+/**
  * Main function
  */
 function main() {
@@ -260,6 +328,9 @@ function main() {
 
   console.log('\nGenerating locale files...\n');
   generateLocaleFiles(keys, baseLocale, locales);
+
+  console.log('\nGenerating lang-preload.js...');
+  generateLangPreloadScript();
 
   console.log('\n✓ Done! All locale files have been updated.');
   console.log('\nNext steps:');
