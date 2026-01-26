@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Help translate Morphe into your language - Join our community of translators">
     <title>Help Translate Morphe</title>
-    <script>
-        (function () {
-          try {
-            const theme = localStorage.getItem('morphe-theme') || 'auto';
-            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const actual = theme === 'auto' ? (systemDark ? 'dark' : 'light') : theme;
-            document.documentElement.setAttribute('data-theme', actual);
-          } catch (e) {}
-        })();
-    </script>
+    <!-- Theme preloader -->
+    <script src="/js/theme-preload.js"></script>
+    <!-- Language preloader -->
+    <script src="/js/lang-preload.js"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/dark-theme.css">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
@@ -178,8 +172,7 @@
                     <span>Umami</span></a>
                 <span data-i18n="analytics.part2">and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
             </details>
-
-            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></>
+            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
     </div>
 </footer>
