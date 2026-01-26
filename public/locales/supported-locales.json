@@ -32,6 +32,11 @@
       "region": "UA"
     },
     {
+      "code": "ru-RU",
+      "name": "Русский",
+      "region": "RU"
+    },
+    {
       "code": "it-IT",
       "name": "Italiano",
       "region": "IT"
