@@ -6,6 +6,49 @@
     <meta name="description" content="Download MicroG for Morphe YouTube and YT Music Morphe - Required component for signing in">
     <title>Download MicroG - Morphe</title>
     <script>
+        // Pre-detect language before page loads to prevent flash
+        (function() {
+            try {
+                const SUPPORTED = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'tr-TR', 'uk-UA', 'vi-VN', 'ja-JP', 'ko-KR', 'zh-CN'];
+                const saved = localStorage.getItem('morphe-language');
+                let lang = 'en';
+
+                if (saved && SUPPORTED.includes(saved)) {
+                    lang = saved;
+                } else {
+                    const browserLang = navigator.language;
+                    if (SUPPORTED.includes(browserLang)) {
+                        lang = browserLang;
+                    } else {
+                        const base = browserLang.split('-')[0];
+                        const regional = SUPPORTED.find(l => l.startsWith(base + '-'));
+                        if (regional) {
+                            lang = regional;
+                        } else if (SUPPORTED.includes(base)) {
+                            lang = base;
+                        }
+                    }
+                }
+
+                document.documentElement.lang = lang;
+
+                // Hide body until translations are loaded
+                document.documentElement.classList.add('i18n-loading');
+            } catch (e) {}
+        })();
+    </script>
+    <style>
+        /* Hide content until i18n is ready */
+        html.i18n-loading body {
+            opacity: 0;
+        }
+
+        html:not(.i18n-loading) body {
+            opacity: 1;
+            transition: opacity 0.2s ease-in;
+        }
+    </style>
+    <script>
         (function () {
           try {
             const theme = localStorage.getItem('morphe-theme') || 'auto';

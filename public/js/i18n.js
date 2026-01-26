@@ -29,6 +29,9 @@
                 // Apply translations after everything is ready
                 this.applyTranslations();
 
+                // Remove loading class to show content
+                document.documentElement.classList.remove('i18n-loading');
+
                 window.dispatchEvent(new CustomEvent('i18nReady', {
                     detail: {
                         lang: this.currentLang,
@@ -37,6 +40,8 @@
                 }));
             } catch (error) {
                 console.error('Failed to initialize i18n:', error);
+                // Show content even if i18n fails
+                document.documentElement.classList.remove('i18n-loading');
             }
         }
 
