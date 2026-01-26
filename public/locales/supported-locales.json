@@ -7,9 +7,9 @@
       "region": null
     },
     {
-      "code": "es-ES",
-      "name": "Español",
-      "region": "ES"
+      "code": "cs-CZ",
+      "name": "Čeština",
+      "region": "CZ"
     },
     {
       "code": "de-DE",
@@ -17,24 +17,14 @@
       "region": "DE"
     },
     {
+      "code": "es-ES",
+      "name": "Español",
+      "region": "ES"
+    },
+    {
       "code": "fr-FR",
       "name": "Français",
       "region": "FR"
-    },
-    {
-      "code": "pl-PL",
-      "name": "Polski",
-      "region": "PL"
-    },
-    {
-      "code": "uk-UA",
-      "name": "Українська",
-      "region": "UA"
-    },
-    {
-      "code": "ru-RU",
-      "name": "Русский",
-      "region": "RU"
     },
     {
       "code": "it-IT",
@@ -47,6 +37,11 @@
       "region": "NL"
     },
     {
+      "code": "pl-PL",
+      "name": "Polski",
+      "region": "PL"
+    },
+    {
       "code": "pt-BR",
       "name": "Português (Brasil)",
       "region": "BR"
@@ -57,14 +52,9 @@
       "region": "PT"
     },
     {
-      "code": "tr-TR",
-      "name": "Türkçe",
-      "region": "TR"
-    },
-    {
-      "code": "cs-CZ",
-      "name": "Čeština",
-      "region": "CZ"
+      "code": "ru-RU",
+      "name": "Русский",
+      "region": "RU"
     },
     {
       "code": "sk-SK",
@@ -72,9 +62,19 @@
       "region": "SK"
     },
     {
-      "code": "zh-CN",
-      "name": "中文 (简体)",
-      "region": "CN"
+      "code": "tr-TR",
+      "name": "Türkçe",
+      "region": "TR"
+    },
+    {
+      "code": "uk-UA",
+      "name": "Українська",
+      "region": "UA"
+    },
+    {
+      "code": "vi-VN",
+      "name": "Tiếng Việt",
+      "region": "VN"
     },
     {
       "code": "ja-JP",
@@ -85,6 +85,11 @@
       "code": "ko-KR",
       "name": "한국어",
       "region": "KR"
+    },
+    {
+      "code": "zh-CN",
+      "name": "中文 (简体)",
+      "region": "CN"
     }
   ]
 }

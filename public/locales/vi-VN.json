@@ -1,0 +1,245 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "how-it-works": "Cách dùng",
+    "testimonials": "Người dùng nói gì",
+    "faq": "Hỏi đáp",
+    "donate": "Ủng hộ",
+    "changelogs": "Có gì mới"
+  },
+  "hero": {
+    "title": "Biến đổi",
+    "title-highlight": "ứng dụng Android",
+    "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng mạnh mẽ, trao toàn quyền kiểm soát cho bạn",
+    "download": "Tải Morphe",
+    "learn-more": "Tìm hiểu thêm",
+    "social-label": "Tham gia cộng đồng"
+  },
+  "feature": {
+    "ad-blocking": "Chặn quảng cáo",
+    "ad-blocking-desc": "Chặn toàn bộ quảng cáo, tận hưởng nội dung không bị gián đoạn trên mọi ứng dụng",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Tự động bỏ qua các đoạn tài trợ nhờ dữ liệu cộng đồng",
+    "show-dislikes": "Hiện lượt không thích",
+    "show-dislikes-desc": "Xem số lượt không thích thực tế để quyết định có nên xem hay không",
+    "swipe-controls": "Cử chỉ vuốt",
+    "swipe-controls-desc": "Vuốt để chỉnh âm lượng và độ sáng một cách trực quan",
+    "custom-themes": "Giao diện tuỳ chỉnh",
+    "custom-themes-desc": "Cá nhân hoá ứng dụng với chủ đề và màu sắc đẹp mắt",
+    "hide-content": "Ẩn nội dung",
+    "hide-content-desc": "Ẩn nội dung không mong muốn, Shorts và đề xuất để trang video gọn gàng hơn"
+  },
+  "how-it-works": {
+    "title": "Morphe hoạt động thế nào",
+    "subtitle": "Đơn giản, hiệu quả và dành cho tất cả mọi người",
+    "step1-title": "1. Tải Morphe",
+    "step1-desc": "Tải phiên bản mới nhất của Morphe và cài đặt lên thiết bị Android của bạn.",
+    "step2-title": "2. Chọn ứng dụng",
+    "step2-desc": "Chọn ứng dụng bạn muốn chỉnh sửa. Hiện tại Morphe chỉ hỗ trợ YouTube và YouTube Music.",
+    "step3-title": "3. Áp dụng bản vá",
+    "step3-desc": "Morphe sẽ tự động vá ứng dụng mà bạn đã chọn.",
+    "step4-title": "4. Cài đặt và tận hưởng thôi",
+    "step4-desc": "Cài ứng dụng đã vá và tận hưởng trải nghiệm theo ý bạn.",
+    "supported-title": "Ứng dụng được hỗ trợ"
+  },
+  "testimonials": {
+    "title": "Người dùng nói gì",
+    "subtitle": "Phản hồi từ người thật, không phải bịa đâu (chắc vậy)",
+    "quote_1": {
+      "text": "Ngày trước ngồi cấu hình vá mệt nghỉ. Giờ chỉ cần bấm \"Vá\" rồi đi pha bát mỳ. Quay lại là xong. Đỉnh của chóp.",
+      "author": "Lisa Smith",
+      "role": "Tín đồ cà phê"
+    },
+    "quote_2": {
+      "text": "Mấy tool khác cảm giác như bịt mắt bắt dê. Còn Morphe thì vài cú click là app lên đời luôn.",
+      "author": "Alex Chen",
+      "role": "Dân vọc"
+    },
+    "quote_3": {
+      "text": "Giống Vanced, nhưng ngon hơn và không có vibe công ty khó chịu.",
+      "author": "Sarah Johnson",
+      "role": "Fan Vanced cũ"
+    },
+    "quote_4": {
+      "text": "Bà mình 87 nồi bánh chưng hỏi sao YouTube trông khang khác. Mình giới thiệu Morphe, giờ bà đang vá cho cả khu dưỡng lão :))",
+      "author": "David Kin",
+      "role": "Thằng cháu mát tay"
+    },
+    "quote_5": {
+      "text": "Thử mấy tool khác mà máy suýt bốc khói. Dùng Morphe thì mượt như sunsilk. 10/10",
+      "author": "Ryan Martinez",
+      "role": "Chuyên gia PCCC"
+    },
+    "quote_6": {
+      "text": "Hoàng thượng hất văng điện thoại của tôi lúc đang vá. Máy vẫn sống, vá cũng xong luôn. Hoàng thượng ưng cực.",
+      "author": "Emma Jones",
+      "role": "Sen chính hiệu"
+    },
+    "quote_7": {
+      "text": "Bố t mù công nghệ, mà giờ vá còn giỏi hơn t nữa. Bắt đầu nghi ngờ sự nghiệp IT của bản thân.",
+      "author": "Tom Anderson",
+      "role": "Khủng hoảng tinh thần"
+    },
+    "quote_8": {
+      "text": "Ê, nyc đòi quay lại sau khi tớ dùng Morphe. Trùng hợp đúng không? Chắc kp đâu.",
+      "author": "Mike Thompson",
+      "role": "Manifest tình yêu"
+    },
+    "quote_9": {
+      "text": "Morphe đã cứu tôi khỏi quảng cáo \"Nhà tôi ba đời...\"",
+      "author": "Casey Morgan",
+      "role": "Không phải lang băm"
+    },
+    "quote_10": {
+      "text": "Tưởng Morphe là tên một vị thần Hy Lạp. Hoá ra còn xịn hơn.",
+      "author": "Oliver Grant",
+      "role": "Sinh viên Khoa Lịch Sử"
+    },
+    "quote_11": {
+      "text": "Trước đây, mình còn tưởng muốn chỉnh sửa APK phải cao siêu lắm. Giờ thì, Morphe là ngon luôn.",
+      "author": "Jeff Cooper",
+      "role": "Mù công nghệ"
+    },
+    "quote_12": {
+      "text": "Thấy Morphe miễn phí là phản xạ như gặp quầy thử đồ ăn: không suy nghĩ, tải liền.",
+      "author": "Tyler James",
+      "role": "Quyết định theo bản năng"
+    },
+    "quote_13": {
+      "text": "Morphe sửa WiFi, đóng tiền trọ giúp tôi, còn cứu thế giới nữa. Đùa thôi, nói quá chứ... riêng vá YouTube thì chuẩn bài rồi.",
+      "author": "Sarah Williams",
+      "role": "Thánh nổ"
+    },
+    "quote_14": {
+      "text": "Giới thiệu Morphe cho con chó, giờ nó dùng công nghệ còn giỏi hơn mình.",
+      "author": "Kevin Park",
+      "role": "Cựu chuyên gia công nghệ"
+    },
+    "quote_15": {
+      "text": "Morphe vá đỉnh đến mức mình bắt đầu tự hỏi nó có vá luôn sai lầm tuổi trẻ không.",
+      "author": "Doug Miller",
+      "role": "Thích \"lên đời\""
+    },
+    "quote_16": {
+      "text": "Bấm nhầm nút cái tự dưng thành triệu phú. Không rõ sao nhưng chắc dính đến Morphe.",
+      "author": "Lucky Luke",
+      "role": "Đại gia bất đắc dĩ"
+    },
+    "quote_17": {
+      "text": "Nhờ Morphe chặn quảng cáo mà tôi tập trung nghiên cứu, thay đổi lịch sử nhân loại. Nobel nên trao giải cho Morphe hơn là tôi.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Nhà vật lý học"
+    },
+    "quote_18": {
+      "text": "Em chỉ các bạn Morphe, giờ các bạn nghĩ em là hacker ngầm. Thôi để tụi nó nghĩ vậy cũng được ^⁠_⁠^",
+      "author": "Owen Price",
+      "role": "Hacker đểu"
+    },
+    "quote_19": {
+      "text": "Morphe chặn nhiều quảng cáo đến mức điện thoại thấy nhẹ hơn cả chục Gb.",
+      "author": "Sienna Brooks",
+      "role": "Hết dung lượng"
+    }
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Tất cả những gì bạn cần biết về Morphe",
+    "q1": "Morphe có thể vá những ứng dụng nào?",
+    "a1": "Bạn có thể vá bất kỳ ứng dụng nào bạn muốn. Miễn là đó là YouTube hoặc YouTube Music. Chúng tôi đang liên tục mở rộng hỗ trợ cho nhiều ứng dụng hơn.",
+    "q2": "Morphe có an toàn không?",
+    "a2": "Với những can thiệp sâu vào bytecode đã bị mã hoá, không thể nói là an toàn tuyệt đối. Tuy vậy, Morphe luôn tối ưu để đảm bảo mức an toàn cao nhất trong khả năng. Toàn bộ mã nguồn của Morphe là mã nguồn mở để mọi người kiểm tra và đóng góp.",
+    "q3": "Morphe có làm hỏng điện thoại không?",
+    "a3": "Chỉ khi điện thoại tự muốn \"toang\". Còn bình thường thì hoàn toàn ổn vì Morphe chỉ chỉnh sửa gói ứng dụng, không đụng tới hệ thống.",
+    "q4": "Tôi có thể tuỳ biến ứng dụng theo ý mình không?",
+    "a4": "Có, nhưng đừng trách Morphe nếu bạn chỉnh quá tay rồi không nhận ra ứng dụng nữa.",
+    "q5": "Chính sách quyền riêng tư của Morphe là gì?",
+    "q6": "Tại sao lại đặt tên là Morphe?",
+    "a6": "Vì 'Android App Modification And Transformation Tool' (AAMATT) nghe không hay lắm. Với lại Morphe gợi ý việc biến đổi ứng dụng thành thứ tốt hơn.",
+    "q7": "Morphe có phải ảo quá không?",
+    "a7": "Không. Cảm giác thì giống vậy. Nhưng thực chất là thao tác bytecode cũng rất nâng cao.",
+    "q8": "Tôi có thể đóng góp cho Morphe không?",
+    "a8-part1": "Có! Xem hướng dẫn đóng góp tại",
+    "a8-github": "GitHub",
+    "a8-part2": ". Nếu bạn không phải dev, bạn vẫn có thể",
+    "a8-donate": "ủng hộ",
+    "a8-part3": "để giúp duy trì dự án."
+  },
+  "footer": {
+    "description": "Công cụ vá ứng dụng Android thế hệ mới",
+    "product": "Sản phẩm",
+    "product-home": "Trang chủ",
+    "product-microg": "Tải MicroG",
+    "product-translate": "Hỗ trợ dịch",
+    "community": "Cộng đồng",
+    "support": "Hỗ trợ",
+    "support-faq": "Hỏi đáp",
+    "support-how": "Cách Morphe hoạt động",
+    "support-donate": "Ủng hộ",
+    "copyright": "Mã nguồn mở và miễn phí mãi mãi.",
+    "language": "Ngôn ngữ",
+    "product-changelog": "Có gì mới"
+  },
+  "analytics": {
+    "title": "Phân tích",
+    "part1": "Trang web này sử dụng ",
+    "part2": "và Google Analytics 4: không cookie, không quảng cáo, không theo dõi và không chia sẻ dữ liệu.",
+    "part3": "Morphe không thêm bất kỳ hệ thống theo dõi hay thu thập dữ liệu nào vào ứng dụng đã vá."
+  },
+  "donate": {
+    "title": "Ủng hộ",
+    "description": "Sự đóng góp của bạn giúp chúng tôi tiếp tục phát triển và cải thiện Morphe",
+    "why-title": "Vì sao nên ủng hộ?",
+    "why-1": "Giữ Morphe luôn miễn phí và mã nguồn mở",
+    "why-2": "Hỗ trợ phát triển lâu dài",
+    "why-3": "Chi trả chi phí hạ tầng",
+    "why-4": "Giúp sửa lỗi và ra tính năng nhanh hơn",
+    "crypto-click": "Nhấn để mở ví"
+  },
+  "microg": {
+    "title": "Tải về",
+    "description": "Cần MicroG để sử dụng YouTube Morphe và YT Music Morphe",
+    "download": "Tải MicroG",
+    "what-title": "MicroG là gì?",
+    "feature1-title": "Dịch vụ Google",
+    "feature1-desc": "MicroG cung cấp các dịch vụ Google Play, cho phép đăng nhập tài khoản Google trên YouTube Morphe và YT Music Morphe.",
+    "feature2-title": "Tập trung quyền riêng tư",
+    "feature2-desc": "MicroG là bản triển khai mã nguồn mở của dịch vụ Google, tôn trọng quyền riêng tư của bạn.",
+    "feature3-title": "Cài một lần",
+    "feature3-desc": "Chỉ cần cài MicroG một lần cho tất cả ứng dụng Morphe. Không cần cài lại khi cập nhật."
+  },
+  "translate": {
+    "title": "Hỗ trợ dịch",
+    "description": "Giúp Morphe tiếp cận hàng triệu người dùng bằng cách dịch sang ngôn ngữ của bạn",
+    "cta": "Bắt đầu dịch trên",
+    "how-title": "Cách đóng góp",
+    "step1-title": "1. Đăng ký Crowdin",
+    "step1-desc": "Tạo tài khoản Crowdin miễn phí để tham gia dịch Morphe.",
+    "step2-title": "2. Chọn ngôn ngữ",
+    "step2-desc": "Chọn ngôn ngữ bạn muốn dịch hoặc cải thiện bản dịch đang có.",
+    "step3-title": "3. Bắt đầu dịch",
+    "step3-desc": "Sử dụng giao diện Crowdin để dịch từng chuỗi.",
+    "step4-title": "4. Xem kết quả",
+    "step4-desc": "Bản dịch của bạn sẽ được duyệt và đưa vào các bản phát hành sau.",
+    "why-title": "Vì sao nên dịch?",
+    "why-1": "Giúp cộng đồng của bạn",
+    "why-2": "Đưa Morphe ra toàn cầu",
+    "why-3": "Đóng góp cho mã nguồn mở"
+  },
+  "error": {
+    "404-title": "404 - Không tìm thấy trang",
+    "not-found": "Trang bạn đang tìm không tồn tại",
+    "go-home": "Về trang chủ"
+  },
+  "changelog": {
+    "title": "Có gì mới",
+    "subtitle": "Lịch sử đầy đủ các bản cập nhật và cải tiến",
+    "filter-type": "Loại:",
+    "filter-all": "Tất cả",
+    "filter-manager": "Trình quản lý",
+    "filter-patches": "Bản vá",
+    "show-dev": "Hiện bản thử nghiệm",
+    "older-releases": "Tìm bản phát hành cũ hơn?",
+    "view-manager": "Xem bản phát hành trình quản lý",
+    "view-patches": "Xem bản phát hành bản vá"
+  }
+}
