@@ -30,6 +30,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate i18n files
+        run: npm run i18n:extract
+
       - name: Configure Umami
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
