@@ -36,4 +36,13 @@
   };
 
   document.head.appendChild(gaScript);
+
+  // --- Track browser language for localization insights ---
+  window.addEventListener('load', () => {
+    if (window.umami) {
+      umami.track('Browser', {
+        language: navigator.language
+      });
+    }
+  });
 })();
