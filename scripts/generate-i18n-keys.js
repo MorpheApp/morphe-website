@@ -16,29 +16,24 @@ const glob = require('glob');
 // Configuration
 const HTML_DIR = 'public';
 const LOCALES_DIR = 'public/locales';
-const BASE_LOCALE = 'en';
+const LOCALES_CONFIG_PATH = path.join(LOCALES_DIR, 'supported-locales.json');
 
-// Supported locales with region codes
-const SUPPORTED_LOCALES = [
-{ code: 'en', name: 'English' },
-{ code: 'cs-CZ', name: 'Čeština' },
-{ code: 'de-DE', name: 'Deutsch' },
-{ code: 'es-ES', name: 'Español' },
-{ code: 'fr-FR', name: 'Français' },
-{ code: 'it-IT', name: 'Italiano' },
-{ code: 'nl-NL', name: 'Nederlands' },
-{ code: 'pl-PL', name: 'Polski' },
-{ code: 'pt-BR', name: 'Português (Brasil)' },
-{ code: 'pt-PT', name: 'Português (Portugal)' },
-{ code: 'ru-RU', name: 'Русский' },
-{ code: 'sk-SK', name: 'Slovenčina' },
-{ code: 'tr-TR', name: 'Türkçe' },
-{ code: 'uk-UA', name: 'Українська' },
-{ code: 'vi-VN', name: 'Tiếng Việt' },
-{ code: 'ja-JP', name: '日本語' },
-{ code: 'ko-KR', name: '한국어' },
-{ code: 'zh-CN', name: '中文 (简体)' }
-];
+/**
+ * Load supported locales from JSON configuration
+ */
+function loadSupportedLocales() {
+  try {
+    const config = JSON.parse(fs.readFileSync(LOCALES_CONFIG_PATH, 'utf8'));
+    return {
+      baseLocale: config.default,
+      locales: config.supported
+    };
+  } catch (error) {
+    console.error(`Error reading ${LOCALES_CONFIG_PATH}:`, error.message);
+    console.error('Please ensure supported-locales.json exists in the locales directory');
+    process.exit(1);
+  }
+}
 
 /**
  * Extract all i18n keys from HTML files
@@ -194,7 +189,7 @@ function removeZombieKeys(existing, newKeys) {
 /**
  * Generate or update locale files
  */
-function generateLocaleFiles(keys) {
+function generateLocaleFiles(keys, baseLocale, locales) {
   // Create locales directory if it doesn't exist
   if (!fs.existsSync(LOCALES_DIR)) {
     fs.mkdirSync(LOCALES_DIR, { recursive: true });
@@ -202,7 +197,7 @@ function generateLocaleFiles(keys) {
 
   const nestedKeys = keysToNestedObject(keys);
 
-  SUPPORTED_LOCALES.forEach(locale => {
+  locales.forEach(locale => {
     const filePath = path.join(LOCALES_DIR, `${locale.code}.json`);
     let translations = {};
 
@@ -220,7 +215,7 @@ function generateLocaleFiles(keys) {
     const existingTestimonials = translations.testimonials;
 
     // For base locale (English), use extracted values
-    if (locale.code === BASE_LOCALE) {
+    if (locale.code === baseLocale) {
       // Merge new keys with existing translations
       translations = mergeTranslations(translations, nestedKeys);
       // Remove zombie keys
@@ -249,49 +244,28 @@ function generateLocaleFiles(keys) {
 }
 
 /**
- * Generate list of supported locales for documentation
- */
-function generateLocalesList() {
-  const listPath = path.join(LOCALES_DIR, 'supported-locales.json');
-
-  const localesInfo = {
-    default: BASE_LOCALE,
-    supported: SUPPORTED_LOCALES.map(l => ({
-      code: l.code,
-      name: l.name,
-      region: l.code.includes('-') ? l.code.split('-')[1] : null
-    }))
-  };
-
-  fs.writeFileSync(
-    listPath,
-    JSON.stringify(localesInfo, null, 2) + '\n',
-    'utf8'
-  );
-
-  console.log(`✓ Generated ${listPath}`);
-}
-
-/**
  * Main function
  */
 function main() {
-  console.log('Extracting i18n keys from HTML files...\n');
+  console.log('Loading supported locales configuration...\n');
+
+  const { baseLocale, locales } = loadSupportedLocales();
+  console.log(`Base locale: ${baseLocale}`);
+  console.log(`Supported locales: ${locales.length}`);
+
+  console.log('\nExtracting i18n keys from HTML files...\n');
 
   const keys = extractKeys();
   console.log(`\nFound ${keys.size} unique translation keys`);
 
   console.log('\nGenerating locale files...\n');
-  generateLocaleFiles(keys);
-
-  console.log('\nGenerating supported locales list...');
-  generateLocalesList();
+  generateLocaleFiles(keys, baseLocale, locales);
 
   console.log('\n✓ Done! All locale files have been updated.');
   console.log('\nNext steps:');
   console.log('1. Review generated files in public/locales/');
-//  console.log('2. Upload to Crowdin for translation');
-  console.log('2. Download translated files back to public/locales/');
+  console.log('2. Translate new files in public/locales/ into appropriate language');
+  console.log('\nTo add new locales, edit public/locales/supported-locales.json');
 }
 
 // Run the script

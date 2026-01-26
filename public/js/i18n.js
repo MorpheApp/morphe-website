@@ -3,54 +3,82 @@
     'use strict';
 
     const I18N_KEY = 'morphe-language';
-    const SUPPORTED_LOCALES = [
-    { code: 'en', name: 'English' },
-    { code: 'cs-CZ', name: 'Čeština' },
-    { code: 'de-DE', name: 'Deutsch' },
-    { code: 'es-ES', name: 'Español' },
-    { code: 'fr-FR', name: 'Français' },
-    { code: 'it-IT', name: 'Italiano' },
-    { code: 'nl-NL', name: 'Nederlands' },
-    { code: 'pl-PL', name: 'Polski' },
-    { code: 'pt-BR', name: 'Português (Brasil)' },
-    { code: 'pt-PT', name: 'Português (Portugal)' },
-    { code: 'ru-RU', name: 'Русский' },
-    { code: 'sk-SK', name: 'Slovenčina' },
-    { code: 'tr-TR', name: 'Türkçe' },
-    { code: 'uk-UA', name: 'Українська' },
-    { code: 'vi-VN', name: 'Tiếng Việt' },
-    { code: 'ja-JP', name: '日本語' },
-    { code: 'ko-KR', name: '한국어' },
-    { code: 'zh-CN', name: '中文 (简体)' }
-    ];
-    const DEFAULT_LANGUAGE = 'en';
+    const LOCALES_CONFIG_PATH = '/locales/supported-locales.json';
+    let DEFAULT_LANGUAGE = 'en';
+    let SUPPORTED_LOCALES = [];
 
     class I18n {
         constructor() {
             this.translations = {};
             this.currentLang = null;
-            this.supportedLanguages = SUPPORTED_LOCALES.map(l => l.code);
-            this.init();
+            this.supportedLanguages = [];
+            this.configLoaded = false;
         }
 
         async init() {
-            this.currentLang = this.getLanguage();
-            await this.loadTranslations(this.currentLang);
-            this.applyTranslations();
-            this.setupLanguageSelector();
+            try {
+                // Load configuration first
+                await this.loadConfiguration();
 
-            window.dispatchEvent(new CustomEvent('i18nReady', {
-                detail: {
-                    lang: this.currentLang,
-                    hasTestimonials: !!this.translations.testimonials
+                this.currentLang = this.getLanguage();
+                await this.loadTranslations(this.currentLang);
+
+                // Setup language selector after config is loaded
+                this.setupLanguageSelector();
+
+                // Apply translations after everything is ready
+                this.applyTranslations();
+
+                window.dispatchEvent(new CustomEvent('i18nReady', {
+                    detail: {
+                        lang: this.currentLang,
+                        hasTestimonials: !!this.translations.testimonials
+                    }
+                }));
+            } catch (error) {
+                console.error('Failed to initialize i18n:', error);
+            }
+        }
+
+        /**
+         * Load supported locales configuration from JSON
+         */
+        async loadConfiguration() {
+            try {
+                console.log('Loading locales configuration from:', LOCALES_CONFIG_PATH);
+                const response = await fetch(LOCALES_CONFIG_PATH);
+
+                if (!response.ok) {
+                    throw new Error(`Failed to load locales configuration: ${response.status} ${response.statusText}`);
                 }
-            }));
+
+                const config = await response.json();
+                DEFAULT_LANGUAGE = config.default;
+                SUPPORTED_LOCALES = config.supported;
+                this.supportedLanguages = SUPPORTED_LOCALES.map(l => l.code);
+                this.configLoaded = true;
+
+                console.log(`✓ Loaded ${this.supportedLanguages.length} supported locales:`, this.supportedLanguages);
+            } catch (error) {
+                console.error('Error loading locales configuration:', error);
+                // Fallback to minimal configuration
+                console.warn('Using fallback configuration with English only');
+                DEFAULT_LANGUAGE = 'en';
+                SUPPORTED_LOCALES = [{ code: 'en', name: 'English', region: null }];
+                this.supportedLanguages = ['en'];
+                this.configLoaded = true;
+            }
         }
 
         /**
          * Get the best matching language
          */
         getLanguage() {
+            if (!this.configLoaded) {
+                console.warn('Configuration not loaded yet, using default');
+                return DEFAULT_LANGUAGE;
+            }
+
             // Check saved preference
             const saved = localStorage.getItem(I18N_KEY);
             if (saved && this.supportedLanguages.includes(saved)) {
@@ -79,7 +107,7 @@
                 return browserLangBase;
             }
 
-            // Default to English
+            // Default to configured default language
             return DEFAULT_LANGUAGE;
         }
 
@@ -91,13 +119,13 @@
                 }
                 this.translations = await response.json();
 
-                // If testimonials section is missing, load from English
+                // If testimonials section is missing, load from default language
                 if (!this.translations.testimonials && lang !== DEFAULT_LANGUAGE) {
-                    console.log('Loading testimonials from English as fallback');
-                    const enResponse = await fetch(`/locales/${DEFAULT_LANGUAGE}.json`);
-                    const enTranslations = await enResponse.json();
-                    if (enTranslations.testimonials) {
-                        this.translations.testimonials = enTranslations.testimonials;
+                    console.log(`Loading testimonials from ${DEFAULT_LANGUAGE} as fallback`);
+                    const defaultResponse = await fetch(`/locales/${DEFAULT_LANGUAGE}.json`);
+                    const defaultTranslations = await defaultResponse.json();
+                    if (defaultTranslations.testimonials) {
+                        this.translations.testimonials = defaultTranslations.testimonials;
                     }
                 }
             } catch (error) {
@@ -119,7 +147,7 @@
                     }
                 }
 
-                // Final fallback to English
+                // Final fallback to default language
                 if (lang !== DEFAULT_LANGUAGE) {
                     console.log(`Falling back to default language: ${DEFAULT_LANGUAGE}`);
                     const defaultResponse = await fetch(`/locales/${DEFAULT_LANGUAGE}.json`);
@@ -216,17 +244,26 @@
 
         setupLanguageSelector() {
             const selector = document.getElementById('language-selector');
-            if (selector) {
-                // Populate selector with supported languages
-                selector.innerHTML = SUPPORTED_LOCALES.map(locale =>
-                    `<option value="${locale.code}">${locale.name}</option>`
-                ).join('');
-
-                selector.value = this.currentLang;
-                selector.addEventListener('change', (e) => {
-                    this.setLanguage(e.target.value);
-                });
+            if (!selector) {
+                console.warn('Language selector element not found');
+                return;
             }
+
+            if (!this.configLoaded || SUPPORTED_LOCALES.length === 0) {
+                console.error('Cannot setup language selector: configuration not loaded');
+                return;
+            }
+
+            // Populate selector with supported languages
+            console.log('Populating language selector with', SUPPORTED_LOCALES.length, 'locales');
+            selector.innerHTML = SUPPORTED_LOCALES.map(locale =>
+                `<option value="${locale.code}">${locale.name}</option>`
+            ).join('');
+
+            selector.value = this.currentLang;
+            selector.addEventListener('change', (e) => {
+                this.setLanguage(e.target.value);
+            });
         }
 
         /**
@@ -277,8 +314,10 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             window.i18n = new I18n();
+            window.i18n.init();
         });
     } else {
         window.i18n = new I18n();
+        window.i18n.init();
     }
 })();
