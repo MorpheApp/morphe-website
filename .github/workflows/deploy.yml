@@ -36,9 +36,6 @@ jobs:
       - name: Generate i18n files
         run: npm run i18n:extract
 
-      - name: Minify HTML/CSS/JS
-        run: npm run minify
-
       - name: Configure Umami
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
@@ -118,6 +115,9 @@ jobs:
           # Update microg.html with the download link          
           sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/microg.html
           echo "Updated public/microg.html with MicroG download link."
+
+      - name: Minify HTML/CSS/JS
+        run: npm run minify
 
       - name: Install Wrangler
         run: npm install -g wrangler
