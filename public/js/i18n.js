@@ -10,6 +10,7 @@
     { code: 'fr-FR', name: 'Français' },
     { code: 'pl-PL', name: 'Polski' },
     { code: 'uk-UA', name: 'Українська' },
+    { code: 'ru-RU', name: 'Русский' },
     { code: 'it-IT', name: 'Italiano' },
     { code: 'nl-NL', name: 'Nederlands' },
     { code: 'pt-BR', name: 'Português (Brasil)' },
