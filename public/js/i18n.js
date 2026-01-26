@@ -250,7 +250,7 @@
         setupLanguageSelector() {
             const selector = document.getElementById('language-selector');
             if (!selector) {
-                console.warn('Language selector element not found');
+                // Language selector is optional - not all pages have it
                 return;
             }
 
