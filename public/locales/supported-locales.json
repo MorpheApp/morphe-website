@@ -80,6 +80,11 @@
       "code": "ko-KR",
       "name": "한국어",
       "region": "KR"
+    },
+    {
+      "code": "vi-VN",
+      "name": "Tiếng Việt",
+      "region": "VN"
     }
   ]
 }
