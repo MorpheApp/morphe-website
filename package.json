@@ -6,6 +6,7 @@
     "i18n:check": "node scripts/check-translations.js",
     "precommit": "npm run i18n:extract && npm run i18n:check",
     "changelog:generate": "node scripts/generate-changelog.js",
+    "patches:generate": "node scripts/generate-patches.js",
     "minify": "node scripts/minify.js"
   },
   "devDependencies": {

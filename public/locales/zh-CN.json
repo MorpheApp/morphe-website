@@ -12,8 +12,8 @@
     "title-highlight": "Android应用",
     "description": "来自为您带来最佳改版YouTube应用的开发者，Morphe - 强大的应用修改工具，让您掌控一切",
     "download": "下载Morphe",
-    "learn-more": "了解更多",
-    "social-label": "加入社区"
+    "social-label": "加入社区",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "广告拦截",
@@ -177,7 +177,8 @@
     "support-donate": "捐赠",
     "copyright": "永久开源和免费。",
     "language": "语言",
-    "product-changelog": "更新内容"
+    "product-changelog": "更新内容",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "分析",
@@ -241,5 +242,12 @@
     "older-releases": "在找更早的版本吗？",
     "view-manager": "查看 Manager 版本",
     "view-patches": "查看补丁版本"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

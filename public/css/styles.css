@@ -1332,6 +1332,225 @@ body {
     transform: translateX(4px);
 }
 
+/* Patches Search */
+.patches-search {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    background: var(--background);
+    color: var(--text-primary);
+    transition: border-color var(--transition-base);
+}
+
+.patches-search:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.patches-search::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* Patch Card */
+.patch-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.patch-card.hidden {
+    display: none;
+}
+
+.patch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.patch-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border);
+}
+
+.patch-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.patch-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.patch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.patch-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.patch-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.patch-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+.patch-content {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-md);
+}
+
+.patch-card.expanded .patch-content {
+    display: flex;
+}
+
+.patch-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.patch-section-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.patch-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding-left: 0;
+}
+
+.patch-list li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    font-size: 0.875rem;
+}
+
+.patch-list li::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+}
+
+.patch-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.patch-option {
+    background: var(--gray-100);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+}
+
+.patch-option-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.patch-option-desc {
+    color: var(--text-tertiary);
+    font-size: 0.8125rem;
+}
+
+.patch-toggle-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--primary-light-blue);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.patch-toggle-btn:hover {
+    background: var(--border);
+}
+
+.patch-toggle-btn svg {
+    transition: transform var(--transition-base);
+    width: 16px;
+    height: 16px;
+}
+
+.patch-card.expanded .patch-toggle-btn svg {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .patch-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patch-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* Footer */
 .footer {
     background: var(--gray-900);

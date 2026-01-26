@@ -12,8 +12,8 @@
     "title-highlight": "Androidアプリを変革",
     "description": "最高の改造版YouTubeアプリを提供してきた開発者から、Morphe - あなたがコントロールできる強力なアプリ改造ツール",
     "download": "Morpheをダウンロード",
-    "learn-more": "詳細を見る",
-    "social-label": "コミュニティに参加"
+    "social-label": "コミュニティに参加",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "広告ブロック",
@@ -177,7 +177,8 @@
     "support-donate": "寄付",
     "copyright": "永久にオープンソースで無料。",
     "language": "言語",
-    "product-changelog": "新着情報"
+    "product-changelog": "新着情報",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "アナリティクス",
@@ -241,5 +242,12 @@
     "older-releases": "古いリリースをお探しですか？",
     "view-manager": "Manager リリースを見る",
     "view-patches": "パッチリリースを見る"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

@@ -12,8 +12,8 @@
     "title-highlight": "ứng dụng Android",
     "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng mạnh mẽ, trao toàn quyền kiểm soát cho bạn",
     "download": "Tải Morphe",
-    "learn-more": "Tìm hiểu thêm",
-    "social-label": "Tham gia cộng đồng"
+    "social-label": "Tham gia cộng đồng",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Chặn quảng cáo",
@@ -177,7 +177,8 @@
     "support-donate": "Ủng hộ",
     "copyright": "Mã nguồn mở và miễn phí mãi mãi.",
     "language": "Ngôn ngữ",
-    "product-changelog": "Có gì mới"
+    "product-changelog": "Có gì mới",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Phân tích",
@@ -241,5 +242,12 @@
     "older-releases": "Tìm bản phát hành cũ hơn?",
     "view-manager": "Xem bản phát hành trình quản lý",
     "view-patches": "Xem bản phát hành bản vá"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

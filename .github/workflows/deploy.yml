@@ -61,6 +61,12 @@ jobs:
           node scripts/generate-changelog.js
           echo "Changelog generated"
 
+      - name: Generate Patches HTML
+        run: |
+          echo "Generating patches page..."
+          node scripts/generate-patches.js
+          echo "Patches page generated"
+
       - name: Fetch and Update Morphe Download Link
         run: |
           MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/app/gradle.properties"

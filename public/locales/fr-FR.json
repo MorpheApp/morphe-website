@@ -12,8 +12,8 @@
     "title-highlight": "applications Android",
     "description": "Par les développeurs des meilleures applications YouTube modifiées, Morphe est un puissant outil de modification d’applications qui vous donne le contrôle total",
     "download": "Télécharger Morphe",
-    "learn-more": "En savoir plus",
-    "social-label": "Rejoindre la communauté"
+    "social-label": "Rejoindre la communauté",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Blocage des publicités",
@@ -177,7 +177,8 @@
     "support-donate": "Faire un don",
     "copyright": "Open source et gratuit pour toujours.",
     "language": "Langue",
-    "product-changelog": "Nouveautés"
+    "product-changelog": "Nouveautés",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Analytique",
@@ -241,5 +242,12 @@
     "older-releases": "Vous cherchez des versions plus anciennes ?",
     "view-manager": "Voir les versions Manager",
     "view-patches": "Voir les versions Correctifs"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

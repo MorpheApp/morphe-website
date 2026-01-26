@@ -12,8 +12,8 @@
     "title-highlight": "Android aplikace",
     "description": "Od vývojářů nejlepších upravených aplikací YouTube přichází Morphe — výkonný nástroj pro úpravu aplikací",
     "download": "Stáhnout Morphe",
-    "learn-more": "Zjistit více",
-    "social-label": "Připoj se ke komunitě"
+    "social-label": "Připoj se ke komunitě",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Blokování reklam",
@@ -177,7 +177,8 @@
     "support-donate": "Darovat",
     "copyright": "Open source a navždy zdarma.",
     "language": "Jazyk",
-    "product-changelog": "Novinky"
+    "product-changelog": "Novinky",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Analytika",
@@ -241,5 +242,12 @@
     "older-releases": "Hledáte starší verze?",
     "view-manager": "Zobrazit verze Manager",
     "view-patches": "Zobrazit verze Záplat"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

@@ -12,8 +12,8 @@
     "title-highlight": "aplikacje na Androida",
     "description": "Twórcy najlepszych modyfikacji YouTube przedstawiają Morphe - potężne narzędzie do modyfikowania aplikacji, które daje Ci pełną kontrolę",
     "download": "Pobierz Morphe",
-    "learn-more": "Dowiedz się więcej",
-    "social-label": "Dołącz do społeczności"
+    "social-label": "Dołącz do społeczności",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Zero reklam",
@@ -177,7 +177,8 @@
     "support-donate": "Wesprzyj",
     "copyright": "Otwarte i zawsze darmowe.",
     "language": "Język",
-    "product-changelog": "Co nowego"
+    "product-changelog": "Co nowego",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Analityka",
@@ -227,7 +228,7 @@
   },
   "error": {
     "404-title": "404 - Nie znaleziono strony",
-    "not-found": "Nie można znaleźć strony", 
+    "not-found": "Nie można znaleźć strony",
     "go-home": "Wróć na stronę główną"
   },
   "changelog": {
@@ -241,5 +242,12 @@
     "older-releases": "Szukasz starszych wersji?",
     "view-manager": "Zobacz wersje menedżera",
     "view-patches": "Zobacz wersje modyfikacji"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

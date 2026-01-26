@@ -12,8 +12,8 @@
     "title-highlight": "Android 앱을 변환하세요",
     "description": "최고의 모드 YouTube 앱을 제공한 개발자들이 선보이는 Morphe - 당신이 제어하는 강력한 앱 수정 도구",
     "download": "Morphe 다운로드",
-    "learn-more": "자세히 보기",
-    "social-label": "커뮤니티 참여"
+    "social-label": "커뮤니티 참여",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "광고 차단",
@@ -177,7 +177,8 @@
     "support-donate": "후원하기",
     "copyright": "영원히 오픈 소스이며 무료입니다.",
     "language": "언어",
-    "product-changelog": "새 소식"
+    "product-changelog": "새 소식",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "분석",
@@ -241,5 +242,12 @@
     "older-releases": "이전 릴리스를 찾고 계신가요?",
     "view-manager": "Manager 릴리스 보기",
     "view-patches": "패치 릴리스 보기"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

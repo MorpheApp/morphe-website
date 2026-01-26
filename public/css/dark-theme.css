@@ -170,6 +170,38 @@
     border-color: var(--border);
 }
 
+[data-theme="dark"] .patches-search {
+    background: var(--gray-200);
+    color: var(--text-secondary);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .patches-search:focus {
+    border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .patch-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .patch-header {
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .patch-option {
+    background: var(--gray-200);
+}
+
+[data-theme="dark"] .patch-toggle-btn {
+    background: var(--gray-200);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .patch-toggle-btn:hover {
+    background: var(--gray-300);
+}
+
 /* Footer */
 [data-theme="dark"] .footer {
     background: var(--gray-50);

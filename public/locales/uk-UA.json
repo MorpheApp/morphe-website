@@ -12,8 +12,8 @@
     "title-highlight": "Android застосунки",
     "description": "Від розробників, які створили найкращі модифікації YouTube та YT Music, приходить Morphe - потужний інструмент модифікації застосунків, який дає вам повний контроль",
     "download": "Завантажити Morphe",
-    "learn-more": "Дізнатися більше",
-    "social-label": "Приєднуйтесь до спільноти"
+    "social-label": "Приєднуйтесь до спільноти",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Блокування реклами",
@@ -177,7 +177,8 @@
     "support-donate": "Підтримати",
     "copyright": "Відкритий код. Вільний назавжди.",
     "language": "Мова",
-    "product-changelog": "Що нового"
+    "product-changelog": "Що нового",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Аналітика",
@@ -241,5 +242,12 @@
     "older-releases": "Шукаєте старіші релізи?",
     "view-manager": "Переглянути релізи Manager",
     "view-patches": "Переглянути релізи Patches"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

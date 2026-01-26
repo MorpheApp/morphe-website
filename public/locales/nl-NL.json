@@ -12,8 +12,8 @@
     "title-highlight": "Android-apps",
     "description": "Van de makers van de beste aangepaste YouTube-apps komt Morphe — de krachtige tool waarmee jij de controle hebt",
     "download": "Morphe downloaden",
-    "learn-more": "Meer informatie",
-    "social-label": "Word lid van de community"
+    "social-label": "Word lid van de community",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Advertentieblokkering",
@@ -177,7 +177,8 @@
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
     "language": "Taal",
-    "product-changelog": "Wat is er nieuw"
+    "product-changelog": "Wat is er nieuw",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Analyse",
@@ -241,5 +242,12 @@
     "older-releases": "Op zoek naar oudere releases?",
     "view-manager": "Manager-releases bekijken",
     "view-patches": "Patch-releases bekijken"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }

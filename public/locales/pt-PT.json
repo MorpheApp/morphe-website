@@ -12,8 +12,8 @@
     "title-highlight": "Apps Android",
     "description": "Dos criadores das melhores apps modificadas do YouTube, chega o Morphe — a poderosa ferramenta de modificação de aplicações que te dá controlo total",
     "download": "Transferir Morphe",
-    "learn-more": "Saber mais",
-    "social-label": "Junta-te à comunidade"
+    "social-label": "Junta-te à comunidade",
+    "view-patches": "View Patches"
   },
   "feature": {
     "ad-blocking": "Bloqueio de anúncios",
@@ -177,7 +177,8 @@
     "support-donate": "Doar",
     "copyright": "Open source e gratuito para sempre.",
     "language": "Idioma",
-    "product-changelog": "Novidades"
+    "product-changelog": "Novidades",
+    "product-patches": "Available Patches"
   },
   "analytics": {
     "title": "Analytics",
@@ -241,5 +242,12 @@
     "older-releases": "À procura de versões antigas?",
     "view-manager": "Ver versões do Manager",
     "view-patches": "Ver versões de Patches"
+  },
+  "patches": {
+    "title": "Available Patches",
+    "subtitle": "Browse all available patches and customizations",
+    "filter-package": "Package:",
+    "filter-all": "All",
+    "search-placeholder": "patches.search-placeholder"
   }
 }
