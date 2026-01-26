@@ -5,138 +5,138 @@
     "testimonials": "Opinie",
     "faq": "FAQ",
     "donate": "Wesprzyj",
-    "changelogs": "Nowości"
+    "changelogs": "Co nowego"
   },
   "hero": {
-    "title": "Przekształć swoje",
-    "title-highlight": "aplikacje Android",
-    "description": "Od twórców najlepszych zmodyfikowanych aplikacji YouTube — Morphe to potężne narzędzie do modyfikacji aplikacji, które daje Ci pełną kontrolę",
+    "title": "Podkręć swoje",
+    "title-highlight": "aplikacje na Androida",
+    "description": "Twórcy najlepszych modyfikacji YouTube przedstawiają Morphe - potężne narzędzie do modyfikowania aplikacji, które daje Ci pełną kontrolę",
     "download": "Pobierz Morphe",
     "learn-more": "Dowiedz się więcej",
     "social-label": "Dołącz do społeczności"
   },
   "feature": {
-    "ad-blocking": "Blokowanie reklam",
-    "ad-blocking-desc": "Blokuj wszystkie reklamy i ciesz się nieprzerwanym korzystaniem z aplikacji",
+    "ad-blocking": "Zero reklam",
+    "ad-blocking-desc": "Wytnij wszystkie reklamy i oglądaj co chcesz bez zbędnych przerw",
     "sponsorblock": "SponsorBlock",
     "sponsorblock-desc": "Automatycznie pomijaj sponsorowane fragmenty dzięki społeczności",
-    "show-dislikes": "Pokaż dislikes",
-    "show-dislikes-desc": "Zobacz prawdziwą liczbę ocen negatywnych",
+    "show-dislikes": "Pokaż łapki w dół",
+    "show-dislikes-desc": "Przywróć licznik łapek w dół i nie trać czasu na kiepskie filmy",
     "swipe-controls": "Sterowanie gestami",
     "swipe-controls-desc": "Steruj głośnością i jasnością za pomocą gestów",
-    "custom-themes": "Motywy niestandardowe",
-    "custom-themes-desc": "Personalizuj aplikację za pomocą motywów i kolorów",
+    "custom-themes": "Własne motywy",
+    "custom-themes-desc": "Spersonalizuj swoją aplikację dzięki pięknym motywom i kolorom",
     "hide-content": "Ukrywanie treści",
-    "hide-content-desc": "Ukrywaj niechciane treści, Shorts i rekomendacje"
+    "hide-content-desc": "Ukrywaj niechciane treści, Shortsy i rekomendacje"
   },
   "how-it-works": {
     "title": "Jak działa Morphe",
-    "subtitle": "Prosto, potężnie i dla każdego",
+    "subtitle": "Prosto, skutecznie i dla każdego",
     "step1-title": "1. Pobierz Morphe",
-    "step1-desc": "Pobierz najnowszą wersję Morphe i zainstaluj ją na swoim urządzeniu z Androidem.",
+    "step1-desc": "Ściągnij najnowszą wersję Morphe i zainstaluj ją na swoim Androidzie.",
     "step2-title": "2. Wybierz aplikację",
-    "step2-desc": "Wybierz aplikację do modyfikacji. Obecnie obsługiwane są YouTube i YouTube Music.",
-    "step3-title": "3. Zastosuj patche",
+    "step2-desc": "Wybierz aplikację, którą chcesz zmodyfikować.",
+    "step3-title": "3. Zastosuj modyfikacje",
     "step3-desc": "Morphe automatycznie zmodyfikuje wybraną aplikację.",
     "step4-title": "4. Zainstaluj i korzystaj",
-    "step4-desc": "Zainstaluj zmodyfikowaną aplikację i ciesz się doświadczeniem.",
+    "step4-desc": "Zainstaluj zmodyfikowaną aplikację i ciesz się apkami na własnych zasadach.",
     "supported-title": "Obsługiwane aplikacje"
   },
   "testimonials": {
     "title": "Co mówią użytkownicy",
     "subtitle": "Opinie od prawdziwych użytkowników i zdecydowanie nie zmyślone",
     "quote_1": {
-      "text": "Kiedyś spędzałam godziny na ręcznym konfigurowaniu patchy. Teraz po prostu klikam „Patch” i idę zrobić kawę. Gdy wracam, wszystko jest gotowe. Rewolucja!",
+      "text": "Kiedyś traciłam godziny na ręczne dłubanie w modyfikacjach. Teraz po prostu klikam \"Modyfikuj\", idę zrobić kawę i po powrocie wszystko jest gotowe. Czysta magia!",
       "author": "Lisa Smith",
       "role": "Miłośniczka kawy"
     },
     "quote_2": {
-      "text": "Każdy inny patcher przypomina operację mózgu z zawiązanymi oczami. Z Morphe to tylko kilka kliknięć i aplikacja po patchowaniu działa lepiej niż kiedykolwiek.",
+      "text": "Korzystanie z innych modyfikatorów przypomina operację mózgu po ciemku. Ale z Morphe wystarczy kilka kliknięć i moja apka dostaje turbodoładowania. Jest lepiej niż kiedykolwiek!",
       "author": "Alex Chen",
       "role": "Zaawansowany użytkownik"
     },
     "quote_3": {
-      "text": "To jak Vanced, tylko lepsze i bez tej dziwnej korporacyjnej atmosfery.",
+      "text": "To jak Vanced, tylko lepszy i bez tej całej dziwnej, korporacyjnej sztywności.",
       "author": "Sarah Johnson",
       "role": "Była użytkowniczka Vanced"
     },
     "quote_4": {
-      "text": "Moja 87-letnia babcia zapytała mnie, dlaczego mój YouTube wygląda inaczej. Pokazałem jej Morphe i teraz patchuje aplikacje dla całej swojej społeczności emerytów.",
+      "text": "Moja 87-letnia babcia zapytała mnie kiedyś, czemu mój YouTube wygląda inaczej. Pokazałem jej Morphe i teraz modyfikuje apki wszystkim koleżankom w sanatorium.",
       "author": "David Kin",
       "role": "Dumny wnuk"
     },
     "quote_5": {
-      "text": "Próbowałem innych patcherów i mój telefon się zapalił. Z Morphe telefon jest po prostu idealnie zmodyfikowany. 10/10 — nie zapłonął ponownie.",
+      "text": "Próbowałem innych modyfikatorów i mój telefon niemal stanął w ogniu. Z Morphe wszystko jest idealnie zmodyfikowane. 10/10, polecam każdemu, kto nie chce, by jego smartfon nagle zamienił się w granat.",
       "author": "Ryan Martinez",
-      "role": "Zwolennik bezpieczeństwa pożarowego"
+      "role": "Ekspert od ochrony przeciwpożarowej"
     },
     "quote_6": {
-      "text": "Mój kot zrzucił telefon ze stołu, gdy Morphe patchował aplikację. Telefon przetrwał, a patchowanie zakończyło się sukcesem. Kot zatwierdził.",
+      "text": "Mój kot zrzucił telefon ze stołu dokładnie w momencie, gdy Morphe nakładało modyfikacje. Telefon przeżył, a proces zakończył się bez błędu. Kot daje okejkę.",
       "author": "Emma Jones",
       "role": "Właścicielka kota"
     },
     "quote_7": {
-      "text": "Pokazałem Morphe mojemu ojcu, który kompletnie nie ogarnia technologii. Teraz patchuje aplikacje lepiej ode mnie. Kwestionuję całą swoją karierę w IT.",
+      "text": "Pokazałem Morphe mojemu tacie, który z technologią jest kompletnie na bakier. Teraz sam modyfikuje apki lepiej ode mnie. Zaczynam kwestionować całą moją karierę w IT.",
       "author": "Tom Anderson",
       "role": "W kryzysie egzystencjalnym"
     },
     "quote_8": {
-      "text": "Moja była dziewczyna wróciła do mnie po tym, jak zacząłem używać Morphe. Przypadek? Nie sądzę!",
+      "text": "Moja była dziewczyna do mnie wróciła, odkąd zacząłem używać Morphe. Przypadek? Nie sądzę!",
       "author": "Mike Thompson",
-      "role": "Ekspert od związków"
+      "role": "Ekspert od relacji"
     },
     "quote_9": {
-      "text": "Morphe to jedyna rzecz, która ratuje mnie przed 60-sekundowymi, niepomijalnymi reklamami pasty do zębów.",
+      "text": "Morphe to jedyna rzecz, która ratuje mnie przed minutowymi, niepomijalnymi reklamami pasty do zębów.",
       "author": "Casey Morgan",
-      "role": "Nie dentysta"
+      "role": "(Nie)dentysta"
     },
     "quote_10": {
-      "text": "Myślałem, że Morphe to jakiś mało znany grecki bóg. Okazało się, że jest lepszy.",
+      "text": "Myślałem, że Morphe to jakiś zapomniany grecki bóg. Okazuje się, że to coś znacznie lepszego.",
       "author": "Oliver Grant",
       "role": "Student historii"
     },
     "quote_11": {
-      "text": "Zanim poznałem Morphe, myślałem, że APK to nowy zespół K-pop. Teraz wiem lepiej.",
+      "text": "Zanim trafiłem na Morphe, myślałem, że APK to nowa kapela K-popowa. Teraz już nie dam się tak nabrać.",
       "author": "Jeff Cooper",
       "role": "Zdezorientowany wujek"
     },
     "quote_12": {
-      "text": "Gdy zobaczyłem, że Morphe jest darmowy, zareagowałem jak na darmowe próbki jedzenia. Nie myślę — działam.",
+      "text": "Kiedy zobaczyłem, że Morphe jest darmowy, zareagowałem jak na darmowe próbki jedzenia w markecie. Tu się nie myśli, tu się bierze.",
       "author": "Tyler James",
-      "role": "Decydent refleksyjny"
+      "role": "Łowca okazji"
     },
     "quote_13": {
-      "text": "Morphe naprawił moje Wi-Fi, zapłacił podatki i rozwiązał problem głodu na świecie. No dobra, nie — ale YouTube spatchował idealnie.",
+      "text": "Morphe naprawiło moje WiFi, rozliczyło za mnie PiT i rozwiązało problem głodu na świecie. No dobra, może nie, ale za to zmodyfikowało YouTube'a bez żadnego błędu.",
       "author": "Sarah Williams",
-      "role": "Mistrzyni przesady"
+      "role": "Mistrzyni wyolbrzymiania"
     },
     "quote_14": {
-      "text": "Pokazałem Morphe mojemu psu i teraz radzi sobie z technologią lepiej ode mnie.",
+      "text": "Pokazałem Morphe mojemu psu i teraz on ogarnia technologię lepiej niż ja.",
       "author": "Kevin Park",
-      "role": "Były ekspert technologiczny"
+      "role": "Były ekspert IT"
     },
     "quote_15": {
-      "text": "Morphe spatchował moje aplikacje tak dobrze, że zaczynam się zastanawiać, czy potrafi też spatchować moje życiowe decyzje.",
+      "text": "Morphe zmodyfikowało moje apki tak dobrze, że teraz zastanawiam się, czy mogłoby zmodyfikować też moje życiowe wybory.",
       "author": "Doug Miller",
       "role": "Entuzjasta samodoskonalenia"
     },
     "quote_16": {
-      "text": "Kliknąłem zły przycisk i przypadkowo zostałem milionerem. Nie wiem jak, ale Morphe miał z tym coś wspólnego.",
+      "text": "Kliknąłem nie ten przycisk i przez przypadek zostałem milionerem. Nie wiem, jak to się stało, ale Morphe maczało w tym palce.",
       "author": "Lucky Luke",
-      "role": "Przypadkowy miliarder"
+      "role": "Miliarder z przypadku"
     },
     "quote_17": {
-      "text": "Dzięki blokowaniu reklam w Morphe w końcu miałem jasność umysłu, by dokończyć badania i zmienić bieg historii ludzkości. Morphe zasługuje na Nobla bardziej niż ja.",
+      "text": "Dzięki blokowaniu reklam w Morphe w końcu odzyskałem jasność umysłu, by dokończyć badania, które zmienią losy ludzkości. Morphe bardziej zasługuje na Nobla niż ja.",
       "author": "Dr. Sheldon Lee",
       "role": "Fizyk teoretyczny"
     },
     "quote_18": {
-      "text": "Pokazałem Morphe znajomym i teraz myślą, że jestem jakimś podziemnym czarodziejem technologii. Nie wyprowadzam ich z błędu.",
+      "text": "Pokazałem znajomym Morphe i teraz myślą, że jestem jakimś podziemnym magiem technologii. Nie wyprowadzam ich z błędu.",
       "author": "Owen Price",
       "role": "Czarodziej"
     },
     "quote_19": {
-      "text": "Morphe zablokował tyle reklam, że mój telefon wydaje się lżejszy. Chyba stracił emocjonalną wagę.",
+      "text": "Morphe zablokowało tyle reklam, że mój telefon wydaje się lżejszy. Myślę, że zrzucił spory ciężar emocjonalny.",
       "author": "Sienna Brooks",
       "role": "Cyfrowa minimalistka"
     }
@@ -144,28 +144,28 @@
   "faq": {
     "title": "Często zadawane pytania",
     "subtitle": "Wszystko, co musisz wiedzieć o Morphe",
-    "q1": "Jakie aplikacje Morphe może modyfikować?",
-    "a1": "Możesz modyfikować dowolną aplikację, o ile jest to YouTube lub YouTube Music.",
+    "q1": "Jakie aplikacje obsługuje Morphe?",
+    "a1": "Możesz modyfikować co tylko chcesz... pod warunkiem, że chcesz YouTube'a lub YouTube Music. Cały czas pracujemy nad wsparciem dla kolejnych apek.",
     "q2": "Czy Morphe jest bezpieczne?",
-    "a2": "Tak bezpieczne, jak modyfikacja obfuskowanego bytecode.",
+    "a2": "Tak bezpieczne, jak tylko może być modyfikowanie kodu bajtowego. Cały kod Morphe jest otwarty, więc każdy może go przejrzeć. Nasza społeczność na bieżąco go sprawdza i rozwija.",
     "q3": "Czy Morphe może uszkodzić telefon?",
-    "a3": "Tylko jeśli telefon sam zdecyduje się zepsuć.",
-    "q4": "Czy mogę dostosować aplikacje?",
-    "a4": "Tak, ale zalecamy umiarkowaną personalizację.",
+    "a3": "Tylko jeśli Twój telefon sam uzna, że ma na to ochotę. Morphe modyfikuje tylko pakiety aplikacji i nie dotyka plików systemowych, więc Twoje urządzenie jest bezpieczne.",
+    "q4": "Czy mogę dostosować aplikacje pod siebie?",
+    "a4": "Jasne, ale nie miej pretensji do Morphe, jeśli od nadmiaru funkcji zakręci Ci się w głowie. Zalecamy modowanie z umiarem.",
     "q5": "Jaka jest polityka prywatności Morphe?",
-    "q6": "Dlaczego nazwa Morphe?",
-    "a6": "Ponieważ skrót AAMATT nie brzmi atrakcyjnie.",
+    "q6": "Skąd nazwa Morphe?",
+    "a6": "Gdyż nazwa \"Android App Modification And Transformation Tool\" (AAMATT) nie brzmi zbyt chwytliwie. Poza tym Morphe kojarzy się z metamorfozą Twoich aplikacji w coś znacznie lepszego.",
     "q7": "Czy Morphe to magia?",
-    "a7": "Nie. Ale trochę tak.",
+    "a7": "I tak i nie. To po prostu zaawansowana manipulacja kodem, która daje magiczne efekty.",
     "q8": "Czy mogę pomóc w rozwoju Morphe?",
-    "a8-part1": "Tak! Sprawdź nasze",
-    "a8-github": "repozytoria GitHub",
-    "a8-part2": ". Doceniamy także",
+    "a8-part1": "Pewnie! Sprawdź wytyczne dla twórców w naszych",
+    "a8-github": "repozytoriach na GitHubie",
+    "a8-part2": ". Jeśli nie programujesz, zawsze doceniamy",
     "a8-donate": "darowizny",
-    "a8-part3": "."
+    "a8-part3": ", które pomagają nam opłacić rachunki."
   },
   "footer": {
-    "description": "Nowa generacja modyfikacji aplikacji Android",
+    "description": "Nowa generacja modyfikacji aplikacji na Androida",
     "product": "Produkt",
     "product-home": "Strona główna",
     "product-microg": "Pobierz MicroG",
@@ -175,71 +175,71 @@
     "support-faq": "FAQ",
     "support-how": "Jak działa Morphe",
     "support-donate": "Wesprzyj",
-    "copyright": "Open source i zawsze darmowe.",
+    "copyright": "Otwarte i zawsze darmowe.",
     "language": "Język",
-    "product-changelog": "Nowości"
+    "product-changelog": "Co nowego"
   },
   "analytics": {
     "title": "Analityka",
     "part1": "Ta strona korzysta z ",
-    "part2": "i Google Analytics 4: Brak ciasteczek, brak reklam, brak profilowania, a dane nie są sprzedawane ani udostępniane.",
-    "part3": "Morphe nie dodaje analityki ani zbierania danych do żadnych zmodyfikowanych aplikacji."
+    "part2": "i Google Analytics 4: bez ciasteczek, bez reklam, bez profilowania i bez sprzedaży lub udostępniania danych.",
+    "part3": "Morphe nie dodaje żadnych modułów analitycznych ani skryptów zbierających dane do zmodyfikowanych aplikacji."
   },
   "donate": {
     "title": "Wsparcie",
-    "description": "Twoje wsparcie pomaga rozwijać Morphe",
-    "why-title": "Dlaczego warto wesprzeć?",
-    "why-1": "Zachować Morphe darmowe i open source",
-    "why-2": "Wspierać rozwój",
-    "why-3": "Pokryć koszty infrastruktury",
-    "why-4": "Szybsze poprawki i nowe funkcje",
+    "description": "Twoje wsparcie pozwala nam dalej rozwijać i ulepszać Morphe dla wszystkich",
+    "why-title": "Dlaczego warto?",
+    "why-1": "Morphe pozostaje darmowe i otwarte",
+    "why-2": "Dbasz o to, by projekt wciąż żył i się rozwijał",
+    "why-3": "Pomagasz nam opłacić serwery i infrastrukturę",
+    "why-4": "Mniej czekania na poprawki i więcej nowych bajerów",
     "crypto-click": "Kliknij, aby otworzyć portfel"
   },
   "microg": {
     "title": "Pobierz",
-    "description": "MicroG jest wymagane do YouTube Morphe i YT Music Morphe",
+    "description": "MicroG jest niezbędne do poprawnego działania YouTube Morphe oraz YT Music Morphe",
     "download": "Pobierz MicroG",
     "what-title": "Czym jest MicroG?",
     "feature1-title": "Usługi Google",
-    "feature1-desc": "Obsługa Google Play Services.",
+    "feature1-desc": "MicroG zastępuje Usługi Google Play, umożliwiając logowanie się na Twoje konto w aplikacjach Morphe.",
     "feature2-title": "Prywatność",
-    "feature2-desc": "Otwartoźródłowa implementacja usług Google.",
-    "feature3-title": "Jednorazowa instalacja",
-    "feature3-desc": "Jedna instalacja dla wszystkich aplikacji Morphe."
+    "feature2-desc": "To otwarta alternatywa dla usług Google, która dba o Twoją prywatność, zapewniając tylko to, co niezbędne do działania apek.",
+    "feature3-title": "Instalujesz raz i zapominasz",
+    "feature3-desc": "Wystarczy jedna instalacja, by obsłużyć wszystkie apki Morphe, nawet po ich aktualizacji."
   },
   "translate": {
-    "title": "Pomóż w tłumaczeniu",
-    "description": "Pomóż udostępnić Morphe użytkownikom na całym świecie",
-    "cta": "Rozpocznij tłumaczenie na",
-    "how-title": "Jak pomóc",
-    "step1-title": "1. Zarejestruj się w Crowdin",
-    "step1-desc": "Załóż darmowe konto Crowdin.",
+    "title": "Pomóż nam w tłumaczeniu",
+    "description": "Spraw, by Morphe było dostępne dla milionów osób na całym świecie, pomagając nam w lokalizacji na Twój język.",
+    "cta": "Zacznij tłumaczyć na",
+    "how-title": "Jak możesz pomóc?",
+    "step1-title": "1. Dołącz do Crowdin",
+    "step1-desc": "Załóż darmowe konto na platformie Crowdin. Zajmie Ci to minutę i otworzy drzwi do tłumaczenia Morphe oraz innych otwartych projektów.",
     "step2-title": "2. Wybierz język",
-    "step2-desc": "Wybierz język do tłumaczenia.",
-    "step3-title": "3. Tłumacz",
-    "step3-desc": "Tłumacz teksty w prostym interfejsie.",
-    "step4-title": "4. Zobacz efekt",
-    "step4-desc": "Twoje tłumaczenia trafią do kolejnych wersji.",
-    "why-title": "Dlaczego tłumaczyć?",
-    "why-1": "Pomoc społeczności",
-    "why-2": "Globalny zasięg",
-    "why-3": "Wsparcie open source"
+    "step2-desc": "Wskaż język, w którym czujesz się najlepiej. Możesz tworzyć nowe tłumaczenia lub poprawiać te już istniejące.",
+    "step3-title": "3. Zacznij tłumaczyć",
+    "step3-desc": "Korzystaj z prostego interfejsu Crowdin, by tłumaczyć kolejne frazy. Każde słowo przybliża nas do dotarcia do nowych użytkowników.",
+    "step4-title": "4. Zobacz efekty",
+    "step4-desc": "Twoje tłumaczenia zostaną zweryfikowane i trafią do kolejnych wersji Morphe, realnie pomagając ludziom na całym świecie.",
+    "why-title": "Dlaczego warto?",
+    "why-1": "Pomagasz lokalnej społeczności",
+    "why-2": "Współtworzysz globalny projekt",
+    "why-3": "Masz swój wkład w świat Open Source"
   },
   "error": {
     "404-title": "404 - Nie znaleziono strony",
-    "not-found": "Nie można znaleźć strony",
+    "not-found": "Nie można znaleźć strony", 
     "go-home": "Wróć na stronę główną"
   },
   "changelog": {
-    "title": "Nowości",
-    "subtitle": "Pełna historia aktualizacji i ulepszeń",
+    "title": "Co nowego",
+    "subtitle": "Pełna historia zmian i ulepszeń",
     "filter-type": "Typ:",
     "filter-all": "Wszystkie",
-    "filter-manager": "Manager",
-    "filter-patches": "Łatki",
+    "filter-manager": "Menedżer",
+    "filter-patches": "Modyfikacje",
     "show-dev": "Pokaż wersje przedpremierowe",
     "older-releases": "Szukasz starszych wersji?",
-    "view-manager": "Zobacz wersje Managera",
-    "view-patches": "Zobacz wersje Łatek"
+    "view-manager": "Zobacz wersje menedżera",
+    "view-patches": "Zobacz wersje modyfikacji"
   }
 }
