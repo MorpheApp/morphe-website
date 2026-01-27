@@ -35,7 +35,7 @@
     "step1-title": "1. 下载Morphe",
     "step1-desc": "下载最新版本的Morphe并安装到您的Android设备上。",
     "step2-title": "2. 选择应用",
-    "step2-desc": "请选择您想要修改的应用。目前 Morphe 支持 YouTube、YouTube Music 和 Reddit。",
+    "step2-desc": "请选择您想要修改的应用。",
     "step3-title": "3. 应用补丁",
     "step3-desc": "Morphe将自动为您选择的应用打补丁。",
     "step4-title": "4. 安装并享受",

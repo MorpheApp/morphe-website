@@ -35,7 +35,7 @@
     "step1-title": "1. Download Morphe",
     "step1-desc": "Download the latest version of Morphe and install it on your Android device.",
     "step2-title": "2. Choose Your App",
-    "step2-desc": "Select the app you want to modify. Currently Morphe supports YouTube, YouTube Music, and Reddit.",
+    "step2-desc": "Select the app you want to modify.",
     "step3-title": "3. Apply Patches",
     "step3-desc": "Morphe will automatically patch your selected app.",
     "step4-title": "4. Install & Enjoy",

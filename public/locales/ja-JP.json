@@ -35,7 +35,7 @@
     "step1-title": "1. Morpheをダウンロード",
     "step1-desc": "最新版のMorpheをダウンロードし、Androidデバイスにインストールします。",
     "step2-title": "2. アプリを選択",
-    "step2-desc": "変更したいアプリを選択してください。現在、MorpheはYouTube、YouTube Music、Redditに対応しています。",
+    "step2-desc": "変更したいアプリを選択してください。",
     "step3-title": "3. パッチを適用",
     "step3-desc": "Morpheが選択したアプリに自動的にパッチを適用します。",
     "step4-title": "4. インストールして楽しむ",
