@@ -34,6 +34,47 @@ function fetchUrl(url) {
     });
 }
 
+/**
+ * Parse version string into comparable parts
+ * Returns object with major, minor, patch, and prerelease info
+ */
+function parseVersion(versionString) {
+    const parts = versionString.match(/^(\d+)\.(\d+)\.(\d+)(?:-(.+))?$/);
+    if (!parts) return null;
+
+    return {
+        major: parseInt(parts[1]),
+        minor: parseInt(parts[2]),
+        patch: parseInt(parts[3]),
+        prerelease: parts[4] || null
+    };
+}
+
+/**
+ * Compare two version strings
+ * Returns: -1 if a < b, 0 if equal, 1 if a > b
+ */
+function compareVersions(versionA, versionB) {
+    const a = parseVersion(versionA);
+    const b = parseVersion(versionB);
+
+    if (!a || !b) return 0;
+
+    // Compare major, minor, patch
+    if (a.major !== b.major) return a.major - b.major;
+    if (a.minor !== b.minor) return a.minor - b.minor;
+    if (a.patch !== b.patch) return a.patch - b.patch;
+
+    // If versions are equal up to patch, handle prerelease
+    // Stable versions (no prerelease) come AFTER prereleases
+    if (!a.prerelease && !b.prerelease) return 0;
+    if (!a.prerelease) return 1;  // a is stable, b is prerelease
+    if (!b.prerelease) return -1; // a is prerelease, b is stable
+
+    // Both are prereleases, compare prerelease strings
+    return a.prerelease.localeCompare(b.prerelease);
+}
+
 function parseChangelog(markdown, type) {
     const lines = markdown.split('\n');
     const versions = [];
@@ -195,12 +236,20 @@ async function generateChangelog() {
     function limitStableWithDev(versions, maxStable) {
         const stable = versions
             .filter(v => !v.isDev)
-            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .sort((a, b) => {
+                const dateCompare = new Date(b.date) - new Date(a.date);
+                if (dateCompare !== 0) return dateCompare;
+                return compareVersions(b.version, a.version);
+            })
             .slice(0, maxStable);
 
         const dev = versions
             .filter(v => v.isDev)
-            .sort((a, b) => new Date(b.date) - new Date(a.date));
+            .sort((a, b) => {
+                const dateCompare = new Date(b.date) - new Date(a.date);
+                if (dateCompare !== 0) return dateCompare;
+                return compareVersions(b.version, a.version);
+            });
 
         return [...stable, ...dev];
     }
@@ -209,7 +258,14 @@ async function generateChangelog() {
     const limitedPatchesVersions = limitStableWithDev(patchesVersions, MAX_PATCHES_RELEASES);
 
     const allVersions = [...limitedManagerVersions, ...limitedPatchesVersions]
-        .sort((a, b) => new Date(b.date) - new Date(a.date));
+        .sort((a, b) => {
+            // First sort by date (newest first)
+            const dateCompare = new Date(b.date) - new Date(a.date);
+            if (dateCompare !== 0) return dateCompare;
+
+            // If dates are equal, sort by version (newest first)
+            return compareVersions(b.version, a.version);
+        });
 
     console.log(`✅ Found ${allVersions.length} releases`);
 
