@@ -116,6 +116,10 @@ jobs:
           sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/microg.html
           echo "Updated public/microg.html with MicroG download link."
 
+      # Must inline first then minify
+      - name: Inline HTML/CSS/JS
+        run: npm run inline
+
       - name: Minify HTML/CSS/JS
         run: npm run minify
 

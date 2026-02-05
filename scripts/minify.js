@@ -80,7 +80,7 @@ function shouldMinify(filePath) {
     return false;
   }
 
-  return ['.html', '.js'].includes(ext);
+  return ['.html', '.js', '.css'].includes(ext);
 }
 
 /**
@@ -139,7 +139,7 @@ async function minifyJSFile(filePath) {
 async function minifyFile(filePath) {
   const ext = path.extname(filePath);
 
-  if (ext === '.html') {
+  if (ext === '.html' || ext === '.css') {
     await minifyHTMLFile(filePath);
   } else if (ext === '.js') {
     await minifyJSFile(filePath);
