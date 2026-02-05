@@ -6,11 +6,16 @@
     "i18n:check": "node scripts/check-translations.js",
     "precommit": "npm run i18n:extract && npm run i18n:check",
     "changelog:generate": "node scripts/generate-changelog.js",
-    "minify": "node scripts/minify.js"
+    "minify": "node scripts/minify.js",
+    "inline": "node scripts/inline.js"
   },
   "devDependencies": {
     "glob": "^10.5.0",
+    "html-inline": "^1.2.0",
     "html-minifier-terser": "^7.2.0",
     "terser": "^5.36.0"
+  },
+  "dependencies": {
+    "web-resource-inliner": "^8.0.0"
   }
 }
