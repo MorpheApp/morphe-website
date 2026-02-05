@@ -71,8 +71,40 @@ function compareVersions(versionA, versionB) {
     if (!a.prerelease) return 1;  // a is stable, b is prerelease
     if (!b.prerelease) return -1; // a is prerelease, b is stable
 
-    // Both are prereleases, compare prerelease strings
-    return a.prerelease.localeCompare(b.prerelease);
+    // Both are prereleases, compare prerelease parts intelligently
+    return comparePrereleaseVersions(a.prerelease, b.prerelease);
+}
+
+/**
+ * Compare prerelease versions intelligently (handles numbers)
+ * e.g., "dev.10" > "dev.9", "alpha.2" < "beta.1"
+ */
+function comparePrereleaseVersions(a, b) {
+    const aParts = a.split('.');
+    const bParts = b.split('.');
+
+    const maxLen = Math.max(aParts.length, bParts.length);
+
+    for (let i = 0; i < maxLen; i++) {
+        const aPart = aParts[i] || '';
+        const bPart = bParts[i] || '';
+
+        // Try to parse as numbers
+        const aNum = parseInt(aPart);
+        const bNum = parseInt(bPart);
+
+        // If both are numbers, compare numerically
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            if (aNum !== bNum) return aNum - bNum;
+            continue;
+        }
+
+        // Otherwise compare as strings
+        const strCompare = aPart.localeCompare(bPart);
+        if (strCompare !== 0) return strCompare;
+    }
+
+    return 0;
 }
 
 function parseChangelog(markdown, type) {
