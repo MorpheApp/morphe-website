@@ -20,6 +20,9 @@
     /* Semantic Colors */
     --background: #18181b;
     --surface: #27272a;
+    --section-a: #18181b;
+    --section-b: #27272a;
+    --section-divider: rgba(255, 255, 255, 0.06);
     --text-primary: #fafafa;
     --text-secondary: #d4d4d8;
     --text-tertiary: #a1a1aa;
@@ -40,6 +43,15 @@
 
 [data-theme="dark"] .feature-card {
     background: var(--surface);
+}
+
+[data-theme="dark"] .community-card {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .community-icon-img {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
 }
 
 [data-theme="dark"] .feature-icon-item {
@@ -94,18 +106,6 @@
     color: var(--text-secondary);
 }
 
-[data-theme="dark"] .how-it-works {
-    background: var(--gray-100);
-}
-
-[data-theme="dark"] .donate {
-    background: var(--gray-100);
-}
-
-[data-theme="dark"] .faq {
-    background: var(--gray-100);
-}
-
 [data-theme="dark"] .faq-answer p {
     color: var(--text-secondary);
 }
@@ -123,10 +123,6 @@
 }
 
 /* Changelogs */
-[data-theme="dark"] .changelog {
-    background: var(--gray-100);
-}
-
 [data-theme="dark"] .changelog-filters {
     background: var(--surface);
 }
@@ -168,6 +164,25 @@
 [data-theme="dark"] .show-more-section {
     background: var(--surface);
     border-color: var(--border);
+}
+
+/* App Features Showcase */
+[data-theme="dark"] .app-tab {
+    border-color: var(--border);
+    color: var(--text-tertiary);
+}
+
+[data-theme="dark"] .app-tab:hover {
+    border-color: var(--gray-400);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .feature-slide {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .carousel-dot {
+    background: var(--gray-500);
 }
 
 /* Footer */
