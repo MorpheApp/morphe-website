@@ -15,20 +15,6 @@
     "learn-more": "Learn More",
     "social-label": "Join the Community"
   },
-  "feature": {
-    "ad-blocking": "Ad Blocking",
-    "ad-blocking-desc": "Block all ads and enjoy uninterrupted content across your apps",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "Skip sponsored segments automatically with community-powered timestamps",
-    "show-dislikes": "Show Dislikes",
-    "show-dislikes-desc": "See real dislike counts to make better viewing decisions",
-    "swipe-controls": "Swipe Controls",
-    "swipe-controls-desc": "Control volume and brightness with intuitive swipe gestures",
-    "custom-themes": "Custom Themes",
-    "custom-themes-desc": "Personalize your app with beautiful custom themes and colors",
-    "hide-content": "Hide Content",
-    "hide-content-desc": "Hide unwanted content, Shorts, and recommendations for a cleaner feed"
-  },
   "how-it-works": {
     "title": "How Morphe Works",
     "subtitle": "Simple, powerful, and built for everyone",
@@ -39,8 +25,7 @@
     "step3-title": "3. Apply Patches",
     "step3-desc": "Morphe will automatically patch your selected app.",
     "step4-title": "4. Install & Enjoy",
-    "step4-desc": "Install the patched app and enjoy your customized experience.",
-    "supported-title": "Supported Apps"
+    "step4-desc": "Install the patched app and enjoy your customized experience."
   },
   "testimonials": {
     "title": "What Users Say",
@@ -171,9 +156,6 @@
     "product-microg": "Download MicroG",
     "product-translate": "Help translate",
     "community": "Community",
-    "support": "Support",
-    "support-faq": "FAQ",
-    "support-how": "How Morphe Works",
     "support-donate": "Donate",
     "copyright": "Open source and free forever.",
     "language": "Language",
@@ -224,7 +206,6 @@
     "screenshot-desc": "Disables the popup that appears when taking screenshots inside the app.",
     "spoof-signature": "Notification Fix",
     "spoof-signature-desc": "Spoofs the app signature to restore push notifications that may be broken after patching.",
-    "interface-customization": "Interface Customization",
     "reddit-ui-desc": "Hide navigation buttons, sidebar elements, and recommended shelves.",
     "auto-dismiss": "Auto Dialog Dismiss",
     "dismiss-desc": "Automatically removes repetitive community warning popups.",
@@ -298,7 +279,7 @@
     "go-home": "Go to Homepage"
   },
   "changelog": {
-    "title": "What's",
+    "title": "What's New",
     "subtitle": "Complete history of updates and improvements",
     "filter-type": "Type:",
     "filter-all": "All",
@@ -307,7 +288,6 @@
     "show-dev": "Show pre-releases",
     "older-releases": "Looking for older releases?",
     "view-manager": "View Manager Releases",
-    "view-patches": "View Patches Releases",
-    "title-highlight": "New"
+    "view-patches": "View Patches Releases"
   }
 }
