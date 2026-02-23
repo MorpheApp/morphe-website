@@ -187,29 +187,15 @@
 
 /* Footer */
 [data-theme="dark"] .footer {
-    background: var(--gray-50);
+    background: #0f1015;
 }
 
-[data-theme="dark"] .footer-column h4 {
-    color: var(--text-primary);
+[data-theme="dark"] .footer::before {
+    opacity: 0.35;
 }
 
-[data-theme="dark"] .footer-column a {
-    color: var(--gray-400);
-}
-
-[data-theme="dark"] .footer-column a:hover {
-    color: var(--text-primary);
-}
-
-[data-theme="dark"] .footer-bottom {
-    border-top: 1px solid var(--border);
-    color: var(--gray-500);
-}
-
-[data-theme="dark"] .footer-brand p,
-[data-theme="dark"] .footer-bottom {
-    color: var(--gray-500);
+[data-theme="dark"] .footer-top {
+    border-bottom-color: rgba(255, 255, 255, 0.04);
 }
 
 /* Logos */

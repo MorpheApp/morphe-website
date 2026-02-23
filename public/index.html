@@ -530,19 +530,41 @@
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
+    <div class="footer-inner">
+        <div class="footer-top">
+
+            <!-- Brand column -->
             <div class="footer-brand">
-                <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
-                <p data-i18n="footer.description">Next generation Android app patching</p>
+                <a href="/" class="footer-logo-link">
+                    <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
+                    <span class="footer-brand-name">Morphe</span>
+                </a>
+                <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
+                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
+                   title="DMCA.com Protection Status"
+                   class="dmca-badge"
+                   data-umami-event="DMCA Click">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
+                         alt="DMCA.com Protection Status" />
+                </a>
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                <details class="analytics-details">
+                    <summary data-i18n="analytics.title">Analytics</summary>
+                    <span data-i18n="analytics.part1">This website uses </span>
+                    <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">Umami</a>
+                    <span data-i18n="analytics.part2"> and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
+                </details>
             </div>
-            <div class="footer-links">
+
+            <!-- Navigation columns -->
+            <div class="footer-nav">
                 <div class="footer-column">
                     <h4 data-i18n="footer.product">Product</h4>
                     <a href="/" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
                     <a href="changelog" data-i18n="footer.product-changelog" data-umami-event="Footer What's New Click">What's New</a>
                     <a href="microg" data-i18n="footer.product-microg" data-umami-event="Footer MicroG Click">Download MicroG</a>
                     <a href="translate" data-i18n="footer.product-translate" data-umami-event="Footer Translate Click">Help translate</a>
+                    <a href="donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
                 </div>
                 <div class="footer-column">
                     <h4 data-i18n="footer.community">Community</h4>
@@ -550,15 +572,6 @@
                     <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="Footer X Click">X (Twitter)</a>
                     <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Footer Reddit Click">Reddit</a>
                     <a href="https://crowdin.com/project/morphe" target="_blank" data-umami-event="Footer Crowdin Click">Crowdin</a>
-                </div>
-                <div class="footer-column">
-                    <h4 data-i18n="footer.support">Support</h4>
-                    <a href="#faq" data-i18n="footer.support-faq" data-umami-event="Footer FAQ Click">FAQ</a>
-                    <a href="#how-it-works" data-i18n="footer.support-how" data-umami-event="Footer How Morphe Works Click">How Morphe Works</a>
-                    <a href="donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
-                    <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b" title="DMCA.com Protection Status" class="dmca-badge" data-umami-event="DMCA Click">
-                        <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b" alt="DMCA.com Protection Status" />
-                    </a><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
                 </div>
                 <div class="footer-column language-selector-container">
                     <h4 data-i18n="footer.language">Language</h4>
@@ -568,8 +581,10 @@
                 </div>
             </div>
         </div>
+
+        <!-- Bottom bar — copyright centered -->
         <div class="footer-bottom">
-            <p>&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
+            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
     </div>
 </footer>
