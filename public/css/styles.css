@@ -541,7 +541,8 @@ body {
 .feature-card,
 .community-card,
 .feature-slide,
-.testimonial-card {
+.testimonial-card,
+.version-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -569,7 +570,8 @@ body {
 .feature-card:hover,
 .community-card:hover,
 .feature-slide:hover,
-.testimonial-card:hover {
+.testimonial-card:hover,
+.version-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-lg);
 }
@@ -1079,11 +1081,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
-}
-
-.version-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
 }
 
 .version-card.hidden {
