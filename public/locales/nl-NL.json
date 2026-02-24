@@ -3,9 +3,7 @@
     "home": "Home",
     "how-it-works": "Hoe het werkt",
     "testimonials": "Getuigenissen",
-    "faq": "FAQ",
-    "donate": "Doneren",
-    "changelogs": "Wat is er nieuw"
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Transformeer je",
@@ -14,20 +12,6 @@
     "download": "Morphe downloaden",
     "learn-more": "Meer informatie",
     "social-label": "Word lid van de community"
-  },
-  "feature": {
-    "ad-blocking": "Advertentieblokkering",
-    "ad-blocking-desc": "Blokkeer alle advertenties en geniet zonder onderbrekingen",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "Sla gesponsorde segmenten automatisch over",
-    "show-dislikes": "Dislikes tonen",
-    "show-dislikes-desc": "Bekijk het echte aantal dislikes",
-    "swipe-controls": "Swipebediening",
-    "swipe-controls-desc": "Bedien volume en helderheid met swipes",
-    "custom-themes": "Aangepaste thema's",
-    "custom-themes-desc": "Personaliseer je app met thema's en kleuren",
-    "hide-content": "Inhoud verbergen",
-    "hide-content-desc": "Verberg ongewenste inhoud, Shorts en aanbevelingen"
   },
   "how-it-works": {
     "title": "Hoe Morphe werkt",
@@ -39,8 +23,7 @@
     "step3-title": "3. Patches toepassen",
     "step3-desc": "Morphe past automatisch patches toe.",
     "step4-title": "4. Installeren en genieten",
-    "step4-desc": "Installeer de aangepaste app en geniet.",
-    "supported-title": "Ondersteunde apps"
+    "step4-desc": "Installeer de aangepaste app en geniet."
   },
   "testimonials": {
     "title": "Wat gebruikers zeggen",
@@ -171,9 +154,6 @@
     "product-microg": "MicroG downloaden",
     "product-translate": "Help vertalen",
     "community": "Community",
-    "support": "Ondersteuning",
-    "support-faq": "FAQ",
-    "support-how": "Hoe Morphe werkt",
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
     "language": "Taal",
@@ -223,7 +203,13 @@
     "why-title": "Waarom vertalen?",
     "why-1": "Help je community",
     "why-2": "Maak Morphe wereldwijd",
-    "why-3": "Draag bij aan open source"
+    "why-3": "Draag bij aan open source",
+    "why-subtitle": "Elke vertaalde string brengt Morphe dichter bij iemand die het nodig heeft",
+    "why-1-desc": "Maak Morphe beschikbaar in je moedertaal zodat iedereen om je heen het zonder belemmeringen kan gebruiken.",
+    "why-2-desc": "Bereik miljoenen gebruikers over de hele wereld door Morphe naar nieuwe talen en regio's te brengen.",
+    "why-3-desc": "Vertalen is een betekenisvolle vorm van open source bijdragen — geen programmeervaardigheden vereist.",
+    "why-4": "Zie jouw Impact",
+    "why-4-desc": "Jouw vertalingen worden beoordeeld en meegeleverd in echte Morphe-releases, waarmee gebruikers over de hele wereld worden bereikt."
   },
   "error": {
     "404-title": "404 - Pagina niet gevonden",
@@ -241,5 +227,65 @@
     "older-releases": "Op zoek naar oudere releases?",
     "view-manager": "Manager-releases bekijken",
     "view-patches": "Patch-releases bekijken"
+  },
+  "app-features": {
+    "title": "App-functies",
+    "subtitle": "Krachtige patches voor je favoriete apps",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "Een aangepaste YouTube-ervaring met advertentieblokkering, SponsorBlock-ondersteuning, verbeterde spelerbesturing en geavanceerde privacyverbeteringen",
+    "ad-blocking": "Advertentieblokkering",
+    "yt-ad-blocking-desc": "Verwijdert alle advertenties uit de startpagina-feed en de videospeler voor ononderbroken weergave.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Slaat automatisch gesponsorde segmenten en andere niet-essentiële delen van video's over.",
+    "return-dislikes": "Dislikes Terugbrengen",
+    "return-dislikes-desc": "Toont door de community aangedreven dislike-aantallen zodat je betere kijkbeslissingen kunt nemen.",
+    "ui-customization": "UI-aanpassing",
+    "yt-ui-desc": "Verberg Shorts, pas de navigatiebalk aan en verwijder ongewenste lay-outelementen.",
+    "player-enhancements": "Spelerverbeteringen",
+    "player-desc": "Aangepaste afspeelsnelheden, standaard videokwaliteit en verbeterd seekbar-gedrag.",
+    "swipe-controls": "Veegbediening",
+    "swipe-desc": "Pas helderheid en volume aan met intuïtieve aanraakgebaren.",
+    "themes": "Thema-aanpassing",
+    "yt-themes-desc": "Puur zwart, Material You en extra themastijlen.",
+    "privacy": "Privacyverbeteringen",
+    "yt-privacy-desc": "Reinigt deellinks door trackingparameters te verwijderen.",
+    "ytmusic-desc": "Een verbeterde YouTube Music-ervaring met advertentieblokkering, aanpasbare thema's, audioverbetering en een overzichtelijkere interface",
+    "ytm-ad-desc": "Verwijdert alle advertenties tijdens het afspelen van muziek.",
+    "audio-quality": "Audiokwaliteit",
+    "audio-desc": "Dynamisch bereikcompressie uitschakelen en originele audiosporen verkiezen.",
+    "ytm-themes-desc": "Aangepaste donkere en lichte achtergronden inclusief Material You-stijlen.",
+    "interface-cleanup": "Interface opruimen",
+    "ytm-ui-desc": "Verberg onnodige knoppen en UI-componenten voor een overzichtelijkere ervaring.",
+    "repeat": "Permanente Herhaling",
+    "repeat-desc": "Verbeterd herhalingsgedrag dat tussen sessies blijft bestaan.",
+    "link-sanitization": "Link opschonen",
+    "ytm-link-desc": "Verwijdert trackingparameters uit gedeelde links.",
+    "custom-branding": "Aangepaste Branding",
+    "branding-desc": "Optionele aanpassing van app-naam en -icoon.",
+    "nav-bar": "Navigatiebalk",
+    "nav-bar-desc": "Verberg of pas de onderste navigatiebalk en de labels aan om rommel te verminderen.",
+    "reddit-desc": "Een gestroomlijnde Reddit-ervaring met advertentieblokkering, interface-aanpassing, directe linkverwerking en verbeterde privacy",
+    "reddit-ad-desc": "Verwijdert in-feed advertenties voor een overzichtelijkere browse-ervaring.",
+    "reddit-ui-desc": "Verberg navigatieknoppen, zijbalkelementen en aanbevolen planken.",
+    "auto-dismiss": "Automatisch Dialoogvenster Sluiten",
+    "dismiss-desc": "Verwijdert automatisch herhaalde community-waarschuwingspopups.",
+    "direct-links": "Directe Externe Links",
+    "direct-links-desc": "Open links zonder omleidingstracking en ga direct naar de bestemming.",
+    "reddit-link-desc": "Verwijdert trackingparameters uit gedeelde URL's voor betere privacy.",
+    "clean-nav": "Overzichtelijkere Navigatie",
+    "clean-nav-desc": "Vereenvoudige lay-out met minder afleiding voor gefocust browsen.",
+    "screenshot": "Screenshot-vrijheid",
+    "screenshot-desc": "Schakelt de popup uit die verschijnt bij het maken van screenshots in de app.",
+    "spoof-signature": "Meldingsfix",
+    "spoof-signature-desc": "Vervalst de app-handtekening om pushmeldingen te herstellen die mogelijk verbroken zijn na het patchen."
+  },
+  "community": {
+    "subtitle": "Volg ons, meld problemen en help Morphe beter te maken",
+    "github-desc": "Bladér door de broncode, meld bugs en draag bij aan Morphe-ontwikkeling.",
+    "x-desc": "Blijf op de hoogte van het laatste nieuws, releases en aankondigingen.",
+    "reddit-desc": "Neem deel aan discussies, deel tips en maak contact met andere Morphe-gebruikers.",
+    "crowdin-desc": "Help Morphe in jouw taal te vertalen en maak het voor iedereen toegankelijk."
   }
 }

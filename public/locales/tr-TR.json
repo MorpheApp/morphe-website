@@ -3,9 +3,7 @@
     "home": "Ana Sayfa",
     "how-it-works": "Nasıl Çalışır",
     "testimonials": "Yorumlar",
-    "faq": "SSS",
-    "donate": "Bağış Yap",
-    "changelogs": "Yenilikler"
+    "faq": "SSS"
   },
   "hero": {
     "title": "Android",
@@ -14,20 +12,6 @@
     "download": "Morphe İndir",
     "learn-more": "Daha Fazla Bilgi",
     "social-label": "Topluluğa Katıl"
-  },
-  "feature": {
-    "ad-blocking": "Reklam Engelleme",
-    "ad-blocking-desc": "Tüm reklamları engelle ve kesintisiz içerik izle",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "Topluluk destekli sponsorlu bölümleri otomatik atla",
-    "show-dislikes": "Dislike Göster",
-    "show-dislikes-desc": "Gerçek dislike sayılarını gör",
-    "swipe-controls": "Kaydırma Kontrolleri",
-    "swipe-controls-desc": "Kaydırma hareketleriyle ses ve parlaklığı kontrol et",
-    "custom-themes": "Özel Temalar",
-    "custom-themes-desc": "Uygulamanı temalar ve renklerle kişiselleştir",
-    "hide-content": "İçeriği Gizle",
-    "hide-content-desc": "İstenmeyen içerikleri ve önerileri gizle"
   },
   "how-it-works": {
     "title": "Morphe Nasıl Çalışır",
@@ -39,8 +23,7 @@
     "step3-title": "3. Yamaları Uygula",
     "step3-desc": "Morphe otomatik olarak yamaları uygular.",
     "step4-title": "4. Kur ve Keyfini Çıkar",
-    "step4-desc": "Yamalanmış uygulamayı kur ve keyfini çıkar.",
-    "supported-title": "Desteklenen Uygulamalar"
+    "step4-desc": "Yamalanmış uygulamayı kur ve keyfini çıkar."
   },
   "testimonials": {
     "title": "Kullanıcılar Ne Diyor",
@@ -171,9 +154,6 @@
     "product-microg": "MicroG İndir",
     "product-translate": "Çeviriye yardım et",
     "community": "Topluluk",
-    "support": "Destek",
-    "support-faq": "SSS",
-    "support-how": "Morphe Nasıl Çalışır",
     "support-donate": "Bağış Yap",
     "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
     "language": "Dil",
@@ -223,7 +203,13 @@
     "why-title": "Neden çeviri?",
     "why-1": "Topluluğuna yardım et",
     "why-2": "Morphe'yi küresel yap",
-    "why-3": "Açık kaynağa katkı sağla"
+    "why-3": "Açık kaynağa katkı sağla",
+    "why-subtitle": "Çevrilen her dize, Morphe'yi ona ihtiyaç duyan birine daha da yaklaştırır",
+    "why-1-desc": "Morphe'yi ana dilinde kullanılabilir hale getir, böylece etrafındaki herkes onu engelsiz kullanabilir.",
+    "why-2-desc": "Morphe'yi yeni dillere ve bölgelere taşıyarak dünya genelinde milyonlarca kullanıcıya ulaş.",
+    "why-3-desc": "Çeviri, anlamlı bir açık kaynak katkı biçimidir — programlama becerisi gerekmez.",
+    "why-4": "Etkini Gör",
+    "why-4-desc": "Çevirilerin incelenir ve gerçek Morphe sürümlerinde yayınlanır, dünya genelindeki kullanıcılara ulaşır."
   },
   "error": {
     "404-title": "404 - Sayfa Bulunamadı",
@@ -241,5 +227,65 @@
     "older-releases": "Eski sürümleri mi arıyorsunuz?",
     "view-manager": "Manager sürümlerini görüntüle",
     "view-patches": "Yama sürümlerini görüntüle"
+  },
+  "app-features": {
+    "title": "Uygulama Özellikleri",
+    "subtitle": "Favori uygulamaların için güçlü yamalar",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "Reklam engelleme, SponsorBlock desteği, gelişmiş oynatıcı kontrolleri ve gelişmiş gizlilik iyileştirmeleriyle özelleştirilmiş bir YouTube deneyimi",
+    "ad-blocking": "Reklam Engelleme",
+    "yt-ad-blocking-desc": "Kesintisiz izleme için ana sayfadan ve video oynatıcıdan tüm reklamları kaldırır.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Sponsorlu segmentleri ve videoların diğer gerekli olmayan bölümlerini otomatik olarak atlar.",
+    "return-dislikes": "Beğenmeme Sayılarını Geri Getir",
+    "return-dislikes-desc": "Daha iyi izleme kararları verebilmek için topluluk destekli beğenmeme sayılarını gösterir.",
+    "ui-customization": "Arayüz Özelleştirme",
+    "yt-ui-desc": "Shorts'u gizle, gezinme çubuğunu ayarla ve istenmeyen düzen öğelerini kaldır.",
+    "player-enhancements": "Oynatıcı İyileştirmeleri",
+    "player-desc": "Özel oynatma hızları, varsayılan video kalitesi ve geliştirilmiş arama çubuğu davranışı.",
+    "swipe-controls": "Kaydırma Kontrolleri",
+    "swipe-desc": "Sezgisel dokunma hareketleriyle parlaklığı ve sesi ayarla.",
+    "themes": "Tema Özelleştirme",
+    "yt-themes-desc": "Saf siyah, Material You ve ek tema stilleri.",
+    "privacy": "Gizlilik İyileştirmeleri",
+    "yt-privacy-desc": "İzleme parametrelerini kaldırarak paylaşım bağlantılarını temizler.",
+    "ytmusic-desc": "Reklam engelleme, özelleştirilebilir temalar, ses iyileştirmeleri ve daha temiz bir arayüzle geliştirilmiş bir YouTube Music deneyimi",
+    "ytm-ad-desc": "Müzik çalma sırasındaki tüm reklamları kaldırır.",
+    "audio-quality": "Ses Kalitesi",
+    "audio-desc": "Dinamik aralık sıkıştırmasını devre dışı bırak ve orijinal ses parçalarını tercih et.",
+    "ytm-themes-desc": "Material You stilleri dahil özel koyu ve açık arka planlar.",
+    "interface-cleanup": "Arayüz Temizleme",
+    "ytm-ui-desc": "Daha temiz bir deneyim için gereksiz düğmeleri ve UI bileşenlerini gizler.",
+    "repeat": "Kalıcı Tekrar",
+    "repeat-desc": "Oturumlar arasında kalıcı olan geliştirilmiş tekrar davranışı.",
+    "link-sanitization": "Bağlantı Temizleme",
+    "ytm-link-desc": "Paylaşılan bağlantılardan izleme parametrelerini kaldırır.",
+    "custom-branding": "Özel Marka",
+    "branding-desc": "İsteğe bağlı uygulama adı ve simge özelleştirmesi.",
+    "nav-bar": "Gezinme Çubuğu",
+    "nav-bar-desc": "Karmaşıklığı azaltmak için alt gezinme çubuğunu ve etiketlerini gizle veya özelleştir.",
+    "reddit-desc": "Reklam engelleme, arayüz özelleştirmesi, doğrudan bağlantı yönetimi ve geliştirilmiş gizlilikle optimize edilmiş bir Reddit deneyimi",
+    "reddit-ad-desc": "Daha temiz bir tarama deneyimi için feed içindeki reklamları kaldırır.",
+    "reddit-ui-desc": "Gezinme düğmelerini, kenar çubuğu öğelerini ve önerilen rafları gizler.",
+    "auto-dismiss": "Otomatik İletişim Kutusu Kapatma",
+    "dismiss-desc": "Tekrar eden topluluk uyarısı açılır pencerelerini otomatik olarak kaldırır.",
+    "direct-links": "Doğrudan Dış Bağlantılar",
+    "direct-links-desc": "Yeniden yönlendirme izlemesi olmadan bağlantıları açar ve doğrudan hedefe gider.",
+    "reddit-link-desc": "Daha iyi gizlilik için paylaşılan URL'lerden izleme parametrelerini kaldırır.",
+    "clean-nav": "Daha Temiz Gezinme",
+    "clean-nav-desc": "Odaklanmış göz atma için daha az dikkat dağıtıcıyla basitleştirilmiş düzen.",
+    "screenshot": "Ekran Görüntüsü Özgürlüğü",
+    "screenshot-desc": "Uygulama içinde ekran görüntüsü alırken görünen açılır pencereyi devre dışı bırakır.",
+    "spoof-signature": "Bildirim Düzeltmesi",
+    "spoof-signature-desc": "Yamalamadan sonra bozulmuş olabilecek push bildirimlerini geri yüklemek için uygulamanın imzasını taklit eder."
+  },
+  "community": {
+    "subtitle": "Bizi takip et, sorunları bildir ve Morphe'yi daha iyi yapmaya yardım et",
+    "github-desc": "Kaynak koduna göz at, hataları bildir ve Morphe geliştirmesine katkıda bulun.",
+    "x-desc": "En son haberler, sürümler ve duyurularla güncel kal.",
+    "reddit-desc": "Tartışmalara katıl, ipuçlarını paylaş ve diğer Morphe kullanıcılarıyla bağlantı kur.",
+    "crowdin-desc": "Morphe'yi dilinize çevirmeye yardımcı olun ve herkes için erişilebilir hale getirin."
   }
 }
