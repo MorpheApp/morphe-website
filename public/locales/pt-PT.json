@@ -3,9 +3,7 @@
     "home": "Início",
     "how-it-works": "Como funciona",
     "testimonials": "Testemunhos",
-    "faq": "FAQ",
-    "donate": "Doar",
-    "changelogs": "Novidades"
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Transforma as tuas",
@@ -14,20 +12,6 @@
     "download": "Transferir Morphe",
     "learn-more": "Saber mais",
     "social-label": "Junta-te à comunidade"
-  },
-  "feature": {
-    "ad-blocking": "Bloqueio de anúncios",
-    "ad-blocking-desc": "Bloqueia todos os anúncios e desfruta de conteúdo sem interrupções",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "Ignora automaticamente segmentos patrocinados pela comunidade",
-    "show-dislikes": "Mostrar dislikes",
-    "show-dislikes-desc": "Vê a contagem real de dislikes",
-    "swipe-controls": "Controlos por gesto",
-    "swipe-controls-desc": "Controla volume e brilho com gestos intuitivos",
-    "custom-themes": "Temas personalizados",
-    "custom-themes-desc": "Personaliza a app com temas e cores",
-    "hide-content": "Ocultar conteúdo",
-    "hide-content-desc": "Oculta conteúdo indesejado, Shorts e recomendações"
   },
   "how-it-works": {
     "title": "Como funciona o Morphe",
@@ -39,8 +23,7 @@
     "step3-title": "3. Aplicar patches",
     "step3-desc": "O Morphe irá modificar automaticamente a app selecionada.",
     "step4-title": "4. Instalar e desfrutar",
-    "step4-desc": "Instala a app modificada e desfruta da experiência.",
-    "supported-title": "Apps suportadas"
+    "step4-desc": "Instala a app modificada e desfruta da experiência."
   },
   "testimonials": {
     "title": "O que os utilizadores dizem",
@@ -171,16 +154,13 @@
     "product-microg": "Transferir MicroG",
     "product-translate": "Ajudar a traduzir",
     "community": "Comunidade",
-    "support": "Suporte",
-    "support-faq": "FAQ",
-    "support-how": "Como funciona o Morphe",
     "support-donate": "Doar",
     "copyright": "Open source e gratuito para sempre.",
     "language": "Idioma",
     "product-changelog": "Novidades"
   },
   "analytics": {
-    "title": "Analytics",
+    "title": "Análise",
     "part1": "Este site utiliza ",
     "part2": "e Google Analytics 4: Sem cookies, sem publicidade, sem criação de perfis e sem venda ou partilha de dados.",
     "part3": "A Morphe não adiciona análise nem recolha de dados a aplicações corrigidas."
@@ -223,7 +203,13 @@
     "why-title": "Porquê traduzir?",
     "why-1": "Ajudar a comunidade",
     "why-2": "Tornar o Morphe global",
-    "why-3": "Contribuir para open source"
+    "why-3": "Contribuir para open source",
+    "why-subtitle": "Cada string traduzida aproxima o Morphe de alguém que precisa dele",
+    "why-1-desc": "Torna o Morphe disponível na tua língua nativa para que todos ao teu redor possam aproveitá-lo sem barreiras.",
+    "why-2-desc": "Alcança milhões de utilizadores em todo o mundo levando o Morphe a novos idiomas e regiões.",
+    "why-3-desc": "A tradução é uma forma significativa de contribuição open source — não são necessárias competências de programação.",
+    "why-4": "Vê o teu Impacto",
+    "why-4-desc": "As tuas traduções são revistas e incluídas em versões reais do Morphe, chegando a utilizadores em todo o mundo."
   },
   "error": {
     "404-title": "404 - Página não encontrada",
@@ -241,5 +227,65 @@
     "older-releases": "À procura de versões antigas?",
     "view-manager": "Ver versões do Manager",
     "view-patches": "Ver versões de Patches"
+  },
+  "app-features": {
+    "title": "Funcionalidades da App",
+    "subtitle": "Patches poderosos para as tuas apps favoritas",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "Uma experiência YouTube personalizada com bloqueio de anúncios, suporte ao SponsorBlock, controlos de leitor melhorados e melhorias avançadas de privacidade",
+    "ad-blocking": "Bloqueio de Anúncios",
+    "yt-ad-blocking-desc": "Remove todos os anúncios do feed inicial e do leitor de vídeo para uma visualização ininterrupta.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Ignora automaticamente segmentos patrocinados e outras partes não essenciais dos vídeos.",
+    "return-dislikes": "Restaurar Dislikes",
+    "return-dislikes-desc": "Apresenta contagens de dislikes alimentadas pela comunidade para que possas tomar melhores decisões de visualização.",
+    "ui-customization": "Personalização de UI",
+    "yt-ui-desc": "Ocultar Shorts, ajustar a barra de navegação e remover elementos de layout indesejados.",
+    "player-enhancements": "Melhorias do Leitor",
+    "player-desc": "Velocidades de reprodução personalizadas, qualidade de vídeo padrão e comportamento melhorado da barra de procura.",
+    "swipe-controls": "Controlos de Deslize",
+    "swipe-desc": "Ajusta o brilho e o volume com gestos táteis intuitivos.",
+    "themes": "Personalização de Temas",
+    "yt-themes-desc": "Preto puro, Material You e estilos de tema adicionais.",
+    "privacy": "Melhorias de Privacidade",
+    "yt-privacy-desc": "Limpa links de partilha removendo parâmetros de rastreamento.",
+    "ytmusic-desc": "Uma experiência YouTube Music melhorada com bloqueio de anúncios, temas personalizáveis, melhorias de áudio e uma interface mais limpa",
+    "ytm-ad-desc": "Remove todos os anúncios durante a reprodução de música.",
+    "audio-quality": "Qualidade de Áudio",
+    "audio-desc": "Desativar compressão de gama dinâmica e preferir faixas de áudio originais.",
+    "ytm-themes-desc": "Fundos escuros e claros personalizados incluindo estilos Material You.",
+    "interface-cleanup": "Limpeza de Interface",
+    "ytm-ui-desc": "Oculta botões desnecessários e componentes de UI para uma experiência mais limpa.",
+    "repeat": "Repetição Permanente",
+    "repeat-desc": "Comportamento de repetição melhorado que persiste entre sessões.",
+    "link-sanitization": "Limpeza de Links",
+    "ytm-link-desc": "Remove parâmetros de rastreamento de links partilhados.",
+    "custom-branding": "Marca Personalizada",
+    "branding-desc": "Personalização opcional do nome e ícone da app.",
+    "nav-bar": "Barra de Navegação",
+    "nav-bar-desc": "Oculta ou personaliza a barra de navegação inferior e os seus rótulos para reduzir a desordem.",
+    "reddit-desc": "Uma experiência Reddit otimizada com bloqueio de anúncios, personalização de interface, tratamento direto de links e privacidade melhorada",
+    "reddit-ad-desc": "Remove anúncios no feed para uma experiência de navegação mais limpa.",
+    "reddit-ui-desc": "Oculta botões de navegação, elementos da barra lateral e prateleiras recomendadas.",
+    "auto-dismiss": "Fechar Diálogos Automaticamente",
+    "dismiss-desc": "Remove automaticamente popups repetitivos de aviso da comunidade.",
+    "direct-links": "Links Externos Diretos",
+    "direct-links-desc": "Abre links sem rastreamento de redirecionamento, indo diretamente ao destino.",
+    "reddit-link-desc": "Remove parâmetros de rastreamento de URLs partilhados para melhor privacidade.",
+    "clean-nav": "Navegação mais Limpa",
+    "clean-nav-desc": "Layout simplificado com menos distrações para navegação focada.",
+    "screenshot": "Liberdade de Capturas",
+    "screenshot-desc": "Desativa o popup que aparece ao fazer capturas de ecrã dentro da app.",
+    "spoof-signature": "Correção de Notificações",
+    "spoof-signature-desc": "Falsifica a assinatura da app para restaurar notificações push que podem estar quebradas após o patch."
+  },
+  "community": {
+    "subtitle": "Segue-nos, reporta problemas e ajuda a melhorar o Morphe",
+    "github-desc": "Navega pelo código-fonte, reporta bugs e contribui para o desenvolvimento do Morphe.",
+    "x-desc": "Mantém-te atualizado com as últimas notícias, lançamentos e anúncios.",
+    "reddit-desc": "Participa em discussões, partilha dicas e liga-te a outros utilizadores do Morphe.",
+    "crowdin-desc": "Ajuda a traduzir o Morphe para a tua língua e torna-o acessível a todos."
   }
 }

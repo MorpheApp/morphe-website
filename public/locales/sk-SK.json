@@ -3,9 +3,7 @@
     "home": "Domov",
     "how-it-works": "Ako to funguje",
     "testimonials": "Referencie",
-    "faq": "FAQ",
-    "donate": "Darovať",
-    "changelogs": "Novinky"
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Premeň svoje",
@@ -14,20 +12,6 @@
     "download": "Stiahnuť Morphe",
     "learn-more": "Zistiť viac",
     "social-label": "Pridaj sa ku komunite"
-  },
-  "feature": {
-    "ad-blocking": "Blokovanie reklám",
-    "ad-blocking-desc": "Blokuj všetky reklamy a užívaj si obsah bez prerušenia",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "Automaticky preskakuj sponzorované časti",
-    "show-dislikes": "Zobraziť nepáči sa",
-    "show-dislikes-desc": "Zobraz skutočný počet nepáči sa",
-    "swipe-controls": "Ovládanie gestami",
-    "swipe-controls-desc": "Ovládaj hlasitosť a jas gestami",
-    "custom-themes": "Vlastné témy",
-    "custom-themes-desc": "Prispôsob aplikáciu pomocou tém",
-    "hide-content": "Skryť obsah",
-    "hide-content-desc": "Skry neželaný obsah a odporúčania"
   },
   "how-it-works": {
     "title": "Ako funguje Morphe",
@@ -39,8 +23,7 @@
     "step3-title": "3. Použi záplaty",
     "step3-desc": "Morphe automaticky upraví aplikáciu.",
     "step4-title": "4. Nainštaluj a užívaj",
-    "step4-desc": "Nainštaluj upravenú aplikáciu a užívaj si.",
-    "supported-title": "Podporované aplikácie"
+    "step4-desc": "Nainštaluj upravenú aplikáciu a užívaj si."
   },
   "testimonials": {
     "title": "Čo hovoria používatelia",
@@ -171,9 +154,6 @@
     "product-microg": "Stiahnuť MicroG",
     "product-translate": "Pomôcť preložiť",
     "community": "Komunita",
-    "support": "Podpora",
-    "support-faq": "FAQ",
-    "support-how": "Ako funguje Morphe",
     "support-donate": "Darovať",
     "copyright": "Open source a navždy zadarmo.",
     "language": "Jazyk",
@@ -223,7 +203,13 @@
     "why-title": "Prečo prekladať?",
     "why-1": "Pomôž komunite",
     "why-2": "Urob Morphe globálnym",
-    "why-3": "Prispej k open source"
+    "why-3": "Prispej k open source",
+    "why-subtitle": "Každý preložený reťazec priblíži Morphe niekomu, kto ho potrebuje",
+    "why-1-desc": "Sprístupnite Morphe vo svojom materinskom jazyku, aby ho všetci okolo vás mohli užívať bez bariér.",
+    "why-2-desc": "Oslovte milióny používateľov po celom svete prinášaním Morphe do nových jazykov a regiónov.",
+    "why-3-desc": "Preklad je zmysluplnou formou open source príspevku — nevyžadujú sa programátorské zručnosti.",
+    "why-4": "Vidieť svoj Dopad",
+    "why-4-desc": "Vaše preklady sú kontrolované a zahrnuté do skutočných vydaní Morphe, dosahujúc používateľov na celom svete."
   },
   "error": {
     "404-title": "404 - Stránka nenájdená",
@@ -241,5 +227,65 @@
     "older-releases": "Hľadáte staršie verzie?",
     "view-manager": "Zobraziť verzie Manager",
     "view-patches": "Zobraziť verzie Záplat"
+  },
+  "app-features": {
+    "title": "Funkcie Aplikácie",
+    "subtitle": "Výkonné záplaty pre tvoje obľúbené aplikácie",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "Prispôsobený zážitok z YouTube s blokovaním reklám, podporou SponsorBlock, vylepšenými ovládacími prvkami prehrávača a pokročilými vylepšeniami ochrany súkromia",
+    "ad-blocking": "Blokovanie Reklám",
+    "yt-ad-blocking-desc": "Odstraňuje všetky reklamy z domovského feedu a video prehrávača pre neprerušené sledovanie.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Automaticky preskakuje sponzorované segmenty a iné nepodstatné časti videí.",
+    "return-dislikes": "Návrat Dislajkov",
+    "return-dislikes-desc": "Zobrazuje počty dislajkov poháňané komunitou, aby si mohol robiť lepšie rozhodnutia pri sledovaní.",
+    "ui-customization": "Prispôsobenie UI",
+    "yt-ui-desc": "Skryť Shorts, upraviť navigačnú lištu a odstrániť nežiaduce prvky rozloženia.",
+    "player-enhancements": "Vylepšenia Prehrávača",
+    "player-desc": "Vlastné rýchlosti prehrávania, predvolená kvalita videa a vylepšené správanie vyhľadávacej lišty.",
+    "swipe-controls": "Ovládanie Potiahnutím",
+    "swipe-desc": "Nastavte jas a hlasitosť intuítívnymi dotykovými gestami.",
+    "themes": "Prispôsobenie Témy",
+    "yt-themes-desc": "Čistá čierna, Material You a ďalšie štýly tém.",
+    "privacy": "Vylepšenia Ochrany Súkromia",
+    "yt-privacy-desc": "Čistí zdieľané odkazy odstraňovaním sledovacích parametrov.",
+    "ytmusic-desc": "Vylepšený zážitok z YouTube Music s blokovaním reklám, prispôsobiteľnými témami, vylepšeniami zvuku a čistejším rozhraním",
+    "ytm-ad-desc": "Odstraňuje všetky reklamy počas prehrávania hudby.",
+    "audio-quality": "Kvalita Zvuku",
+    "audio-desc": "Zakázať kompresiu dynamického rozsahu a uprednostniť originálne audio stopy.",
+    "ytm-themes-desc": "Vlastné tmavé a svetlé pozadia vrátane štýlov Material You.",
+    "interface-cleanup": "Čistenie Rozhrania",
+    "ytm-ui-desc": "Skryje nepotrebné tlačidlá a komponenty UI pre čistejší zážitok.",
+    "repeat": "Trvalé Opakovanie",
+    "repeat-desc": "Vylepšené správanie opakovania, ktoré pretrváva medzi reláciami.",
+    "link-sanitization": "Sanitácia Odkazov",
+    "ytm-link-desc": "Odstraňuje sledovacie parametre zo zdieľaných odkazov.",
+    "custom-branding": "Vlastný Branding",
+    "branding-desc": "Voliteľné prispôsobenie názvu a ikony aplikácie.",
+    "nav-bar": "Navigačná Lišta",
+    "nav-bar-desc": "Skryť alebo prispôsobiť dolnú navigačnú lištu a jej popisky na zníženie neporiadku.",
+    "reddit-desc": "Zefektívnený zážitok z Reddit s blokovaním reklám, prispôsobením rozhrania, priamym spracovaním odkazov a vylepšenou ochranou súkromia",
+    "reddit-ad-desc": "Odstraňuje reklamy z feedu pre čistejší zážitok z prehliadania.",
+    "reddit-ui-desc": "Skryje navigačné tlačidlá, prvky bočného panela a odporúčané sekcie.",
+    "auto-dismiss": "Automatické Zatváranie Dialógov",
+    "dismiss-desc": "Automaticky odstraňuje opakujúce sa varovné vyskakovacie okná komunity.",
+    "direct-links": "Priame Externé Odkazy",
+    "direct-links-desc": "Otvára odkazy bez sledovania presmerovania, prechádza priamo na cieľ.",
+    "reddit-link-desc": "Odstraňuje sledovacie parametre zo zdieľaných adries URL pre lepšiu ochranu súkromia.",
+    "clean-nav": "Čistejšia Navigácia",
+    "clean-nav-desc": "Zjednodušené rozloženie s menej rozptylmi pre sústredené prehliadanie.",
+    "screenshot": "Sloboda Snímok Obrazovky",
+    "screenshot-desc": "Deaktivuje vyskakovacie okno, ktoré sa zobrazí pri vytváraní snímok obrazovky v aplikácii.",
+    "spoof-signature": "Oprava Upozornení",
+    "spoof-signature-desc": "Falšuje podpis aplikácie na obnovenie push upozornení, ktoré môžu byť po záplatovaní nefunkčné."
+  },
+  "community": {
+    "subtitle": "Sleduj nás, hláš problémy a pomôž zlepšovať Morphe",
+    "github-desc": "Prehliadaj zdrojový kód, hláš chyby a prispievaj do vývoja Morphe.",
+    "x-desc": "Zostaň v obraze s najnovšími správami, vydaniami a oznámeniami.",
+    "reddit-desc": "Zapojte sa do diskusií, zdieľajte tipy a spojte sa s ďalšími používateľmi Morphe.",
+    "crowdin-desc": "Pomôžte preložiť Morphe do vášho jazyka a sprístu pniť ho pre každého."
   }
 }

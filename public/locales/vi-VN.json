@@ -3,9 +3,7 @@
     "home": "Trang chủ",
     "how-it-works": "Cách dùng",
     "testimonials": "Người dùng nói gì",
-    "faq": "Hỏi đáp",
-    "donate": "Ủng hộ",
-    "changelogs": "Có gì mới"
+    "faq": "Hỏi đáp"
   },
   "hero": {
     "title": "Biến đổi",
@@ -14,20 +12,6 @@
     "download": "Tải Morphe",
     "learn-more": "Tìm hiểu thêm",
     "social-label": "Tham gia cộng đồng"
-  },
-  "feature": {
-    "ad-blocking": "Chặn quảng cáo",
-    "ad-blocking-desc": "Chặn toàn bộ quảng cáo, tận hưởng nội dung không bị gián đoạn trên mọi ứng dụng",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "Tự động bỏ qua các đoạn tài trợ nhờ dữ liệu cộng đồng",
-    "show-dislikes": "Hiện lượt không thích",
-    "show-dislikes-desc": "Xem số lượt không thích thực tế để quyết định có nên xem hay không",
-    "swipe-controls": "Cử chỉ vuốt",
-    "swipe-controls-desc": "Vuốt để chỉnh âm lượng và độ sáng một cách trực quan",
-    "custom-themes": "Giao diện tuỳ chỉnh",
-    "custom-themes-desc": "Cá nhân hoá ứng dụng với chủ đề và màu sắc đẹp mắt",
-    "hide-content": "Ẩn nội dung",
-    "hide-content-desc": "Ẩn nội dung không mong muốn, Shorts và đề xuất để trang video gọn gàng hơn"
   },
   "how-it-works": {
     "title": "Morphe hoạt động thế nào",
@@ -39,8 +23,7 @@
     "step3-title": "3. Áp dụng bản vá",
     "step3-desc": "Morphe sẽ tự động vá ứng dụng mà bạn đã chọn.",
     "step4-title": "4. Cài đặt và tận hưởng thôi",
-    "step4-desc": "Cài ứng dụng đã vá và tận hưởng trải nghiệm theo ý bạn.",
-    "supported-title": "Ứng dụng được hỗ trợ"
+    "step4-desc": "Cài ứng dụng đã vá và tận hưởng trải nghiệm theo ý bạn."
   },
   "testimonials": {
     "title": "Người dùng nói gì",
@@ -171,9 +154,6 @@
     "product-microg": "Tải MicroG",
     "product-translate": "Hỗ trợ dịch",
     "community": "Cộng đồng",
-    "support": "Hỗ trợ",
-    "support-faq": "Hỏi đáp",
-    "support-how": "Cách Morphe hoạt động",
     "support-donate": "Ủng hộ",
     "copyright": "Mã nguồn mở và miễn phí mãi mãi.",
     "language": "Ngôn ngữ",
@@ -223,7 +203,13 @@
     "why-title": "Vì sao nên dịch?",
     "why-1": "Giúp cộng đồng của bạn",
     "why-2": "Đưa Morphe ra toàn cầu",
-    "why-3": "Đóng góp cho mã nguồn mở"
+    "why-3": "Đóng góp cho mã nguồn mở",
+    "why-subtitle": "Mỗi chuỗi được dịch đưa Morphe đến gần hơn với ai đó cần nó",
+    "why-1-desc": "Cung cấp Morphe bằng ngôn ngữ mẹ đẻ của bạn để mọi người xung quanh có thể tận hưởng mà không có rào cản.",
+    "why-2-desc": "Tiếp cận hàng triệu người dùng trên toàn thế giới bằng cách đưa Morphe đến các ngôn ngữ và khu vực mới.",
+    "why-3-desc": "Dịch thuật là hình thức đóng góp mã nguồn mở có ý nghĩa — không cần kỹ năng lập trình.",
+    "why-4": "Thấy Tác động của Bạn",
+    "why-4-desc": "Các bản dịch của bạn được xem xét và giao trong các bản phát hành Morphe thực, tiếp cận người dùng trên toàn thế giới."
   },
   "error": {
     "404-title": "404 - Không tìm thấy trang",
@@ -241,5 +227,65 @@
     "older-releases": "Tìm bản phát hành cũ hơn?",
     "view-manager": "Xem bản phát hành trình quản lý",
     "view-patches": "Xem bản phát hành bản vá"
+  },
+  "app-features": {
+    "title": "Tính năng Ứng dụng",
+    "subtitle": "Bản vá mạnh mẽ cho ứng dụng yêu thích của bạn",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "Trải nghiệm YouTube tùy chỉnh với chặn quảng cáo, hỗ trợ SponsorBlock, điều khiển trình phát được cải thiện và các cải tiến quyền riêng tư nâng cao",
+    "ad-blocking": "Chặn Quảng cáo",
+    "yt-ad-blocking-desc": "Xóa tất cả quảng cáo khỏi nguồn cấp trang chủ và trình phát video để xem không bị gián đoạn.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Tự động bỏ qua các đoạn được tài trợ và các phần không cần thiết khác của video.",
+    "return-dislikes": "Khôi phục Lượt không thích",
+    "return-dislikes-desc": "Hiển thị số lượt không thích do cộng đồng cung cấp để bạn có thể đưa ra quyết định xem tốt hơn.",
+    "ui-customization": "Tùy chỉnh Giao diện",
+    "yt-ui-desc": "Ẩn Shorts, điều chỉnh thanh điều hướng và xóa các phần tử bố cục không mong muốn.",
+    "player-enhancements": "Cải tiến Trình phát",
+    "player-desc": "Tốc độ phát tùy chỉnh, chất lượng video mặc định và hành vi thanh tìm kiếm được cải thiện.",
+    "swipe-controls": "Điều khiển Vuốt",
+    "swipe-desc": "Điều chỉnh độ sáng và âm lượng bằng thao tác cảm ứng trực quan.",
+    "themes": "Tùy chỉnh Chủ đề",
+    "yt-themes-desc": "Đen thuần, Material You và các phong cách chủ đề bổ sung.",
+    "privacy": "Cải tiến Quyền riêng tư",
+    "yt-privacy-desc": "Làm sạch liên kết chia sẻ bằng cách xóa các tham số theo dõi.",
+    "ytmusic-desc": "Trải nghiệm YouTube Music được nâng cao với chặn quảng cáo, chủ đề tùy chỉnh, cải tiến âm thanh và giao diện gọn gàng hơn",
+    "ytm-ad-desc": "Xóa tất cả quảng cáo trong khi phát nhạc.",
+    "audio-quality": "Chất lượng Âm thanh",
+    "audio-desc": "Tắt nén dải động và ưu tiên các bản âm thanh gốc.",
+    "ytm-themes-desc": "Nền tối và sáng tùy chỉnh bao gồm phong cách Material You.",
+    "interface-cleanup": "Dọn dẹp Giao diện",
+    "ytm-ui-desc": "Ẩn các nút không cần thiết và thành phần UI để có trải nghiệm gọn gàng hơn.",
+    "repeat": "Lặp lại Vĩnh viễn",
+    "repeat-desc": "Hành vi lặp lại được cải thiện, duy trì qua các phiên.",
+    "link-sanitization": "Làm sạch Liên kết",
+    "ytm-link-desc": "Xóa các tham số theo dõi khỏi các liên kết được chia sẻ.",
+    "custom-branding": "Thương hiệu Tùy chỉnh",
+    "branding-desc": "Tùy chỉnh tên và biểu tượng ứng dụng tùy chọn.",
+    "nav-bar": "Thanh Điều hướng",
+    "nav-bar-desc": "Ẩn hoặc tùy chỉnh thanh điều hướng phía dưới và nhãn của nó để giảm bớt lộn xộn.",
+    "reddit-desc": "Trải nghiệm Reddit được tối ưu với chặn quảng cáo, tùy chỉnh giao diện, xử lý liên kết trực tiếp và quyền riêng tư được cải thiện",
+    "reddit-ad-desc": "Xóa quảng cáo trong nguồn cấp để có trải nghiệm duyệt sạch hơn.",
+    "reddit-ui-desc": "Ẩn các nút điều hướng, phần tử thanh bên và kệ được đề xuất.",
+    "auto-dismiss": "Tự động Đóng Hộp thoại",
+    "dismiss-desc": "Tự động xóa các cửa sổ bật lên cảnh báo cộng đồng lặp đi lặp lại.",
+    "direct-links": "Liên kết Ngoài Trực tiếp",
+    "direct-links-desc": "Mở liên kết mà không theo dõi chuyển hướng, đi thẳng đến đích.",
+    "reddit-link-desc": "Xóa các tham số theo dõi khỏi các URL được chia sẻ để bảo vệ quyền riêng tư tốt hơn.",
+    "clean-nav": "Điều hướng Gọn gàng hơn",
+    "clean-nav-desc": "Bố cục đơn giản hóa với ít sao lãng hơn để duyệt tập trung.",
+    "screenshot": "Tự do Chụp màn hình",
+    "screenshot-desc": "Vô hiệu hóa cửa sổ bật lên xuất hiện khi chụp màn hình trong ứng dụng.",
+    "spoof-signature": "Sửa Thông báo",
+    "spoof-signature-desc": "Giả mạo chữ ký ứng dụng để khôi phục thông báo đẩy có thể bị hỏng sau khi vá."
+  },
+  "community": {
+    "subtitle": "Theo dõi chúng tôi, báo cáo vấn đề và giúp cải thiện Morphe",
+    "github-desc": "Duyệt mã nguồn, báo cáo lỗi và đóng góp cho sự phát triển của Morphe.",
+    "x-desc": "Cập nhật tin tức, bản phát hành và thông báo mới nhất.",
+    "reddit-desc": "Tham gia thảo luận, chia sẻ mẹo và kết nối với người dùng Morphe khác.",
+    "crowdin-desc": "Giúp dịch Morphe sang ngôn ngữ của bạn và làm cho nó có thể truy cập được cho tất cả mọi người."
   }
 }
