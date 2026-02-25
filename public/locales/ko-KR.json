@@ -1,125 +1,125 @@
 {
   "nav": {
     "home": "홈",
-    "how-it-works": "작동 원리",
+    "how-it-works": "작동 방식",
     "testimonials": "사용자 후기",
     "faq": "자주 묻는 질문"
   },
   "hero": {
-    "title": "당신의",
-    "title-highlight": "Android 앱을 변환하세요",
-    "description": "최고의 모드 YouTube 앱을 제공한 개발자들이 선보이는 Morphe - 당신이 제어하는 강력한 앱 수정 도구",
+    "title": "안드로이드 앱",
+    "title-highlight": "을 새롭게 바꿔보세요",
+    "description": "최고의 YouTube Mod 앱을 만든 개발진이 선보이는 Morphe - 앱 수정의 주도권을 당신의 손에 쥐여주는 강력한 도구",
     "download": "Morphe 다운로드",
     "learn-more": "자세히 보기",
     "social-label": "커뮤니티 참여"
   },
   "how-it-works": {
-    "title": "Morphe 작동 원리",
-    "subtitle": "간단하고 강력하며 모두를 위해 제작",
+    "title": "Morphe 사용 방법",
+    "subtitle": "간단하고 강력하며, 모두를 위해 제작",
     "step1-title": "1. Morphe 다운로드",
-    "step1-desc": "최신 버전의 Morphe를 다운로드하고 Android 기기에 설치하세요.",
+    "step1-desc": "Morphe의 최신 버전을 다운로드하여 Android 기기에 설치하세요.",
     "step2-title": "2. 앱 선택",
     "step2-desc": "수정할 앱을 선택하세요.",
     "step3-title": "3. 패치 적용",
-    "step3-desc": "Morphe가 선택한 앱에 자동으로 패치를 적용합니다.",
+    "step3-desc": "Morphe가 선택한 앱에 자동으로 패치합니다.",
     "step4-title": "4. 설치 및 즐기기",
-    "step4-desc": "패치된 앱을 설치하고 맞춤형 경험을 즐기세요."
+    "step4-desc": "패치된 앱을 설치하여 나만의 맞춤 환경을 즐겨보세요."
   },
   "testimonials": {
     "title": "사용자 후기",
-    "subtitle": "실제 사용자들의 피드백이며, 절대 꾸며낸 것이 아닙니다",
+    "subtitle": "실제 사용자들의 후기이며, 절대 꾸며낸 것이 아닙니다",
     "quote_1": {
-      "text": "예전에는 패치를 수동으로 설정하는 데 몇 시간을 보내곤 했습니다. 이제는 'Patch'를 클릭하고 커피를 마시러 가면 됩니다. 돌아오면 완료되어 있습니다. 혁명적이에요!",
+      "text": "예전에는 패치를 수동으로 설정하느라 몇 시간을 썼는데, 이제는 그냥 ‘패치’ 버튼 누르고 커피 한 잔 하러 갔다 오면 끝이에요. 돌아오면 이미 다 완료돼 있어서 진짜 혁명적이네요!",
       "author": "Lisa Smith",
       "role": "커피 애호가"
     },
     "quote_2": {
-      "text": "다른 패처들은 눈을 가리고 뇌 수술을 하는 느낌이에요. 하지만 Morphe는 몇 번의 클릭만으로 패치된 앱이 이전보다 훨씬 강력해집니다.",
+      "text": "다른 패처들은 마치 눈 가리고 뇌수술하는 기분인데, Morphe는 몇 번 클릭만 하면 끝. 패치된 앱이 예전보다 훨씬 강력해졌어요.",
       "author": "Alex Chen",
       "role": "파워 유저"
     },
     "quote_3": {
-      "text": "Vanced 같지만 더 좋고, 이상한 회사 파티 분위기는 없습니다.",
+      "text": "Vanced 같은 느낌인데, 더 좋고, 이상한 회사 파티 같은 분위기도 없어요.",
       "author": "Sarah Johnson",
-      "role": "전 Vanced 사용자"
+      "role": "이전 Vanced 사용자"
     },
     "quote_4": {
-      "text": "87세 할머니께서 제 유튜브가 왜 다르게 보이냐고 물으셨어요. Morphe를 보여드렸더니 지금은 은퇴자 커뮤니티 전체를 위해 앱을 패치하고 계십니다.",
+      "text": "87세인 우리 할머니가 제 YouTube 화면이 왜 다르냐고 물어보시길래 Morphe를 보여드렸더니, 이제는 요양원 전체 사람들 앱을 패치해주고 계세요",
       "author": "David Kin",
       "role": "자랑스러운 손자"
     },
     "quote_5": {
-      "text": "다른 패처를 시도했더니 제 핸드폰이 불탔어요. Morphe를 쓰니 핸드폰이 완벽하게 수정되었습니다. 10/10 — 다시는 자발적으로 폭발하지 않을 겁니다.",
+      "text": "다른 패처들 쓰다가 폰이 불날 뻔했는데, Morphe 쓰니까 딱 알맞게 잘 패치됐어요. 별점 10/10, 이제 폰이 불타는 일은 없겠네요.",
       "author": "Ryan Martinez",
-      "role": "화재 안전 옹호자"
+      "role": "화재 안전 지킴이"
     },
     "quote_6": {
-      "text": "Morphe가 패치 중일 때 제 고양이가 핸드폰을 테이블에서 떨어뜨렸어요. 핸드폰은 살아남았고 패치도 성공적으로 완료되었습니다. 고양이 승인.",
+      "text": "Morphe로 패치 중일 때 고양이가 제 폰을 탁자에서 떨어뜨 렸는데, 폰도 멀쩡하고 패치도 문제없이 끝났어요. 고양이도 인정한 안정성이예요.",
       "author": "Emma Jones",
       "role": "고양이 주인"
     },
     "quote_7": {
-      "text": "기술 문외한인 아버지에게 Morphe를 보여드렸어요. 이제 아버지가 저보다 앱을 더 잘 패치합니다. 제 IT 경력을 의심하게 되네요.",
+      "text": "IT에 익숙하지 않은 아버지에게 Morphe를 보여드렸더니, 이제는 저보다 더 능숙하게 앱을 패치하시네요. 제 커리어를 다시 돌아보게 되네요.",
       "author": "Tom Anderson",
-      "role": "존재적 위기 경험자"
+      "role": "현타 보유자"
     },
     "quote_8": {
-      "text": "제가 Morphe를 사용하기 시작한 후 전 여자친구가 다시 돌아왔습니다. 우연일까요? 아니라고 생각해요!",
+      "text": "Morphe를 사용하기 시작한 뒤로 전 여친이 다시 만나자고 했어요. 이게 우연일까요? 전 아니라고 봅니다!",
       "author": "Mike Thompson",
       "role": "연애 전문가"
     },
     "quote_9": {
-      "text": "Morphe는 60초짜리 스킵 불가 치약 광고로부터 저를 구해주는 유일한 존재입니다.",
+      "text": "60초나 되는 스킵 불가 치약 광고에서 저를 구해주는 건 Morphe뿐이에요.",
       "author": "Casey Morgan",
       "role": "치과의사 아님"
     },
     "quote_10": {
-      "text": "처음엔 Morphe가 무명의 그리스 신인 줄 알았어요. 그런데 훨씬 좋더군요.",
+      "text": "Morphe가 무슨 마이너한 그리스 신 이름인 줄 알았는데, 알고 보니 그보다 더 대단하더라고요.",
       "author": "Oliver Grant",
-      "role": "역사 전공 대학생"
+      "role": "역사 전공자"
     },
     "quote_11": {
-      "text": "Morphe를 알기 전에는 APK가 새로운 K-pop 밴드인 줄 알았어요. 이제는 다릅니다.",
+      "text": "Morphe 알기 전엔 APK가 새로 나온 K-pop 아이돌 그룹 이름인 줄 알았는데, 이제는 제대로 알게 됐네요.",
       "author": "Jeff Cooper",
       "role": "혼란스러운 삼촌"
     },
     "quote_12": {
-      "text": "Morphe가 무료 다운로드라는 사실을 보고, 무료 음식 샘플을 제공받았을 때와 같은 반응을 보였습니다. 생각하지 않고 행동합니다.",
+      "text": "Morphe가 무료 다운로드라는 걸 보자마자, 시식 코너에서 공짜 음식 주는 거 본 사람처럼 반사적으로 눌렀어요. 생각은 안 하고, 그냥 행동부터 합니다.",
       "author": "Tyler James",
-      "role": "반사적 의사결정자"
+      "role": "즉흥 결정러"
     },
     "quote_13": {
-      "text": "Morphe가 제 와이파이를 고치고 세금을 납부하며 세계 기아 문제를 해결했습니다. 사실은 아니지만 YouTube는 완벽하게 패치했습니다.",
+      "text": "Morphe가 제 와이파이도 고쳐주고, 세금도 대신 내주고, 세계 기아 문제도 해결해준 줄 알았어요. 물론 아니고요. 그냥 YouTube 패치를 완벽하게 해줬을 뿐입니다.",
       "author": "Sarah Williams",
-      "role": "과장쟁이"
+      "role": "오버쟁이"
     },
     "quote_14": {
-      "text": "제가 Morphe를 제 개에게 보여줬더니 이제 개가 저보다 기술을 더 잘 다룹니다.",
+      "text": "우리 집 개한테 Morphe 보여줬더니, 이제는 나보다 기계를 더 잘 다루는 것 같아요.",
       "author": "Kevin Park",
-      "role": "전 기술 전문가"
+      "role": "전직 기술 전문가"
     },
     "quote_15": {
-      "text": "Morphe가 제 앱을 너무 잘 패치해서, 이제 제 인생 선택까지 패치할 수 있는지 궁금합니다.",
+      "text": "Morphe가 앱 패치를 너무 잘해줘서, 이젠 내 인생 선택도 좀 패치해줄 수 있나 궁금해질 정도예요.",
       "author": "Doug Miller",
       "role": "자기 계발 애호가"
     },
     "quote_16": {
-      "text": "잘못된 버튼을 눌러 우연히 백만장자가 되었습니다. 어떻게 된 건지 모르겠지만 Morphe가 관련되어 있네요.",
+      "text": "버튼 잘못 눌렀다가 실수로 백만장자가 됐어요. 어떻게 된 건진 모르겠는데... Morphe가 끼어 있긴 했네요.",
       "author": "Lucky Luke",
       "role": "우연한 억만장자"
     },
     "quote_17": {
-      "text": "Morphe의 광고 차단 기능 덕분에 연구를 마치고 인류 역사 흐름을 바꿀 정신적 명확성을 얻었습니다. Morphe가 저보다 노벨상을 받을 자격이 있습니다.",
+      "text": "Morphe의 광고 차단 기능 덕분에 정신이 맑아져서 드디어 연구를 끝내고 인류 역사의 흐름을 바꿨습니다. 노벨상은 저보다 Morphe가 받아야 할 듯요.",
       "author": "Dr. Sheldon Lee",
       "role": "이론 물리학자"
     },
     "quote_18": {
-      "text": "친구들에게 Morphe를 보여줬더니 이제 저를 지하 기술 마법사로 생각합니다. 고치지 않아요.",
+      "text": "친구들한테 Morphe 보여줬더니 저를 무슨 지하 기술계 마법사 같은 존재로 보더라고요. 굳이 정정하진 않았습니다.",
       "author": "Owen Price",
       "role": "마법사"
     },
     "quote_19": {
-      "text": "Morphe가 너무 많은 광고를 차단해서 제 핸드폰이 더 가벼워진 느낌이에요. 감정적 무게를 잃은 것 같아요.",
+      "text": "Morphe가 광고를 너무 많이 막아줘서, 폰이 왠지 더 가벼워진 느낌이에요. 감정적인 살이 빠진 것 같달까...",
       "author": "Sienna Brooks",
       "role": "디지털 미니멀리스트"
     }
@@ -127,51 +127,111 @@
   "faq": {
     "title": "자주 묻는 질문",
     "subtitle": "Morphe에 대해 알아야 할 모든 것",
-    "q1": "Morphe는 어떤 앱을 패치할 수 있나요?",
-    "a1": "원하는 앱은 어떤 것이든 패치할 수 있습니다. 단, YouTube, YouTube Music, Reddit에 한합니다. 저희는 더 많은 앱 지원을 위해 끊임없이 노력하고 있습니다.",
+    "q1": "Morphe로 패치할 수 있는 앱은 무엇인가요?",
+    "a1": "원하는 어떤 앱이든 패치할 수 있습니다. 현재 YouTube, YouTube Music, Reddit를 패치할 수 있으며, 더 많은 앱을 지원하기 위해 지속적으로 업데이트 중입니다.",
     "q2": "Morphe는 안전한가요?",
-    "a2": "난독화된 바이트코드를 수정하는 만큼 안전합니다. Morphe의 모든 소스 코드는 오픈 소스이며 누구나 자유롭게 검사할 수 있습니다. 우리 커뮤니티는 코드베이스를 적극적으로 검토하고 기여합니다.",
-    "q3": "Morphe가 내 휴대폰을 벽돌로 만들 수 있나요?",
-    "a3": "휴대폰이 스스로 벽돌이 되기로 결정한 경우에만 그렇습니다. 그렇지 않으면 기기는 괜찮을 것입니다. Morphe는 앱 패키지만 수정하며 시스템 파일은 건드리지 않습니다.",
-    "q4": "내 취향에 맞게 앱을 커스터마이즈할 수 있나요?",
-    "a4": "네, 하지만 앱이 너무 커스터마이즈되어 감당할 수 없게 되더라도 Morphe를 탓하지 마세요. 선호하는 수준까지만 커스터마이즈하고 그 이상은 하지 않는 것이 좋습니다.",
-    "q5": "Morphe의 개인정보 보호정책은 무엇인가요?",
+    "a2": "난독화된 바이트코드를 수정하는 작업인 만큼 한계는 있지만, Morphe는 전체 소스 코드를 오픈소스로 공개해 누구나 검증할 수 있도록 하고 있습니다. 커뮤니티도 코드 검토와 기여에 적극적으로 참여하고 있습니다.",
+    "q3": "Morphe를 쓰면 휴대폰이 벽돌이 되나요?",
+    "a3": "기기 자체에 문제가 생기지 않는 한, 휴대폰이 벽돌이 될 일 은 없습니다. Morphe는 앱 패키지만 수정하며 시스템 파일은 변경하지 않습니다.",
+    "q4": "앱을 내가 원하는 대로 바꿀 수 있나요?",
+    "a4": "네, 가능합니다. 다만 너무 과하게 커스터마이징해서 문제가 생길 경우 Morphe의 책임은 아닙니다. 본인이 감당할 수 있는 범위 내에서만 커스터마이징하는 걸 추 천드려요.",
+    "q5": "Morphe는 개인정보를 어떻게 처리하나요?",
     "q6": "왜 Morphe라는 이름인가요?",
-    "a6": "\"Android App Modification And Transformation Tool\"(AAMATT)은 별로 기억하기 좋지 않기 때문입니다. 그리고 Morphe는 앱을 더 나은 것으로 변형시킨다는 의미를 담고 있습니다.",
+    "a6": "'Android App Modification And Transformation Tool (AAMATT)'는 이름이 너무 길고 딱딱해서요. Morphe는 앱을 더 나은 모습으로 바꿔준다는 의미를 담은 이름입니다.",
     "q7": "Morphe는 마법인가요?",
-    "a7": "아니요. 하지만 네. 마법처럼 느껴지는 고급 바이트코드 조작입니다.",
+    "a7": "아니요. 하지만 또 맞기도 해요. 마치 마법처럼 느껴질 만큼 고급 바이트코드 조작을 쓰거든요.",
     "q8": "Morphe에 기여할 수 있나요?",
-    "a8-part1": "네! 우리",
-    "a8-github": "GitHub 저장소",
-    "a8-part2": "의 기여 가이드라인을 참조하세요. 개발 기술이 없다면",
+    "a8-part1": "네! 기여 방법은 우리",
+    "a8-github": "GitHub 리포지토리의",
+    "a8-part2": "기여 가이드라인을 참고해주세요. 운영 비용을 충당하는 데 도움이 되도록",
     "a8-donate": "후원",
-    "a8-part3": "으로 비용 지불을 도와주시는 것도 항상 감사합니다."
+    "a8-part3": "도 언제나 환영합니다."
   },
   "footer": {
-    "description": "차세대 Android 앱 패칭",
+    "description": "차세대 안드로이드 앱 패치 솔루션",
     "product": "제품",
     "product-home": "홈",
     "product-microg": "MicroG 다운로드",
-    "product-translate": "번역 돕기",
+    "product-translate": "번역에 도움주기",
     "community": "커뮤니티",
     "support-donate": "후원하기",
-    "copyright": "영원히 오픈 소스이며 무료입니다.",
+    "copyright": "오픈 소스이며 영원히 무료입니다.",
     "language": "언어",
     "product-changelog": "새 소식"
+  },
+  "app-features": {
+    "title": "앱 기능",
+    "subtitle": "당신이 즐겨 쓰는 앱을 위한 강력한 패치",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "광고 차단, SponsorBlock 지원, 향상된 플레이어 컨트롤, 고급 개인정보 보호 기능까지 더한 맞춤형 YouTube 경험",
+    "ytmusic-desc": "광고 차단부터 테마 변경, 음질 개선, 깔끔한 UI까지 갖춘 업그레이드된 YouTube Music 경험",
+    "reddit-desc": "광고 차단, 인터페이스 커스터마이징, 직접 링크 처리, 향상된 개인정보 보호 기능을 제공하는 깔끔한 Reddit 경험",
+    "ad-blocking": "광고 차단",
+    "yt-ad-blocking-desc": "끊김 없는 시청을 위해 홈 피드와 동영상 플레이어에서 모든 광고를 제거합니다.",
+    "ytm-ad-desc": "음악 재생 중 모든 광고를 제거합니다.",
+    "reddit-ad-desc": "피드 광고를 제거하여 더 쾌적한 탐색 경험을 제공합니다.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "동영상에 포함된 스폰서 구간 등 불필요한 부분을 자동으로 건너뜁니다.",
+    "return-dislikes": "싫어요 수 표시",
+    "return-dislikes-desc": "커뮤니티에서 제공하는 싫어요 수를 표시하여 더 나은 시청 결정을 내릴 수 있도록 도와줍니다.",
+    "ui-customization": "UI 커스터마이징",
+    "yt-ui-desc": "Shorts 숨기기, 하단바 조정, 원하지 않는 레이아웃 구성요소 제거.",
+    "player-enhancements": "플레이어 향상",
+    "player-desc": "커스텀 재생 속도, 기본 동영상 화질 및 향상된 재생바 동작.",
+    "swipe-controls": "스와이프 제스처",
+    "swipe-desc": "직관적인 터치 제스처로 밝기와 볼륨을 조절하세요.",
+    "themes": "테마 커스터마이징",
+    "yt-themes-desc": "순수 검정, Material You 및 추가 테마 스타일.",
+    "ytm-themes-desc": "Material You 스타일을 포함한 커스텀 어둡거니 밝은 배경.",
+    "privacy": "개인정보 보호 개선",
+    "yt-privacy-desc": "추적 매개변수를 제거하여 공유 링크를 정리합니다.",
+    "audio-quality": "오디오 품질",
+    "audio-desc": "다이내믹 레인지 압축을 비활성화하고, 원본 오디오 트랙을 우선 재생합니다.",
+    "interface-cleanup": "인터페이스 정리",
+    "ytm-ui-desc": "불필요한 버튼과 UI 구성요소를 숨겨 더 깔끔한 환경을 제공합니다.",
+    "repeat": "영구 반복",
+    "repeat-desc": "앱을 다시 실행해도 그대로 유지되는 개선된 반복 재생 기능.",
+    "link-sanitization": "링크 정리",
+    "ytm-link-desc": "공유 링크에서 추적 매개변수를 제거합니다.",
+    "reddit-link-desc": "더 나은 개인정보 보호를 위해 공유 URL에서 추적 매개변수를 제거합니다.",
+    "custom-branding": "커스텀 브랜딩",
+    "branding-desc": "선택 가능한 앱 이름 및 아이콘 커스터마이징.",
+    "nav-bar": "하단바",
+    "nav-bar-desc": "하단바와 라벨을 숨기거나 커스터마이징하여 화면을 더 깔끔하게 만들 수 있습니다.",
+    "screenshot": "자유로운 스크린샷",
+    "screenshot-desc": "앱 안에서 스크린샷을 찍을 때 나타나는 팝업을 비활성화합니다.",
+    "spoof-signature": "알림 수정",
+    "spoof-signature-desc": "패치 후에 손상될 수 있는 푸시 알림을 복원하기 위해 앱 서명을 스푸핑합니다.",
+    "reddit-ui-desc": "하단바 버튼, 사이드바 구성요소 및 추천 선반을 숨깁니다.",
+    "auto-dismiss": "자동 다이얼로그 닫기",
+    "dismiss-desc": "반복적으로 뜨는 커뮤니티 경고 팝업을 자동으로 제거합니다.",
+    "direct-links": "직접 외부 링크",
+    "direct-links-desc": "리다이렉트 추적 없이 링크를 바로 열어 목적지로 직접 이동합니다.",
+    "clean-nav": "더 깔끔한 탐색",
+    "clean-nav-desc": "방해 요소를 줄인 단순한 레이아웃으로 더 집중해서 탐색할 수 있습니다."
+  },
+  "community": {
+    "subtitle": "팔로우하고, 문제를 신고하여, Morphe를 더 나은 앱으로 함께 만들어 주세요",
+    "github-desc": "소스 코드를 살펴보고, 버그를 신고하여, Morphe 개발에 참여해 보세요.",
+    "x-desc": "최신 소식, 업데이트, 공지사항을 놓치지 말고 받아보세요.",
+    "reddit-desc": "토론에 참여하고 팁을 공유하여, 다른 Morphe 사용자들과 소통해 보세요.",
+    "crowdin-desc": "Morphe를 여러분의 언어로 번역하여 더 많은 사람들이 사용할 수 있도록 도와주세요."
   },
   "analytics": {
     "title": "분석",
     "part1": "이 웹사이트는 ",
-    "part2": "와 Google Analytics 4를 사용합니다: 쿠키 없음, 광고 없음, 프로파일링 없음, 데이터는 판매되거나 공유되지 않습니다.",
-    "part3": "Morphe는 패치된 앱에 분석이나 데이터 수집을 추가하지 않습니다."
+    "part2": "와 Google Analytics 4를 사용합니다: 쿠키를 사용하지 않고 광고·프로파일링을 하지 않으며, 데이터를 판매하거나 공유하지 않습니다.",
+    "part3": "Morphe는 패치된 어떤 앱에도 분석 도구나 데이터 수집 기능을 추가하지 않습니다."
   },
   "donate": {
     "title": "지원",
-    "description": "여러분의 기여가 Morphe의 개발과 개선을 지속하는 데 도움이 됩니다",
+    "description": "여러분의 기여는 Morphe를 계속 개발하고 개선해 나가는 데 큰 힘이 됩니다",
     "why-title": "왜 후원해야 하나요?",
-    "why-1": "Morphe를 무료이며 오픈 소스로 유지",
+    "why-1": "Morphe를 무료 & 오픈소스로 유지",
     "why-2": "지속적인 개발 지원",
-    "why-3": "인프라 비용 부담 돕기",
+    "why-3": "인프라 운영 비용 돕기",
     "why-4": "더 빠른 버그 수정 및 기능 추가 가능",
     "crypto-click": "클릭하여 지갑 열기"
   },
@@ -179,37 +239,37 @@
     "title": "다운로드",
     "description": "YouTube Morphe와 YT Music Morphe를 사용하려면 MicroG가 필요합니다",
     "download": "MicroG 다운로드",
-    "what-title": "MicroG란?",
+    "what-title": "MicroG가 뭐예요?",
     "feature1-title": "Google 서비스",
-    "feature1-desc": "MicroG는 Google Play 서비스 지원을 제공하여 YouTube Morphe와 YT Music Morphe에서 Google 계정을 사용할 수 있게 합니다.",
+    "feature1-desc": "MicroG는 Google Play 서비스 호환 기능을 제공하여 YouTube Morphe와 YT Music Morphe에서 Google 계정을 사용할 수 있게 해줍니다.",
     "feature2-title": "개인정보 보호 중심",
-    "feature2-desc": "MicroG는 필수 기능을 제공하면서 개인정보를 존중하는 Google 서비스의 오픈 소스 재구현입니다.",
+    "feature2-desc": "MicroG는 개인정보를 존중하면서도 필수 기능을 제공하는 Google 서비스의 오픈소스 대체 구현체입니다.",
     "feature3-title": "한 번만 설치",
-    "feature3-desc": "MicroG를 한 번만 설치하면 모든 Morphe 앱에서 작동합니다. YouTube Morphe와 YT Music Morphe를 업데이트할 때 재설치할 필요가 없습니다."
+    "feature3-desc": "MicroG는 한 번만 설치하면 모든 Morphe 앱에서 사용할 수 있습니다. YouTube Morphe나 YT Music Morphe를 업데이트할 때마다 다시 설치할 필요도 없습니다."
   },
   "translate": {
-    "title": "번역 도와주기",
+    "title": "번역에 도움주기",
     "description": "여러분의 언어로 번역하여 전 세계 수백만 사용자가 Morphe에 접근할 수 있도록 하세요",
     "cta": "번역 시작하기",
     "how-title": "기여 방법",
     "step1-title": "1. Crowdin 가입",
-    "step1-desc": "무료 Crowdin 계정을 만드세요. 1분이면 Morphe 및 기타 오픈 소스 프로젝트를 번역할 수 있습니다.",
+    "step1-desc": "무료 Crowdin 계정을 만들어 보세요. 1분이면 가입할 수 있고, Morphe를 비롯한 다양한 오픈소스 프로젝트 번역에 참여할 수 있습니다.",
     "step2-title": "2. 언어 선택",
-    "step2-desc": "번역하려는 언어를 선택하세요. 새 번역에 기여하거나 기존 번역을 개선할 수 있습니다.",
+    "step2-desc": "번역하고 싶은 언어를 선택하세요. 새 번역에 참여하거나 기존 번역을 개선할 수 있습니다.",
     "step3-title": "3. 번역 시작",
-    "step3-desc": "Crowdin의 직관적인 인터페이스를 사용하여 문자열을 번역하세요. 모든 기여가 더 많은 사용자에게 Morphe를 접근 가능하게 만듭니다.",
+    "step3-desc": "Crowdin의 직관적인 인터페이스를 사용해 문구를 번역해 보세요. 여러분의 작은 기여 하나하나가 Morphe를 더 많은 사람들이 쓸 수 있게 만드는 데 도움이 됩니다.",
     "step4-title": "4. 영향력 확인",
-    "step4-desc": "여러분의 번역은 검토되어 향후 Morphe 릴리스에 포함되어 전 세계 사용자를 돕습니다.",
+    "step4-desc": "번역한 내용은 검토를 거쳐 이후 Morphe 업데이트에 반영되며, 전 세계 사용자들에게 도움이 됩니다.",
     "why-title": "왜 번역하나요?",
+    "why-subtitle": "번역된 문구 하나하나가 Morphe를 누군가에게 더 가까이 다가가게 합니다",
     "why-1": "커뮤니티 돕기",
+    "why-1-desc": "Morphe를 여러분의 모국어로 제공하여, 주변 사람들 모두가 언어 장벽 없이 편하게 사용할 수 있도록 도와주세요.",
     "why-2": "Morphe를 글로벌하게",
+    "why-2-desc": "Morphe를 새로운 언어와 지역으로 확장해 전 세계 수백만 명의 사용자에게 다가가 보세요.",
     "why-3": "오픈 소스에 기여",
-    "why-subtitle": "번역된 모든 문자열이 Morphe를 필요로 하는 사람에게 더 가까이 가져다줍니다",
-    "why-1-desc": "Morphe를 모국어로 이용 가능하게 하여 주변의 모든 사람이 장벽 없이 즐길 수 있도록 하세요.",
-    "why-2-desc": "Morphe를 새로운 언어와 지역으로 가져가 전 세계 수백만 명의 사용자에게 다가가세요.",
-    "why-3-desc": "번역은 오픈 소스 기여의 의미 있는 형태입니다 — 코딩 기술이 필요하지 않습니다.",
+    "why-3-desc": "번역은 코딩 실력 없이도 참여할 수 있는 의미 있는 오픈소스 기여 방식입니다.",
     "why-4": "나의 영향 확인하기",
-    "why-4-desc": "귀하의 번역은 검토되어 실제 Morphe 릴리즈에 포함되어 전 세계 사용자에게 전달됩니다."
+    "why-4-desc": "여러분의 번역은 검토를 거쳐 실제 Morphe 릴리스에 반영되며, 전 세계 사용자들에게 전달됩니다."
   },
   "error": {
     "404-title": "404 - 페이지를 찾을 수 없음",
@@ -218,74 +278,14 @@
   },
   "changelog": {
     "title": "새 소식",
-    "subtitle": "업데이트 및 개선 사항의 전체 기록",
+    "subtitle": "업데이트 및 개선 사항 전체 기록",
     "filter-type": "유형:",
     "filter-all": "전체",
     "filter-manager": "Manager",
     "filter-patches": "패치",
-    "show-dev": "사전 릴리스를 표시",
+    "show-dev": "Pre-releases 표시",
     "older-releases": "이전 릴리스를 찾고 계신가요?",
     "view-manager": "Manager 릴리스 보기",
     "view-patches": "패치 릴리스 보기"
-  },
-  "app-features": {
-    "title": "앱 기능",
-    "subtitle": "즐겨 사용하는 앱을 위한 강력한 패치",
-    "tab-youtube": "YouTube Morphe",
-    "tab-ytmusic": "YT Music Morphe",
-    "tab-reddit": "Reddit Morphe",
-    "youtube-desc": "광고 차단, SponsorBlock 지원, 향상된 플레이어 컨트롤 및 고급 개인정보 보호 개선 기능이 포함된 맞춤형 YouTube 경험",
-    "ad-blocking": "광고 차단",
-    "yt-ad-blocking-desc": "중단 없는 시청을 위해 홈 피드와 비디오 플레이어에서 모든 광고를 제거합니다.",
-    "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "스폰서 세그먼트 및 기타 불필요한 비디오 부분을 자동으로 건너뜁니다.",
-    "return-dislikes": "싫어요 수 복원",
-    "return-dislikes-desc": "더 나은 시청 결정을 내릴 수 있도록 커뮤니티 기반 싫어요 수를 표시합니다.",
-    "ui-customization": "UI 사용자 정의",
-    "yt-ui-desc": "쇼츠 숨기기, 탐색 바 조정, 원하지 않는 레이아웃 요소 제거.",
-    "player-enhancements": "플레이어 향상",
-    "player-desc": "사용자 정의 재생 속도, 기본 비디오 품질 및 개선된 탐색 막대 동작.",
-    "swipe-controls": "스와이프 컨트롤",
-    "swipe-desc": "직관적인 터치 제스처로 밝기와 볼륨을 조정하세요.",
-    "themes": "테마 사용자 정의",
-    "yt-themes-desc": "순수 검정, Material You 및 추가 테마 스타일.",
-    "privacy": "개인정보 보호 개선",
-    "yt-privacy-desc": "추적 매개변수를 제거하여 공유 링크를 정리합니다.",
-    "ytmusic-desc": "광고 차단, 사용자 정의 가능한 테마, 오디오 개선 및 더 깔끔한 인터페이스를 갖춘 향상된 YouTube Music 경험",
-    "ytm-ad-desc": "음악 재생 중 모든 광고를 제거합니다.",
-    "audio-quality": "오디오 품질",
-    "audio-desc": "다이나믹 레인지 압축을 비활성화하고 원본 오디오 트랙을 선호합니다.",
-    "ytm-themes-desc": "Material You 스타일을 포함한 사용자 정의 어둡고 밝은 배경.",
-    "interface-cleanup": "인터페이스 정리",
-    "ytm-ui-desc": "더 깔끔한 경험을 위해 불필요한 버튼과 UI 컴포넌트를 숨깁니다.",
-    "repeat": "영구 반복",
-    "repeat-desc": "세션 간에 지속되는 개선된 반복 동작.",
-    "link-sanitization": "링크 정리",
-    "ytm-link-desc": "공유 링크에서 추적 매개변수를 제거합니다.",
-    "custom-branding": "사용자 정의 브랜딩",
-    "branding-desc": "선택적 앱 이름 및 아이콘 사용자 정의.",
-    "nav-bar": "탐색 바",
-    "nav-bar-desc": "하단 탐색 바와 레이블을 숨기거나 사용자 정의하여 혼잡함을 줄입니다.",
-    "reddit-desc": "광고 차단, 인터페이스 사용자 정의, 직접 링크 처리 및 향상된 개인정보 보호가 포함된 간소화된 Reddit 경험",
-    "reddit-ad-desc": "더 깔끔한 탐색 경험을 위해 피드 내 광고를 제거합니다.",
-    "reddit-ui-desc": "탐색 버튼, 사이드바 요소 및 추천 섹션을 숨깁니다.",
-    "auto-dismiss": "자동 대화상자 닫기",
-    "dismiss-desc": "반복적인 커뮤니티 경고 팝업을 자동으로 제거합니다.",
-    "direct-links": "직접 외부 링크",
-    "direct-links-desc": "리다이렉트 추적 없이 링크를 열고 목적지로 직접 이동합니다.",
-    "reddit-link-desc": "더 나은 개인정보 보호를 위해 공유 URL에서 추적 매개변수를 제거합니다.",
-    "clean-nav": "더 깔끔한 탐색",
-    "clean-nav-desc": "집중적인 탐색을 위해 주의 산만함이 줄어든 간소화된 레이아웃.",
-    "screenshot": "스크린샷 자유",
-    "screenshot-desc": "앱 내에서 스크린샷을 찍을 때 나타나는 팝업을 비활성화합니다.",
-    "spoof-signature": "알림 수정",
-    "spoof-signature-desc": "패치 후 손상될 수 있는 푸시 알림을 복원하기 위해 앱 서명을 스푸핑합니다."
-  },
-  "community": {
-    "subtitle": "팔로우하고, 문제를 보고하고, Morphe를 더 좋게 만드는 데 도움을 주세요",
-    "github-desc": "소스 코드를 탐색하고, 버그를 보고하고, Morphe 개발에 기여하세요.",
-    "x-desc": "최신 뉴스, 릴리즈 및 공지사항으로 최신 정보를 받으세요.",
-    "reddit-desc": "토론에 참여하고, 팁을 공유하고, 다른 Morphe 사용자와 연결하세요.",
-    "crowdin-desc": "Morphe를 귀하의 언어로 번역하고 모든 사람이 접근할 수 있도록 도와주세요."
   }
 }
