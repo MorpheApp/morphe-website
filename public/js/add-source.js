@@ -7,6 +7,11 @@
     var url    = params.get('url') || '';
     var name   = params.get('name') || '';
 
+    // Short form: ?github=owner/repo → https://github.com/owner/repo
+    if (!url && params.get('github')) {
+        url = 'https://github.com/' + params.get('github');
+    }
+
     // No url param - redirect home
     if (!url) { window.location.href = '/'; return; }
 
