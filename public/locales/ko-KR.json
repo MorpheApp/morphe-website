@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "패치 소스 추가",
-    "subtitle": "이 패치 소스를 Morphe Manager에 추가하시겠습니까?",
+    "subtitle": "이 패치 소스를 Morphe에 추가하시겠습니까?",
     "source-label": "소스",
-    "warning": "신뢰할 수 있는 작성자의 소스만 추가하세요. 패치 소스는 앱을 수정할 수 있습니다.",
-    "open-btn": "Morphe Manager에서 열기",
+    "warning": "신뢰할 수 있는 작성자의 소스만 추가하세요. 패치 소스는 앱을 수정할 수 있습니다",
+    "open-btn": "Morphe에서 열기",
     "back-home": "홈페이지로 돌아가기",
-    "success-title": "Morphe Manager 여는 중…",
-    "success-subtitle": "소스가 추가되고 있습니다. 이 페이지를 닫아도 됩니다.",
+    "success-title": "Morphe 여는 중…",
+    "success-subtitle": "소스가 추가되고 있습니다. 이 페이지를 닫아도 됩니다",
     "desktop-title": "Android에서 열기",
-    "desktop-subtitle": "이 링크는 Morphe Manager에 패치 소스를 추가하며 Android 기기가 필요합니다.",
-    "desktop-step1": "Android 기기에 <a href=\"/\">Morphe Manager</a>를 설치하세요",
+    "desktop-subtitle": "이 링크는 Morphe에 패치 소스를 추가하며 Android 기기가 필요합니다",
+    "desktop-step1": "Android 기기에 <a href=\"/\">Morphe</a>를 설치하세요",
     "desktop-step2": "이 링크를 Android 기기에서 여세요",
-    "desktop-step3": "<strong>Morphe Manager에서 열기</strong>를 탭하세요"
+    "desktop-step3": "<strong>Morphe에서 열기</strong>를 탭하세요"
   }
 }

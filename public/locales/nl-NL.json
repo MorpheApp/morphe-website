@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Patchbron toevoegen",
-    "subtitle": "Wil je deze patchbron toevoegen aan Morphe Manager?",
+    "subtitle": "Wil je deze patchbron toevoegen aan Morphe?",
     "source-label": "Bron",
-    "warning": "Voeg alleen bronnen toe van auteurs die je vertrouwt. Patchbronnen kunnen je apps wijzigen.",
-    "open-btn": "Openen in Morphe Manager",
+    "warning": "Voeg alleen bronnen toe van auteurs die je vertrouwt. Patchbronnen kunnen je apps wijzigen",
+    "open-btn": "Openen in Morphe",
     "back-home": "Terug naar startpagina",
-    "success-title": "Morphe Manager openen…",
-    "success-subtitle": "De bron wordt toegevoegd. Je kunt deze pagina sluiten.",
+    "success-title": "Morphe openen…",
+    "success-subtitle": "De bron wordt toegevoegd. Je kunt deze pagina sluiten",
     "desktop-title": "Openen op Android",
-    "desktop-subtitle": "Deze link voegt een patchbron toe aan Morphe Manager, waarvoor een Android-apparaat nodig is.",
-    "desktop-step1": "Installeer <a href=\"/\">Morphe Manager</a> op je Android-apparaat",
+    "desktop-subtitle": "Deze link voegt een patchbron toe aan Morphe, waarvoor een Android-apparaat nodig is",
+    "desktop-step1": "Installeer <a href=\"/\">Morphe</a> op je Android-apparaat",
     "desktop-step2": "Open deze link op je Android-apparaat",
-    "desktop-step3": "Tik op <strong>Openen in Morphe Manager</strong>"
+    "desktop-step3": "Tik op <strong>Openen in Morphe</strong>"
   }
 }

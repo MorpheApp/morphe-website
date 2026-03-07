@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Добавить источник патчей",
-    "subtitle": "Вы хотите добавить этот источник патчей в Morphe Manager?",
+    "subtitle": "Вы хотите добавить этот источник патчей в Morphe?",
     "source-label": "Источник",
-    "warning": "Добавляйте источники только от авторов, которым вы доверяете. Источники патчей могут изменять ваши приложения.",
-    "open-btn": "Открыть в Morphe Manager",
+    "warning": "Добавляйте источники только от авторов, которым вы доверяете. Источники патчей могут изменять ваши приложения",
+    "open-btn": "Открыть в Morphe",
     "back-home": "Вернуться на главную",
-    "success-title": "Открытие Morphe Manager…",
-    "success-subtitle": "Источник добавляется. Вы можете закрыть эту страницу.",
+    "success-title": "Открытие Morphe…",
+    "success-subtitle": "Источник добавляется. Вы можете закрыть эту страницу",
     "desktop-title": "Открыть на Android",
-    "desktop-subtitle": "Эта ссылка добавляет источник патчей в Morphe Manager, для чего требуется устройство Android.",
-    "desktop-step1": "Установите <a href=\"/\">Morphe Manager</a> на своё устройство Android",
+    "desktop-subtitle": "Эта ссылка добавляет источник патчей в Morphe, для чего требуется устройство Android",
+    "desktop-step1": "Установите <a href=\"/\">Morphe</a> на своё устройство Android",
     "desktop-step2": "Откройте эту ссылку на своём устройстве Android",
-    "desktop-step3": "Нажмите <strong>Открыть в Morphe Manager</strong>"
+    "desktop-step3": "Нажмите <strong>Открыть в Morphe</strong>"
   }
 }

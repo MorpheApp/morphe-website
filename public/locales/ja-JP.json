@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "パッチソースを追加",
-    "subtitle": "このパッチソースをMorphe Managerに追加しますか？",
+    "subtitle": "このパッチソースをMorpheに追加しますか？",
     "source-label": "ソース",
-    "warning": "信頼できる作者のソースのみ追加してください。パッチソースはアプリを変更する可能性があります。",
-    "open-btn": "Morphe Managerで開く",
+    "warning": "信頼できる作者のソースのみ追加してください。パッチソースはアプリを変更する可能性があります",
+    "open-btn": "Morpheで開く",
     "back-home": "ホームページに戻る",
-    "success-title": "Morphe Managerを開いています…",
-    "success-subtitle": "ソースを追加しています。このページは閉じても構いません。",
+    "success-title": "Morpheを開いています…",
+    "success-subtitle": "ソースを追加しています。このページは閉じても構いません",
     "desktop-title": "Androidで開く",
-    "desktop-subtitle": "このリンクはMorphe Managerにパッチソースを追加します。Androidデバイスが必要です。",
-    "desktop-step1": "Android デバイスに <a href=\"/\">Morphe Manager</a> をインストールしてください",
-    "desktop-step2": "このリンクを Android デバイスで開いてください",
-    "desktop-step3": "<strong>Morphe Managerで開く</strong> をタップしてください"
+    "desktop-subtitle": "このリンクはMorpheにパッチソースを追加します。Androidデバイスが必要です",
+    "desktop-step1": "Androidデバイスに <a href=\"/\">Morphe</a> をインストールしてください",
+    "desktop-step2": "このリンクをAndroidデバイスで開いてください",
+    "desktop-step3": "<strong>Morpheで開く</strong> をタップしてください"
   }
 }

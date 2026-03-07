@@ -189,22 +189,22 @@
     "view-patches": "View Patches Releases"
   },
   "add-source": {
-    "title": "Add Patch Source",
-    "subtitle": "Do you want to add this patch source to Morphe Manager?",
+    "title": "Add patch source",
+    "subtitle": "Do you want to add this patch source to Morphe?",
     "source-label": "Source",
-    "warning": "Only add sources from authors you trust. Patch sources can modify your apps.",
-    "open-btn": "Open in Morphe Manager",
+    "warning": "Only add sources from authors you trust. Patch sources can modify your apps",
+    "open-btn": "Open in Morphe",
     "back-home": "Back to Homepage",
-    "success-title": "Opening Morphe Manager…",
-    "success-subtitle": "The source is being added. You can close this page.",
+    "success-title": "Opening Morphe…",
+    "success-subtitle": "The source is being added. You can close this page",
     "desktop-title": "Open on Android",
-    "desktop-subtitle": "This link adds a patch source to Morphe Manager, which requires an Android device.",
-    "desktop-step1": "Install <a href=\"/\">Morphe Manager</a> on your Android device",
+    "desktop-subtitle": "This link adds a patch source to Morphe, which requires an Android device",
+    "desktop-step1": "Install <a href=\"/\">Morphe</a> on your Android device",
     "desktop-step2": "Open this link on your Android device",
-    "desktop-step3": "Tap <strong>Open in Morphe Manager</strong>"
+    "desktop-step3": "Tap <strong>Open in Morphe</strong>"
   },
   "error": {
-    "go-home": "Go to Homepage",
+    "go-home": "Go to homepage",
     "404-title": "404 - Page Not Found",
     "not-found": "The page you're looking for can't be found"
   }

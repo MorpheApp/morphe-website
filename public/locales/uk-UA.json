@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Додати джерело патчів",
-    "subtitle": "Бажаєте додати це джерело патчів до Morphe Manager?",
+    "subtitle": "Бажаєте додати це джерело патчів до Morphe?",
     "source-label": "Джерело",
-    "warning": "Додавайте лише джерела від авторів, яким довіряєте. Джерела патчів можуть змінювати ваші застосунки.",
-    "open-btn": "Відкрити в Morphe Manager",
+    "warning": "Додавайте лише джерела від авторів, яким довіряєте. Джерела патчів можуть змінювати ваші застосунки",
+    "open-btn": "Відкрити в Morphe",
     "back-home": "Повернутися на головну",
-    "success-title": "Відкриття Morphe Manager…",
-    "success-subtitle": "Джерело додається. Ви можете закрити цю сторінку.",
+    "success-title": "Відкриття Morphe…",
+    "success-subtitle": "Джерело додається. Ви можете закрити цю сторінку",
     "desktop-title": "Відкрити на Android",
-    "desktop-subtitle": "Це посилання додає джерело патчів до Morphe Manager, для чого потрібен пристрій Android.",
-    "desktop-step1": "Встановіть <a href=\"/\">Morphe Manager</a> на свій пристрій Android",
-    "desktop-step2": "Відкрийте це посилання на своєму пристрої Android",
-    "desktop-step3": "Натисніть <strong>Відкрити в Morphe Manager</strong>"
+    "desktop-subtitle": "Це посилання додає джерело патчів до Morphe, для чого потрібен пристрій Android",
+    "desktop-step1": "Встановіть <a href=\"/\">Morphe</a> на свій Android-пристрій",
+    "desktop-step2": "Відкрийте це посилання на своєму Android-пристрої",
+    "desktop-step3": "Натисніть <strong>Відкрити в Morphe</strong>"
   }
 }

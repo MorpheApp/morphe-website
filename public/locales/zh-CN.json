@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "添加补丁源",
-    "subtitle": "是否要将此补丁源添加到 Morphe Manager？",
+    "subtitle": "是否要将此补丁源添加到 Morphe？",
     "source-label": "来源",
-    "warning": "仅添加来自你信任作者的来源。补丁源可能会修改你的应用。",
-    "open-btn": "在 Morphe Manager 中打开",
+    "warning": "仅添加来自你信任作者的来源。补丁源可能会修改你的应用",
+    "open-btn": "在 Morphe 中打开",
     "back-home": "返回主页",
-    "success-title": "正在打开 Morphe Manager…",
-    "success-subtitle": "正在添加来源。你可以关闭此页面。",
+    "success-title": "正在打开 Morphe…",
+    "success-subtitle": "正在添加来源。你可以关闭此页面",
     "desktop-title": "在 Android 上打开",
-    "desktop-subtitle": "此链接会向 Morphe Manager 添加一个补丁源，需要 Android 设备。",
-    "desktop-step1": "在你的 Android 设备上安装 <a href=\"/\">Morphe Manager</a>",
+    "desktop-subtitle": "此链接会向 Morphe 添加一个补丁源，需要 Android 设备",
+    "desktop-step1": "在你的 Android 设备上安装 <a href=\"/\">Morphe</a>",
     "desktop-step2": "在你的 Android 设备上打开此链接",
-    "desktop-step3": "点击 <strong>在 Morphe Manager 中打开</strong>"
+    "desktop-step3": "点击 <strong>在 Morphe 中打开</strong>"
   }
 }

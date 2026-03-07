@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Agregar fuente de parches",
-    "subtitle": "¿Quieres agregar esta fuente de parches a Morphe Manager?",
+    "subtitle": "¿Quieres agregar esta fuente de parches a Morphe?",
     "source-label": "Fuente",
-    "warning": "Agrega solo fuentes de autores en los que confíes. Las fuentes de parches pueden modificar tus aplicaciones.",
-    "open-btn": "Abrir en Morphe Manager",
+    "warning": "Agrega solo fuentes de autores en los que confíes. Las fuentes de parches pueden modificar tus aplicaciones",
+    "open-btn": "Abrir en Morphe",
     "back-home": "Volver a la página principal",
-    "success-title": "Abriendo Morphe Manager…",
-    "success-subtitle": "La fuente se está agregando. Puedes cerrar esta página.",
+    "success-title": "Abriendo Morphe…",
+    "success-subtitle": "La fuente se está agregando. Puedes cerrar esta página",
     "desktop-title": "Abrir en Android",
-    "desktop-subtitle": "Este enlace agrega una fuente de parches a Morphe Manager, lo cual requiere un dispositivo Android.",
-    "desktop-step1": "Instala <a href=\"/\">Morphe Manager</a> en tu dispositivo Android",
+    "desktop-subtitle": "Este enlace agrega una fuente de parches a Morphe, lo cual requiere un dispositivo Android",
+    "desktop-step1": "Instala <a href=\"/\">Morphe</a> en tu dispositivo Android",
     "desktop-step2": "Abre este enlace en tu dispositivo Android",
-    "desktop-step3": "Toca <strong>Abrir en Morphe Manager</strong>"
+    "desktop-step3": "Toca <strong>Abrir en Morphe</strong>"
   }
 }

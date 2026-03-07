@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Yama kaynağı ekle",
-    "subtitle": "Bu yama kaynağını Morphe Manager'a eklemek istiyor musunuz?",
+    "subtitle": "Bu yama kaynağını Morphe'e eklemek istiyor musunuz?",
     "source-label": "Kaynak",
-    "warning": "Yalnızca güvendiğiniz yazarlardan gelen kaynakları ekleyin. Yama kaynakları uygulamalarınızı değiştirebilir.",
-    "open-btn": "Morphe Manager'da aç",
+    "warning": "Yalnızca güvendiğiniz yazarlardan gelen kaynakları ekleyin. Yama kaynakları uygulamalarınızı değiştirebilir",
+    "open-btn": "Morphe'de aç",
     "back-home": "Ana sayfaya dön",
-    "success-title": "Morphe Manager açılıyor…",
-    "success-subtitle": "Kaynak ekleniyor. Bu sayfayı kapatabilirsiniz.",
+    "success-title": "Morphe açılıyor…",
+    "success-subtitle": "Kaynak ekleniyor. Bu sayfayı kapatabilirsiniz",
     "desktop-title": "Android'de aç",
-    "desktop-subtitle": "Bu bağlantı Morphe Manager'a bir yama kaynağı ekler ve bir Android cihaz gerektirir.",
-    "desktop-step1": "Android cihazınıza <a href=\"/\">Morphe Manager</a> yükleyin",
+    "desktop-subtitle": "Bu bağlantı Morphe'e bir yama kaynağı ekler ve bir Android cihaz gerektirir",
+    "desktop-step1": "Android cihazınıza <a href=\"/\">Morphe</a> yükleyin",
     "desktop-step2": "Bu bağlantıyı Android cihazınızda açın",
-    "desktop-step3": "<strong>Morphe Manager'da aç</strong> seçeneğine dokunun"
+    "desktop-step3": "<strong>Morphe'de aç</strong> seçeneğine dokunun"
   }
 }

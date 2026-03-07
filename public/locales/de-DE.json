@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Patch-Quelle hinzufügen",
-    "subtitle": "Möchten Sie diese Patch-Quelle zu Morphe Manager hinzufügen?",
+    "subtitle": "Möchten Sie diese Patch-Quelle zu Morphe hinzufügen?",
     "source-label": "Quelle",
-    "warning": "Fügen Sie nur Quellen von Autoren hinzu, denen Sie vertrauen. Patch-Quellen können Ihre Apps verändern.",
-    "open-btn": "In Morphe Manager öffnen",
+    "warning": "Fügen Sie nur Quellen von Autoren hinzu, denen Sie vertrauen. Patch-Quellen können Ihre Apps verändern",
+    "open-btn": "In Morphe öffnen",
     "back-home": "Zur Startseite",
-    "success-title": "Morphe Manager wird geöffnet…",
-    "success-subtitle": "Die Quelle wird hinzugefügt. Sie können diese Seite schließen.",
+    "success-title": "Morphe wird geöffnet…",
+    "success-subtitle": "Die Quelle wird hinzugefügt. Sie können diese Seite schließen",
     "desktop-title": "Auf Android öffnen",
-    "desktop-subtitle": "Dieser Link fügt Morphe Manager eine Patch-Quelle hinzu, wofür ein Android-Gerät erforderlich ist.",
-    "desktop-step1": "Installieren Sie <a href=\"/\">Morphe Manager</a> auf Ihrem Android-Gerät",
+    "desktop-subtitle": "Dieser Link fügt Morphe eine Patch-Quelle hinzu, wofür ein Android-Gerät erforderlich ist",
+    "desktop-step1": "Installieren Sie <a href=\"/\">Morphe</a> auf Ihrem Android-Gerät",
     "desktop-step2": "Öffnen Sie diesen Link auf Ihrem Android-Gerät",
-    "desktop-step3": "Tippen Sie auf <strong>In Morphe Manager öffnen</strong>"
+    "desktop-step3": "Tippen Sie auf <strong>In Morphe öffnen</strong>"
   }
 }

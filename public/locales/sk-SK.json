@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Pridať zdroj patchov",
-    "subtitle": "Chcete pridať tento zdroj patchov do Morphe Managera?",
+    "subtitle": "Chcete pridať tento zdroj patchov do Morphe?",
     "source-label": "Zdroj",
-    "warning": "Pridávajte iba zdroje od autorov, ktorým dôverujete. Zdroje patchov môžu upravovať vaše aplikácie.",
-    "open-btn": "Otvoriť v Morphe Manageri",
+    "warning": "Pridávajte iba zdroje od autorov, ktorým dôverujete. Zdroje patchov môžu upravovať vaše aplikácie",
+    "open-btn": "Otvoriť v Morphe",
     "back-home": "Späť na hlavnú stránku",
-    "success-title": "Otvára sa Morphe Manager…",
-    "success-subtitle": "Zdroj sa pridáva. Túto stránku môžete zavrieť.",
+    "success-title": "Otvára sa Morphe…",
+    "success-subtitle": "Zdroj sa pridáva. Túto stránku môžete zavrieť",
     "desktop-title": "Otvoriť v Androide",
-    "desktop-subtitle": "Tento odkaz pridá zdroj patchov do Morphe Managera, čo vyžaduje zariadenie s Androidom.",
-    "desktop-step1": "Nainštalujte <a href=\"/\">Morphe Manager</a> do svojho zariadenia s Androidom",
+    "desktop-subtitle": "Tento odkaz pridá zdroj patchov do Morphe, čo vyžaduje zariadenie s Androidom",
+    "desktop-step1": "Nainštalujte <a href=\"/\">Morphe</a> do svojho zariadenia s Androidom",
     "desktop-step2": "Otvorte tento odkaz na svojom zariadení s Androidom",
-    "desktop-step3": "Klepnite na <strong>Otvoriť v Morphe Manageri</strong>"
+    "desktop-step3": "Klepnite na <strong>Otvoriť v Morphe</strong>"
   }
 }

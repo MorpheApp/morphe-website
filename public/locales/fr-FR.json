@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Ajouter une source de patchs",
-    "subtitle": "Voulez-vous ajouter cette source de patchs à Morphe Manager ?",
+    "subtitle": "Voulez-vous ajouter cette source de patchs à Morphe ?",
     "source-label": "Source",
-    "warning": "Ajoutez uniquement des sources provenant d’auteurs de confiance. Les sources de patchs peuvent modifier vos applications.",
-    "open-btn": "Ouvrir dans Morphe Manager",
+    "warning": "Ajoutez uniquement des sources provenant d’auteurs de confiance. Les sources de patchs peuvent modifier vos applications",
+    "open-btn": "Ouvrir dans Morphe",
     "back-home": "Retour à l’accueil",
-    "success-title": "Ouverture de Morphe Manager…",
-    "success-subtitle": "La source est en cours d’ajout. Vous pouvez fermer cette page.",
+    "success-title": "Ouverture de Morphe…",
+    "success-subtitle": "La source est en cours d’ajout. Vous pouvez fermer cette page",
     "desktop-title": "Ouvrir sur Android",
-    "desktop-subtitle": "Ce lien ajoute une source de patchs à Morphe Manager, ce qui nécessite un appareil Android.",
-    "desktop-step1": "Installez <a href=\"/\">Morphe Manager</a> sur votre appareil Android",
+    "desktop-subtitle": "Ce lien ajoute une source de patchs à Morphe, ce qui nécessite un appareil Android",
+    "desktop-step1": "Installez <a href=\"/\">Morphe</a> sur votre appareil Android",
     "desktop-step2": "Ouvrez ce lien sur votre appareil Android",
-    "desktop-step3": "Appuyez sur <strong>Ouvrir dans Morphe Manager</strong>"
+    "desktop-step3": "Appuyez sur <strong>Ouvrir dans Morphe</strong>"
   }
 }

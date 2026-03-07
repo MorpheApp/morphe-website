@@ -290,17 +290,17 @@
   },
   "add-source": {
     "title": "Thêm nguồn bản vá",
-    "subtitle": "Bạn có muốn thêm nguồn bản vá này vào Morphe Manager không?",
+    "subtitle": "Bạn có muốn thêm nguồn bản vá này vào Morphe không?",
     "source-label": "Nguồn",
-    "warning": "Chỉ thêm nguồn từ những tác giả mà bạn tin tưởng. Nguồn bản vá có thể thay đổi ứng dụng của bạn.",
-    "open-btn": "Mở trong Morphe Manager",
+    "warning": "Chỉ thêm nguồn từ những tác giả mà bạn tin tưởng. Nguồn bản vá có thể thay đổi ứng dụng của bạn",
+    "open-btn": "Mở trong Morphe",
     "back-home": "Quay lại trang chủ",
-    "success-title": "Đang mở Morphe Manager…",
-    "success-subtitle": "Nguồn đang được thêm. Bạn có thể đóng trang này.",
+    "success-title": "Đang mở Morphe…",
+    "success-subtitle": "Nguồn đang được thêm. Bạn có thể đóng trang này",
     "desktop-title": "Mở trên Android",
-    "desktop-subtitle": "Liên kết này thêm một nguồn bản vá vào Morphe Manager, yêu cầu thiết bị Android.",
-    "desktop-step1": "Cài đặt <a href=\"/\">Morphe Manager</a> trên thiết bị Android của bạn",
+    "desktop-subtitle": "Liên kết này thêm một nguồn bản vá vào Morphe, yêu cầu thiết bị Android",
+    "desktop-step1": "Cài đặt <a href=\"/\">Morphe</a> trên thiết bị Android của bạn",
     "desktop-step2": "Mở liên kết này trên thiết bị Android của bạn",
-    "desktop-step3": "Nhấn <strong>Mở trong Morphe Manager</strong>"
+    "desktop-step3": "Nhấn <strong>Mở trong Morphe</strong>"
   }
 }
