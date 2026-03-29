@@ -1,605 +1,648 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download the official Morphe APK.
-    Created by former ReVanced contributors to patch YouTube, YouTube Music, and Reddit
-    with ad-blocking and custom features.">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Download the official Morphe APK. Created by former ReVanced contributors to patch YouTube, YouTube Music, and Reddit with ad-blocking and custom features."
+    />
     <title>Morphe App for YouTube and Reddit - OFFICIAL SITE</title>
-    <!-- Theme preloader -->
-    <script src="js/theme-preload.js"></script>
-    <!-- Language preloader -->
-    <script src="js/lang-preload.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-    <link rel="icon" href="favicon.ico"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
-    <meta name="apple-mobile-web-app-title" content="Morphe"/>
-    <link rel="manifest" href="site.webmanifest"/>
-    <script src="js/analytics.js"></script>
-</head>
-<body>
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#home" class="nav-logo">
-            <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
-            <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
+    />
+    <style>
+      :root{--md-primary:#1E5AA8;--md-on-primary:#fff;--md-primary-container:#ECF1FF;--md-on-primary-container:#0E2F5A;--md-secondary:#516380;--md-on-secondary:#fff;--md-secondary-container:#DDE6F6;--md-on-secondary-container:#1A2A40;--md-surface:#FAFBFF;--md-on-surface:#1A1C20;--md-surface-variant:#E2E4EC;--md-on-surface-variant:#44474F;--md-surface-container-lowest:#fff;--md-surface-container-low:#F4F5FB;--md-surface-container:#EEEFF5;--md-surface-container-high:#E4E5EB;--md-surface-container-highest:#DDDEE4;--md-outline:#9196A1;--md-outline-variant:#CACED8;--md-brand-gradient:linear-gradient(135deg,#1E5AA8,#00AFAE);--md-shape-sm:8px;--md-shape-md:12px;--md-shape-lg:16px;--md-shape-xl:28px;--md-shape-full:9999px;--md-elevation-1:0 1px 2px rgba(0,0,0,.06),0 1px 3px 1px rgba(0,0,0,.04);--md-elevation-2:0 1px 2px rgba(0,0,0,.06),0 2px 6px 2px rgba(0,0,0,.04);--md-elevation-3:0 1px 3px rgba(0,0,0,.06),0 4px 8px 3px rgba(0,0,0,.04);--md-elevation-4:0 2px 3px rgba(0,0,0,.06),0 6px 10px 4px rgba(0,0,0,.04);--md-ease:cubic-bezier(.2,0,0,1);--md-ease-decel:cubic-bezier(.05,.7,.1,1);--md-state-hover:0.05;--md-state-press:0.08}
+      [data-theme="dark"]{--md-primary:#A9C7FF;--md-on-primary:#00315E;--md-primary-container:#192D4A;--md-on-primary-container:#C8DAFF;--md-secondary:#BDC7DC;--md-on-secondary:#273141;--md-secondary-container:#3A4455;--md-on-secondary-container:#D9E3F8;--md-surface:#111318;--md-on-surface:#E2E2E9;--md-surface-variant:#42454D;--md-on-surface-variant:#C4C6D0;--md-surface-container-lowest:#0C0E13;--md-surface-container-low:#191C22;--md-surface-container:#1D2026;--md-surface-container-high:#222428;--md-surface-container-highest:#2C2E33;--md-outline:#8C8F98;--md-outline-variant:#42454D;--md-elevation-1:0 1px 3px 1px rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.24);--md-elevation-2:0 2px 6px 2px rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.24);--md-elevation-3:0 4px 8px 3px rgba(0,0,0,.2),0 1px 3px rgba(0,0,0,.24);--md-elevation-4:0 6px 10px 4px rgba(0,0,0,.2),0 2px 3px rgba(0,0,0,.24)}
+      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+      body{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:1rem;line-height:1.5;background:var(--md-surface);color:var(--md-on-surface);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+      a{color:var(--md-primary);text-decoration:none}img{max-width:100%;display:block}button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
+      .material-symbols-rounded{font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;vertical-align:middle;-webkit-font-smoothing:antialiased;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;width:1em;height:1em;overflow:hidden;flex-shrink:0}
+      .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+      /* Top App Bar */
+      .top-app-bar{position:fixed;top:0;left:0;right:0;z-index:2000;height:64px;display:flex;align-items:center;padding:0 12px 0 0;background:transparent;box-shadow:none;transition:background .4s var(--md-ease),box-shadow .4s var(--md-ease),border-radius .4s var(--md-ease)}
+      .top-app-bar.scrolled{background:var(--md-surface-container-high);box-shadow:var(--md-elevation-2);border-radius:0 0 var(--md-shape-xl) var(--md-shape-xl)}
+      .top-app-bar.menu-open{background:var(--md-surface-container-high);box-shadow:none;border-radius:0}
+      .bar-content{display:flex;align-items:center;width:100%;max-width:1400px;margin:0 auto;gap:4px}
+      
+      .header-brand{position:relative;display:block;margin-right:auto;width:156px;height:40px;margin-left:24px}
+      .header-brand .brand-icon{position:absolute;top:0;left:0;height:100%;width:auto;transition:opacity .2s var(--md-ease)}
+      .logo-light{opacity:1;z-index:2}
+      .logo-dark{opacity:0;z-index:1}
+      [data-theme="dark"] .logo-light{opacity:0;z-index:1}
+      [data-theme="dark"] .logo-dark{opacity:1;z-index:2}
+      
+      .nav-desktop{display:flex;align-items:center;gap:24px;margin-right:24px}
+      .nav-link{font-size:.9375rem;font-weight:500;color:var(--md-on-surface-variant);text-decoration:none;transition:color .2s var(--md-ease);white-space:nowrap}
+      .nav-link:hover{color:var(--md-primary)}
+      .nav-link.active{color:var(--md-primary);font-weight:600}
+      .icon-btn{width:44px;height:44px;border-radius:var(--md-shape-full);display:flex;align-items:center;justify-content:center;color:var(--md-on-surface-variant);position:relative;overflow:hidden}
+      .icon-btn::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-surface-variant);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .icon-btn:hover::before{opacity:var(--md-state-hover)}.icon-btn:active::before{opacity:var(--md-state-press)}
+      .menu-btn{display:none}
+      #menuIconToggle{transition:transform 0.3s var(--md-ease)}
+      .lang-bar-desktop{display:inline-flex}
+      .lang-bar-mobile{display:none}
+
+      /* Language Dropdown */
+      .lang-dropdown{position:relative;display:inline-flex}
+      .lang-trigger{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--md-shape-full);border:none;background:transparent;color:var(--md-on-surface);font-size:.8125rem;font-weight:500;cursor:pointer;position:relative;overflow:hidden;transition:background-color .2s var(--md-ease),color .2s var(--md-ease);white-space:nowrap}
+      .lang-trigger::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .lang-trigger:hover::before{opacity:var(--md-state-hover)}
+      .lang-trigger.open{background:var(--md-secondary-container);color:var(--md-on-secondary-container);padding:8px 12px}
+      .lang-trigger .material-symbols-rounded,.lang-trigger .lang-label,.lang-trigger .arrow{position:relative;z-index:1}
+      .lang-trigger .material-symbols-rounded{font-size:20px}.lang-trigger .arrow{font-size:20px;transition:transform .2s var(--md-ease)}.lang-trigger.open .arrow{transform:rotate(180deg)}
+      .lang-trigger-compact{padding:8px;border-radius:var(--md-shape-full);border:none;background:transparent;color:var(--md-on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:40px;height:40px;transition:background-color .2s var(--md-ease),color .2s var(--md-ease)}
+      .lang-trigger-compact::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .lang-trigger-compact:hover::before{opacity:var(--md-state-hover)}
+      .lang-trigger-compact.open{background:var(--md-secondary-container);color:var(--md-on-secondary-container)}
+      .lang-trigger-compact .material-symbols-rounded{font-size:20px;position:relative;z-index:1}
+      .lang-menu{position:absolute;top:calc(100% + 6px);right:0;min-width:180px;background:var(--md-surface-container);border-radius:var(--md-shape-md);box-shadow:var(--md-elevation-3);z-index:200;display:none;padding:0;overflow:hidden;animation:menuOpen .2s var(--md-ease-decel)}
+      .lang-menu.open{display:block}
+      .lang-menu-scroll{max-height:320px;overflow-y:auto;padding:4px 0}
+      .lang-menu-scroll::-webkit-scrollbar{width:4px}.lang-menu-scroll::-webkit-scrollbar-track{background:transparent}.lang-menu-scroll::-webkit-scrollbar-thumb{background:var(--md-outline-variant);border-radius:4px}
+      .lang-menu-item{display:flex;align-items:center;gap:10px;padding:10px 16px 10px 12px;font-size:.875rem;color:var(--md-on-surface);cursor:pointer;width:100%;text-align:left;position:relative;overflow:hidden;border:none;background:none;white-space:nowrap}
+      .lang-menu-item::before{content:'';position:absolute;inset:0;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .lang-menu-item:hover::before{opacity:var(--md-state-hover)}.lang-menu-item:active::before{opacity:var(--md-state-press)}
+      .lang-menu-item.selected{background:var(--md-primary-container);color:var(--md-on-primary-container)}.lang-menu-item.selected::before{background:var(--md-on-primary-container)}
+      .lang-menu-item .check-mark{font-size:18px;opacity:0;width:18px;position:relative;z-index:1;flex-shrink:0}.lang-menu-item.selected .check-mark{opacity:1}
+      .lang-menu-item .lang-name{position:relative;z-index:1}
+      @keyframes menuOpen{from{opacity:0;transform:scaleY(.85);transform-origin:top}to{opacity:1;transform:scaleY(1)}}
+
+      /* Mobile Drawer - TOP SIDE */
+      .mobile-drawer{display:none;position:fixed;inset:64px 0 0 0;z-index:1500}.mobile-drawer.open{display:flex;align-items:flex-start;justify-content:center}
+      .drawer-scrim{position:absolute;inset:0;background:color-mix(in srgb,var(--md-on-surface) 32%,transparent);animation:fadeIn .25s var(--md-ease-decel)}
+      .drawer-sheet{position:relative;width:100%;max-width:100%;height:auto;max-height:85vh;background:var(--md-surface-container-high);border-radius:0 0 var(--md-shape-xl) var(--md-shape-xl);padding:8px 16px 24px;overflow-y:auto;animation:slideInTop .35s var(--md-ease-decel);display:flex;flex-direction:column;gap:2px;box-shadow:var(--md-elevation-2)}
+      .drawer-link{display:flex;align-items:center;gap:14px;padding:14px 24px;border-radius:var(--md-shape-full);font-size:.875rem;font-weight:500;color:var(--md-on-surface-variant);text-decoration:none;position:relative;overflow:hidden}
+      .drawer-link::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .drawer-link:hover::before{opacity:var(--md-state-hover)}.drawer-link:active::before{opacity:var(--md-state-press)}
+      .drawer-link.active{background:var(--md-primary-container);color:var(--md-on-primary-container)}.drawer-link.active::before{background:var(--md-on-primary-container)}
+      .drawer-divider{height:1px;background:var(--md-outline-variant);margin:8px 16px;border:none}
+      .drawer-lang-section{padding:12px 24px}.drawer-lang-section label{font-size:.6875rem;font-weight:500;color:var(--md-on-surface-variant);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
+      @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+      @keyframes slideInTop{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+
+      /* Sections and rest */
+      .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 24px 80px;position:relative;overflow:hidden}
+      .hero::before{content:'';position:absolute;top:-30%;right:-15%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,#1E5AA8 12%,transparent) 0%,transparent 70%);pointer-events:none}
+      .hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,#00AFAE 8%,transparent) 0%,transparent 70%);pointer-events:none}
+      .hero-inner{text-align:center;max-width:800px;position:relative;z-index:1}
+      .hero-chip{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 20px;border-radius:var(--md-shape-full);background:var(--md-primary-container);color:var(--md-on-primary-container);font-size:.875rem;font-weight:500;margin-bottom:28px;animation:fadeUp .6s var(--md-ease-decel) both;width:fit-content;white-space:nowrap}
+      .hero-chip .material-symbols-rounded{font-size:18px;flex-shrink:0}
+      .hero-title{font-size:3.5rem;font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:24px;animation:fadeUp .6s var(--md-ease-decel) .1s both}
+      .gradient-text{background:var(--md-brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+      .hero-desc{font-size:1.125rem;line-height:1.75;color:var(--md-on-surface-variant);max-width:600px;margin:0 auto 40px;animation:fadeUp .6s var(--md-ease-decel) .2s both}
+      .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .6s var(--md-ease-decel) .3s both}
+      @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+      .btn-filled{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 28px;min-width:240px;height:60px;border-radius:var(--md-shape-full);background:var(--md-primary);color:var(--md-on-primary);font-size:1.125rem;font-weight:600;box-shadow:var(--md-elevation-2);text-decoration:none;position:relative;overflow:hidden;transition:box-shadow .2s var(--md-ease)}
+      .btn-filled::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-primary);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .btn-filled:hover{box-shadow:var(--md-elevation-3)}.btn-filled:hover::before{opacity:var(--md-state-hover)}.btn-filled:active::before{opacity:var(--md-state-press)}
+      .btn-filled .material-symbols-rounded,.btn-filled>span{position:relative;z-index:1}.btn-filled .material-symbols-rounded{font-size:24px}
+      .btn-tonal{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 24px;min-width:160px;height:60px;border-radius:var(--md-shape-full);background:var(--md-secondary-container);color:var(--md-on-secondary-container);font-size:1rem;font-weight:500;text-decoration:none;position:relative;overflow:hidden;transition:box-shadow .2s var(--md-ease);align-self:center}
+      .btn-tonal::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-secondary-container);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .btn-tonal:hover{box-shadow:var(--md-elevation-1)}.btn-tonal:hover::before{opacity:var(--md-state-hover)}.btn-tonal:active::before{opacity:var(--md-state-press)}
+      .btn-tonal .material-symbols-rounded,.btn-tonal>span{position:relative;z-index:1}.btn-tonal .material-symbols-rounded{font-size:24px}
+      .section{padding:96px 0}.section-header{text-align:center;margin-bottom:56px}
+      .section-overline{font-size:.8125rem;font-weight:600;color:var(--md-primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+      .section-title{font-size:2.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
+      .section-subtitle{font-size:1.0625rem;color:var(--md-on-surface-variant);max-width:600px;margin:0 auto}
+      .seg-group{display:inline-flex;border-radius:var(--md-shape-full);border:1px solid var(--md-outline-variant);overflow:hidden}
+      .seg-btn{padding:10px 24px;font-size:.875rem;font-weight:500;color:var(--md-on-surface);background:transparent;display:flex;align-items:center;white-space:nowrap;position:relative;overflow:hidden}
+      .seg-btn::before{content:'';position:absolute;inset:0;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .seg-btn:not(:last-child){border-right:1px solid var(--md-outline-variant)}
+      .seg-btn.active{background:var(--md-primary-container);color:var(--md-on-primary-container)}.seg-btn.active::before{background:var(--md-on-primary-container)}
+      .seg-btn:hover::before{opacity:var(--md-state-hover)}.seg-btn:active::before{opacity:var(--md-state-press)}
+      .features-panel-wrap{overflow:hidden;border-radius:var(--md-shape-xl);margin-top:40px}
+      .features-panel{display:flex;width:100%;will-change:transform;transition:transform .4s var(--md-ease)}
+      .features-page{flex:0 0 100%;min-width:0;display:flex;flex-direction:column;gap:24px;padding:4px 0}
+      .features-page-desc{font-size:1rem;color:var(--md-on-surface-variant);text-align:center;max-width:640px;margin:0 auto}
+      .feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+      .feat-card{background:var(--md-surface-container-low);border-radius:var(--md-shape-xl);padding:24px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden;transition:box-shadow .3s var(--md-ease)}
+      .feat-card::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-primary);opacity:0;transition:opacity .3s var(--md-ease);pointer-events:none}
+      .feat-card:hover{box-shadow:var(--md-elevation-1)}.feat-card:hover::before{opacity:.03}
+      .feat-icon{width:52px;height:52px;border-radius:var(--md-shape-lg);display:flex;align-items:center;justify-content:center;background:var(--md-primary-container);color:var(--md-on-primary-container);position:relative;z-index:1}.feat-icon .material-symbols-rounded{font-size:26px}
+      .feat-card h4{font-size:1rem;font-weight:600;position:relative;z-index:1}.feat-card p{font-size:.875rem;color:var(--md-on-surface-variant);line-height:1.6;position:relative;z-index:1}
+      .how-section{background:var(--md-surface-container-lowest)}
+      .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+      .steps-grid::before{content:'';position:absolute;top:42px;left:calc(12.5% + 32px);right:calc(12.5% + 32px);height:2px;background:var(--md-outline-variant);z-index:0}
+      .step-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;position:relative;z-index:1}
+      .step-icon-wrap{width:84px;height:84px;border-radius:var(--md-shape-full);display:flex;align-items:center;justify-content:center;background:var(--md-primary);color:var(--md-on-primary);box-shadow:var(--md-elevation-2);position:relative}.step-icon-wrap .material-symbols-rounded{font-size:36px}
+      .step-number{position:absolute;top:-4px;right:-4px;width:26px;height:26px;border-radius:var(--md-shape-full);background:var(--md-primary-container);color:var(--md-on-primary-container);font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid var(--md-surface-container-lowest)}
+      .step-card h3{font-size:1rem;font-weight:600}.step-card p{font-size:.875rem;color:var(--md-on-surface-variant);max-width:220px}
+      .testi-carousel{position:relative;overflow:hidden}.testi-track{display:flex;gap:16px;transition:transform .4s var(--md-ease);cursor:grab;user-select:none}.testi-track:active{cursor:grabbing}
+      .testi-card{flex:0 0 calc(33.333% - 11px);min-width:0;background:var(--md-surface-container);border-radius:var(--md-shape-xl);padding:28px;display:flex;flex-direction:column;gap:20px;transition:box-shadow .3s var(--md-ease)}.testi-card:hover{box-shadow:var(--md-elevation-1)}
+      .testi-stars{display:flex;gap:2px;color:#e8a817;font-size:18px}.testi-quote{font-size:1rem;line-height:1.7;flex:1;position:relative;padding-top:8px}.testi-quote::before{content:'\201C';font-size:3.5rem;line-height:1;color:var(--md-primary);opacity:.15;position:absolute;top:-14px;left:-4px;font-family:Georgia,serif}
+      .testi-author{display:flex;align-items:center;gap:12px}.testi-avatar{width:44px;height:44px;border-radius:var(--md-shape-full);background:var(--md-primary-container);color:var(--md-on-primary-container);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600}
+      .testi-name{font-size:.875rem;font-weight:600}.testi-role{font-size:.75rem;color:var(--md-on-surface-variant)}
+      .carousel-nav{display:flex;justify-content:center;gap:12px;margin-top:32px}
+      .carousel-btn{width:48px;height:48px;border-radius:var(--md-shape-full);background:var(--md-surface-container-high);color:var(--md-on-surface);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:box-shadow .2s var(--md-ease)}
+      .carousel-btn::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .carousel-btn:hover::before{opacity:var(--md-state-hover)}.carousel-btn:hover{box-shadow:var(--md-elevation-1)}.carousel-btn:active::before{opacity:var(--md-state-press)}
+      .faq-section{background:var(--md-surface-container-lowest)}
+      .faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;background:var(--md-surface-container-low);border-radius:var(--md-shape-xl);overflow:hidden}
+      .faq-item{border-bottom:1px solid var(--md-outline-variant)}.faq-item:last-child{border-bottom:none}
+      .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-size:1rem;font-weight:500;color:var(--md-on-surface);text-align:left;gap:16px;position:relative;overflow:hidden}
+      .faq-q::before{content:'';position:absolute;inset:0;background:var(--md-on-surface);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .faq-q:hover::before{opacity:var(--md-state-hover)}.faq-q:active::before{opacity:var(--md-state-press)}
+      .faq-q .expand-icon{transition:transform .3s var(--md-ease);color:var(--md-on-surface-variant);flex-shrink:0;position:relative;z-index:1}
+      .faq-q>span:first-child{position:relative;z-index:1}.faq-item.active .expand-icon{transform:rotate(180deg)}
+      .faq-a{max-height:0;overflow:hidden;transition:max-height .3s var(--md-ease)}.faq-item.active .faq-a{max-height:500px}
+      .faq-a-inner{padding:0 24px 20px;font-size:1rem;line-height:1.7;color:var(--md-on-surface-variant)}.faq-a-inner a{color:var(--md-primary);text-decoration:underline;text-underline-offset:3px}
+      .comm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+      .comm-card{background:var(--md-surface-container-low);border-radius:var(--md-shape-xl);padding:28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;text-decoration:none;color:inherit;position:relative;overflow:hidden;transition:box-shadow .3s var(--md-ease)}
+      .comm-card::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-primary);opacity:0;transition:opacity .3s var(--md-ease);pointer-events:none}
+      .comm-card:hover{box-shadow:var(--md-elevation-1)}.comm-card:hover::before{opacity:.03}
+      .comm-icon-wrap{width:64px;height:64px;border-radius:var(--md-shape-lg);background:var(--md-primary-container);display:flex;align-items:center;justify-content:center;position:relative;z-index:1}.comm-icon-wrap img{width:28px;height:28px}
+      [data-theme="light"] .comm-icon-wrap img{filter:brightness(0) saturate(100%)}[data-theme="dark"] .comm-icon-wrap img{filter:brightness(0) saturate(100%) invert(1)}
+      .comm-card h3{font-size:1rem;font-weight:600;position:relative;z-index:1}.comm-card p{font-size:.875rem;color:var(--md-on-surface-variant);line-height:1.5;position:relative;z-index:1}
+      .footer{background:var(--md-surface-container);padding:64px 0 0}
+      .footer-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:48px;padding-bottom:48px;border-bottom:1px solid var(--md-outline-variant)}
+      .footer-brand{display:flex;flex-direction:column;gap:16px}.footer-brand .brand-name{font-size:1.25rem;font-weight:600}
+      .footer-tagline{font-size:.875rem;color:var(--md-on-surface-variant)}
+      .footer-col{display:flex;flex-direction:column;gap:12px}.footer-col h4{font-size:.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;color:var(--md-on-surface)}
+      .footer-col a{font-size:.875rem;color:var(--md-on-surface-variant);text-decoration:none;padding:3px 0;transition:color .2s var(--md-ease)}.footer-col a:hover{color:var(--md-primary)}
+      .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.footer-copy{font-size:.75rem;color:var(--md-on-surface-variant)}
+      .analytics-deets{margin-top:16px}.analytics-deets summary{font-size:.75rem;font-weight:500;color:var(--md-on-surface-variant);cursor:pointer}.analytics-deets p{font-size:.75rem;color:var(--md-on-surface-variant);margin-top:8px;line-height:1.6}.analytics-deets a{color:var(--md-primary)}
+      .fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:var(--md-shape-lg);background:var(--md-primary-container);color:var(--md-on-primary-container);display:flex;align-items:center;justify-content:center;box-shadow:var(--md-elevation-3);z-index:900;opacity:0;transform:scale(.8) translateY(20px);pointer-events:none;transition:opacity .25s var(--md-ease),transform .25s var(--md-ease),box-shadow .2s var(--md-ease);overflow:hidden}
+      .fab::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--md-on-primary-container);opacity:0;transition:opacity .2s var(--md-ease);pointer-events:none}
+      .fab.visible{opacity:1;transform:scale(1) translateY(0);pointer-events:auto}.fab:hover{box-shadow:var(--md-elevation-4)}.fab:hover::before{opacity:var(--md-state-hover)}.fab:active::before{opacity:var(--md-state-press)}
+      .anim{opacity:0;transform:translateY(24px);transition:opacity .5s var(--md-ease-decel),transform .5s var(--md-ease-decel)}.anim.visible{opacity:1;transform:translateY(0)}
+
+      @media(max-width:900px){
+          .nav-desktop{display:none!important}
+          .lang-bar-desktop{display:none!important}
+          .lang-bar-mobile{display:inline-flex}
+          .menu-btn{display:flex}
+      }
+      @media(max-width:768px){.hero-title{font-size:2.5rem}.section-title{font-size:1.75rem}.section{padding:64px 0}.hero{padding:80px 16px 64px}.testi-card{flex:0 0 100%}.steps-grid{grid-template-columns:1fr;gap:24px}.steps-grid::before{display:none}.comm-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr;gap:32px}.hero-actions{flex-direction:column;align-items:center}.btn-filled{width:auto;min-width:240px}.feat-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
+      @media(max-width:480px){.hero-title{font-size:2rem;line-height:1.15}.seg-group{width:100%}.seg-btn{flex:1;justify-content:center;padding:10px 12px;font-size:.8125rem}}
+    </style>
+    <script>
+      !function(){var t=localStorage.getItem("morphe-theme")||"auto",d=matchMedia("(prefers-color-scheme:dark)").matches;document.documentElement.setAttribute("data-theme",t==="auto"?(d?"dark":"light"):t)}()
+    </script>
+  </head>
+  <body>
+    <header class="top-app-bar" id="topBar">
+      <div class="bar-content">
+        <a href="#home" class="header-brand">
+          <img src="https://morphe.software/images/morphe_wordmark_light.svg" alt="Morphe" class="brand-icon logo-light" />
+          <img src="https://morphe.software/images/morphe_wordmark_dark.svg" alt="Morphe" class="brand-icon logo-dark" />
         </a>
-        <div class="nav-links">
-            <a href="#home" class="nav-link" data-i18n="nav.home" data-umami-event="Nav Home Click">Home</a>
-            <a href="#how-it-works" class="nav-link" data-i18n="nav.how-it-works" data-umami-event="Nav How It Works Click">How It Works</a>
-            <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials" data-umami-event="Nav Testimonials Click">Testimonials</a>
-            <a href="#faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
-            <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
-            <a href="changelog" class="nav-link"  data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
-        </div>
-        <div class="nav-actions">
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
-                <!-- Sun Icon (Light Mode) -->
-                <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <!-- Moon Icon (Dark Mode) -->
-                <svg id="theme-icon-moon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
+        <nav class="nav-desktop">
+          <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a
+          ><a href="#how-it-works" class="nav-link" data-i18n="nav.how-it-works"
+            >How It Works</a
+          ><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials"
+            >Testimonials</a
+          ><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a
+          ><a href="/donate" class="nav-link" data-i18n="footer.support-donate">Donate</a
+          ><a href="/changelog" class="nav-link" data-i18n="footer.product-changelog">What's New</a
+          >
+        </nav>
+        <!-- Desktop language dropdown -->
+        <span class="lang-bar-desktop"
+          ><div class="lang-dropdown" id="langDropdownBar">
+            <button class="lang-trigger" id="langTriggerBar" type="button">
+              <span class="material-symbols-rounded">translate</span
+              ><span class="lang-label" id="langLabelBar">English</span
+              ><span class="material-symbols-rounded arrow">expand_more</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="lang-menu" id="langMenuBar" role="listbox"></div></div
+        ></span>
+        <!-- Mobile language dropdown -->
+        <span class="lang-bar-mobile"
+          ><div class="lang-dropdown" id="langDropdownMobile">
+            <button
+              class="lang-trigger-compact"
+              id="langTriggerMobile"
+              type="button"
+            >
+              <span class="material-symbols-rounded">translate</span>
             </button>
-        </div>
+            <div
+              class="lang-menu"
+              id="langMenuMobile"
+              role="listbox"
+            ></div></div
+        ></span>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <span class="material-symbols-rounded" id="themeIcon">dark_mode</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
+          <span class="material-symbols-rounded" id="menuIconToggle">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-drawer" id="drawer">
+      <div class="drawer-scrim" id="scrim"></div>
+      <div class="drawer-sheet">
+        <a href="#home" class="drawer-link active" onclick="closeDrawer()"
+          ><span class="material-symbols-rounded">home</span>
+          <span data-i18n="nav.home">Home</span></a
+        ><a href="#how-it-works" class="drawer-link" onclick="closeDrawer()"
+          ><span class="material-symbols-rounded">help</span>
+          <span data-i18n="nav.how-it-works">How It Works</span></a
+        ><a href="#testimonials" class="drawer-link" onclick="closeDrawer()"
+          ><span class="material-symbols-rounded">reviews</span>
+          <span data-i18n="nav.testimonials">Testimonials</span></a
+        ><a href="#faq" class="drawer-link" onclick="closeDrawer()"
+          ><span class="material-symbols-rounded">quiz</span>
+          <span data-i18n="nav.faq">FAQ</span></a
+        >
+        <hr class="drawer-divider" />
+        <a href="/donate" class="drawer-link" onclick="closeDrawer()"
+          ><span class="material-symbols-rounded">volunteer_activism</span>
+          <span data-i18n="footer.support-donate">Donate</span></a
+        ><a href="/changelog" class="drawer-link" onclick="closeDrawer()"
+          ><span class="material-symbols-rounded">new_releases</span>
+          <span data-i18n="footer.product-changelog">What's New</span></a
+        >
+      </div>
     </div>
-</nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title"><span data-i18n="hero.title">Transform Your</span> <span class="gradient-text" data-i18n="hero.title-highlight">Android Apps</span></h1>
-            <p class="hero-description" data-i18n="hero.description">
-                From the developers that brought you the greatest modded YouTube apps,
-                comes Morphe - the powerful app modification tool that puts you in control
-            </p>
-            <div class="hero-buttons">
-                <a href="DOWNLOAD_URL_TEMPLATE" class="btn btn-primary" data-umami-event="Download Button Click">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    <span data-i18n="hero.download">Download Morphe</span>
-                </a>
-                <a href="#how-it-works" class="btn btn-secondary" data-umami-event="Learn More Button Click">
-                    <span data-i18n="hero.learn-more">Learn More</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-            </div>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-chip">
+          <span class="material-symbols-rounded">auto_awesome</span>
+          <span data-i18n="footer.copyright"
+            >Open source and free forever.</span
+          >
         </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section class="features-section">
-    <div class="container">
-
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="app-features.title">App Features</h2>
-            <p class="section-subtitle" data-i18n="app-features.subtitle">Powerful patches for your favourite apps</p>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title">Transform Your</span>
+          <span class="gradient-text" data-i18n="hero.title-highlight"
+            >Android Apps</span
+          >
+        </h1>
+        <p class="hero-desc" data-i18n="hero.description">
+          From the developers that brought you the greatest modded YouTube apps,
+          comes Morphe — the powerful app modification tool that puts you in
+          control.
+        </p>
+        <div class="hero-actions">
+          <a
+            href="https://github.com/MorpheApp/morphe-manager/releases/download/v1.11.0/morphe-manager-1.11.0.apk"
+            class="btn-filled"
+            ><span class="material-symbols-rounded">download</span>
+            <span data-i18n="hero.download">Download Morphe</span></a
+          ><a href="#how-it-works" class="btn-tonal"
+            ><span class="material-symbols-rounded">arrow_downward</span>
+            <span data-i18n="hero.learn-more">Learn More</span></a
+          >
         </div>
+      </div>
+    </section>
 
-        <!-- App Tabs -->
-        <div class="app-tabs" role="tablist">
-            <button class="app-tab active" data-app="youtube" role="tab" aria-selected="true">
-                <span data-i18n="app-features.tab-youtube">YouTube Morphe</span>
+    <section
+      id="features"
+      class="section"
+      style="background:var(--md-surface);"
+    >
+      <div class="container">
+        <div class="section-header anim">
+          <p class="section-overline" data-i18n="nav.features">Features</p>
+          <h2 class="section-title" data-i18n="app-features.title">
+            App Features
+          </h2>
+          <p class="section-subtitle" data-i18n="app-features.subtitle">
+            Powerful patches for your favourite apps
+          </p>
+        </div>
+        <div style="display:flex;justify-content:center;" class="anim">
+          <div class="seg-group" id="appTabs">
+            <button class="seg-btn active" data-app="youtube" type="button">
+              <span data-i18n="app-features.tab-youtube">YouTube</span></button
+            ><button class="seg-btn" data-app="ytmusic" type="button">
+              <span data-i18n="app-features.tab-ytmusic">YT Music</span></button
+            ><button class="seg-btn" data-app="reddit" type="button">
+              <span data-i18n="app-features.tab-reddit">Reddit</span>
             </button>
-            <button class="app-tab" data-app="ytmusic" role="tab" aria-selected="false">
-                <span data-i18n="app-features.tab-ytmusic">YT Music Morphe</span>
-            </button>
-            <button class="app-tab" data-app="reddit" role="tab" aria-selected="false">
-                <span data-i18n="app-features.tab-reddit">Reddit Morphe</span>
-            </button>
+          </div>
         </div>
-
-        <!-- Pages container -->
-        <div class="app-features-panel-wrapper">
-            <div class="app-features-panel">
-
-                <!-- YouTube page -->
-                <div class="app-features-page active" data-app="youtube">
-                    <p class="app-page-desc" data-i18n="app-features.youtube-desc">A customized YouTube experience with ad blocking, SponsorBlock support, enhanced player controls, and advanced privacy improvements</p>
-                    <div class="features-grid-cards">
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
-                            <h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4>
-                            <p data-i18n="app-features.yt-ad-blocking-desc">Removes all ads from the home feed and video player for uninterrupted viewing.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                            <h4 data-i18n="app-features.sponsorblock">SponsorBlock</h4>
-                            <p data-i18n="app-features.sponsorblock-desc">Automatically skips sponsored segments and other non-essential parts of videos.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></div>
-                            <h4 data-i18n="app-features.return-dislikes">Return Dislikes</h4>
-                            <p data-i18n="app-features.return-dislikes-desc">Displays community-powered dislike counts so you can make better viewing decisions.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                            <h4 data-i18n="app-features.ui-customization">UI Customization</h4>
-                            <p data-i18n="app-features.yt-ui-desc">Hide Shorts, adjust navigation bar, and remove unwanted layout elements.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
-                            <h4 data-i18n="app-features.player-enhancements">Player Enhancements</h4>
-                            <p data-i18n="app-features.player-desc">Custom playback speeds, default video quality, and improved seekbar behavior.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-                            <h4 data-i18n="app-features.swipe-controls">Swipe Controls</h4>
-                            <p data-i18n="app-features.swipe-desc">Adjust brightness and volume with intuitive touch gestures.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><circle cx="12" cy="12" r="4"/></svg></div>
-                            <h4 data-i18n="app-features.themes">Theme Customization</h4>
-                            <p data-i18n="app-features.yt-themes-desc">Pure black, Material You, and additional theme styles.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-                            <h4 data-i18n="app-features.privacy">Privacy Improvements</h4>
-                            <p data-i18n="app-features.yt-privacy-desc">Cleans sharing links by removing tracking parameters.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- YT Music page -->
-                <div class="app-features-page" data-app="ytmusic">
-                    <p class="app-page-desc" data-i18n="app-features.ytmusic-desc">An enhanced YouTube Music experience with ad blocking, customizable themes, audio improvements, and a cleaner interface</p>
-                    <div class="features-grid-cards">
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
-                            <h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4>
-                            <p data-i18n="app-features.ytm-ad-desc">Removes all ads during music playback.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-                            <h4 data-i18n="app-features.audio-quality">Audio Quality</h4>
-                            <p data-i18n="app-features.audio-desc">Disable dynamic range compression and prefer original audio tracks.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><circle cx="12" cy="12" r="4"/></svg></div>
-                            <h4 data-i18n="app-features.themes">Theme Customization</h4>
-                            <p data-i18n="app-features.ytm-themes-desc">Custom dark and light backgrounds including Material You styles.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                            <h4 data-i18n="app-features.interface-cleanup">Interface Cleanup</h4>
-                            <p data-i18n="app-features.ytm-ui-desc">Hide unnecessary buttons and UI components for a cleaner experience.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
-                            <h4 data-i18n="app-features.repeat">Permanent Repeat</h4>
-                            <p data-i18n="app-features.repeat-desc">Improved repeat behavior that persists across sessions.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-                            <h4 data-i18n="app-features.link-sanitization">Link Sanitization</h4>
-                            <p data-i18n="app-features.ytm-link-desc">Removes tracking parameters from shared links.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                            <h4 data-i18n="app-features.custom-branding">Custom Branding</h4>
-                            <p data-i18n="app-features.branding-desc">Optional app name and icon customization.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="17" width="20" height="5" rx="1"/><line x1="6" y1="17" x2="6" y2="22"/><line x1="12" y1="17" x2="12" y2="22"/><line x1="18" y1="17" x2="18" y2="22"/></svg></div>
-                            <h4 data-i18n="app-features.nav-bar">Navigation Bar</h4>
-                            <p data-i18n="app-features.nav-bar-desc">Hide or customize the bottom navigation bar and its labels to reduce clutter.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reddit page -->
-                <div class="app-features-page" data-app="reddit">
-                    <p class="app-page-desc" data-i18n="app-features.reddit-desc">A streamlined Reddit experience with ad blocking, interface customization, direct link handling, and improved privacy</p>
-                    <div class="features-grid-cards">
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
-                            <h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4>
-                            <p data-i18n="app-features.reddit-ad-desc">Removes in-feed advertisements for a cleaner browsing experience.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                            <h4 data-i18n="app-features.interface-cleanup">Interface Customization</h4>
-                            <p data-i18n="app-features.reddit-ui-desc">Hide navigation buttons, sidebar elements, and recommended shelves.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9V4.5M9 9H4.5M9 9 3.5 3.5M9 15v4.5M9 15H4.5M9 15l-5.5 5.5M15 9h4.5M15 9V4.5M15 9l5.5-5.5M15 15h4.5M15 15v4.5m0-4.5 5.5 5.5"/></svg></div>
-                            <h4 data-i18n="app-features.auto-dismiss">Auto Dialog Dismiss</h4>
-                            <p data-i18n="app-features.dismiss-desc">Automatically removes repetitive community warning popups.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
-                            <h4 data-i18n="app-features.direct-links">Direct External Links</h4>
-                            <p data-i18n="app-features.direct-links-desc">Open links without redirect tracking, going directly to the destination.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-                            <h4 data-i18n="app-features.link-sanitization">Link Sanitization</h4>
-                            <p data-i18n="app-features.reddit-link-desc">Removes tracking parameters from shared URLs for better privacy.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                            <h4 data-i18n="app-features.clean-nav">Cleaner Navigation</h4>
-                            <p data-i18n="app-features.clean-nav-desc">Simplified layout with fewer distractions for focused browsing.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><line x1="3" y1="3" x2="21" y2="21"/></svg></div>
-                            <h4 data-i18n="app-features.screenshot">Screenshot Freedom</h4>
-                            <p data-i18n="app-features.screenshot-desc">Disables the popup that appears when taking screenshots inside the app.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-                            <h4 data-i18n="app-features.spoof-signature">Notification Fix</h4>
-                            <p data-i18n="app-features.spoof-signature-desc">Spoofs the app signature to restore push notifications that may be broken after patching.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="features-panel-wrap anim">
+          <div class="features-panel" id="featPanel">
+            <!-- YouTube Page -->
+            <div class="features-page">
+              <p class="features-page-desc" data-i18n="app-features.youtube-desc">
+                Customized YouTube with ad blocking, SponsorBlock, and privacy.
+              </p>
+              <div class="feat-grid">
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">block</span></div><h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4><p data-i18n="app-features.yt-ad-blocking-desc">Removes all ads.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">skip_next</span></div><h4 data-i18n="app-features.sponsorblock">SponsorBlock</h4><p data-i18n="app-features.sponsorblock-desc">Skips sponsors.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">thumb_down</span></div><h4 data-i18n="app-features.return-dislikes">Return Dislikes</h4><p data-i18n="app-features.return-dislikes-desc">Dislike counts.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">dashboard_customize</span></div><h4 data-i18n="app-features.ui-customization">UI Customization</h4><p data-i18n="app-features.yt-ui-desc">Hide Shorts, adjust nav.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">speed</span></div><h4 data-i18n="app-features.player-enhancements">Player</h4><p data-i18n="app-features.player-desc">Custom speeds.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">swipe</span></div><h4 data-i18n="app-features.swipe-controls">Swipe Controls</h4><p data-i18n="app-features.swipe-desc">Brightness gestures.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">palette</span></div><h4 data-i18n="app-features.themes">Themes</h4><p data-i18n="app-features.yt-themes-desc">Pure black, Material You.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">shield</span></div><h4 data-i18n="app-features.privacy">Privacy</h4><p data-i18n="app-features.yt-privacy-desc">Clean links.</p></div>
+              </div>
             </div>
+            <!-- YT Music Page -->
+            <div class="features-page">
+              <p class="features-page-desc" data-i18n="app-features.ytmusic-desc">Enhanced YT Music.</p>
+              <div class="feat-grid">
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">block</span></div><h4 data-i18n="app-features.ad-blocking">Ads</h4><p data-i18n="app-features.ytm-ad-desc">No ads.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">headphones</span></div><h4 data-i18n="app-features.audio-quality">Audio</h4><p data-i18n="app-features.audio-desc">No compression.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">palette</span></div><h4 data-i18n="app-features.themes">Themes</h4><p data-i18n="app-features.ytm-themes-desc">Material You.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">tune</span></div><h4 data-i18n="app-features.interface-cleanup">Interface</h4><p data-i18n="app-features.ytm-ui-desc">Hide buttons.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">repeat</span></div><h4 data-i18n="app-features.repeat">Repeat</h4><p data-i18n="app-features.repeat-desc">Persistent.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">link_off</span></div><h4 data-i18n="app-features.link-sanitization">Links</h4><p data-i18n="app-features.ytm-link-desc">No tracking.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">verified</span></div><h4 data-i18n="app-features.custom-branding">Branding</h4><p data-i18n="app-features.branding-desc">Custom icon.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">bottom_navigation</span></div><h4 data-i18n="app-features.nav-bar">Nav</h4><p data-i18n="app-features.nav-bar-desc">Customize.</p></div>
+              </div>
+            </div>
+            <!-- Reddit Page -->
+            <div class="features-page">
+              <p class="features-page-desc" data-i18n="app-features.reddit-desc">Streamlined Reddit.</p>
+              <div class="feat-grid">
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">block</span></div><h4 data-i18n="app-features.ad-blocking">Ads</h4><p data-i18n="app-features.reddit-ad-desc">No feed ads.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">view_compact</span></div><h4 data-i18n="app-features.interface-cleanup">Interface</h4><p data-i18n="app-features.reddit-ui-desc">Hide shelves.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">close</span></div><h4 data-i18n="app-features.auto-dismiss">Dismiss</h4><p data-i18n="app-features.dismiss-desc">No popups.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">open_in_new</span></div><h4 data-i18n="app-features.direct-links">Links</h4><p data-i18n="app-features.direct-links-desc">No redirects.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">link_off</span></div><h4 data-i18n="app-features.link-sanitization">Sanitize</h4><p data-i18n="app-features.reddit-link-desc">No tracking.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">explore</span></div><h4 data-i18n="app-features.clean-nav">Nav</h4><p data-i18n="app-features.clean-nav-desc">Cleaner.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">screenshot</span></div><h4 data-i18n="app-features.screenshot">Screenshots</h4><p data-i18n="app-features.screenshot-desc">No popup.</p></div>
+                <div class="feat-card"><div class="feat-icon"><span class="material-symbols-rounded">notifications_active</span></div><h4 data-i18n="app-features.spoof-signature">Notifications</h4><p data-i18n="app-features.spoof-signature-desc">Fix push.</p></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- How It Works Section -->
-<section id="how-it-works" class="how-it-works">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="how-it-works.title">How Morphe Works</h2>
-            <p class="section-subtitle" data-i18n="how-it-works.subtitle">Simple, powerful, and built for everyone</p>
+    <section id="how-it-works" class="section how-section">
+      <div class="container">
+        <div class="section-header anim">
+          <p class="section-overline" data-i18n="nav.how-it-works">Getting Started</p>
+          <h2 class="section-title" data-i18n="how-it-works.title">How Morphe Works</h2>
+          <p class="section-subtitle" data-i18n="how-it-works.subtitle">Simple and powerful</p>
         </div>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step1-title">1. Download Morphe</h3>
-                <p class="feature-description" data-i18n="how-it-works.step1-desc">
-                    Download the latest version of Morphe and install it on your Android device.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                        <polyline points="21 15 16 10 5 21"></polyline>
-                    </svg>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step2-title">2. Choose Your App</h3>
-                <p class="feature-description" data-i18n="how-it-works.step2-desc">
-                    Select the app you want to modify.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
-                        <circle cx="12" cy="12" r="3"></circle>
-                    </svg>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step3-title">3. Apply Patches</h3>
-                <p class="feature-description" data-i18n="how-it-works.step3-desc">
-                    Morphe will automatically patch your selected app.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step4-title">4. Install & Enjoy</h3>
-                <p class="feature-description" data-i18n="how-it-works.step4-desc">
-                    Install the patched app and enjoy your customized experience.
-                </p>
-            </div>
+        <div class="steps-grid anim">
+          <div class="step-card"><div class="step-icon-wrap"><span class="material-symbols-rounded">download</span><span class="step-number">1</span></div><h3 data-i18n="how-it-works.step1-title">Download</h3><p data-i18n="how-it-works.step1-desc">Install on Android.</p></div>
+          <div class="step-card"><div class="step-icon-wrap"><span class="material-symbols-rounded">apps</span><span class="step-number">2</span></div><h3 data-i18n="how-it-works.step2-title">Choose</h3><p data-i18n="how-it-works.step2-desc">Select app.</p></div>
+          <div class="step-card"><div class="step-icon-wrap"><span class="material-symbols-rounded">build</span><span class="step-number">3</span></div><h3 data-i18n="how-it-works.step3-title">Patch</h3><p data-i18n="how-it-works.step3-desc">Auto patches.</p></div>
+          <div class="step-card"><div class="step-icon-wrap"><span class="material-symbols-rounded">check_circle</span><span class="step-number">4</span></div><h3 data-i18n="how-it-works.step4-title">Enjoy</h3><p data-i18n="how-it-works.step4-desc">Install and use.</p></div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="testimonials.title">What Users Say</h2>
-            <p class="section-subtitle" data-i18n="testimonials.subtitle">Feedback from real users and definitely not made up</p>
+    <section id="testimonials" class="section" style="background:var(--md-surface);">
+      <div class="container">
+        <div class="section-header anim">
+          <p class="section-overline" data-i18n="nav.testimonials">Testimonials</p>
+          <h2 class="section-title" data-i18n="testimonials.title">What Users Say</h2>
+          <p class="section-subtitle" data-i18n="testimonials.subtitle">Real feedback</p>
         </div>
-
-        <div class="testimonials-carousel">
-            <button class="carousel-button prev" aria-label="Previous testimonial" data-umami-event="Testimonial Previous Click">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-
-            <div class="testimonials-grid" id="testimonials-grid">
-                <!-- Dynamically generated from JS -->
-            </div>
-
-            <button class="carousel-button next" aria-label="Next testimonial" data-umami-event="Testimonial Next Click">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
+        <div class="testi-carousel anim">
+          <div class="testi-track" id="testiTrack"></div>
+          <div class="carousel-nav">
+            <button class="carousel-btn" id="cPrev"><span class="material-symbols-rounded">chevron_left</span></button>
+            <button class="carousel-btn" id="cNext"><span class="material-symbols-rounded">chevron_right</span></button>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- FAQ Section -->
-<section id="faq" class="faq">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
-            <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about Morphe</p>
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-header anim">
+          <p class="section-overline" data-i18n="nav.faq">Support</p>
+          <h2 class="section-title" data-i18n="faq.title">FAQ</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need</p>
         </div>
-
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What apps can Morphe patch?">
-                    <div class="faq-number">1</div>
-                    <span class="faq-text" data-i18n="faq.q1">What apps can Morphe patch?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a1">You can patch any app you want. As long as you want YouTube, YouTube Music, or Reddit. We're constantly working on expanding support to more apps.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
-                    <div class="faq-number">2</div>
-                    <span class="faq-text" data-i18n="faq.q2">Is Morphe safe?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a2">As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
-                    <div class="faq-number">3</div>
-                    <span class="faq-text" data-i18n="faq.q3">Will Morphe brick my phone?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a3">Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I customize apps to my preference?">
-                    <div class="faq-number">4</div>
-                    <span class="faq-text" data-i18n="faq.q4">Can I customize apps to my preference?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a4">Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
-                    <div class="faq-number">5</div>
-                    <span class="faq-text" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n="analytics.part1">This website uses </span>
-                        <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">
-                            <span>Umami</span></a>
-                        <span data-i18n="analytics.part2">and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
-                        <span data-i18n="analytics.part3">Morphe does not add analytics or data collection to any patched apps.</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Why the name Morphe?">
-                    <div class="faq-number">6</div>
-                    <span class="faq-text" data-i18n="faq.q6">Why the name Morphe?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a6">Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe magic?">
-                    <div class="faq-number">7</div>
-                    <span class="faq-text" data-i18n="faq.q7">Is Morphe magic?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a7">No. But also yes. It's advanced bytecode manipulation that feels like magic.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I contribute to Morphe?">
-                    <div class="faq-number">8</div>
-                    <span class="faq-text" data-i18n="faq.q8">Can I contribute to Morphe?</span>
-                    <svg class="faq-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n="faq.a8-part1">Yes! See the contribution guidelines in our</span>
-                        <a href="https://github.com/MorpheApp/" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="GitHub Contribution Click">
-                            <span data-i18n="faq.a8-github">GitHub repos</span></a><span data-i18n="faq.a8-part2">. If you don't have developer skills, we always appreciate</span>
-                        <a href="/donate" class="inline-link" data-umami-event="FAQ Donate Link Click">
-                            <span data-i18n="faq.a8-donate">donations</span></a>
-                        <span data-i18n="faq.a8-part3">to help pay the bills.</span>
-                    </p>
-                </div>
-            </div>
+        <div class="faq-list anim">
+          <div class="faq-item">
+            <button class="faq-q" type="button"><span data-i18n="faq.q1">What apps?</span><span class="material-symbols-rounded expand-icon">expand_more</span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a1">YouTube, YT Music, Reddit.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button"><span data-i18n="faq.q2">Safe?</span><span class="material-symbols-rounded expand-icon">expand_more</span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a2">Open source.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button"><span data-i18n="faq.q3">Brick?</span><span class="material-symbols-rounded expand-icon">expand_more</span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">Only modifies apps.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button"><span data-i18n="faq.q4">Customize?</span><span class="material-symbols-rounded expand-icon">expand_more</span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">Yes, fully.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button"><span data-i18n="faq.q6">Why Morphe?</span><span class="material-symbols-rounded expand-icon">expand_more</span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a6">Morphs apps better.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button"><span data-i18n="faq.q7">Magic?</span><span class="material-symbols-rounded expand-icon">expand_more</span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a7">Feels like it.</div></div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Community Section -->
-<section id="community" class="community">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="hero.social-label">Join the Community</h2>
-            <p class="section-subtitle" data-i18n="community.subtitle">Follow us, report issues, and help make Morphe better</p>
+    <section id="community" class="section" style="background:var(--md-surface);">
+      <div class="container">
+        <div class="section-header anim">
+          <p class="section-overline">Connect</p>
+          <h2 class="section-title" data-i18n="hero.social-label">Join the Community</h2>
+          <p class="section-subtitle" data-i18n="community.subtitle">Follow, report, contribute</p>
         </div>
-        <div class="community-grid">
-            <a href="https://github.com/MorpheApp" target="_blank" class="community-card" data-umami-event="GitHub Link Click">
-                <div class="feature-icon">
-                    <img src="images/github.svg" alt="GitHub" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">GitHub</h3>
-                <p class="feature-description" data-i18n="community.github-desc">Browse the source code, report bugs, and contribute to Morphe development.</p>
-            </a>
-            <a href="https://x.com/MorpheApp" target="_blank" class="community-card" data-umami-event="X Link Click">
-                <div class="feature-icon">
-                    <img src="images/X.svg" alt="X" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">X (Twitter)</h3>
-                <p class="feature-description" data-i18n="community.x-desc">Stay up to date with the latest news, releases, and announcements.</p>
-            </a>
-            <a href="https://reddit.com/r/MorpheApp" target="_blank" class="community-card" data-umami-event="Reddit Link Click">
-                <div class="feature-icon">
-                    <img src="images/reddit.svg" alt="Reddit" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">Reddit</h3>
-                <p class="feature-description" data-i18n="community.reddit-desc">Join discussions, share tips, and connect with other Morphe users.</p>
-            </a>
-            <a href="https://crowdin.com/project/morphe" target="_blank" class="community-card" data-umami-event="Crowdin Link Click">
-                <div class="feature-icon">
-                    <img src="images/crowdin-small.svg" alt="Crowdin" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">Crowdin</h3>
-                <p class="feature-description" data-i18n="community.crowdin-desc">Help translate Morphe into your language and make it accessible to everyone.</p>
-            </a>
+        <div class="comm-grid anim">
+          <a href="https://github.com/MorpheApp" target="_blank" rel="noopener" class="comm-card">
+            <div class="comm-icon-wrap"><img alt="GitHub" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjAwNiAyYTkuODQ3IDkuODQ3IDAgMCAwLTYuNDg0IDIuNDQgMTAuMzIgMTAuMzIgMCAwIDAtMy4zOTMgNi4xNyAxMC40OCAxMC40OCAwIDAgMCAxLjMxNyA2Ljk1NSAxMC4wNDUgMTAuMDQ1IDAgMCAwIDUuNCA0LjQxOGMuNTA0LjA5NS42ODMtLjIyMy42ODMtLjQ5NCAwLS4yNDUtLjAxLTEuMDUyLS4wMTQtMS45MDgtMi43OC42Mi0zLjM2Ni0xLjIxLTMuMzY2LTEuMjFhMi43MTEgMi43MTEgMCAwIDAtMS4xMS0xLjVjLS45MDctLjYzNy4wNy0uNjIxLjA3LS42MjEuMzE3LjA0NC42Mi4xNjMuODg1LjM0Ni4yNjYuMTgzLjQ4Ny40MjYuNjQ3LjcxLjEzNS4yNTMuMzE4LjQ3Ni41MzguNjU1YTIuMDc5IDIuMDc5IDAgMCAwIDIuMzcuMTk2Yy4wNDUtLjUyLjI3LTEuMDA2LjYzNS0xLjM3LTIuMjE5LS4yNTktNC41NTQtMS4xMzgtNC41NTQtNS4wN2E0LjAyMiA0LjAyMiAwIDAgMSAxLjAzMS0yLjc1IDMuNzcgMy43NyAwIDAgMSAuMDk2LTIuNzEzcy44MzktLjI3NSAyLjc0OSAxLjA1YTkuMjYgOS4yNiAwIDAgMSA1LjAwNCAwYzEuOTA2LTEuMzI1IDIuNzQtMS4wNSAyLjc0LTEuMDUuMzcuODU4LjQwNiAxLjgyOC4xMDEgMi43MTNhNC4wMTcgNC4wMTcgMCAwIDEgMS4wMjkgMi43NWMwIDMuOTM5LTIuMzM5IDQuODA1LTQuNTY0IDUuMDU4YTIuNDcxIDIuNDcxIDAgMCAxIC42NzkgMS44OTdjMCAxLjM3Mi0uMDEyIDIuNDc3LS4wMTIgMi44MTQgMCAuMjcyLjE4LjU5Mi42ODcuNDkyYTEwLjA1IDEwLjA1IDAgMCAwIDUuMzg4LTQuNDIxIDEwLjQ3MyAxMC40NzMgMCAwIDAgMS4zMTMtNi45NDggMTAuMzIgMTAuMzIgMCAwIDAtMy4zOS02LjE2NUE5Ljg0NyA5Ljg0NyAwIDAgMCAxMi4wMDcgMloiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==" /></div>
+            <h3>GitHub</h3><p data-i18n="community.github-desc">Source code.</p>
+          </a>
+          <a href="https://x.com/MorpheApp" target="_blank" rel="noopener" class="comm-card">
+            <div class="comm-icon-wrap"><img alt="X" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMy43OTUgMTAuNTMzIDIwLjY4IDJoLTMuMDczbC01LjI1NSA2LjUxN0w3LjY5IDJIMWw3LjgwNiAxMC45MUwxLjQ3IDIyaDMuMDc0bDUuNzA1LTcuMDdMMTUuMzEgMjJIMjJsLTguMjA1LTExLjQ2N1ptLTIuMzggMi45NUw5Ljk3IDExLjQ2NCA0LjM2IDMuNjI3aDIuMzFsNC41MjggNi4zMTcgMS40NDMgMi4wMiA2LjAxOCA4LjQwOWgtMi4zMWwtNC45MzQtNi44OVoiLz48L3N2Zz4=" /></div>
+            <h3>X</h3><p data-i18n="community.x-desc">News.</p>
+          </a>
+          <a href="https://reddit.com/r/MorpheApp" target="_blank" rel="noopener" class="comm-card">
+            <div class="comm-icon-wrap"><img alt="Reddit" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMi4wMDggMTYuNTIxYTMuODQgMy44NCAwIDAgMCAyLjQ3LS43N3YuMDRhLjI4MS4yODEgMCAwIDAgLjAwNS0uMzk2LjI4MS4yODEgMCAwIDAtLjM5NS0uMDA1IDMuMjkxIDMuMjkxIDAgMCAxLTIuMDkuNjEgMy4yNjYgMy4yNjYgMCAwIDEtMi4wODEtLjYzLjI3LjI3IDAgMCAwLS4zOC4zODEgMy44NCAzLjg0IDAgMCAwIDIuNDcuNzdaIi8+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMiAxMmMwIDUuNTIzLTQuNDc3IDEwLTEwIDEwUzIgMTcuNTIzIDIgMTIgNi40NzcgMiAxMiAyczEwIDQuNDc3IDEwIDEwWm0tNC44NDUtMS40MDdBMS40NjMgMS40NjMgMCAwIDEgMTguNjcgMTJhMS40NiAxLjQ2IDAgMCAxLS44MDggMS4zM2MuMDEuMTQ2LjAxLjI5MyAwIC40NCAwIDIuMjQyLTIuNjEgNC4wNjEtNS44MjkgNC4wNjFzLTUuODMtMS44MjEtNS44My00LjA2MWEzLjI1IDMuMjUgMCAwIDEgMC0uNDQgMS40NTggMS40NTggMCAwIDEtLjQ1Ny0yLjMyNyAxLjQ1OCAxLjQ1OCAwIDAgMSAyLjA2My0uMDY0IDcuMTYzIDcuMTYzIDAgMCAxIDMuOS0xLjIzbC43MzgtMy40N3YtLjAwNmEuMzEuMzEgMCAwIDEgLjM3LS4yMzZsMi40NTIuNDlhMSAxIDAgMSAxLS4xMzIuNjExbC0yLjE0LS40NS0uNjQ5IDMuMTJhNy4xMSA3LjExIDAgMCAxIDMuODUgMS4yM2MuMjU5LS4yNDYuNi0uMzkzLjk1Ny0uNDA1WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTUuMzA1IDEzYTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMFptLTQuNjI1IDBhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwWiIvPjwvc3ZnPg==" /></div>
+            <h3>Reddit</h3><p data-i18n="community.reddit-desc">Discussions.</p>
+          </a>
+          <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener" class="comm-card">
+            <div class="comm-icon-wrap"><span class="material-symbols-rounded" style="font-size:28px;color:var(--md-on-primary-container);">translate</span></div>
+            <h3>Crowdin</h3><p data-i18n="community.crowdin-desc">Translate.</p>
+          </a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
+    <footer class="footer">
+      <div class="container">
         <div class="footer-top">
-
-            <!-- Brand column -->
-            <div class="footer-brand">
-                <a href="/" class="footer-logo-link">
-                    <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
-                    <span class="footer-brand-name">Morphe</span>
-                </a>
-                <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
-                   data-umami-event="DMCA Click">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
-                </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                <details class="analytics-details">
-                    <summary data-i18n="analytics.title">Analytics</summary>
-                    <span data-i18n="analytics.part1">This website uses </span>
-                    <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">Umami</a>
-                    <span data-i18n="analytics.part2"> and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
-                </details>
+          <div class="footer-brand">
+            <a href="/" class="header-brand" style="margin-bottom: 12px;">
+              <img src="https://morphe.software/images/morphe_wordmark_light.svg" alt="Morphe" class="brand-icon logo-light" loading="lazy" />
+              <img src="https://morphe.software/images/morphe_wordmark_dark.svg" alt="Morphe" class="brand-icon logo-dark" loading="lazy" />
+            </a>
+            <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
+            <details class="analytics-deets">
+              <summary>Analytics &amp; Privacy</summary>
+              <p>Uses <a href="https://umami.is" target="_blank" rel="noopener">Umami</a> &amp; GA4. No cookies or profiling.</p>
+            </details>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer.product">Product</h4>
+            <a href="/" data-i18n="footer.product-home">Home</a>
+            <a href="/changelog" data-i18n="footer.product-changelog">What's New</a>
+            <a href="/microg" data-i18n="footer.product-microg">MicroG</a>
+            <a href="/translate" data-i18n="footer.product-translate">Translate</a>
+            <a href="/donate" data-i18n="footer.support-donate">Donate</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer.community">Community</h4>
+            <a href="https://github.com/MorpheApp" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://x.com/MorpheApp" target="_blank" rel="noopener">X</a>
+            <a href="https://reddit.com/r/MorpheApp" target="_blank" rel="noopener">Reddit</a>
+            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener">Crowdin</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer.language">Language</h4>
+            <div class="lang-dropdown" id="langDropdownFooter" style="width:100%;">
+              <button class="lang-trigger" id="langTriggerFooter" type="button" style="width:100%;">
+                <span class="material-symbols-rounded">translate</span>
+                <span class="lang-label" id="langLabelFooter">English</span>
+                <span class="material-symbols-rounded arrow" style="margin-left:auto;">expand_more</span>
+              </button>
+              <div class="lang-menu" id="langMenuFooter" role="listbox" style="left:0;right:auto;min-width:100%;bottom:calc(100% + 6px);top:auto;"></div>
             </div>
-
-            <!-- Navigation columns -->
-            <div class="footer-nav">
-                <div class="footer-column">
-                    <h4 data-i18n="footer.product">Product</h4>
-                    <a href="/" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
-                    <a href="changelog" data-i18n="footer.product-changelog" data-umami-event="Footer What's New Click">What's New</a>
-                    <a href="microg" data-i18n="footer.product-microg" data-umami-event="Footer MicroG Click">Download MicroG</a>
-                    <a href="translate" data-i18n="footer.product-translate" data-umami-event="Footer Translate Click">Help translate</a>
-                    <a href="donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
-                </div>
-                <div class="footer-column">
-                    <h4 data-i18n="footer.community">Community</h4>
-                    <a href="https://github.com/MorpheApp" target="_blank" data-umami-event="Footer GitHub Click">GitHub</a>
-                    <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="Footer X Click">X (Twitter)</a>
-                    <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Footer Reddit Click">Reddit</a>
-                    <a href="https://crowdin.com/project/morphe" target="_blank" data-umami-event="Footer Crowdin Click">Crowdin</a>
-                </div>
-                <div class="footer-column language-selector-container">
-                    <h4 data-i18n="footer.language">Language</h4>
-                    <select id="language-selector" class="language-selector" data-umami-event="Language Change">
-                        <!-- Options will be populated dynamically by i18n.js -->
-                    </select>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <!-- Bottom bar — copyright centered -->
         <div class="footer-bottom">
-            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
+          <p class="footer-copy">&copy; 2025 Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<!-- Scroll to Top Button -->
-<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-</button>
+    <button class="fab" id="fab" aria-label="Scroll to top"><span class="material-symbols-rounded">arrow_upward</span></button>
 
-<script src="js/theme-manager.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/testimonials.js"></script>
-<script src="js/app-features.js"></script>
-<script src="js/main.js"></script>
-</body>
+    <script>
+      !function(){
+          "use strict";
+          var LANGS=[{code:"en",name:"English"},{code:"cs-CZ",name:"Čeština"},{code:"de-DE",name:"Deutsch"},{code:"es-ES",name:"Español"},{code:"fr-FR",name:"Français"},{code:"it-IT",name:"Italiano"},{code:"nl-NL",name:"Nederlands"},{code:"pl-PL",name:"Polski"},{code:"pt-BR",name:"Português (BR)"},{code:"pt-PT",name:"Português (PT)"},{code:"ru-RU",name:"Русский"},{code:"sk-SK",name:"Slovenčina"},{code:"vi-VN",name:"Tiếng Việt"},{code:"tr-TR",name:"Türkçe"},{code:"uk-UA",name:"Українська"},{code:"ja-JP",name:"日本語"},{code:"ko-KR",name:"한국어"},{code:"zh-CN",name:"中文"}];
+          var CODES=LANGS.map(function(l){return l.code}),translations={},currentLang="en";
+          function detectLang(){var s=localStorage.getItem("morphe-language");if(s&&CODES.indexOf(s)!==-1)return s;var b=navigator.language||"en";if(CODES.indexOf(b)!==-1)return b;var base=b.split("-")[0];for(var i=0;i<CODES.length;i++){if(CODES[i]===base||CODES[i].split("-")[0]===base)return CODES[i]}return"en"}
+          function getNested(o,p){var k=p.split(".");var c=o;for(var i=0;i<k.length;i++){if(!c||typeof c!=="object")return null;c=c[k[i]]}return typeof c==="string"?c:null}
+          function applyTranslations(){document.querySelectorAll("[data-i18n]").forEach(function(el){var v=getNested(translations,el.getAttribute("data-i18n"));if(v)el.textContent=v});buildTestimonials()}
+          function buildTestimonials(){var track=document.getElementById("testiTrack");if(!track||!translations.testimonials)return;var t=translations.testimonials,html="",order=[2,9,3,16,4,18,5,10,6,11,7,13];for(var x=0;x<order.length;x++){var q=t["quote_"+order[x]];if(!q)continue;html+='<div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-quote">'+(q.text||"")+'</div><div class="testi-author"><div class="testi-avatar">'+(q.author||"?").charAt(0).toUpperCase()+'</div><div><div class="testi-name">'+(q.author||"")+'</div><div class="testi-role">'+(q.role||"")+'</div></div></div></div>'}if(html)track.innerHTML=html;ci=0;updC()}
+          function loadLang(code){currentLang=code;localStorage.setItem("morphe-language",code);document.documentElement.lang=code;var lo=LANGS.find(function(l){return l.code===code});document.querySelectorAll(".lang-label").forEach(function(l){l.textContent=lo?lo.name:"English"});document.querySelectorAll(".lang-menu-item").forEach(function(i){i.classList.toggle("selected",i.getAttribute("data-code")===code)});fetch("https://morphe.software/locales/"+code+".json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){translations=d;applyTranslations()}).catch(function(){if(code!=="en")fetch("https://morphe.software/locales/en.json").then(function(r){return r.json()}).then(function(d){translations=d;applyTranslations()}).catch(function(){})})}
+          function closeAllMenus(){document.querySelectorAll(".lang-menu").forEach(function(m){m.classList.remove("open")});document.querySelectorAll(".lang-trigger,.lang-trigger-compact").forEach(function(t){t.classList.remove("open");t.setAttribute("aria-expanded","false")})}
+          function initLangDD(tId,mId){var trigger=document.getElementById(tId),menu=document.getElementById(mId);if(!trigger||!menu)return;menu.innerHTML="";var scroll=document.createElement("div");scroll.className="lang-menu-scroll";LANGS.forEach(function(lang){var btn=document.createElement("button");btn.type="button";btn.className="lang-menu-item"+(lang.code===currentLang?" selected":"");btn.setAttribute("data-code",lang.code);btn.innerHTML='<span class="material-symbols-rounded check-mark">check</span><span class="lang-name">'+lang.name+"</span>";btn.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();closeAllMenus();loadLang(lang.code)});scroll.appendChild(btn)});menu.appendChild(scroll);trigger.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();var open=menu.classList.contains("open");closeAllMenus();if(!open){menu.classList.add("open");trigger.classList.add("open");trigger.setAttribute("aria-expanded","true");var sel=scroll.querySelector(".selected");if(sel)setTimeout(function(){sel.scrollIntoView({block:"nearest"})},50)}})}
+          document.addEventListener("click",function(e){if(!e.target.closest(".lang-dropdown"))closeAllMenus()});
+          currentLang=detectLang();
+          initLangDD("langTriggerBar","langMenuBar");
+          initLangDD("langTriggerMobile","langMenuMobile");
+          initLangDD("langTriggerFooter","langMenuFooter");
+          loadLang(currentLang);
+
+          var toggle=document.getElementById("themeToggle"),icon=document.getElementById("themeIcon");
+          function getTheme(){return localStorage.getItem("morphe-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}
+          function applyThemeIcon(t){icon.textContent=t==="dark"?"light_mode":"dark_mode"}
+          applyThemeIcon(getTheme());
+          toggle.addEventListener("click",function(){
+              var cur=getTheme(),next=cur==="dark"?"light":"dark";
+              document.documentElement.setAttribute("data-theme",next);
+              localStorage.setItem("morphe-theme",next);
+              applyThemeIcon(next);
+          });
+
+          var bar = document.getElementById("topBar");
+          var fab = document.getElementById("fab");
+          var secs = document.querySelectorAll("section[id]");
+          var navs = document.querySelectorAll(".nav-link, .drawer-link");
+          var d = document.getElementById("drawer");
+          var mi = document.getElementById("menuIconToggle");
+          var isScrolling = false;
+
+          window.addEventListener("scroll", function() {
+            if (!isScrolling) {
+              window.requestAnimationFrame(function() {
+                var y = window.scrollY;
+                bar.classList.toggle("scrolled", y > 50);
+                fab.classList.toggle("visible", y > 400);
+                var c = "";
+                secs.forEach(function(s) { if (y >= s.offsetTop - 164) c = s.id; });
+                navs.forEach(function(l) {
+                  var h = l.getAttribute("href");
+                  if (h && h.startsWith("#")) l.classList.toggle("active", h === "#" + c);
+                });
+                isScrolling = false;
+              });
+              isScrolling = true;
+            }
+          }, { passive: true });
+
+          function toggleMenu(c){
+            var o = c === true ? false : !d.classList.contains("open");
+            if(o){
+              d.classList.add("open");bar.classList.add("menu-open");
+              mi.style.transform="rotate(90deg)";mi.textContent="close";
+            }else{
+              d.classList.remove("open");bar.classList.remove("menu-open");
+              mi.style.transform="rotate(0deg)";mi.textContent="menu";
+            }
+          }
+          document.getElementById("menuBtn").addEventListener("click",toggleMenu);
+          document.getElementById("scrim").addEventListener("click",function(){toggleMenu(true)});
+          window.closeDrawer=function(){toggleMenu(true)};
+
+          document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener("click",function(e){var t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-64,behavior:"smooth"})}})});
+          
+          fab.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+
+          var faqs = document.querySelectorAll(".faq-item");
+          document.querySelectorAll(".faq-q").forEach(function(b){b.addEventListener("click",function(){var i=b.closest(".faq-item"),a=i.classList.contains("active");faqs.forEach(function(x){x.classList.remove("active")});if(!a)i.classList.add("active")})});
+
+          var tabs=document.querySelectorAll(".seg-btn"),panel=document.getElementById("featPanel"),pages=document.querySelectorAll(".features-page"),curTab=0;
+          function setTab(i){curTab=i;tabs.forEach(function(t,j){t.classList.toggle("active",j===i)});panel.style.transform="translateX(-"+100*i+"%)";}
+          tabs.forEach(function(t,i){t.addEventListener("click",function(){setTab(i)})});
+          
+          var sx=0,pw=panel.parentElement;
+          pw.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});
+          pw.addEventListener("touchend",function(e){var d=sx-e.changedTouches[0].clientX;if(Math.abs(d)>50){d>0&&curTab<pages.length-1?setTab(curTab+1):d<0&&curTab>0&&setTab(curTab-1)}});
+          
+          var ci=0;
+          function cShow(){return window.innerWidth<=768?1:3}
+          function updC(){
+            var track=document.getElementById("testiTrack");
+            if(!track)return;
+            var cards=track.querySelectorAll(".testi-card");
+            if(!cards.length)return;
+            track.style.transform="translateX(-"+ci*(cards[0].offsetWidth+16)+"px)";
+          }
+          function cN(){var track=document.getElementById("testiTrack");if(!track)return;var cards=track.querySelectorAll(".testi-card");var m=Math.max(0,cards.length-cShow());ci=ci>=m?0:ci+1;updC()}
+          function cP(){var track=document.getElementById("testiTrack");if(!track)return;var cards=track.querySelectorAll(".testi-card");var m=Math.max(0,cards.length-cShow());ci=ci<=0?m:ci-1;updC()}
+          
+          var nBtn=document.getElementById("cNext"),pBtn=document.getElementById("cPrev");
+          if(nBtn) nBtn.addEventListener("click",cN);
+          if(pBtn) pBtn.addEventListener("click",cP);
+          
+          var cx=0,tt=document.getElementById("testiTrack");
+          if(tt){
+            tt.addEventListener("touchstart",function(e){cx=e.touches[0].clientX},{passive:true});
+            tt.addEventListener("touchend",function(e){var d=cx-e.changedTouches[0].clientX;if(Math.abs(d)>50){d>0?cN():cP()}});
+          }
+          window.addEventListener("resize",updC);
+          
+          var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -60px 0px"});
+          document.querySelectorAll(".anim").forEach(function(el){obs.observe(el)});
+      }();
+    </script>
+  </body>
 </html>
+
+
+
+
+
+
+
