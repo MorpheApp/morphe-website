@@ -46,7 +46,7 @@
     "quote_4": {
       "text": "87歳の祖母が、なぜ私のYouTubeが違って見えるのか尋ねました。Morpheを見せたら、今では退職者コミュニティ全体のアプリをパッチしています。",
       "author": "David Kin",
-      "role": "誇り高き孫"
+      "role": "自慢の孫"
     },
     "quote_5": {
       "text": "他のパッチャーを試したら、スマホが火を吹きました。Morpheではスマホは完璧に改造されています。10/10 – 二度と自然発火しません。",
@@ -56,7 +56,7 @@
     "quote_6": {
       "text": "Morpheがパッチ中に猫がスマホをテーブルから落としました。スマホは無事で、パッチは成功しました。猫も納得。",
       "author": "Emma Jones",
-      "role": "猫の飼い主"
+      "role": "愛猫家"
     },
     "quote_7": {
       "text": "技術音痴の父にMorpheを見せました。今では私より上手にアプリをパッチしています。ITキャリア全体を疑っています。",
@@ -230,27 +230,27 @@
   },
   "app-features": {
     "title": "アプリの機能",
-    "subtitle": "お気に入りのアプリを強力なパッチでカスタマイズ",
+    "subtitle": "お気に入りのアプリをカスタマイズする高機能パッチ",
     "tab-youtube": "YouTube Morphe",
     "tab-ytmusic": "YT Music Morphe",
     "tab-reddit": "Reddit Morphe",
-    "youtube-desc": "広告ブロック、SponsorBlockのサポート、プレーヤー機能の強化、高度なプライバシーの保護で、より快適なYouTubeに",
+    "youtube-desc": "広告ブロック、SponsorBlockのサポート、プレーヤー機能の強化、高度なプライバシーの保護によりYouTubeアプリをより快適に",
     "ad-blocking": "広告ブロック",
     "yt-ad-blocking-desc": "ホーム画面および動画プレーヤーからすべての広告を削除することで、快適に動画を視聴できるようになります。",
     "sponsorblock": "SponsorBlock",
-    "sponsorblock-desc": "動画に埋め込まれた広告および不要な場面を自動的にスキップします。",
-    "return-dislikes": "低評価の表示",
-    "return-dislikes-desc": "コミュニティによる低評価数を表示し、より良い視聴判断ができるようにします。",
+    "sponsorblock-desc": "動画に埋め込まれた広告および不要な場面を自動的にスキップすることができます。",
+    "return-dislikes": "低評価数表示の復活",
+    "return-dislikes-desc": "コミュニティ集計による低評価数を表示することで、より良い視聴判断が可能になります。",
     "ui-customization": "UIのカスタマイズ",
     "yt-ui-desc": "ショート動画の非表示、ナビゲーションバーの調整、不要なレイアウト要素の削除",
     "player-enhancements": "プレーヤー機能の強化",
-    "player-desc": "再生速度のカスタマイズ、デフォルト画質の設定、シークバー操作の改善",
+    "player-desc": "再生速度の追加および変更、デフォルト画質の設定、シークバー操作の改善",
     "swipe-controls": "スワイプコントロール",
-    "swipe-desc": "直感的なタッチジェスチャーで明るさと音量を調整します。",
+    "swipe-desc": "タッチジェスチャーにより明るさと音量を直感的に調整することができます。",
     "themes": "テーマのカスタマイズ",
-    "yt-themes-desc": "ピュアブラック、Material You、その他のテーマスタイル。",
+    "yt-themes-desc": "ピュアブラック、Material Youなどの多様なテーマスタイル",
     "privacy": "プライバシーの改善",
-    "yt-privacy-desc": "追跡パラメータを削除して共有リンクをクリーンにします。",
+    "yt-privacy-desc": "追跡パラメータを削除して共有リンクをクリーンにすることができます。",
     "ytmusic-desc": "広告ブロック、カスタマイズ可能なテーマ、オーディオ改善、よりクリーンなインターフェースを備えた強化されたYouTube Music体験",
     "ytm-ad-desc": "音楽再生中のすべての広告を削除します。",
     "audio-quality": "音質",
