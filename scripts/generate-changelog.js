@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
 
-const MANAGER_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/dev/app/CHANGELOG.md';
+const MANAGER_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/dev/CHANGELOG.md';
 const PATCHES_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-patches/refs/heads/dev/CHANGELOG.md';
 
 function repoUrlFromRaw(rawUrl) {
