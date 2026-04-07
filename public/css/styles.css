@@ -1906,3 +1906,43 @@ select.language-selector { display: none !important; }
   color: var(--md-primary);
   font-weight: 500;
 }
+
+@media (max-width: 992px) {
+  .menu-btn {
+    display: flex !important;
+  }
+
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .lang-bar-desktop {
+    display: none !important;
+  }
+
+  .lang-bar-mobile {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .bar-content {
+    padding: 0 16px;
+  }
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+.mobile-drawer.open {
+  display: flex;
+}
+
+#menuIconToggle {
+  font-size: 28px;
+}
+
+.menu-btn {
+  display: none;
+}
