@@ -7,11 +7,6 @@
       "region": null
     },
     {
-      "code": "ar",
-      "name": "العربية",
-      "region": null
-    },
-    {
       "code": "cs-CZ",
       "name": "Čeština",
       "region": "CZ"
@@ -80,6 +75,11 @@
       "code": "uk-UA",
       "name": "Українська",
       "region": "UA"
+    },
+    {
+      "code": "ar",
+      "name": "العربية",
+      "region": null
     },
     {
       "code": "ja-JP",
