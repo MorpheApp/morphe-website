@@ -29,6 +29,9 @@
                 // Apply translations after everything is ready
                 this.applyTranslations();
 
+                // Set direction (RTL/LTR)
+                this.applyDirection();
+
                 // Remove loading class to show content
                 document.documentElement.classList.remove('i18n-loading');
 
@@ -168,6 +171,7 @@
             localStorage.setItem(I18N_KEY, lang);
             await this.loadTranslations(lang);
             this.applyTranslations();
+            this.applyDirection();
 
             // Reload testimonials with current language
             if (typeof window.reloadTestimonials === 'function') {
@@ -245,6 +249,12 @@
             // Update HTML lang attribute
             // For region codes, use full code (e.g., pt-BR)
             document.documentElement.lang = this.currentLang;
+        }
+
+        applyDirection() {
+            const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+            const lang = this.currentLang.split('-')[0];
+            document.documentElement.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
         }
 
         setupLanguageSelector() {

@@ -2289,3 +2289,107 @@ body {
 html[data-theme] {
     visibility: visible;
 }
+
+/* RTL Support */
+[dir="rtl"] body {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-logo-wordmark {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .nav-links {
+    margin-left: var(--spacing-lg);
+    margin-right: auto;
+}
+
+[dir="rtl"] .nav-actions {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .hero-buttons,
+[dir="rtl"] .hero-content {
+    text-align: center;
+}
+
+[dir="rtl"] .feature-card,
+[dir="rtl"] .community-card,
+[dir="rtl"] .testimonial-card,
+[dir="rtl"] .faq-answer,
+[dir="rtl"] .app-page-desc {
+    text-align: right;
+}
+
+[dir="rtl"] .faq-toggle-icon {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+[dir="rtl"] .faq-number {
+    margin-right: 0;
+    margin-left: var(--spacing-md);
+}
+
+[dir="rtl"] .scroll-to-top {
+    right: auto;
+    left: var(--spacing-xl);
+}
+
+[dir="rtl"] .footer-column {
+    text-align: right;
+}
+
+[dir="rtl"] .toggle-slider::before {
+    left: auto;
+    right: 2px;
+}
+
+[dir="rtl"] .filter-toggle input:checked + .toggle-slider::before {
+    transform: translateX(-20px);
+}
+
+[dir="rtl"] .version-card {
+    border-left: 1px solid var(--border);
+    border-right: 4px solid var(--primary-blue);
+}
+
+[dir="rtl"] .version-card[data-type="patches"] {
+    border-right-color: var(--primary-teal);
+}
+
+[dir="rtl"] .feature-slide-icon {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="rtl"] .carousel-button.prev {
+    left: auto;
+    right: var(--spacing-md);
+}
+
+[dir="rtl"] .carousel-button.next {
+    right: auto;
+    left: var(--spacing-md);
+}
+
+[dir="rtl"] .carousel-button svg {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .nav-links {
+        margin: 0;
+    }
+    
+    [dir="rtl"] .mobile-menu {
+        left: 0;
+        right: auto;
+        transform: translateX(-100%);
+    }
+    
+    [dir="rtl"] .mobile-menu.active {
+        transform: translateX(0);
+    }
+}

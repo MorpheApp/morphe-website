@@ -327,6 +327,11 @@ function generateLangPreloadScript() {
         // Set language attribute immediately
         document.documentElement.lang = lang;
 
+        // Set direction (RTL/LTR)
+        const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+        const baseLang = lang.split('-')[0];
+        document.documentElement.dir = rtlLanguages.includes(baseLang) ? 'rtl' : 'ltr';
+
         // Hide content until i18n loads
         document.documentElement.classList.add('i18n-loading');
 
