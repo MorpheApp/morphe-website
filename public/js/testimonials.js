@@ -1,288 +1,149 @@
 // Testimonials Module
 // Loads testimonials from i18n translations and handles carousel
 
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    let carouselInstance = null; // Store carousel instance globally
+  var animating = false;
 
-    // Testimonial card template
-    function createTestimonialCard(testimonial) {
-        const avatar = testimonial.author ? testimonial.author.charAt(0).toUpperCase() : '?';
+  /* ── Build a testi-card element ──────────────────────────────── */
+  function createCard(t) {
+    var avatar = t.author ? t.author.charAt(0).toUpperCase() : '?';
+    var card = document.createElement('div');
+    card.className = 'testi-card';
+    card.innerHTML =
+      '<div class="testi-quote">' + escapeHtml(t.text) + '</div>' +
+      '<div class="testi-author">' +
+        '<div class="testi-avatar">' + avatar + '</div>' +
+        '<div class="testi-info">' +
+          '<div class="testi-name">' + escapeHtml(t.author) + '</div>' +
+          '<div class="testi-role">' + escapeHtml(t.role || '') + '</div>' +
+          '<div class="testi-stars">★★★★★</div>' +
+        '</div>' +
+      '</div>';
+    return card;
+  }
 
-        return `
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p class="testimonial-text">${testimonial.text}</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">${avatar}</div>
-                    <div class="author-info">
-                        <div class="author-name">${testimonial.author}</div>
-                        <div class="author-role">${testimonial.role}</div>
-                    </div>
-                </div>
-                <div class="testimonial-rating">
-                    ${'<span class="star">★</span>'.repeat(5)}
-                </div>
-            </div>
-        `;
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ── Extract testimonials from i18n ──────────────────────────── */
+  function loadTestimonials() {
+    if (!window.i18n || !window.i18n.translations || !window.i18n.translations.testimonials) return [];
+    var section = window.i18n.translations.testimonials;
+    var list = [];
+    var i = 1;
+    while (section['quote_' + i]) {
+      var q = section['quote_' + i];
+      list.push({ text: q.text || '', author: q.author || 'User', role: q.role || '' });
+      i++;
     }
+    var order = [2,9,3,16,4,18,5,10,6,11,7,13,12,15,17,14,19,8].map(function(n){ return n - 1; });
+    return order.filter(function(idx){ return idx >= 0 && idx < list.length; }).map(function(idx){ return list[idx]; });
+  }
 
-    // Extract testimonials from i18n
-    function loadTestimonials() {
-        if (!window.i18n?.translations?.testimonials) {
-            return [];
-        }
+  /* ── Render into DOM ─────────────────────────────────────────── */
+  function render(testimonials) {
+    var track = document.getElementById('testiTrack');
+    if (!track) return;
+    track.innerHTML = '';
+    if (!testimonials.length) return;
+    testimonials.forEach(function(t) { track.appendChild(createCard(t)); });
+  }
 
-        const testimonials = [];
-        const section = window.i18n.translations.testimonials;
-        let index = 1;
+  /* ── Carousel (infinite scroll by DOM reorder) ───────────────── */
+  function next() {
+    if (animating) return;
+    var track = document.getElementById('testiTrack');
+    if (!track || !track.children.length) return;
+    animating = true;
+    var first = track.firstElementChild;
+    var w = first.offsetWidth + 16;
+    track.style.transition = 'transform 0.5s cubic-bezier(0.05,0.7,0.1,1)';
+    track.style.transform = 'translateX(-' + w + 'px)';
+    setTimeout(function() {
+      track.style.transition = 'none';
+      track.appendChild(first);
+      track.style.transform = 'translateX(0)';
+      animating = false;
+    }, 520);
+  }
 
-        // Load all quote_N entries
-        while (section[`quote_${index}`]) {
-            const quote = section[`quote_${index}`];
-            testimonials.push({
-                text: quote.text || '',
-                author: quote.author || 'Unknown',
-                role: quote.role || ''
-            });
-            index++;
-        }
+  function prev() {
+    if (animating) return;
+    var track = document.getElementById('testiTrack');
+    if (!track || !track.children.length) return;
+    animating = true;
+    var last = track.lastElementChild;
+    var w = track.firstElementChild.offsetWidth + 16;
+    track.style.transition = 'none';
+    track.insertBefore(last, track.firstElementChild);
+    track.style.transform = 'translateX(-' + w + 'px)';
+    track.offsetHeight;
+    track.style.transition = 'transform 0.5s cubic-bezier(0.05,0.7,0.1,1)';
+    track.style.transform = 'translateX(0)';
+    setTimeout(function() { animating = false; }, 520);
+  }
 
-        // Reorder testimony by declared indexes
-        // Allows easily changing order without localized files
-        return reorderByIndexes(
-            [2, 9, 3, 16, 4, 18, 5, 10, 6, 11, 7, 13, 12, 15, 17, 14, 19, 8].map( n => n - 1),
-            testimonials
-        );
+  function initCarousel() {
+    var cNext = document.getElementById('cNext');
+    var cPrev = document.getElementById('cPrev');
+    if (cNext) cNext.addEventListener('click', next);
+    if (cPrev) cPrev.addEventListener('click', prev);
+
+    var track = document.getElementById('testiTrack');
+    if (track) {
+      // Touch swipe
+      var touchStartX = 0;
+      track.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', function(e) {
+        var delta = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(delta) > 50) delta > 0 ? next() : prev();
+      });
+      // Mouse drag
+      var mouseStartX = 0;
+      var dragging = false;
+      track.addEventListener('mousedown', function(e) {
+        dragging = true;
+        mouseStartX = e.clientX;
+        track.style.cursor = 'grabbing';
+        e.preventDefault();
+      });
+      document.addEventListener('mouseup', function(e) {
+        if (!dragging) return;
+        dragging = false;
+        track.style.cursor = 'grab';
+        var delta = mouseStartX - e.clientX;
+        if (Math.abs(delta) > 50) delta > 0 ? next() : prev();
+      });
     }
+  }
 
-    function reorderByIndexes(indexes, values) {
-      return indexes
-        .filter(i => i >= 0 && i < values.length)
-        .map(i => values[i]);
+  /* ── Init ────────────────────────────────────────────────────── */
+  function init() {
+    window.addEventListener('i18nReady', function() {
+      render(loadTestimonials());
+      initCarousel();
+    });
+    if (window.i18n && window.i18n.translations && window.i18n.translations.testimonials) {
+      render(loadTestimonials());
+      initCarousel();
     }
+  }
 
-    // Render testimonials into DOM
-    function renderTestimonials(testimonials) {
-        const grid = document.getElementById('testimonials-grid');
-        if (!grid) return;
+  window.reloadTestimonials = function() {
+    render(loadTestimonials());
+    setTimeout(initCarousel, 100);
+  };
 
-        if (testimonials.length === 0) {
-            grid.innerHTML = '<p>No testimonials available</p>';
-            return;
-        }
-
-        grid.innerHTML = testimonials.map(createTestimonialCard).join('');
-    }
-
-    // Destroy existing carousel instance
-    function destroyCarousel() {
-        if (carouselInstance) {
-            // Remove event listeners
-            const { grid, prevBtn, nextBtn, mouseUpHandler } = carouselInstance;
-
-            if (grid) {
-                grid.removeEventListener('touchstart', carouselInstance.touchStart);
-                grid.removeEventListener('touchend', carouselInstance.touchEnd);
-                grid.removeEventListener('mousedown', carouselInstance.mouseDown);
-            }
-
-            if (prevBtn) {
-                prevBtn.removeEventListener('click', carouselInstance.prevClick);
-            }
-
-            if (nextBtn) {
-                nextBtn.removeEventListener('click', carouselInstance.nextClick);
-            }
-
-            if (mouseUpHandler) {
-                document.removeEventListener('mouseup', mouseUpHandler);
-            }
-
-            window.removeEventListener('resize', carouselInstance.resizeHandler);
-
-            carouselInstance = null;
-        }
-    }
-
-    // Initialize carousel
-    function initializeCarousel() {
-        // Destroy existing carousel first
-        destroyCarousel();
-
-        const carousel = document.querySelector('.testimonials-carousel');
-        if (!carousel) return;
-
-        const grid = carousel.querySelector('.testimonials-grid');
-        const prevBtn = carousel.querySelector('.carousel-button.prev');
-        const nextBtn = carousel.querySelector('.carousel-button.next');
-        const cards = grid.querySelectorAll('.testimonial-card');
-
-        if (cards.length === 0) return;
-
-        let currentIndex = 0;
-        const isMobile = window.innerWidth <= 768;
-        const cardsToShow = isMobile ? 1 : 3;
-        const maxIndex = Math.max(0, cards.length - cardsToShow);
-
-        // Touch/swipe tracking
-        let touchStartX = 0;
-        let isDragging = false;
-
-        function updateCarousel() {
-            // Recalculate on each update to ensure correct dimensions
-            const cardWidth = cards[0].offsetWidth;
-            const gap = parseInt(getComputedStyle(grid).gap) || 16;
-            const offset = currentIndex * (cardWidth + gap);
-            grid.style.transform = `translateX(-${offset}px)`;
-            grid.style.transition = 'transform 0.3s ease-out';
-        }
-
-        function handleSwipe(deltaX) {
-            const threshold = 50;
-            if (Math.abs(deltaX) < threshold) {
-                updateCarousel();
-                return;
-            }
-
-            if (deltaX > 0) {
-                currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-            } else {
-                currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
-            }
-            updateCarousel();
-        }
-
-        // Touch events
-        const touchStart = (e) => {
-            isDragging = true;
-            touchStartX = e.touches[0].screenX;
-            grid.style.transition = 'none';
-        };
-
-        const touchEnd = (e) => {
-            if (!isDragging) return;
-            isDragging = false;
-            const deltaX = touchStartX - e.changedTouches[0].screenX;
-            handleSwipe(deltaX);
-        };
-
-        grid.addEventListener('touchstart', touchStart);
-        grid.addEventListener('touchend', touchEnd);
-
-        // Mouse events
-        const mouseDown = (e) => {
-            isDragging = true;
-            touchStartX = e.clientX;
-            grid.style.cursor = 'grabbing';
-            e.preventDefault();
-        };
-
-        const mouseUpHandler = (e) => {
-            if (!isDragging) return;
-
-            isDragging = false;
-            const deltaX = touchStartX - e.clientX;
-            handleSwipe(deltaX);
-            grid.style.cursor = 'grab';
-        };
-
-        grid.addEventListener('mousedown', mouseDown);
-        document.addEventListener('mouseup', mouseUpHandler);
-
-        // Button controls
-        const nextClick = (e) => {
-            e.preventDefault();
-            currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-            updateCarousel();
-        };
-
-        const prevClick = (e) => {
-            e.preventDefault();
-            currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
-            updateCarousel();
-        };
-
-        nextBtn.addEventListener('click', nextClick);
-        prevBtn.addEventListener('click', prevClick);
-
-        // Responsive resize
-        let resizeTimer;
-        const resizeHandler = () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                const newIsMobile = window.innerWidth <= 768;
-                if (newIsMobile !== isMobile) {
-                    location.reload();
-                }
-                updateCarousel();
-            }, 250);
-        };
-
-        window.addEventListener('resize', resizeHandler);
-
-        // Store instance for cleanup
-        carouselInstance = {
-            grid,
-            prevBtn,
-            nextBtn,
-            touchStart,
-            touchEnd,
-            mouseDown,
-            mouseUpHandler,
-            nextClick,
-            prevClick,
-            resizeHandler
-        };
-
-        // Initial update - use requestAnimationFrame to ensure DOM is ready
-        requestAnimationFrame(() => {
-            updateCarousel();
-        });
-    }
-
-    // Reload testimonials on language change
-    window.reloadTestimonials = function() {
-        const testimonials = loadTestimonials();
-        renderTestimonials(testimonials);
-
-        // Wait for DOM to update, then reinitialize carousel
-        setTimeout(() => {
-            initializeCarousel();
-        }, 100);
-    };
-
-    // Initialize testimonials with event-based approach
-    function init() {
-        window.addEventListener('i18nReady', function(event) {
-            console.log('i18n ready event received:', event.detail);
-            const testimonials = loadTestimonials();
-            renderTestimonials(testimonials);
-
-            // Initialize carousel after render
-            setTimeout(() => {
-                initializeCarousel();
-            }, 100);
-        });
-
-        // Also check if i18n is already ready
-        if (window.i18n && window.i18n.translations && window.i18n.translations.testimonials) {
-            console.log('i18n already ready, loading immediately');
-            const testimonials = loadTestimonials();
-            renderTestimonials(testimonials);
-
-            setTimeout(() => {
-                initializeCarousel();
-            }, 100);
-        }
-    }
-
-    // Start when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();

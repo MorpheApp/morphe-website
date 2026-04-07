@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
     <meta name="description" content="Morphe What's New - Latest updates for Manager and Patches">
     <title>What's New - Morphe</title>
     <!-- Theme preloader -->
@@ -10,7 +16,6 @@
     <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="icon" href="favicon.ico"/>
@@ -21,112 +26,140 @@
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="/" class="nav-logo">
-            <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
-            <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
+<header class="top-app-bar" id="topBar">
+    <div class="bar-content">
+        <a href="/" class="header-brand">
+            <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="brand-icon logo-light">
+            <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="brand-icon logo-dark">
         </a>
-        <div class="nav-links">
-            <a href="/" class="nav-link" data-i18n="footer.product-home" data-umami-event="Nav Home Click">Home</a>
-            <a href="microg" class="nav-link" data-i18n="footer.product-microg" data-umami-event="Nav MicroG Click">Download MicroG</a>
-            <a href="translate" class="nav-link" data-i18n="footer.product-translate" data-umami-event="Nav Translate Click">Help translate</a>
-            <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
-        </div>
-        <div class="nav-actions">
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
-                <!-- Sun Icon (Light Mode) -->
-                <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <!-- Moon Icon (Dark Mode) -->
-                <svg id="theme-icon-moon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+        <nav class="nav-desktop">
+            <a href="/" class="nav-link" data-i18n="footer.product-home"
+               data-umami-event="Nav Home Click">Home</a>
+            <a href="microg" class="nav-link" data-i18n="footer.product-microg"
+               data-umami-event="Nav MicroG Click">Download MicroG</a>
+            <a href="translate" class="nav-link" data-i18n="footer.product-translate"
+               data-umami-event="Nav Translate Click">Help translate</a>
+            <a href="donate" class="nav-link" data-i18n="footer.support-donate"
+               data-umami-event="Nav Donate Click">Donate</a>
+            <a href="changelog" class="nav-link  active" data-i18n="footer.product-changelog"
+               data-umami-event="Nav What's New Click">What's New</a>
+        </nav>
+        <span class="lang-bar-desktop">
+            <div class="lang-dropdown" id="langDropdownBar">
+                <button class="lang-trigger-compact" id="langTriggerBar" type="button"
+                        aria-label="Language">
+                    <span class="material-symbols-rounded">translate</span>
+                </button>
+                <div class="lang-menu" id="langMenuBar" role="listbox"></div>
+            </div>
+        </span>
+        <span class="lang-bar-mobile">
+            <div class="lang-dropdown" id="langDropdownMobile">
+                <button class="lang-trigger-compact" id="langTriggerMobile" type="button"
+                        aria-label="Language">
+                    <span class="material-symbols-rounded">translate</span>
+                </button>
+                <div class="lang-menu" id="langMenuMobile" role="listbox"></div>
+            </div>
+        </span>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"
+                data-umami-event="Theme Toggle Click">
+            <span class="material-symbols-rounded" id="themeIcon">dark_mode</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu"
+                data-umami-event="Mobile Menu Toggle">
+            <span class="material-symbols-rounded" id="menuIconToggle">menu</span>
+        </button>
     </div>
-</nav>
+</header>
 
-<!-- Changelog Page -->
-<section class="changelog">
+<div class="mobile-drawer" id="drawer">
+    <div class="drawer-scrim" id="scrim"></div>
+    <div class="drawer-sheet">
+        <a href="/" class="drawer-link" onclick="closeDrawer()">
+            <span class="material-symbols-rounded">home</span>
+            <span data-i18n="footer.product-home">Home</span>
+        </a>
+        <a href="microg" class="drawer-link" onclick="closeDrawer()">
+            <span class="material-symbols-rounded">download</span>
+            <span data-i18n="footer.product-microg">Download MicroG</span>
+        </a>
+        <a href="translate" class="drawer-link" onclick="closeDrawer()">
+            <span class="material-symbols-rounded">translate</span>
+            <span data-i18n="footer.product-translate">Help translate</span>
+        </a>
+        <a href="donate" class="drawer-link" onclick="closeDrawer()">
+            <span class="material-symbols-rounded">volunteer_activism</span>
+            <span data-i18n="footer.support-donate">Donate</span>
+        </a>
+        <a href="changelog" class="drawer-link  active" onclick="closeDrawer()">
+            <span class="material-symbols-rounded">new_releases</span>
+            <span data-i18n="footer.product-changelog">What's New</span>
+        </a>
+    </div>
+</div>
+
+<section class="changelog-page">
     <div class="container">
+
+        <!-- Hero -->
         <div class="changelog-hero">
-            <h1 class="hero-title"><span class="gradient-text" data-i18n="changelog.title">What's New</span></h1>
-            <p class="hero-description" data-i18n="changelog.subtitle">Complete history of updates and improvements</p>
+            <h1 class="changelog-title"><span class="gradient-text" data-i18n="changelog.title">What's New</span>
+            </h1>
+            <p class="changelog-subtitle" data-i18n="changelog.subtitle">Complete history of updates
+                and improvements</p>
         </div>
 
         <!-- Filters -->
         <div class="changelog-filters">
             <div class="filter-group">
-                <label class="filter-label" data-i18n="changelog.filter-type">Type:</label>
+                <span class="filter-label" data-i18n="changelog.filter-type">Type</span>
                 <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all" data-umami-event="Changelog Filter All">
+                    <button class="filter-btn active" data-filter="all"
+                            data-umami-event="Changelog Filter All">
                         <span data-i18n="changelog.filter-all">All</span>
                     </button>
-                    <button class="filter-btn" data-filter="manager" data-umami-event="Changelog Filter Manager">
+                    <button class="filter-btn" data-filter="manager"
+                            data-umami-event="Changelog Filter Manager">
                         <span data-i18n="changelog.filter-manager">Manager</span>
                     </button>
-                    <button class="filter-btn" data-filter="patches" data-umami-event="Changelog Filter Patches">
+                    <button class="filter-btn" data-filter="patches"
+                            data-umami-event="Changelog Filter Patches">
                         <span data-i18n="changelog.filter-patches">Patches</span>
                     </button>
                 </div>
             </div>
-
             <div class="filter-group">
                 <label class="filter-toggle">
-                    <input type="checkbox" id="show-dev" role="switch" data-umami-event="Changelog Toggle Dev">
+                    <input type="checkbox" id="show-dev" role="switch"
+                           data-umami-event="Changelog Toggle Dev">
                     <span class="toggle-slider"></span>
-                    <span class="toggle-label" data-i18n="changelog.show-dev">Show pre-releases</span>
+                    <span class="toggle-label"
+                          data-i18n="changelog.show-dev">Show pre-releases</span>
                 </label>
             </div>
         </div>
 
-        <!-- Changelog Content (will be generated by GitHub Action) -->
+        <!-- Changelog entries (generated by CI) -->
         <div id="changelog-content" class="changelog-grid">
             <!-- Generated content goes here -->
             {{CHANGELOG_CONTENT}}
         </div>
 
-        <!-- Show More Button -->
+        <!-- Show More -->
         <div class="show-more-section">
-            <p class="show-more-text" data-i18n="changelog.older-releases">Looking for older releases?</p>
+            <p class="show-more-text" data-i18n="changelog.older-releases">Looking for older
+                releases?</p>
             <div class="show-more-buttons">
-                <a href="https://github.com/MorpheApp/morphe-manager/releases"
-                   target="_blank"
-                   class="btn btn-secondary"
-                   data-umami-event="Changelog Show More Manager">
+                <a href="https://github.com/MorpheApp/morphe-manager/releases" target="_blank"
+                   class="btn-tonal" data-umami-event="Changelog Show More Manager">
+                    <span class="material-symbols-rounded">open_in_new</span>
                     <span data-i18n="changelog.view-manager">View Manager Releases</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
                 </a>
-                <a href="https://github.com/MorpheApp/morphe-patches/releases"
-                   target="_blank"
-                   class="btn btn-secondary"
-                   data-umami-event="Changelog Show More Patches">
+                <a href="https://github.com/MorpheApp/morphe-patches/releases" target="_blank"
+                   class="btn-tonal" data-umami-event="Changelog Show More Patches">
+                    <span class="material-symbols-rounded">open_in_new</span>
                     <span data-i18n="changelog.view-patches">View Patches Releases</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
                 </a>
             </div>
         </div>
@@ -135,72 +168,85 @@
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="footer-inner">
+    <div class="container">
         <div class="footer-top">
-
-            <!-- Brand column -->
             <div class="footer-brand">
-                <a href="/" class="footer-logo-link">
-                    <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
-                    <span class="footer-brand-name">Morphe</span>
+                <a href="/" class="header-brand"
+                   style="margin-bottom:12px;display:flex;width:140px;height:36px;position:relative;">
+                    <img src="images/morphe_wordmark_light.svg" alt="Morphe"
+                         class="brand-icon logo-light"
+                         style="position:absolute;top:0;left:0;height:100%;width:100%;object-fit:contain;object-position:left center;">
+                    <img src="images/morphe_wordmark_dark.svg" alt="Morphe"
+                         class="brand-icon logo-dark"
+                         style="position:absolute;top:0;left:0;height:100%;width:100%;object-fit:contain;object-position:left center;">
                 </a>
-                <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
+                <p class="footer-tagline" data-i18n="footer.description">Next generation Android app
+                    patching</p>
                 <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
+                   title="DMCA.com Protection Status" class="dmca-badge"
                    data-umami-event="DMCA Click">
                     <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
+                         alt="DMCA.com Protection Status">
                 </a>
                 <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                <details class="analytics-details">
+                <details class="analytics-deets">
                     <summary data-i18n="analytics.title">Analytics</summary>
-                    <span data-i18n="analytics.part1">This website uses </span>
-                    <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">Umami</a>
-                    <span data-i18n="analytics.part2"> and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
+                    <p><span data-i18n="analytics.part1">This website uses </span><a
+                            href="https://umami.is" target="_blank"
+                            rel="noopener noreferrer">Umami</a><span data-i18n="analytics.part2"> and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
+                    </p>
                 </details>
             </div>
-
-            <!-- Navigation columns -->
-            <div class="footer-nav">
-                <div class="footer-column">
-                    <h4 data-i18n="footer.product">Product</h4>
-                    <a href="/" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
-                    <a href="changelog" data-i18n="footer.product-changelog" data-umami-event="Footer What's New Click">What's New</a>
-                    <a href="microg" data-i18n="footer.product-microg" data-umami-event="Footer MicroG Click">Download MicroG</a>
-                    <a href="translate" data-i18n="footer.product-translate" data-umami-event="Footer Translate Click">Help translate</a>
-                    <a href="donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
-                </div>
-                <div class="footer-column">
-                    <h4 data-i18n="footer.community">Community</h4>
-                    <a href="https://github.com/MorpheApp" target="_blank" data-umami-event="Footer GitHub Click">GitHub</a>
-                    <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="Footer X Click">X (Twitter)</a>
-                    <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Footer Reddit Click">Reddit</a>
-                    <a href="https://crowdin.com/project/morphe" target="_blank" data-umami-event="Footer Crowdin Click">Crowdin</a>
-                </div>
-                <div class="footer-column language-selector-container">
-                    <h4 data-i18n="footer.language">Language</h4>
-                    <select id="language-selector" class="language-selector" data-umami-event="Language Change">
-                        <!-- Options will be populated dynamically by i18n.js -->
-                    </select>
+            <div class="footer-col">
+                <h4 data-i18n="footer.product">Product</h4>
+                <a href="/" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
+                <a href="changelog" data-i18n="footer.product-changelog"
+                   data-umami-event="Footer What's New Click">What's New</a>
+                <a href="microg" data-i18n="footer.product-microg"
+                   data-umami-event="Footer MicroG Click">Download MicroG</a>
+                <a href="translate" data-i18n="footer.product-translate"
+                   data-umami-event="Footer Translate Click">Help translate</a>
+                <a href="donate" data-i18n="footer.support-donate"
+                   data-umami-event="Footer Donate Click">Donate</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.community">Community</h4>
+                <a href="https://github.com/MorpheApp" target="_blank" rel="noopener"
+                   data-umami-event="Footer GitHub Click">GitHub</a>
+                <a href="https://x.com/MorpheApp" target="_blank" rel="noopener"
+                   data-umami-event="Footer X Click">X (Twitter)</a>
+                <a href="https://reddit.com/r/MorpheApp" target="_blank" rel="noopener"
+                   data-umami-event="Footer Reddit Click">Reddit</a>
+                <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener"
+                   data-umami-event="Footer Crowdin Click">Crowdin</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.language">Language</h4>
+                <div class="lang-dropdown" id="langDropdownFooter" style="width:100%;">
+                    <button class="lang-trigger" id="langTriggerFooter" type="button"
+                            style="width:100%;">
+                        <span class="material-symbols-rounded">translate</span>
+                        <span class="lang-label" id="langLabelFooter">English</span>
+                        <span class="material-symbols-rounded arrow" style="margin-left:auto;">expand_more</span>
+                    </button>
+                    <div class="lang-menu" id="langMenuFooter" role="listbox"
+                         style="left:0;right:auto;min-width:100%;bottom:calc(100% + 6px);top:auto;"></div>
                 </div>
             </div>
         </div>
-
-        <!-- Bottom bar — copyright centered -->
         <div class="footer-bottom">
-            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
+            <p class="footer-copy">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span>
+            </p>
         </div>
     </div>
 </footer>
 
 <!-- Scroll to Top Button -->
-<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
+<button class="fab" id="fab" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
+    <span class="material-symbols-rounded">arrow_upward</span>
 </button>
 
+<!-- Scripts -->
 <script src="js/theme-manager.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/changelog.js"></script>

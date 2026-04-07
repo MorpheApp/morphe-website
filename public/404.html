@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title data-i18n="error.404-title">404 - Page Not Found</title>
     <!-- Theme preloader -->
     <script src="js/theme-preload.js"></script>
@@ -14,14 +17,14 @@
             --primary-teal: #00AFAE;
             --gradient-primary: linear-gradient(135deg, #1E5AA8 0%, #00AFAE 100%);
 
-            --bg: #ffffff;
+            --bg: #FAFBFF;
             --surface: #f4f4f5;
             --text-primary: #18181b;
             --text-secondary: #52525b;
 
             --spacing-md: 1rem;
             --spacing-xl: 2rem;
-            --radius-lg: 0.75rem;
+            --radius-lg: 1rem;
 
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
                          0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -32,23 +35,23 @@
         }
 
         [data-theme="dark"] {
-            --bg: #0f1115;
-            --surface: #18181b;
+            --bg: #111318;
+            --surface: #1D2026;
             --text-primary: #f4f4f5;
             --text-secondary: #a1a1aa;
         }
 
         @media (prefers-color-scheme: dark) {
             :root:not([data-theme]) {
-                --bg: #0f1115;
-                --surface: #18181b;
+                --bg: #111318;
+                --surface: #1D2026;
                 --text-primary: #f4f4f5;
                 --text-secondary: #a1a1aa;
             }
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text-primary);
             margin: 0;
@@ -95,9 +98,10 @@
         }
 
         .btn-primary {
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, #1E5AA8, #00AFAE);
             color: white;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 2px 6px 2px rgba(0,0,0,.04);
+            border-radius: 9999px;
         }
 
         .btn-primary:hover {
