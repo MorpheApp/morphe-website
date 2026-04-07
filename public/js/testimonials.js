@@ -136,7 +136,12 @@
             const cardWidth = cards[0].offsetWidth;
             const gap = parseInt(getComputedStyle(grid).gap) || 16;
             const offset = currentIndex * (cardWidth + gap);
-            grid.style.transform = `translateX(-${offset}px)`;
+            
+            // Handle RTL direction
+            const isRTL = document.documentElement.dir === 'rtl';
+            const translateX = isRTL ? offset : -offset;
+            
+            grid.style.transform = `translateX(${translateX}px)`;
             grid.style.transition = 'transform 0.3s ease-out';
         }
 
@@ -147,7 +152,12 @@
                 return;
             }
 
-            if (deltaX > 0) {
+            // In RTL, swiping right (negative deltaX) should move to next index
+            // and swiping left (positive deltaX) should move to previous index
+            const isRTL = document.documentElement.dir === 'rtl';
+            const normalizedDeltaX = isRTL ? -deltaX : deltaX;
+
+            if (normalizedDeltaX > 0) {
                 currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
             } else {
                 currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
