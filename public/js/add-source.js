@@ -18,6 +18,12 @@
         iconImg.alt = githubUser;
     }
 
+    window.addEventListener('load', function () {
+        if (window.umami) {
+            umami.track('Add Source', { user: githubUser });
+        }
+    });
+
     var url = 'https://github.com/' + repo;
 
     var isAndroid = /android/i.test(navigator.userAgent);
