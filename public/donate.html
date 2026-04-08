@@ -45,9 +45,35 @@
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+                <span class="material-symbols-rounded">menu</span>
+            </button>
         </div>
     </div>
 </nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-scrim" id="drawer-scrim"></div>
+    <div class="drawer-sheet">
+        <a href="/" class="drawer-link" data-umami-event="Drawer Home Click">
+            <span class="material-symbols-rounded">home</span>
+            <span data-i18n="footer.product-home">Home</span>
+        </a>
+        <a href="microg" class="drawer-link" data-umami-event="Drawer MicroG Click">
+            <span class="material-symbols-rounded">download</span>
+            <span data-i18n="footer.product-microg">Download MicroG</span>
+        </a>
+        <a href="translate" class="drawer-link" data-umami-event="Drawer Translate Click">
+            <span class="material-symbols-rounded">language</span>
+            <span data-i18n="footer.product-translate">Help translate</span>
+        </a>
+        <a href="changelog" class="drawer-link" data-umami-event="Drawer Changelog Click">
+            <span class="material-symbols-rounded">new_releases</span>
+            <span data-i18n="footer.product-changelog">What's New</span>
+        </a>
+    </div>
+</div>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
