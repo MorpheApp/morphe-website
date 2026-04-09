@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "Analityka",
-    "part1": "Ta strona korzysta z",
-    "part2": "i Google Analytics 4: bez ciasteczek, bez reklam, bez profilowania i bez sprzedaży lub udostępniania danych.",
-    "part3": "Morphe nie dodaje żadnych modułów analitycznych ani skryptów zbierających dane do zmodyfikowanych aplikacji."
+    "disclaimer": "Morphe nie dodaje żadnych modułów analitycznych ani skryptów zbierających dane do zmodyfikowanych aplikacji.",
+    "description": "Ta strona korzysta z %s i Google Analytics 4: bez ciasteczek, bez reklam, bez profilowania i bez sprzedaży lub udostępniania danych."
   },
   "microg": {
     "title": "Pobierz",
@@ -248,11 +247,7 @@
     "q7": "Czy Morphe to magia?",
     "a7": "I tak i nie. To po prostu zaawansowana manipulacja kodem, która daje magiczne efekty.",
     "q8": "Czy mogę pomóc w rozwoju Morphe?",
-    "a8-part1": "Pewnie! Sprawdź wytyczne dla twórców w naszych",
-    "a8-github": "repozytoriach na GitHubie",
-    "a8-part2": ". Jeśli nie programujesz, zawsze doceniamy",
-    "a8-donate": "darowizny",
-    "a8-part3": ", które pomagają nam opłacić rachunki."
+    "a8": "Pewnie! Sprawdź wytyczne dla twórców w naszych %1. Jeśli nie programujesz, zawsze doceniamy %2, które pomagają nam opłacić rachunki."
   },
   "community": {
     "subtitle": "Obserwuj nas, zgłaszaj błędy i pomóż ulepszać Morphe",

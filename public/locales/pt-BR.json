@@ -141,11 +141,7 @@
     "q7": "O Morphe é magia?",
     "a7": "Não. Mas também sim.",
     "q8": "Posso contribuir com o Morphe?",
-    "a8-part1": "Sim! Veja nossos",
-    "a8-github": "repositórios no GitHub",
-    "a8-part2": ". Também apreciamos",
-    "a8-donate": "doações",
-    "a8-part3": "."
+    "a8": "Sim! Veja nossos %1. Também apreciamos %2."
   },
   "footer": {
     "description": "Patching de aplicativos Android de nova geração",
@@ -161,9 +157,8 @@
   },
   "analytics": {
     "title": "Análise",
-    "part1": "Este site utiliza",
-    "part2": "e Google Analytics 4: Sem cookies, sem anúncios, sem perfilamento e sem venda ou compartilhamento de dados.",
-    "part3": "Morphe não adiciona análise ou coleta de dados a aplicativos modificados."
+    "disclaimer": "Morphe não adiciona análise ou coleta de dados a aplicativos modificados.",
+    "description": "Este site utiliza %s e Google Analytics 4: Sem cookies, sem anúncios, sem perfilamento e sem venda ou compartilhamento de dados."
   },
   "donate": {
     "title": "Suporte",

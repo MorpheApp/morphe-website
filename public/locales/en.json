@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "Analytics",
-    "part1": "This website uses",
-    "part2": "and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.",
-    "part3": "Morphe does not add analytics or data collection to any patched apps."
+    "description": "This website uses %s and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.",
+    "disclaimer": "Morphe does not add analytics or data collection to any patched apps."
   },
   "microg": {
     "title": "Download",
@@ -248,11 +247,7 @@
     "q7": "Is Morphe magic?",
     "a7": "No. But also yes. It's advanced bytecode manipulation that feels like magic.",
     "q8": "Can I contribute to Morphe?",
-    "a8-part1": "Yes! See the contribution guidelines in our",
-    "a8-github": "GitHub repos",
-    "a8-part2": ". If you don't have developer skills, we always appreciate",
-    "a8-donate": "donations",
-    "a8-part3": "to help pay the bills."
+    "a8": "Yes! See the contribution guidelines in our %1. If you don't have developer skills, we always appreciate %2 to help pay the bills."
   },
   "community": {
     "subtitle": "Follow us, report issues, and help make Morphe better",

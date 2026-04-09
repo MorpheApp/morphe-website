@@ -218,6 +218,57 @@
                 element.innerHTML = this.translate(key);
             });
 
+            // Translate elements with data-i18n-link: replaces %s in translation with a link
+            document.querySelectorAll('[data-i18n-link]').forEach(element => {
+                const key = element.getAttribute('data-i18n-link');
+                const href = element.getAttribute('data-i18n-link-href') || '#';
+                const linkText = element.getAttribute('data-i18n-link-text') || href;
+                const attrsRaw = element.getAttribute('data-i18n-link-attrs');
+                let translation = this.translate(key);
+
+                // Build extra attributes string
+                let extraAttrs = '';
+                if (attrsRaw) {
+                    try {
+                        const attrsObj = JSON.parse(attrsRaw);
+                        extraAttrs = Object.entries(attrsObj)
+                            .map(([k, v]) => `${k}="${v.replace(/"/g, '&quot;')}"`)
+                            .join(' ');
+                    } catch (e) {
+                        console.warn('data-i18n-link-attrs: invalid JSON on', key);
+                    }
+                }
+
+                const linkHtml = `<a href="${href}" ${extraAttrs}>${linkText}</a>`;
+                element.innerHTML = translation.replace('%s', linkHtml);
+            });
+
+            // Translate elements with data-i18n-links: replaces %1, %2, ... with multiple links
+            // data-i18n-links is a JSON array: [{ href, text, attrs }, ...]
+            document.querySelectorAll('[data-i18n-links]').forEach(element => {
+                const key = element.getAttribute('data-i18n-links');
+                let translation = this.translate(key);
+
+                try {
+                    const links = JSON.parse(element.getAttribute('data-i18n-links-data') || '[]');
+                    links.forEach((link, index) => {
+                        const placeholder = `%${index + 1}`;
+                        let extraAttrs = '';
+                        if (link.attrs) {
+                            extraAttrs = Object.entries(link.attrs)
+                                .map(([k, v]) => `${k}="${String(v).replace(/"/g, '&quot;')}"`)
+                                .join(' ');
+                        }
+                        const linkHtml = `<a href="${link.href}" ${extraAttrs}>${link.text}</a>`;
+                        translation = translation.replace(placeholder, linkHtml);
+                    });
+                } catch (e) {
+                    console.warn('data-i18n-links-data: invalid JSON on', key);
+                }
+
+                element.innerHTML = translation;
+            });
+
             // Translate placeholders
             document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
                 const key = element.getAttribute('data-i18n-placeholder');

@@ -141,11 +141,7 @@
     "q7": "Je Morphe magie?",
     "a7": "Ne. Ale trochu ano.",
     "q8": "Mohu přispět Morphe?",
-    "a8-part1": "Ano! Podívej se na naše",
-    "a8-github": "GitHub repozitáře",
-    "a8-part2": ". Vítáme také",
-    "a8-donate": "dary",
-    "a8-part3": "."
+    "a8": "Ano! Podívej se na naše %1. Vítáme také %2."
   },
   "footer": {
     "description": "Patchování Android aplikací nové generace",
@@ -161,9 +157,8 @@
   },
   "analytics": {
     "title": "Analytika",
-    "part1": "Tato webová stránka používá",
-    "part2": "a Google Analytics 4: Žádné cookies, žádná reklama, žádné profilování a žádná data nejsou prodávána ani sdílena. Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat.",
-    "part3": "Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat."
+    "disclaimer": "Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat.",
+    "description": "Tato webová stránka používá %s a Google Analytics 4: Žádné cookies, žádná reklama, žádné profilování a žádná data nejsou prodávána ani sdílena. Morphe do žádných upravených aplikací nepřidává analytiku ani sběr dat."
   },
   "donate": {
     "title": "Podpora",

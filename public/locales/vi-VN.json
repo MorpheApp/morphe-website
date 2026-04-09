@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "Phân tích",
-    "part1": "Trang web này sử dụng",
-    "part2": "và Google Analytics 4: không cookie, không quảng cáo, không theo dõi và không chia sẻ dữ liệu.",
-    "part3": "Morphe không thêm bất kỳ hệ thống theo dõi hay thu thập dữ liệu nào vào ứng dụng đã vá."
+    "disclaimer": "Morphe không thêm bất kỳ hệ thống theo dõi hay thu thập dữ liệu nào vào ứng dụng đã vá.",
+    "description": "Trang web này sử dụng %s và Google Analytics 4: không cookie, không quảng cáo, không theo dõi và không chia sẻ dữ liệu."
   },
   "microg": {
     "title": "Tải về",
@@ -248,11 +247,7 @@
     "q7": "Morphe có phải ảo quá không?",
     "a7": "Không. Cảm giác thì giống vậy. Nhưng thực chất là thao tác bytecode cũng rất nâng cao.",
     "q8": "Tôi có thể đóng góp cho Morphe không?",
-    "a8-part1": "Có! Xem hướng dẫn đóng góp tại",
-    "a8-github": "GitHub",
-    "a8-part2": ". Nếu bạn không phải dev, bạn vẫn có thể",
-    "a8-donate": "ủng hộ",
-    "a8-part3": "để giúp duy trì dự án."
+    "a8": "Có! Xem hướng dẫn đóng góp tại %1. Nếu bạn không phải dev, bạn vẫn có thể %2 để giúp duy trì dự án."
   },
   "community": {
     "subtitle": "Hãy theo dõi chúng tôi và cùng nhau cải thiện Morphe mỗi ngày",

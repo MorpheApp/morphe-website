@@ -114,6 +114,28 @@ function extractKeys() {
         keys.set(key, defaultValue);
       }
     }
+
+    // Extract data-i18n-link attributes (inline link with %s placeholder)
+    // Value cannot be auto-extracted from HTML — it contains %s and lives in en.json manually.
+    // We register the key with null so zombie-key removal knows it still exists,
+    // but mergeBaseTranslations will skip null and preserve the existing en.json value.
+    const i18nLinkMatches = content.matchAll(/data-i18n-link="([^"]+)"/g);
+    for (const match of i18nLinkMatches) {
+      const key = match[1];
+      if (!keys.has(key)) {
+        keys.set(key, null);
+      }
+    }
+
+    // Extract data-i18n-links attributes (multiple inline links with %1, %2, ... placeholders)
+    // Same null sentinel approach — value lives in en.json manually.
+    const i18nLinksMatches = content.matchAll(/data-i18n-links="([^"]+)"/g);
+    for (const match of i18nLinksMatches) {
+      const key = match[1];
+      if (!keys.has(key)) {
+        keys.set(key, null);
+      }
+    }
   });
 
   return keys;
@@ -127,6 +149,10 @@ function keysToNestedObject(keys) {
   const result = {};
 
   keys.forEach((value, key) => {
+    // null means "key exists but value is managed manually in en.json"
+    // We still include it in the nested structure so removeZombieKeys doesn't treat it as a zombie.
+    // mergeBaseTranslations will skip null values and preserve the existing en.json value.
+
     const parts = key.split('.');
     let current = result;
 
@@ -156,7 +182,9 @@ function mergeBaseTranslations(existing, newKeys) {
       result.testimonials = existing.testimonials;
       return;
     }
-    if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
+    if (newKeys[key] === null) {
+      // null means value is manually managed in en.json — preserve existing value
+    } else if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
       if (!result[key] || typeof result[key] !== 'object') result[key] = {};
       result[key] = mergeBaseTranslations(result[key], newKeys[key]);
     } else {
@@ -180,7 +208,9 @@ function mergeTranslations(existing, newKeys) {
       return;
     }
 
-    if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
+    if (newKeys[key] === null) {
+      // null = manually managed (e.g. data-i18n-link/links) — don't add placeholder, preserve existing
+    } else if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
       if (!result[key] || typeof result[key] !== 'object') {
         result[key] = {};
       }
@@ -210,9 +240,10 @@ function removeZombieKeys(existing, newKeys) {
     }
 
     if (newKeys.hasOwnProperty(key)) {
-      if (typeof newKeys[key] === 'object' && typeof existing[key] === 'object') {
+      if (newKeys[key] !== null && typeof newKeys[key] === 'object' && typeof existing[key] === 'object') {
         result[key] = removeZombieKeys(existing[key], newKeys[key]);
       } else {
+        // null means manually managed — preserve existing value as-is
         result[key] = existing[key];
       }
     }

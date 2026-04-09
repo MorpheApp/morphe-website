@@ -141,11 +141,7 @@
     "q7": "Morphe是魔法吗？",
     "a7": "不是。但也是。它是像魔法一样的高级字节码操作。",
     "q8": "我可以为Morphe做贡献吗？",
-    "a8-part1": "可以！请参阅我们",
-    "a8-github": "GitHub仓库",
-    "a8-part2": "中的贡献指南。如果您没有开发技能，我们随时欢迎",
-    "a8-donate": "捐赠",
-    "a8-part3": "来帮助支付费用。"
+    "a8": "可以！请参阅我们 %1 中的贡献指南。如果您没有开发技能，我们随时欢迎 %2 来帮助支付费用。"
   },
   "footer": {
     "description": "新一代Android应用打补丁工具",
@@ -161,9 +157,8 @@
   },
   "analytics": {
     "title": "分析",
-    "part1": "本网站使用",
-    "part2": "和 Google Analytics 4：无 Cookie、无广告、无行为分析，数据不会出售或共享。",
-    "part3": "Morphe 不会在任何已修补的应用中添加分析或数据收集。"
+    "disclaimer": "Morphe 不会在任何已修补的应用中添加分析或数据收集。",
+    "description": "本网站使用 %s 和 Google Analytics 4：无 Cookie、无广告、无行为分析，数据不会出售或共享。"
   },
   "donate": {
     "title": "支持",

@@ -141,11 +141,7 @@
     "q7": "Morphe sihir mi?",
     "a7": "Hayır. Ama biraz evet.",
     "q8": "Morphe'ye katkıda bulunabilir miyim?",
-    "a8-part1": "Evet! ",
-    "a8-github": "GitHub depolarımıza",
-    "a8-part2": " bak.",
-    "a8-donate": "Bağışlar",
-    "a8-part3": " da memnuniyetle karşılanır."
+    "a8": "Evet! Katkıda bulunma yönergelerini %1 içinde inceleyin. Geliştirici becerileriniz yoksa, faturaları ödemeye yardımcı olmak için %2 desteğinizi her zaman takdir ederiz."
   },
   "footer": {
     "description": "Yeni nesil Android uygulama yamalama",
@@ -161,9 +157,8 @@
   },
   "analytics": {
     "title": "Analitik",
-    "part1": "Bu web sitesi",
-    "part2": "ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz.",
-    "part3": "Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez."
+    "disclaimer": "Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez.",
+    "description": "Bu web sitesi %s ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz."
   },
   "donate": {
     "title": "Destek",

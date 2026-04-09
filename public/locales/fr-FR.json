@@ -141,11 +141,7 @@
     "q7": "Morphe est-il magique ?",
     "a7": "Non. Mais aussi oui. C’est une manipulation avancée du bytecode qui ressemble à de la magie.",
     "q8": "Puis-je contribuer à Morphe ?",
-    "a8-part1": "Oui ! Consultez les directives de contribution dans nos",
-    "a8-github": "dépôts GitHub",
-    "a8-part2": ". Si vous n’êtes pas développeur, nous apprécions toujours les",
-    "a8-donate": "dons",
-    "a8-part3": "pour aider à couvrir les frais."
+    "a8": "Oui ! Consultez les directives de contribution dans nos %1. Si vous n’êtes pas développeur, nous apprécions toujours les %2 pour aider à couvrir les frais."
   },
   "footer": {
     "description": "Le patching d’applications Android de nouvelle génération",
@@ -161,9 +157,8 @@
   },
   "analytics": {
     "title": "Analytique",
-    "part1": "Ce site utilise",
-    "part2": "et Google Analytics 4 : Pas de cookies, pas de publicité, pas de profilage et aucune donnée n'est vendue ou partagée.",
-    "part3": "Morphe n'ajoute aucune analyse ni collecte de données aux applications patchées."
+    "disclaimer": "Morphe n'ajoute aucune analyse ni collecte de données aux applications patchées.",
+    "description": "Ce site utilise %s et Google Analytics 4 : Pas de cookies, pas de publicité, pas de profilage et aucune donnée n'est vendue ou partagée."
   },
   "donate": {
     "title": "Soutien",
