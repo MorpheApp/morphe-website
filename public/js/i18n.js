@@ -222,6 +222,64 @@
                 element.innerHTML = this.translate(key);
             });
 
+            // Translate elements with data-i18n-link: replaces %s in translation with a link
+            document.querySelectorAll('[data-i18n-link]').forEach(element => {
+                const key = element.getAttribute('data-i18n-link');
+                const href = element.getAttribute('data-i18n-link-href') || '#';
+                const linkText = element.getAttribute('data-i18n-link-text') || href;
+                const attrsRaw = element.getAttribute('data-i18n-link-attrs');
+                let translation = this.translate(key);
+
+                // Build extra attributes string
+                let extraAttrs = '';
+                if (attrsRaw) {
+                    try {
+                        const attrsObj = JSON.parse(attrsRaw);
+                        extraAttrs = Object.entries(attrsObj)
+                            .map(([k, v]) => `${k}="${v.replace(/"/g, '&quot;')}"`)
+                            .join(' ');
+                    } catch (e) {
+                        console.warn('data-i18n-link-attrs: invalid JSON on', key);
+                    }
+                }
+
+                const linkHtml = `<a href="${href}" ${extraAttrs}>${linkText}</a>`;
+                element.innerHTML = translation.replace('%s', linkHtml);
+            });
+
+            // Translate elements with data-i18n-links: replaces %1, %2, ... with multiple links
+            // data-i18n-links is a JSON array: [{ href, text, attrs }, ...]
+            // Link text can be overridden per-locale via translation keys: {key}-link1, {key}-link2, ...
+            document.querySelectorAll('[data-i18n-links]').forEach(element => {
+                const key = element.getAttribute('data-i18n-links');
+                let translation = this.translate(key);
+
+                try {
+                    const links = JSON.parse(element.getAttribute('data-i18n-links-data') || '[]');
+                    links.forEach((link, index) => {
+                        const placeholder = `%${index + 1}`;
+                        // Check for translated link text via {key}-link1, {key}-link2, ...
+                        const textKey = `${key}-link${index + 1}`;
+                        const translatedText = this.translate(textKey);
+                        const linkText = (translatedText && translatedText !== textKey)
+                            ? translatedText
+                            : link.text;
+                        let extraAttrs = '';
+                        if (link.attrs) {
+                            extraAttrs = Object.entries(link.attrs)
+                                .map(([k, v]) => `${k}="${String(v).replace(/"/g, '&quot;')}"`)
+                                .join(' ');
+                        }
+                        const linkHtml = `<a href="${link.href}" ${extraAttrs}>${linkText}</a>`;
+                        translation = translation.replace(placeholder, linkHtml);
+                    });
+                } catch (e) {
+                    console.warn('data-i18n-links-data: invalid JSON on', key);
+                }
+
+                element.innerHTML = translation;
+            });
+
             // Translate placeholders
             document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
                 const key = element.getAttribute('data-i18n-placeholder');
@@ -240,11 +298,16 @@
                 element.title = this.translate(key);
             });
 
-            // Update language selector
-            const selector = document.getElementById('language-selector');
-            if (selector) {
-                selector.value = this.currentLang;
-            }
+            // Update lang-label spans in all dropdowns (footer trigger)
+            const locale = SUPPORTED_LOCALES.find(l => l.code === this.currentLang);
+            document.querySelectorAll('.lang-label').forEach(el => {
+                if (locale) el.textContent = locale.name;
+            });
+
+            // Update selected state in all lang-menu-items
+            document.querySelectorAll('.lang-menu-item').forEach(el => {
+                el.classList.toggle('selected', el.getAttribute('data-code') === this.currentLang);
+            });
 
             // Update HTML lang attribute
             // For region codes, use full code (e.g., pt-BR)
@@ -257,27 +320,115 @@
             document.documentElement.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
         }
 
+        // Close all open lang menus
+        closeAllMenus() {
+            document.querySelectorAll('.lang-menu').forEach(m => m.classList.remove('open'));
+            document.querySelectorAll('.lang-trigger, .lang-trigger-compact').forEach(t => t.classList.remove('open'));
+        }
+
+        // Build and wire up a language dropdown pair
+        setupDropdown(triggerId, menuId) {
+            const trigger = document.getElementById(triggerId);
+            const menu = document.getElementById(menuId);
+            if (!trigger || !menu) return;
+
+            const scroll = document.createElement('div');
+            scroll.className = 'lang-menu-scroll';
+
+            SUPPORTED_LOCALES.forEach(locale => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'lang-menu-item' + (locale.code === this.currentLang ? ' selected' : '');
+                btn.setAttribute('data-code', locale.code);
+                btn.innerHTML =
+                    '<span class="material-symbols-rounded check-mark">check</span>' +
+                    '<span class="lang-name">' + locale.name + '</span>';
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.closeAllMenus();
+                    this.setLanguage(locale.code);
+                });
+                scroll.appendChild(btn);
+            });
+
+            menu.appendChild(scroll);
+
+            // Determine if this dropdown is inside the footer (needs fixed positioning to escape overflow:hidden)
+            const isFooterDropdown = trigger.closest('.footer') !== null;
+
+            if (isFooterDropdown) {
+                // Use fixed positioning so the menu escapes any overflow:hidden ancestors
+                menu.style.position = 'fixed';
+                menu.style.top = 'auto';
+                menu.style.bottom = 'auto';
+                menu.style.left = 'auto';
+                menu.style.right = 'auto';
+                menu.style.minWidth = '200px';
+            }
+
+            const positionMenu = () => {
+                if (!isFooterDropdown) return;
+                const rect = trigger.getBoundingClientRect();
+                const menuHeight = Math.min(320, SUPPORTED_LOCALES.length * 37 + 8);
+                const spaceAbove = rect.top;
+                const spaceBelow = window.innerHeight - rect.bottom;
+
+                // Prefer opening upward since trigger is at the bottom of the page
+                if (spaceAbove > menuHeight || spaceAbove > spaceBelow) {
+                    menu.style.bottom = (window.innerHeight - rect.top + 6) + 'px';
+                    menu.style.top = 'auto';
+                } else {
+                    menu.style.top = (rect.bottom + 6) + 'px';
+                    menu.style.bottom = 'auto';
+                }
+                // Align left edge with trigger, but keep inside viewport
+                let left = rect.left;
+                const menuWidth = 200;
+                if (left + menuWidth > window.innerWidth - 8) {
+                    left = window.innerWidth - menuWidth - 8;
+                }
+                menu.style.left = left + 'px';
+            };
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = menu.classList.contains('open');
+                this.closeAllMenus();
+                if (!isOpen) {
+                    positionMenu();
+                    menu.classList.add('open');
+                    trigger.classList.add('open');
+                }
+            });
+
+            if (isFooterDropdown) {
+                window.addEventListener('resize', () => {
+                    if (menu.classList.contains('open')) positionMenu();
+                });
+                window.addEventListener('scroll', () => {
+                    if (menu.classList.contains('open')) positionMenu();
+                }, { passive: true });
+            }
+        }
+
         setupLanguageSelector() {
-            const selector = document.getElementById('language-selector');
-            if (!selector) {
-                // Language selector is optional - not all pages have it
-                return;
-            }
-
             if (!this.configLoaded || SUPPORTED_LOCALES.length === 0) {
-                console.error('Cannot setup language selector: configuration not loaded');
+                console.error('Cannot setup language dropdowns: configuration not loaded');
                 return;
             }
 
-            // Populate selector with supported languages
-            console.log('Populating language selector with', SUPPORTED_LOCALES.length, 'locales');
-            selector.innerHTML = SUPPORTED_LOCALES.map(locale =>
-                `<option value="${locale.code}">${locale.name}</option>`
-            ).join('');
+            // Wire up navbar compact button
+            this.setupDropdown('langTriggerBar', 'langMenuBar');
+            // Wire up footer full trigger
+            this.setupDropdown('langTriggerFooter', 'langMenuFooter');
 
-            selector.value = this.currentLang;
-            selector.addEventListener('change', (e) => {
-                this.setLanguage(e.target.value);
+            // Close menus when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.lang-dropdown')) {
+                    this.closeAllMenus();
+                }
             });
         }
 
