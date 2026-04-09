@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "Analityka",
-    "part1": "Ta strona korzysta z ",
-    "part2": "i Google Analytics 4: bez ciasteczek, bez reklam, bez profilowania i bez sprzedaży lub udostępniania danych.",
-    "part3": "Morphe nie dodaje żadnych modułów analitycznych ani skryptów zbierających dane do zmodyfikowanych aplikacji."
+    "disclaimer": "Morphe nie dodaje żadnych modułów analitycznych ani skryptów zbierających dane do zmodyfikowanych aplikacji.",
+    "description": "Ta strona korzysta z %s i Google Analytics 4: bez ciasteczek, bez reklam, bez profilowania i bez sprzedaży lub udostępniania danych."
   },
   "microg": {
     "title": "Pobierz",
@@ -248,11 +247,9 @@
     "q7": "Czy Morphe to magia?",
     "a7": "I tak i nie. To po prostu zaawansowana manipulacja kodem, która daje magiczne efekty.",
     "q8": "Czy mogę pomóc w rozwoju Morphe?",
-    "a8-part1": "Pewnie! Sprawdź wytyczne dla twórców w naszych",
-    "a8-github": "repozytoriach na GitHubie",
-    "a8-part2": ". Jeśli nie programujesz, zawsze doceniamy",
-    "a8-donate": "darowizny",
-    "a8-part3": ", które pomagają nam opłacić rachunki."
+    "a8": "Pewnie! Sprawdź wytyczne dla twórców w naszych %1. Jeśli nie programujesz, zawsze doceniamy %2, które pomagają nam opłacić rachunki.",
+    "a8-link1": "repozytoriach na GitHubie",
+    "a8-link2": "darowizny"
   },
   "community": {
     "subtitle": "Obserwuj nas, zgłaszaj błędy i pomóż ulepszać Morphe",
@@ -264,17 +261,35 @@
   "donate": {
     "title": "Wsparcie",
     "description": "Twoje wsparcie pozwala nam dalej rozwijać i ulepszać Morphe dla wszystkich",
-    "why-title": "Dlaczego warto?",
     "why-1": "Morphe pozostaje darmowe i otwarte",
     "why-2": "Dbasz o to, by projekt wciąż żył i się rozwijał",
     "why-3": "Pomagasz nam opłacić serwery i infrastrukturę",
     "why-4": "Mniej czekania na poprawki i więcej nowych bajerów",
-    "crypto-click": "Kliknij, aby otworzyć portfel"
+    "oc-title": "Wesprzyj nas na Open Collective",
+    "oc-desc": "100% przejrzystości — zobacz dokładnie, jak każdy dolar jest zbierany i wydawany. Jednorazowo lub cyklicznie, każda kwota pomaga.",
+    "oc-btn": "Wesprzyj teraz",
+    "tiers-title": "Wybierz poziom wsparcia",
+    "tiers-desc": "Każda wpłata ma znaczenie",
+    "tier1-name": "Jednorazowo",
+    "tier1-amount": "Dowolna kwota",
+    "tier1-desc": "Postaw nam kawę. Jednorazowa wpłata, aby okazać wsparcie — bez zobowiązań.",
+    "tier2-name": "Wspierający",
+    "tier2-desc": "Zostań regularnym wspierającym i pomóż nam planować długoterminowo. Twoje imię pojawi się na liście wspierających.",
+    "tier3-name": "Mega wspierający",
+    "tier3-desc": "Wyświetl swoje logo lub nazwę w sekcji Mega wspierający na stronie Morphe.",
+    "tier-contribute": "Wesprzyj",
+    "tier-popular": "Popularne",
+    "backers-title": "Nasi wspierający",
+    "backers-all": "Zobacz wszystkich",
+    "backers-loading": "Ładowanie…",
+    "backers-empty": "Zostań pierwszym wspierającym Morphe!",
+    "sponsors-title": "Mega wspierający",
+    "sponsors-cta": "Zostań mega wspierającym",
+    "sponsors-empty": "Zostań pierwszym mega wspierającym!"
   },
   "changelog": {
     "title": "Co nowego",
     "subtitle": "Pełna historia zmian i ulepszeń",
-    "filter-type": "Typ:",
     "filter-all": "Wszystkie",
     "filter-manager": "Menedżer",
     "filter-patches": "Modyfikacje",

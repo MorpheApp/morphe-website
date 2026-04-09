@@ -19,9 +19,9 @@ const MAX_MANAGER_RELEASES = 10;
 const MAX_PATCHES_RELEASES = 10;
 
 const categoryConfig = {
-    'features': { icon: '✨', class: 'icon-added' },
-    'bug fixes': { icon: '🐛', class: 'icon-fixed' },
-    'perf': { icon: '⚡', class: 'icon-perf' }
+    'features': { icon: 'auto_awesome', class: 'icon-added' },
+    'bug fixes': { icon: 'bug_report', class: 'icon-fixed' },
+    'perf': { icon: 'speed', class: 'icon-perf' }
 };
 
 function fetchUrl(url) {
@@ -213,12 +213,7 @@ function generateVersionCard(version, repoUrl) {
             ${typeBadge}
         </div>
         <div class="version-date">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
+            <span class="material-symbols-rounded">calendar_today</span>
             ${escapeHtml(version.date)}
         </div>
     </div>
@@ -227,13 +222,13 @@ function generateVersionCard(version, repoUrl) {
     for (const [category, changes] of Object.entries(version.categories)) {
         if (!changes || changes.length === 0) continue;
 
-        const config = categoryConfig[category] || { icon: '📝', class: 'icon-changed' };
+        const config = categoryConfig[category] || { icon: 'notes', class: 'icon-changed' };
         const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
 
         html += `
         <div class="change-group">
             <div class="change-category">
-                <span class="category-icon ${config.class}">${config.icon}</span>
+                <span class="material-symbols-rounded category-icon ${config.class}">${config.icon}</span>
                 <span>${escapeHtml(categoryTitle)}</span>
             </div>
             <ul class="change-list">`;

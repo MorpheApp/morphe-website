@@ -23,7 +23,7 @@
     "step3-title": "3. Bắt đầu dịch",
     "step3-desc": "Sử dụng giao diện Crowdin để dịch từng chuỗi.",
     "step4-title": "4. Xem kết quả",
-    "step4-desc": "Bản dịch của bạn sẽ được duyệt và đưa vào các bản phát hành sau.\n\nNgười phụ trách bản dịch tiếng Việt:\nPhạm Ngọc Vũ (ann9cht)",
+    "step4-desc": "Bản dịch của bạn sẽ được duyệt và đưa vào các bản phát hành sau. Người phụ trách bản dịch tiếng Việt: Phạm Ngọc Vũ (ann9cht)",
     "why-title": "Vì sao nên dịch?",
     "why-subtitle": "Mỗi từ được dịch giúp Morphe tiến gần hơn với những người cần nó",
     "why-1": "Giúp cộng đồng của bạn",
@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "Phân tích",
-    "part1": "Trang web này sử dụng ",
-    "part2": "và Google Analytics 4: không cookie, không quảng cáo, không theo dõi và không chia sẻ dữ liệu.",
-    "part3": "Morphe không thêm bất kỳ hệ thống theo dõi hay thu thập dữ liệu nào vào ứng dụng đã vá."
+    "disclaimer": "Morphe không thêm bất kỳ hệ thống theo dõi hay thu thập dữ liệu nào vào ứng dụng đã vá.",
+    "description": "Trang web này sử dụng %s và Google Analytics 4: không cookie, không quảng cáo, không theo dõi và không chia sẻ dữ liệu."
   },
   "microg": {
     "title": "Tải về",
@@ -248,11 +247,9 @@
     "q7": "Morphe có phải ảo quá không?",
     "a7": "Không. Cảm giác thì giống vậy. Nhưng thực chất là thao tác bytecode cũng rất nâng cao.",
     "q8": "Tôi có thể đóng góp cho Morphe không?",
-    "a8-part1": "Có! Xem hướng dẫn đóng góp tại",
-    "a8-github": "GitHub",
-    "a8-part2": ". Nếu bạn không phải dev, bạn vẫn có thể",
-    "a8-donate": "ủng hộ",
-    "a8-part3": "để giúp duy trì dự án."
+    "a8": "Có! Xem hướng dẫn đóng góp tại %1. Nếu bạn không phải dev, bạn vẫn có thể %2 để giúp duy trì dự án.",
+    "a8-link1": "GitHub",
+    "a8-link2": "ủng hộ"
   },
   "community": {
     "subtitle": "Hãy theo dõi chúng tôi và cùng nhau cải thiện Morphe mỗi ngày",
@@ -264,17 +261,35 @@
   "donate": {
     "title": "Ủng hộ",
     "description": "Sự đóng góp của bạn giúp chúng tôi tiếp tục phát triển và cải thiện Morphe",
-    "why-title": "Vì sao nên ủng hộ?",
     "why-1": "Giữ Morphe luôn miễn phí và mã nguồn mở",
     "why-2": "Hỗ trợ phát triển lâu dài",
     "why-3": "Chi trả chi phí hạ tầng",
     "why-4": "Giúp sửa lỗi và ra tính năng nhanh hơn",
-    "crypto-click": "Nhấn để mở ví"
+    "oc-title": "Hỗ trợ chúng tôi trên Open Collective",
+    "oc-desc": "Minh bạch 100% — xem chính xác cách mỗi đô la được gây quỹ và chi tiêu. Một lần hoặc định kỳ, bất kỳ số tiền nào cũng giúp ích.",
+    "oc-btn": "Quyên góp ngay",
+    "tiers-title": "Chọn mức hỗ trợ của bạn",
+    "tiers-desc": "Mọi đóng góp đều có ý nghĩa",
+    "tier1-name": "Một lần",
+    "tier1-amount": "Bất kỳ số tiền nào",
+    "tier1-desc": "Mua cho chúng tôi một ly cà phê. Đóng góp một lần để thể hiện sự ủng hộ — không ràng buộc.",
+    "tier2-name": "Người ủng hộ",
+    "tier2-desc": "Trở thành người ủng hộ định kỳ và giúp chúng tôi lập kế hoạch dài hạn. Tên của bạn sẽ xuất hiện trong danh sách.",
+    "tier3-name": "Nhà ủng hộ Mega",
+    "tier3-desc": "Hiển thị logo hoặc tên của bạn nổi bật trong mục Nhà ủng hộ Mega trên trang web Morphe.",
+    "tier-contribute": "Đóng góp",
+    "tier-popular": "Phổ biến",
+    "backers-title": "Những người ủng hộ",
+    "backers-all": "Xem tất cả",
+    "backers-loading": "Đang tải…",
+    "backers-empty": "Hãy là người đầu tiên hỗ trợ Morphe!",
+    "sponsors-title": "Nhà ủng hộ Mega",
+    "sponsors-cta": "Trở thành nhà ủng hộ Mega",
+    "sponsors-empty": "Hãy là nhà ủng hộ Mega đầu tiên!"
   },
   "changelog": {
     "title": "Có gì mới",
     "subtitle": "Lịch sử cập nhật và cải tiến đầy đủ",
-    "filter-type": "Loại:",
     "filter-all": "Tất cả",
     "filter-manager": "Trình quản lý",
     "filter-patches": "Bản vá",

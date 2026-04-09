@@ -141,11 +141,9 @@
     "q7": "Ist Morphe Magie?",
     "a7": "Nein. Aber irgendwie doch. Es ist fortgeschrittene Bytecode-Manipulation, die sich wie Magie anfühlt.",
     "q8": "Kann ich zu Morphe beitragen?",
-    "a8-part1": "Ja! Sieh dir die Beitragsrichtlinien in unseren",
-    "a8-github": "GitHub-Repositories",
-    "a8-part2": "an. Wenn du kein Entwickler bist, freuen wir uns immer über",
-    "a8-donate": "Spenden",
-    "a8-part3": ", um die laufenden Kosten zu decken."
+    "a8": "Ja! Sieh dir die Beitragsrichtlinien in unseren %1 an. Wenn du kein Entwickler bist, freuen wir uns immer über %2, um die laufenden Kosten zu decken.",
+    "a8-link1": "GitHub-Repositories",
+    "a8-link2": "Spenden"
   },
   "footer": {
     "description": "Android-App-Patching der nächsten Generation",
@@ -161,19 +159,37 @@
   },
   "analytics": {
     "title": "Analytik",
-    "part1": "Diese Website verwendet ",
-    "part2": "und Google Analytics 4: Keine Cookies, keine Werbung, kein Profiling, und keine Daten werden verkauft oder geteilt.",
-    "part3": "Morphe fügt keinen Analyse- oder Datensammlungsmechanismus zu gepatchten Apps hinzu."
+    "disclaimer": "Morphe fügt keinen Analyse- oder Datensammlungsmechanismus zu gepatchten Apps hinzu.",
+    "description": "Diese Website verwendet %s und Google Analytics 4: Keine Cookies, keine Werbung, kein Profiling, und keine Daten werden verkauft oder geteilt."
   },
   "donate": {
     "title": "Unterstützung",
     "description": "Dein Beitrag hilft uns, Morphe weiterzuentwickeln und zu verbessern",
-    "why-title": "Warum spenden?",
     "why-1": "Morphe kostenlos und Open Source halten",
     "why-2": "Laufende Entwicklung unterstützen",
     "why-3": "Infrastrukturkosten decken",
     "why-4": "Schnellere Bugfixes und neue Funktionen ermöglichen",
-    "crypto-click": "Klicken, um Wallet zu öffnen"
+    "oc-title": "Unterstütze uns auf Open Collective",
+    "oc-desc": "100 % transparent — sieh genau, wie jeder Dollar gesammelt und ausgegeben wird. Einmalig oder regelmäßig, jeder Betrag hilft.",
+    "oc-btn": "Jetzt spenden",
+    "tiers-title": "Wähle deine Unterstützungsstufe",
+    "tiers-desc": "Jeder Beitrag zählt",
+    "tier1-name": "Einmalig",
+    "tier1-amount": "Beliebiger Betrag",
+    "tier1-desc": "Kauf uns einen Kaffee. Eine einmalige Spende, um deine Unterstützung zu zeigen — keine Verpflichtung.",
+    "tier2-name": "Unterstützer",
+    "tier2-desc": "Werde ein regelmäßiger Unterstützer und hilf uns bei der langfristigen Planung. Dein Name erscheint in unserer Unterstützerliste.",
+    "tier3-name": "Mega-Unterstützer",
+    "tier3-desc": "Erhalte dein Logo oder deinen Namen prominent im Bereich Mega-Unterstützer auf der Morphe-Website.",
+    "tier-contribute": "Beitragen",
+    "tier-popular": "Beliebt",
+    "backers-title": "Unsere Unterstützer",
+    "backers-all": "Alle anzeigen",
+    "backers-loading": "Wird geladen…",
+    "backers-empty": "Sei der Erste, der Morphe unterstützt!",
+    "sponsors-title": "Mega-Unterstützer",
+    "sponsors-cta": "Mega-Unterstützer werden",
+    "sponsors-empty": "Sei der erste Mega-Unterstützer!"
   },
   "microg": {
     "title": "Herunterladen",
@@ -219,7 +235,6 @@
   "changelog": {
     "title": "Neuigkeiten",
     "subtitle": "Vollständige Historie aller Updates und Verbesserungen",
-    "filter-type": "Typ:",
     "filter-all": "Alle",
     "filter-manager": "Manager",
     "filter-patches": "Patches",

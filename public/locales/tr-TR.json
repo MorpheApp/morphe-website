@@ -141,11 +141,9 @@
     "q7": "Morphe sihir mi?",
     "a7": "Hayır. Ama biraz evet.",
     "q8": "Morphe'ye katkıda bulunabilir miyim?",
-    "a8-part1": "Evet! ",
-    "a8-github": "GitHub depolarımıza",
-    "a8-part2": " bak.",
-    "a8-donate": "Bağışlar",
-    "a8-part3": " da memnuniyetle karşılanır."
+    "a8": "Evet! %1 bak. %2 da memnuniyetle karşılanır.",
+    "a8-link1": "GitHub depolarımıza",
+    "a8-link2": "Bağışlar"
   },
   "footer": {
     "description": "Yeni nesil Android uygulama yamalama",
@@ -161,19 +159,37 @@
   },
   "analytics": {
     "title": "Analitik",
-    "part1": "Bu web sitesi ",
-    "part2": "ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz.",
-    "part3": "Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez."
+    "disclaimer": "Morphe, herhangi bir yamalı uygulamaya analiz veya veri toplama eklemez.",
+    "description": "Bu web sitesi %s ve Google Analytics 4 kullanıyor: Çerez yok, reklam yok, profilleme yok ve veriler satılmaz veya paylaşılmaz."
   },
   "donate": {
     "title": "Destek",
     "description": "Katkın Morphe'nin gelişmesine yardımcı olur",
-    "why-title": "Neden bağış?",
     "why-1": "Morphe'yi ücretsiz ve açık kaynak tutmak",
     "why-2": "Sürekli geliştirmeyi desteklemek",
     "why-3": "Altyapı maliyetlerini karşılamak",
     "why-4": "Daha hızlı hata düzeltmeleri",
-    "crypto-click": "Cüzdanı açmak için tıkla"
+    "oc-title": "Open Collective üzerinden bizi destekleyin",
+    "oc-desc": "%100 şeffaf — her doların nasıl toplandığını ve harcandığını görün. Tek seferlik veya düzenli, her miktar yardımcı olur.",
+    "oc-btn": "Şimdi bağış yap",
+    "tiers-title": "Destek seviyenizi seçin",
+    "tiers-desc": "Her katkı fark yaratır",
+    "tier1-name": "Tek seferlik",
+    "tier1-amount": "Herhangi bir miktar",
+    "tier1-desc": "Bize bir kahve ısmarlayın. Takdirinizi göstermek için tek seferlik katkı — zorunluluk yok.",
+    "tier2-name": "Destekçi",
+    "tier2-desc": "Düzenli bir destekçi olun ve uzun vadeli plan yapmamıza yardımcı olun. Adınız listede yer alır.",
+    "tier3-name": "Mega destekçi",
+    "tier3-desc": "Logonuz veya adınız Morphe web sitesindeki Mega destekçiler bölümünde öne çıkar.",
+    "tier-contribute": "Katkıda bulun",
+    "tier-popular": "Popüler",
+    "backers-title": "Destekçilerimiz",
+    "backers-all": "Tümünü gör",
+    "backers-loading": "Yükleniyor…",
+    "backers-empty": "Morphe'yi destekleyen ilk kişi olun!",
+    "sponsors-title": "Mega destekçiler",
+    "sponsors-cta": "Mega destekçi olun",
+    "sponsors-empty": "İlk mega destekçi olun!"
   },
   "microg": {
     "title": "İndir",
@@ -219,7 +235,6 @@
   "changelog": {
     "title": "Yenilikler",
     "subtitle": "Güncellemelerin ve iyileştirmelerin tam geçmişi",
-    "filter-type": "Tür:",
     "filter-all": "Tümü",
     "filter-manager": "Manager",
     "filter-patches": "Yamalar",

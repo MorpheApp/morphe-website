@@ -54,7 +54,7 @@ function extractKeys() {
       // Get the text content between tags as default value
       const tagRegex = new RegExp(`data-i18n="${key}"[^>]*>([^<]+)<`, 'g');
       const tagMatch = tagRegex.exec(content);
-      const defaultValue = tagMatch ? tagMatch[1].trim() : key;
+      const defaultValue = tagMatch ? tagMatch[1].trim().replace(/\s+/g, ' ') : key;
 
       if (!keys.has(key)) {
         keys.set(key, defaultValue);
@@ -69,7 +69,7 @@ function extractKeys() {
       // Uses a greedy match up to the last </tag> on the same element
       const tagRegex = new RegExp(`<(\\w+)[^>]*data-i18n-html="${key}"[^>]*>([\\s\\S]*?)<\\/\\1>`, 'g');
       const tagMatch = tagRegex.exec(content);
-      const defaultValue = tagMatch ? tagMatch[2].trim() : key;
+      const defaultValue = tagMatch ? tagMatch[2].trim().replace(/\s+/g, ' ') : key;
 
       if (!keys.has(key)) {
         keys.set(key, defaultValue);
@@ -82,7 +82,7 @@ function extractKeys() {
       const key = match[1];
       const placeholderRegex = new RegExp(`data-i18n-placeholder="${key}"[^>]*placeholder="([^"]+)"`, 'g');
       const placeholderMatch = placeholderRegex.exec(content);
-      const defaultValue = placeholderMatch ? placeholderMatch[1].trim() : key;
+      const defaultValue = placeholderMatch ? placeholderMatch[1].trim().replace(/\s+/g, ' ') : key;
 
       if (!keys.has(key)) {
         keys.set(key, defaultValue);
@@ -95,7 +95,7 @@ function extractKeys() {
       const key = match[1];
       const ariaRegex = new RegExp(`data-i18n-aria="${key}"[^>]*aria-label="([^"]+)"`, 'g');
       const ariaMatch = ariaRegex.exec(content);
-      const defaultValue = ariaMatch ? ariaMatch[1].trim() : key;
+      const defaultValue = ariaMatch ? ariaMatch[1].trim().replace(/\s+/g, ' ') : key;
 
       if (!keys.has(key)) {
         keys.set(key, defaultValue);
@@ -108,10 +108,46 @@ function extractKeys() {
       const key = match[1];
       const titleRegex = new RegExp(`data-i18n-title="${key}"[^>]*title="([^"]+)"`, 'g');
       const titleMatch = titleRegex.exec(content);
-      const defaultValue = titleMatch ? titleMatch[1].trim() : key;
+      const defaultValue = titleMatch ? titleMatch[1].trim().replace(/\s+/g, ' ') : key;
 
       if (!keys.has(key)) {
         keys.set(key, defaultValue);
+      }
+    }
+
+    // Extract data-i18n-link attributes (inline link with %s placeholder)
+    // Value cannot be auto-extracted from HTML — it contains %s and lives in en.json manually.
+    // We register the key with null so zombie-key removal knows it still exists,
+    // but mergeBaseTranslations will skip null and preserve the existing en.json value.
+    const i18nLinkMatches = content.matchAll(/data-i18n-link="([^"]+)"/g);
+    for (const match of i18nLinkMatches) {
+      const key = match[1];
+      if (!keys.has(key)) {
+        keys.set(key, null);
+      }
+    }
+
+    // Extract data-i18n-links attributes (multiple inline links with %1, %2, ... placeholders)
+    // The main key and per-link text keys ({key}-link1, {key}-link2, ...) all live in en.json manually.
+    const i18nLinksMatches = content.matchAll(/data-i18n-links="([^"]+)"/g);
+    for (const match of i18nLinksMatches) {
+      const key = match[1];
+      if (!keys.has(key)) {
+        keys.set(key, null);
+      }
+      // Parse data-i18n-links-data to register link text keys as null sentinels
+      const dataAttrRegex = new RegExp(`data-i18n-links="${key}"[^>]*data-i18n-links-data='([^']+)'`);
+      const dataMatch = dataAttrRegex.exec(content);
+      if (dataMatch) {
+        try {
+          const links = JSON.parse(dataMatch[1]);
+          links.forEach((_, index) => {
+            const linkKey = `${key}-link${index + 1}`;
+            if (!keys.has(linkKey)) {
+              keys.set(linkKey, null);
+            }
+          });
+        } catch (e) { /* ignore parse errors */ }
       }
     }
   });
@@ -127,6 +163,10 @@ function keysToNestedObject(keys) {
   const result = {};
 
   keys.forEach((value, key) => {
+    // null means "key exists but value is managed manually in en.json"
+    // We still include it in the nested structure so removeZombieKeys doesn't treat it as a zombie.
+    // mergeBaseTranslations will skip null values and preserve the existing en.json value.
+
     const parts = key.split('.');
     let current = result;
 
@@ -156,7 +196,9 @@ function mergeBaseTranslations(existing, newKeys) {
       result.testimonials = existing.testimonials;
       return;
     }
-    if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
+    if (newKeys[key] === null) {
+      // null means value is manually managed in en.json — preserve existing value
+    } else if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
       if (!result[key] || typeof result[key] !== 'object') result[key] = {};
       result[key] = mergeBaseTranslations(result[key], newKeys[key]);
     } else {
@@ -180,7 +222,9 @@ function mergeTranslations(existing, newKeys) {
       return;
     }
 
-    if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
+    if (newKeys[key] === null) {
+      // null = manually managed (e.g. data-i18n-link/links) — don't add placeholder, preserve existing
+    } else if (typeof newKeys[key] === 'object' && !Array.isArray(newKeys[key])) {
       if (!result[key] || typeof result[key] !== 'object') {
         result[key] = {};
       }
@@ -210,9 +254,10 @@ function removeZombieKeys(existing, newKeys) {
     }
 
     if (newKeys.hasOwnProperty(key)) {
-      if (typeof newKeys[key] === 'object' && typeof existing[key] === 'object') {
+      if (newKeys[key] !== null && typeof newKeys[key] === 'object' && typeof existing[key] === 'object') {
         result[key] = removeZombieKeys(existing[key], newKeys[key]);
       } else {
+        // null means manually managed — preserve existing value as-is
         result[key] = existing[key];
       }
     }

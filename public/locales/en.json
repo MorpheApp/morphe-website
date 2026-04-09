@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "Analytics",
-    "part1": "This website uses",
-    "part2": "and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.",
-    "part3": "Morphe does not add analytics or data collection to any patched apps."
+    "description": "This website uses %s and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.",
+    "disclaimer": "Morphe does not add analytics or data collection to any patched apps."
   },
   "microg": {
     "title": "Download",
@@ -62,7 +61,7 @@
   "hero": {
     "title": "Transform Your",
     "title-highlight": "Android Apps",
-    "description": "From the developers that brought you the greatest modded YouTube apps,\n                comes Morphe - the powerful app modification tool that puts you in control",
+    "description": "From the developers that brought you the greatest modded YouTube apps, comes Morphe - the powerful app modification tool that puts you in control",
     "download": "Download Morphe",
     "learn-more": "Learn More",
     "social-label": "Join the Community"
@@ -248,11 +247,9 @@
     "q7": "Is Morphe magic?",
     "a7": "No. But also yes. It's advanced bytecode manipulation that feels like magic.",
     "q8": "Can I contribute to Morphe?",
-    "a8-part1": "Yes! See the contribution guidelines in our",
-    "a8-github": "GitHub repos",
-    "a8-part2": ". If you don't have developer skills, we always appreciate",
-    "a8-donate": "donations",
-    "a8-part3": "to help pay the bills."
+    "a8": "Yes! See the contribution guidelines in our %1. If you don't have developer skills, we always appreciate %2 to help pay the bills.",
+    "a8-link1": "GitHub repos",
+    "a8-link2": "donations"
   },
   "community": {
     "subtitle": "Follow us, report issues, and help make Morphe better",
@@ -264,17 +261,35 @@
   "donate": {
     "title": "Support",
     "description": "Your contribution helps us continue developing and improving Morphe",
-    "why-title": "Why Donate?",
     "why-1": "Keep Morphe free and open source",
     "why-2": "Support ongoing development",
     "why-3": "Help cover infrastructure costs",
     "why-4": "Enable faster bug fixes and features",
-    "crypto-click": "Click to open wallet"
+    "oc-title": "Support us on Open Collective",
+    "oc-desc": "100% transparent — see exactly how every dollar is raised and spent. One-time or recurring, any amount helps.",
+    "oc-btn": "Donate now",
+    "tiers-title": "Choose your support level",
+    "tiers-desc": "Every contribution makes a difference",
+    "tier1-name": "One-time",
+    "tier1-amount": "Any amount",
+    "tier1-desc": "Buy us a coffee. A single contribution to show your appreciation — no commitment required.",
+    "tier2-name": "Backer",
+    "tier2-desc": "Become a recurring supporter and help us plan for the long term. Your name appears on our backers list.",
+    "tier3-name": "Mega Supporter",
+    "tier3-desc": "Get your logo or name prominently featured in the Mega Supporters section on the Morphe website.",
+    "tier-contribute": "Contribute",
+    "tier-popular": "Popular",
+    "backers-title": "Our backers",
+    "backers-all": "See all",
+    "backers-loading": "Loading…",
+    "backers-empty": "Be the first to support Morphe!",
+    "sponsors-title": "Mega Supporters",
+    "sponsors-cta": "Become a mega supporter",
+    "sponsors-empty": "Be the first mega supporter!"
   },
   "changelog": {
     "title": "What's New",
     "subtitle": "Complete history of updates and improvements",
-    "filter-type": "Type:",
     "filter-all": "All",
     "filter-manager": "Manager",
     "filter-patches": "Patches",

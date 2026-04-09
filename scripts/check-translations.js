@@ -48,7 +48,9 @@ function getAllKeys(obj, prefix = '') {
   Object.keys(obj).forEach(key => {
     const fullKey = prefix ? `${prefix}.${key}` : key;
 
-    if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+    if (obj[key] === null) {
+      // null = manually managed key (e.g. data-i18n-link/links) — skip entirely
+    } else if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
       keys = keys.concat(getAllKeys(obj[key], fullKey));
     } else {
       keys.push(fullKey);
@@ -66,7 +68,7 @@ function getValue(obj, keyPath) {
   let value = obj;
 
   for (const key of keys) {
-    if (value && typeof value === 'object') {
+    if (value !== null && value !== undefined && typeof value === 'object') {
       value = value[key];
     } else {
       return undefined;

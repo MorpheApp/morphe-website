@@ -1,22 +1,56 @@
-// Mobile Menu Toggle
+// Mobile Drawer
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const drawer = document.getElementById('mobile-drawer');
+    const scrim = document.getElementById('drawer-scrim');
 
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.classList.toggle('active');
-        });
+    if (!mobileMenuToggle || !drawer) return;
+
+    const menuIcon = mobileMenuToggle.querySelector('.material-symbols-rounded');
+
+    function swapIcon(toIcon) {
+        if (!menuIcon) return;
+        menuIcon.classList.add('swap-out');
+        setTimeout(() => {
+            menuIcon.textContent = toIcon;
+            menuIcon.classList.remove('swap-out');
+            menuIcon.classList.add('swap-in');
+            setTimeout(() => menuIcon.classList.remove('swap-in'), 180);
+        }, 180);
     }
 
-    // Close mobile menu when clicking on a link
-    const navLinkItems = document.querySelectorAll('.nav-link');
-    navLinkItems.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-        });
+    function openDrawer() {
+        drawer.classList.add('open');
+        mobileMenuToggle.classList.add('is-open');
+        swapIcon('close');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        drawer.classList.add('closing');
+        mobileMenuToggle.classList.remove('is-open');
+        swapIcon('menu');
+        setTimeout(() => {
+            drawer.classList.remove('open', 'closing');
+            document.body.style.overflow = '';
+        }, 270);
+    }
+
+    mobileMenuToggle.addEventListener('click', function() {
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    });
+
+    // Close on scrim click
+    if (scrim) scrim.addEventListener('click', closeDrawer);
+
+    // Close on drawer link click
+    drawer.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
     });
 });
 
