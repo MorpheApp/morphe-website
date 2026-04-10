@@ -1,12 +1,27 @@
 // Testimonials Module
-// Loads testimonials from i18n translations and handles carousel
+// Loads testimonials from i18n translations and handles carousel.
+//
+// Architecture overview:
+//   - Cards are rendered from i18n translations into #testimonials-grid
+//   - The carousel uses CSS transform: translateX() for animation — NOT
+//     scrollLeft/scroll-snap. This avoids the Chrome Android race condition
+//     where the browser's snap animation fights programmatic scrollLeft writes,
+//     causing cards to stutter or land in wrong positions.
+//   - Infinite looping is achieved by cloning all cards once before and once
+//     after the real list. After each animated step we silently teleport back
+//     to the real card if we've landed on a clone.
+//   - Input is handled via Pointer Events (unified mouse + touch). Scroll
+//     direction intent (horizontal vs vertical) is decided after INTENT_THRESHOLD
+//     pixels of movement so vertical page scroll is never hijacked.
 
 (function() {
     'use strict';
 
+    // Holds references to the active carousel's DOM nodes and event handlers
+    // so they can be fully cleaned up before re-initialising (e.g. on language change).
     let carouselInstance = null;
 
-    // Testimonial card template
+    // Card template
     function createTestimonialCard(testimonial) {
         const avatar = testimonial.author ? testimonial.author.charAt(0).toUpperCase() : '?';
         return `
@@ -38,7 +53,7 @@
         const section = window.i18n.translations.testimonials;
         let index = 1;
 
-        // Load all quote_N entries
+        // Collect all quote_N entries in declaration order
         while (section[`quote_${index}`]) {
             const quote = section[`quote_${index}`];
             testimonials.push({
@@ -49,8 +64,8 @@
             index++;
         }
 
-        // Reorder testimony by declared indexes
-        // Allows easily changing order without localized files
+        // Apply a fixed display order that is independent of the translation files.
+        // This lets us reorder quotes without touching every locale.
         return reorderByIndexes(
             [2, 9, 3, 16, 4, 18, 5, 10, 6, 11, 7, 13, 12, 15, 17, 14, 19, 8].map(n => n - 1),
             testimonials
@@ -80,21 +95,23 @@
     function destroyCarousel() {
         if (!carouselInstance) return;
 
-        const { track, prevBtn, nextBtn, scrollHandler, resizeHandler, mouseUpHandler, mouseDown, touchStart, touchEnd, nextClick, prevClick } = carouselInstance;
+        const { track, prevBtn, nextBtn, resizeHandler, nextClick, prevClick,
+                pointerDown, pointerMove, pointerUp } = carouselInstance;
 
         if (track) {
-            if (scrollHandler) track.removeEventListener('scroll', scrollHandler);
-            if (mouseDown)     track.removeEventListener('mousedown', mouseDown);
-            if (touchStart)    track.removeEventListener('touchstart', touchStart);
-            if (touchEnd)      track.removeEventListener('touchend', touchEnd);
+            // Remove DOM clones added during init
             track.querySelectorAll('.testimonial-card-clone').forEach(el => el.remove());
+            // Reset all inline styles set by the carousel
             track.style.cssText = '';
+            track.removeEventListener('pointerdown', pointerDown);
+            track.removeEventListener('pointermove', pointerMove);
+            track.removeEventListener('pointerup', pointerUp);
+            track.removeEventListener('pointercancel', pointerUp);
         }
 
         if (prevBtn && prevClick) prevBtn.removeEventListener('click', prevClick);
         if (nextBtn && nextClick) nextBtn.removeEventListener('click', nextClick);
-        if (mouseUpHandler) document.removeEventListener('mouseup', mouseUpHandler);
-        if (resizeHandler)  window.removeEventListener('resize', resizeHandler);
+        if (resizeHandler) window.removeEventListener('resize', resizeHandler);
 
         carouselInstance = null;
     }
@@ -112,190 +129,233 @@
         const nextBtn = carousel.querySelector('.carousel-button.next');
         if (!track || !prevBtn || !nextBtn) return;
 
+        // Guard against stale clones left by a previous init that was interrupted
         track.querySelectorAll('.testimonial-card-clone').forEach(el => el.remove());
 
         const originalCards = Array.from(track.querySelectorAll('.testimonial-card'));
         if (originalCards.length === 0) return;
 
-        const isMobile = window.innerWidth <= 768;
         const isRTL = document.documentElement.dir === 'rtl';
         const total = originalCards.length;
 
-        // Clone all cards on both sides for infinite buffer.
-        // clonesBefore: must mirror the END of the real list so scrolling back
-        // from card[0] immediately shows card[total-1], card[total-2], etc.
-        // We insert them one-by-one at the front, so the last one inserted
-        // ends up first — that means we iterate forward and prepend.
-        const clonesAfter = originalCards.map(c => {
-            const cl = c.cloneNode(true);
-            cl.classList.add('testimonial-card-clone');
-            return cl;
-        });
+        // Called on every step and resize because card width is viewport-relative.
+        function measure() {
+            const isMobile = window.innerWidth <= 768;
+            const carouselPaddingL = parseFloat(getComputedStyle(carousel).paddingLeft) || 0;
+            const carouselPaddingR = parseFloat(getComputedStyle(carousel).paddingRight) || 0;
+            // Available width after carousel's own padding (peek gaps)
+            const carouselW = carousel.clientWidth - carouselPaddingL - carouselPaddingR;
+            const gap = parseFloat(getComputedStyle(track).gap) || 32;
+            // Mobile: one full-width card; Desktop: three cards with two gaps
+            const cardW = isMobile
+                ? carouselW
+                : (carouselW - gap * 2) / 3;
+            return { cardW, gap };
+        }
 
-        // Prepend in reverse so DOM order is [..., card[total-2], card[total-1]] before real cards
+        // Prepend clones of the END of the list (in reverse) so that scrolling
+        // left from card[0] immediately shows card[total-1], card[total-2], etc.
         for (let i = originalCards.length - 1; i >= 0; i--) {
             const cl = originalCards[i].cloneNode(true);
             cl.classList.add('testimonial-card-clone');
             track.insertBefore(cl, track.firstChild);
         }
-
-        clonesAfter.forEach(c => track.appendChild(c));
-
-        // Style track as scroll container.
-        // overflow-y cannot be visible when overflow-x is scroll (browser resets it to auto).
-        // Instead we add vertical padding so the box-shadow on hover fits within the scroll area.
-        track.style.overflowX = 'scroll';
-        track.style.paddingTop = '8px';
-        track.style.paddingBottom = '16px';
-        track.style.scrollSnapType = 'x mandatory';
-        track.style.scrollBehavior = 'auto';
-        track.style.msOverflowStyle = 'none';
-        track.style.scrollbarWidth = 'none';
-        track.style.cursor = 'grab';
-        track.style.webkitOverflowScrolling = 'touch';
-
-        // Each card snaps to start
-        const allCards = Array.from(track.querySelectorAll('.testimonial-card, .testimonial-card-clone'));
-
-        // On desktop, card widths are defined as % of track in CSS, but the track is now
-        // much wider than the carousel (due to clones). Fix by setting explicit px widths.
-        if (!isMobile) {
-            const gap = parseFloat(getComputedStyle(track).gap) || 32;
-            const carouselWidth = carousel.clientWidth
-                - parseFloat(getComputedStyle(carousel).paddingLeft)
-                - parseFloat(getComputedStyle(carousel).paddingRight);
-            const cardWidth = (carouselWidth - gap * 2) / 3;
-            allCards.forEach(card => {
-                card.style.flex = `0 0 ${cardWidth}px`;
-                card.style.minWidth = `${cardWidth}px`;
-                card.style.maxWidth = `${cardWidth}px`;
-            });
-        } else {
-            const carouselPadding = parseFloat(getComputedStyle(carousel).paddingLeft)
-                + parseFloat(getComputedStyle(carousel).paddingRight);
-            const cardWidth = carousel.clientWidth - carouselPadding;
-            allCards.forEach(card => {
-                card.style.flex = `0 0 ${cardWidth}px`;
-                card.style.minWidth = `${cardWidth}px`;
-                card.style.maxWidth = `${cardWidth}px`;
-            });
-        }
-
-        allCards.forEach(card => {
-            card.style.scrollSnapAlign = 'start';
-            card.style.flexShrink = '0';
+        // Append clones of the START of the list so that scrolling right from
+        // card[total-1] immediately shows card[0], card[1], etc.
+        originalCards.forEach(c => {
+            const cl = c.cloneNode(true);
+            cl.classList.add('testimonial-card-clone');
+            track.appendChild(cl);
         });
 
-        // currentIndex: real cards occupy positions [total .. total*2-1]
-        let currentIndex = total;
-        let isStepping = false;
+        // allCards[0 .. total-1]          → before-clones (mirrors end of real list)
+        // allCards[total .. total*2-1]    → real cards
+        // allCards[total*2 .. total*3-1]  → after-clones  (mirrors start of real list)
+        const allCards = Array.from(track.children);
+        let currentIndex = total; // always start on the first real card
 
-        function getScrollLeft(index) {
-            const card = allCards[index];
-            if (!card) return 0;
-            return card.offsetLeft - track.offsetLeft;
+        // Override any CSS that assumed a scroll container; we drive layout
+        // entirely through transform so the browser has no scroll position to fight.
+        track.style.display = 'flex';
+        track.style.flexWrap = 'nowrap';
+        track.style.overflowX = 'visible';
+        track.style.willChange = 'transform';
+        track.style.userSelect = 'none';
+        track.style.cursor = 'grab';
+        track.style.paddingTop = '8px';
+        track.style.paddingBottom = '16px';
+        track.style.transition = 'none';
+
+        function applyCardSizes() {
+            const { cardW, gap } = measure();
+            allCards.forEach(card => {
+                card.style.flex = `0 0 ${cardW}px`;
+                card.style.minWidth = `${cardW}px`;
+                card.style.maxWidth = `${cardW}px`;
+            });
+            track.style.gap = `${gap}px`;
         }
 
-        function scrollToIndex(index, smooth) {
-            track.style.scrollBehavior = smooth ? 'smooth' : 'auto';
-            track.scrollLeft = getScrollLeft(index);
+        applyCardSizes();
+
+        // Returns the translateX magnitude (always positive) for a given index.
+        function getOffset(index) {
+            const { cardW, gap } = measure();
+            return index * (cardW + gap);
         }
 
+        // Applies the offset as a CSS transform, optionally animated.
+        // RTL: positive translateX moves track right, so we flip the sign.
+        function setPosition(offset, animate) {
+            track.style.transition = animate
+                ? 'transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                : 'none';
+            track.style.transform = `translateX(${isRTL ? offset : -offset}px)`;
+        }
+
+        // After an animated step lands on a clone, silently jump to the
+        // corresponding real card so the buffer is always available in both directions.
         function teleportIfNeeded() {
             if (currentIndex < total) {
-                currentIndex = currentIndex + total;
-                scrollToIndex(currentIndex, false);
+                // Landed on a before-clone → jump to the matching real card at end
+                currentIndex += total;
+                setPosition(getOffset(currentIndex), false);
             } else if (currentIndex >= total * 2) {
-                currentIndex = currentIndex - total;
-                scrollToIndex(currentIndex, false);
+                // Landed on an after-clone → jump to the matching real card at start
+                currentIndex -= total;
+                setPosition(getOffset(currentIndex), false);
             }
             isStepping = false;
         }
+
+        // Initial silent placement at the first real card
+        setPosition(getOffset(currentIndex), false);
+
+        // isStepping prevents overlapping steps while a transition is in flight
+        let isStepping = false;
 
         function step(direction) {
             if (isStepping) return;
             isStepping = true;
             currentIndex += direction;
-            scrollToIndex(currentIndex, true);
-            setTimeout(teleportIfNeeded, 400);
+            setPosition(getOffset(currentIndex), true);
+            // Wait for the CSS transition (350ms) to finish before teleporting.
+            // 360ms = 350ms duration + 10ms buffer.
+            setTimeout(teleportIfNeeded, 360);
         }
 
-        // Initial silent position
-        requestAnimationFrame(() => {
-            scrollToIndex(currentIndex, false);
-        });
-
-        // Mouse drag
-        let dragStartX = 0;
+        // Using Pointer Events (not separate mouse/touch handlers) gives us a
+        // single unified code path for all input devices.
+        let pointerStartX = 0;
+        let pointerStartY = 0;
         let isDragging = false;
+        let baseOffset = 0;     // track offset captured at drag start
+        let intentDecided = false;  // true once we know the scroll axis
+        let isHorizontal = false;
 
-        const mouseDown = (e) => {
+        // Minimum movement (px) before we commit to a scroll axis.
+        // Small enough to feel responsive, large enough to avoid false positives.
+        const INTENT_THRESHOLD = 8;
+        // Minimum horizontal drag (px) required to advance to the next card.
+        const STEP_THRESHOLD = 40;
+
+        const pointerDown = (e) => {
+            if (isStepping) return;
+            // Ignore non-primary mouse buttons (right-click, middle-click)
+            if (e.pointerType === 'mouse' && e.button !== 0) return;
+
             isDragging = true;
-            dragStartX = e.clientX;
-            track.style.scrollBehavior = 'auto';
+            intentDecided = false;
+            isHorizontal = false;
+            pointerStartX = e.clientX;
+            pointerStartY = e.clientY;
+            // Read the actual rendered translateX from the DOM instead of recalculating
+            // from currentIndex. This prevents a jump when the rendered position diverged
+            // from the theoretical one (e.g. after teleport + subpixel rounding, or resize).
+            const matrix = new DOMMatrix(getComputedStyle(track).transform);
+            baseOffset = isRTL ? matrix.m41 : -matrix.m41;
+
+            // Capture the pointer so we receive move/up even if it leaves the element
+            track.setPointerCapture(e.pointerId);
+            track.style.transition = 'none';
             track.style.cursor = 'grabbing';
-            e.preventDefault();
         };
 
-        const mouseUpHandler = (e) => {
+        const pointerMove = (e) => {
+            if (!isDragging) return;
+
+            const dx = e.clientX - pointerStartX;
+            const dy = e.clientY - pointerStartY;
+
+            // Decide scroll axis once movement exceeds the intent threshold.
+            // We use Euclidean distance so diagonal movement doesn't bias either axis.
+            if (!intentDecided && Math.sqrt(dx * dx + dy * dy) >= INTENT_THRESHOLD) {
+                isHorizontal = Math.abs(dx) >= Math.abs(dy);
+                intentDecided = true;
+
+                if (!isHorizontal) {
+                    // Vertical intent → release control so the page can scroll normally
+                    isDragging = false;
+                    track.style.cursor = 'grab';
+                    return;
+                }
+
+                // Horizontal intent confirmed: take full control.
+                // touch-action:none prevents the browser from triggering the
+                // Android "back" gesture or any other native swipe behaviour.
+                track.style.touchAction = 'none';
+            }
+
+            if (!intentDecided || !isHorizontal) return;
+
+            // Prevent the page from scrolling while we handle the drag
+            e.preventDefault();
+
+            const dragDelta = isRTL ? -dx : dx;
+            const absDelta = Math.abs(dragDelta);
+
+            // Below STEP_THRESHOLD: 1:1 follow so the card never jumps at gesture start.
+            // Above STEP_THRESHOLD: resistance kicks in (20% of the excess) so the card
+            // never visually flies past its neighbour during a fast swipe.
+            const clamped = Math.sign(dragDelta) * (absDelta <= STEP_THRESHOLD
+                ? absDelta
+                : STEP_THRESHOLD + (absDelta - STEP_THRESHOLD) * 0.2
+            );
+            const rawOffset = baseOffset - clamped;
+            track.style.transform = `translateX(${isRTL ? rawOffset : -rawOffset}px)`;
+        };
+
+        const pointerUp = (e) => {
             if (!isDragging) return;
             isDragging = false;
             track.style.cursor = 'grab';
-            const delta = dragStartX - e.clientX;
-            const normalizedDelta = isRTL ? -delta : delta;
-            if (Math.abs(delta) > 50) step(normalizedDelta > 0 ? 1 : -1);
+            // Restore pan-y so the next gesture can scroll the page vertically if needed
+            track.style.touchAction = 'pan-y';
+
+            if (!intentDecided || !isHorizontal) return;
+
+            const dx = e.clientX - pointerStartX;
+            const normalizedDx = isRTL ? -dx : dx;
+
+            if (Math.abs(normalizedDx) >= STEP_THRESHOLD) {
+                // Always advance exactly one card regardless of how far/fast the user swiped
+                step(normalizedDx < 0 ? 1 : -1);
+            } else {
+                // Not far enough — spring back to the current card
+                setPosition(getOffset(currentIndex), true);
+                setTimeout(() => { isStepping = false; }, 360);
+            }
         };
 
-        track.addEventListener('mousedown', mouseDown);
-        document.addEventListener('mouseup', mouseUpHandler);
-
-        // Touch: let native scroll-snap handle the animation.
-        // We only need to detect when the user lands on a clone and teleport silently.
-        let scrollEndTimer = null;
-
-        const scrollHandler = () => {
-            // Debounce: fire ~100ms after scrolling stops
-            clearTimeout(scrollEndTimer);
-            scrollEndTimer = setTimeout(() => {
-                if (isStepping) return;
-
-                // Sync currentIndex to wherever the scroll landed
-                const scrollLeft = track.scrollLeft;
-                let closest = 0;
-                let minDist = Infinity;
-                allCards.forEach((card, i) => {
-                    const dist = Math.abs(card.offsetLeft - track.offsetLeft - scrollLeft);
-                    if (dist < minDist) { minDist = dist; closest = i; }
-                });
-                currentIndex = closest;
-
-                // Teleport if landed on a clone
-                if (currentIndex < total) {
-                    currentIndex = currentIndex + total;
-                    scrollToIndex(currentIndex, false);
-                } else if (currentIndex >= total * 2) {
-                    currentIndex = currentIndex - total;
-                    scrollToIndex(currentIndex, false);
-                }
-            }, 100);
-        };
-
-        track.addEventListener('scroll', scrollHandler, { passive: true });
-
-        // Touch: native scroll-snap handles animation
-        const touchStart = (e) => {
-            touchStartX = e.touches[0].screenX;
-        };
-        let touchStartX = 0;
-
-        const touchEnd = (e) => {
-            // Native scroll-snap handles the animation; we do nothing here
-        };
-
-        track.addEventListener('touchstart', touchStart, { passive: true });
-        track.addEventListener('touchend', touchEnd, { passive: true });
+        track.addEventListener('pointerdown', pointerDown);
+        track.addEventListener('pointermove', pointerMove, { passive: false });
+        track.addEventListener('pointerup', pointerUp);
+        track.addEventListener('pointercancel', pointerUp); // e.g. incoming call interrupts touch
+        // Suppress the long-press context menu on mobile which can interfere with dragging
+        track.addEventListener('contextmenu', e => e.preventDefault());
 
         // Button controls
+        // In RTL layouts swap the chevron icons and DOM order of the buttons
         if (isRTL) {
             const prevIcon = prevBtn.querySelector('.material-symbols-rounded');
             const nextIcon = nextBtn.querySelector('.material-symbols-rounded');
@@ -310,54 +370,27 @@
         nextBtn.addEventListener('click', nextClick);
         prevBtn.addEventListener('click', prevClick);
 
-        // Resize
+        // Recalculate card sizes and reposition without animation.
+        // Debounced to avoid thrashing during a continuous resize drag.
         let resizeTimer;
         const resizeHandler = () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                if ((window.innerWidth <= 768) !== isMobile) { location.reload(); return; }
-                if (!isMobile) {
-                    const gap = parseFloat(getComputedStyle(track).gap) || 32;
-                    const carouselWidth = carousel.clientWidth
-                        - parseFloat(getComputedStyle(carousel).paddingLeft)
-                        - parseFloat(getComputedStyle(carousel).paddingRight);
-                    const cardWidth = (carouselWidth - gap * 2) / 3;
-                    allCards.forEach(card => {
-                        card.style.flex = `0 0 ${cardWidth}px`;
-                        card.style.minWidth = `${cardWidth}px`;
-                        card.style.maxWidth = `${cardWidth}px`;
-                    });
-                } else {
-                    const carouselPadding = parseFloat(getComputedStyle(carousel).paddingLeft)
-                        + parseFloat(getComputedStyle(carousel).paddingRight);
-                    const cardWidth = carousel.clientWidth - carouselPadding;
-                    allCards.forEach(card => {
-                        card.style.flex = `0 0 ${cardWidth}px`;
-                        card.style.minWidth = `${cardWidth}px`;
-                        card.style.maxWidth = `${cardWidth}px`;
-                    });
-                }
-                scrollToIndex(currentIndex, false);
-            }, 250);
+                applyCardSizes();
+                setPosition(getOffset(currentIndex), false);
+            }, 200);
         };
         window.addEventListener('resize', resizeHandler);
 
+        // Store references for destroyCarousel()
         carouselInstance = {
-            track,
-            prevBtn,
-            nextBtn,
-            scrollHandler,
-            resizeHandler,
-            mouseDown,
-            mouseUpHandler,
-            touchStart,
-            touchEnd,
-            nextClick,
-            prevClick,
+            track, prevBtn, nextBtn,
+            resizeHandler, nextClick, prevClick,
+            pointerDown, pointerMove, pointerUp,
         };
     }
 
-    // Reload testimonials on language change
+    // Called by i18n.js after a language switch to reload translated testimonials
     window.reloadTestimonials = function() {
         const testimonials = loadTestimonials();
         renderTestimonials(testimonials);
@@ -366,12 +399,13 @@
 
     // Initialize testimonials with event-based approach
     function init() {
-        window.addEventListener('i18nReady', function(event) {
+        window.addEventListener('i18nReady', function() {
             const testimonials = loadTestimonials();
             renderTestimonials(testimonials);
             setTimeout(() => { initializeCarousel(); }, 100);
         });
 
+        // Handle the case where i18n was already ready before this script ran
         if (window.i18n && window.i18n.translations && window.i18n.translations.testimonials) {
             const testimonials = loadTestimonials();
             renderTestimonials(testimonials);
