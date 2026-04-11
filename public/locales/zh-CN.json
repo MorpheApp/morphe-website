@@ -141,11 +141,9 @@
     "q7": "Morphe是魔法吗？",
     "a7": "不是。但也是。它是像魔法一样的高级字节码操作。",
     "q8": "我可以为Morphe做贡献吗？",
-    "a8-part1": "可以！请参阅我们",
-    "a8-github": "GitHub仓库",
-    "a8-part2": "中的贡献指南。如果您没有开发技能，我们随时欢迎",
-    "a8-donate": "捐赠",
-    "a8-part3": "来帮助支付费用。"
+    "a8": "可以！请参阅我们 %1 中的贡献指南。如果您没有开发技能，我们随时欢迎 %2 来帮助支付费用。",
+    "a8-link1": "GitHub仓库",
+    "a8-link2": "捐赠"
   },
   "footer": {
     "description": "新一代Android应用打补丁工具",
@@ -161,19 +159,38 @@
   },
   "analytics": {
     "title": "分析",
-    "part1": "本网站使用 ",
-    "part2": "和 Google Analytics 4：无 Cookie、无广告、无行为分析，数据不会出售或共享。",
-    "part3": "Morphe 不会在任何已修补的应用中添加分析或数据收集。"
+    "disclaimer": "Morphe 不会在任何已修补的应用中添加分析或数据收集。",
+    "description": "本网站使用 %s 和 Google Analytics 4：无 Cookie、无广告、无行为分析，数据不会出售或共享。"
   },
   "donate": {
     "title": "支持",
     "description": "您的贡献帮助我们继续开发和改进Morphe",
-    "why-title": "为什么捐赠？",
     "why-1": "保持Morphe免费和开源",
     "why-2": "支持持续开发",
     "why-3": "帮助支付基础设施成本",
     "why-4": "实现更快的错误修复和功能开发",
-    "crypto-click": "点击打开钱包"
+    "oc-title": "在 Open Collective 上支持我们",
+    "oc-desc": "100% 透明 —— 查看每一美元的筹集和使用情况。一次性或定期，任何金额都有帮助。",
+    "oc-btn": "立即捐赠",
+    "tiers-title": "选择你的支持级别",
+    "tiers-desc": "每一份贡献都很重要",
+    "tier1-name": "一次性",
+    "tier1-amount": "任意金额",
+    "tier1-desc": "请我们喝杯咖啡。一次性支持以表达你的认可 —— 无需承诺。",
+    "tier2-name": "支持者",
+    "tier2-desc": "成为定期支持者，帮助我们进行长期规划。你的名字将出现在支持者列表中。",
+    "tier3-name": "超级支持者",
+    "tier3-desc": "您的标志或名称将突出显示在 Morphe 网站的超级支持者部分。",
+    "tier-contribute": "贡献",
+    "per-month": "/月",
+    "tier-popular": "热门",
+    "backers-title": "我们的支持者",
+    "backers-all": "查看全部",
+    "backers-loading": "加载中…",
+    "backers-empty": "成为第一个支持 Morphe 的人！",
+    "sponsors-title": "超级支持者",
+    "sponsors-cta": "成为超级支持者",
+    "sponsors-empty": "成为第一个超级支持者！"
   },
   "microg": {
     "title": "下载",
@@ -219,13 +236,12 @@
   "changelog": {
     "title": "更新内容",
     "subtitle": "完整的更新与改进历史",
-    "filter-type": "类型：",
     "filter-all": "全部",
-    "filter-manager": "Manager",
+    "filter-manager": "管理器",
     "filter-patches": "补丁",
     "show-dev": "显示预发布版本",
     "older-releases": "在找更早的版本吗？",
-    "view-manager": "查看 Manager 版本",
+    "view-manager": "查看管理器版本",
     "view-patches": "查看补丁版本"
   },
   "app-features": {

@@ -77,6 +77,11 @@
       "region": "UA"
     },
     {
+      "code": "ar",
+      "name": "العربية",
+      "region": null
+    },
+    {
       "code": "ja-JP",
       "name": "日本語",
       "region": "JP"

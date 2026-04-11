@@ -9,6 +9,7 @@
     <script src="js/theme-preload.js"></script>
     <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
@@ -20,6 +21,7 @@
     <script src="js/analytics.js"></script>
 </head>
 <body>
+
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
@@ -31,30 +33,48 @@
             <a href="/" class="nav-link" data-i18n="footer.product-home" data-umami-event="Nav Home Click">Home</a>
             <a href="microg" class="nav-link" data-i18n="footer.product-microg" data-umami-event="Nav MicroG Click">Download MicroG</a>
             <a href="translate" class="nav-link" data-i18n="footer.product-translate" data-umami-event="Nav Translate Click">Help translate</a>
-            <a href="changelog" class="nav-link"  data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
+            <a href="changelog" class="nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
+            <div class="lang-dropdown" id="langDropdownBar">
+                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                    <span class="material-symbols-rounded">translate</span>
+                </button>
+                <div class="lang-menu" id="langMenuBar" role="listbox"></div>
+            </div>
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
-                <!-- Sun Icon (Light Mode) -->
-                <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <!-- Moon Icon (Dark Mode) -->
-                <svg id="theme-icon-moon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
+                <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
+                <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+                <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
     </div>
 </nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-scrim" id="drawer-scrim"></div>
+    <div class="drawer-sheet">
+        <a href="/" class="drawer-link" data-umami-event="Drawer Home Click">
+            <span class="material-symbols-rounded">home</span>
+            <span data-i18n="footer.product-home">Home</span>
+        </a>
+        <a href="microg" class="drawer-link" data-umami-event="Drawer MicroG Click">
+            <span class="material-symbols-rounded">download</span>
+            <span data-i18n="footer.product-microg">Download MicroG</span>
+        </a>
+        <a href="translate" class="drawer-link" data-umami-event="Drawer Translate Click">
+            <span class="material-symbols-rounded">language</span>
+            <span data-i18n="footer.product-translate">Help translate</span>
+        </a>
+        <a href="changelog" class="drawer-link" data-umami-event="Drawer Changelog Click">
+            <span class="material-symbols-rounded">new_releases</span>
+            <span data-i18n="footer.product-changelog">What's New</span>
+        </a>
+    </div>
+</div>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
@@ -73,114 +93,162 @@
 <!-- Donate Section -->
 <section id="donate" class="donate">
     <div class="container">
-        <div class="donate-content">
-            <div class="donate-info">
-                <h3 data-i18n="donate.why-title">Why Donate?</h3>
-                <ul class="donate-benefits">
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span data-i18n="donate.why-1">Keep Morphe free and open source</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span data-i18n="donate.why-2">Support ongoing development</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span data-i18n="donate.why-3">Help cover infrastructure costs</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span data-i18n="donate.why-4">Enable faster bug fixes and features</span>
-                    </li>
-                </ul>
+
+        <!-- Open Collective -->
+        <div class="donate-section">
+
+            <!-- Main CTA card -->
+            <div class="donate-hero-card">
+                <div class="donate-hero-icon">
+                    <span class="material-symbols-rounded">volunteer_activism</span>
+                </div>
+                <div class="donate-hero-text">
+                    <h2 data-i18n="donate.oc-title">Support us on Open Collective</h2>
+                    <p data-i18n="donate.oc-desc">100% transparent — see exactly how every dollar is raised and spent. One-time or recurring, any amount helps.</p>
+                </div>
+                <div class="donate-hero-action">
+                    <a href="https://opencollective.com/morpheapp"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn-donate"
+                       data-umami-event="OpenCollective Donate Click">
+                        <span data-i18n="donate.oc-btn">Donate now</span>
+                        <span class="material-symbols-rounded">arrow_forward</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="crypto-cards">
-                <a href="bitcoin:3N97T2VLGnZH5g4gGNT4qh8LMZ7aRHdJ7Q" class="crypto-card" data-umami-event="Bitcoin Donation Click">
-                    <div class="crypto-header">
-                        <span class="crypto-name">Bitcoin</span>
-                        <span class="crypto-symbol">BTC</span>
-                    </div>
-                    <div class="crypto-address">3N97T2VLGnZH5g4gGNT4qh8LMZ7aRHdJ7Q</div>
-                    <div class="crypto-action">
-                        <span data-i18n="donate.crypto-click">Click to open wallet</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
+            <!-- Tiers -->
+            <div>
+                <div class="donate-tiers-header">
+                    <h3 data-i18n="donate.tiers-title">Choose your support level</h3>
+                    <p data-i18n="donate.tiers-desc">Every contribution makes a difference</p>
+                </div>
+                <div class="donate-tiers">
+                    <a href="https://opencollective.com/morpheapp/donate"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="donate-tier"
+                       style="--tier-accent: var(--primary-teal);"
+                       data-umami-event="OC Tier OneTime Click">
+                        <div class="donate-tier-emoji">☕</div>
+                        <div class="donate-tier-name" data-i18n="donate.tier1-name">One-time</div>
+                        <div class="donate-tier-amount">
+                            <span data-i18n="donate.tier1-amount">Any amount</span>
+                        </div>
+                        <div class="donate-tier-desc" data-i18n="donate.tier1-desc">Buy us a coffee. A single contribution to show your appreciation — no commitment required.</div>
+                        <div class="donate-tier-cta">
+                            <span data-i18n="donate.tier-contribute">Contribute</span>
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </div>
+                    </a>
 
-                <a href="ethereum:0x4b16623bed0d8485d5368214279372bd1d3501c2" class="crypto-card" data-umami-event="Ethereum Donation Click">
-                    <div class="crypto-header">
-                        <span class="crypto-name">Ethereum</span>
-                        <span class="crypto-symbol">ETH</span>
-                    </div>
-                    <div class="crypto-address">0x4b16623bed0d8485d5368214279372bd1d3501c2</div>
-                    <div class="crypto-action">
-                        <span data-i18n="donate.crypto-click">Click to open wallet</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
+                    <a href="https://opencollective.com/morpheapp/contribute/backers-100541/checkout"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="donate-tier featured"
+                       style="--tier-accent: var(--primary-blue);"
+                       data-umami-event="OC Tier Monthly Click">
+                        <div class="donate-tier-badge" data-i18n="donate.tier-popular">Popular</div>
+                        <div class="donate-tier-emoji">⭐</div>
+                        <div class="donate-tier-name" data-i18n="donate.tier2-name">Backer</div>
+                        <div class="donate-tier-amount">$5<span class="donate-tier-period" data-i18n="donate.per-month">/mo</span></div>
+                        <div class="donate-tier-desc" data-i18n="donate.tier2-desc">Become a recurring supporter and help us plan for the long term. Your name appears on our backers list.</div>
+                        <div class="donate-tier-cta">
+                            <span data-i18n="donate.tier-contribute">Contribute</span>
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </div>
+                    </a>
 
-                <a href="litecoin:MVjvqt6AA6DmDXUgXyJMg6gQe7MD6WSqpB" class="crypto-card" data-umami-event="Litecoin Donation Click">
-                    <div class="crypto-header">
-                        <span class="crypto-name">Litecoin</span>
-                        <span class="crypto-symbol">LTC</span>
-                    </div>
-                    <div class="crypto-address">MVjvqt6AA6DmDXUgXyJMg6gQe7MD6WSqpB</div>
-                    <div class="crypto-action">
-                        <span data-i18n="donate.crypto-click">Click to open wallet</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
+                    <a href="https://opencollective.com/morpheapp/contribute/sponsors-100542/checkout"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="donate-tier"
+                       style="--tier-accent: #f59e0b;"
+                       data-umami-event="OC Tier Sponsor Click">
+                        <div class="donate-tier-emoji">🏆</div>
+                        <div class="donate-tier-name" data-i18n="donate.tier3-name">Mega Supporter</div>
+                        <div class="donate-tier-amount">$50<span class="donate-tier-period" data-i18n="donate.per-month">/mo</span></div>
+                        <div class="donate-tier-desc" data-i18n="donate.tier3-desc">Get your logo or name prominently featured in the Mega Supporters section on the Morphe website.</div>
+                        <div class="donate-tier-cta">
+                            <span data-i18n="donate.tier-contribute">Contribute</span>
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-                <a href="monero:48HvobHs4iiET9R8FEV37zNPeE5jGtTJ1eQpveSCwSVZ1zveU9D73VyM2FnXQc5DPLZ5wpeR9aQgjVe3oyfoXXzzDsChepf" class="crypto-card" data-umami-event="Monero Donation Click">
-                    <div class="crypto-header">
-                        <span class="crypto-name">Monero</span>
-                        <span class="crypto-symbol">XMR</span>
-                    </div>
-                    <div class="crypto-address">48HvobHs4iiET9R8FEV37zNPeE5jGtTJ1eQpveSCwSVZ1zveU9D73VyM2FnXQc5DPLZ5wpeR9aQgjVe3oyfoXXzzDsChepf</div>
-                    <div class="crypto-action">
-                        <span data-i18n="donate.crypto-click">Click to open wallet</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </div>
-                </a>
+            <!-- Sponsors & Backers grid -->
+            <div class="donate-community-grid">
 
-                <a href="dogecoin:DPB88ZiBYtR4TESBXdnT7AZsiB4PRWYNHw" class="crypto-card" data-umami-event="Dogecoin Donation Click">
-                    <div class="crypto-header">
-                        <span class="crypto-name">Dogecoin</span>
-                        <span class="crypto-symbol">DOGE</span>
+                <!-- Backers -->
+                <div class="donate-backers">
+                    <div class="donate-backers-header">
+                        <div class="donate-backers-title">
+                            <span class="material-symbols-rounded">favorite</span>
+                            <span data-i18n="donate.backers-title">Our backers</span>
+                        </div>
+                        <a href="https://opencollective.com/morpheapp#section-contributors"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="pill-tab"
+                           data-umami-event="OC All Backers Click">
+                            <span data-i18n="donate.backers-all">See all</span>
+                            <span class="material-symbols-rounded">open_in_new</span>
+                        </a>
                     </div>
-                    <div class="crypto-address">DPB88ZiBYtR4TESBXdnT7AZsiB4PRWYNHw</div>
-                    <div class="crypto-action">
-                        <span data-i18n="donate.crypto-click">Click to open wallet</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+                    <div class="donate-avatars" id="donate-avatars">
+                        <div id="donate-state-loading" data-i18n="donate.backers-loading">Loading…</div>
+                        <div id="donate-state-empty" data-i18n="donate.backers-empty" hidden>Be the first to support Morphe!</div>
                     </div>
-                </a>
+                </div>
+
+                <!-- Sponsors -->
+                <div class="donate-backers donate-sponsors-card">
+                    <div class="donate-backers-header">
+                        <div class="donate-backers-title">
+                            <span class="material-symbols-rounded">workspace_premium</span>
+                            <span data-i18n="donate.sponsors-title">Mega Supporters</span>
+                        </div>
+                        <a href="https://opencollective.com/morpheapp/contribute/sponsors-100542/checkout"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="pill-tab"
+                           data-umami-event="OC Become Sponsor Click">
+                            <span data-i18n="donate.sponsors-cta">Become a mega supporter</span>
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="donate-sponsors-avatars" id="donate-sponsors-avatars">
+                        <div id="donate-sponsors-loading" data-i18n="donate.backers-loading">Loading…</div>
+                        <div id="donate-sponsors-empty" data-i18n="donate.sponsors-empty" hidden>Be the first mega supporter!</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Why Donate — horizontal strip -->
+        <div class="why-strip">
+            <div class="why-strip-item">
+                <span class="material-symbols-rounded">lock</span>
+                <span data-i18n="donate.why-1">Keep Morphe free and open source</span>
+            </div>
+            <div class="why-strip-item">
+                <span class="material-symbols-rounded">code</span>
+                <span data-i18n="donate.why-2">Support ongoing development</span>
+            </div>
+            <div class="why-strip-item">
+                <span class="material-symbols-rounded">dns</span>
+                <span data-i18n="donate.why-3">Help cover infrastructure costs</span>
+            </div>
+            <div class="why-strip-item">
+                <span class="material-symbols-rounded">rocket_launch</span>
+                <span data-i18n="donate.why-4">Enable faster bug fixes and features</span>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -206,9 +274,11 @@
                 <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
                 <details class="analytics-details">
                     <summary data-i18n="analytics.title">Analytics</summary>
-                    <span data-i18n="analytics.part1">This website uses </span>
-                    <a href="https://umami.is" target="_blank" rel="noopener noreferrer" class="inline-link" data-umami-event="Umami Link Click">Umami</a>
-                    <span data-i18n="analytics.part2"> and Google Analytics 4: No cookies, no advertising, no profiling, and no data is sold or shared.</span>
+                    <span data-i18n-link="analytics.description"
+                          data-i18n-link-href="https://umami.is"
+                          data-i18n-link-text="Umami"
+                          data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
+                    <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
                 </details>
             </div>
 
@@ -231,14 +301,19 @@
                 </div>
                 <div class="footer-column language-selector-container">
                     <h4 data-i18n="footer.language">Language</h4>
-                    <select id="language-selector" class="language-selector" data-umami-event="Language Change">
-                        <!-- Options will be populated dynamically by i18n.js -->
-                    </select>
+                    <div class="lang-dropdown" id="langDropdownFooter" style="width:100%;">
+                        <button class="lang-trigger" id="langTriggerFooter" type="button" style="width:100%;">
+                            <span class="material-symbols-rounded">translate</span>
+                            <span class="lang-label">English</span>
+                            <span class="material-symbols-rounded arrow">expand_more</span>
+                        </button>
+                        <div class="lang-menu" id="langMenuFooter" role="listbox" style="left:0;right:auto;min-width:100%;bottom:calc(100% + 6px);top:auto;"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Bottom bar — copyright centered -->
+        <!-- Bottom bar -->
         <div class="footer-bottom">
             <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
@@ -248,5 +323,6 @@
 <script src="js/theme-manager.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
+<script src="js/donate.js"></script>
 </body>
 </html>

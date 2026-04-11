@@ -37,9 +37,8 @@
   },
   "analytics": {
     "title": "분석 도구",
-    "part1": "이 웹사이트는",
-    "part2": "및 Google Analytics 4를 사용합니다. 쿠키 없이 동작하며, 광고·프로파일링을 하지 않고, 데이터를 판매하거나 공유하지 않습니다.",
-    "part3": "Morphe는 패치된 앱에 별도의 분석 도구나 데이터 수집 기능을 추가하지 않습니다."
+    "disclaimer": "Morphe는 패치된 앱에 별도의 분석 도구나 데이터 수집 기능을 추가하지 않습니다.",
+    "description": "이 웹사이트는 %s 및 Google Analytics 4를 사용합니다. 쿠키 없이 동작하며, 광고·프로파일링을 하지 않고, 데이터를 판매하거나 공유하지 않습니다."
   },
   "microg": {
     "title": "다운로드",
@@ -248,11 +247,9 @@
     "q7": "Morphe는 마법인가요?",
     "a7": "아니요. 그런데 또 그렇게 느껴지긴 합니다. 고급 바이트코드 조작이 워낙 마법처럼 보이거든요.",
     "q8": "Morphe에 기여할 수 있나요?",
-    "a8-part1": "물론입니다. 자세한 내용은",
-    "a8-github": "GitHub 저장소",
-    "a8-part2": "의 기여 가이드를 확인해 주세요. 개발로 참여하기 어렵다면 운영 비용에 보탬이 되는",
-    "a8-donate": "후원",
-    "a8-part3": "도 큰 도움이 됩니다."
+    "a8": "물론입니다. 자세한 내용은 %1 의 기여 가이드를 확인해 주세요. 개발로 참여하기 어렵다면 운영 비용에 보탬이 되는 %2 도 큰 도움이 됩니다.",
+    "a8-link1": "GitHub 저장소",
+    "a8-link2": "후원"
   },
   "community": {
     "subtitle": "소식을 받아보고, 문제를 제보하고, Morphe를 함께 더 좋게 만들어 주세요",
@@ -264,17 +261,36 @@
   "donate": {
     "title": "지원",
     "description": "여러분의 후원은 Morphe를 계속 개발하고 개선하는 데 큰 힘이 됩니다",
-    "why-title": "왜 후원하나요?",
     "why-1": "Morphe를 무료 오픈소스로 계속 유지",
     "why-2": "지속적인 개발 지원",
     "why-3": "인프라 운영 비용 보전",
     "why-4": "버그 수정과 기능 추가 속도 향상",
-    "crypto-click": "눌러서 지갑 열기"
+    "oc-title": "Open Collective에서 후원하기",
+    "oc-desc": "100% 투명성 — 모든 금액이 어떻게 모이고 사용되는지 확인할 수 있습니다. 일회성 또는 정기 후원, 어떤 금액이든 도움이 됩니다.",
+    "oc-btn": "지금 후원하기",
+    "tiers-title": "후원 수준 선택",
+    "tiers-desc": "모든 기여가 도움이 됩니다",
+    "tier1-name": "일회성",
+    "tier1-amount": "금액 자유",
+    "tier1-desc": "커피 한 잔 사주세요. 감사의 표시로 하는 일회성 후원 — 의무 없음.",
+    "tier2-name": "후원자",
+    "tier2-desc": "정기 후원자가 되어 장기적인 계획에 도움을 주세요. 이름이 목록에 표시됩니다.",
+    "tier3-name": "메가 후원자",
+    "tier3-desc": "Morphe 웹사이트의 메가 후원자 섹션에 로고 또는 이름이 눈에 띄게 표시됩니다.",
+    "tier-contribute": "후원하기",
+    "per-month": "/월",
+    "tier-popular": "인기",
+    "backers-title": "후원자 목록",
+    "backers-all": "전체 보기",
+    "backers-loading": "로딩 중…",
+    "backers-empty": "Morphe를 처음으로 후원해보세요!",
+    "sponsors-title": "메가 후원자",
+    "sponsors-cta": "메가 후원자 되기",
+    "sponsors-empty": "첫 번째 메가 후원자가 되어보세요!"
   },
   "changelog": {
     "title": "새 소식",
     "subtitle": "업데이트와 개선 사항을 한눈에 확인하세요",
-    "filter-type": "유형:",
     "filter-all": "전체",
     "filter-manager": "매니저",
     "filter-patches": "패치",

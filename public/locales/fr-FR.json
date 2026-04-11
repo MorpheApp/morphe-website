@@ -141,11 +141,9 @@
     "q7": "Morphe est-il magique ?",
     "a7": "Non. Mais aussi oui. C’est une manipulation avancée du bytecode qui ressemble à de la magie.",
     "q8": "Puis-je contribuer à Morphe ?",
-    "a8-part1": "Oui ! Consultez les directives de contribution dans nos",
-    "a8-github": "dépôts GitHub",
-    "a8-part2": ". Si vous n’êtes pas développeur, nous apprécions toujours les",
-    "a8-donate": "dons",
-    "a8-part3": "pour aider à couvrir les frais."
+    "a8": "Oui ! Consultez les directives de contribution dans nos %1. Si vous n’êtes pas développeur, nous apprécions toujours les %2 pour aider à couvrir les frais.",
+    "a8-link1": "dépôts GitHub",
+    "a8-link2": "dons"
   },
   "footer": {
     "description": "Le patching d’applications Android de nouvelle génération",
@@ -161,19 +159,38 @@
   },
   "analytics": {
     "title": "Analytique",
-    "part1": "Ce site utilise ",
-    "part2": "et Google Analytics 4 : Pas de cookies, pas de publicité, pas de profilage et aucune donnée n'est vendue ou partagée.",
-    "part3": "Morphe n'ajoute aucune analyse ni collecte de données aux applications patchées."
+    "disclaimer": "Morphe n'ajoute aucune analyse ni collecte de données aux applications patchées.",
+    "description": "Ce site utilise %s et Google Analytics 4 : Pas de cookies, pas de publicité, pas de profilage et aucune donnée n'est vendue ou partagée."
   },
   "donate": {
     "title": "Soutien",
     "description": "Votre contribution nous aide à continuer le développement et l’amélioration de Morphe",
-    "why-title": "Pourquoi faire un don ?",
     "why-1": "Maintenir Morphe gratuit et open source",
     "why-2": "Soutenir le développement continu",
     "why-3": "Couvrir les coûts d’infrastructure",
     "why-4": "Permettre des corrections de bugs plus rapides et de nouvelles fonctionnalités",
-    "crypto-click": "Cliquez pour ouvrir le portefeuille"
+    "oc-title": "Soutenez-nous sur Open Collective",
+    "oc-desc": "100 % transparent — voyez exactement comment chaque dollar est collecté et dépensé. Unique ou récurrent, tout montant aide.",
+    "oc-btn": "Faire un don",
+    "tiers-title": "Choisissez votre niveau de soutien",
+    "tiers-desc": "Chaque contribution compte",
+    "tier1-name": "Ponctuel",
+    "tier1-amount": "Montant libre",
+    "tier1-desc": "Offrez-nous un café. Une contribution unique pour montrer votre soutien — sans engagement.",
+    "tier2-name": "Contributeur",
+    "tier2-desc": "Devenez un soutien récurrent et aidez-nous à planifier sur le long terme. Votre nom apparaîtra dans notre liste de contributeurs.",
+    "tier3-name": "Méga soutien",
+    "tier3-desc": "Affichez votre logo ou nom de manière visible dans la section Méga soutiens sur le site Morphe.",
+    "tier-contribute": "Contribuer",
+    "per-month": "/mois",
+    "tier-popular": "Populaire",
+    "backers-title": "Nos contributeurs",
+    "backers-all": "Voir tout",
+    "backers-loading": "Chargement…",
+    "backers-empty": "Soyez le premier à soutenir Morphe !",
+    "sponsors-title": "Méga soutiens",
+    "sponsors-cta": "Devenir méga soutien",
+    "sponsors-empty": "Soyez le premier méga soutien !"
   },
   "microg": {
     "title": "Télécharger",
@@ -219,7 +236,6 @@
   "changelog": {
     "title": "Nouveautés",
     "subtitle": "Historique complet des mises à jour et améliorations",
-    "filter-type": "Type :",
     "filter-all": "Tous",
     "filter-manager": "Manager",
     "filter-patches": "Correctifs",

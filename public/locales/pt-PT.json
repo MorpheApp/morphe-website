@@ -141,11 +141,9 @@
     "q7": "O Morphe é magia?",
     "a7": "Não. Mas também sim.",
     "q8": "Posso contribuir para o Morphe?",
-    "a8-part1": "Sim! Consulta os nossos",
-    "a8-github": "repositórios GitHub",
-    "a8-part2": ". Também apreciamos",
-    "a8-donate": "donativos",
-    "a8-part3": "."
+    "a8": "Sim! Consulta os nossos %1. Também apreciamos %2.",
+    "a8-link1": "repositórios GitHub",
+    "a8-link2": "donativos"
   },
   "footer": {
     "description": "Patching de aplicações Android de nova geração",
@@ -161,19 +159,38 @@
   },
   "analytics": {
     "title": "Análise",
-    "part1": "Este site utiliza ",
-    "part2": "e Google Analytics 4: Sem cookies, sem publicidade, sem criação de perfis e sem venda ou partilha de dados.",
-    "part3": "A Morphe não adiciona análise nem recolha de dados a aplicações corrigidas."
+    "disclaimer": "A Morphe não adiciona análise nem recolha de dados a aplicações corrigidas.",
+    "description": "Este site utiliza %s e Google Analytics 4: Sem cookies, sem publicidade, sem criação de perfis e sem venda ou partilha de dados."
   },
   "donate": {
     "title": "Suporte",
     "description": "A tua contribuição ajuda a melhorar o Morphe",
-    "why-title": "Porquê doar?",
     "why-1": "Manter o Morphe gratuito e open source",
     "why-2": "Apoiar o desenvolvimento contínuo",
     "why-3": "Cobrir custos de infraestrutura",
     "why-4": "Correções e funcionalidades mais rápidas",
-    "crypto-click": "Clica para abrir a carteira"
+    "oc-title": "Apoie-nos no Open Collective",
+    "oc-desc": "100% transparente — veja exatamente como cada dólar é angariado e gasto. Único ou recorrente, qualquer valor ajuda.",
+    "oc-btn": "Doar agora",
+    "tiers-title": "Escolha o seu nível de apoio",
+    "tiers-desc": "Cada contribuição faz a diferença",
+    "tier1-name": "Único",
+    "tier1-amount": "Qualquer valor",
+    "tier1-desc": "Ofereça-nos um café. Uma contribuição única para mostrar o seu apoio — sem compromisso.",
+    "tier2-name": "Apoiante",
+    "tier2-desc": "Torne-se um apoiante recorrente e ajude-nos a planear a longo prazo. O seu nome aparecerá na lista de apoiantes.",
+    "tier3-name": "Mega apoiante",
+    "tier3-desc": "Tenha o seu logótipo ou nome em destaque na secção de Mega apoiantes no site Morphe.",
+    "tier-contribute": "Contribuir",
+    "per-month": "/mês",
+    "tier-popular": "Popular",
+    "backers-title": "Os nossos apoiantes",
+    "backers-all": "Ver todos",
+    "backers-loading": "A carregar…",
+    "backers-empty": "Seja o primeiro a apoiar o Morphe!",
+    "sponsors-title": "Mega apoiantes",
+    "sponsors-cta": "Torne-se um mega apoiante",
+    "sponsors-empty": "Seja o primeiro mega apoiante!"
   },
   "microg": {
     "title": "Transferir",
@@ -219,7 +236,6 @@
   "changelog": {
     "title": "Novidades",
     "subtitle": "Histórico completo de atualizações e melhorias",
-    "filter-type": "Tipo:",
     "filter-all": "Todos",
     "filter-manager": "Manager",
     "filter-patches": "Patches",

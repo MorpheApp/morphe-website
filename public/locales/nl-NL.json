@@ -141,11 +141,9 @@
     "q7": "Is Morphe magie?",
     "a7": "Nee. Maar ook ja.",
     "q8": "Kan ik bijdragen aan Morphe?",
-    "a8-part1": "Ja! Bekijk onze",
-    "a8-github": "GitHub-repositories",
-    "a8-part2": ". We waarderen ook",
-    "a8-donate": "donaties",
-    "a8-part3": "."
+    "a8": "Ja! Bekijk onze %1. We waarderen ook %2.",
+    "a8-link1": "GitHub-repositories",
+    "a8-link2": "donaties"
   },
   "footer": {
     "description": "Android-app patching van de volgende generatie",
@@ -161,19 +159,38 @@
   },
   "analytics": {
     "title": "Analyse",
-    "part1": "Deze website gebruikt ",
-    "part2": "en Google Analytics 4: Geen cookies, geen reclame, geen profilering en geen gegevens worden verkocht of gedeeld.",
-    "part3": "Morphe voegt geen analyses of gegevensverzameling toe aan gepatchte apps."
+    "disclaimer": "Morphe voegt geen analyses of gegevensverzameling toe aan gepatchte apps.",
+    "description": "Deze website gebruikt %s en Google Analytics 4: Geen cookies, geen reclame, geen profilering en geen gegevens worden verkocht of gedeeld."
   },
   "donate": {
     "title": "Ondersteuning",
     "description": "Je bijdrage helpt Morphe verbeteren",
-    "why-title": "Waarom doneren?",
     "why-1": "Morphe gratis en open source houden",
     "why-2": "Doorlopende ontwikkeling ondersteunen",
     "why-3": "Infrastructuurkosten dekken",
     "why-4": "Snellere fixes en functies",
-    "crypto-click": "Klik om wallet te openen"
+    "oc-title": "Steun ons op Open Collective",
+    "oc-desc": "100% transparant — zie precies hoe elke dollar wordt opgehaald en besteed. Eenmalig of terugkerend, elk bedrag helpt.",
+    "oc-btn": "Doneer nu",
+    "tiers-title": "Kies je ondersteuningsniveau",
+    "tiers-desc": "Elke bijdrage maakt verschil",
+    "tier1-name": "Eenmalig",
+    "tier1-amount": "Willekeurig bedrag",
+    "tier1-desc": "Koop ons een koffie. Een eenmalige bijdrage om je waardering te tonen — geen verplichtingen.",
+    "tier2-name": "Supporter",
+    "tier2-desc": "Word een terugkerende supporter en help ons op lange termijn plannen. Je naam verschijnt in onze lijst met supporters.",
+    "tier3-name": "Mega supporter",
+    "tier3-desc": "Laat je logo of naam prominent zien in de sectie Mega supporters op de Morphe-website.",
+    "tier-contribute": "Bijdragen",
+    "per-month": "/mnd.",
+    "tier-popular": "Populair",
+    "backers-title": "Onze supporters",
+    "backers-all": "Alles bekijken",
+    "backers-loading": "Laden…",
+    "backers-empty": "Wees de eerste die Morphe ondersteunt!",
+    "sponsors-title": "Mega supporters",
+    "sponsors-cta": "Word een mega supporter",
+    "sponsors-empty": "Wees de eerste mega supporter!"
   },
   "microg": {
     "title": "Downloaden",
@@ -219,14 +236,13 @@
   "changelog": {
     "title": "Wat is er nieuw",
     "subtitle": "Volledige geschiedenis van updates en verbeteringen",
-    "filter-type": "Type:",
     "filter-all": "Alles",
     "filter-manager": "Manager",
     "filter-patches": "Patches",
     "show-dev": "Vooruitgebrachte releases tonen",
     "older-releases": "Op zoek naar oudere releases?",
     "view-manager": "Manager-releases bekijken",
-    "view-patches": "Patch-releases bekijken"
+    "view-patches": "Patches-releases bekijken"
   },
   "app-features": {
     "title": "App-functies",

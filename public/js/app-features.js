@@ -74,10 +74,14 @@ function appGradient(appId) {
             tab.setAttribute('aria-selected', i === currentIndex);
         });
 
+        // Handle RTL direction
+        const isRTL = document.documentElement.dir === 'rtl';
+        const translateX = isRTL ? currentIndex * 100 : -currentIndex * 100;
+
         panel.style.transition = animate
             ? 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)'
             : 'none';
-        panel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        panel.style.transform = `translateX(${translateX}%)`;
 
         // Apply per-app theme after transition settles
         const appId = pages[currentIndex]?.dataset.app;
@@ -136,7 +140,12 @@ function appGradient(appId) {
             if (!isDragging) return;
             isDragging = false;
             const delta = dragStartX - e.changedTouches[0].clientX;
-            if (Math.abs(delta) > 40) delta > 0 ? next() : prev();
+            
+            // Handle RTL swipe direction
+            const isRTL = document.documentElement.dir === 'rtl';
+            const normalizedDelta = isRTL ? -delta : delta;
+            
+            if (Math.abs(normalizedDelta) > 40) normalizedDelta > 0 ? next() : prev();
             startAutoplay();
         });
 
@@ -151,7 +160,12 @@ function appGradient(appId) {
             if (!isDragging) return;
             isDragging = false;
             const delta = dragStartX - e.clientX;
-            if (Math.abs(delta) > 40) delta > 0 ? next() : prev();
+            
+            // Handle RTL swipe direction
+            const isRTL = document.documentElement.dir === 'rtl';
+            const normalizedDelta = isRTL ? -delta : delta;
+            
+            if (Math.abs(normalizedDelta) > 40) normalizedDelta > 0 ? next() : prev();
             startAutoplay();
         });
 

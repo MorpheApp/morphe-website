@@ -141,11 +141,9 @@
     "q7": "Je Morphe mágia?",
     "a7": "Nie. Ale trochu áno.",
     "q8": "Môžem prispieť k Morphe?",
-    "a8-part1": "Áno! Pozri si naše",
-    "a8-github": "GitHub repozitáre",
-    "a8-part2": ". Vítame aj",
-    "a8-donate": "dary",
-    "a8-part3": "."
+    "a8": "Áno! Pozri si naše %1. Vítame aj %2.",
+    "a8-link1": "GitHub repozitáre",
+    "a8-link2": "dary"
   },
   "footer": {
     "description": "Patchovanie Android aplikácií novej generácie",
@@ -161,19 +159,38 @@
   },
   "analytics": {
     "title": "Analytika",
-    "part1": "Táto webová stránka používa ",
-    "part2": "a Google Analytics 4: Žiadne cookies, žiadna reklama, žiadne profilovanie a žiadne dáta sa nepredávajú ani nezdieľajú.",
-    "part3": "Morphe nepridáva analytiku ani zber dát do žiadnych upravených aplikácií."
+    "disclaimer": "Morphe nepridáva analytiku ani zber dát do žiadnych upravených aplikácií.",
+    "description": "Táto webová stránka používa %s a Google Analytics 4: Žiadne cookies, žiadna reklama, žiadne profilovanie a žiadne dáta sa nepredávajú ani nezdieľajú."
   },
   "donate": {
     "title": "Podpora",
     "description": "Tvoj príspevok pomáha zlepšovať Morphe",
-    "why-title": "Prečo darovať?",
     "why-1": "Udržať Morphe zdarma a open source",
     "why-2": "Podporiť neustály vývoj",
     "why-3": "Pokryť náklady na infraštruktúru",
     "why-4": "Rýchlejšie opravy chýb",
-    "crypto-click": "Klikni pre otvorenie peňaženky"
+    "oc-title": "Podporte nás na Open Collective",
+    "oc-desc": "100% transparentné — presne vidíte, ako je každý dolár získaný a minutý. Jednorazovo alebo pravidelne, každá suma pomôže.",
+    "oc-btn": "Prispieť teraz",
+    "tiers-title": "Vyberte úroveň podpory",
+    "tiers-desc": "Každý príspevok má význam",
+    "tier1-name": "Jednorazovo",
+    "tier1-amount": "Ľubovoľná suma",
+    "tier1-desc": "Kúpte nám kávu. Jednorazový príspevok na vyjadrenie podpory — bez záväzkov.",
+    "tier2-name": "Podporovateľ",
+    "tier2-desc": "Staňte sa pravidelným podporovateľom a pomôžte nám plánovať dlhodobo. Vaše meno sa zobrazí v zozname.",
+    "tier3-name": "Mega podporovateľ",
+    "tier3-desc": "Získajte svoje logo alebo meno viditeľne v sekcii Mega podporovatelia na stránke Morphe.",
+    "tier-contribute": "Prispieť",
+    "per-month": "/mes.",
+    "tier-popular": "Populárne",
+    "backers-title": "Naši prispievatelia",
+    "backers-all": "Zobraziť všetko",
+    "backers-loading": "Načítava sa…",
+    "backers-empty": "Buďte prvý, kto podporí Morphe!",
+    "sponsors-title": "Mega podporovatelia",
+    "sponsors-cta": "Staňte sa mega podporovateľom",
+    "sponsors-empty": "Buďte prvý mega podporovateľ!"
   },
   "microg": {
     "title": "Stiahnuť",
@@ -219,14 +236,13 @@
   "changelog": {
     "title": "Novinky",
     "subtitle": "Kompletná história aktualizácií a vylepšení",
-    "filter-type": "Typ:",
     "filter-all": "Všetky",
-    "filter-manager": "Manager",
+    "filter-manager": "Správca",
     "filter-patches": "Záplaty",
     "show-dev": "Zobraziť predbežné verzie",
     "older-releases": "Hľadáte staršie verzie?",
-    "view-manager": "Zobraziť verzie Manager",
-    "view-patches": "Zobraziť verzie Záplat"
+    "view-manager": "Zobraziť verzie správcu",
+    "view-patches": "Zobraziť verzie záplat"
   },
   "app-features": {
     "title": "Funkcie Aplikácie",

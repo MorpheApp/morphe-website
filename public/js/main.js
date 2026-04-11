@@ -1,22 +1,56 @@
-// Mobile Menu Toggle
+// Mobile Drawer
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const drawer = document.getElementById('mobile-drawer');
+    const scrim = document.getElementById('drawer-scrim');
 
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.classList.toggle('active');
-        });
+    if (!mobileMenuToggle || !drawer) return;
+
+    const menuIcon = mobileMenuToggle.querySelector('.material-symbols-rounded');
+
+    function swapIcon(toIcon) {
+        if (!menuIcon) return;
+        menuIcon.classList.add('swap-out');
+        setTimeout(() => {
+            menuIcon.textContent = toIcon;
+            menuIcon.classList.remove('swap-out');
+            menuIcon.classList.add('swap-in');
+            setTimeout(() => menuIcon.classList.remove('swap-in'), 180);
+        }, 180);
     }
 
-    // Close mobile menu when clicking on a link
-    const navLinkItems = document.querySelectorAll('.nav-link');
-    navLinkItems.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-        });
+    function openDrawer() {
+        drawer.classList.add('open');
+        mobileMenuToggle.classList.add('is-open');
+        swapIcon('close');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        drawer.classList.add('closing');
+        mobileMenuToggle.classList.remove('is-open');
+        swapIcon('menu');
+        setTimeout(() => {
+            drawer.classList.remove('open', 'closing');
+            document.body.style.overflow = '';
+        }, 270);
+    }
+
+    mobileMenuToggle.addEventListener('click', function() {
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    });
+
+    // Close on scrim click
+    if (scrim) scrim.addEventListener('click', closeDrawer);
+
+    // Close on drawer link click
+    drawer.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
     });
 });
 
@@ -109,8 +143,55 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Intersection Observer for animations
+// Scroll-reveal animations
 document.addEventListener('DOMContentLoaded', function() {
+    // Mark elements that should animate on scroll.
+    // Classes are added here (not in HTML) so content is always visible without JS.
+
+    // Simple fade-up elements
+    const revealSelectors = [
+        '.section-header',
+        '.hero-content',
+        '.hero-image',
+        '.faq-item',
+        '.show-more-section',
+        '.changelog-hero',
+        '.changelog-filters',
+        '.donate-card',
+        '.donate-tiers-header',
+        '.donate-backers',
+        '.donate-sponsors-card',
+        '.community-card',
+        '.microg-feature',
+        '.translate-step',
+        '.translate-why-item',
+        // App Features — animate the tab bar and the panel wrapper as single units
+        // (internals are managed by app-features.js carousel, don't touch them)
+        '.app-tabs',
+        '.app-features-panel-wrapper',
+        // Testimonials — animate the whole carousel block as one unit
+        // (internals are managed by testimonials.js, don't touch them)
+        '.testimonials-carousel',
+    ];
+
+    document.querySelectorAll(revealSelectors.join(', ')).forEach(el => {
+        el.classList.add('will-reveal');
+    });
+
+    // Staggered containers — children animate in sequence
+    const staggerSelectors = [
+        '.features-grid',
+        '.donate-tiers',
+    ];
+
+    document.querySelectorAll(staggerSelectors.join(', ')).forEach(container => {
+        container.classList.add('will-reveal-stagger');
+        Array.from(container.children).forEach((child, i) => {
+            child.style.setProperty('--reveal-delay', `${i * 80}ms`);
+        });
+    });
+
+    // Single observer for everything
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -119,12 +200,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -60px 0px'
     });
 
-    const elements = document.querySelectorAll('.feature-card, .faq-item, .crypto-card, .testimonial-card');
-    elements.forEach(el => observer.observe(el));
+    document.querySelectorAll('.will-reveal, .will-reveal-stagger').forEach(el => {
+        observer.observe(el);
+    });
 });
 
 // Scroll to Top Button

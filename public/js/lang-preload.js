@@ -6,7 +6,7 @@
 (function() {
     'use strict';
 
-    const SUPPORTED_LOCALES = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'vi-VN', 'tr-TR', 'uk-UA', 'ja-JP', 'ko-KR', 'zh-CN'];
+    const SUPPORTED_LOCALES = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'vi-VN', 'tr-TR', 'uk-UA', 'ar', 'ja-JP', 'ko-KR', 'zh-CN'];
 
     const STORAGE_KEY = 'morphe-language';
 
@@ -37,6 +37,11 @@
 
         // Set language attribute immediately
         document.documentElement.lang = lang;
+
+        // Set direction (RTL/LTR)
+        const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+        const baseLang = lang.split('-')[0];
+        document.documentElement.dir = rtlLanguages.includes(baseLang) ? 'rtl' : 'ltr';
 
         // Hide content until i18n loads
         document.documentElement.classList.add('i18n-loading');
