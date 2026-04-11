@@ -1067,7 +1067,7 @@ button {
 }
 .faq-item {
   background: var(--md-surface-container-low);
-  border-radius: 0;
+  border-radius: 6px;
   border-bottom: none;
   overflow: hidden;
   transition: background-color 0.3s var(--md-ease);
