@@ -296,8 +296,8 @@
     "filter-patches": "Bản vá",
     "show-dev": "Hiện bản thử nghiệm",
     "older-releases": "Tìm bản phát hành cũ hơn?",
-    "view-manager": "Xem bản phát hành trình quản lý",
-    "view-patches": "Xem bản phát hành bản vá"
+    "view-manager": "Xem bản phát hành Trình quản lý",
+    "view-patches": "Xem bản phát hành Bản vá"
   },
   "add-source": {
     "title": "Thêm nguồn vá",

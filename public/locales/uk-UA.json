@@ -237,12 +237,12 @@
     "title": "Що нового",
     "subtitle": "Повна історія оновлень та покращень",
     "filter-all": "Усі",
-    "filter-manager": "Manager",
-    "filter-patches": "Patches",
+    "filter-manager": "Менеджер",
+    "filter-patches": "Патчі",
     "show-dev": "Показати передрелізи",
     "older-releases": "Шукаєте старіші релізи?",
-    "view-manager": "Переглянути релізи Manager",
-    "view-patches": "Переглянути релізи Patches"
+    "view-manager": "Переглянути релізи менеджера",
+    "view-patches": "Переглянути релізи патчів"
   },
   "app-features": {
     "title": "Функції додатків",

@@ -237,12 +237,12 @@
     "title": "Что нового",
     "subtitle": "Полная история обновлений и улучшений",
     "filter-all": "Все",
-    "filter-manager": "Manager",
-    "filter-patches": "Patches",
+    "filter-manager": "Менеджер",
+    "filter-patches": "Патчи",
     "show-dev": "Показать пререлизы",
     "older-releases": "Ищете более старые релизы?",
-    "view-manager": "Просмотреть релизы Manager",
-    "view-patches": "Просмотреть релизы Patches"
+    "view-manager": "Просмотреть релизы менеджера",
+    "view-patches": "Просмотреть релизы патчей"
   },
   "app-features": {
     "title": "Функции приложения",

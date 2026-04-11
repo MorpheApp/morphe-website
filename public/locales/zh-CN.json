@@ -237,11 +237,11 @@
     "title": "更新内容",
     "subtitle": "完整的更新与改进历史",
     "filter-all": "全部",
-    "filter-manager": "Manager",
+    "filter-manager": "管理器",
     "filter-patches": "补丁",
     "show-dev": "显示预发布版本",
     "older-releases": "在找更早的版本吗？",
-    "view-manager": "查看 Manager 版本",
+    "view-manager": "查看管理器版本",
     "view-patches": "查看补丁版本"
   },
   "app-features": {

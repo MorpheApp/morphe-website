@@ -237,12 +237,12 @@
     "title": "Novinky",
     "subtitle": "Kompletná história aktualizácií a vylepšení",
     "filter-all": "Všetky",
-    "filter-manager": "Manager",
+    "filter-manager": "Správca",
     "filter-patches": "Záplaty",
     "show-dev": "Zobraziť predbežné verzie",
     "older-releases": "Hľadáte staršie verzie?",
-    "view-manager": "Zobraziť verzie Manager",
-    "view-patches": "Zobraziť verzie Záplat"
+    "view-manager": "Zobraziť verzie správcu",
+    "view-patches": "Zobraziť verzie záplat"
   },
   "app-features": {
     "title": "Funkcie Aplikácie",

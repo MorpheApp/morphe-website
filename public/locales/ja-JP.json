@@ -237,11 +237,11 @@
     "title": "新着情報",
     "subtitle": "更新および改善の完全な履歴",
     "filter-all": "すべて",
-    "filter-manager": "Manager",
+    "filter-manager": "マネージャー",
     "filter-patches": "パッチ",
     "show-dev": "プレリリース版を表示",
     "older-releases": "過去のバージョンをお探しですか？",
-    "view-manager": "Managerのバージョン一覧を見る",
+    "view-manager": "マネージャーのバージョン一覧を見る",
     "view-patches": "パッチのバージョン一覧を見る"
   },
   "app-features": {
