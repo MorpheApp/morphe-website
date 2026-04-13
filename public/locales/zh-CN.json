@@ -7,11 +7,14 @@
   },
   "hero": {
     "title": "改造您的",
-    "title-highlight": "Android应用",
+    "title-highlight": "Android体验",
     "description": "来自为您带来最佳改版YouTube应用的开发者，Morphe - 强大的应用修改工具，让您掌控一切",
     "download": "下载Morphe",
     "learn-more": "了解更多",
-    "social-label": "加入社区"
+    "social-label": "加入社区",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit"
   },
   "how-it-works": {
     "title": "Morphe工作原理",

@@ -18,6 +18,15 @@ const HTML_DIR = 'public';
 const LOCALES_DIR = 'public/locales';
 const LOCALES_CONFIG_PATH = path.join(LOCALES_DIR, 'supported-locales.json');
 
+// Keys used only in JavaScript (not via data-i18n attributes in HTML).
+// Registered as null so zombie-key removal keeps them and mergeBaseTranslations
+// preserves the manually maintained values in en.json.
+const JS_ONLY_KEYS = [
+  'hero.title-highlight-youtube',
+  'hero.title-highlight-ytmusic',
+  'hero.title-highlight-reddit',
+];
+
 /**
  * Load supported locales from JSON configuration
  */
@@ -150,6 +159,12 @@ function extractKeys() {
         } catch (e) { /* ignore parse errors */ }
       }
     }
+  });
+
+  // Register JS-only keys (used in scripts, not via data-i18n attributes).
+  // null = manually managed in en.json; zombie-key removal will preserve them.
+  JS_ONLY_KEYS.forEach(key => {
+    if (!keys.has(key)) keys.set(key, null);
   });
 
   return keys;

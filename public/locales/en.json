@@ -60,7 +60,10 @@
   },
   "hero": {
     "title": "Transform Your",
-    "title-highlight": "Android Apps",
+    "title-highlight": "Android Experience",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit",
     "description": "From the developers that brought you the greatest modded YouTube apps, comes Morphe - the powerful app modification tool that puts you in control",
     "download": "Download Morphe",
     "learn-more": "Learn More",

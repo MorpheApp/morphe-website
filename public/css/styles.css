@@ -513,6 +513,26 @@ body {
     word-break: break-word;
 }
 
+.hero-title-highlight-line {
+    display: block;
+    min-height: 1.15em; /* matches line-height of parent */
+}
+
+/* Hero morphing animation */
+.hero-morph-text {
+    display: inline;
+    transition:
+        filter  700ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: filter, opacity;
+}
+
+.hero-morph-text.morph-out,
+.hero-morph-text.morph-in {
+    filter:  blur(14px);
+    opacity: 0;
+}
+
 .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;

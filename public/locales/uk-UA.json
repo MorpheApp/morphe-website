@@ -6,8 +6,11 @@
     "faq": "FAQ"
   },
   "hero": {
-    "title": "Трансформуйте свої",
-    "title-highlight": "Android застосунки",
+    "title": "Трансформуйте свій",
+    "title-highlight": "досвід з Android",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit",
     "description": "Від розробників, які створили найкращі модифікації YouTube та YT Music, приходить Morphe - потужний інструмент модифікації застосунків, який дає вам повний контроль",
     "download": "Завантажити Morphe",
     "learn-more": "Дізнатися більше",

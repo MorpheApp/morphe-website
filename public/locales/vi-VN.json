@@ -60,11 +60,14 @@
   },
   "hero": {
     "title": "Biến đổi",
-    "title-highlight": "ứng dụng Android",
+    "title-highlight": "trải nghiệm Android",
     "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng hiệu quả, trao toàn quyền kiểm soát cho bạn",
     "download": "Tải Morphe",
     "learn-more": "Tìm hiểu thêm",
-    "social-label": "Tham gia cộng đồng"
+    "social-label": "Tham gia cộng đồng",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit"
   },
   "app-features": {
     "title": "Tính năng nổi bật",

@@ -7,11 +7,14 @@
   },
   "hero": {
     "title": "Transformeer je",
-    "title-highlight": "Android-apps",
+    "title-highlight": "Android-ervaring",
     "description": "Van de makers van de beste aangepaste YouTube-apps komt Morphe — de krachtige tool waarmee jij de controle hebt",
     "download": "Morphe downloaden",
     "learn-more": "Meer informatie",
-    "social-label": "Word lid van de community"
+    "social-label": "Word lid van de community",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit"
   },
   "how-it-works": {
     "title": "Hoe Morphe werkt",

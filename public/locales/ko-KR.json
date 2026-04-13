@@ -59,12 +59,15 @@
     "faq": "자주 묻는 질문"
   },
   "hero": {
-    "title": "안드로이드 앱을",
-    "title-highlight": "내 취향대로 바꿔보세요",
+    "title": "바꿔보세요,",
+    "title-highlight": "Android 경험을",
     "description": "유명한 YouTube 모드 앱을 만들어 온 개발진이 선보이는 Morphe. 앱을 내 방식대로 바꿀 수 있게 해주는 강력한 패칭 도구입니다.",
     "download": "Morphe 다운로드",
     "learn-more": "자세히 보기",
-    "social-label": "커뮤니티 참여"
+    "social-label": "커뮤니티 참여",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit"
   },
   "app-features": {
     "title": "앱 기능",

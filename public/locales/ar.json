@@ -60,11 +60,14 @@
   },
   "hero": {
     "title": "ارتقِ بتجربة",
-    "title-highlight": "تطبيقات أندرويد",
+    "title-highlight": "أندرويد",
     "description": "من صُناع أعظم تطبيقات YouTube المُعدلة،\r\n                يأتيكم Morphe - أداة تعديل التطبيقات الجبّارة التي تضع زمام التحكم بين يديك",
     "download": "تنزيل Morphe",
     "learn-more": "اكتشف المزيد",
-    "social-label": "انضم إلى مجتمعنا"
+    "social-label": "انضم إلى مجتمعنا",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit"
   },
   "app-features": {
     "title": "مزايا التطبيق",
