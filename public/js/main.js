@@ -107,7 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Navbar scroll effect
 document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.m3-navbar');
+
+    if (!navbar) return;
 
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 100) {
@@ -121,11 +123,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // Active nav links
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.m3-nav-link, .nav-link');
+    const navbar = document.querySelector('.m3-navbar');
+
+    if (!navbar) return;
 
     window.addEventListener('scroll', function() {
         let current = '';
-        const navHeight = document.querySelector('.navbar').offsetHeight;
+        const navHeight = navbar.offsetHeight;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop - navHeight - 100;
