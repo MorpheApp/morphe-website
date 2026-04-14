@@ -10,8 +10,9 @@
     <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/styles.css?v=11">
+    <link rel="stylesheet" href="css/dark-theme.css?v=11">
+    <link rel="stylesheet" href="css/subpage.css?v=11">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -22,30 +23,30 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
+<nav class="m3-navbar">
+    <div class="m3-nav-container surface-container-highest">
         <a href="/" class="nav-logo">
             <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
             <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
         </a>
         <div class="nav-links">
-            <a href="/" class="nav-link" data-i18n="footer.product-home" data-umami-event="Nav Home Click">Home</a>
-            <a href="microg" class="nav-link" data-i18n="footer.product-microg" data-umami-event="Nav MicroG Click">Download MicroG</a>
-            <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
-            <a href="changelog" class="nav-link"  data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
+            <a href="/" class="m3-nav-link" data-i18n="footer.product-home" data-umami-event="Nav Home Click">Home</a>
+            <a href="microg" class="m3-nav-link" data-i18n="footer.product-microg" data-umami-event="Nav MicroG Click">Download MicroG</a>
+            <a href="donate" class="m3-nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
+            <a href="changelog" class="m3-nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
             <div class="lang-dropdown" id="langDropdownBar">
-                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                <button class="m3-icon-btn" id="langTriggerBar" type="button" aria-label="Change language">
                     <span class="material-symbols-rounded">translate</span>
                 </button>
                 <div class="lang-menu" id="langMenuBar" role="listbox"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+            <button id="theme-toggle" class="m3-icon-btn" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+            <button class="mobile-menu-toggle m3-icon-btn" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
@@ -93,95 +94,98 @@
     </div>
 </section>
 
-<!-- How It Works Section -->
-<section id="how-it-works" class="how-it-works" style="background: var(--bg-section);">
-    <div class="container">
+
+
+<!-- Translation Progress -->
+<section class="how-it-works" style="background: var(--bg-section);">
+    <div class="container" style="max-width: 720px;">
         <div class="section-header">
-            <h2 class="section-title" data-i18n="translate.how-title">How to contribute</h2>
+            <h2 class="section-title">Translation Progress</h2>
         </div>
 
-        <div class="features-grid">
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="feature-card" style="text-decoration: none; color: inherit; cursor: pointer;" data-umami-event="Translate Step 1 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">group</span>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">French</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
                 </div>
-                <h3 class="feature-title" data-i18n="translate.step1-title">1. Sign Up for Crowdin</h3>
-                <p class="feature-description" data-i18n="translate.step1-desc">
-                    Create a free Crowdin account. It only takes a minute and gives you access to translate Morphe and other open source projects.
-                </p>
-            </a>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-primary);">100%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Japanese</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-primary);">100%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Arabic</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-primary);">100%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Korean</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-primary);">100%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Finnish</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 99%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-primary);">99%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Croatian</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 93%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">93%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Azerbaijani</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 89%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">89%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Marathi</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 69%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">69%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Slovak</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 60%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">60%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 100px; font-weight: 700; font-size: 0.95rem; text-align: right;">Persian</span>
+                <div style="flex: 1; height: 8px; background: var(--md-sys-color-surface-container-highest); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 12%; background: var(--md-sys-color-primary); border-radius: 99px;"></div>
+                </div>
+                <span style="width: 45px; font-weight: 800; font-size: 0.9rem; color: var(--md-sys-color-on-surface-variant);">12%</span>
+            </div>
+        </div>
 
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="feature-card" style="text-decoration: none; color: inherit; cursor: pointer;" data-umami-event="Translate Step 2 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">language</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.step2-title">2. Choose Your Language</h3>
-                <p class="feature-description" data-i18n="translate.step2-desc">
-                    Select the language you want to translate into. You can contribute to new translations or improve existing ones.
-                </p>
-            </a>
-
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="feature-card" style="text-decoration: none; color: inherit; cursor: pointer;" data-umami-event="Translate Step 3 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">edit</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.step3-title">3. Start Translating</h3>
-                <p class="feature-description" data-i18n="translate.step3-desc">
-                    Use Crowdin's intuitive interface to translate strings. Every contribution helps make Morphe accessible to more users.
-                </p>
-            </a>
-
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="feature-card" style="text-decoration: none; color: inherit; cursor: pointer;" data-umami-event="Translate Step 4 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">check</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.step4-title">4. See Your Impact</h3>
-                <p class="feature-description" data-i18n="translate.step4-desc">
-                    Your translations will be reviewed and included in future Morphe releases, helping users around the world.
-                </p>
+        <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-umami-event="View All Languages Click">
+                <span>View all languages on Crowdin</span>
+                <span class="material-symbols-rounded" style="font-size: 18px;">open_in_new</span>
             </a>
         </div>
 
-    </div>
-</section>
-
-<!-- Why Translate Section -->
-<section class="community" style="background: var(--section-a);">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="translate.why-title">Why Translate?</h2>
-            <p class="section-subtitle" data-i18n="translate.why-subtitle">Every translated string brings Morphe closer to someone who needs it</p>
-        </div>
-        <div class="community-grid">
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="community-card" data-umami-event="Translate Why 1 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">group</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.why-1">Help Your Community</h3>
-                <p class="feature-description" data-i18n="translate.why-1-desc">Make Morphe available in your native language so everyone around you can enjoy it without barriers.</p>
-            </a>
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="community-card" data-umami-event="Translate Why 2 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">language</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.why-2">Make Morphe Global</h3>
-                <p class="feature-description" data-i18n="translate.why-2-desc">Reach millions of users across the world by bringing Morphe to new languages and regions.</p>
-            </a>
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="community-card" data-umami-event="Translate Why 3 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">bookmark</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.why-3">Contribute to Open Source</h3>
-                <p class="feature-description" data-i18n="translate.why-3-desc">Translation is a meaningful form of open source contribution — no coding skills required.</p>
-            </a>
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="community-card" data-umami-event="Translate Why 4 Click">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">check</span>
-                </div>
-                <h3 class="feature-title" data-i18n="translate.why-4">See Your Impact</h3>
-                <p class="feature-description" data-i18n="translate.why-4-desc">Your translations are reviewed and shipped in real Morphe releases, reaching users around the world.</p>
-            </a>
-        </div>
+        <p style="text-align: center; margin-top: 2.5rem; color: var(--md-sys-color-on-surface-variant); font-size: 0.9rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            Translate meaning, not words. Keep placeholders like <code style="background: var(--md-sys-color-surface-container-highest); padding: 2px 6px; border-radius: 4px; font-size: 0.85em;">{app_name}</code> as-is. Found a typo? Vote on better alternatives directly in Crowdin.
+        </p>
     </div>
 </section>
 
@@ -197,22 +201,6 @@
                     <span class="footer-brand-name">Morphe</span>
                 </a>
                 <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
-                   data-umami-event="DMCA Click">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
-                </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                <details class="analytics-details">
-                    <summary data-i18n="analytics.title">Analytics</summary>
-                    <span data-i18n-link="analytics.description"
-                          data-i18n-link-href="https://umami.is"
-                          data-i18n-link-text="Umami"
-                          data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
-                    <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
-                </details>
             </div>
 
             <!-- Navigation columns -->
@@ -256,5 +244,6 @@
 <script src="js/i18n.js"></script>
 <script src="js/theme-manager.js"></script>
 <script src="js/main.js"></script>
+<script src="js/smooth-scroll.js"></script>
 </body>
 </html>

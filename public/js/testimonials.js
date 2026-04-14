@@ -67,7 +67,7 @@
         // Apply a fixed display order that is independent of the translation files.
         // This lets us reorder quotes without touching every locale.
         return reorderByIndexes(
-            [2, 9, 3, 16, 4, 18, 5, 10, 6, 11, 7, 13, 12, 15, 17, 14, 19, 8].map(n => n - 1),
+            [1, 2, 9, 3, 16, 4, 18, 5, 10, 6, 11, 7, 13, 12, 15, 17, 14, 19, 8].map(n => n - 1),
             testimonials
         );
     }

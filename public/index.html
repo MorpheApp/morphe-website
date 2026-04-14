@@ -3,594 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download the official Morphe APK.
-    Created by former ReVanced contributors to patch YouTube, YouTube Music, and Reddit
-    with ad-blocking and custom features.">
-    <title>Morphe App for YouTube and Reddit - OFFICIAL SITE</title>
-    <!-- Theme preloader -->
+    <meta name="description" content="Download the official Morphe APK. Created by former ReVanced contributors.">
+    <title>Morphe App - Android Transformation</title>
+
     <script src="js/theme-preload.js"></script>
-    <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Material 3 Expressive Typography: Outfit for headers, Plus Jakarta Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css?v=11">
+    <link rel="stylesheet" href="css/dark-theme.css?v=11">
+    
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="icon" href="favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
-    <meta name="apple-mobile-web-app-title" content="Morphe"/>
     <link rel="manifest" href="site.webmanifest"/>
+    <meta name="apple-mobile-web-app-title" content="Morphe"/>
+    
     <script src="js/analytics.js"></script>
 </head>
-<body>
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#home" class="nav-logo">
-            <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
-            <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
+<body class="m3-expressive-surface">
+
+<!-- M3 Expressive Floating Navbar -->
+<nav class="m3-navbar">
+    <div class="m3-nav-container surface-container-highest">
+        <a href="#home" class="nav-brand">
+            <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="nav-brand-img">
+            <span class="nav-brand-text">Morphe</span>
         </a>
         <div class="nav-links">
-            <a href="#home" class="nav-link" data-i18n="nav.home" data-umami-event="Nav Home Click">Home</a>
-            <a href="#how-it-works" class="nav-link" data-i18n="nav.how-it-works" data-umami-event="Nav How It Works Click">How It Works</a>
-            <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials" data-umami-event="Nav Testimonials Click">Testimonials</a>
-            <a href="#faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
-            <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
-            <a href="changelog" class="nav-link"  data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
+            <a href="#home" class="m3-nav-link" data-i18n="nav.home" data-umami-event="Nav Home Click">Home</a>
+            <a href="#how-it-works" class="m3-nav-link" data-i18n="nav.how-it-works" data-umami-event="Nav How It Works Click">How It Works</a>
+            <a href="#features" class="m3-nav-link" data-i18n="app-features.title" data-umami-event="Nav Features Click">Features</a>
+            <a href="#faq" class="m3-nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
         </div>
         <div class="nav-actions">
             <div class="lang-dropdown" id="langDropdownBar">
-                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                <button class="m3-icon-btn" id="langTriggerBar" type="button" aria-label="Change language">
                     <span class="material-symbols-rounded">translate</span>
                 </button>
                 <div class="lang-menu" id="langMenuBar" role="listbox"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+            <button id="theme-toggle" class="m3-icon-btn" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+            <button class="mobile-menu-toggle m3-icon-btn" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
     </div>
 </nav>
 
-<!-- Mobile Drawer -->
+<!-- Mobile Drawer (M3 standard Navigation Drawer) -->
 <div class="mobile-drawer" id="mobile-drawer">
     <div class="drawer-scrim" id="drawer-scrim"></div>
-    <div class="drawer-sheet">
-
-        <a href="#home" class="drawer-link" data-umami-event="Drawer Home Click">
-            <span class="material-symbols-rounded">home</span>
-            <span data-i18n="nav.home">Home</span>
-        </a>
-        <a href="#how-it-works" class="drawer-link" data-umami-event="Drawer How It Works Click">
-            <span class="material-symbols-rounded">help</span>
-            <span data-i18n="nav.how-it-works">How It Works</span>
-        </a>
-        <a href="#testimonials" class="drawer-link" data-umami-event="Drawer Testimonials Click">
-            <span class="material-symbols-rounded">reviews</span>
-            <span data-i18n="nav.testimonials">Testimonials</span>
-        </a>
-        <a href="#faq" class="drawer-link" data-umami-event="Drawer FAQ Click">
-            <span class="material-symbols-rounded">quiz</span>
-            <span data-i18n="nav.faq">FAQ</span>
-        </a>
-        <hr class="drawer-divider">
-        <a href="donate" class="drawer-link" data-umami-event="Drawer Donate Click">
-            <span class="material-symbols-rounded">volunteer_activism</span>
-            <span data-i18n="footer.support-donate">Donate</span>
-        </a>
-        <a href="changelog" class="drawer-link" data-umami-event="Drawer Changelog Click">
-            <span class="material-symbols-rounded">new_releases</span>
-            <span data-i18n="footer.product-changelog">What's New</span>
-        </a>
+    <div class="drawer-sheet surface-container">
+        <div class="drawer-header">
+            <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="drawer-logo logo-light">
+            <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="drawer-logo logo-dark">
+        </div>
+        <div class="drawer-content">
+            <a href="#home" class="m3-drawer-link" data-umami-event="Drawer Home Click">
+                <span class="material-symbols-rounded">home</span>
+                <span data-i18n="nav.home">Home</span>
+            </a>
+            <a href="#how-it-works" class="m3-drawer-link" data-umami-event="Drawer How It Works Click">
+                <span class="material-symbols-rounded">help</span>
+                <span data-i18n="nav.how-it-works">How It Works</span>
+            </a>
+            <a href="#features" class="m3-drawer-link" data-umami-event="Drawer Features Click">
+                <span class="material-symbols-rounded">layers</span>
+                <span data-i18n="app-features.title">Features</span>
+            </a>
+            <a href="#testimonials" class="m3-drawer-link" data-umami-event="Drawer Testimonials Click">
+                <span class="material-symbols-rounded">reviews</span>
+                <span data-i18n="nav.testimonials">Testimonials</span>
+            </a>
+            <a href="#faq" class="m3-drawer-link" data-umami-event="Drawer FAQ Click">
+                <span class="material-symbols-rounded">quiz</span>
+                <span data-i18n="nav.faq">FAQ</span>
+            </a>
+            <hr class="m3-divider">
+            <a href="donate" class="m3-drawer-link" data-umami-event="Drawer Donate Click">
+                <span class="material-symbols-rounded">volunteer_activism</span>
+                <span data-i18n="footer.support-donate">Donate</span>
+            </a>
+            <a href="changelog" class="m3-drawer-link" data-umami-event="Drawer Changelog Click">
+                <span class="material-symbols-rounded">new_releases</span>
+                <span data-i18n="footer.product-changelog">What's New</span>
+            </a>
+        </div>
     </div>
 </div>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span data-i18n="hero.title">Transform Your</span>
-                <span class="hero-title-highlight-line">
-                    <span class="gradient-text" data-i18n="hero.title-highlight">Android Experience</span>
-                </span>
-            </h1>
-            <p class="hero-description" data-i18n="hero.description">
-                From the developers that brought you the greatest modded YouTube apps,
-                comes Morphe - the powerful app modification tool that puts you in control
-            </p>
-            <div class="hero-buttons">
-                <a href="DOWNLOAD_URL_TEMPLATE" class="btn btn-primary" data-umami-event="Download Button Click">
-                    <span class="material-symbols-rounded">download</span>
-                    <span data-i18n="hero.download">Download Morphe</span>
-                </a>
-                <a href="#how-it-works" class="btn btn-secondary" data-umami-event="Learn More Button Click">
-                    <span data-i18n="hero.learn-more">Learn More</span>
-                    <span class="material-symbols-rounded">arrow_forward</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section class="features-section">
-    <div class="container">
-
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="app-features.title">App Features</h2>
-            <p class="section-subtitle" data-i18n="app-features.subtitle">Powerful patches for your favourite apps</p>
-        </div>
-
-        <!-- App Tabs -->
-        <div class="app-tabs" role="tablist">
-            <button class="app-tab active" data-app="youtube" role="tab" aria-selected="true">
-                <span data-i18n="app-features.tab-youtube">YouTube Morphe</span>
-            </button>
-            <button class="app-tab" data-app="ytmusic" role="tab" aria-selected="false">
-                <span data-i18n="app-features.tab-ytmusic">YT Music Morphe</span>
-            </button>
-            <button class="app-tab" data-app="reddit" role="tab" aria-selected="false">
-                <span data-i18n="app-features.tab-reddit">Reddit Morphe</span>
-            </button>
-        </div>
-
-        <!-- Pages container -->
-        <div class="app-features-panel-wrapper">
-            <div class="app-features-panel">
-
-                <!-- YouTube page -->
-                <div class="app-features-page active" data-app="youtube">
-                    <p class="app-page-desc" data-i18n="app-features.youtube-desc">A customized YouTube experience with ad blocking, SponsorBlock support, enhanced player controls, and advanced privacy improvements</p>
-                    <div class="features-grid-cards">
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">block</span></div>
-                            <h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4>
-                            <p data-i18n="app-features.yt-ad-blocking-desc">Removes all ads from the home feed and video player for uninterrupted viewing.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">shield</span></div>
-                            <h4 data-i18n="app-features.sponsorblock">SponsorBlock</h4>
-                            <p data-i18n="app-features.sponsorblock-desc">Automatically skips sponsored segments and other non-essential parts of videos.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">thumb_up</span></div>
-                            <h4 data-i18n="app-features.return-dislikes">Return Dislikes</h4>
-                            <p data-i18n="app-features.return-dislikes-desc">Displays community-powered dislike counts so you can make better viewing decisions.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">monitor</span></div>
-                            <h4 data-i18n="app-features.ui-customization">UI Customization</h4>
-                            <p data-i18n="app-features.yt-ui-desc">Hide Shorts, adjust navigation bar, and remove unwanted layout elements.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">contextual_token</span></div>
-                            <h4 data-i18n="app-features.player-enhancements">Player Enhancements</h4>
-                            <p data-i18n="app-features.player-desc">Custom playback speeds, default video quality, and improved seekbar behavior.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">swipe</span></div>
-                            <h4 data-i18n="app-features.swipe-controls">Swipe Controls</h4>
-                            <p data-i18n="app-features.swipe-desc">Adjust brightness and volume with intuitive touch gestures.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">palette</span></div>
-                            <h4 data-i18n="app-features.themes">Theme Customization</h4>
-                            <p data-i18n="app-features.yt-themes-desc">Pure black, Material You, and additional theme styles.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">privacy_tip</span></div>
-                            <h4 data-i18n="app-features.privacy">Privacy Improvements</h4>
-                            <p data-i18n="app-features.yt-privacy-desc">Cleans sharing links by removing tracking parameters.</p>
-                        </div>
+<!-- Main M3 Expressive Hero -->
+<main class="m3-main-content">
+    <section id="home" class="m3-hero">
+        <div class="m3-container">
+            <div class="m3-hero-layout">
+                <!-- Left Asymmetric Text -->
+                <div class="m3-hero-text">
+                    <div class="m3-chip surface-container-high primary-text">
+                        <span class="material-symbols-rounded">bolt</span>
+                        <span>Open Source · Free Forever</span>
                     </div>
-                </div>
-
-                <!-- YT Music page -->
-                <div class="app-features-page" data-app="ytmusic">
-                    <p class="app-page-desc" data-i18n="app-features.ytmusic-desc">An enhanced YouTube Music experience with ad blocking, customizable themes, audio improvements, and a cleaner interface</p>
-                    <div class="features-grid-cards">
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">block</span></div>
-                            <h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4>
-                            <p data-i18n="app-features.ytm-ad-desc">Removes all ads during music playback.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">music_note</span></div>
-                            <h4 data-i18n="app-features.audio-quality">Audio Quality</h4>
-                            <p data-i18n="app-features.audio-desc">Disable dynamic range compression and prefer original audio tracks.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">palette</span></div>
-                            <h4 data-i18n="app-features.themes">Theme Customization</h4>
-                            <p data-i18n="app-features.ytm-themes-desc">Custom dark and light backgrounds including Material You styles.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">monitor</span></div>
-                            <h4 data-i18n="app-features.interface-cleanup">Interface Cleanup</h4>
-                            <p data-i18n="app-features.ytm-ui-desc">Hide unnecessary buttons and UI components for a cleaner experience.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">repeat</span></div>
-                            <h4 data-i18n="app-features.repeat">Permanent Repeat</h4>
-                            <p data-i18n="app-features.repeat-desc">Improved repeat behavior that persists across sessions.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">link</span></div>
-                            <h4 data-i18n="app-features.link-sanitization">Link Sanitization</h4>
-                            <p data-i18n="app-features.ytm-link-desc">Removes tracking parameters from shared links.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">settings_applications</span></div>
-                            <h4 data-i18n="app-features.custom-branding">Custom Branding</h4>
-                            <p data-i18n="app-features.branding-desc">Optional app name and icon customization.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">table_rows</span></div>
-                            <h4 data-i18n="app-features.nav-bar">Navigation Bar</h4>
-                            <p data-i18n="app-features.nav-bar-desc">Hide or customize the bottom navigation bar and its labels to reduce clutter.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reddit page -->
-                <div class="app-features-page" data-app="reddit">
-                    <p class="app-page-desc" data-i18n="app-features.reddit-desc">A streamlined Reddit experience with ad blocking, interface customization, direct link handling, and improved privacy</p>
-                    <div class="features-grid-cards">
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">block</span></div>
-                            <h4 data-i18n="app-features.ad-blocking">Ad Blocking</h4>
-                            <p data-i18n="app-features.reddit-ad-desc">Removes in-feed advertisements for a cleaner browsing experience.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">monitor</span></div>
-                            <h4 data-i18n="app-features.interface-cleanup">Interface Customization</h4>
-                            <p data-i18n="app-features.reddit-ui-desc">Hide navigation buttons, sidebar elements, and recommended shelves.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">comments_disabled</span></div>
-                            <h4 data-i18n="app-features.auto-dismiss">Auto Dialog Dismiss</h4>
-                            <p data-i18n="app-features.dismiss-desc">Automatically removes repetitive community warning popups.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">open_in_new</span></div>
-                            <h4 data-i18n="app-features.direct-links">Direct External Links</h4>
-                            <p data-i18n="app-features.direct-links-desc">Open links without redirect tracking, going directly to the destination.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">link</span></div>
-                            <h4 data-i18n="app-features.link-sanitization">Link Sanitization</h4>
-                            <p data-i18n="app-features.reddit-link-desc">Removes tracking parameters from shared URLs for better privacy.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">home</span></div>
-                            <h4 data-i18n="app-features.clean-nav">Cleaner Navigation</h4>
-                            <p data-i18n="app-features.clean-nav-desc">Simplified layout with fewer distractions for focused browsing.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">photo_camera</span></div>
-                            <h4 data-i18n="app-features.screenshot">Screenshot Freedom</h4>
-                            <p data-i18n="app-features.screenshot-desc">Disables the popup that appears when taking screenshots inside the app.</p>
-                        </div>
-                        <div class="feature-slide">
-                            <div class="feature-slide-icon"><span class="material-symbols-rounded">notifications</span></div>
-                            <h4 data-i18n="app-features.spoof-signature">Notification Fix</h4>
-                            <p data-i18n="app-features.spoof-signature-desc">Spoofs the app signature to restore push notifications that may be broken after patching.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section id="how-it-works" class="how-it-works">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="how-it-works.title">How Morphe Works</h2>
-            <p class="section-subtitle" data-i18n="how-it-works.subtitle">Simple, powerful, and built for everyone</p>
-        </div>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">download</span>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step1-title">1. Download Morphe</h3>
-                <p class="feature-description" data-i18n="how-it-works.step1-desc">
-                    Download the latest version of Morphe and install it on your Android device.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">app_registration</span>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step2-title">2. Choose Your App</h3>
-                <p class="feature-description" data-i18n="how-it-works.step2-desc">
-                    Select the app you want to modify.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">extension</span>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step3-title">3. Apply Patches</h3>
-                <p class="feature-description" data-i18n="how-it-works.step3-desc">
-                    Morphe will automatically patch your selected app.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">apk_install</span>
-                </div>
-                <h3 class="feature-title" data-i18n="how-it-works.step4-title">4. Install & Enjoy</h3>
-                <p class="feature-description" data-i18n="how-it-works.step4-desc">
-                    Install the patched app and enjoy your customized experience.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="testimonials.title">What Users Say</h2>
-            <p class="section-subtitle" data-i18n="testimonials.subtitle">Feedback from real users and definitely not made up</p>
-        </div>
-
-        <div class="testimonials-carousel">
-            <div class="testimonials-grid" id="testimonials-grid">
-                <!-- Dynamically generated from JS -->
-            </div>
-            <div class="carousel-controls">
-                <button class="carousel-button prev" aria-label="Previous testimonial" data-umami-event="Testimonial Previous Click">
-                    <span class="material-symbols-rounded">chevron_left</span>
-                </button>
-                <button class="carousel-button next" aria-label="Next testimonial" data-umami-event="Testimonial Next Click">
-                    <span class="material-symbols-rounded">chevron_right</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="faq">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
-            <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about Morphe</p>
-        </div>
-
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What apps can Morphe patch?">
-                    <div class="faq-number">1</div>
-                    <span class="faq-text" data-i18n="faq.q1">What apps can Morphe patch?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a1">You can patch any app you want. As long as you want YouTube, YouTube Music, or Reddit. We're constantly working on expanding support to more apps.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
-                    <div class="faq-number">2</div>
-                    <span class="faq-text" data-i18n="faq.q2">Is Morphe safe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a2">As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
-                    <div class="faq-number">3</div>
-                    <span class="faq-text" data-i18n="faq.q3">Will Morphe brick my phone?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a3">Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I customize apps to my preference?">
-                    <div class="faq-number">4</div>
-                    <span class="faq-text" data-i18n="faq.q4">Can I customize apps to my preference?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a4">Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
-                    <div class="faq-number">5</div>
-                    <span class="faq-text" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n-link="analytics.description"
-                              data-i18n-link-href="https://umami.is"
-                              data-i18n-link-text="Umami"
-                              data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
-                        <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
+                    
+                    <h1 class="display-large m3-hero-title">
+                        <span class="m3-title-line" data-i18n="hero.title">Transform Your</span>
+                        <br>
+                        <span class="m3-title-accent primary-text expressive-shape-text" data-i18n="hero.title-highlight">Android Experience</span>
+                    </h1>
+                    
+                    <p class="body-large m3-hero-subtitle" data-i18n="hero.description">
+                        From the developers that brought you the greatest modded YouTube apps, comes Morphe – the powerful app modification tool that puts you in control.
                     </p>
+                    
+                    <div class="m3-hero-actions">
+                        <a href="DOWNLOAD_URL_TEMPLATE" class="m3-btn-primary" data-umami-event="Download Button Click">
+                            <span class="material-symbols-rounded">download</span>
+                            <span data-i18n="hero.download">Download Morphe</span>
+                        </a>
+                        <a href="#how-it-works" class="m3-btn-tonal" data-umami-event="Learn More Button Click">
+                            <span data-i18n="hero.learn-more">Learn More</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Why the name Morphe?">
-                    <div class="faq-number">6</div>
-                    <span class="faq-text" data-i18n="faq.q6">Why the name Morphe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a6">Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe magic?">
-                    <div class="faq-number">7</div>
-                    <span class="faq-text" data-i18n="faq.q7">Is Morphe magic?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a7">No. But also yes. It's advanced bytecode manipulation that feels like magic.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I contribute to Morphe?">
-                    <div class="faq-number">8</div>
-                    <span class="faq-text" data-i18n="faq.q8">Can I contribute to Morphe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n-links="faq.a8"
-                              data-i18n-links-data='[{"href":"https://github.com/MorpheApp/","text":"GitHub repos","attrs":{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"GitHub Contribution Click"}},{"href":"/donate","text":"donations","attrs":{"class":"inline-link","data-umami-event":"FAQ Donate Link Click"}}]'></span>
-                    </p>
+                
+                <!-- Right Expressive Visual Anchor -->
+                <div class="m3-hero-visual">
+                    <div class="m3-expressive-anchor">
+                        <!-- Abstract nested M3 shapes based on logo colors -->
+                        <div class="m3-shape surface-primary dynamic-shape-1"></div>
+                        <div class="m3-shape surface-secondary dynamic-shape-2"></div>
+                        <img src="images/morphe_logo_with_frame.svg" alt="Morphe Core" class="m3-hero-core-img">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Community Section -->
-<section id="community" class="community">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="hero.social-label">Join the Community</h2>
-            <p class="section-subtitle" data-i18n="community.subtitle">Follow us, report issues, and help make Morphe better</p>
+    <!-- M3 Staggered Process ('How It Works') -->
+    <section id="how-it-works" class="m3-section surface-container-low">
+        <div class="m3-container">
+            <div class="m3-section-intro">
+                <h2 class="display-medium" data-i18n="how-it-works.title">How Morphe Works</h2>
+                <p class="body-large muted-text" data-i18n="how-it-works.subtitle">Simple, powerful, and built for everyone</p>
+            </div>
+            
+            <div class="m3-staggered-grid">
+                <div class="m3-card surface-container elevation-1 expressive-curve-1" data-step="01">
+                    <div class="m3-card-icon primary-container-icon"><span class="material-symbols-rounded">download</span></div>
+                    <h3 class="headline-small" data-i18n="how-it-works.step1-title">1. Download Morphe</h3>
+                    <p data-i18n="how-it-works.step1-desc">Download the latest version of Morphe and install it on your Android device.</p>
+                </div>
+                
+                <div class="m3-card surface-container elevation-1 expressive-curve-2" data-step="02">
+                    <div class="m3-card-icon secondary-container-icon"><span class="material-symbols-rounded">app_registration</span></div>
+                    <h3 class="headline-small" data-i18n="how-it-works.step2-title">2. Choose Your App</h3>
+                    <p data-i18n="how-it-works.step2-desc">Select the app you want to modify.</p>
+                </div>
+                
+                <div class="m3-card surface-container elevation-1 expressive-curve-3" data-step="03">
+                    <div class="m3-card-icon primary-container-icon"><span class="material-symbols-rounded">extension</span></div>
+                    <h3 class="headline-small" data-i18n="how-it-works.step3-title">3. Apply Patches</h3>
+                    <p data-i18n="how-it-works.step3-desc">Morphe will automatically patch your selected app.</p>
+                </div>
+                
+                <div class="m3-card surface-container elevation-1 expressive-curve-4" data-step="04">
+                    <div class="m3-card-icon secondary-container-icon"><span class="material-symbols-rounded">apk_install</span></div>
+                    <h3 class="headline-small" data-i18n="how-it-works.step4-title">4. Install & Enjoy</h3>
+                    <p data-i18n="how-it-works.step4-desc">Install the patched app and enjoy your customized experience.</p>
+                </div>
+            </div>
         </div>
-        <div class="community-grid">
-            <a href="https://github.com/MorpheApp" target="_blank" class="community-card" data-umami-event="GitHub Link Click">
-                <div class="feature-icon">
-                    <img src="images/github.svg" alt="GitHub" class="community-icon-img">
+    </section>
+
+    <!-- App Features Bento Box -->
+    <section id="features" class="m3-section">
+        <div class="m3-container">
+            <div class="m3-section-intro align-center">
+                <h2 class="display-medium" data-i18n="app-features.title">App Features</h2>
+                <p class="body-large muted-text" data-i18n="app-features.subtitle">Powerful patches for your favourite apps</p>
+            </div>
+
+            <!-- M3 Segmented Buttons (App Tabs) -->
+            <div class="m3-segmented-control" role="tablist">
+                <button class="m3-segment app-tab active" data-app="youtube" role="tab" aria-selected="true">
+                    <span class="material-symbols-rounded segment-icon">smart_display</span>
+                    <span data-i18n="app-features.tab-youtube">YouTube</span>
+                </button>
+                <button class="m3-segment app-tab" data-app="ytmusic" role="tab" aria-selected="false">
+                    <span class="material-symbols-rounded segment-icon">headphones</span>
+                    <span data-i18n="app-features.tab-ytmusic">YT Music</span>
+                </button>
+                <button class="m3-segment app-tab" data-app="reddit" role="tab" aria-selected="false">
+                    <span class="material-symbols-rounded segment-icon">forum</span>
+                    <span data-i18n="app-features.tab-reddit">Reddit</span>
+                </button>
+            </div>
+
+            <!-- Bento Panels Wrapper -->
+            <div class="app-features-panel-wrapper">
+                <div class="app-features-panel">
+                    <!-- YOUTUBE BENTO -->
+                    <div class="app-features-page m3-bento-grid active" data-app="youtube">
+                        <!-- Spanning Bento Item -->
+                        <div class="m3-bento-card bento-span-2 surface-container-high primary-tint">
+                            <div class="bento-icon"><span class="material-symbols-rounded">block</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.ad-blocking">Ad Blocking</h4>
+                            <p class="body-medium" data-i18n="app-features.yt-ad-blocking-desc">Removes all ads from the home feed and video player for uninterrupted viewing.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">shield</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.sponsorblock">SponsorBlock</h4>
+                            <p class="body-medium" data-i18n="app-features.sponsorblock-desc">Automatically skips sponsored segments and other non-essential parts of videos.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">thumb_up</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.return-dislikes">Return Dislikes</h4>
+                            <p class="body-medium" data-i18n="app-features.return-dislikes-desc">Displays community-powered dislike counts so you can make better viewing decisions.</p>
+                        </div>
+                        <div class="m3-bento-card bento-span-row-2 surface-container-low elevation-2">
+                             <div class="bento-icon"><span class="material-symbols-rounded">monitor</span></div>
+                             <h4 class="title-medium" data-i18n="app-features.ui-customization">UI Customization</h4>
+                             <p class="body-medium" data-i18n="app-features.yt-ui-desc">Hide Shorts, adjust navigation bar, and remove unwanted layout elements.</p>
+                        </div>
+                         <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">contextual_token</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.player-enhancements">Player Enhancements</h4>
+                            <p class="body-medium" data-i18n="app-features.player-desc">Custom playback speeds, default video quality, and improved seekbar behavior.</p>
+                        </div>
+                         <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">swipe</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.swipe-controls">Swipe Controls</h4>
+                            <p class="body-medium" data-i18n="app-features.swipe-desc">Adjust brightness and volume with intuitive touch gestures.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">palette</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.themes">Theme Customization</h4>
+                            <p class="body-medium" data-i18n="app-features.yt-themes-desc">Pure black, Material You, and additional theme styles.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">privacy_tip</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.privacy">Privacy</h4>
+                            <p class="body-medium" data-i18n="app-features.yt-privacy-desc">Cleans sharing links by removing tracking parameters.</p>
+                        </div>
+                    </div>
+
+                    <!-- YT MUSIC BENTO -->
+                    <div class="app-features-page m3-bento-grid" data-app="ytmusic">
+                        <div class="m3-bento-card bento-span-2 surface-container-high primary-tint">
+                            <div class="bento-icon"><span class="material-symbols-rounded">block</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.ad-blocking">Ad Blocking</h4>
+                            <p class="body-medium" data-i18n="app-features.ytm-ad-desc">Removes all ads during music playback.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">music_note</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.audio-quality">Audio Quality</h4>
+                            <p class="body-medium" data-i18n="app-features.audio-desc">Disable dynamic range compression and prefer original audio tracks.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                             <div class="bento-icon"><span class="material-symbols-rounded">palette</span></div>
+                             <h4 class="title-medium" data-i18n="app-features.themes">Themes</h4>
+                             <p class="body-medium" data-i18n="app-features.ytm-themes-desc">Custom dark and light backgrounds including Material You styles.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">monitor</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.interface-cleanup">Interface Cleanup</h4>
+                            <p class="body-medium" data-i18n="app-features.ytm-ui-desc">Hide unnecessary buttons and UI components.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">repeat</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.repeat">Permanent Repeat</h4>
+                            <p class="body-medium" data-i18n="app-features.repeat-desc">Improved repeat behavior that persists across sessions.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container-highest bento-span-2">
+                            <div class="bento-icon"><span class="material-symbols-rounded">settings_applications</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.custom-branding">Custom Branding</h4>
+                            <p class="body-medium" data-i18n="app-features.branding-desc">Optional app name and icon customization.</p>
+                        </div>
+                    </div>
+
+                    <!-- REDDIT BENTO -->
+                    <div class="app-features-page m3-bento-grid" data-app="reddit">
+                        <div class="m3-bento-card bento-span-2 surface-container-high primary-tint">
+                            <div class="bento-icon"><span class="material-symbols-rounded">block</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.ad-blocking">Ad Blocking</h4>
+                            <p class="body-medium" data-i18n="app-features.reddit-ad-desc">Removes in-feed advertisements for a cleaner browsing experience.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">monitor</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.interface-cleanup">Clean UI</h4>
+                            <p class="body-medium" data-i18n="app-features.reddit-ui-desc">Hide navigation buttons, sidebar elements, and shelves.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">comments_disabled</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.auto-dismiss">Auto Dismiss</h4>
+                            <p class="body-medium" data-i18n="app-features.dismiss-desc">Automatically removes repetitive community warning popups.</p>
+                        </div>
+                        <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">open_in_new</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.direct-links">Direct Links</h4>
+                            <p class="body-medium" data-i18n="app-features.direct-links-desc">Open links without redirect tracking, going directly to destination.</p>
+                        </div>
+                         <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">home</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.clean-nav">Cleaner Nav</h4>
+                            <p class="body-medium" data-i18n="app-features.clean-nav-desc">Simplified layout with fewer distractions.</p>
+                        </div>
+                         <div class="m3-bento-card surface-container elevation-1">
+                            <div class="bento-icon"><span class="material-symbols-rounded">photo_camera</span></div>
+                            <h4 class="title-medium" data-i18n="app-features.screenshot">Screenshots</h4>
+                            <p class="body-medium" data-i18n="app-features.screenshot-desc">Disables the popup that appears when taking screenshots inside the app.</p>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="feature-title">GitHub</h3>
-                <p class="feature-description" data-i18n="community.github-desc">Browse the source code, report bugs, and contribute to Morphe development.</p>
-            </a>
-            <a href="https://x.com/MorpheApp" target="_blank" class="community-card" data-umami-event="X Link Click">
-                <div class="feature-icon">
-                    <img src="images/X.svg" alt="X" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">X (Twitter)</h3>
-                <p class="feature-description" data-i18n="community.x-desc">Stay up to date with the latest news, releases, and announcements.</p>
-            </a>
-            <a href="https://reddit.com/r/MorpheApp" target="_blank" class="community-card" data-umami-event="Reddit Link Click">
-                <div class="feature-icon">
-                    <img src="images/reddit.svg" alt="Reddit" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">Reddit</h3>
-                <p class="feature-description" data-i18n="community.reddit-desc">Join discussions, share tips, and connect with other Morphe users.</p>
-            </a>
-            <a href="https://crowdin.com/project/morphe" target="_blank" class="community-card" data-umami-event="Crowdin Link Click">
-                <div class="feature-icon">
-                    <img src="images/crowdin-small.svg" alt="Crowdin" class="community-icon-img">
-                </div>
-                <h3 class="feature-title">Crowdin</h3>
-                <p class="feature-description" data-i18n="community.crowdin-desc">Help translate Morphe into your language and make it accessible to everyone.</p>
-            </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-top">
+    <!-- Testimonials -->
+    <section id="testimonials" class="m3-section surface-container-low">
+        <div class="m3-container">
+            <div class="m3-section-intro align-center">
+                <h2 class="display-medium" data-i18n="testimonials.title">What Users Say</h2>
+                <p class="body-large muted-text" data-i18n="testimonials.subtitle">Feedback from real users</p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- JS DOM Hooks inside -->
+                </div>
+                <div class="carousel-controls m3-carousel-pager">
+                    <button class="m3-btn-icon carousel-button prev" aria-label="Previous testimonial" data-umami-event="Testimonial Previous Click">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                    <button class="m3-btn-icon carousel-button next" aria-label="Next testimonial" data-umami-event="Testimonial Next Click">
+                        <span class="material-symbols-rounded">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Brand column -->
+    <!-- FAQ Base Accordion -->
+    <section id="faq" class="m3-section">
+        <div class="m3-container">
+            <div class="m3-section-intro align-center">
+                <h2 class="display-medium" data-i18n="faq.title"><span class="gradient-text">Frequently Asked Questions</span></h2>
+            </div>
+            
+            <div class="faq-list m3-accordion-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item m3-accordion">
+                    <button class="faq-question m3-accordion-trigger" data-umami-event="FAQ Expand" data-umami-event-question="What apps can Morphe patch?">
+                        <span class="faq-text title-large" data-i18n="faq.q1">What apps can Morphe patch?</span>
+                        <span class="material-symbols-rounded m3-accordion-icon">keyboard_arrow_down</span>
+                    </button>
+                    <div class="faq-answer m3-accordion-content">
+                        <p data-i18n="faq.a1">You can patch any app you want. As long as you want YouTube, YouTube Music, or Reddit. We're constantly working on expanding support to more apps.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                 <div class="faq-item m3-accordion">
+                    <button class="faq-question m3-accordion-trigger" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
+                        <span class="faq-text title-large" data-i18n="faq.q2">Is Morphe safe?</span>
+                        <span class="material-symbols-rounded m3-accordion-icon">keyboard_arrow_down</span>
+                    </button>
+                    <div class="faq-answer m3-accordion-content">
+                        <p data-i18n="faq.a2">As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                  <div class="faq-item m3-accordion">
+                    <button class="faq-question m3-accordion-trigger" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
+                        <span class="faq-text title-large" data-i18n="faq.q3">Will Morphe brick my phone?</span>
+                        <span class="material-symbols-rounded m3-accordion-icon">keyboard_arrow_down</span>
+                    </button>
+                    <div class="faq-answer m3-accordion-content">
+                        <p data-i18n="faq.a3">Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                 <div class="faq-item m3-accordion">
+                    <button class="faq-question m3-accordion-trigger" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
+                        <span class="faq-text title-large" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
+                        <span class="material-symbols-rounded m3-accordion-icon">keyboard_arrow_down</span>
+                    </button>
+                    <div class="faq-answer m3-accordion-content">
+                        <p>
+                            <span data-i18n-link="analytics.description"
+                                  data-i18n-link-href="https://umami.is"
+                                  data-i18n-link-text="Umami"
+                                  data-i18n-link-attrs='{"target":"_blank","class":"m3-text-link"}'></span>
+                            <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Unified Footer Surface -->
+<footer class="m3-footer footer surface-container-highest">
+    <div class="m3-container">
+        <div class="m3-footer-grid">
             <div class="footer-brand">
-                <a href="/" class="footer-logo-link">
-                    <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="footer-logo">
-                    <span class="footer-brand-name">Morphe</span>
-                </a>
-                <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
-                   data-umami-event="DMCA Click">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
-                </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                <details class="analytics-details">
-                    <summary data-i18n="analytics.title">Analytics</summary>
-                    <span data-i18n-link="analytics.description"
-                          data-i18n-link-href="https://umami.is"
-                          data-i18n-link-text="Umami"
-                          data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
-                    <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
-                </details>
+                <img src="images/morphe_logo_with_frame.svg" alt="Morphe" class="m3-footer-logo">
+                <p class="title-medium" data-i18n="footer.description">Next generation Android app patching</p>
             </div>
-
-            <!-- Navigation columns -->
-            <div class="footer-nav">
-                <div class="footer-column">
-                    <h4 data-i18n="footer.product">Product</h4>
-                    <a href="/" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
-                    <a href="changelog" data-i18n="footer.product-changelog" data-umami-event="Footer What's New Click">What's New</a>
-                    <a href="microg" data-i18n="footer.product-microg" data-umami-event="Footer MicroG Click">Download MicroG</a>
-                    <a href="translate" data-i18n="footer.product-translate" data-umami-event="Footer Translate Click">Help translate</a>
-                    <a href="donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
-                </div>
-                <div class="footer-column">
-                    <h4 data-i18n="footer.community">Community</h4>
-                    <a href="https://github.com/MorpheApp" target="_blank" data-umami-event="Footer GitHub Click">GitHub</a>
-                    <a href="https://x.com/MorpheApp" target="_blank" data-umami-event="Footer X Click">X (Twitter)</a>
-                    <a href="https://reddit.com/r/MorpheApp" target="_blank" data-umami-event="Footer Reddit Click">Reddit</a>
-                    <a href="https://crowdin.com/project/morphe" target="_blank" data-umami-event="Footer Crowdin Click">Crowdin</a>
-                </div>
-                <div class="footer-column language-selector-container">
-                    <h4 data-i18n="footer.language">Language</h4>
-                    <div class="lang-dropdown" id="langDropdownFooter" style="width:100%;">
-                        <button class="lang-trigger" id="langTriggerFooter" type="button" style="width:100%;">
-                            <span class="material-symbols-rounded">translate</span>
-                            <span class="lang-label">English</span>
-                            <span class="material-symbols-rounded arrow">expand_more</span>
-                        </button>
-                        <div class="lang-menu" id="langMenuFooter" role="listbox" style="left:0;right:auto;min-width:100%;bottom:calc(100% + 6px);top:auto;"></div>
-                    </div>
+            
+            <div class="footer-links-group">
+                <h4 class="label-large primary-text" data-i18n="footer.product">Product</h4>
+                <a href="/" class="m3-footer-link" data-i18n="footer.product-home">Home</a>
+                <a href="changelog" class="m3-footer-link" data-i18n="footer.product-changelog">What's New</a>
+                <a href="microg" class="m3-footer-link" data-i18n="footer.product-microg">Download MicroG</a>
+                <a href="translate" class="m3-footer-link" data-i18n="footer.product-translate">Help translate</a>
+                <a href="donate" class="m3-footer-link" data-i18n="footer.support-donate">Donate</a>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="label-large primary-text" data-i18n="footer.community">Community</h4>
+                <a href="https://github.com/MorpheApp" target="_blank" class="m3-footer-link">GitHub</a>
+                <a href="https://x.com/MorpheApp" target="_blank" class="m3-footer-link">X (Twitter)</a>
+                <a href="https://reddit.com/r/MorpheApp" target="_blank" class="m3-footer-link">Reddit</a>
+                <a href="https://crowdin.com/project/morphe" target="_blank" class="m3-footer-link">Crowdin</a>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4 class="label-large primary-text" data-i18n="footer.language">Language</h4>
+                <div class="lang-dropdown" id="langDropdownFooter">
+                    <button class="lang-trigger" id="langTriggerFooter" type="button">
+                        <span class="material-symbols-rounded">translate</span>
+                        <span class="lang-label">English</span>
+                        <span class="material-symbols-rounded arrow">expand_more</span>
+                    </button>
+                    <div class="lang-menu" id="langMenuFooter" role="listbox"></div>
                 </div>
             </div>
         </div>
-
-        <!-- Bottom bar — copyright centered -->
-        <div class="footer-bottom">
-            <p class="footer-copyright">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
+        <div class="m3-footer-bottom">
+            <p class="body-small muted-text">&copy; Morphe. <span data-i18n="footer.copyright">Open source and free forever.</span></p>
         </div>
     </div>
 </footer>
 
-<!-- Scroll to Top Button -->
-<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
+<button id="scroll-to-top" class="m3-fab" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
     <span class="material-symbols-rounded">arrow_upward</span>
 </button>
 
-<script src="js/theme-manager.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/testimonials.js"></script>
-<script src="js/app-features.js"></script>
-<script src="js/hero-morph.js"></script>
-<script src="js/main.js"></script>
+<script src="js/theme-manager.js?v=2"></script>
+<script src="js/i18n.js?v=2"></script>
+<script src="js/testimonials.js?v=2"></script>
+<script src="js/app-features.js?v=2"></script>
+<script src="js/hero-morph.js?v=2"></script>
+<script src="js/main.js?v=2"></script>
+<script src="js/smooth-scroll.js?v=2"></script>
 </body>
 </html>

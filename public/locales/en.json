@@ -42,15 +42,29 @@
   },
   "microg": {
     "title": "Download",
-    "description": "MicroG is required to use YouTube Morphe and YT Music Morphe",
+    "description": "The open-source core for your modded experience",
     "download": "Download MicroG",
     "what-title": "What is MicroG?",
-    "feature1-title": "Google Services",
-    "feature1-desc": "MicroG provides Google Play Services support, enabling the use of your Google account with YouTube Morphe and YT Music Morphe.",
-    "feature2-title": "Privacy Focused",
-    "feature2-desc": "MicroG is an open-source reimplementation of Google services that respects your privacy while providing essential functionality.",
-    "feature3-title": "One-Time Install",
-    "feature3-desc": "Install MicroG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe."
+    "what-desc": "MicroG is a lightweight, open-source reimplementation of Google Play Services. It provides the essential APIs that YouTube Morphe and YT Music Morphe need to function without the privacy concerns and resource drain of official Google services.",
+    "core-pillars": "Core Technical Pillars",
+    "gmscore": "GmsCore",
+    "gmscore-desc": "The primary component that handles account authentication and push notifications (FCM), letting you sign in securely.",
+    "unifiednlp": "UnifiedNlp",
+    "unifiednlp-desc": "A privacy-first location provider that lets apps determine position without reporting data to Google.",
+    "proxy": "Service Framework Proxy",
+    "proxy-desc": "A small helper that allows apps to believe they are running on an official Google-certified device.",
+    "morphe-role": "Why Morphe needs it",
+    "auth-title": "Google Account Auth",
+    "auth-desc": "Without MicroG, modded YouTube apps cannot connect to Google's authentication servers. MicroG acts as the secure bridge.",
+    "push-title": "Cloud Messaging",
+    "push-desc": "Enables real-time push notifications for new uploads and community posts via Google's Firebase Cloud Messaging.",
+    "setup-title": "Quick Start Guide",
+    "setup-step1": "Download & Install",
+    "setup-step1-desc": "Download the latest MicroG GmsCore APK from our official releases and install it like any regular app.",
+    "setup-step2": "Sign Into Google",
+    "setup-step2-desc": "Open the MicroG Settings app on your device, tap 'Add Account', and sign in with your Google credentials.",
+    "setup-step3": "Enjoy Morphe",
+    "setup-step3-desc": "Open YouTube Morphe or YT Music Morphe. You are now ready to enjoy a fully connected experience."
   },
   "nav": {
     "home": "Home",
@@ -136,119 +150,50 @@
   },
   "testimonials": {
     "title": "What Users Say",
-    "subtitle": "Feedback from real users and definitely not made up",
+    "subtitle": "Join thousands of users improving their Android experience",
     "quote_1": {
-      "text": "I used to spend hours configuring patches manually. Now I just click 'Patch' and go make coffee. By the time I'm back, it's done. Revolutionary!",
-      "author": "Lisa Smith",
-      "role": "Coffee Lover"
+      "text": "Morphe is by far the most stable patcher I've used. The Material 3 design makes the whole experience feel premium and native.",
+      "author": "@tech_enthusiast",
+      "role": "Beta Tester"
     },
     "quote_2": {
-      "text": "Every other patcher feels like performing blindfolded brain surgery. But with Morphe it's a few clicks and my patched app is supercharged and greater than ever.",
-      "author": "Alex Chen",
+      "text": "The custom features for YouTube are a game changer. SponsorBlock and ad-blocking work flawlessly every time.",
+      "author": "@android_dev_99",
       "role": "Power User"
     },
     "quote_3": {
-      "text": "It's like Vanced, but better, and without the weird corporate party vibes.",
-      "author": "Sarah Johnson",
-      "role": "Former Vanced User"
+      "text": "I love how easy it is to manage patches. The automation handles everything, so I can just enjoy my apps without the clutter.",
+      "author": "@creative_minds",
+      "role": "UI Designer"
     },
     "quote_4": {
-      "text": "My 87 year old grandma asked me why my YouTube looks different. I showed her Morphe and now she's patching apps for her entire retirement community.",
-      "author": "David Kin",
-      "role": "Proud Grandson"
+      "text": "Finally, a patcher that respects privacy. Billions must download.",
+      "author": "@billions_must_patch",
+      "role": "Cybersecurity Student"
     },
     "quote_5": {
-      "text": "I tried other patchers and my phone caught fire. With Morphe, my phone is just perfectly modified. 10/10 would not spontaneously combust again.",
-      "author": "Ryan Martinez",
-      "role": "Fire Safety Advocate"
-    },
-    "quote_6": {
-      "text": "My cat knocked my phone off the table while Morphe was patching. The phone survived and patching still completed successfully. Cat approved.",
-      "author": "Emma Jones",
-      "role": "Cat Owner"
-    },
-    "quote_7": {
-      "text": "I showed Morphe to my tech-illiterate dad. He now patches apps better than I do. I'm questioning my entire career in IT.",
-      "author": "Tom Anderson",
-      "role": "Existential Crisis Haver"
-    },
-    "quote_8": {
-      "text": "My ex-girlfriend got back together with me after I started using Morphe. Coincidence? I think not!",
-      "author": "Mike Thompson",
-      "role": "Relationship Expert"
-    },
-    "quote_9": {
-      "text": "Morphe is the only thing saving me from 60 second unskippable ads about toothpaste.",
-      "author": "Casey Morgan",
-      "role": "Not a Dentist"
-    },
-    "quote_10": {
-      "text": "I thought Morphe was an obscure Greek god. Turns out it's better.",
-      "author": "Oliver Grant",
-      "role": "College History Major"
-    },
-    "quote_11": {
-      "text": "Before I found Morphe, I thought APK was a new K-pop band. Now I know better.",
-      "author": "Jeff Cooper",
-      "role": "Confused Uncle"
-    },
-    "quote_12": {
-      "text": "When I saw Morphe is free to download, I reacted the same way as someone offering me free food samples. I don't think, I act.",
-      "author": "Tyler James",
-      "role": "Reflex-Based Decision Maker"
-    },
-    "quote_13": {
-      "text": "Morphe fixed my WiFi, paid my taxes, and solved world hunger. Actually no, but it did patch YouTube perfectly.",
-      "author": "Sarah Williams",
-      "role": "Over-Exaggerator"
-    },
-    "quote_14": {
-      "text": "I showed Morphe to my dog and now he's better with using technology than I am.",
-      "author": "Kevin Park",
-      "role": "Former Tech Expert"
-    },
-    "quote_15": {
-      "text": "Morphe patched my apps so well that I now wonder if it can also patch my life choices.",
-      "author": "Doug Miller",
-      "role": "Self‑Upgrade Enthusiast"
-    },
-    "quote_16": {
-      "text": "I clicked the wrong button and accidentally became a millionaire. Not sure how it happened but Morphe was involved.",
-      "author": "Lucky Luke",
-      "role": "Accidental Billionaire"
-    },
-    "quote_17": {
-      "text": "Thanks to Morphe's ad-blocking feature, I finally had the mental clarity to finish my research and change the course of human history. Morphe deserves the Nobel prize more than me.",
-      "author": "Dr. Sheldon Lee",
-      "role": "Theoretical Physicist"
-    },
-    "quote_18": {
-      "text": "I showed my friends Morphe and now they think I'm some kind of underground technology wizard. I'm not correcting them.",
-      "author": "Owen Price",
-      "role": "Wizard"
-    },
-    "quote_19": {
-      "text": "Morphe blocked so many ads that my phone feels lighter. I think it lost emotional weight.",
-      "author": "Sienna Brooks",
-      "role": "Digital Minimalist"
+      "text": "The community support is amazing. If you have an issue, there's always someone willing to help on the Discord.",
+      "author": "@morphe_fan_01",
+      "role": "Community Member"
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about Morphe",
     "q1": "What apps can Morphe patch?",
-    "a1": "You can patch any app you want. As long as you want YouTube, YouTube Music, or Reddit. We're constantly working on expanding support to more apps.",
+    "a1": "YouTube, YouTube Music, and Reddit. More apps are being added — check our GitHub for the latest supported list.",
     "q2": "Is Morphe safe?",
-    "a2": "As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.",
-    "q3": "Will Morphe brick my phone?",
-    "a3": "Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.",
-    "q4": "Can I customize apps to my preference?",
-    "a4": "Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.",
+    "a2": "Yes. Morphe is fully open source — anyone can inspect the code on GitHub. It doesn't touch system files, only modifies app packages. No root required.",
+    "q3": "Will it break my phone?",
+    "a3": "No. Morphe only modifies the APK — it doesn't touch your system partition, bootloader, or anything else. Worst case, just uninstall the patched app.",
+    "q4": "Do I need root access?",
+    "a4": "No. Morphe works without root on any Android device. Just download, patch, and install.",
     "q5": "What's Morphe's privacy policy?",
+    "a5": "We collect nothing. Morphe runs entirely on your device. The website uses privacy-respecting Umami analytics — no cookies, no tracking, no personal data.",
     "q6": "Why the name Morphe?",
-    "a6": "Because \"Android App Modification And Transformation Tool\" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.",
-    "q7": "Is Morphe magic?",
-    "a7": "No. But also yes. It's advanced bytecode manipulation that feels like magic.",
+    "a6": "From the Greek word for 'form' or 'shape' — because it morphs your apps into something better. Also because calling it AAMATT was a terrible idea.",
+    "q7": "Is MicroG required?",
+    "a7": "Only if you want Google account login in patched YouTube/YT Music. Without MicroG, the apps work but you can't sign in.",
     "q8": "Can I contribute to Morphe?",
     "a8": "Yes! See the contribution guidelines in our %1. If you don't have developer skills, we always appreciate %2 to help pay the bills.",
     "a8-link1": "GitHub repos",

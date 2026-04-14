@@ -10,8 +10,9 @@
     <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/styles.css?v=11">
+    <link rel="stylesheet" href="css/dark-theme.css?v=11">
+    <link rel="stylesheet" href="css/subpage.css?v=11">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -22,30 +23,30 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
+<nav class="m3-navbar">
+    <div class="m3-nav-container surface-container-highest">
         <a href="/" class="nav-logo">
             <img src="images/morphe_wordmark_light.svg" alt="Morphe" class="nav-logo-wordmark logo-light">
             <img src="images/morphe_wordmark_dark.svg" alt="Morphe" class="nav-logo-wordmark logo-dark">
         </a>
         <div class="nav-links">
-            <a href="/" class="nav-link" data-i18n="footer.product-home" data-umami-event="Nav Home Click">Home</a>
-            <a href="translate" class="nav-link" data-i18n="footer.product-translate" data-umami-event="Nav Translate Click">Help translate</a>
-            <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
-            <a href="changelog" class="nav-link"  data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
+            <a href="/" class="m3-nav-link" data-i18n="footer.product-home" data-umami-event="Nav Home Click">Home</a>
+            <a href="translate" class="m3-nav-link" data-i18n="footer.product-translate" data-umami-event="Nav Translate Click">Help translate</a>
+            <a href="donate" class="m3-nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
+            <a href="changelog" class="m3-nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
             <div class="lang-dropdown" id="langDropdownBar">
-                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                <button class="m3-icon-btn" id="langTriggerBar" type="button" aria-label="Change language">
                     <span class="material-symbols-rounded">translate</span>
                 </button>
                 <div class="lang-menu" id="langMenuBar" role="listbox"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+            <button id="theme-toggle" class="m3-icon-btn" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+            <button class="mobile-menu-toggle m3-icon-btn" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
@@ -85,53 +86,103 @@
                 MicroG is required to use YouTube Morphe and YT Music Morphe
             </p>
             <div class="hero-buttons">
-                <a href="DOWNLOAD_URL_TEMPLATE" class="btn btn-primary" data-umami-event="Download MicroG Button Click">
+                <a href="https://github.com/microg/GmsCore/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-umami-event="Download MicroG Button Click">
                     <span class="material-symbols-rounded">download</span>
-                    <span data-i18n="microg.download">Download MicroG</span>
+                    <span data-i18n="microg.download" style="margin-left: 0.25rem;">Download MicroG</span>
                 </a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Info Section -->
-<section id="what-is-microg" class="how-it-works" style="background: var(--bg-section);">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="microg.what-title">What is MicroG?</h2>
-        </div>
+<!-- Main Content -->
+<section class="features-section" style="padding: 4rem 2rem;">
+    <div class="container" style="padding-top: 0; max-width: 900px;">
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">lock</span>
+        <!-- What is MicroG? Documentation Style -->
+        <article style="margin-bottom: 5rem;">
+            <h2 class="feature-title" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--md-sys-color-primary);" data-i18n="microg.what-title">What is MicroG?</h2>
+            <p class="feature-description" style="font-size: 1.1rem; line-height: 1.8;" data-i18n="microg.what-desc">
+                MicroG is a lightweight, open-source reimplementation of Google Play Services. It provides the essential APIs that YouTube Morphe and YT Music Morphe need to function without the privacy concerns and resource drain of official Google services.
+            </p>
+
+            <h3 class="feature-title" style="font-size: 1.25rem; margin-top: 3.5rem; margin-bottom: 1.5rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--md-sys-color-on-surface-variant);" data-i18n="microg.core-pillars">Core Technical Pillars</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <span class="material-symbols-rounded tech-icon">dataset</span>
+                        <span class="tech-title" data-i18n="microg.gmscore">GmsCore</span>
+                    </div>
+                    <p class="tech-desc" data-i18n="microg.gmscore-desc">The primary component that handles account authentication and push notifications (FCM), letting you sign in securely.</p>
                 </div>
-                <h3 class="feature-title" data-i18n="microg.feature1-title">Google Services</h3>
-                <p class="feature-description" data-i18n="microg.feature1-desc">
-                    MicroG provides Google Play Services support, enabling the use of your Google account with YouTube Morphe and YT Music Morphe.
-                </p>
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <span class="material-symbols-rounded tech-icon">location_on</span>
+                        <span class="tech-title" data-i18n="microg.unifiednlp">UnifiedNlp</span>
+                    </div>
+                    <p class="tech-desc" data-i18n="microg.unifiednlp-desc">A privacy-first location provider that lets apps determine position without reporting data to Google.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <span class="material-symbols-rounded tech-icon">account_tree</span>
+                        <span class="tech-title" data-i18n="microg.proxy">Service Framework Proxy</span>
+                    </div>
+                    <p class="tech-desc" data-i18n="microg.proxy-desc">A small helper that allows apps to believe they are running on an official Google-certified device.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Why Morphe needs it - Flat List -->
+        <article style="margin-bottom: 6rem; padding: 2.5rem; border-radius: 24px; background: var(--md-sys-color-surface-container-lowest); border: 1px solid var(--md-sys-color-outline-variant);">
+            <h3 class="feature-title" style="font-size: 1.5rem; margin-bottom: 2.5rem;" data-i18n="microg.morphe-role">Why Morphe needs it</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+                <div style="display: flex; gap: 1.5rem;">
+                    <span class="material-symbols-rounded" style="color: var(--md-sys-color-primary); font-size: 28px;">login</span>
+                    <div>
+                        <h4 class="tech-title" style="margin-bottom: 0.5rem;" data-i18n="microg.auth-title">Google Account Auth</h4>
+                        <p class="tech-desc" data-i18n="microg.auth-desc">Without MicroG, modded YouTube apps cannot connect to Google's authentication servers. MicroG acts as the secure bridge.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1.5rem;">
+                    <span class="material-symbols-rounded" style="color: var(--md-sys-color-primary); font-size: 28px;">notifications_active</span>
+                    <div>
+                        <h4 class="tech-title" style="margin-bottom: 0.5rem;" data-i18n="microg.push-title">Cloud Messaging</h4>
+                        <p class="tech-desc" data-i18n="microg.push-desc">Enables real-time push notifications for new uploads and community posts via Google's Firebase Cloud Messaging.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Setup Guide -->
+        <article class="setup-guide" style="border-top: 1px solid var(--md-sys-color-outline-variant); padding-top: 4rem;">
+            <h2 class="feature-title" style="font-size: 1.75rem; margin-bottom: 3.5rem;" data-i18n="microg.setup-title">Quick Start Guide</h2>
+            
+            <div class="setup-step" style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                <div class="step-number" style="width: 32px; height: 32px; font-size: 1rem; border-radius: 8px;">1</div>
+                <div class="step-content">
+                    <h3 class="step-title" style="font-size: 1.15rem;" data-i18n="microg.setup-step1">Download & Install</h3>
+                    <p class="step-desc" style="font-size: 0.95rem;" data-i18n="microg.setup-step1-desc">Download the latest MicroG GmsCore APK from our official releases and install it like any regular app.</p>
+                </div>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">shield</span>
+            <div class="setup-step" style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                <div class="step-number" style="width: 32px; height: 32px; font-size: 1rem; border-radius: 8px;">2</div>
+                <div class="step-content">
+                    <h3 class="step-title" style="font-size: 1.15rem;" data-i18n="microg.setup-step2">Sign Into Google</h3>
+                    <p class="step-desc" style="font-size: 0.95rem;" data-i18n="microg.setup-step2-desc">Open the MicroG Settings app on your device, tap 'Add Account', and sign in with your Google credentials.</p>
                 </div>
-                <h3 class="feature-title" data-i18n="microg.feature2-title">Privacy Focused</h3>
-                <p class="feature-description" data-i18n="microg.feature2-desc">
-                    MicroG is an open-source reimplementation of Google services that respects your privacy while providing essential functionality.
-                </p>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">schedule</span>
+            <div class="setup-step" style="display: flex; gap: 1.5rem;">
+                <div class="step-number" style="width: 32px; height: 32px; font-size: 1rem; border-radius: 8px;">3</div>
+                <div class="step-content">
+                    <h3 class="step-title" style="font-size: 1.15rem;" data-i18n="microg.setup-step3">Enjoy Morphe</h3>
+                    <p class="step-desc" style="font-size: 0.95rem;" data-i18n="microg.setup-step3-desc">Open YouTube Morphe or YT Music Morphe. You are now ready to enjoy a fully connected experience.</p>
                 </div>
-                <h3 class="feature-title" data-i18n="microg.feature3-title">One-Time Install</h3>
-                <p class="feature-description" data-i18n="microg.feature3-desc">
-                    Install MicroG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe.
-                </p>
             </div>
-        </div>
+        </article>
+
     </div>
 </section>
 
@@ -147,22 +198,6 @@
                     <span class="footer-brand-name">Morphe</span>
                 </a>
                 <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
-                   data-umami-event="DMCA Click">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
-                </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                <details class="analytics-details">
-                    <summary data-i18n="analytics.title">Analytics</summary>
-                    <span data-i18n-link="analytics.description"
-                          data-i18n-link-href="https://umami.is"
-                          data-i18n-link-text="Umami"
-                          data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
-                    <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
-                </details>
             </div>
 
             <!-- Navigation columns -->
@@ -206,5 +241,6 @@
 <script src="js/i18n.js"></script>
 <script src="js/theme-manager.js"></script>
 <script src="js/main.js"></script>
+<script src="js/smooth-scroll.js"></script>
 </body>
 </html>

@@ -350,7 +350,7 @@
             menu.appendChild(scroll);
 
             // Determine if this dropdown is inside the footer (needs fixed positioning to escape overflow:hidden)
-            const isFooterDropdown = trigger.closest('.footer') !== null;
+            const isFooterDropdown = trigger.closest('.footer') !== null || trigger.closest('.m3-footer') !== null;
 
             if (isFooterDropdown) {
                 // Use fixed positioning so the menu escapes any overflow:hidden ancestors
