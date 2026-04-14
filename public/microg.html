@@ -36,12 +36,7 @@
             <a href="changelog" class="m3-nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
-            <div class="lang-dropdown" id="langDropdownBar">
-                <button class="m3-icon-btn" id="langTriggerBar" type="button" aria-label="Change language">
-                    <span class="material-symbols-rounded">translate</span>
-                </button>
-                <div class="lang-menu" id="langMenuBar" role="listbox"></div>
-            </div>
+            <button class="m3-icon-btn" id="langTriggerBar" type="button" aria-label="Change language"><span class="material-symbols-rounded">translate</span></button>
             <button id="theme-toggle" class="m3-icon-btn" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
@@ -219,14 +214,9 @@
                 </div>
                 <div class="footer-column language-selector-container">
                     <h4 data-i18n="footer.language">Language</h4>
-                    <div class="lang-dropdown" id="langDropdownFooter" style="width:100%;">
-                        <button class="lang-trigger" id="langTriggerFooter" type="button" style="width:100%;">
+                    <button class="lang-trigger" id="langTriggerFooter" type="button" style="width:100%;">
                             <span class="material-symbols-rounded">translate</span>
-                            <span class="lang-label">English</span>
-                            <span class="material-symbols-rounded arrow">expand_more</span>
-                        </button>
-                        <div class="lang-menu" id="langMenuFooter" role="listbox" style="left:0;right:auto;min-width:100%;bottom:calc(100% + 6px);top:auto;"></div>
-                    </div>
+                            <span class="lang-label">English</span></button>
                 </div>
             </div>
         </div>
@@ -242,5 +232,38 @@
 <script src="js/theme-manager.js"></script>
 <script src="js/main.js"></script>
 <script src="js/smooth-scroll.js"></script>
+
+
+</div>
+
+
+
+<!-- Language Picker Modal -->
+<div id="langPickerModal" class="m3-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="langPickerTitle">
+    <div class="m3-modal-dialog surface-container-highest">
+        <div class="grain-overlay"></div>
+        <div class="modal-header">
+            <h2 class="headline-medium" id="langPickerTitle" data-i18n="footer.language">Language</h2>
+            <button class="m3-icon-btn close-modal" id="closeLangPicker" aria-label="Close language picker">
+                <span class="material-symbols-rounded">close</span>
+            </button>
+        </div>
+        <div class="m3-modal-content">
+            <div class="m3-lang-grid" id="modalLangGrid"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Cinema Filters -->
+<svg style="display: none;">
+    <filter id="m3-grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+    </filter>
+</svg>
 </body>
 </html>
+
+
+
+

@@ -317,113 +317,105 @@
 
         // Close all open lang menus
         closeAllMenus() {
-            document.querySelectorAll('.lang-menu').forEach(m => m.classList.remove('open'));
+            const modal = document.getElementById('langPickerModal');
+            if (modal) modal.classList.remove('open');
+            
+            // Remove active states from all triggers
+            document.querySelectorAll('.lang-trigger, .m3-icon-btn').forEach(t => {
+                t.classList.remove('modal-open');
+            });
             document.querySelectorAll('.lang-trigger, .lang-trigger-compact').forEach(t => t.classList.remove('open'));
         }
 
-        // Build and wire up a language dropdown pair
-        setupDropdown(triggerId, menuId) {
-            const trigger = document.getElementById(triggerId);
-            const menu = document.getElementById(menuId);
-            if (!trigger || !menu) return;
+        // Build the language picker grid inside the modal
+        buildLangPicker() {
+            const grid = document.getElementById('modalLangGrid');
+            if (!grid) return;
 
-            const scroll = document.createElement('div');
-            scroll.className = 'lang-menu-scroll';
+            grid.innerHTML = ''; // Clear existing
 
-            SUPPORTED_LOCALES.forEach(locale => {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = 'lang-menu-item' + (locale.code === this.currentLang ? ' selected' : '');
-                btn.setAttribute('data-code', locale.code);
-                btn.innerHTML =
-                    '<span class="material-symbols-rounded check-mark">check</span>' +
-                    '<span class="lang-name">' + locale.name + '</span>';
-                btn.addEventListener('click', (e) => {
+            SUPPORTED_LOCALES.forEach((locale, index) => {
+                const card = document.createElement('button');
+                card.type = 'button';
+                card.className = 'm3-lang-card';
+                if (locale.code === this.currentLang) card.classList.add('selected');
+                
+                card.setAttribute('data-code', locale.code);
+                card.style.setProperty('--i', index);
+                
+                card.innerHTML = `
+                    <span class="material-symbols-rounded check-mark">check</span>
+                    <span class="lang-name">${locale.name}</span>
+                `;
+
+
+                card.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    this.closeAllMenus();
-                    this.setLanguage(locale.code);
+                    
+                    // Visual feedback: select the card immediately
+                    grid.querySelectorAll('.m3-lang-card').forEach(c => c.classList.remove('selected'));
+                    card.classList.add('selected');
+
+                    // Tactical delay to let the user see the selection "pop"
+                    setTimeout(() => {
+                        this.setLanguage(locale.code);
+                        this.closeAllMenus();
+                    }, 300);
                 });
-                scroll.appendChild(btn);
+
+
+                grid.appendChild(card);
             });
-
-            menu.appendChild(scroll);
-
-            // Determine if this dropdown is inside the footer (needs fixed positioning to escape overflow:hidden)
-            const isFooterDropdown = trigger.closest('.footer') !== null || trigger.closest('.m3-footer') !== null;
-
-            if (isFooterDropdown) {
-                // Use fixed positioning so the menu escapes any overflow:hidden ancestors
-                menu.style.position = 'fixed';
-                menu.style.top = 'auto';
-                menu.style.bottom = 'auto';
-                menu.style.left = 'auto';
-                menu.style.right = 'auto';
-                menu.style.minWidth = '200px';
-            }
-
-            const positionMenu = () => {
-                if (!isFooterDropdown) return;
-                const rect = trigger.getBoundingClientRect();
-                const menuHeight = Math.min(320, SUPPORTED_LOCALES.length * 37 + 8);
-                const spaceAbove = rect.top;
-                const spaceBelow = window.innerHeight - rect.bottom;
-
-                // Prefer opening upward since trigger is at the bottom of the page
-                if (spaceAbove > menuHeight || spaceAbove > spaceBelow) {
-                    menu.style.bottom = (window.innerHeight - rect.top + 6) + 'px';
-                    menu.style.top = 'auto';
-                } else {
-                    menu.style.top = (rect.bottom + 6) + 'px';
-                    menu.style.bottom = 'auto';
-                }
-                // Align left edge with trigger, but keep inside viewport
-                let left = rect.left;
-                const menuWidth = 200;
-                if (left + menuWidth > window.innerWidth - 8) {
-                    left = window.innerWidth - menuWidth - 8;
-                }
-                menu.style.left = left + 'px';
-            };
-
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = menu.classList.contains('open');
-                this.closeAllMenus();
-                if (!isOpen) {
-                    positionMenu();
-                    menu.classList.add('open');
-                    trigger.classList.add('open');
-                }
-            });
-
-            if (isFooterDropdown) {
-                window.addEventListener('resize', () => {
-                    if (menu.classList.contains('open')) positionMenu();
-                });
-                window.addEventListener('scroll', () => {
-                    if (menu.classList.contains('open')) positionMenu();
-                }, { passive: true });
-            }
         }
 
         setupLanguageSelector() {
             if (!this.configLoaded || SUPPORTED_LOCALES.length === 0) {
-                console.error('Cannot setup language dropdowns: configuration not loaded');
+                console.error('Cannot setup language picker: configuration not loaded');
                 return;
             }
 
-            // Wire up navbar compact button
-            this.setupDropdown('langTriggerBar', 'langMenuBar');
-            // Wire up footer full trigger
-            this.setupDropdown('langTriggerFooter', 'langMenuFooter');
+            const modal = document.getElementById('langPickerModal');
+            const triggers = [
+                document.getElementById('langTriggerBar'),
+                document.getElementById('langTriggerFooter')
+            ];
+            const closeBtn = document.getElementById('closeLangPicker');
 
-            // Close menus when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.lang-dropdown')) {
-                    this.closeAllMenus();
-                }
+            // Build the grid once
+            this.buildLangPicker();
+
+            // Setup triggers
+            triggers.forEach(trigger => {
+                if (!trigger) return;
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Cleanup any existing active states first
+                    triggers.forEach(t => t?.classList.remove('modal-open'));
+                    
+                    // Activate this trigger
+                    trigger.classList.add('modal-open');
+                    modal.classList.add('open');
+                });
+            });
+
+
+            // Close logic
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => this.closeAllMenus());
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) this.closeAllMenus();
+                });
+            }
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') this.closeAllMenus();
             });
         }
 
