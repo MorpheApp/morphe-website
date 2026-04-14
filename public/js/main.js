@@ -76,34 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Smooth scroll for anchor links
-document.addEventListener('DOMContentLoaded', function() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-
-            // Skip if it's just "#"
-            if (href === '#') {
-                e.preventDefault();
-                return;
-            }
-
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                const navHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = target.offsetTop - navHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
+// Note: Smooth scroll is now handled by Lenis in smooth-scroll.js for a more premium experience.
+// Conflicts with native scrollTo have been removed.
 
 // Navbar scroll effect
 document.addEventListener('DOMContentLoaded', function() {
@@ -120,15 +94,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Active nav links
+// Active nav links and Scroll Progress
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.m3-nav-link, .nav-link');
     const navbar = document.querySelector('.m3-navbar');
+    const progressBar = document.getElementById('scrollProgress');
 
     if (!navbar) return;
 
     window.addEventListener('scroll', function() {
+        // Handle Active Links
         let current = '';
         const navHeight = navbar.offsetHeight;
 
@@ -145,6 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             }
         });
+
+        // Handle Progress Bar
+        if (progressBar) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+        }
     });
 });
 

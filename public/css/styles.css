@@ -324,6 +324,26 @@ a { text-decoration: none; color: inherit; }
     -webkit-backdrop-filter: blur(20px);
     /* In dark mode, this background is overridden */
     background-color: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 90%, transparent);
+    overflow: hidden; /* For progress bar */
+    position: relative;
+}
+
+.scroll-progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    pointer-events: none;
+    z-index: 101;
+}
+.scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
+    border-radius: 0 var(--shape-full) var(--shape-full) 0;
+    transition: width 0.1s ease-out;
 }
 
 .nav-brand { display: flex; align-items: center; gap: 16px; transition: transform 0.3s ease; }

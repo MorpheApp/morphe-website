@@ -8,15 +8,16 @@
     script.src = 'https://unpkg.com/lenis@1.1.18/dist/lenis.min.js';
     script.onload = function() {
         var lenis = new Lenis({
-            duration: 1.2,
+            duration: 1.4,
             easing: function(t) {
                 return Math.min(1, 1.001 - Math.pow(2, -10 * t));
             },
             orientation: 'vertical',
             gestureOrientation: 'vertical',
             smoothWheel: true,
-            wheelMultiplier: 1,
-            touchMultiplier: 2
+            wheelMultiplier: 1.1,
+            touchMultiplier: 2,
+            syncTouch: true
         });
 
         function raf(time) {
@@ -25,16 +26,21 @@
         }
         requestAnimationFrame(raf);
 
-        // Make lenis available globally for anchor link handling
+        // Make lenis available globally
         window.__lenis = lenis;
 
         // Handle anchor clicks to use Lenis smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
-                var target = document.querySelector(this.getAttribute('href'));
+                var href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                var target = document.querySelector(href);
                 if (target) {
                     e.preventDefault();
-                    lenis.scrollTo(target, { offset: -100 });
+                    var nav = document.querySelector('.m3-navbar');
+                    var offset = nav ? nav.offsetHeight : 0;
+                    lenis.scrollTo(target, { offset: -offset });
                 }
             });
         });
