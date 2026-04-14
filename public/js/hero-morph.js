@@ -7,16 +7,19 @@
         'hero.title-highlight-youtube',
         'hero.title-highlight-ytmusic',
         'hero.title-highlight-reddit',
-        'hero.title-highlight', // final resting state
+        'hero.title-highlight',
     ];
 
-    const HOLD_MS            = 2600; // ms each label is fully visible
-    const MORPH_MS           = 700;  // blur-morph transition duration
-    const PAUSE_BEFORE_FIRST = 1800; // initial pause before first swap
+    const HOLD_MS            = 2600;
+    const CROSSFADE_MS       = 600; // must match CSS transition duration
+    const PAUSE_BEFORE_FIRST = 1800;
 
     let currentIndex = 0;
     let timer        = null;
-    let spanEl       = null;
+    let wrapEl       = null;
+    let current      = null; // fully visible layer
+    let next         = null; // hidden incoming layer
+    let sizer        = null; // invisible width-keeper
     let running      = false;
 
     function t(key) {
@@ -31,48 +34,92 @@
         return t(APP_KEYS[index]) || t('hero.title-highlight') || 'Android Experience';
     }
 
-    function morphTo(index) {
-        if (!spanEl) return;
+    function buildDom() {
+        const original = document.querySelector('.gradient-text[data-i18n="hero.title-highlight"]');
+        if (!original) return false;
 
-        spanEl.classList.add('morph-out');
+        wrapEl = document.createElement('span');
+        wrapEl.className = 'hero-morph-wrap';
 
-        setTimeout(() => {
-            currentIndex = index;
-            spanEl.textContent = getLabel(index);
-            spanEl.classList.replace('morph-out', 'morph-in');
+        // Keeps the wrapper at the correct width for the active label
+        sizer = document.createElement('span');
+        sizer.className = 'hero-morph-sizer';
+        sizer.setAttribute('aria-hidden', 'true');
+        sizer.textContent = original.textContent;
 
-            requestAnimationFrame(() => requestAnimationFrame(() => {
-                spanEl.classList.remove('morph-in');
-            }));
+        current = document.createElement('span');
+        current.className = 'hero-morph-layer visible';
+        current.setAttribute('aria-live', 'polite');
+        current.textContent = original.textContent;
 
-            const next = index + 1;
-            if (next < APP_KEYS.length) {
-                timer = setTimeout(() => morphTo(next), HOLD_MS);
-            } else {
-                running = false;
-            }
-        }, MORPH_MS);
+        next = document.createElement('span');
+        next.className = 'hero-morph-layer hidden';
+        next.setAttribute('aria-hidden', 'true');
+
+        wrapEl.appendChild(sizer);
+        wrapEl.appendChild(current);
+        wrapEl.appendChild(next);
+        original.replaceWith(wrapEl);
+        return true;
+    }
+
+    function crossfadeTo(index) {
+        if (!wrapEl) return;
+
+        currentIndex = index;
+        const label  = getLabel(index);
+
+        sizer.textContent = label;
+        next.textContent = label;
+        next.removeAttribute('aria-hidden');
+
+        // Two rAFs: first commits textContent paint, second starts transitions
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            current.classList.replace('visible', 'hidden');
+            next.classList.replace('hidden', 'visible');
+
+            setTimeout(() => {
+                // Swap refs so "current" always points to the visible layer
+                [current, next] = [next, current];
+
+                // Reset the now-invisible layer instantly (no transition)
+                next.style.transition = 'none';
+                next.classList.replace('visible', 'hidden');
+                next.textContent = '';
+                next.setAttribute('aria-hidden', 'true');
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    next.style.transition = '';
+                }));
+
+                const nextIndex = index + 1;
+                if (nextIndex < APP_KEYS.length) {
+                    timer = setTimeout(() => crossfadeTo(nextIndex), HOLD_MS);
+                } else {
+                    // Animation done — remove the unused next layer to clean up DOM
+                    next.remove();
+                    next = null;
+                    running = false;
+                }
+            }, CROSSFADE_MS + 60);
+        }));
     }
 
     function init() {
         if (running) return;
-        spanEl = document.querySelector('.gradient-text[data-i18n="hero.title-highlight"]');
-        if (!spanEl) return;
-        spanEl.classList.add('hero-morph-text');
+        if (!buildDom()) return;
         running = true;
-        timer = setTimeout(() => morphTo(0), PAUSE_BEFORE_FIRST);
+        timer = setTimeout(() => crossfadeTo(0), PAUSE_BEFORE_FIRST);
     }
 
     function stop() {
         running = false;
         clearTimeout(timer);
-        spanEl?.classList.remove('hero-morph-text', 'morph-out', 'morph-in');
     }
 
     window.addEventListener('i18nReady', init);
 
     window.addEventListener('i18nLanguageChanged', () => {
-        if (spanEl) spanEl.textContent = getLabel(currentIndex);
+        if (current) current.textContent = getLabel(currentIndex);
     });
 
     // Fallback if i18nReady already fired before this script loaded
@@ -85,8 +132,10 @@
         if (document.hidden) {
             clearTimeout(timer);
         } else if (running) {
-            const next = currentIndex + 1;
-            if (next < APP_KEYS.length) timer = setTimeout(() => morphTo(next), HOLD_MS);
+            const nextIndex = currentIndex + 1;
+            if (nextIndex < APP_KEYS.length) {
+                timer = setTimeout(() => crossfadeTo(nextIndex), HOLD_MS);
+            }
         }
     });
 

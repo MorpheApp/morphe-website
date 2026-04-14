@@ -515,22 +515,56 @@ body {
 
 .hero-title-highlight-line {
     display: block;
-    min-height: 1.15em; /* matches line-height of parent */
+    min-height: 1.35em;
 }
 
-/* Hero morphing animation */
-.hero-morph-text {
-    display: inline;
+.hero-morph-wrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: baseline;
+    padding-bottom: 0.2em;
+    margin-bottom: -0.2em;
+    overflow: visible;
+}
+
+.hero-morph-sizer {
+    display: inline-block;
+    white-space: nowrap;
+    visibility: hidden;
+    pointer-events: none;
+    padding-bottom: 0.2em;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-morph-layer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding-bottom: 0.2em;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     transition:
-        filter  700ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 700ms cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: filter, opacity;
+        opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        filter  600ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, filter;
 }
 
-.hero-morph-text.morph-out,
-.hero-morph-text.morph-in {
-    filter:  blur(14px);
+.hero-morph-layer.visible {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.hero-morph-layer.hidden {
     opacity: 0;
+    filter: blur(12px);
+    pointer-events: none;
 }
 
 .gradient-text {
