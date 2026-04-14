@@ -59,15 +59,15 @@
     "faq": "FAQ"
   },
   "hero": {
-    "title": "Przemień swoje",
-    "title-highlight": "doświadczenie z Androidem",
-    "description": "Twórcy najlepszych modyfikacji YouTube przedstawiają Morphe - potężne narzędzie do modyfikowania aplikacji, które daje Ci pełną kontrolę",
+    "title": "Odmień",
+    "title-highlight": "swojego Androida",
+    "title-highlight-youtube": "swojego YouTube'a",
+    "title-highlight-ytmusic": "swoje YT Music",
+    "title-highlight-reddit": "swojego Reddita",
+    "description": "Twórcy najlepszych modyfikacji YouTube przedstawiają Morphe - potężne narzędzie, które daje Ci absolutną kontrolę nad Twoimi aplikacjami",
     "download": "Pobierz Morphe",
     "learn-more": "Dowiedz się więcej",
-    "social-label": "Dołącz do społeczności",
-    "title-highlight-youtube": "YouTube",
-    "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "social-label": "Dołącz do społeczności"
   },
   "app-features": {
     "title": "Funkcje aplikacji",
