@@ -1,0 +1,325 @@
+{
+  "footer": {
+    "product-home": "首頁",
+    "product-microg": "下載 MicroG",
+    "support-donate": "贊助",
+    "product-changelog": "更新內容",
+    "description": "新一代 Android 應用程式修補工具",
+    "product": "產品",
+    "product-translate": "協助翻譯",
+    "community": "社群",
+    "language": "語言",
+    "copyright": "永久開源且免費。"
+  },
+  "translate": {
+    "title": "協助我們翻譯",
+    "description": "透過將 Morphe 翻譯成您的語言，讓全球數百萬使用者都能使用",
+    "cta": "開始翻譯於",
+    "how-title": "如何貢獻",
+    "step1-title": "1. 註冊 Crowdin",
+    "step1-desc": "建立免費的 Crowdin 帳戶。只需一分鐘，即可存取 Morphe 和其他開源專案的翻譯。",
+    "step2-title": "2. 選擇您的語言",
+    "step2-desc": "選擇您想要翻譯的語言。您可以貢獻新翻譯或改善現有翻譯。",
+    "step3-title": "3. 開始翻譯",
+    "step3-desc": "使用 Crowdin 直觀的介面翻譯字串。每一份貢獻都能讓更多使用者使用 Morphe。",
+    "step4-title": "4. 看到您的影響力",
+    "step4-desc": "您的翻譯將被審核並包含在未來的 Morphe 版本中，協助世界各地的使用者。",
+    "why-title": "為什麼要翻譯？",
+    "why-subtitle": "每一個翻譯的字串都讓 Morphe 更接近需要它的人",
+    "why-1": "幫助您的社群",
+    "why-1-desc": "讓 Morphe 以您的母語提供，讓您身邊的每個人都能無障礙地享用它。",
+    "why-2": "讓 Morphe 全球化",
+    "why-2-desc": "透過將 Morphe 帶到新語言和地區，觸及全球數百萬使用者。",
+    "why-3": "為開源做貢獻",
+    "why-3-desc": "翻譯是一種有意義的開源貢獻形式——不需要程式設計技能。",
+    "why-4": "查看您的影響力",
+    "why-4-desc": "您的翻譯經過審核後將包含在實際的 Morphe 版本中，觸及世界各地的使用者。"
+  },
+  "analytics": {
+    "title": "分析",
+    "description": "本網站使用 %s 和 Google Analytics 4：無 Cookie、無廣告、無行為分析，資料不會出售或分享。",
+    "disclaimer": "Morphe 不會在任何已修補的應用程式中加入分析或資料收集。"
+  },
+  "microg": {
+    "title": "下載",
+    "description": "使用 YouTube Morphe 和 YT Music Morphe 需要 MicroG",
+    "download": "下載 MicroG",
+    "what-title": "什麼是 MicroG？",
+    "feature1-title": "Google 服務",
+    "feature1-desc": "MicroG 提供 Google Play 服務支援，讓您能夠在 YouTube Morphe 和 YT Music Morphe 中使用 Google 帳戶。",
+    "feature2-title": "注重隱私",
+    "feature2-desc": "MicroG 是 Google 服務的開源重新實作，在提供基本功能的同時尊重您的隱私。",
+    "feature3-title": "一次性安裝",
+    "feature3-desc": "安裝一次 MicroG 即可在所有 Morphe 應用程式中使用。更新 YouTube Morphe 和 YT Music Morphe 時無需重新安裝。"
+  },
+  "nav": {
+    "home": "首頁",
+    "how-it-works": "運作原理",
+    "testimonials": "使用者評價",
+    "faq": "常見問題"
+  },
+  "hero": {
+    "title": "改造您的",
+    "title-highlight": "Android 體驗",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit",
+    "description": "由打造最強改版 YouTube 應用程式的開發團隊，為您獻上 Morphe — 讓您完全掌控的強大應用程式修改工具",
+    "download": "下載 Morphe",
+    "learn-more": "瞭解更多",
+    "social-label": "加入社群"
+  },
+  "app-features": {
+    "title": "應用程式功能",
+    "subtitle": "為您最喜愛的應用程式提供強大的修補",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "具有廣告封鎖、SponsorBlock 支援、增強播放器控制項和進階隱私改善的客製化 YouTube 體驗",
+    "ad-blocking": "廣告封鎖",
+    "yt-ad-blocking-desc": "從首頁動態和影片播放器中移除所有廣告，實現不間斷觀看。",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "自動跳過贊助片段和影片的其他非必要部分。",
+    "return-dislikes": "恢復不喜歡數",
+    "return-dislikes-desc": "顯示社群提供的不喜歡數，協助您做出更好的觀看決定。",
+    "ui-customization": "介面自訂",
+    "yt-ui-desc": "隱藏短片、調整導覽列並移除不需要的版面元素。",
+    "player-enhancements": "播放器增強",
+    "player-desc": "自訂播放速度、預設影片畫質和改善的進度條行為。",
+    "swipe-controls": "滑動控制",
+    "swipe-desc": "使用直觀的觸控手勢調整亮度和音量。",
+    "themes": "主題自訂",
+    "yt-themes-desc": "純黑、Material You 和其他主題樣式。",
+    "privacy": "隱私改善",
+    "yt-privacy-desc": "透過移除追蹤參數來清理分享連結。",
+    "ytmusic-desc": "具有廣告封鎖、可自訂主題、音訊改善和更簡潔介面的增強 YouTube Music 體驗",
+    "ytm-ad-desc": "移除音樂播放期間的所有廣告。",
+    "audio-quality": "音訊品質",
+    "audio-desc": "停用動態範圍壓縮並優先使用原始音軌。",
+    "ytm-themes-desc": "自訂深色和淺色背景，包括 Material You 樣式。",
+    "interface-cleanup": "介面清理",
+    "ytm-ui-desc": "隱藏不必要的按鈕和 UI 元件，提供更簡潔的體驗。",
+    "repeat": "永久重複",
+    "repeat-desc": "改善的重複行為，跨工作階段持續保持。",
+    "link-sanitization": "連結淨化",
+    "ytm-link-desc": "移除分享連結中的追蹤參數。",
+    "custom-branding": "自訂品牌",
+    "branding-desc": "可選的應用程式名稱和圖示自訂。",
+    "nav-bar": "導覽列",
+    "nav-bar-desc": "隱藏或自訂底部導覽列及其標籤以減少視覺雜亂。",
+    "reddit-desc": "具有廣告封鎖、介面自訂、直接連結處理和改善隱私的精簡 Reddit 體驗",
+    "reddit-ad-desc": "移除動態內廣告，提供更簡潔的瀏覽體驗。",
+    "reddit-ui-desc": "隱藏導覽按鈕、側邊欄元素和推薦區塊。",
+    "auto-dismiss": "自動關閉對話框",
+    "dismiss-desc": "自動移除重複出現的社群警告彈出視窗。",
+    "direct-links": "直接外部連結",
+    "direct-links-desc": "無需重新導向追蹤即可開啟連結，直接前往目的地。",
+    "reddit-link-desc": "移除分享 URL 中的追蹤參數以提升隱私保護。",
+    "clean-nav": "更簡潔的導覽",
+    "clean-nav-desc": "簡化的版面，減少干擾，專注瀏覽。",
+    "screenshot": "截圖自由",
+    "screenshot-desc": "停用在應用程式內截圖時出現的彈出視窗。",
+    "spoof-signature": "通知修復",
+    "spoof-signature-desc": "偽造應用程式簽章以恢復修補後可能損壞的推送通知。"
+  },
+  "how-it-works": {
+    "title": "Morphe 運作原理",
+    "subtitle": "簡單、強大、為所有人打造",
+    "step1-title": "1. 下載 Morphe",
+    "step1-desc": "下載最新版本的 Morphe 並安裝到您的 Android 裝置上。",
+    "step2-title": "2. 選擇應用程式",
+    "step2-desc": "請選擇您想要修改的應用程式。",
+    "step3-title": "3. 套用修補",
+    "step3-desc": "Morphe 將自動為您選擇的應用程式套用修補。",
+    "step4-title": "4. 安裝並享受",
+    "step4-desc": "安裝已修補的應用程式，享受您的客製化體驗。"
+  },
+  "testimonials": {
+    "title": "使用者評價",
+    "subtitle": "真實使用者的回饋，絕非虛構",
+    "quote_1": {
+      "text": "我以前需要花幾個小時手動設定修補。現在我只需點擊「修補」，去喝杯咖啡。等我回來，一切已完成。革命性！",
+      "author": "Lisa Smith",
+      "role": "咖啡愛好者"
+    },
+    "quote_2": {
+      "text": "其他修補工具就像蒙眼做腦部手術。但用 Morphe，只要點幾下，我的應用程式就被增強得比以往更強大。",
+      "author": "Alex Chen",
+      "role": "進階使用者"
+    },
+    "quote_3": {
+      "text": "它就像 Vanced，但更好，沒有那股怪怪的商業氣息。",
+      "author": "Sarah Johnson",
+      "role": "前 Vanced 使用者"
+    },
+    "quote_4": {
+      "text": "我 87 歲的奶奶問我為什麼我的 YouTube 看起來不一樣。我給她展示了 Morphe，現在她為整間安養中心修補應用程式。",
+      "author": "David Kin",
+      "role": "驕傲的孫子"
+    },
+    "quote_5": {
+      "text": "我嘗試過其他修補工具，結果手機著火了。用 Morphe，我的手機被完美修改。10/10——不會再自燃。",
+      "author": "Ryan Martinez",
+      "role": "消防安全倡導者"
+    },
+    "quote_6": {
+      "text": "我的貓在 Morphe 修補時把手機從桌上推下去。手機倖存，修補仍成功完成。貓認可。",
+      "author": "Emma Jones",
+      "role": "貓主人"
+    },
+    "quote_7": {
+      "text": "我給對科技一竅不通的爸爸展示了 Morphe。現在他修補應用程式比我還好。我開始懷疑自己的 IT 職業生涯。",
+      "author": "Tom Anderson",
+      "role": "存在危機者"
+    },
+    "quote_8": {
+      "text": "自從我開始使用 Morphe，我的前女友又回到了我身邊。巧合？我覺得不是！",
+      "author": "Mike Thompson",
+      "role": "戀愛專家"
+    },
+    "quote_9": {
+      "text": "Morphe 是唯一能讓我避免 60 秒無法跳過的牙膏廣告的東西。",
+      "author": "Casey Morgan",
+      "role": "非牙醫"
+    },
+    "quote_10": {
+      "text": "我以為 Morphe 是一個不為人知的希臘神。結果它更好。",
+      "author": "Oliver Grant",
+      "role": "歷史系學生"
+    },
+    "quote_11": {
+      "text": "在找到 Morphe 之前，我以為 APK 是一個新的 K-pop 團體。現在我知道了。",
+      "author": "Jeff Cooper",
+      "role": "困惑的叔叔"
+    },
+    "quote_12": {
+      "text": "當我看到 Morphe 可以免費下載時，我的反應就像有人給我免費食物樣品。我不思考，我行動。",
+      "author": "Tyler James",
+      "role": "反射型決策者"
+    },
+    "quote_13": {
+      "text": "Morphe 修復了我的 WiFi，繳了我的稅，並解決了世界飢餓問題。其實沒有——但它完美修補了 YouTube。",
+      "author": "Sarah Williams",
+      "role": "誇張者"
+    },
+    "quote_14": {
+      "text": "我把 Morphe 給我的狗看，現在牠比我更擅長使用科技。",
+      "author": "Kevin Park",
+      "role": "前科技專家"
+    },
+    "quote_15": {
+      "text": "Morphe 修補我的應用程式如此完美，我現在想知道它是否也能修補我的人生選擇。",
+      "author": "Doug Miller",
+      "role": "自我提升愛好者"
+    },
+    "quote_16": {
+      "text": "我點擊了錯誤的按鈕，意外成為了百萬富翁。不知道怎麼發生的，但 Morphe 參與其中。",
+      "author": "Lucky Luke",
+      "role": "意外億萬富翁"
+    },
+    "quote_17": {
+      "text": "多虧了 Morphe 的廣告封鎖功能，我終於有了清晰的思路完成研究並改變人類歷史的進程。Morphe 比我更值得拿諾貝爾獎。",
+      "author": "Dr. Sheldon Lee",
+      "role": "理論物理學家"
+    },
+    "quote_18": {
+      "text": "我給朋友們展示了 Morphe，現在他們認為我是某種隱世科技巫師。我沒有糾正他們。",
+      "author": "Owen Price",
+      "role": "巫師"
+    },
+    "quote_19": {
+      "text": "Morphe 阻擋了這麼多廣告，我的手機感覺更輕了。我想它連情感包袱都一起卸下了。",
+      "author": "Sienna Brooks",
+      "role": "數位極簡主義者"
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "關於 Morphe 您需要知道的一切",
+    "q1": "Morphe 可以修補哪些應用程式？",
+    "a1": "您可以修補任何您想要的應用程式。只要您想要的是 YouTube、YouTube Music 或 Reddit。我們正在不斷努力，擴展對更多應用程式的支援。",
+    "q2": "Morphe 安全嗎？",
+    "a2": "和修改混淆位元碼一樣安全。Morphe 的所有原始碼都是開源的，任何人都可以自由檢查。我們的社群積極審查並為程式碼庫做出貢獻。",
+    "q3": "Morphe 會讓我的手機變磚嗎？",
+    "a3": "只有在您的手機決定自己變磚的情況下才會。否則您的裝置就不會有事。Morphe 只修改應用程式套件，不會觸及系統檔案。",
+    "q4": "我可以根據自己的喜好自訂應用程式嗎？",
+    "a4": "可以，但如果您把應用程式自訂到連自己都駕馭不了，請不要怪 Morphe。建議將自訂程度控制在您的喜好水準內，不要過度。",
+    "q5": "Morphe 的隱私權政策是什麼？",
+    "q6": "為什麼叫 Morphe？",
+    "a6": "因為「Android 應用程式修改和轉換工具」（AAMATT）不太好聽。而且 Morphe 暗示它將您的應用程式變形為更好的東西。",
+    "q7": "Morphe 是魔法嗎？",
+    "a7": "不是。但也是。它是像魔法一樣的進階位元碼操作。",
+    "q8": "我可以為 Morphe 做貢獻嗎？",
+    "a8": "可以！請參閱我們 %1 中的貢獻指南。如果您沒有開發技能，我們隨時歡迎 %2 來幫助支付費用。",
+    "a8-link1": "GitHub 儲存庫",
+    "a8-link2": "贊助"
+  },
+  "community": {
+    "subtitle": "關注我們，回報問題，協助改善 Morphe",
+    "github-desc": "瀏覽原始碼、回報錯誤並為 Morphe 開發做出貢獻。",
+    "x-desc": "獲取最新消息、發行版本和公告。",
+    "reddit-desc": "參與討論，分享技巧，與其他 Morphe 使用者建立聯繫。",
+    "crowdin-desc": "協助將 Morphe 翻譯成您的語言，讓每個人都能使用。"
+  },
+  "donate": {
+    "title": "贊助",
+    "description": "您的貢獻幫助我們繼續開發和改善 Morphe",
+    "why-1": "保持 Morphe 免費和開源",
+    "why-2": "支援持續開發",
+    "why-3": "協助支付基礎設施成本",
+    "why-4": "實現更快的錯誤修復和功能開發",
+    "oc-title": "在 Open Collective 上贊助我們",
+    "oc-desc": "100% 透明 —— 查看每一分錢的籌集和使用情況。一次性或定期，任何金額都有幫助。",
+    "oc-btn": "立即贊助",
+    "tiers-title": "選擇您的贊助等級",
+    "tiers-desc": "每一份貢獻都很重要",
+    "tier1-name": "一次性",
+    "tier1-amount": "任意金額",
+    "tier1-desc": "請我們喝杯咖啡。一次性贊助以表達您的支持 —— 無需承諾。",
+    "tier2-name": "贊助者",
+    "tier2-desc": "成為定期贊助者，協助我們進行長期規劃。您的名字將出現在贊助者列表中。",
+    "tier3-name": "超級贊助者",
+    "tier3-desc": "您的標誌或名稱將顯著呈現在 Morphe 網站的超級贊助者區塊中。",
+    "tier-contribute": "貢獻",
+    "per-month": "/月",
+    "tier-popular": "熱門",
+    "backers-title": "我們的贊助者",
+    "backers-all": "查看全部",
+    "backers-loading": "載入中…",
+    "backers-empty": "成為第一位贊助 Morphe 的人！",
+    "sponsors-title": "超級贊助者",
+    "sponsors-cta": "成為超級贊助者",
+    "sponsors-empty": "成為第一位超級贊助者！"
+  },
+  "changelog": {
+    "title": "更新內容",
+    "subtitle": "完整的更新與改善歷史",
+    "filter-all": "全部",
+    "filter-manager": "管理程式",
+    "filter-patches": "修補",
+    "show-dev": "顯示預先發行版本",
+    "older-releases": "想找更早的版本嗎？",
+    "view-manager": "檢視管理程式版本",
+    "view-patches": "檢視修補版本"
+  },
+  "add-source": {
+    "title": "新增修補來源",
+    "subtitle": "是否要將此修補來源新增到 Morphe？",
+    "source-label": "來源",
+    "warning": "僅新增您信任的作者所提供的來源。修補來源可能會修改您的應用程式",
+    "open-btn": "在 Morphe 中開啟",
+    "back-home": "返回首頁",
+    "success-title": "正在開啟 Morphe…",
+    "success-subtitle": "正在新增來源。您可以關閉此頁面",
+    "desktop-title": "在 Android 上開啟",
+    "desktop-subtitle": "此連結會向 Morphe 新增一個修補來源，需要 Android 裝置",
+    "desktop-step1": "在您的 Android 裝置上安裝 <a href=\"/\">Morphe</a>",
+    "desktop-step2": "在您的 Android 裝置上開啟此連結",
+    "desktop-step3": "點擊 <strong>在 Morphe 中開啟</strong>"
+  },
+  "error": {
+    "go-home": "返回首頁",
+    "404-title": "404 - 找不到頁面",
+    "not-found": "找不到您要找的頁面"
+  }
+}
