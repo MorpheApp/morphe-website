@@ -1,12 +1,24 @@
 (function() {
-  // --- Umami ---
-  (function() {
-    const script = document.createElement('script');
-    script.defer = true;
-    script.src = 'https://analytics.morphe.software/script.js';
-    script.setAttribute('data-website-id', 'cd26cb28-0b3a-4524-be50-f7f69e46fcec');
-    document.head.appendChild(script);
-  })();
+// --- Umami with Session Replay ---
+(function() {
+  const WEBSITE_ID = 'cd26cb28-0b3a-4524-be50-f7f69e46fcec';
+
+  const analytics = document.createElement('script');
+  analytics.defer = true;
+  analytics.src = 'https://analytics.morphe.software/script.js';
+  analytics.setAttribute('data-website-id', WEBSITE_ID);
+  document.head.appendChild(analytics);
+
+// Enable when Umami fixes their bugs https://github.com/umami-software/umami/issues/4176
+//  const recorder = document.createElement('script');
+//  recorder.defer = true;
+//  recorder.src = 'https://analytics.morphe.software/recorder.js';
+//  recorder.setAttribute('data-website-id', WEBSITE_ID);
+//  recorder.setAttribute('data-sample-rate', '0.05');
+//  recorder.setAttribute('data-mask-level', 'moderate');
+//  recorder.setAttribute('data-max-duration', '300000');
+//  document.head.appendChild(recorder);
+})();
 
   // --- Google Analytics 4 ---
   window.dataLayer = window.dataLayer || [];
