@@ -1,0 +1,325 @@
+{
+  "footer": {
+    "product-home": "Start",
+    "product-microg": "Ladda ned MicroG",
+    "support-donate": "Donera",
+    "product-changelog": "Nyheter",
+    "description": "Nästa generations modifiering av Android-appar",
+    "product": "Produkt",
+    "product-translate": "Hjälp till att översätta",
+    "community": "Community",
+    "language": "Språk",
+    "copyright": "Öppen källkod och kostnadsfritt för evigt."
+  },
+  "translate": {
+    "title": "Hjälp oss att översätta",
+    "description": "Gör Morphe tillgängligt för miljontals användare över hela världen genom att översätta det till ditt språk",
+    "cta": "Börja översätta på",
+    "how-title": "Så bidrar du",
+    "step1-title": "1. Registrera dig till Crowdin",
+    "step1-desc": "Skapa ett kostnadsfritt Crowdin-konto. Det tar bara någon minut och gör det möjlig för dig att översätta Morphe och andra projekt med öppen källkod.",
+    "step2-title": "2. Välj ditt språk",
+    "step2-desc": "Välj det språk som du vill översätta till. Du kan bidra till nya översättningar eller förbättra befintliga.",
+    "step3-title": "3. Börja översätta",
+    "step3-desc": "Använd Crowdins intuitiva gränssnitt för att översätta strängar. Varje bidrag hjälper till att göra Morphe tillgängligt för fler användare.",
+    "step4-title": "4. Se din inverkan",
+    "step4-desc": "Dina översättningar granskas och tas med i framtida versioner av Morphe för att hjälpa användare över hela världen.",
+    "why-title": "Varför översätta?",
+    "why-subtitle": "Varje sträng som översätts för Morphe närmare någon som behöver det",
+    "why-1": "Hjälp det lokala samhället",
+    "why-1-desc": "Gör Morphe tillgängligt på ditt modersmål så att alla omkring dig kan utnyttja det utan språkhinder.",
+    "why-2": "Gör Morphe globalt",
+    "why-2-desc": "Nå ut till miljontals användare över hela världen genom att sprida Morphe till nya språk och nya regioner.",
+    "why-3": "Bidra till öppen källkod",
+    "why-3-desc": "Översättning är ett meningsfullt sätt att bidra till öppen källkod – inga kodningskunskaper krävs.",
+    "why-4": "Se din inverkan",
+    "why-4-desc": "Dina översättningar granskas och införs i riktiga versioner av Morphe som når användare över hela världen."
+  },
+  "analytics": {
+    "title": "Analyser",
+    "description": "Den här webbplatsen använder %s och Google Analytics 4: Inga cookies, ingen reklam, ingen profilering och inga uppgifter säljs eller delas.",
+    "disclaimer": "Morphe lägger inte till analysfunktioner eller datainsamling i modifierade appar."
+  },
+  "microg": {
+    "title": "Ladda ned",
+    "description": "MicroG krävs för att använda YouTube Morphe och YT Music Morphe",
+    "download": "Ladda ned MicroG",
+    "what-title": "Vad är MicroG?",
+    "feature1-title": "Google-tjänster",
+    "feature1-desc": "MicroG tillhandahåller stöd för Google Play-tjänster och gör det möjligt för dig att använda ditt Google-konto med YouTube Morphe och YT Music Morphe.",
+    "feature2-title": "Integritetsfokuserad",
+    "feature2-desc": "MicroG implementerar om Googles tjänster med öppen källkod och respekterar din integritet samtidigt som det ger viktig funktionalitet.",
+    "feature3-title": "Engångsinstallation",
+    "feature3-desc": "Installera MicroG en gång så fungerar det med alla dina Morphe-appar. Du behöver inte återinstallera det när du uppdaterar YouTube Morphe och YT Music Morphe."
+  },
+  "nav": {
+    "home": "Start",
+    "how-it-works": "Så fungerar det",
+    "testimonials": "Omdömen",
+    "faq": "Vanliga frågor"
+  },
+  "hero": {
+    "title": "Omvandla din",
+    "title-highlight": "Android-upplevelse",
+    "title-highlight-youtube": "YouTube-app",
+    "title-highlight-ytmusic": "YT Music-app",
+    "title-highlight-reddit": "Reddit-app",
+    "description": "Från utvecklarna bakom de bästa moddade YouTube-apparna kommer Morphe – det kraftfulla verktyget för appmodifiering som ger dig kontroll",
+    "download": "Ladda ned Morphe",
+    "learn-more": "Läs mer",
+    "social-label": "Gå med i communityn"
+  },
+  "app-features": {
+    "title": "Appfunktioner",
+    "subtitle": "Kraftfulla tillägg för dina favoritappar",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "En anpassad YouTube-upplevelse med annonsblockering, stöd för SponsorBlock, förbättrade spelarkontroller och avancerade integritetsförbättringar",
+    "ad-blocking": "Annonsblockering",
+    "yt-ad-blocking-desc": "Tar bort alla annonser från hemflödet och videospelaren för en oavbruten tittarupplevelse.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Hoppar över sponsrade segment och andra oviktiga delar av videor automatiskt.",
+    "return-dislikes": "Ogilla-markeringar är tillbaka",
+    "return-dislikes-desc": "Visar användardrivna ogilla-markeringar så att du kan fatta bättre beslut som tittare.",
+    "ui-customization": "Anpassa användar&shy;gränssnittet",
+    "yt-ui-desc": "Dölj Shorts-videor, justera navigeringsfältet och ta bort oönskade layoutelement.",
+    "player-enhancements": "Förättringar av spelaren",
+    "player-desc": "Egna uppspelnings&shy;hastigheter, standard&shy;videokvalitet och förbättrat beteende för sökreglaget.",
+    "swipe-controls": "Svepgester",
+    "swipe-desc": "Justera ljusstyrkan och volymen med intuitiva tryckrörelser.",
+    "themes": "Anpassa tema",
+    "yt-themes-desc": "Rent svart, Material You och fler temastilar.",
+    "privacy": "Integritetsförbättringar",
+    "yt-privacy-desc": "Rensar delningslänkar genom att ta bort spårningsparametrar.",
+    "ytmusic-desc": "En förbättrad YouTube Music-upplevelse med annonsblockering, anpassningsbara teman, ljudförbättringar och ett stilrenare gränssnitt",
+    "ytm-ad-desc": "Tar bort alla annonser under uppspelning av musik.",
+    "audio-quality": "Ljudkvalitet",
+    "audio-desc": "Inaktivera dynamisk intervallkomprimering och prioritera ursprungliga ljudspår.",
+    "ytm-themes-desc": "Anpassade mörka och ljusa bakgrunder, däribland Material You-stilar.",
+    "interface-cleanup": "Rensa gränssnittet",
+    "ytm-ui-desc": "Dölj onödiga knappar och komponenter i användargränssnittet för en mer stilren upplevelse.",
+    "repeat": "Permanent upprepning",
+    "repeat-desc": "Förbättrat upprepningsbeteende som bevaras i alla sessioner.",
+    "link-sanitization": "Länkrensning",
+    "ytm-link-desc": "Tar bort spårningsparametrar från delade länkar.",
+    "custom-branding": "Varumärkesanpassning",
+    "branding-desc": "Valfri anpassning av appens namn och ikon.",
+    "nav-bar": "Navigeringsfält",
+    "nav-bar-desc": "Dölj eller anpassa navigeringsfältet längst ned och dess etiketter för att minska röran.",
+    "reddit-desc": "En smidig Reddit-upplevelse med annonsblockering, gränssnittsanpassning, direkt länkhantering och förbättrad integritet",
+    "reddit-ad-desc": "Tar bort annonser i flödet för en renare surfningsupplevelse.",
+    "reddit-ui-desc": "Dölj navigeringsknappar, element i sidofältet och hyllor för rekommendationer.",
+    "auto-dismiss": "Avfärda dialogrutor automatiskt",
+    "dismiss-desc": "Tar bort repetitiva varningspopup-fönster för communities automatiskt.",
+    "direct-links": "Direkta externa länkar",
+    "direct-links-desc": "Öppna länkar utan omdirigeringsspårning och gå direkt till målet.",
+    "reddit-link-desc": "Tar bort spårningsparametrar från delade URL:er för bättre integritet.",
+    "clean-nav": "Renare navigering",
+    "clean-nav-desc": "Förenklad layout med färre distraktioner för fokuserad surfning.",
+    "screenshot": "Skärmbildsfrihet",
+    "screenshot-desc": "Inaktiverar popup-fönstret som visas när du tar skärmbilder i appen.",
+    "spoof-signature": "Åtgärda aviseringar",
+    "spoof-signature-desc": "Förfalskar appens signatur för att återställa pushaviseringar som kan ha slutat att fungera efter modifieringen."
+  },
+  "how-it-works": {
+    "title": "Så fungerar Morphe",
+    "subtitle": "Enkelt, kraftfullt och skapat för alla",
+    "step1-title": "1. Ladda ned Morphe",
+    "step1-desc": "Ladda ned den senaste versionen av Morphe och installera den på din Android-enhet.",
+    "step2-title": "2. Välj din app",
+    "step2-desc": "Välj den app som du vill modifera.",
+    "step3-title": "3. Tillämpa tilläggen",
+    "step3-desc": "Morphe modifierar din valda app automatiskt.",
+    "step4-title": "4. Installera och njut",
+    "step4-desc": "Installera den modifierade appen och njut av din anpassade upplevelse."
+  },
+  "testimonials": {
+    "title": "Vad användarna tycker",
+    "subtitle": "Feedback från riktiga användare som definitivt inte är påhittade",
+    "quote_1": {
+      "text": "Jag brukade tillbringa flera timmar med att konfigurera tillägg manuellt. Nu bara trycker jag på knappen Modifiera och går och lagar kaffe. När jag kommer tillbaka är allt klart. Revolutionärt!",
+      "author": "Lisa Smith",
+      "role": "Kaffeälskare"
+    },
+    "quote_2": {
+      "text": "Alla andra modifierings&shy;verktyg känns som att utföra hjärnkirurgi med ögonbindel. Men med Morphe tar det bara några tryck så är min modifierade app superladdad och bättre än någonsin.",
+      "author": "Alex Chen",
+      "role": "Expertanvändare"
+    },
+    "quote_3": {
+      "text": "Det är som Vanced, men bättre, och utan de konstiga företagsfest-vibbarna.",
+      "author": "Sarah Johnson",
+      "role": "Före detta Vanced-användare"
+    },
+    "quote_4": {
+      "text": "Min 87-åriga farmor frågade mig varför mitt YouTube ser annorlunda ut. Jag visade henne Morphe och nu modifierar hon appar för hela pensionärsklubben.",
+      "author": "David Kin",
+      "role": "Stolt barnbarn"
+    },
+    "quote_5": {
+      "text": "Jag provade andra modifierings&shy;verktyg och min telefon fattade eld. Med Morphe är min telefon precis lagom modifierad. 10/10 avstår helst från fler själv&shy;antändningar.",
+      "author": "Ryan Martinez",
+      "role": "Brandsäkerhetsexpert"
+    },
+    "quote_6": {
+      "text": "Min katt knuffade min telefon ner från bordet samtidigt som Morphe modifierade en app. Telefonen överlevde och modifieringen lyckades. Katten rekommenderar.",
+      "author": "Emma Jones",
+      "role": "Kattägare"
+    },
+    "quote_7": {
+      "text": "Jag visade Morphe för min teknikokunniga pappa. Nu modifierar han appar bättre än jag. Jag ifrågasätter hela min karriär inom IT.",
+      "author": "Tom Anderson",
+      "role": "Existentiell kris-havare"
+    },
+    "quote_8": {
+      "text": "Min ex-flickvän blev ihop med mig igen efter att jag började använda Morphe. En tillfällighet? Knappast!",
+      "author": "Mike Thompson",
+      "role": "Relationsexpert"
+    },
+    "quote_9": {
+      "text": "Morphe är det enda som räddar mig från 60 sekunder långa tandkrämsannonser som inte går att hoppa över.",
+      "author": "Casey Morgan",
+      "role": "Inte en tandläkare"
+    },
+    "quote_10": {
+      "text": "Jag trodde att Morphe var en okänd grekisk gud. Det visade sig vara bättre än det.",
+      "author": "Oliver Grant",
+      "role": "Historiestudent"
+    },
+    "quote_11": {
+      "text": "Innan jag visste om Morphe trodde jag att APK var en ny k-popgrupp. Nu vet jag bättre.",
+      "author": "Jeff Cooper",
+      "role": "Förvirrad farbror"
+    },
+    "quote_12": {
+      "text": "När jag såg att Morphe var gratis att ladda ner så reagerade jag på samma sätt som när någon erbjuder mig gratis smakprov. Jag tänker inte efter, jag agerar.",
+      "author": "Tyler James",
+      "role": "Reflexbaserad beslutsfattare"
+    },
+    "quote_13": {
+      "text": "Morphe fixade mitt wifi, betalade min skatt och löste svälten i världen. Det gjorde det egentligen inte, men det modifierade YouTube helt perfekt.",
+      "author": "Sarah Williams",
+      "role": "Överdrivare"
+    },
+    "quote_14": {
+      "text": "Jag visade min hund Morphe och nu är han bättre på att använda teknik än jag.",
+      "author": "Kevin Park",
+      "role": "Före detta teknikexpert"
+    },
+    "quote_15": {
+      "text": "Morphe modifierade mina appar så bra att jag undrar om det även kan modifiera mina livsval.",
+      "author": "Doug Miller",
+      "role": "Självförbättringsentusiast"
+    },
+    "quote_16": {
+      "text": "Jag tryckte på fel knapp och blev av misstag en miljonär. Jag är inte säker på hur det hände, men Morphe var inblandat.",
+      "author": "Lucky Luke",
+      "role": "Oavsiktilig miljardär"
+    },
+    "quote_17": {
+      "text": "Tack vare Morphes annonsblockering fick jag äntligen den mentala skärpan att avsluta min forskning och förändra mänsklighetens framtid. Morphe förtjänar nobelpriset mer än jag.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Teoretisk fysiker"
+    },
+    "quote_18": {
+      "text": "Jag visade Morphe för mina vänner och nu tror de att jag i hemlighet är nån sorts tekniktrollkarl. Jag rättar dem inte.",
+      "author": "Owen Price",
+      "role": "Trollkarl"
+    },
+    "quote_19": {
+      "text": "Morphe har blockerat så många annonser att min telefon känns lättare nu. Jag tror att den känslomässigt har gått ner i vikt.",
+      "author": "Sienna Brooks",
+      "role": "Digital minimalist"
+    }
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "subtitle": "Allt du behöver veta om Morphe",
+    "q1": "Vilka appar kan Morphe modifiera?",
+    "a1": "Du kan modifiera vilken app du vill. Så länge som du vill modifiera YouTube, YouTube Music eller Reddit. Vi arbetar ständigt med att utöka stödet för fler appar.",
+    "q2": "Är Morphe säkert?",
+    "a2": "Så säkert som det kan vara att modifiera obfuskerad bytekod. All källkod för Morphe är öppen och tillgänglig för alla att granska. Vår community överser och bidrar aktivt till kodbasen.",
+    "q3": "Kan Morphe få min telefon att gå sönder?",
+    "a3": "Bara om din telefon går sönder av sig själv. Annars ska din enhet fortsätta fungera som vanligt. Morphe modifierar endast appaket och rör inte systemfilerna.",
+    "q4": "Kan jag anpassa appar efter eget tycke?",
+    "a4": "Ja, men skyll inte på Morphe om du anpassar din app mer än du klarar av. Vi rekommenderar att du anpassar till den grad du själv föredrar och inget mer.",
+    "q5": "Vad är Morphes integritetspolicy?",
+    "q6": "Varför namnet Morphe?",
+    "a6": "Eftersom \"Android App Modification And Transformation Tool\" (AAMATT) låter inte särskilt slående. Och för att namnet Morphe antyder att det omvandlar dina appar till något bättre.",
+    "q7": "Är Morphe magi?",
+    "a7": "Nej. Men också ja. Det är den avancerade manipuleringen av bytekoden som känns som magi.",
+    "q8": "Kan jag bidra till Morphe?",
+    "a8": "Ja! Se riktlinjerna för bidrag i våra %1. Om du inte har kunskaper inom utveckling uppskattar vi alltid %2 som hjälper oss att betala räkningarna.",
+    "a8-link1": "GitHub-lagringsplatser",
+    "a8-link2": "donationer"
+  },
+  "community": {
+    "subtitle": "Följ oss, rapportera problem och hjälp till att göra Morphe bättre",
+    "github-desc": "Bläddra i källkoden, rapportera fel och bidra till Morphes utveckling.",
+    "x-desc": "Håll dig uppdaterad om de senaste nyheterna och versionerna.",
+    "reddit-desc": "Delta i diskussioner, dela tips och kom i kontakt med andra Morphe-användare.",
+    "crowdin-desc": "Hjälp till att göra Morphe tillgängligt för alla genom att översätta det till ditt språk."
+  },
+  "donate": {
+    "title": "Stöd",
+    "description": "Ditt bidrag hjälper oss att fortsätta utveckla och förbättra Morphe",
+    "why-1": "Håll Morphe kostnadsfritt och källkoden öppen",
+    "why-2": "Stöd den pågående utvecklingen",
+    "why-3": "Hjälp till att täcka infrastrukturkostnaderna",
+    "why-4": "Bidra till snabbare felkorrigeringar och nya funktioner",
+    "oc-title": "Stöd oss på Open Collective",
+    "oc-desc": "100 % transparent – se exakt hur varje dollar samlas in och spenderas. En gång eller återkommande, alla bidrag hjälper.",
+    "oc-btn": "Donera nu",
+    "tiers-title": "Välj din stödnivå",
+    "tiers-desc": "Varje bidrag gör skillnad",
+    "tier1-name": "En gång",
+    "tier1-amount": "Valfritt belopp",
+    "tier1-desc": "Bjud oss på en kopp kaffe. Ett engångsbidrag för att visa din uppskattning – inget åtagande krävs.",
+    "tier2-name": "Bidragsgivare",
+    "tier2-desc": "Bli en återkommande stödjare och hjälp oss att planera långsiktigt. Ditt namn kommer att stå i vår lista över bidragsgivare.",
+    "tier3-name": "Megastödjare",
+    "tier3-desc": "Få din logotyp eller ditt namn på framträdande plats i avsnittet Megastödjare på Morphes webbplats.",
+    "tier-contribute": "Ge bidrag",
+    "per-month": "/mån.",
+    "tier-popular": "Populär",
+    "backers-title": "Våra bidragsgivare",
+    "backers-all": "Visa alla",
+    "backers-loading": "Läser in …",
+    "backers-empty": "Bli den första som stöder Morphe!",
+    "sponsors-title": "Megastödjare",
+    "sponsors-cta": "Bli en megastödjare",
+    "sponsors-empty": "Bli den första megastödjaren!"
+  },
+  "changelog": {
+    "title": "Nyheter",
+    "subtitle": "En fullständig historik över uppdateringar och förbättringar",
+    "filter-all": "Alla",
+    "filter-manager": "Manager",
+    "filter-patches": "Tillägg",
+    "show-dev": "Visa förhandsversioner",
+    "older-releases": "Vill du se äldre versioner?",
+    "view-manager": "Visa Manager-versioner",
+    "view-patches": "Visa tilläggsversioner"
+  },
+  "add-source": {
+    "title": "Lägg till en tilläggskälla",
+    "subtitle": "Vill du lägga till den här tilläggskällan i Morphe?",
+    "source-label": "Källa",
+    "warning": "Lägg bara till källor från utgivare du litar på. Tilläggskällor kan modifiera dina appar",
+    "open-btn": "Öppna i Morphe",
+    "back-home": "Tillbaka till startsidan",
+    "success-title": "Öppnar Morphe …",
+    "success-subtitle": "Källan läggs till. Du kan stänga den här sidan",
+    "desktop-title": "Öppna på Android",
+    "desktop-subtitle": "Den här länken lägger till en tilläggskälla i Morphe, vilket kräver en Android-enhet",
+    "desktop-step1": "Installera <a href=\"/\">Morphe</a> på din Android-enhet",
+    "desktop-step2": "Öppna den här länken på din Android-enhet",
+    "desktop-step3": "Tryck på <strong>Öppna i Morphe</strong>"
+  },
+  "error": {
+    "go-home": "Gå till startsidan",
+    "404-title": "404 – Sidan hittades inte",
+    "not-found": "Sidan du söker kan inte hittas"
+  }
+}
