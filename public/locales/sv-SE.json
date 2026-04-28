@@ -1,7 +1,7 @@
 {
   "footer": {
     "product-home": "Start",
-    "product-microg": "Ladda ned MicroG",
+    "product-microg": "Ladda ner MicroG",
     "support-donate": "Donera",
     "product-changelog": "Nyheter",
     "description": "Nästa generations modifiering av Android-appar",
@@ -9,7 +9,7 @@
     "product-translate": "Hjälp till att översätta",
     "community": "Community",
     "language": "Språk",
-    "copyright": "Öppen källkod och kostnadsfritt för evigt."
+    "copyright": "Öppet och kostnadsfritt för evigt."
   },
   "translate": {
     "title": "Hjälp oss att översätta",
@@ -41,9 +41,9 @@
     "disclaimer": "Morphe lägger inte till analysfunktioner eller datainsamling i modifierade appar."
   },
   "microg": {
-    "title": "Ladda ned",
+    "title": "Ladda ner",
     "description": "MicroG krävs för att använda YouTube Morphe och YT Music Morphe",
-    "download": "Ladda ned MicroG",
+    "download": "Ladda ner MicroG",
     "what-title": "Vad är MicroG?",
     "feature1-title": "Google-tjänster",
     "feature1-desc": "MicroG tillhandahåller stöd för Google Play-tjänster och gör det möjligt för dig att använda ditt Google-konto med YouTube Morphe och YT Music Morphe.",
@@ -65,7 +65,7 @@
     "title-highlight-ytmusic": "YT Music-app",
     "title-highlight-reddit": "Reddit-app",
     "description": "Från utvecklarna bakom de bästa moddade YouTube-apparna kommer Morphe – det kraftfulla verktyget för appmodifiering som ger dig kontroll",
-    "download": "Ladda ned Morphe",
+    "download": "Ladda ner Morphe",
     "learn-more": "Läs mer",
     "social-label": "Gå med i communityn"
   },
@@ -98,38 +98,38 @@
     "audio-desc": "Inaktivera dynamisk intervallkomprimering och prioritera ursprungliga ljudspår.",
     "ytm-themes-desc": "Anpassade mörka och ljusa bakgrunder, däribland Material You-stilar.",
     "interface-cleanup": "Rensa gränssnittet",
-    "ytm-ui-desc": "Dölj onödiga knappar och komponenter i användargränssnittet för en mer stilren upplevelse.",
+    "ytm-ui-desc": "Dölj onödiga knappar och komponenter i användargränssnittet för en stilrenare upplevelse.",
     "repeat": "Permanent upprepning",
-    "repeat-desc": "Förbättrat upprepningsbeteende som bevaras i alla sessioner.",
+    "repeat-desc": "Förbättrat upprepningsbeteende som bevaras mellan sessioner.",
     "link-sanitization": "Länkrensning",
     "ytm-link-desc": "Tar bort spårningsparametrar från delade länkar.",
     "custom-branding": "Varumärkesanpassning",
     "branding-desc": "Valfri anpassning av appens namn och ikon.",
     "nav-bar": "Navigeringsfält",
-    "nav-bar-desc": "Dölj eller anpassa navigeringsfältet längst ned och dess etiketter för att minska röran.",
+    "nav-bar-desc": "Dölj eller anpassa det nedre navigeringsfältet och dess etiketter för att minska röran.",
     "reddit-desc": "En smidig Reddit-upplevelse med annonsblockering, gränssnittsanpassning, direkt länkhantering och förbättrad integritet",
     "reddit-ad-desc": "Tar bort annonser i flödet för en renare surfningsupplevelse.",
-    "reddit-ui-desc": "Dölj navigeringsknappar, element i sidofältet och hyllor för rekommendationer.",
+    "reddit-ui-desc": "Dölj navigeringsknappar, element i sidofältet och rekommendationshyllor.",
     "auto-dismiss": "Avfärda dialogrutor automatiskt",
-    "dismiss-desc": "Tar bort repetitiva varningspopup-fönster för communities automatiskt.",
+    "dismiss-desc": "Tar bort återkommande varningspopup-fönster för communities automatiskt.",
     "direct-links": "Direkta externa länkar",
-    "direct-links-desc": "Öppna länkar utan omdirigeringsspårning och gå direkt till målet.",
+    "direct-links-desc": "Öppna länkar utan omdirigeringsspårning och gå direkt till måladressen.",
     "reddit-link-desc": "Tar bort spårningsparametrar från delade URL:er för bättre integritet.",
     "clean-nav": "Renare navigering",
     "clean-nav-desc": "Förenklad layout med färre distraktioner för fokuserad surfning.",
     "screenshot": "Skärmbildsfrihet",
     "screenshot-desc": "Inaktiverar popup-fönstret som visas när du tar skärmbilder i appen.",
     "spoof-signature": "Åtgärda aviseringar",
-    "spoof-signature-desc": "Förfalskar appens signatur för att återställa pushaviseringar som kan ha slutat att fungera efter modifieringen."
+    "spoof-signature-desc": "Fejkar appens signatur för att återställa pushaviseringar som kan ha slutat fungera efter modifieringen."
   },
   "how-it-works": {
     "title": "Så fungerar Morphe",
     "subtitle": "Enkelt, kraftfullt och skapat för alla",
-    "step1-title": "1. Ladda ned Morphe",
-    "step1-desc": "Ladda ned den senaste versionen av Morphe och installera den på din Android-enhet.",
-    "step2-title": "2. Välj din app",
+    "step1-title": "1. Ladda ner Morphe",
+    "step1-desc": "Ladda ner den senaste versionen av Morphe och installera den på din Android-enhet.",
+    "step2-title": "2. Välj app",
     "step2-desc": "Välj den app som du vill modifera.",
-    "step3-title": "3. Tillämpa tilläggen",
+    "step3-title": "3. Tillämpa tillägg",
     "step3-desc": "Morphe modifierar din valda app automatiskt.",
     "step4-title": "4. Installera och njut",
     "step4-desc": "Installera den modifierade appen och njut av din anpassade upplevelse."
@@ -188,7 +188,7 @@
       "role": "Historiestudent"
     },
     "quote_11": {
-      "text": "Innan jag visste om Morphe trodde jag att APK var en ny k-popgrupp. Nu vet jag bättre.",
+      "text": "Innan jag visste om Morphe trodde jag att APK var ett nytt k-popband. Nu vet jag bättre.",
       "author": "Jeff Cooper",
       "role": "Förvirrad farbror"
     },
@@ -208,7 +208,7 @@
       "role": "Före detta teknikexpert"
     },
     "quote_15": {
-      "text": "Morphe modifierade mina appar så bra att jag undrar om det även kan modifiera mina livsval.",
+      "text": "Morphe modifierade mina appar så bra att jag nu undrar om det även kan modifiera mina livsval.",
       "author": "Doug Miller",
       "role": "Självförbättringsentusiast"
     },
@@ -228,7 +228,7 @@
       "role": "Trollkarl"
     },
     "quote_19": {
-      "text": "Morphe har blockerat så många annonser att min telefon känns lättare nu. Jag tror att den känslomässigt har gått ner i vikt.",
+      "text": "Morphe har blockerat så många annonser att min telefon nu känns lättare. Jag tror att den känslomässigt har gått ner i vikt.",
       "author": "Sienna Brooks",
       "role": "Digital minimalist"
     }
@@ -269,26 +269,26 @@
     "why-3": "Hjälp till att täcka infrastrukturkostnaderna",
     "why-4": "Bidra till snabbare felkorrigeringar och nya funktioner",
     "oc-title": "Stöd oss på Open Collective",
-    "oc-desc": "100 % transparent – se exakt hur varje dollar samlas in och spenderas. En gång eller återkommande, alla bidrag hjälper.",
+    "oc-desc": "100 % öppenhet – se exakt hur varje dollar samlas in och används. En gång eller återkommande, varje bidrag hjälper.",
     "oc-btn": "Donera nu",
-    "tiers-title": "Välj din stödnivå",
+    "tiers-title": "Välj stödnivå",
     "tiers-desc": "Varje bidrag gör skillnad",
     "tier1-name": "En gång",
     "tier1-amount": "Valfritt belopp",
-    "tier1-desc": "Bjud oss på en kopp kaffe. Ett engångsbidrag för att visa din uppskattning – inget åtagande krävs.",
-    "tier2-name": "Bidragsgivare",
-    "tier2-desc": "Bli en återkommande stödjare och hjälp oss att planera långsiktigt. Ditt namn kommer att stå i vår lista över bidragsgivare.",
+    "tier1-desc": "Bjud oss på kaffe. Ett engångsbidrag för att visa din uppskattning – inget åtagande krävs.",
+    "tier2-name": "Stödjare",
+    "tier2-desc": "Bli en återkommande stödjare och hjälp oss att planera långsiktigt. Ditt namn visas i vår lista över stödjare.",
     "tier3-name": "Megastödjare",
-    "tier3-desc": "Få din logotyp eller ditt namn på framträdande plats i avsnittet Megastödjare på Morphes webbplats.",
-    "tier-contribute": "Ge bidrag",
+    "tier3-desc": "Få din logotyp eller ditt namn på en framträdande plats i avsnittet Megastödjare på Morphes webbplats.",
+    "tier-contribute": "Bidra",
     "per-month": "/mån.",
-    "tier-popular": "Populär",
-    "backers-title": "Våra bidragsgivare",
-    "backers-all": "Visa alla",
+    "tier-popular": "Populärt",
+    "backers-title": "Våra stödjare",
+    "backers-all": "Se alla",
     "backers-loading": "Läser in …",
     "backers-empty": "Bli den första som stöder Morphe!",
     "sponsors-title": "Megastödjare",
-    "sponsors-cta": "Bli en megastödjare",
+    "sponsors-cta": "Bli megastödjare",
     "sponsors-empty": "Bli den första megastödjaren!"
   },
   "changelog": {
