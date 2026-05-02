@@ -10,7 +10,15 @@
   analytics.setAttribute('data-performance', 'true')
   document.head.appendChild(analytics);
 
-  if (!window.location.href.endsWith('microg')) {
+  // Pages to exclude from anonymous session recording.
+  const RECORDER_EXCLUDED_PATHS = [
+    'microg',
+    'add-source',
+  ];
+
+  const pathname = window.location.pathname.toLowerCase();
+  const isExcluded = RECORDER_EXCLUDED_PATHS.some(page => pathname.endsWith(page));
+  if (!isExcluded) {
     const recorder = document.createElement('script');
     recorder.defer = true;
     recorder.src = 'https://analytics.morphe.software/recorder.js';
