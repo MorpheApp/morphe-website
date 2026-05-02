@@ -7,17 +7,17 @@
   analytics.defer = true;
   analytics.src = 'https://analytics.morphe.software/script.js';
   analytics.setAttribute('data-website-id', WEBSITE_ID);
+  analytics.setAttribute('data-performance', 'true')
   document.head.appendChild(analytics);
 
-// Enable when Umami fixes their bugs https://github.com/umami-software/umami/issues/4176
-//  const recorder = document.createElement('script');
-//  recorder.defer = true;
-//  recorder.src = 'https://analytics.morphe.software/recorder.js';
-//  recorder.setAttribute('data-website-id', WEBSITE_ID);
-//  recorder.setAttribute('data-sample-rate', '0.05');
-//  recorder.setAttribute('data-mask-level', 'moderate');
-//  recorder.setAttribute('data-max-duration', '300000');
-//  document.head.appendChild(recorder);
+  const recorder = document.createElement('script');
+  recorder.defer = true;
+  recorder.src = 'https://analytics.morphe.software/recorder.js';
+  recorder.setAttribute('data-website-id', WEBSITE_ID);
+  recorder.setAttribute('data-sample-rate', '0.05');
+  recorder.setAttribute('data-mask-level', 'moderate');
+  recorder.setAttribute('data-max-duration', '300000');
+  document.head.appendChild(recorder);
 })();
 
   // --- Google Analytics 4 ---
