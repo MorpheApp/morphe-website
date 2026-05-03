@@ -1,34 +1,37 @@
 (function() {
-// --- Umami with Session Replay ---
-(function() {
-  const WEBSITE_ID = 'cd26cb28-0b3a-4524-be50-f7f69e46fcec';
+  (function() {
+    const WEBSITE_ID = 'cd26cb28-0b3a-4524-be50-f7f69e46fcec';
 
-  const analytics = document.createElement('script');
-  analytics.defer = true;
-  analytics.src = 'https://analytics.morphe.software/script.js';
-  analytics.setAttribute('data-website-id', WEBSITE_ID);
-  analytics.setAttribute('data-performance', 'true')
-  document.head.appendChild(analytics);
+    const analytics = document.createElement('script');
+    analytics.defer = true;
+    analytics.src = 'https://analytics.morphe.software/script.js';
+    analytics.setAttribute('data-website-id', WEBSITE_ID);
+    analytics.setAttribute('data-performance', 'true');
+    document.head.appendChild(analytics);
 
-  // Pages to exclude from anonymous session recording.
-  const RECORDER_EXCLUDED_PATHS = [
-    'microg',
-    'add-source',
-  ];
+    // Use a delay before starting anonymous session replay
+    // to ignore users who immediately download
+    setTimeout(() => {
+      const RECORDER_EXCLUDED_PATHS = [
+        'microg',
+        'add-source',
+      ];
 
-  const pathname = window.location.pathname.toLowerCase();
-  const isExcluded = RECORDER_EXCLUDED_PATHS.some(page => pathname.endsWith(page));
-  if (!isExcluded) {
-    const recorder = document.createElement('script');
-    recorder.defer = true;
-    recorder.src = 'https://analytics.morphe.software/recorder.js';
-    recorder.setAttribute('data-website-id', WEBSITE_ID);
-    recorder.setAttribute('data-sample-rate', '0.05');
-    recorder.setAttribute('data-mask-level', 'moderate');
-    recorder.setAttribute('data-max-duration', '300000');
-    document.head.appendChild(recorder);
-  }
-})();
+      const pathname = window.location.pathname.toLowerCase();
+      const isExcluded = RECORDER_EXCLUDED_PATHS.some(page => pathname.endsWith(page));
+
+      if (!isExcluded) {
+        const recorder = document.createElement('script');
+        recorder.defer = true;
+        recorder.src = 'https://analytics.morphe.software/recorder.js';
+        recorder.setAttribute('data-website-id', WEBSITE_ID);
+        recorder.setAttribute('data-sample-rate', '0.10');
+        recorder.setAttribute('data-mask-level', 'moderate');
+        recorder.setAttribute('data-max-duration', '300000');
+        document.head.appendChild(recorder);
+      }
+    }, 2000);
+  })();
 
   // --- Google Analytics 4 ---
   window.dataLayer = window.dataLayer || [];
