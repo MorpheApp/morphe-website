@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -23,11 +23,21 @@ jobs:
       - name: Merge main into dev
         run: |
           git fetch origin dev
-          
           git checkout dev
-           
-          if git merge origin/main -m "chore: merge main back into dev [skip ci]"; then
-            git push origin dev
+
+          # Attempt merge without committing
+          if git merge --no-commit --no-ff origin/main; then
+
+            # Check if merge produced any changes
+            if git diff --quiet --cached; then
+              echo "No changes to merge — aborting merge to avoid empty commit."
+              git merge --abort
+            else
+              echo "Changes detected — committing merge."
+              git commit -m "chore: merge main back into dev [skip ci]"
+              git push origin dev
+            fi
+
           else
             echo "Merge conflicts detected. Manual intervention required."
             exit 1
