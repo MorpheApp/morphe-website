@@ -642,12 +642,7 @@ body {
     overflow-x: clip;
     overflow-y: visible;
     border-radius: var(--radius-lg);
-    cursor: grab;
     padding: 8px 0 20px;
-}
-
-.app-features-panel-wrapper:active {
-    cursor: grabbing;
 }
 
 .app-features-panel {

@@ -31,8 +31,6 @@ function appGradient(appId) {
 
     let currentIndex = 0;
     let autoplayTimer = null;
-    let dragStartX = 0;
-    let isDragging = false;
 
     let tabs, pages, panel;
 
@@ -126,51 +124,6 @@ function appGradient(appId) {
         tabs.forEach((tab, i) => {
             tab.addEventListener('click', () => { goTo(i); resetAutoplay(); });
         });
-
-        // Swipe / drag on wrapper
-        const wrapper = panel.parentElement;
-
-        wrapper.addEventListener('touchstart', e => {
-            isDragging = true;
-            dragStartX = e.touches[0].clientX;
-            stopAutoplay();
-        }, { passive: true });
-
-        wrapper.addEventListener('touchend', e => {
-            if (!isDragging) return;
-            isDragging = false;
-            const delta = dragStartX - e.changedTouches[0].clientX;
-            
-            // Handle RTL swipe direction
-            const isRTL = document.documentElement.dir === 'rtl';
-            const normalizedDelta = isRTL ? -delta : delta;
-            
-            if (Math.abs(normalizedDelta) > 40) normalizedDelta > 0 ? next() : prev();
-            startAutoplay();
-        });
-
-        wrapper.addEventListener('mousedown', e => {
-            isDragging = true;
-            dragStartX = e.clientX;
-            stopAutoplay();
-            e.preventDefault();
-        });
-
-        document.addEventListener('mouseup', e => {
-            if (!isDragging) return;
-            isDragging = false;
-            const delta = dragStartX - e.clientX;
-            
-            // Handle RTL swipe direction
-            const isRTL = document.documentElement.dir === 'rtl';
-            const normalizedDelta = isRTL ? -delta : delta;
-            
-            if (Math.abs(normalizedDelta) > 40) normalizedDelta > 0 ? next() : prev();
-            startAutoplay();
-        });
-
-        wrapper.addEventListener('mouseenter', stopAutoplay);
-        wrapper.addEventListener('mouseleave', () => { if (!isDragging) startAutoplay(); });
 
         // Initial render
         goTo(0, false);
