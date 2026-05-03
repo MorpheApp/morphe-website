@@ -20,25 +20,25 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge main into dev
+      - name: Rebase dev onto main
         run: |
-          git fetch origin dev
+          git fetch origin
+
           git checkout dev
 
-          # Attempt merge without committing
-          if git merge --no-commit --no-ff origin/main; then
+          # Attempt rebase
+          if git rebase origin/main; then
 
-            # Check if merge produced any changes
-            if git diff --quiet --cached; then
-              echo "No changes to merge — aborting merge to avoid empty commit."
-              git merge --abort
+            # Check if dev changed compared to remote
+            if git diff --quiet origin/dev..dev; then
+              echo "No changes after rebase — nothing to push."
             else
-              echo "Changes detected — committing merge."
-              git commit -m "chore: merge main back into dev [skip ci]"
-              git push origin dev
+              echo "Rebase produced changes — pushing."
+              git push origin dev --force-with-lease
             fi
 
           else
-            echo "Merge conflicts detected. Manual intervention required."
+            echo "Rebase conflict — aborting."
+            git rebase --abort
             exit 1
           fi
