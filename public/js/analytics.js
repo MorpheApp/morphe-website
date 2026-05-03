@@ -8,15 +8,20 @@
   analytics.setAttribute('data-performance', 'true');
   document.head.appendChild(analytics);
 
-  const RECORDER_EXCLUDED_PATHS = [
-    'microg',
-    'add-source',
-  ];
+  const RECORDER_SAMPLING_RATES = {
+    'microg': 0,
+    'add-source': 0,
+    'changelog': 1.00,
+    'donate': 1.00,
+    'translate': 1.00,
+    'default': 0.10
+  };
 
-  const pathname = window.location.pathname.toLowerCase();
-  const isExcluded = RECORDER_EXCLUDED_PATHS.some(page => pathname.endsWith(page));
+  const pageKey = window.location.pathname.toLowerCase().split('/').pop();
+  const lookupRate = RECORDER_SAMPLING_RATES[pageKey];
+  const currentSampleRate = lookupRate !== undefined ? lookupRate : RECORDER_SAMPLING_RATES['default'];
 
-  if (!isExcluded) {
+  if (currentSampleRate > 0) {
     // Use a delay before starting anonymous session replay
     // to ignore users who immediately download
     setTimeout(() => {
@@ -24,7 +29,8 @@
       recorder.defer = true;
       recorder.src = 'https://analytics.morphe.software/recorder.js';
       recorder.setAttribute('data-website-id', WEBSITE_ID);
-      recorder.setAttribute('data-sample-rate', '0.15');
+      // Dynamically inject the determined sample rate
+      recorder.setAttribute('data-sample-rate', currentSampleRate.toString());
       recorder.setAttribute('data-mask-level', 'moderate');
       recorder.setAttribute('data-max-duration', '300000');
       document.head.appendChild(recorder);
