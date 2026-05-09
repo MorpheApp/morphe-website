@@ -3,33 +3,42 @@
 (function () {
     'use strict';
 
-    var params = new URLSearchParams(window.location.search);
-    var repo   = params.get('github') || '';
-    var name   = params.get('name') || '';
+    var params    = new URLSearchParams(window.location.search);
+    var githubRepo = params.get('github') || '';
+    var gitlabRepo = params.get('gitlabs') || '';
+    var name       = params.get('name') || '';
 
-    // No github param - redirect home
+    var isGitLab = !!gitlabRepo;
+    var repo     = gitlabRepo || githubRepo;
+
+    // No repo param - redirect home
     if (!repo) { window.location.href = '/'; return; }
 
+    var repoOwner = repo.split('/')[0];
+
     // Set source icon
-    var githubUser = repo.split('/')[0];
     var iconImg = document.getElementById('source-icon');
     if (iconImg) {
-        iconImg.src = 'http://api.morphe.software/v2/avatar/' + githubUser;
-        iconImg.alt = githubUser;
+        iconImg.src = isGitLab
+            ? 'https://unavatar.io/gitlab/' + repoOwner
+            : 'https://github.com/' + repoOwner + '.png';
+        iconImg.alt = repoOwner;
     }
 
     window.addEventListener('load', function () {
         if (window.umami) {
-            umami.track('Add Source', { user: githubUser });
+            umami.track('Add Source', { user: repoOwner, provider: isGitLab ? 'gitlab' : 'github' });
         }
     });
 
-    var url = 'https://github.com/' + repo;
+    var url = isGitLab
+        ? 'https://gitlab.com/' + repo
+        : 'https://github.com/' + repo;
 
     var isAndroid = /android/i.test(navigator.userAgent);
 
     // Populate source info card
-    var match = url.match(/github\.com\/([^/?#]+\/[^/?#]+)/);
+    var match = url.match(/(?:github|gitlab)\.com\/([^/?#]+\/[^/?#]+)/);
     document.getElementById('source-name').textContent = name || (match ? match[1] : url);
     document.getElementById('source-url').textContent  = url;
 
@@ -37,7 +46,8 @@
     // (window.location.href with the same URL is ignored as "same page")
     var encodedRepo  = encodeURIComponent(repo);
     var encodedName  = name ? encodeURIComponent(name) : '';
-    var intentParams = 'github=' + encodedRepo + (encodedName ? '&name=' + encodedName : '');
+    var repoParam    = isGitLab ? 'gitlabs' : 'github';
+    var intentParams = repoParam + '=' + encodedRepo + (encodedName ? '&name=' + encodedName : '');
     var intentLink   = 'intent://morphe.software/add-source?' + intentParams +
         '#Intent;scheme=https;package=app.morphe.manager;S.browser_fallback_url=' +
         encodeURIComponent('https://morphe.software/') + ';end';
