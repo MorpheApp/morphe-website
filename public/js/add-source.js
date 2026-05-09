@@ -5,7 +5,7 @@
 
     var params    = new URLSearchParams(window.location.search);
     var githubRepo = params.get('github') || '';
-    var gitlabRepo = params.get('gitlabs') || '';
+    var gitlabRepo = params.get('gitlab') || '';
     var name       = params.get('name') || '';
 
     var isGitLab = !!gitlabRepo;
@@ -46,7 +46,7 @@
     // (window.location.href with the same URL is ignored as "same page")
     var encodedRepo  = encodeURIComponent(repo);
     var encodedName  = name ? encodeURIComponent(name) : '';
-    var repoParam    = isGitLab ? 'gitlabs' : 'github';
+    var repoParam    = isGitLab ? 'gitlab' : 'github';
     var intentParams = repoParam + '=' + encodedRepo + (encodedName ? '&name=' + encodedName : '');
     var intentLink   = 'intent://morphe.software/add-source?' + intentParams +
         '#Intent;scheme=https;package=app.morphe.manager;S.browser_fallback_url=' +
