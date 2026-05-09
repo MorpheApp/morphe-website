@@ -71,19 +71,6 @@ jobs:
           fi
           DOWNLOAD_URL="https://github.com/MorpheApp/morphe-manager/releases/download/v$VERSION/morphe-manager-$VERSION.apk"
           
-          # Create a temporary file preserving other redirects
-          # We ignore grep's exit code in case the file doesn't exist or has no matches
-          grep -v -E '(^/download\s)' public/_redirects > public/_redirects.tmp || true
-          
-          # Now append the new redirects
-          echo "/download           $DOWNLOAD_URL    301" >> public/_redirects.tmp
-          
-          # Replace the original file
-          mv public/_redirects.tmp public/_redirects
-          
-          echo "Updated _redirects file:"
-          cat public/_redirects
-          
           # Update index.html with the download link
           sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/index.html
           echo "Updated index.html with Morphe download link."
@@ -98,19 +85,6 @@ jobs:
             exit 1
           fi
           DOWNLOAD_URL="https://github.com/MorpheApp/MicroG-RE/releases/download/$VERSION/microg-$VERSION.apk"
-          
-          # Create a temporary file preserving other redirects
-          # We ignore grep's exit code in case the file doesn't exist or has no matches
-          grep -v -E '(^/microg/download\s)' public/_redirects > public/_redirects.tmp || true
-          
-          # Now append the new redirect
-          echo "/microg/download    $DOWNLOAD_URL    301" >> public/_redirects.tmp
-          
-          # Replace the original file
-          mv public/_redirects.tmp public/_redirects
-          
-          echo "Updated _redirects file:"
-          cat public/_redirects
 
           # Update microg.html with the download link          
           sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/microg.html
