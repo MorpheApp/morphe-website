@@ -10,10 +10,10 @@
     "inline": "node scripts/inline.js"
   },
   "devDependencies": {
-    "glob": "^10.5.0",
+    "glob": "^13.0.6",
     "html-inline": "^1.2.0",
     "html-minifier-terser": "^7.2.0",
-    "terser": "^5.36.0"
+    "terser": "^5.47.1"
   },
   "dependencies": {
     "web-resource-inliner": "^8.0.0"
