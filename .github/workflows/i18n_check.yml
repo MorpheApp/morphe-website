@@ -57,15 +57,15 @@ jobs:
           
           # Check for specific issues
           MISSING=$(grep -E "^\s+\d+/\d+ translated, [1-9]\d* missing" translation-report.txt | wc -l || echo "0")
-          UNTRANSLATED=$(grep -E "^\s+\d+/\d+ translated, \d+ missing, [1-9]\d* untranslated" translation-report.txt | wc -l || echo "0")
+          UNTRANSLATED_LOCALES=$(grep -E "^\s+\d+/\d+ translated, \d+ missing, [1-9]\d* untranslated" translation-report.txt | wc -l || echo "0")
           ZOMBIES=$(grep -E "^[a-z-]+: \d+ zombie key" translation-report.txt | wc -l || echo "0")
           
           echo "missing_count=$MISSING" >> $GITHUB_OUTPUT
-          echo "untranslated_count=$UNTRANSLATED" >> $GITHUB_OUTPUT
+          echo "untranslated_count=$UNTRANSLATED_LOCALES" >> $GITHUB_OUTPUT
           echo "zombie_count=$ZOMBIES" >> $GITHUB_OUTPUT
           
           # Determine if there are issues
-          if [ "$AVG" -eq 100 ] && [ "$MISSING" -eq 0 ] && [ "$UNTRANSLATED" -eq 0 ] && [ "$ZOMBIES" -eq 0 ]; then
+          if [ "$AVG" -eq 100 ] && [ "$MISSING" -eq 0 ] && [ "$UNTRANSLATED_LOCALES" -eq 0 ] && [ "$ZOMBIES" -eq 0 ]; then
             echo "has_issues=false" >> $GITHUB_OUTPUT
           else
             echo "has_issues=true" >> $GITHUB_OUTPUT
@@ -79,7 +79,7 @@ jobs:
           HAS_ISSUES="${{ steps.check_status.outputs.has_issues }}"
           EN_CHANGES="${{ steps.check_changes.outputs.changes }}"
           MISSING="${{ steps.check_status.outputs.missing_count }}"
-          UNTRANSLATED="${{ steps.check_status.outputs.untranslated_count }}"
+          UNTRANSLATED_LOCALES="${{ steps.check_status.outputs.untranslated_count }}"
           ZOMBIES="${{ steps.check_status.outputs.zombie_count }}"
           
           # Start building comment
@@ -124,8 +124,8 @@ jobs:
             if [ "$MISSING" -gt 0 ]; then
               echo "- ⚠️ **$MISSING** missing translation(s)" >> comment.md
             fi
-            if [ "$UNTRANSLATED" -gt 0 ]; then
-              echo "- ⚠️ **$UNTRANSLATED** locale(s) contain untranslated string(s)" >> comment.md
+            if [ "$UNTRANSLATED_LOCALES" -gt 0 ]; then
+              echo "- ⚠️ **$UNTRANSLATED_LOCALES** locale(s) contain untranslated string(s)" >> comment.md
             fi
             if [ "$ZOMBIES" -gt 0 ]; then
               echo "- 🧟 **$ZOMBIES** zombie key(s) found" >> comment.md
@@ -146,8 +146,11 @@ jobs:
             # Action items
             echo "### 🔧 Action Items" >> comment.md
             echo "" >> comment.md
-            if [ "$AVG" -lt 100 ]; then
-              echo "- Complete missing or untranslated strings for all locales" >> comment.md
+            if [ "$MISSING" -gt 0 ]; then
+              echo "- Complete missing translations for all locales" >> comment.md
+            fi
+            if [ "$UNTRANSLATED_LOCALES" -gt 0 ]; then
+              echo "- Translate untranslated strings (currently same as English) in all locales" >> comment.md
             fi
             if [ "$ZOMBIES" -gt 0 ]; then
               echo "- Remove unused translation keys from locale files" >> comment.md
