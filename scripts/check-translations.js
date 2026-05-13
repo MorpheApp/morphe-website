@@ -24,6 +24,13 @@ const SKIP_KEYS = new Set([
   'hero.title-highlight-youtube',
   'hero.title-highlight-ytmusic',
   'hero.title-highlight-reddit',
+  'app-features.tab-youtube',     // product name
+  'app-features.tab-ytmusic',     // product name
+  'app-features.tab-reddit',      // product name
+  'app-features.sponsorblock',    // brand name
+  'nav.faq',                      // universal abbreviation
+  'changelog.filter-manager',     // app name
+  'changelog.filter-patches',     // technical term
 ]);
 
 /**
@@ -99,7 +106,9 @@ function checkCompleteness(locales) {
 
     const localeKeys = getAllKeys(locales[locale]).filter(key => !key.startsWith('testimonials.'));
     const missing = baseKeys.filter(key => !localeKeys.includes(key));
+    const missingKeys = new Set(missing);
     const untranslated = baseKeys.filter(key => {
+      if (missingKeys.has(key)) return false;
       if (SKIP_KEYS.has(key)) return false;
       const baseValue = getValue(locales[BASE_LOCALE], key);
       const localeValue = getValue(locales[locale], key);
@@ -107,8 +116,8 @@ function checkCompleteness(locales) {
     });
 
     const total = baseKeys.length;
-    const translated = total - missing.length;
-    const percentage = Math.round((translated / total) * 100);
+    const translated = total - missing.length - untranslated.length;
+    const percentage = total > 0 ? Math.round((translated / total) * 100) : 100;
 
     results[locale] = {
       total,
@@ -177,6 +186,11 @@ function generateReport(locales) {
       console.log(`         Missing: ${data.missingKeys.join(', ')}`);
     } else if (data.missingKeys.length > 10) {
       console.log(`         Missing: ${data.missingKeys.slice(0, 5).join(', ')} ... and ${data.missingKeys.length - 5} more`);
+    }
+    if (data.untranslatedKeys.length > 0 && data.untranslatedKeys.length <= 10) {
+      console.log(`         Untranslated: ${data.untranslatedKeys.join(', ')}`);
+    } else if (data.untranslatedKeys.length > 10) {
+      console.log(`         Untranslated: ${data.untranslatedKeys.slice(0, 5).join(', ')} ... and ${data.untranslatedKeys.length - 5} more`);
     }
     console.log();
   });
