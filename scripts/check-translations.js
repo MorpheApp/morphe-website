@@ -24,6 +24,13 @@ const SKIP_KEYS = new Set([
   'hero.title-highlight-youtube',
   'hero.title-highlight-ytmusic',
   'hero.title-highlight-reddit',
+  'app-features.tab-youtube',     // product name
+  'app-features.tab-ytmusic',     // product name
+  'app-features.tab-reddit',      // product name
+  'app-features.sponsorblock',    // brand name
+  'nav.faq',                      // universal abbreviation
+  'changelog.filter-manager',     // app name
+  'changelog.filter-patches',     // technical term
 ]);
 
 /**
