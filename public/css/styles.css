@@ -852,8 +852,7 @@ body {
     .feature-card:hover,
     .community-card:hover,
     .feature-slide:hover,
-    .testimonial-card:hover,
-    .version-card:hover {
+    .testimonial-card:hover {
         box-shadow: var(--shadow-md);
     }
 }
@@ -1394,7 +1393,6 @@ body {
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
-    transition: box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
