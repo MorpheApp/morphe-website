@@ -19,9 +19,7 @@
     // Set source icon
     var iconImg = document.getElementById('source-icon');
     if (iconImg) {
-        iconImg.src = isGitLab
-            ? 'https://unavatar.io/gitlab/' + repoOwner
-            : 'https://github.com/' + repoOwner + '.png';
+        iconImg.src = 'http://api.morphe.software/v2/avatar/' + repoOwner
         iconImg.alt = repoOwner;
     }
 
