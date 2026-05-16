@@ -310,7 +310,6 @@
   "add-source": {
     "subtitle": "Voulez-vous ajouter cette source de patchs à Morphe ?",
     "source-label": "Source",
-    "zombie-string-with-no-english-value": "zombie",
     "warning": "Ajoutez uniquement des sources provenant d’auteurs de confiance. Les sources de patchs peuvent modifier vos applications",
     "open-btn": "Ouvrir dans Morphe",
     "back-home": "Retour à l’accueil",
