@@ -124,8 +124,12 @@ function checkCompleteness(locales) {
     });
 
     const total = baseKeys.length;
-    const translated = total - missing.length;
-    const percentage = total > 0 ? Math.round((translated / total) * 100) : 100;
+    const translated = total - missing.length - untranslated.length;
+
+    // 100% is only for actual perfection. Any missing/untranslated string caps at 99%.
+    const percentage = (missing.length === 0 && untranslated.length === 0)
+      ? 100
+      : Math.min(99, Math.floor((translated / total) * 100));
 
     results[locale] = {
       total,
@@ -225,18 +229,102 @@ function generateReport(locales) {
 
   // Summary
   console.log('='.repeat(60));
-  const avgCompletion = Math.round(
-    Object.values(completeness).reduce((sum, data) => sum + data.percentage, 0) /
-    Object.keys(completeness).length
-  );
-  console.log(`Average completion: ${avgCompletion}%`);
+  const completions = Object.values(completeness).map(d => d.percentage);
+  const avgCompletion = completions.reduce((sum, p) => sum + p, 0) / completions.length;
+
+  // If anything is missing, average can't be 100%
+  const displayAvg = avgCompletion === 100 ? 100 : Math.min(99, Math.floor(avgCompletion));
+
+  console.log(`Average completion: ${displayAvg}%`);
   console.log('='.repeat(60));
+
+  return completeness;
+}
+
+/**
+ * Check if supported-locales.json is in sync with lang-preload.js
+ * and if all referenced locale files exist.
+ */
+function checkConfigSync() {
+  const CONFIG_PATH = path.join(LOCALES_DIR, 'supported-locales.json');
+  const PRELOAD_PATH = 'public/js/lang-preload.js';
+
+  console.log('CONFIGURATION SYNC:');
+  console.log('-'.repeat(60));
+
+  let hasError = false;
+
+  // 1. Load supported-locales.json
+  let config;
+  try {
+    config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
+  } catch (e) {
+    console.error(`✖ Error: Could not read ${CONFIG_PATH}`);
+    return true;
+  }
+
+  const configCodes = config.supported.map(l => l.code);
+
+  // 2. Load lang-preload.js and extract SUPPORTED_LOCALES
+  let preloadContent;
+  try {
+    preloadContent = fs.readFileSync(PRELOAD_PATH, 'utf8');
+  } catch (e) {
+    console.error(`✖ Error: Could not read ${PRELOAD_PATH}`);
+    return true;
+  }
+
+  const preloadMatch = preloadContent.match(/const SUPPORTED_LOCALES = \[(.*?)\];/);
+  if (!preloadMatch) {
+    console.error(`✖ Error: Could not find SUPPORTED_LOCALES in ${PRELOAD_PATH}`);
+    return true;
+  }
+
+  const preloadCodes = preloadMatch[1]
+    .split(',')
+    .map(s => s.trim().replace(/['"]/g, ''))
+    .filter(s => s.length > 0);
+
+  // 3. Compare codes
+  const missingInPreload = configCodes.filter(c => !preloadCodes.includes(c));
+  const extraInPreload = preloadCodes.filter(c => !configCodes.includes(c));
+
+  if (missingInPreload.length > 0) {
+    console.error(`✖ Error: Locales in config but missing in lang-preload.js: ${missingInPreload.join(', ')}`);
+    console.error(`  Run 'npm run i18n:extract' to update lang-preload.js`);
+    hasError = true;
+  }
+
+  if (extraInPreload.length > 0) {
+    console.error(`✖ Error: Locales in lang-preload.js but missing in config: ${extraInPreload.join(', ')}`);
+    console.error(`  Run 'npm run i18n:extract' to update lang-preload.js`);
+    hasError = true;
+  }
+
+  // 4. Check for missing JSON files
+  configCodes.forEach(code => {
+    const filePath = path.join(LOCALES_DIR, `${code}.json`);
+    if (!fs.existsSync(filePath)) {
+      console.error(`✖ Error: Locale file missing for supported language: ${code}.json`);
+      hasError = true;
+    }
+  });
+
+  if (!hasError) {
+    console.log('✓ supported-locales.json and lang-preload.js are in sync');
+    console.log('✓ All supported locale files exist');
+  }
+
+  console.log();
+  return hasError;
 }
 
 /**
  * Main function
  */
 function main() {
+  const syncError = checkConfigSync();
+
   const locales = loadLocales();
 
   if (!locales[BASE_LOCALE]) {
@@ -244,7 +332,21 @@ function main() {
     process.exit(1);
   }
 
-  generateReport(locales);
+  const completeness = generateReport(locales);
+
+  // Check for any translation errors
+  const hasTranslationError = Object.values(completeness).some(
+    data => data.missing > 0 || data.untranslated > 0
+  );
+
+  if (syncError || hasTranslationError) {
+    if (hasTranslationError) {
+      console.error('✖ Error: Some translations are missing or incomplete.');
+    }
+    process.exit(1);
+  } else {
+    console.log('✓ All translations are 100% complete!');
+  }
 }
 
 // Run the script
