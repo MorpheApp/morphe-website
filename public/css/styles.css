@@ -2185,18 +2185,11 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
-.source-card__name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
-    word-break: break-all;
-}
-
 .source-card__url {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
+    font-weight: 700;
     font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-    color: var(--text-tertiary);
+    color: var(--text-primary);
     word-break: break-all;
     line-height: 1.5;
 }
