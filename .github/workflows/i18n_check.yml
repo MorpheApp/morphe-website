@@ -32,23 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Extract i18n keys from HTML
-        run: npm run i18n:extract
-
-      - name: Check for changes in en.json
-        id: check_changes
-        run: |
-          if git diff --exit-code public/locales/en.json; then
-            echo "changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "changes=true" >> $GITHUB_OUTPUT
-          fi
-
       - name: Check translation completeness
         id: check_status
         run: |
           # Run check and save output
-          npm run i18n:check > translation-report.txt
+          # We allow failure here so we can generate the report/comment
+          npm run i18n:check > translation-report.txt || true
           cat translation-report.txt
           
           # Extract average completion
@@ -59,16 +48,38 @@ jobs:
           MISSING=$(grep -E "^\s+\d+/\d+ translated, [1-9]\d* missing" translation-report.txt | wc -l || echo "0")
           UNTRANSLATED_LOCALES=$(grep -E "^\s+\d+/\d+ translated, \d+ missing, [1-9]\d* untranslated" translation-report.txt | wc -l || echo "0")
           ZOMBIES=$(grep -E "^[a-z-]+: \d+ zombie key" translation-report.txt | wc -l || echo "0")
+          HAS_ERRORS=$(grep "✖ Error" translation-report.txt | wc -l || echo "0")
           
           echo "missing_count=$MISSING" >> $GITHUB_OUTPUT
           echo "untranslated_count=$UNTRANSLATED_LOCALES" >> $GITHUB_OUTPUT
           echo "zombie_count=$ZOMBIES" >> $GITHUB_OUTPUT
           
           # Determine if there are issues
-          if [ "$AVG" -eq 100 ] && [ "$MISSING" -eq 0 ] && [ "$UNTRANSLATED_LOCALES" -eq 0 ] && [ "$ZOMBIES" -eq 0 ]; then
+          if [ "$AVG" -eq 100 ] && [ "$MISSING" -eq 0 ] && [ "$UNTRANSLATED_LOCALES" -eq 0 ] && [ "$ZOMBIES" -eq 0 ] && [ "$HAS_ERRORS" -eq 0 ]; then
             echo "has_issues=false" >> $GITHUB_OUTPUT
           else
             echo "has_issues=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Extract i18n keys from HTML
+        run: npm run i18n:extract
+
+      - name: Check for changes in base files
+        id: check_changes
+        run: |
+          # Check if en.json or lang-preload.js were updated by extract
+          CHANGES=false
+          if ! git diff --exit-code public/locales/en.json; then
+            CHANGES=true
+          fi
+          if ! git diff --exit-code public/js/lang-preload.js; then
+            CHANGES=true
+          fi
+          
+          if [ "$CHANGES" = "true" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Generate PR comment
@@ -93,8 +104,8 @@ jobs:
             echo "The \`en.json\` file has been modified. Please run:" >> comment.md
             echo "\`\`\`bash" >> comment.md
             echo "npm run i18n:extract" >> comment.md
-            echo "git add public/locales/en.json" >> comment.md
-            echo "git commit -m 'chore: update en.json baseline'" >> comment.md
+            echo "git add public/locales/en.json public/js/lang-preload.js" >> comment.md
+            echo "git commit -m 'chore: update i18n base files'" >> comment.md
             echo "\`\`\`" >> comment.md
             echo "" >> comment.md
           fi
@@ -195,7 +206,7 @@ jobs:
             
             if (enChanges) {
               state = 'failure';
-              description = '❌ en.json needs to be committed';
+              description = '❌ i18n base files need to be updated';
             } else if (avg === 100 && !hasIssues) {
               state = 'success';
               description = '✅ All translations complete';
