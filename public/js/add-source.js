@@ -19,9 +19,7 @@
     // Set source icon
     var iconImg = document.getElementById('source-icon');
     if (iconImg) {
-        iconImg.src = isGitLab
-            ? 'https://unavatar.io/gitlab/' + repoOwner
-            : 'https://github.com/' + repoOwner + '.png';
+        iconImg.src = 'http://api.morphe.software/v2/avatar/' + repoOwner
         iconImg.alt = repoOwner;
     }
 
@@ -39,8 +37,8 @@
 
     // Populate source info card
     var match = url.match(/(?:github|gitlab)\.com\/([^/?#]+\/[^/?#]+)/);
-    document.getElementById('source-name').textContent = name || (match ? match[1] : url);
-    document.getElementById('source-url').textContent  = url;
+    var urlEl = document.getElementById('source-url');
+    if (urlEl) urlEl.textContent = url;
 
     // intent:// scheme - forces Chrome to fire a proper Android intent
     // (window.location.href with the same URL is ignored as "same page")

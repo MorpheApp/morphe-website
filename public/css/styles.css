@@ -852,8 +852,7 @@ body {
     .feature-card:hover,
     .community-card:hover,
     .feature-slide:hover,
-    .testimonial-card:hover,
-    .version-card:hover {
+    .testimonial-card:hover {
         box-shadow: var(--shadow-md);
     }
 }
@@ -1394,7 +1393,6 @@ body {
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
-    transition: box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
@@ -2187,18 +2185,11 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
-.source-card__name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
-    word-break: break-all;
-}
-
 .source-card__url {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
+    font-weight: 700;
     font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-    color: var(--text-tertiary);
+    color: var(--text-primary);
     word-break: break-all;
     line-height: 1.5;
 }

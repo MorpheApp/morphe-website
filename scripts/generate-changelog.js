@@ -20,8 +20,11 @@ const MAX_PATCHES_RELEASES = 10;
 
 const categoryConfig = {
     'features': { icon: 'auto_awesome', class: 'icon-added' },
+    'new features': { icon: 'auto_awesome', class: 'icon-added' },
     'bug fixes': { icon: 'bug_report', class: 'icon-fixed' },
-    'perf': { icon: 'speed', class: 'icon-perf' }
+    'perf': { icon: 'speed', class: 'icon-perf' },
+    'improvements': { icon: 'speed', class: 'icon-perf' },
+    'updated app support': { icon: 'update', class: 'icon-bump' }
 };
 
 function fetchUrl(url) {
@@ -146,7 +149,10 @@ function parseChangelog(markdown, type) {
 
         const categoryMatch = line.match(/^###\s+(.+)/);
         if (categoryMatch) {
-            const categoryName = categoryMatch[1].toLowerCase().trim();
+            const categoryName = categoryMatch[1]
+                .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '')
+                .toLowerCase()
+                .trim();
             currentCategory = categoryName;
             if (!currentVersion.categories[categoryName]) {
                 currentVersion.categories[categoryName] = [];

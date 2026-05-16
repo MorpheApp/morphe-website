@@ -1,12 +1,12 @@
 // Language Preloader - prevents flash of wrong language
 // This must be loaded synchronously in <head> before any content renders
 // AUTO-GENERATED - DO NOT EDIT MANUALLY
-// Run 'npm run generate-i18n-keys' to update this file
+// Run 'node scripts/generate-i18n-keys.js' to update this file
 
 (function() {
     'use strict';
 
-    const SUPPORTED_LOCALES = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'vi-VN', 'tr-TR', 'uk-UA', 'ar', 'ja-JP', 'ko-KR', 'zh-CN', 'zh-TW'];
+    const SUPPORTED_LOCALES = ['en', 'cs-CZ', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sk-SK', 'sv-SE', 'vi-VN', 'tr-TR', 'uk-UA', 'ar', 'ja-JP', 'ko-KR', 'zh-CN', 'zh-TW'];
 
     const STORAGE_KEY = 'morphe-language';
 

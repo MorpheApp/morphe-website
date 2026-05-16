@@ -350,7 +350,7 @@ function generateLangPreloadScript() {
   const script = `// Language Preloader - prevents flash of wrong language
 // This must be loaded synchronously in <head> before any content renders
 // AUTO-GENERATED - DO NOT EDIT MANUALLY
-// Run 'npm run generate-i18n-keys' to update this file
+// Run 'node scripts/generate-i18n-keys.js' to update this file
 
 (function() {
     'use strict';
