@@ -186,26 +186,43 @@ function generateReport(locales) {
   console.log('-'.repeat(60));
 
   const completeness = checkCompleteness(locales);
-  Object.keys(completeness).sort().forEach(locale => {
-    const data = completeness[locale];
-    const bar = '█'.repeat(Math.floor(data.percentage / 2));
-    const empty = '░'.repeat(50 - Math.floor(data.percentage / 2));
+  const sortedLocales = Object.keys(completeness).sort();
 
-    console.log(`${locale.padEnd(8)} ${bar}${empty} ${data.percentage}%`);
-    console.log(`         ${data.translated}/${data.total} translated, ${data.missing} missing, ${data.untranslated} untranslated`);
+  const complete = [];
+  const incomplete = [];
 
-    if (data.missingKeys.length > 0 && data.missingKeys.length <= 10) {
-      console.log(`         Missing: ${data.missingKeys.join(', ')}`);
-    } else if (data.missingKeys.length > 10) {
-      console.log(`         Missing: ${data.missingKeys.slice(0, 5).join(', ')} ... and ${data.missingKeys.length - 5} more`);
+  sortedLocales.forEach(locale => {
+    if (completeness[locale].percentage === 100) {
+      complete.push(locale);
+    } else {
+      incomplete.push(locale);
     }
-    if (data.untranslatedKeys.length > 0 && data.untranslatedKeys.length <= 10) {
-      console.log(`         Untranslated: ${data.untranslatedKeys.join(', ')}`);
-    } else if (data.untranslatedKeys.length > 10) {
-      console.log(`         Untranslated: ${data.untranslatedKeys.slice(0, 5).join(', ')} ... and ${data.untranslatedKeys.length - 5} more`);
-    }
-    console.log();
   });
+
+  if (complete.length > 0) {
+    console.log(`✓ 100% Complete: ${complete.join(', ')}`);
+    console.log();
+  }
+
+  if (incomplete.length > 0) {
+    incomplete.forEach(locale => {
+      const data = completeness[locale];
+      console.log(`${locale.padEnd(8)} ${data.percentage}% complete`);
+      console.log(`         ${data.translated}/${data.total} translated, ${data.missing} missing, ${data.untranslated} untranslated`);
+
+      if (data.missingKeys.length > 0 && data.missingKeys.length <= 10) {
+        console.log(`         Missing: ${data.missingKeys.join(', ')}`);
+      } else if (data.missingKeys.length > 10) {
+        console.log(`         Missing: ${data.missingKeys.slice(0, 5).join(', ')} ... and ${data.missingKeys.length - 5} more`);
+      }
+      if (data.untranslatedKeys.length > 0 && data.untranslatedKeys.length <= 10) {
+        console.log(`         Untranslated: ${data.untranslatedKeys.join(', ')}`);
+      } else if (data.untranslatedKeys.length > 10) {
+        console.log(`         Untranslated: ${data.untranslatedKeys.slice(0, 5).join(', ')} ... and ${data.untranslatedKeys.length - 5} more`);
+      }
+      console.log();
+    });
+  }
 
   // Zombie keys check
   const zombies = findZombieKeys(locales);
