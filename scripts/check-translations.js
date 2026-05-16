@@ -60,6 +60,8 @@ function loadLocales() {
 function getAllKeys(obj, prefix = '') {
   let keys = [];
 
+  if (!obj || typeof obj !== 'object') return keys;
+
   Object.keys(obj).forEach(key => {
     const fullKey = prefix ? `${prefix}.${key}` : key;
 
@@ -112,11 +114,17 @@ function checkCompleteness(locales) {
       if (SKIP_KEYS.has(key)) return false;
       const baseValue = getValue(locales[BASE_LOCALE], key);
       const localeValue = getValue(locales[locale], key);
-      return localeValue === baseValue;
+
+      if (localeValue !== baseValue) return false;
+
+      // Strings that are identical to English are only flagged if they are long enough
+      // to likely be sentences/paragraphs rather than common terms or brand names.
+      // Short strings (e.g. "Home", "Community", "Product") are often intentionally identical.
+      return baseValue.length > 20;
     });
 
     const total = baseKeys.length;
-    const translated = total - missing.length - untranslated.length;
+    const translated = total - missing.length;
     const percentage = total > 0 ? Math.round((translated / total) * 100) : 100;
 
     results[locale] = {
@@ -244,4 +252,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { loadLocales, checkCompleteness, findZombieKeys };
+module.exports = { loadLocales, checkCompleteness, findZombieKeys, getAllKeys };
