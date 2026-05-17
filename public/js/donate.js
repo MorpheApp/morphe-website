@@ -12,7 +12,7 @@
             '    nodes { tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
             '  backers: members(role: BACKER, limit: 40, orderBy: { field: CREATED_AT, direction: DESC }) {',
-            '    totalCount nodes { tier { name } account { name imageUrl(height: 128) slug website } }',
+            '    totalCount nodes { createdAt totalDonations { value } tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
             '}}'
         ].join(' ')
@@ -79,12 +79,24 @@
         if (!container) return;
         if (stateLoad) stateLoad.hidden = true;
 
-        var backers = nodes.filter(function (n) { return !isSponsor(n); });
+        var filteredNodes = nodes.filter(function (n) { return !isSponsor(n); });
 
-        if (backers.length === 0) {
+        if (filteredNodes.length === 0) {
             showEmpty('donate-state-loading', 'donate-state-empty');
             return;
         }
+
+        var recurring = filteredNodes.filter(function (n) { return !!n.tier; });
+        var oneTime   = filteredNodes.filter(function (n) { return !n.tier; });
+
+        recurring.sort(function (a, b) {
+            var valA = (a.totalDonations && a.totalDonations.value) || 0;
+            var valB = (b.totalDonations && b.totalDonations.value) || 0;
+            return valB - valA;
+        });
+
+        // oneTime is already sorted by CREATED_AT DESC from the API
+        var backers = recurring.concat(oneTime);
 
         backers.forEach(function (node) {
             var account = node.account;
