@@ -8,8 +8,11 @@
     var GQL_QUERY = JSON.stringify({
         query: [
             '{ collective(slug: "' + OC_SLUG + '") {',
-            '  members(role: BACKER, limit: 20, orderBy: { field: CREATED_AT, direction: DESC }) {',
-            '    totalCount nodes { tier { name } account { name imageUrl(height: 128) slug website } }',
+            '  sponsors: members(role: BACKER, limit: 40, orderBy: { field: CREATED_AT, direction: DESC }) {',
+            '    nodes { tier { name } account { name imageUrl(height: 128) slug website } }',
+            '  }',
+            '  backers: members(role: BACKER, limit: 40, orderBy: { field: CREATED_AT, direction: DESC }) {',
+            '    totalCount nodes { createdAt totalDonations { value } tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
             '}}'
         ].join(' ')
@@ -25,7 +28,9 @@
     function isSponsor(node) {
         if (!node.tier || !node.tier.name) return false;
         var name = node.tier.name.toLowerCase();
-        return name.indexOf('mega') !== -1 || name.indexOf('sponsor') !== -1;
+        return name.indexOf('mega') !== -1 ||
+               name.indexOf('sponsor') !== -1 ||
+               name.indexOf('supporter') !== -1;
     }
 
     function buildSponsors(nodes) {
@@ -74,12 +79,24 @@
         if (!container) return;
         if (stateLoad) stateLoad.hidden = true;
 
-        var backers = nodes.filter(function (n) { return !isSponsor(n); });
+        var filteredNodes = nodes.filter(function (n) { return !isSponsor(n); });
 
-        if (backers.length === 0) {
+        if (filteredNodes.length === 0) {
             showEmpty('donate-state-loading', 'donate-state-empty');
             return;
         }
+
+        var recurring = filteredNodes.filter(function (n) { return !!n.tier; });
+        var oneTime   = filteredNodes.filter(function (n) { return !n.tier; });
+
+        recurring.sort(function (a, b) {
+            var valA = (a.totalDonations && a.totalDonations.value) || 0;
+            var valB = (b.totalDonations && b.totalDonations.value) || 0;
+            return valB - valA;
+        });
+
+        // oneTime is already sorted by CREATED_AT DESC from the API
+        var backers = recurring.concat(oneTime);
 
         backers.forEach(function (node) {
             var account = node.account;
@@ -136,10 +153,14 @@
             return r.json();
         })
         .then(function (data) {
-            var members = data.data && data.data.collective && data.data.collective.members;
-            if (members && members.nodes) {
-                buildSponsors(members.nodes);
-                buildBackers(members.nodes, members.totalCount);
+            var collective = data.data && data.data.collective;
+            if (collective) {
+                var sponsorNodes = (collective.sponsors && collective.sponsors.nodes) || [];
+                var backerNodes = (collective.backers && collective.backers.nodes) || [];
+                var totalCount = (collective.backers && collective.backers.totalCount) || 0;
+
+                buildSponsors(sponsorNodes);
+                buildBackers(backerNodes, totalCount);
             } else {
                 onFail();
             }
