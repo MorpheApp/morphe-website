@@ -8,10 +8,10 @@
     var GQL_QUERY = JSON.stringify({
         query: [
             '{ collective(slug: "' + OC_SLUG + '") {',
-            '  sponsors: members(role: BACKER, limit: 40, orderBy: { field: CREATED_AT, direction: DESC }) {',
+            '  sponsors: members(role: BACKER, limit: 200, orderBy: { field: CREATED_AT, direction: DESC }) {',
             '    nodes { tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
-            '  backers: members(role: BACKER, limit: 40, orderBy: { field: CREATED_AT, direction: DESC }) {',
+            '  backers: members(role: BACKER, limit: 200, orderBy: { field: CREATED_AT, direction: DESC }) {',
             '    totalCount nodes { createdAt totalDonations { value } tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
             '}}'
@@ -92,7 +92,15 @@
         recurring.sort(function (a, b) {
             var valA = (a.totalDonations && a.totalDonations.value) || 0;
             var valB = (b.totalDonations && b.totalDonations.value) || 0;
-            return valB - valA;
+
+            if (valB !== valA) {
+                return valB - valA;
+            }
+
+            // Secondary sort: Longest donating (Oldest first)
+            var dateA = new Date(a.createdAt || 0);
+            var dateB = new Date(b.createdAt || 0);
+            return dateA - dateB;
         });
 
         // oneTime is already sorted by CREATED_AT DESC from the API
