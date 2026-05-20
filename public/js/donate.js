@@ -103,7 +103,20 @@
             return dateA - dateB;
         });
 
-        // oneTime is already sorted by CREATED_AT DESC from the API
+        oneTime.sort(function (a, b) {
+            var valA = (a.totalDonations && a.totalDonations.value) || 0;
+            var valB = (b.totalDonations && b.totalDonations.value) || 0;
+
+            if (valB !== valA) {
+                return valB - valA;
+            }
+
+            // Secondary sort: Most recent first (as it was before)
+            var dateA = new Date(a.createdAt || 0);
+            var dateB = new Date(b.createdAt || 0);
+            return dateB - dateA;
+        });
+
         var backers = recurring.concat(oneTime);
 
         backers.forEach(function (node) {
