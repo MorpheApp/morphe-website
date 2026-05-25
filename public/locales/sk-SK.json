@@ -303,7 +303,6 @@
   "community": {
     "subtitle": "Sleduj nás, hláš problémy a pomôž zlepšovať Morphe",
     "github-desc": "Prehliadaj zdrojový kód, hláš chyby a prispievaj do vývoja Morphe.",
-    "x-desc": "Zostaň v obraze s najnovšími správami, vydaniami a oznámeniami.",
     "reddit-desc": "Zapojte sa do diskusií, zdieľajte tipy a spojte sa s ďalšími používateľmi Morphe.",
     "crowdin-desc": "Pomôžte preložiť Morphe do vášho jazyka a sprístu pniť ho pre každého."
   },

@@ -257,7 +257,6 @@
   "community": {
     "subtitle": "Hãy theo dõi chúng tôi và cùng nhau cải thiện Morphe mỗi ngày",
     "github-desc": "Xem mã nguồn, báo lỗi và đóng góp cho quá trình phát triển Morphe.",
-    "x-desc": "Cập nhật tin tức, bản phát hành và các thông báo mới nhất.",
     "reddit-desc": "Tham gia trò chuyện, chia sẻ mẹo và kết nối với cộng đồng Morphe.",
     "crowdin-desc": "Giúp dịch Morphe sang ngôn ngữ của bạn để ai cũng có thể sử dụng dễ dàng."
   },
