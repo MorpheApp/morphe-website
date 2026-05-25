@@ -303,7 +303,6 @@
   "community": {
     "subtitle": "Bizi takip et, sorunları bildir ve Morphe'yi daha iyi yapmaya yardım et",
     "github-desc": "Kaynak koduna göz at, hataları bildir ve Morphe geliştirmesine katkıda bulun.",
-    "x-desc": "En son haberler, sürümler ve duyurularla güncel kal.",
     "reddit-desc": "Tartışmalara katıl, ipuçlarını paylaş ve diğer Morphe kullanıcılarıyla bağlantı kur.",
     "crowdin-desc": "Morphe'yi dilinize çevirmeye yardımcı olun ve herkes için erişilebilir hale getirin."
   },

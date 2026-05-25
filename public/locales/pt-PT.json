@@ -303,7 +303,6 @@
   "community": {
     "subtitle": "Segue-nos, reporta problemas e ajuda a melhorar o Morphe",
     "github-desc": "Navega pelo código-fonte, reporta bugs e contribui para o desenvolvimento do Morphe.",
-    "x-desc": "Mantém-te atualizado com as últimas notícias, lançamentos e anúncios.",
     "reddit-desc": "Participa em discussões, partilha dicas e liga-te a outros utilizadores do Morphe.",
     "crowdin-desc": "Ajuda a traduzir o Morphe para a tua língua e torna-o acessível a todos."
   },

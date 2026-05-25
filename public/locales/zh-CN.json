@@ -303,7 +303,6 @@
   "community": {
     "subtitle": "关注我们，报告问题，帮助改进 Morphe",
     "github-desc": "浏览源代码、报告错误并为 Morphe 开发做出贡献。",
-    "x-desc": "获取最新新闻、发布和公告。",
     "reddit-desc": "参与讨论，分享技巧，与其他 Morphe 用户建立联系。",
     "crowdin-desc": "帮助将 Morphe 翻译成您的语言，让每个人都能使用。"
   },

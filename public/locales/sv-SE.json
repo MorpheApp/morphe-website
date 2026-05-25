@@ -257,7 +257,6 @@
   "community": {
     "subtitle": "Följ oss, rapportera problem och hjälp till att göra Morphe bättre",
     "github-desc": "Bläddra i källkoden, rapportera fel och bidra till Morphes utveckling.",
-    "x-desc": "Håll dig uppdaterad om de senaste nyheterna och versionerna.",
     "reddit-desc": "Delta i diskussioner, dela tips och kom i kontakt med andra Morphe-användare.",
     "crowdin-desc": "Hjälp till att göra Morphe tillgängligt för alla genom att översätta det till ditt språk."
   },
