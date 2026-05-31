@@ -377,7 +377,7 @@
         <div class="faq-list">
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What apps can Morphe patch?">
-                    <div class="faq-number">1</div>
+                    <span class="faq-number">1</span>
                     <span class="faq-text" data-i18n="faq.q1">What apps can Morphe patch?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -388,7 +388,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
-                    <div class="faq-number">2</div>
+                    <span class="faq-number">2</span>
                     <span class="faq-text" data-i18n="faq.q2">Is Morphe safe?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -399,7 +399,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
-                    <div class="faq-number">3</div>
+                    <span class="faq-number">3</span>
                     <span class="faq-text" data-i18n="faq.q3">Will Morphe brick my phone?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -410,7 +410,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I customize apps to my preference?">
-                    <div class="faq-number">4</div>
+                    <span class="faq-number">4</span>
                     <span class="faq-text" data-i18n="faq.q4">Can I customize apps to my preference?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -421,7 +421,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
-                    <div class="faq-number">5</div>
+                    <span class="faq-number">5</span>
                     <span class="faq-text" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -438,7 +438,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Why the name Morphe?">
-                    <div class="faq-number">6</div>
+                    <span class="faq-number">6</span>
                     <span class="faq-text" data-i18n="faq.q6">Why the name Morphe?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -449,7 +449,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe magic?">
-                    <div class="faq-number">7</div>
+                    <span class="faq-number">7</span>
                     <span class="faq-text" data-i18n="faq.q7">Is Morphe magic?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -460,7 +460,7 @@
 
             <div class="faq-item">
                 <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I contribute to Morphe?">
-                    <div class="faq-number">8</div>
+                    <span class="faq-number">8</span>
                     <span class="faq-text" data-i18n="faq.q8">Can I contribute to Morphe?</span>
                     <span class="material-symbols-rounded">expand_more</span>
                 </button>
@@ -483,27 +483,39 @@
             <p class="section-subtitle" data-i18n="community.subtitle">Follow us, report issues, and help make Morphe better</p>
         </div>
         <div class="community-grid">
-            <a href="https://github.com/MorpheApp" target="_blank" rel="noopener" class="community-card" data-umami-event="GitHub Link Click">
+            <div class="community-card">
+                <a href="https://github.com/MorpheApp" target="_blank" rel="noopener" class="community-card-link" data-umami-event="GitHub Link Click" aria-label="GitHub"></a>
                 <div class="feature-icon">
                     <img src="images/github.svg" alt="GitHub" class="community-icon-img">
                 </div>
                 <h3 class="feature-title">GitHub</h3>
                 <p class="feature-description" data-i18n="community.github-desc">Browse the source code, report bugs, and contribute to Morphe development.</p>
-            </a>
-            <a href="https://reddit.com/r/MorpheApp" target="_blank" rel="noopener" class="community-card" data-umami-event="Reddit Link Click">
+            </div>
+
+            <div class="community-card">
+                <a href="https://reddit.com/r/MorpheApp" target="_blank" rel="noopener" class="community-card-link" data-umami-event="Reddit Link Click" aria-label="Reddit"></a>
                 <div class="feature-icon">
                     <img src="images/reddit.svg" alt="Reddit" class="community-icon-img">
                 </div>
                 <h3 class="feature-title">Reddit</h3>
                 <p class="feature-description" data-i18n="community.reddit-desc">Join discussions, share tips, and connect with other Morphe users.</p>
-            </a>
-            <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="community-card" data-umami-event="Crowdin Link Click">
+            </div>
+            <div class="community-card">
+                <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" class="community-card-link" data-umami-event="Crowdin Link Click" aria-label="Crowdin"></a>
                 <div class="feature-icon">
                     <img src="images/crowdin-small.svg" alt="Crowdin" class="community-icon-img">
                 </div>
                 <h3 class="feature-title">Crowdin</h3>
                 <p class="feature-description" data-i18n="community.crowdin-desc">Help translate Morphe into your language and make it accessible to everyone.</p>
-            </a>
+            </div>
+            <div class="community-card">
+                <a href="https://morphe-patches.software/" target="_blank" rel="noopener noreferrer" class="community-card-link" data-umami-event="Patch Bundles Link Click" aria-label="Patch Bundles"></a>
+                <div class="feature-icon">
+                    <span class="material-symbols-rounded" style="font-size:2rem;">extension</span>
+                </div>
+                <h3 class="feature-title" data-i18n="community.patches-title">Patch Bundles</h3>
+                <p class="feature-description" data-i18n="community.patches-desc">Community-maintained patch bundles for Morphe apps, built and supported by users.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -553,6 +565,7 @@
                     <a href="https://github.com/MorpheApp" target="_blank" rel="noopener" data-umami-event="Footer GitHub Click">GitHub</a>
                     <a href="https://reddit.com/r/MorpheApp" target="_blank" rel="noopener" data-umami-event="Footer Reddit Click">Reddit</a>
                     <a href="https://crowdin.com/project/morphe" target="_blank" rel="noopener noreferrer" data-umami-event="Footer Crowdin Click">Crowdin</a>
+                    <a href="https://morphe-patches.software" target="_blank" rel="noopener noreferrer" data-i18n="community.patches-title" data-umami-event="Footer Patch Bundles Click">Patch Bundles</a>
                 </div>
                 <div class="footer-column language-selector-container">
                     <h4 data-i18n="footer.language">Language</h4>

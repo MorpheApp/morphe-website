@@ -304,7 +304,9 @@
     "subtitle": "Volg ons, meld problemen en help Morphe beter te maken",
     "github-desc": "Bladér door de broncode, meld bugs en draag bij aan Morphe-ontwikkeling.",
     "reddit-desc": "Neem deel aan discussies, deel tips en maak contact met andere Morphe-gebruikers.",
-    "crowdin-desc": "Help Morphe in jouw taal te vertalen en maak het voor iedereen toegankelijk."
+    "crowdin-desc": "Help Morphe in jouw taal te vertalen en maak het voor iedereen toegankelijk.",
+    "patches-title": "Patchpakketten",
+    "patches-desc": "Door de community onderhouden patchpakketten voor Morphe-apps, gebouwd en ondersteund door gebruikers."
   },
   "add-source": {
     "title": "Patchbron toevoegen",

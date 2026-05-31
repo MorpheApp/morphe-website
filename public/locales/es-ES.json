@@ -304,7 +304,9 @@
     "subtitle": "Síguenos, reporta problemas y ayuda a mejorar Morphe",
     "github-desc": "Explora el código fuente, reporta errores y contribuye al desarrollo de Morphe.",
     "reddit-desc": "Únete a discusiones, comparte consejos y conéctate con otros usuarios de Morphe.",
-    "crowdin-desc": "Ayuda a traducir Morphe a tu idioma y hazlo accesible para todos."
+    "crowdin-desc": "Ayuda a traducir Morphe a tu idioma y hazlo accesible para todos.",
+    "patches-title": "Paquetes de Parches",
+    "patches-desc": "Paquetes de parches mantenidos por la comunidad para las apps de Morphe, creados y respaldados por usuarios."
   },
   "add-source": {
     "title": "Agregar fuente de parches",

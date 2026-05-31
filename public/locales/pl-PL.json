@@ -258,7 +258,9 @@
     "subtitle": "Obserwuj nas, zgłaszaj błędy i pomóż ulepszać Morphe",
     "github-desc": "Przeglądaj kod źródłowy, zgłaszaj błędy i pomóż w rozwoju Morphe.",
     "reddit-desc": "Dołącz do dyskusji, dziel się poradami i poznaj innych użytkowników Morphe.",
-    "crowdin-desc": "Pomóż tłumaczyć Morphe na swój język i spraw, by był dostępny dla każdego."
+    "crowdin-desc": "Pomóż tłumaczyć Morphe na swój język i spraw, by był dostępny dla każdego.",
+    "patches-title": "Pakiety Poprawek",
+    "patches-desc": "Pakiety poprawek utrzymywane przez społeczność dla aplikacji Morphe, tworzone i wspierane przez użytkowników."
   },
   "donate": {
     "title": "Wsparcie",

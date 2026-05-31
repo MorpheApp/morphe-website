@@ -304,7 +304,9 @@
     "subtitle": "Sleduj nás, hláš problémy a pomôž zlepšovať Morphe",
     "github-desc": "Prehliadaj zdrojový kód, hláš chyby a prispievaj do vývoja Morphe.",
     "reddit-desc": "Zapojte sa do diskusií, zdieľajte tipy a spojte sa s ďalšími používateľmi Morphe.",
-    "crowdin-desc": "Pomôžte preložiť Morphe do vášho jazyka a sprístu pniť ho pre každého."
+    "crowdin-desc": "Pomôžte preložiť Morphe do vášho jazyka a sprístu pniť ho pre každého.",
+    "patches-title": "Balíky záplat",
+    "patches-desc": "Balíky záplat pre aplikácie Morphe udržiavané komunitou, vytvorené a podporované používateľmi."
   },
   "add-source": {
     "title": "Pridať zdroj patchov",
