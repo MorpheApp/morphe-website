@@ -257,7 +257,7 @@
     "reddit-desc": "다른 Morphe 사용자들과 팁을 나누고 이야기를 나눠보세요.",
     "crowdin-desc": "번역에 참여해 더 많은 사람들이 Morphe를 자기 언어로 쓸 수 있게 도와주세요.",
     "patches-title": "패치 번들",
-    "patches-desc": "커뮤니티가 관리하는 Morphe 앱용 패치 번들로, 사용자들이 직접 만들고 지원합니다."
+    "patches-desc": "커뮤니티가 관리하는 패치 번들로, 최종 사용자들이 직접 만들고 지원합니다."
   },
   "donate": {
     "title": "지원",

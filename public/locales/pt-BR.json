@@ -303,7 +303,7 @@
     "reddit-desc": "Participe de discussões, compartilhe dicas e conecte-se com outros usuários do Morphe.",
     "crowdin-desc": "Ajude a traduzir o Morphe para o seu idioma e torne-o acessível a todos.",
     "patches-title": "Pacotes de Patches",
-    "patches-desc": "Pacotes de patches mantidos pela comunidade para os apps Morphe, criados e apoiados por usuários."
+    "patches-desc": "Pacotes de patches mantidos pela comunidade, criados e apoiados por usuários finais."
   },
   "add-source": {
     "title": "Adicionar fonte de patches",
