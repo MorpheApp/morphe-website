@@ -233,8 +233,6 @@
   "faq": {
     "title": "Vanliga frågor",
     "subtitle": "Allt du behöver veta om Morphe",
-    "q1": "Vilka appar kan Morphe modifiera?",
-    "a1": "Du kan modifiera vilken app du vill. Så länge som du vill modifiera YouTube, YouTube Music eller Reddit. Vi arbetar ständigt med att utöka stödet för fler appar.",
     "q2": "Är Morphe säkert?",
     "a2": "Så säkert som det kan vara att modifiera obfuskerad bytekod. All källkod för Morphe är öppen och tillgänglig för alla att granska. Vår community överser och bidrar aktivt till kodbasen.",
     "q3": "Kan Morphe få min telefon att gå sönder?",

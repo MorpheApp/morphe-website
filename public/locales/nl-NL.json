@@ -127,8 +127,6 @@
   "faq": {
     "title": "Veelgestelde vragen",
     "subtitle": "Alles wat je moet weten over Morphe",
-    "q1": "Welke apps kan Morphe aanpassen?",
-    "a1": "Je kunt elke app patchen die je wilt, zolang het YouTube, YouTube Music of Reddit is. We werken voortdurend aan het uitbreiden van de ondersteuning naar meer apps.",
     "q2": "Is Morphe veilig?",
     "a2": "Zo veilig als bytecode-modificatie kan zijn.",
     "q3": "Kan Morphe mijn telefoon beschadigen?",

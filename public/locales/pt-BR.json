@@ -127,8 +127,6 @@
   "faq": {
     "title": "Perguntas frequentes",
     "subtitle": "Tudo o que você precisa saber sobre o Morphe",
-    "q1": "Quais apps o Morphe pode modificar?",
-    "a1": "Você pode modificar qualquer aplicativo que quiser, contanto que seja YouTube, YouTube Music ou Reddit. Estamos constantemente trabalhando para expandir o suporte para mais apps.",
     "q2": "O Morphe é seguro?",
     "a2": "Tão seguro quanto a modificação de bytecode ofuscado pode ser.",
     "q3": "O Morphe pode danificar meu telefone?",

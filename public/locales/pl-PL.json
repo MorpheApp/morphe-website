@@ -233,8 +233,6 @@
   "faq": {
     "title": "Często zadawane pytania",
     "subtitle": "Wszystko, co musisz wiedzieć o Morphe",
-    "q1": "Jakie aplikacje obsługuje Morphe?",
-    "a1": "Możesz modyfikować co tylko chcesz... pod warunkiem, że chcesz YouTube'a, YouTube Music lub Reddita. Cały czas pracujemy nad wsparciem dla kolejnych apek.",
     "q2": "Czy Morphe jest bezpieczne?",
     "a2": "Tak bezpieczne, jak tylko może być modyfikowanie zaciemnionego kodu bajtowego. Cały kod Morphe jest otwarty, więc każdy może go przejrzeć. Nasza społeczność na bieżąco go sprawdza i rozwija.",
     "q3": "Czy Morphe zamieni mój telefon w cegłę?",

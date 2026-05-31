@@ -127,8 +127,6 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "subtitle": "Todo lo que necesitas saber sobre Morphe",
-    "q1": "¿Qué aplicaciones puede parchear Morphe?",
-    "a1": "Puedes modificar cualquier aplicación que quieras, siempre que sea YouTube, YouTube Music o Reddit. Estamos trabajando constantemente para ampliar la compatibilidad a más aplicaciones.",
     "q2": "¿Es seguro Morphe?",
     "a2": "Tan seguro como puede ser modificar bytecode ofuscado. Todo el código fuente de Morphe es de código abierto y está disponible para su revisión. Nuestra comunidad lo revisa y mejora activamente.",
     "q3": "¿Morphe puede dañar mi teléfono?",

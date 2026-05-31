@@ -233,8 +233,6 @@
   "faq": {
     "title": "Câu hỏi thường gặp",
     "subtitle": "Tất cả những gì bạn cần biết về Morphe",
-    "q1": "Morphe có thể vá những ứng dụng nào?",
-    "a1": "Bạn có thể vá bất kỳ ứng dụng nào bạn muốn, miễn là đó là YouTube, YouTube Music hoặc Reddit. Chúng tôi đang liên tục làm việc để mở rộng hỗ trợ cho nhiều ứng dụng hơn.",
     "q2": "Morphe có an toàn không?",
     "a2": "Với những can thiệp sâu vào bytecode đã bị mã hoá, không thể nói là an toàn tuyệt đối. Tuy vậy, Morphe luôn tối ưu để đảm bảo mức an toàn cao nhất trong khả năng. Toàn bộ mã nguồn của Morphe là mã nguồn mở để mọi người kiểm tra và đóng góp.",
     "q3": "Morphe có làm hỏng điện thoại không?",

@@ -127,8 +127,6 @@
   "faq": {
     "title": "Sıkça Sorulan Sorular",
     "subtitle": "Morphe hakkında bilmen gereken her şey",
-    "q1": "Morphe hangi uygulamaları değiştirebilir?",
-    "a1": "İstediğiniz herhangi bir uygulamayı patchleyebilirsiniz, tabii ki YouTube, YouTube Music veya Reddit olduğu sürece. Daha fazla uygulamayı desteklemek için sürekli çalışıyoruz.",
     "q2": "Morphe güvenli mi?",
     "a2": "Bytecode düzenlemenin mümkün olduğu kadar güvenli.",
     "q3": "Morphe telefonuma zarar verir mi?",

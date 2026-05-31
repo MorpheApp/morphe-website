@@ -127,8 +127,6 @@
   "faq": {
     "title": "Questions fréquentes",
     "subtitle": "Tout ce que vous devez savoir sur Morphe",
-    "q1": "Quelles applications Morphe peut-il modifier ?",
-    "a1": "Vous pouvez patcher n’importe quelle application que vous voulez, tant qu’il s’agit de YouTube, YouTube Music ou Reddit. Nous travaillons constamment à étendre la prise en charge à d’autres applications.",
     "q2": "Morphe est-il sûr ?",
     "a2": "Aussi sûr que peut l’être la modification de bytecode obfusqué. Tout le code source de Morphe est open source et accessible publiquement. La communauté le révise et y contribue activement.",
     "q3": "Morphe peut-il endommager mon téléphone ?",

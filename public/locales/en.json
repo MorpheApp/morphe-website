@@ -233,8 +233,6 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about Morphe",
-    "q1": "What apps can Morphe patch?",
-    "a1": "You can patch any app you want. As long as you want YouTube, YouTube Music, or Reddit. We're constantly working on expanding support to more apps.",
     "q2": "Is Morphe safe?",
     "a2": "As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.",
     "q3": "Will Morphe brick my phone?",
