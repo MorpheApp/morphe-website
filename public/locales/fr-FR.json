@@ -1,8 +1,5 @@
 {
   "nav": {
-    "home": "Accueil",
-    "how-it-works": "Comment ça marche",
-    "testimonials": "Témoignages",
     "faq": "FAQ"
   },
   "hero": {
@@ -130,8 +127,6 @@
   "faq": {
     "title": "Questions fréquentes",
     "subtitle": "Tout ce que vous devez savoir sur Morphe",
-    "q1": "Quelles applications Morphe peut-il modifier ?",
-    "a1": "Vous pouvez patcher n’importe quelle application que vous voulez, tant qu’il s’agit de YouTube, YouTube Music ou Reddit. Nous travaillons constamment à étendre la prise en charge à d’autres applications.",
     "q2": "Morphe est-il sûr ?",
     "a2": "Aussi sûr que peut l’être la modification de bytecode obfusqué. Tout le code source de Morphe est open source et accessible publiquement. La communauté le révise et y contribue activement.",
     "q3": "Morphe peut-il endommager mon téléphone ?",
@@ -304,7 +299,9 @@
     "subtitle": "Suivez-nous, signalez des problèmes et aidez à améliorer Morphe",
     "github-desc": "Parcourez le code source, signalez des bugs et contribuez au développement de Morphe.",
     "reddit-desc": "Participez aux discussions, partagez des conseils et connectez-vous avec d'autres utilisateurs de Morphe.",
-    "crowdin-desc": "Aidez à traduire Morphe dans votre langue et rendez-le accessible à tous."
+    "crowdin-desc": "Aidez à traduire Morphe dans votre langue et rendez-le accessible à tous.",
+    "patches-title": "Packs de Patches",
+    "patches-desc": "Packs de patches maintenus par la communauté, créés et soutenus par les utilisateurs finaux."
   },
   "add-source": {
     "title": "Ajouter une source de patchs",

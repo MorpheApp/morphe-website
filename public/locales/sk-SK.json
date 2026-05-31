@@ -1,8 +1,5 @@
 {
   "nav": {
-    "home": "Domov",
-    "how-it-works": "Ako to funguje",
-    "testimonials": "Referencie",
     "faq": "FAQ"
   },
   "hero": {
@@ -130,8 +127,6 @@
   "faq": {
     "title": "Často kladené otázky",
     "subtitle": "Všetko, čo potrebuješ vedieť o Morphe",
-    "q1": "Aké aplikácie môže Morphe upraviť?",
-    "a1": "Akúkoľvek aplikáciu, pokiaľ ide o YouTube alebo YouTube Music.",
     "q2": "Je Morphe bezpečný?",
     "a2": "Tak bezpečný, ako len úprava bytecode môže byť.",
     "q3": "Môže Morphe poškodiť telefón?",
@@ -304,7 +299,9 @@
     "subtitle": "Sleduj nás, hláš problémy a pomôž zlepšovať Morphe",
     "github-desc": "Prehliadaj zdrojový kód, hláš chyby a prispievaj do vývoja Morphe.",
     "reddit-desc": "Zapojte sa do diskusií, zdieľajte tipy a spojte sa s ďalšími používateľmi Morphe.",
-    "crowdin-desc": "Pomôžte preložiť Morphe do vášho jazyka a sprístu pniť ho pre každého."
+    "crowdin-desc": "Pomôžte preložiť Morphe do vášho jazyka a sprístu pniť ho pre každého.",
+    "patches-title": "Balíky záplat",
+    "patches-desc": "Balíky záplat udržiavané komunitou, vytvorené a podporované koncovými používateľmi."
   },
   "add-source": {
     "title": "Pridať zdroj patchov",

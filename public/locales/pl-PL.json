@@ -53,9 +53,6 @@
     "feature3-desc": "Wystarczy jedna instalacja, by obsłużyć wszystkie apki Morphe, nawet po ich aktualizacji."
   },
   "nav": {
-    "home": "Strona główna",
-    "how-it-works": "Jak to działa",
-    "testimonials": "Opinie",
     "faq": "FAQ"
   },
   "hero": {
@@ -236,8 +233,6 @@
   "faq": {
     "title": "Często zadawane pytania",
     "subtitle": "Wszystko, co musisz wiedzieć o Morphe",
-    "q1": "Jakie aplikacje obsługuje Morphe?",
-    "a1": "Możesz modyfikować co tylko chcesz... pod warunkiem, że chcesz YouTube'a, YouTube Music lub Reddita. Cały czas pracujemy nad wsparciem dla kolejnych apek.",
     "q2": "Czy Morphe jest bezpieczne?",
     "a2": "Tak bezpieczne, jak tylko może być modyfikowanie zaciemnionego kodu bajtowego. Cały kod Morphe jest otwarty, więc każdy może go przejrzeć. Nasza społeczność na bieżąco go sprawdza i rozwija.",
     "q3": "Czy Morphe zamieni mój telefon w cegłę?",
@@ -258,7 +253,9 @@
     "subtitle": "Obserwuj nas, zgłaszaj błędy i pomóż ulepszać Morphe",
     "github-desc": "Przeglądaj kod źródłowy, zgłaszaj błędy i pomóż w rozwoju Morphe.",
     "reddit-desc": "Dołącz do dyskusji, dziel się poradami i poznaj innych użytkowników Morphe.",
-    "crowdin-desc": "Pomóż tłumaczyć Morphe na swój język i spraw, by był dostępny dla każdego."
+    "crowdin-desc": "Pomóż tłumaczyć Morphe na swój język i spraw, by był dostępny dla każdego.",
+    "patches-title": "Pakiety Poprawek",
+    "patches-desc": "Pakiety poprawek utrzymywane przez społeczność, tworzone i wspierane przez użytkowników końcowych."
   },
   "donate": {
     "title": "Wsparcie",

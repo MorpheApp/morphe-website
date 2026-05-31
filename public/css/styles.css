@@ -780,10 +780,15 @@ body {
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
-    text-decoration: none;
-    color: inherit;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.community-card-link {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-xl);
 }
 
 .community-icon-img {

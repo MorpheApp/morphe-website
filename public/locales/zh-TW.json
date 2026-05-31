@@ -53,9 +53,6 @@
     "feature3-desc": "安裝一次 MicroG 即可在所有 Morphe 應用程式中使用。更新 YouTube Morphe 和 YT Music Morphe 時無需重新安裝。"
   },
   "nav": {
-    "home": "首頁",
-    "how-it-works": "運作原理",
-    "testimonials": "使用者評價",
     "faq": "常見問題"
   },
   "hero": {
@@ -236,8 +233,6 @@
   "faq": {
     "title": "常見問題",
     "subtitle": "關於 Morphe 您需要知道的一切",
-    "q1": "Morphe 可以修補哪些應用程式？",
-    "a1": "您可以修補任何您想要的應用程式。只要您想要的是 YouTube、YouTube Music 或 Reddit。我們正在不斷努力，擴展對更多應用程式的支援。",
     "q2": "Morphe 安全嗎？",
     "a2": "和修改混淆位元碼一樣安全。Morphe 的所有原始碼都是開源的，任何人都可以自由檢查。我們的社群積極審查並為程式碼庫做出貢獻。",
     "q3": "Morphe 會讓我的手機變磚嗎？",
@@ -258,7 +253,9 @@
     "subtitle": "關注我們，回報問題，協助改善 Morphe",
     "github-desc": "瀏覽原始碼、回報錯誤並為 Morphe 開發做出貢獻。",
     "reddit-desc": "參與討論，分享技巧，與其他 Morphe 使用者建立聯繫。",
-    "crowdin-desc": "協助將 Morphe 翻譯成您的語言，讓每個人都能使用。"
+    "crowdin-desc": "協助將 Morphe 翻譯成您的語言，讓每個人都能使用。",
+    "patches-title": "修補程式包",
+    "patches-desc": "由社群維護的修補程式包，由最終使用者建立並提供支援。"
   },
   "donate": {
     "title": "贊助",

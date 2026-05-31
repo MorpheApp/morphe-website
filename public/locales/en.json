@@ -53,9 +53,6 @@
     "feature3-desc": "Install MicroG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe."
   },
   "nav": {
-    "home": "Home",
-    "how-it-works": "How It Works",
-    "testimonials": "Testimonials",
     "faq": "FAQ"
   },
   "hero": {
@@ -236,8 +233,6 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about Morphe",
-    "q1": "What apps can Morphe patch?",
-    "a1": "You can patch any app you want. As long as you want YouTube, YouTube Music, or Reddit. We're constantly working on expanding support to more apps.",
     "q2": "Is Morphe safe?",
     "a2": "As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.",
     "q3": "Will Morphe brick my phone?",
@@ -258,7 +253,9 @@
     "subtitle": "Follow us, report issues, and help make Morphe better",
     "github-desc": "Browse the source code, report bugs, and contribute to Morphe development.",
     "reddit-desc": "Join discussions, share tips, and connect with other Morphe users.",
-    "crowdin-desc": "Help translate Morphe into your language and make it accessible to everyone."
+    "crowdin-desc": "Help translate Morphe into your language and make it accessible to everyone.",
+    "patches-title": "Patch Bundles",
+    "patches-desc": "Community-maintained patch bundles, created and supported by end users."
   },
   "donate": {
     "title": "Support",

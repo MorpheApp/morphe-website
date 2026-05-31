@@ -83,12 +83,13 @@
                 [current, next] = [next, current];
 
                 // Reset the now-invisible layer instantly (no transition)
-                next.style.transition = 'none';
-                next.classList.replace('visible', 'hidden');
-                next.textContent = '';
-                next.setAttribute('aria-hidden', 'true');
+                const resetLayer = next;
+                resetLayer.style.transition = 'none';
+                resetLayer.classList.replace('visible', 'hidden');
+                resetLayer.textContent = '';
+                resetLayer.setAttribute('aria-hidden', 'true');
                 requestAnimationFrame(() => requestAnimationFrame(() => {
-                    next.style.transition = '';
+                    resetLayer.style.transition = '';
                 }));
 
                 const nextIndex = index + 1;

@@ -1,8 +1,5 @@
 {
   "nav": {
-    "home": "Ana Sayfa",
-    "how-it-works": "Nasıl Çalışır",
-    "testimonials": "Yorumlar",
     "faq": "SSS"
   },
   "hero": {
@@ -130,8 +127,6 @@
   "faq": {
     "title": "Sıkça Sorulan Sorular",
     "subtitle": "Morphe hakkında bilmen gereken her şey",
-    "q1": "Morphe hangi uygulamaları değiştirebilir?",
-    "a1": "İstediğiniz herhangi bir uygulamayı patchleyebilirsiniz, tabii ki YouTube, YouTube Music veya Reddit olduğu sürece. Daha fazla uygulamayı desteklemek için sürekli çalışıyoruz.",
     "q2": "Morphe güvenli mi?",
     "a2": "Bytecode düzenlemenin mümkün olduğu kadar güvenli.",
     "q3": "Morphe telefonuma zarar verir mi?",
@@ -304,7 +299,9 @@
     "subtitle": "Bizi takip et, sorunları bildir ve Morphe'yi daha iyi yapmaya yardım et",
     "github-desc": "Kaynak koduna göz at, hataları bildir ve Morphe geliştirmesine katkıda bulun.",
     "reddit-desc": "Tartışmalara katıl, ipuçlarını paylaş ve diğer Morphe kullanıcılarıyla bağlantı kur.",
-    "crowdin-desc": "Morphe'yi dilinize çevirmeye yardımcı olun ve herkes için erişilebilir hale getirin."
+    "crowdin-desc": "Morphe'yi dilinize çevirmeye yardımcı olun ve herkes için erişilebilir hale getirin.",
+    "patches-title": "Yama Paketleri",
+    "patches-desc": "Topluluk tarafından sürdürülen yama paketleri, son kullanıcılar tarafından oluşturulmuş ve desteklenmektedir."
   },
   "add-source": {
     "title": "Yama kaynağı ekle",

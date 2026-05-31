@@ -53,9 +53,6 @@
     "feature3-desc": "Installera MicroG en gång så fungerar det med alla dina Morphe-appar. Du behöver inte återinstallera det när du uppdaterar YouTube Morphe och YT Music Morphe."
   },
   "nav": {
-    "home": "Start",
-    "how-it-works": "Så fungerar det",
-    "testimonials": "Omdömen",
     "faq": "Vanliga frågor"
   },
   "hero": {
@@ -236,8 +233,6 @@
   "faq": {
     "title": "Vanliga frågor",
     "subtitle": "Allt du behöver veta om Morphe",
-    "q1": "Vilka appar kan Morphe modifiera?",
-    "a1": "Du kan modifiera vilken app du vill. Så länge som du vill modifiera YouTube, YouTube Music eller Reddit. Vi arbetar ständigt med att utöka stödet för fler appar.",
     "q2": "Är Morphe säkert?",
     "a2": "Så säkert som det kan vara att modifiera obfuskerad bytekod. All källkod för Morphe är öppen och tillgänglig för alla att granska. Vår community överser och bidrar aktivt till kodbasen.",
     "q3": "Kan Morphe få min telefon att gå sönder?",
@@ -258,7 +253,9 @@
     "subtitle": "Följ oss, rapportera problem och hjälp till att göra Morphe bättre",
     "github-desc": "Bläddra i källkoden, rapportera fel och bidra till Morphes utveckling.",
     "reddit-desc": "Delta i diskussioner, dela tips och kom i kontakt med andra Morphe-användare.",
-    "crowdin-desc": "Hjälp till att göra Morphe tillgängligt för alla genom att översätta det till ditt språk."
+    "crowdin-desc": "Hjälp till att göra Morphe tillgängligt för alla genom att översätta det till ditt språk.",
+    "patches-title": "Patchpaket",
+    "patches-desc": "Gemenskapsunderhållna patchpaket, byggda och stödda av slutanvändare."
   },
   "donate": {
     "title": "Stöd",

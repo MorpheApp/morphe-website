@@ -1,8 +1,5 @@
 {
   "nav": {
-    "home": "Home",
-    "how-it-works": "Hoe het werkt",
-    "testimonials": "Getuigenissen",
     "faq": "FAQ"
   },
   "hero": {
@@ -130,8 +127,6 @@
   "faq": {
     "title": "Veelgestelde vragen",
     "subtitle": "Alles wat je moet weten over Morphe",
-    "q1": "Welke apps kan Morphe aanpassen?",
-    "a1": "Je kunt elke app patchen die je wilt, zolang het YouTube, YouTube Music of Reddit is. We werken voortdurend aan het uitbreiden van de ondersteuning naar meer apps.",
     "q2": "Is Morphe veilig?",
     "a2": "Zo veilig als bytecode-modificatie kan zijn.",
     "q3": "Kan Morphe mijn telefoon beschadigen?",
@@ -304,7 +299,9 @@
     "subtitle": "Volg ons, meld problemen en help Morphe beter te maken",
     "github-desc": "Bladér door de broncode, meld bugs en draag bij aan Morphe-ontwikkeling.",
     "reddit-desc": "Neem deel aan discussies, deel tips en maak contact met andere Morphe-gebruikers.",
-    "crowdin-desc": "Help Morphe in jouw taal te vertalen en maak het voor iedereen toegankelijk."
+    "crowdin-desc": "Help Morphe in jouw taal te vertalen en maak het voor iedereen toegankelijk.",
+    "patches-title": "Patchpakketten",
+    "patches-desc": "Door de community onderhouden patchpakketten, gebouwd en ondersteund door eindgebruikers."
   },
   "add-source": {
     "title": "Patchbron toevoegen",

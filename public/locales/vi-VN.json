@@ -53,9 +53,6 @@
     "feature3-desc": "Chỉ cần cài MicroG một lần cho tất cả ứng dụng Morphe. Không cần cài lại khi cập nhật."
   },
   "nav": {
-    "home": "Trang chủ",
-    "how-it-works": "Cách dùng",
-    "testimonials": "Người dùng nói gì",
     "faq": "Hỏi đáp"
   },
   "hero": {
@@ -236,8 +233,6 @@
   "faq": {
     "title": "Câu hỏi thường gặp",
     "subtitle": "Tất cả những gì bạn cần biết về Morphe",
-    "q1": "Morphe có thể vá những ứng dụng nào?",
-    "a1": "Bạn có thể vá bất kỳ ứng dụng nào bạn muốn, miễn là đó là YouTube, YouTube Music hoặc Reddit. Chúng tôi đang liên tục làm việc để mở rộng hỗ trợ cho nhiều ứng dụng hơn.",
     "q2": "Morphe có an toàn không?",
     "a2": "Với những can thiệp sâu vào bytecode đã bị mã hoá, không thể nói là an toàn tuyệt đối. Tuy vậy, Morphe luôn tối ưu để đảm bảo mức an toàn cao nhất trong khả năng. Toàn bộ mã nguồn của Morphe là mã nguồn mở để mọi người kiểm tra và đóng góp.",
     "q3": "Morphe có làm hỏng điện thoại không?",
@@ -258,7 +253,9 @@
     "subtitle": "Hãy theo dõi chúng tôi và cùng nhau cải thiện Morphe mỗi ngày",
     "github-desc": "Xem mã nguồn, báo lỗi và đóng góp cho quá trình phát triển Morphe.",
     "reddit-desc": "Tham gia trò chuyện, chia sẻ mẹo và kết nối với cộng đồng Morphe.",
-    "crowdin-desc": "Giúp dịch Morphe sang ngôn ngữ của bạn để ai cũng có thể sử dụng dễ dàng."
+    "crowdin-desc": "Giúp dịch Morphe sang ngôn ngữ của bạn để ai cũng có thể sử dụng dễ dàng.",
+    "patches-title": "Gói Patch",
+    "patches-desc": "Các gói patch do cộng đồng duy trì, được xây dựng và hỗ trợ bởi người dùng cuối."
   },
   "donate": {
     "title": "Ủng hộ",
