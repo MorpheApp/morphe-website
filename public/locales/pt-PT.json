@@ -1,8 +1,5 @@
-{
+﻿{
   "nav": {
-    "home": "Início",
-    "how-it-works": "Como funciona",
-    "testimonials": "Testemunhos",
     "faq": "FAQ"
   },
   "hero": {

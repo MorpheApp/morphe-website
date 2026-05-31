@@ -1,4 +1,4 @@
-{
+﻿{
   "footer": {
     "product-home": "Start",
     "product-microg": "Ladda ner MicroG",
@@ -53,9 +53,6 @@
     "feature3-desc": "Installera MicroG en gång så fungerar det med alla dina Morphe-appar. Du behöver inte återinstallera det när du uppdaterar YouTube Morphe och YT Music Morphe."
   },
   "nav": {
-    "home": "Start",
-    "how-it-works": "Så fungerar det",
-    "testimonials": "Omdömen",
     "faq": "Vanliga frågor"
   },
   "hero": {

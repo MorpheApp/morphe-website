@@ -1,8 +1,5 @@
-{
+﻿{
   "nav": {
-    "home": "首页",
-    "how-it-works": "工作原理",
-    "testimonials": "用户评价",
     "faq": "常见问题"
   },
   "hero": {

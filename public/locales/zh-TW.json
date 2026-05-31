@@ -1,4 +1,4 @@
-{
+﻿{
   "footer": {
     "product-home": "首頁",
     "product-microg": "下載 MicroG",
@@ -53,9 +53,6 @@
     "feature3-desc": "安裝一次 MicroG 即可在所有 Morphe 應用程式中使用。更新 YouTube Morphe 和 YT Music Morphe 時無需重新安裝。"
   },
   "nav": {
-    "home": "首頁",
-    "how-it-works": "運作原理",
-    "testimonials": "使用者評價",
     "faq": "常見問題"
   },
   "hero": {

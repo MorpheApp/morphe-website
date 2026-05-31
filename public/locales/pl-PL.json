@@ -1,4 +1,4 @@
-{
+﻿{
   "footer": {
     "product-home": "Strona główna",
     "product-microg": "Pobierz MicroG",
@@ -53,9 +53,6 @@
     "feature3-desc": "Wystarczy jedna instalacja, by obsłużyć wszystkie apki Morphe, nawet po ich aktualizacji."
   },
   "nav": {
-    "home": "Strona główna",
-    "how-it-works": "Jak to działa",
-    "testimonials": "Opinie",
     "faq": "FAQ"
   },
   "hero": {

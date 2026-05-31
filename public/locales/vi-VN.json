@@ -1,4 +1,4 @@
-{
+﻿{
   "footer": {
     "product-home": "Trang chủ",
     "product-microg": "Tải MicroG",
@@ -53,9 +53,6 @@
     "feature3-desc": "Chỉ cần cài MicroG một lần cho tất cả ứng dụng Morphe. Không cần cài lại khi cập nhật."
   },
   "nav": {
-    "home": "Trang chủ",
-    "how-it-works": "Cách dùng",
-    "testimonials": "Người dùng nói gì",
     "faq": "Hỏi đáp"
   },
   "hero": {

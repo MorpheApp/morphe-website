@@ -1,4 +1,4 @@
-{
+﻿{
   "footer": {
     "product-home": "홈",
     "product-microg": "MicroG 다운로드",
@@ -53,9 +53,6 @@
     "feature3-desc": "MicroG는 한 번만 설치하면 모든 Morphe 앱에서 함께 사용할 수 있습니다. YouTube Morphe나 YT Music Morphe를 업데이트할 때마다 다시 설치할 필요도 없습니다."
   },
   "nav": {
-    "home": "홈",
-    "how-it-works": "작동 방식",
-    "testimonials": "사용자 후기",
     "faq": "자주 묻는 질문"
   },
   "hero": {

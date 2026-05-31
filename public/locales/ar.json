@@ -1,4 +1,4 @@
-{
+﻿{
   "footer": {
     "product-home": "الرئيسية",
     "product-microg": "تنزيل MicroG",
@@ -53,9 +53,6 @@
     "feature3-desc": "ثبّت MicroG لمرة واحدة وسيعمل بتناغم مع جميع تطبيقات Morphe الخاصة بك. لا حاجة لإعادة التثبيت عند تحديث YouTube Morphe أو YT Music Morphe."
   },
   "nav": {
-    "home": "الرئيسية",
-    "how-it-works": "كيف يعمل",
-    "testimonials": "آراء المستخدمين",
     "faq": "الأسئلة الشائعة"
   },
   "hero": {

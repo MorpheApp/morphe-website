@@ -1,8 +1,5 @@
-{
+﻿{
   "nav": {
-    "home": "Domov",
-    "how-it-works": "Ako to funguje",
-    "testimonials": "Referencie",
     "faq": "FAQ"
   },
   "hero": {

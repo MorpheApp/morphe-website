@@ -1,8 +1,5 @@
-{
+﻿{
   "nav": {
-    "home": "ホーム",
-    "how-it-works": "仕組み",
-    "testimonials": "ユーザーレビュー",
     "faq": "よくある質問"
   },
   "hero": {
