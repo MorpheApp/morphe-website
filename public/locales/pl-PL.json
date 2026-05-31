@@ -254,8 +254,8 @@
     "github-desc": "Przeglądaj kod źródłowy, zgłaszaj błędy i pomóż w rozwoju Morphe.",
     "reddit-desc": "Dołącz do dyskusji, dziel się poradami i poznaj innych użytkowników Morphe.",
     "crowdin-desc": "Pomóż tłumaczyć Morphe na swój język i spraw, by był dostępny dla każdego.",
-    "patches-title": "Pakiety Poprawek",
-    "patches-desc": "Pakiety poprawek utrzymywane przez społeczność, tworzone i wspierane przez użytkowników końcowych."
+    "patches-title": "Pakiety modyfikacji",
+    "patches-desc": "Pakiety modyfikacji tworzone i wspierane przez społeczność."
   },
   "donate": {
     "title": "Wsparcie",
