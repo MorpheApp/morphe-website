@@ -57,14 +57,14 @@
   },
   "hero": {
     "title": "Biến đổi",
-    "title-highlight": "trải nghiệm Android",
+    "title-highlight": "Trải nghiệm Android",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit",
     "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng hiệu quả, trao toàn quyền kiểm soát cho bạn",
     "download": "Tải Morphe",
     "learn-more": "Tìm hiểu thêm",
-    "social-label": "Tham gia cộng đồng",
-    "title-highlight-youtube": "YouTube",
-    "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "social-label": "Tham gia cộng đồng"
   },
   "app-features": {
     "title": "Tính năng nổi bật",
@@ -254,8 +254,8 @@
     "github-desc": "Xem mã nguồn, báo lỗi và đóng góp cho quá trình phát triển Morphe.",
     "reddit-desc": "Tham gia trò chuyện, chia sẻ mẹo và kết nối với cộng đồng Morphe.",
     "crowdin-desc": "Giúp dịch Morphe sang ngôn ngữ của bạn để ai cũng có thể sử dụng dễ dàng.",
-    "patches-title": "Gói Patch",
-    "patches-desc": "Các gói patch do cộng đồng duy trì, được xây dựng và hỗ trợ bởi người dùng cuối."
+    "patches-title": "Gói vá",
+    "patches-desc": "Tổng hợp các gói vá do cộng đồng phát triển và duy trì, được hỗ trợ bởi chính người dùng."
   },
   "donate": {
     "title": "Ủng hộ",
@@ -295,8 +295,8 @@
     "filter-patches": "Bản vá",
     "show-dev": "Hiện bản thử nghiệm",
     "older-releases": "Tìm bản phát hành cũ hơn?",
-    "view-manager": "Xem bản phát hành Trình quản lý",
-    "view-patches": "Xem bản phát hành Bản vá"
+    "view-manager": "Xem bản phát hành trình quản lý",
+    "view-patches": "Xem bản phát hành bản vá"
   },
   "add-source": {
     "title": "Thêm nguồn vá",
@@ -316,6 +316,6 @@
   "error": {
     "go-home": "Về trang chủ",
     "404-title": "404 - Lạc trôi rồi",
-    "not-found": "Làm gì có trang này (hoặc có khi bay màu rồi cũng nên~)"
+    "not-found": "Làm gì có trang này\nHoặc có khi bay màu rồi cũng nên~"
   }
 }
