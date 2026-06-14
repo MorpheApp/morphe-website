@@ -300,7 +300,7 @@
     "github-desc": "浏览源代码、报告错误并为 Morphe 开发做出贡献。",
     "reddit-desc": "参与讨论，分享技巧，与其他 Morphe 用户建立联系。",
     "crowdin-desc": "帮助将 Morphe 翻译成您的语言，让每个人都能使用。",
-    "patches-title": "补丁包",
+    "patches-title": "更多应用",
     "patches-desc": "由社区维护的补丁包，由最终用户构建和支持。"
   },
   "add-source": {
