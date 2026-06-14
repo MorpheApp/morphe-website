@@ -254,7 +254,7 @@
     "github-desc": "瀏覽原始碼、回報錯誤並為 Morphe 開發做出貢獻。",
     "reddit-desc": "參與討論，分享技巧，與其他 Morphe 使用者建立聯繫。",
     "crowdin-desc": "協助將 Morphe 翻譯成您的語言，讓每個人都能使用。",
-    "patches-title": "修補程式包",
+    "patches-title": "更多應用",
     "patches-desc": "由社群維護的修補程式包，由最終使用者建立並提供支援。"
   },
   "donate": {
