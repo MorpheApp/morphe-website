@@ -23,12 +23,20 @@ jobs:
       - name: Merge main into dev
         run: |
           git fetch origin dev
-          
           git checkout dev
           
-          if git merge origin/main -m "chore: merge main back into dev [skip ci]"; then
-            git push origin dev
+          # Check if dev is an ancestor of main (i.e., dev is just behind main)
+          if git merge-base --is-ancestor dev origin/main; then
+            echo "dev is behind main. Fast-forwarding dev to main."
+            git reset --hard origin/main
           else
-            echo "Merge conflicts detected. Manual intervention required."
-            exit 1
+            echo "dev and main have diverged. Attempting standard merge."
+            if git merge origin/main -m "chore: merge main back into dev [skip ci]"; then
+              echo "Merge successful."
+            else
+              echo "Merge conflicts detected. Manual intervention required."
+              exit 1
+            fi
           fi
+          
+          git push origin dev
