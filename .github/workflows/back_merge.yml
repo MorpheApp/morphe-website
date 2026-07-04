@@ -20,23 +20,22 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge main into dev
+      - name: Back merge main to dev
         run: |
           git fetch origin dev
-          git checkout dev
           
-          # Check if dev is an ancestor of main (i.e., dev is just behind main)
-          if git merge-base --is-ancestor dev origin/main; then
-            echo "dev is behind main. Fast-forwarding dev to main."
-            git reset --hard origin/main
+          # Attempt to fast-forward dev to main.
+          # This will succeed without a merge commit if dev is strictly behind main.
+          if git push origin origin/main:dev; then
+            echo "dev was behind main. Successfully fast-forwarded dev to main (no merge commit)."
           else
-            echo "dev and main have diverged. Attempting standard merge."
+            echo "dev and main have diverged. Performing a standard merge to preserve dev commits."
+            git checkout dev
             if git merge origin/main -m "chore: merge main back into dev [skip ci]"; then
+              git push origin dev
               echo "Merge successful."
             else
               echo "Merge conflicts detected. Manual intervention required."
               exit 1
             fi
           fi
-          
-          git push origin dev
