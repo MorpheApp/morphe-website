@@ -14,6 +14,8 @@
     // No repo param - redirect home
     if (!repo) { window.location.href = '/'; return; }
 
+    var isDevelopment = repo === 'xyz-user/xyz-patches';
+
     var repoOwner = repo.split('/')[0];
 
     // Set source icon
@@ -66,7 +68,18 @@
                 window.i18n.t('add-source.source-label');
         }
 
-        if (isAndroid) {
+        if (isDevelopment) {
+            show('state-development');
+            var btnDevBack = document.getElementById('btn-dev-back');
+            if (btnDevBack) {
+                btnDevBack.addEventListener('click', function (e) {
+                    if (window.history.length > 1) {
+                        e.preventDefault();
+                        window.history.back();
+                    }
+                });
+            }
+        } else if (isAndroid) {
             show('state-android');
             document.getElementById('btn-open').addEventListener('click', function (e) {
                 e.preventDefault();
