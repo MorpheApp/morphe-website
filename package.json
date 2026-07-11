@@ -13,7 +13,7 @@
     "glob": "^13.0.6",
     "html-inline": "^1.2.0",
     "html-minifier-terser": "^7.2.0",
-    "terser": "^5.48.0"
+    "terser": "^5.49.0"
   },
   "dependencies": {
     "web-resource-inliner": "^8.0.0"
