@@ -3,12 +3,12 @@
 (function () {
     'use strict';
 
-    // Blocked patch sources ('provider:owner/repo'). The provider prefix keeps
+    // Blocked patch sources ('provider=owner/repo'). The provider prefix keeps
     // GitHub and GitLab namespaces separate. Client-side only, so a server-side
     // check is needed for tamper-proof enforcement.
     // The xyz-user entry is a permanent smoke-test for the blocked state.
     var BLOCKED_REPOS = [
-        'github:xyz-user/malicious-repo'
+        'github=xyz-user/malicious-repo'
     ];
 
     var params    = new URLSearchParams(window.location.search);
@@ -23,7 +23,7 @@
     if (!repo) { window.location.href = '/'; return; }
 
     var isDevelopment = repo === 'xyz-user/xyz-patches';
-    var providerKey   = (isGitLab ? 'gitlab' : 'github') + ':' + repo.toLowerCase();
+    var providerKey   = (isGitLab ? 'gitlab' : 'github') + '=' + repo.toLowerCase();
     var isBlocked     = BLOCKED_REPOS.indexOf(providerKey) !== -1;
 
     var repoOwner = repo.split('/')[0];
