@@ -3,16 +3,10 @@
 (function () {
     'use strict';
 
-    // Repositories that are known-malicious, impersonate other developers, or
-    // otherwise violate our terms of service. Format: 'provider:owner/repo'
-    // (lower-case), where provider is `github` or `gitlab`. Prefixing with the
-    // provider avoids collisions between namespaces on the two platforms.
-    // The website is the single gateway for launching Morphe with a source, so
-    // blocking here prevents users from adding these repos through the deep link.
-    // For stronger enforcement this list should move to a server-side check.
-    //
-    // `xyz-user/malicious-repo` is a permanent dummy so the blocked state can be
-    // verified in production without adding a real entry.
+    // Blocked patch sources ('provider:owner/repo'). The provider prefix keeps
+    // GitHub and GitLab namespaces separate. Client-side only, so a server-side
+    // check is needed for tamper-proof enforcement.
+    // The xyz-user entry is a permanent smoke-test for the blocked state.
     var BLOCKED_REPOS = [
         'github:xyz-user/malicious-repo'
     ];
