@@ -2144,6 +2144,14 @@ body {
     text-align: center;
 }
 
+.add-source-page h1 {
+    margin-bottom: var(--spacing-md);
+}
+
+.add-source-page .hero-description {
+    margin-bottom: var(--spacing-xl);
+}
+
 .icon-circle {
     width: 72px;
     height: 72px;
