@@ -314,7 +314,10 @@
     "desktop-subtitle": "This link adds a patch source to Morphe, which requires an Android device",
     "desktop-step1": "Install <a href=\"/\">Morphe</a> on your Android device",
     "desktop-step2": "Open this link on your Android device",
-    "desktop-step3": "Tap <strong>Open in Morphe</strong>"
+    "desktop-step3": "Tap <strong>Open in Morphe</strong>",
+    "blocked-title": "Source blocked",
+    "blocked-subtitle": "This patch source has been flagged as unsafe and cannot be added to Morphe",
+    "blocked-warning": "Repositories that distribute malicious patches, impersonate other developers, or violate our terms of service are blocked to protect users"
   },
   "error": {
     "go-home": "Go to homepage",

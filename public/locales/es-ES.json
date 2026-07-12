@@ -319,6 +319,9 @@
     "desktop-subtitle": "Este enlace agrega una fuente de parches a Morphe, lo cual requiere un dispositivo Android",
     "desktop-step1": "Instala <a href=\"/\">Morphe</a> en tu dispositivo Android",
     "desktop-step2": "Abre este enlace en tu dispositivo Android",
-    "desktop-step3": "Toca <strong>Abrir en Morphe</strong>"
+    "desktop-step3": "Toca <strong>Abrir en Morphe</strong>",
+    "blocked-title": "Fuente bloqueada",
+    "blocked-subtitle": "Esta fuente de parches ha sido marcada como no segura y no se puede agregar a Morphe",
+    "blocked-warning": "Los repositorios que distribuyen parches maliciosos, se hacen pasar por otros desarrolladores o violan nuestros términos de servicio son bloqueados para proteger a los usuarios"
   }
 }

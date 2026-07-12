@@ -319,6 +319,9 @@
     "desktop-subtitle": "このリンクはMorpheにパッチソースを追加します。Androidデバイスが必要です",
     "desktop-step1": "Androidデバイスに <a href=\"/\">Morphe</a> をインストールしてください",
     "desktop-step2": "このリンクをAndroidデバイスで開いてください",
-    "desktop-step3": "<strong>Morpheで開く</strong> をタップしてください"
+    "desktop-step3": "<strong>Morpheで開く</strong> をタップしてください",
+    "blocked-title": "ソースがブロックされました",
+    "blocked-subtitle": "このパッチソースは安全でないとフラグ付けされたため、Morpheに追加できません",
+    "blocked-warning": "悪意のあるパッチを配布したり、他の開発者になりすましたり、利用規約に違反するリポジトリは、ユーザーを保護するためにブロックされます"
   }
 }

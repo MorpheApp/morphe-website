@@ -319,6 +319,9 @@
     "desktop-subtitle": "Tento odkaz přidá zdroj patchů do Morphe, což vyžaduje zařízení s Androidem",
     "desktop-step1": "Nainstalujte <a href=\"/\">Morphe</a> do svého zařízení s Androidem",
     "desktop-step2": "Otevřete tento odkaz na svém zařízení s Androidem",
-    "desktop-step3": "Klepněte na <strong>Otevřít v Morphe</strong>"
+    "desktop-step3": "Klepněte na <strong>Otevřít v Morphe</strong>",
+    "blocked-title": "Zdroj zablokován",
+    "blocked-subtitle": "Tento zdroj patchů byl označen jako nebezpečný a nelze jej přidat do Morphe",
+    "blocked-warning": "Repozitáře, které šíří škodlivé patche, vydávají se za jiné vývojáře nebo porušují naše smluvní podmínky, jsou blokovány pro ochranu uživatelů"
   }
 }

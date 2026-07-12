@@ -319,6 +319,9 @@
     "desktop-subtitle": "Deze link voegt een patchbron toe aan Morphe, waarvoor een Android-apparaat nodig is",
     "desktop-step1": "Installeer <a href=\"/\">Morphe</a> op je Android-apparaat",
     "desktop-step2": "Open deze link op je Android-apparaat",
-    "desktop-step3": "Tik op <strong>Openen in Morphe</strong>"
+    "desktop-step3": "Tik op <strong>Openen in Morphe</strong>",
+    "blocked-title": "Bron geblokkeerd",
+    "blocked-subtitle": "Deze patchbron is gemarkeerd als onveilig en kan niet aan Morphe worden toegevoegd",
+    "blocked-warning": "Repositories die schadelijke patches verspreiden, zich voordoen als andere ontwikkelaars of onze servicevoorwaarden schenden, worden geblokkeerd om gebruikers te beschermen"
   }
 }

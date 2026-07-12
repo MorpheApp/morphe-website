@@ -3,6 +3,15 @@
 (function () {
     'use strict';
 
+    // Repositories that are known-malicious, impersonate other developers, or
+    // otherwise violate our terms of service. Format: 'owner/repo' (lower-case).
+    // The website is the single gateway for launching Morphe with a source, so
+    // blocking here prevents users from adding these repos through the deep link.
+    // For stronger enforcement this list should move to a server-side check.
+    var BLOCKED_REPOS = [
+        // 'example-user/example-repo'
+    ];
+
     var params    = new URLSearchParams(window.location.search);
     var githubRepo = params.get('github') || '';
     var gitlabRepo = params.get('gitlab') || '';
@@ -15,6 +24,7 @@
     if (!repo) { window.location.href = '/'; return; }
 
     var isDevelopment = repo === 'xyz-user/xyz-patches';
+    var isBlocked     = BLOCKED_REPOS.indexOf(repo.toLowerCase()) !== -1;
 
     var repoOwner = repo.split('/')[0];
 
@@ -27,7 +37,11 @@
 
     window.addEventListener('load', function () {
         if (window.umami) {
-            umami.track('Add Source', { user: repoOwner, provider: isGitLab ? 'gitlab' : 'github' });
+            umami.track('Add Source', {
+                user: repoOwner,
+                provider: isGitLab ? 'gitlab' : 'github',
+                blocked: isBlocked
+            });
         }
     });
 
@@ -41,15 +55,18 @@
     var match = url.match(/(?:github|gitlab)\.com\/([^/?#]+\/[^/?#]+)/);
     var urlEl = document.getElementById('source-url');
     if (urlEl) urlEl.textContent = url;
+    var blockedUrlEl = document.getElementById('blocked-source-url');
+    if (blockedUrlEl) blockedUrlEl.textContent = url;
 
-    // intent:// scheme - forces Chrome to fire a proper Android intent
-    // (window.location.href with the same URL is ignored as "same page")
+    // Custom scheme `morphe://add-source` is used so browsers never intercept
+    // https://morphe.software/add-source directly and the website always runs
+    // its validation before Manager is launched.
     var encodedRepo  = encodeURIComponent(repo);
     var encodedName  = name ? encodeURIComponent(name) : '';
     var repoParam    = isGitLab ? 'gitlab' : 'github';
     var intentParams = repoParam + '=' + encodedRepo + (encodedName ? '&name=' + encodedName : '');
-    var intentLink   = 'intent://morphe.software/add-source?' + intentParams +
-        '#Intent;scheme=https;package=app.morphe.manager;S.browser_fallback_url=' +
+    var intentLink   = 'intent://add-source?' + intentParams +
+        '#Intent;scheme=morphe;package=app.morphe.manager;S.browser_fallback_url=' +
         encodeURIComponent('https://morphe.software/') + ';end';
 
     function show(id) {
@@ -68,7 +85,9 @@
                 window.i18n.t('add-source.source-label');
         }
 
-        if (isDevelopment) {
+        if (isBlocked) {
+            show('state-blocked');
+        } else if (isDevelopment) {
             show('state-development');
             var btnDevBack = document.getElementById('btn-dev-back');
             if (btnDevBack) {

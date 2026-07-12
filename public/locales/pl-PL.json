@@ -314,7 +314,10 @@
     "desktop-subtitle": "Ten link dodaje źródło modyfikacji do Morphe, co wymaga Androida",
     "desktop-step1": "Zainstaluj <a href=\"/\">Morphe</a> na swoim Androidzie",
     "desktop-step2": "Otwórz ten link na swoim Androidzie",
-    "desktop-step3": "Stuknij <strong>Otwórz w Morphe</strong>"
+    "desktop-step3": "Stuknij <strong>Otwórz w Morphe</strong>",
+    "blocked-title": "Źródło zablokowane",
+    "blocked-subtitle": "To źródło łatek zostało oznaczone jako niebezpieczne i nie może zostać dodane do Morphe",
+    "blocked-warning": "Repozytoria rozpowszechniające złośliwe łatki, podszywające się pod innych deweloperów lub naruszające nasze warunki korzystania są blokowane w celu ochrony użytkowników"
   },
   "error": {
     "go-home": "Wróć na stronę główną",

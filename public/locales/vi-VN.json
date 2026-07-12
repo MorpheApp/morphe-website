@@ -314,7 +314,10 @@
     "desktop-subtitle": "Liên kết này dùng để thêm nguồn vá vào Morphe, nên cần mở bằng thiết bị Android",
     "desktop-step1": "Cài <a href=\"/\">Morphe</a> trên thiết bị Android",
     "desktop-step2": "Mở liên kết này bằng thiết bị Android",
-    "desktop-step3": "Bấm <strong>Mở bằng Morphe</strong>"
+    "desktop-step3": "Bấm <strong>Mở bằng Morphe</strong>",
+    "blocked-title": "Nguồn bị chặn",
+    "blocked-subtitle": "Nguồn bản vá này đã bị đánh dấu là không an toàn và không thể thêm vào Morphe",
+    "blocked-warning": "Các kho lưu trữ phát tán bản vá độc hại, mạo danh nhà phát triển khác hoặc vi phạm điều khoản dịch vụ sẽ bị chặn để bảo vệ người dùng"
   },
   "error": {
     "go-home": "Về trang chủ",

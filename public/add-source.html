@@ -56,6 +56,27 @@
     <a href="/" class="btn btn-primary" id="btn-dev-back" data-i18n="add-source.go-back">Go back</a>
 </div>
 
+<!-- Blocked state -->
+<div class="container state" id="state-blocked">
+    <div class="icon-circle icon-circle--danger">
+        <span class="material-symbols-rounded">block</span>
+    </div>
+    <h1 data-i18n="add-source.blocked-title">Source blocked</h1>
+    <p class="hero-description" data-i18n="add-source.blocked-subtitle">This patch source has been flagged as unsafe and cannot be added to Morphe</p>
+
+    <div class="source-card">
+        <div class="source-card__label" data-i18n="add-source.source-label">Source</div>
+        <div class="source-card__url" id="blocked-source-url"></div>
+    </div>
+
+    <div class="warning-box warning-box--danger">
+        <span class="material-symbols-rounded">warning</span>
+        <span class="warning-box__text" data-i18n="add-source.blocked-warning">Repositories that distribute malicious patches, impersonate other developers, or violate our terms of service are blocked to protect users</span>
+    </div>
+
+    <a href="/" class="btn btn-primary" data-i18n="add-source.back-home">Back to Homepage</a>
+</div>
+
 <!-- Desktop state -->
 <div class="container state" id="state-desktop">
     <div class="desktop-emoji">📱</div>
