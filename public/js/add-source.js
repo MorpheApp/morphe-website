@@ -4,12 +4,17 @@
     'use strict';
 
     // Repositories that are known-malicious, impersonate other developers, or
-    // otherwise violate our terms of service. Format: 'owner/repo' (lower-case).
+    // otherwise violate our terms of service. Format: 'provider:owner/repo'
+    // (lower-case), where provider is `github` or `gitlab`. Prefixing with the
+    // provider avoids collisions between namespaces on the two platforms.
     // The website is the single gateway for launching Morphe with a source, so
     // blocking here prevents users from adding these repos through the deep link.
     // For stronger enforcement this list should move to a server-side check.
+    //
+    // `xyz-user/malicious-repo` is a permanent dummy so the blocked state can be
+    // verified in production without adding a real entry.
     var BLOCKED_REPOS = [
-        // 'example-user/example-repo'
+        'github:xyz-user/malicious-repo'
     ];
 
     var params    = new URLSearchParams(window.location.search);
@@ -24,7 +29,8 @@
     if (!repo) { window.location.href = '/'; return; }
 
     var isDevelopment = repo === 'xyz-user/xyz-patches';
-    var isBlocked     = BLOCKED_REPOS.indexOf(repo.toLowerCase()) !== -1;
+    var providerKey   = (isGitLab ? 'gitlab' : 'github') + ':' + repo.toLowerCase();
+    var isBlocked     = BLOCKED_REPOS.indexOf(providerKey) !== -1;
 
     var repoOwner = repo.split('/')[0];
 
