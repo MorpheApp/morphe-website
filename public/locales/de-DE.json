@@ -319,6 +319,16 @@
     "desktop-subtitle": "Dieser Link fügt Morphe eine Patch-Quelle hinzu, wofür ein Android-Gerät erforderlich ist",
     "desktop-step1": "Installieren Sie <a href=\"/\">Morphe</a> auf Ihrem Android-Gerät",
     "desktop-step2": "Öffnen Sie diesen Link auf Ihrem Android-Gerät",
-    "desktop-step3": "Tippen Sie auf <strong>In Morphe öffnen</strong>"
+    "desktop-step3": "Tippen Sie auf <strong>In Morphe öffnen</strong>",
+    "blocked-title": "Quelle blockiert",
+    "blocked-subtitle": "Diese Patch-Quelle wurde als unsicher gekennzeichnet und kann nicht zu Morphe hinzugefügt werden",
+    "blocked-warning": "Repositories, die schädliche Patches verbreiten, sich als andere Entwickler ausgeben oder gegen unsere Nutzungsbedingungen verstoßen, werden zum Schutz der Nutzer blockiert",
+    "blocked-reason-label": "Kategorie",
+    "blocked-reason-impersonation": "Identitätsdiebstahl",
+    "blocked-reason-malware": "Schädliche Patches",
+    "blocked-reason-tos": "Verstoß gegen die Nutzungsbedingungen",
+    "blocked-reason-dropped": "Eingestellt",
+    "blocked-reason-test": "Testeintrag",
+    "blocklist-updated": "Blockliste aktualisiert am {{date}}"
   }
 }

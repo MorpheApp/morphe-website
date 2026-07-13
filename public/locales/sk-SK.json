@@ -319,6 +319,16 @@
     "desktop-subtitle": "Tento odkaz pridá zdroj patchov do Morphe, čo vyžaduje zariadenie s Androidom",
     "desktop-step1": "Nainštalujte <a href=\"/\">Morphe</a> do svojho zariadenia s Androidom",
     "desktop-step2": "Otvorte tento odkaz na svojom zariadení s Androidom",
-    "desktop-step3": "Klepnite na <strong>Otvoriť v Morphe</strong>"
+    "desktop-step3": "Klepnite na <strong>Otvoriť v Morphe</strong>",
+    "blocked-title": "Zdroj zablokovaný",
+    "blocked-subtitle": "Tento zdroj záplat bol označený ako nebezpečný a nie je možné ho pridať do Morphe",
+    "blocked-warning": "Repozitáre, ktoré šíria škodlivé záplaty, vydávajú sa za iných vývojárov alebo porušujú naše zmluvné podmienky, sú blokované na ochranu používateľov",
+    "blocked-reason-label": "Kategória",
+    "blocked-reason-impersonation": "Vydávanie sa za iného",
+    "blocked-reason-malware": "Škodlivé záplaty",
+    "blocked-reason-tos": "Porušenie zmluvných podmienok",
+    "blocked-reason-dropped": "Ukončené",
+    "blocked-reason-test": "Testovací záznam",
+    "blocklist-updated": "Zoznam blokovaných aktualizovaný {{date}}"
   }
 }

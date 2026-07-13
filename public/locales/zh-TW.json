@@ -314,7 +314,17 @@
     "desktop-subtitle": "此連結會向 Morphe 新增一個修補來源，需要 Android 裝置",
     "desktop-step1": "在您的 Android 裝置上安裝 <a href=\"/\">Morphe</a>",
     "desktop-step2": "在您的 Android 裝置上開啟此連結",
-    "desktop-step3": "點擊 <strong>在 Morphe 中開啟</strong>"
+    "desktop-step3": "點擊 <strong>在 Morphe 中開啟</strong>",
+    "blocked-title": "已封鎖來源",
+    "blocked-subtitle": "此修補程式來源已被標記為不安全，無法新增至 Morphe",
+    "blocked-warning": "散播惡意修補程式、冒充其他開發者或違反我們服務條款的存放庫將被封鎖，以保護使用者",
+    "blocked-reason-label": "類別",
+    "blocked-reason-impersonation": "冒充他人",
+    "blocked-reason-malware": "惡意修補程式",
+    "blocked-reason-tos": "違反服務條款",
+    "blocked-reason-dropped": "已停用",
+    "blocked-reason-test": "測試條目",
+    "blocklist-updated": "封鎖列表更新於 {{date}}"
   },
   "error": {
     "go-home": "返回首頁",

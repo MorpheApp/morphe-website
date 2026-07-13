@@ -2144,6 +2144,14 @@ body {
     text-align: center;
 }
 
+.add-source-page h1 {
+    margin-bottom: var(--spacing-md);
+}
+
+.add-source-page .hero-description {
+    margin-bottom: var(--spacing-xl);
+}
+
 .icon-circle {
     width: 72px;
     height: 72px;
@@ -2165,6 +2173,10 @@ body {
 .icon-circle--success {
     background: linear-gradient(135deg, #22c55e, #16a34a);
     animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.icon-circle--danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
 }
 
 @keyframes popIn {
@@ -2223,6 +2235,38 @@ body {
     font-size: 0.85rem;
     color: var(--text-secondary);
     line-height: 1.5;
+}
+
+.warning-box--danger {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+.warning-box--danger .material-symbols-rounded {
+    color: #dc2626;
+}
+
+.blocked-reason {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 4px 10px;
+    margin-bottom: var(--spacing-xl);
+    border-radius: 999px;
+    background: rgba(239, 68, 68, 0.10);
+    color: #dc2626;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.blocked-reason__label {
+    opacity: 0.75;
+}
+
+.blocked-updated {
+    margin-top: var(--spacing-md);
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
 }
 
 .add-source-page .btn {
