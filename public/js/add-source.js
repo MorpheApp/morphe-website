@@ -3,13 +3,24 @@
 (function () {
     'use strict';
 
-    // Blocked patch sources ('provider=owner/repo'). The provider prefix keeps
-    // GitHub and GitLab namespaces separate. Client-side only, so a server-side
-    // check is needed for tamper-proof enforcement.
-    // The xyz-user entry is a permanent smoke-test for the blocked state.
-    var BLOCKED_REPOS = [
-        'github=xyz-user/malicious-repo'
-    ];
+    // Remote blocklist. Fails open on network error since Manager enforces authoritatively.
+    var BLOCKLIST_URL = 'https://api.morphe.software/v2/blocked-sources';
+
+    function fetchBlocklist() {
+        return fetch(BLOCKLIST_URL, { cache: 'no-store' })
+            .then(function (res) { return res.ok ? res.json() : {}; })
+            .then(function (data) {
+                var entries = (data && Array.isArray(data.blocked)) ? data.blocked : [];
+                return new Set(
+                    entries
+                        .filter(function (e) { return e && e.provider && e.repo; })
+                        .map(function (e) { return (e.provider + '=' + e.repo).trim().toLowerCase(); })
+                );
+            })
+            .catch(function () { return new Set(); });
+    }
+
+    var blocklistPromise = fetchBlocklist();
 
     var params    = new URLSearchParams(window.location.search);
     var githubRepo = params.get('github') || '';
@@ -24,7 +35,6 @@
 
     var isDevelopment = repo === 'xyz-user/xyz-patches';
     var providerKey   = (isGitLab ? 'gitlab' : 'github') + '=' + repo.toLowerCase();
-    var isBlocked     = BLOCKED_REPOS.indexOf(providerKey) !== -1;
 
     var repoOwner = repo.split('/')[0];
 
@@ -39,8 +49,7 @@
         if (window.umami) {
             umami.track('Add Source', {
                 user: repoOwner,
-                provider: isGitLab ? 'gitlab' : 'github',
-                blocked: isBlocked
+                provider: isGitLab ? 'gitlab' : 'github'
             });
         }
     });
@@ -76,13 +85,21 @@
         document.getElementById(id).classList.add('active');
     }
 
-    // Apply i18n once it's ready, then show correct state
+    // Apply i18n once it's ready, then wait for the blocklist before showing the state.
     function applyI18nAndShow() {
         if (window.i18n) {
             // Re-apply translations that need dynamic content
             // (static data-i18n attrs are handled by i18n.js automatically)
             document.getElementById('source-label').textContent =
                 window.i18n.t('add-source.source-label');
+        }
+
+        blocklistPromise.then(function (blocked) { renderState(blocked.has(providerKey)); });
+    }
+
+    function renderState(isBlocked) {
+        if (window.umami && isBlocked) {
+            umami.track('Add Source Blocked', { user: repoOwner, repo: providerKey });
         }
 
         if (isBlocked) {
