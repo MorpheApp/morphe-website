@@ -70,15 +70,13 @@
     var blockedUrlEl = document.getElementById('blocked-source-url');
     if (blockedUrlEl) blockedUrlEl.textContent = url;
 
-    // Custom scheme `morphe://add-source` is used so browsers never intercept
-    // https://morphe.software/add-source directly and the website always runs
-    // its validation before Manager is launched.
+    // Explicit-package intent launches Manager regardless of App Link status.
     var encodedRepo  = encodeURIComponent(repo);
     var encodedName  = name ? encodeURIComponent(name) : '';
     var repoParam    = isGitLab ? 'gitlab' : 'github';
     var intentParams = repoParam + '=' + encodedRepo + (encodedName ? '&name=' + encodedName : '');
-    var intentLink   = 'intent://add-source?' + intentParams +
-        '#Intent;scheme=morphe;package=app.morphe.manager;S.browser_fallback_url=' +
+    var intentLink   = 'intent://morphe.software/add-source?' + intentParams +
+        '#Intent;scheme=https;package=app.morphe.manager;S.browser_fallback_url=' +
         encodeURIComponent('https://morphe.software/') + ';end';
 
     function show(id) {
