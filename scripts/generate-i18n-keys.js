@@ -25,6 +25,12 @@ const JS_ONLY_KEYS = [
   'hero.title-highlight-youtube',
   'hero.title-highlight-ytmusic',
   'hero.title-highlight-reddit',
+  'add-source.blocked-reason-impersonation',
+  'add-source.blocked-reason-malware',
+  'add-source.blocked-reason-tos',
+  'add-source.blocked-reason-dropped',
+  'add-source.blocked-reason-test',
+  'add-source.blocklist-updated',
 ];
 
 /**

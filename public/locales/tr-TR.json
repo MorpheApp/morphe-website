@@ -319,6 +319,16 @@
     "desktop-subtitle": "Bu bağlantı Morphe'e bir yama kaynağı ekler ve bir Android cihaz gerektirir",
     "desktop-step1": "Android cihazınıza <a href=\"/\">Morphe</a> yükleyin",
     "desktop-step2": "Bu bağlantıyı Android cihazınızda açın",
-    "desktop-step3": "<strong>Morphe'de aç</strong> seçeneğine dokunun"
+    "desktop-step3": "<strong>Morphe'de aç</strong> seçeneğine dokunun",
+    "blocked-title": "Kaynak engellendi",
+    "blocked-subtitle": "Bu yama kaynağı güvensiz olarak işaretlendi ve Morphe'ye eklenemez",
+    "blocked-warning": "Kötü amaçlı yamalar dağıtan, başka geliştiricilerin kimliğine bürünen veya hizmet şartlarımızı ihlal eden depolar, kullanıcıları korumak için engellenir",
+    "blocked-reason-label": "Kategori",
+    "blocked-reason-impersonation": "Kimlik taklidi",
+    "blocked-reason-malware": "Kötü amaçlı yamalar",
+    "blocked-reason-tos": "Hizmet şartlarını ihlal",
+    "blocked-reason-dropped": "Sonlandırıldı",
+    "blocked-reason-test": "Test kaydı",
+    "blocklist-updated": "Engelleme listesi {{date}} tarihinde güncellendi"
   }
 }

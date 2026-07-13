@@ -319,6 +319,16 @@
     "desktop-subtitle": "此链接会向 Morphe 添加一个补丁源，需要 Android 设备",
     "desktop-step1": "在你的 Android 设备上安装 <a href=\"/\">Morphe</a>",
     "desktop-step2": "在你的 Android 设备上打开此链接",
-    "desktop-step3": "点击 <strong>在 Morphe 中打开</strong>"
+    "desktop-step3": "点击 <strong>在 Morphe 中打开</strong>",
+    "blocked-title": "已阻止来源",
+    "blocked-subtitle": "该补丁源已被标记为不安全，无法添加到 Morphe",
+    "blocked-warning": "分发恶意补丁、冒充其他开发者或违反服务条款的仓库将被阻止，以保护用户",
+    "blocked-reason-label": "类别",
+    "blocked-reason-impersonation": "冒充他人",
+    "blocked-reason-malware": "恶意补丁",
+    "blocked-reason-tos": "违反服务条款",
+    "blocked-reason-dropped": "已停用",
+    "blocked-reason-test": "测试条目",
+    "blocklist-updated": "阻止列表更新于 {{date}}"
   }
 }

@@ -314,7 +314,17 @@
     "desktop-subtitle": "이 링크는 Morphe에 패치 소스를 추가하는 링크이며, 안드로이드 기기에서 열어야 합니다.",
     "desktop-step1": "안드로이드 기기에 <a href=\"/\">Morphe</a>를 설치하세요",
     "desktop-step2": "이 링크를 안드로이드 기기에서 여세요",
-    "desktop-step3": "<strong>Morphe에서 열기</strong>를 누르세요"
+    "desktop-step3": "<strong>Morphe에서 열기</strong>를 누르세요",
+    "blocked-title": "차단된 소스",
+    "blocked-subtitle": "이 패치 소스는 안전하지 않은 것으로 표시되어 Morphe에 추가할 수 없습니다",
+    "blocked-warning": "악성 패치를 배포하거나 다른 개발자를 사칭하거나 서비스 약관을 위반하는 저장소는 사용자를 보호하기 위해 차단됩니다",
+    "blocked-reason-label": "카테고리",
+    "blocked-reason-impersonation": "사칭",
+    "blocked-reason-malware": "악성 패치",
+    "blocked-reason-tos": "서비스 약관 위반",
+    "blocked-reason-dropped": "중단됨",
+    "blocked-reason-test": "테스트 항목",
+    "blocklist-updated": "차단 목록 업데이트: {{date}}"
   },
   "error": {
     "go-home": "홈으로 가기",

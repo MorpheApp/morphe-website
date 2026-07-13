@@ -319,6 +319,16 @@
     "desktop-subtitle": "Эта ссылка добавляет источник патчей в Morphe, для чего требуется устройство Android",
     "desktop-step1": "Установите <a href=\"/\">Morphe</a> на своё устройство Android",
     "desktop-step2": "Откройте эту ссылку на своём устройстве Android",
-    "desktop-step3": "Нажмите <strong>Открыть в Morphe</strong>"
+    "desktop-step3": "Нажмите <strong>Открыть в Morphe</strong>",
+    "blocked-title": "Источник заблокирован",
+    "blocked-subtitle": "Этот источник патчей помечен как небезопасный и не может быть добавлен в Morphe",
+    "blocked-warning": "Репозитории, распространяющие вредоносные патчи, выдающие себя за других разработчиков или нарушающие условия использования, блокируются для защиты пользователей",
+    "blocked-reason-label": "Категория",
+    "blocked-reason-impersonation": "Выдача себя за другого",
+    "blocked-reason-malware": "Вредоносные патчи",
+    "blocked-reason-tos": "Нарушение условий использования",
+    "blocked-reason-dropped": "Прекращено",
+    "blocked-reason-test": "Тестовая запись",
+    "blocklist-updated": "Список заблокированных обновлён {{date}}"
   }
 }
