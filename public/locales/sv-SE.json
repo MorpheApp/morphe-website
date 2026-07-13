@@ -317,7 +317,14 @@
     "desktop-step3": "Tryck på <strong>Öppna i Morphe</strong>",
     "blocked-title": "Källa blockerad",
     "blocked-subtitle": "Denna patch-källa har flaggats som osäker och kan inte läggas till i Morphe",
-    "blocked-warning": "Förråd som distribuerar skadliga patchar, utger sig för att vara andra utvecklare eller bryter mot våra användarvillkor blockeras för att skydda användare"
+    "blocked-warning": "Förråd som distribuerar skadliga patchar, utger sig för att vara andra utvecklare eller bryter mot våra användarvillkor blockeras för att skydda användare",
+    "blocked-reason-label": "Kategori",
+    "blocked-reason-impersonation": "Identitetsstöld",
+    "blocked-reason-malware": "Skadliga patchar",
+    "blocked-reason-tos": "Brott mot användarvillkoren",
+    "blocked-reason-dropped": "Avvecklad",
+    "blocked-reason-test": "Testpost",
+    "blocklist-updated": "Blockeringslistan uppdaterad {{date}}"
   },
   "error": {
     "go-home": "Gå till startsidan",

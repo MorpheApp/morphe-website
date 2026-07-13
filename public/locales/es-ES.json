@@ -322,6 +322,13 @@
     "desktop-step3": "Toca <strong>Abrir en Morphe</strong>",
     "blocked-title": "Fuente bloqueada",
     "blocked-subtitle": "Esta fuente de parches ha sido marcada como no segura y no se puede agregar a Morphe",
-    "blocked-warning": "Los repositorios que distribuyen parches maliciosos, se hacen pasar por otros desarrolladores o violan nuestros términos de servicio son bloqueados para proteger a los usuarios"
+    "blocked-warning": "Los repositorios que distribuyen parches maliciosos, se hacen pasar por otros desarrolladores o violan nuestros términos de servicio son bloqueados para proteger a los usuarios",
+    "blocked-reason-label": "Categoría",
+    "blocked-reason-impersonation": "Suplantación de identidad",
+    "blocked-reason-malware": "Parches maliciosos",
+    "blocked-reason-tos": "Violación de los términos de servicio",
+    "blocked-reason-dropped": "Descontinuado",
+    "blocked-reason-test": "Entrada de prueba",
+    "blocklist-updated": "Lista de bloqueo actualizada el {{date}}"
   }
 }

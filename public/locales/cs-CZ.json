@@ -322,6 +322,13 @@
     "desktop-step3": "Klepněte na <strong>Otevřít v Morphe</strong>",
     "blocked-title": "Zdroj zablokován",
     "blocked-subtitle": "Tento zdroj patchů byl označen jako nebezpečný a nelze jej přidat do Morphe",
-    "blocked-warning": "Repozitáře, které šíří škodlivé patche, vydávají se za jiné vývojáře nebo porušují naše smluvní podmínky, jsou blokovány pro ochranu uživatelů"
+    "blocked-warning": "Repozitáře, které šíří škodlivé patche, vydávají se za jiné vývojáře nebo porušují naše smluvní podmínky, jsou blokovány pro ochranu uživatelů",
+    "blocked-reason-label": "Kategorie",
+    "blocked-reason-impersonation": "Vydávání se za jiného",
+    "blocked-reason-malware": "Škodlivé patche",
+    "blocked-reason-tos": "Porušení podmínek služby",
+    "blocked-reason-dropped": "Ukončeno",
+    "blocked-reason-test": "Testovací záznam",
+    "blocklist-updated": "Seznam blokovaných aktualizován {{date}}"
   }
 }

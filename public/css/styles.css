@@ -2246,6 +2246,29 @@ body {
     color: #dc2626;
 }
 
+.blocked-reason {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 4px 10px;
+    margin-bottom: var(--spacing-xl);
+    border-radius: 999px;
+    background: rgba(239, 68, 68, 0.10);
+    color: #dc2626;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.blocked-reason__label {
+    opacity: 0.75;
+}
+
+.blocked-updated {
+    margin-top: var(--spacing-md);
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
 .add-source-page .btn {
     width: 100%;
     justify-content: center;

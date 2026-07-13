@@ -317,7 +317,14 @@
     "desktop-step3": "انقر على <strong>الفتح في Morphe</strong>",
     "blocked-title": "تم حظر المصدر",
     "blocked-subtitle": "تم وضع علامة على مصدر التصحيحات هذا كغير آمن ولا يمكن إضافته إلى Morphe",
-    "blocked-warning": "يتم حظر المستودعات التي توزع تصحيحات ضارة أو تنتحل هوية مطورين آخرين أو تنتهك شروط الخدمة لحماية المستخدمين"
+    "blocked-warning": "يتم حظر المستودعات التي توزع تصحيحات ضارة أو تنتحل هوية مطورين آخرين أو تنتهك شروط الخدمة لحماية المستخدمين",
+    "blocked-reason-label": "الفئة",
+    "blocked-reason-impersonation": "انتحال الهوية",
+    "blocked-reason-malware": "تصحيحات ضارة",
+    "blocked-reason-tos": "انتهاك شروط الخدمة",
+    "blocked-reason-dropped": "متوقف",
+    "blocked-reason-test": "إدخال اختباري",
+    "blocklist-updated": "تم تحديث قائمة الحظر في {{date}}"
   },
   "error": {
     "go-home": "العودة إلى الصفحة الرئيسية",

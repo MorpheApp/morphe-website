@@ -317,7 +317,14 @@
     "desktop-step3": "Stuknij <strong>Otwórz w Morphe</strong>",
     "blocked-title": "Źródło zablokowane",
     "blocked-subtitle": "To źródło łatek zostało oznaczone jako niebezpieczne i nie może zostać dodane do Morphe",
-    "blocked-warning": "Repozytoria rozpowszechniające złośliwe łatki, podszywające się pod innych deweloperów lub naruszające nasze warunki korzystania są blokowane w celu ochrony użytkowników"
+    "blocked-warning": "Repozytoria rozpowszechniające złośliwe łatki, podszywające się pod innych deweloperów lub naruszające nasze warunki korzystania są blokowane w celu ochrony użytkowników",
+    "blocked-reason-label": "Kategoria",
+    "blocked-reason-impersonation": "Podszywanie się",
+    "blocked-reason-malware": "Złośliwe łatki",
+    "blocked-reason-tos": "Naruszenie warunków korzystania",
+    "blocked-reason-dropped": "Wycofano",
+    "blocked-reason-test": "Wpis testowy",
+    "blocklist-updated": "Lista zablokowanych zaktualizowana {{date}}"
   },
   "error": {
     "go-home": "Wróć na stronę główną",

@@ -317,7 +317,14 @@
     "desktop-step3": "Tap <strong>Open in Morphe</strong>",
     "blocked-title": "Source blocked",
     "blocked-subtitle": "This patch source has been flagged as unsafe and cannot be added to Morphe",
-    "blocked-warning": "Repositories that distribute malicious patches, impersonate other developers, or violate our terms of service are blocked to protect users"
+    "blocked-warning": "Repositories that distribute malicious patches, impersonate other developers, or violate our terms of service are blocked to protect users",
+    "blocked-reason-label": "Category",
+    "blocked-reason-impersonation": "Impersonation",
+    "blocked-reason-malware": "Malicious patches",
+    "blocked-reason-tos": "Terms of service violation",
+    "blocked-reason-dropped": "Discontinued",
+    "blocked-reason-test": "Test entry",
+    "blocklist-updated": "Blocklist updated {{date}}"
   },
   "error": {
     "go-home": "Go to homepage",

@@ -11,13 +11,16 @@
             .then(function (res) { return res.ok ? res.json() : {}; })
             .then(function (data) {
                 var entries = (data && Array.isArray(data.blocked)) ? data.blocked : [];
-                return new Set(
-                    entries
-                        .filter(function (e) { return e && e.provider && e.repo; })
-                        .map(function (e) { return (e.provider + '=' + e.repo).trim().toLowerCase(); })
-                );
+                var byKey = new Map();
+                entries.forEach(function (e) {
+                    if (e && e.provider && e.repo) {
+                        var key = (e.provider + '=' + e.repo).trim().toLowerCase();
+                        byKey.set(key, { reason: e.reason || null });
+                    }
+                });
+                return { entries: byKey, updatedAt: (data && data.updated_at) || null };
             })
-            .catch(function () { return new Set(); });
+            .catch(function () { return { entries: new Map(), updatedAt: null }; });
     }
 
     var blocklistPromise = fetchBlocklist();
@@ -85,6 +88,51 @@
         document.getElementById(id).classList.add('active');
     }
 
+    // Known reason codes get localized labels; unknown values fall through as-is.
+    var KNOWN_REASONS = ['impersonation', 'malware', 'tos', 'test', 'dropped'];
+
+    function reasonLabel(reason) {
+        if (!reason) return null;
+        var slug = String(reason).trim().toLowerCase();
+        if (!slug) return null;
+        if (KNOWN_REASONS.indexOf(slug) !== -1 && window.i18n) {
+            return window.i18n.t('add-source.blocked-reason-' + slug);
+        }
+        return slug.charAt(0).toUpperCase() + slug.slice(1);
+    }
+
+    function formatUpdatedAt(iso) {
+        if (!iso) return null;
+        var date = new Date(iso);
+        if (isNaN(date.getTime())) return null;
+        var locale = document.documentElement.lang || undefined;
+        var formatted;
+        try {
+            formatted = new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(date);
+        } catch (e) {
+            formatted = date.toLocaleDateString();
+        }
+        return window.i18n
+            ? window.i18n.t('add-source.blocklist-updated', { date: formatted })
+            : 'Blocklist updated ' + formatted;
+    }
+
+    function populateBlockedMeta(reason, updatedAt) {
+        var reasonEl  = document.getElementById('blocked-reason');
+        var valueEl   = document.getElementById('blocked-reason-value');
+        var updatedEl = document.getElementById('blocked-updated');
+        var label     = reasonLabel(reason);
+        if (label) {
+            valueEl.textContent = label;
+            reasonEl.hidden = false;
+        }
+        var updatedText = formatUpdatedAt(updatedAt);
+        if (updatedText) {
+            updatedEl.textContent = updatedText;
+            updatedEl.hidden = false;
+        }
+    }
+
     // Apply i18n once it's ready, then wait for the blocklist before showing the state.
     function applyI18nAndShow() {
         if (window.i18n) {
@@ -94,15 +142,23 @@
                 window.i18n.t('add-source.source-label');
         }
 
-        blocklistPromise.then(function (blocked) { renderState(blocked.has(providerKey)); });
+        blocklistPromise.then(function (blocklist) {
+            var entry = blocklist.entries.get(providerKey);
+            renderState(!!entry, entry ? entry.reason : null, blocklist.updatedAt);
+        });
     }
 
-    function renderState(isBlocked) {
+    function renderState(isBlocked, reason, updatedAt) {
         if (window.umami && isBlocked) {
-            umami.track('Add Source Blocked', { user: repoOwner, repo: providerKey });
+            umami.track('Add Source Blocked', {
+                user: repoOwner,
+                repo: providerKey,
+                reason: reason || 'unspecified'
+            });
         }
 
         if (isBlocked) {
+            populateBlockedMeta(reason, updatedAt);
             show('state-blocked');
         } else if (isDevelopment) {
             show('state-development');

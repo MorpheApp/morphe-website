@@ -322,6 +322,13 @@
     "desktop-step3": "Tik op <strong>Openen in Morphe</strong>",
     "blocked-title": "Bron geblokkeerd",
     "blocked-subtitle": "Deze patchbron is gemarkeerd als onveilig en kan niet aan Morphe worden toegevoegd",
-    "blocked-warning": "Repositories die schadelijke patches verspreiden, zich voordoen als andere ontwikkelaars of onze servicevoorwaarden schenden, worden geblokkeerd om gebruikers te beschermen"
+    "blocked-warning": "Repositories die schadelijke patches verspreiden, zich voordoen als andere ontwikkelaars of onze servicevoorwaarden schenden, worden geblokkeerd om gebruikers te beschermen",
+    "blocked-reason-label": "Categorie",
+    "blocked-reason-impersonation": "Identiteitsfraude",
+    "blocked-reason-malware": "Kwaadaardige patches",
+    "blocked-reason-tos": "Schending van servicevoorwaarden",
+    "blocked-reason-dropped": "Stopgezet",
+    "blocked-reason-test": "Testinvoer",
+    "blocklist-updated": "Bloklijst bijgewerkt op {{date}}"
   }
 }
