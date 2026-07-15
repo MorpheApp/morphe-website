@@ -1659,6 +1659,41 @@ body {
     flex-wrap: wrap;
 }
 
+/* Donate Page Hero Adjustments */
+.donate-page .hero {
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
+}
+
+.donate-page .hero-title {
+    font-size: 2.5rem;
+}
+
+.donate-page .hero-description {
+    font-size: 1.125rem;
+}
+
+.donate-page .donate-hero-card {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-xl);
+}
+
+.donate-page .donate-hero-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.donate-page .donate-hero-icon .material-symbols-rounded {
+    font-size: 32px;
+}
+
+.donate-page .donate-hero-text h2 {
+    font-size: 1.5rem;
+}
+
+.donate-page .donate-hero-text p {
+    font-size: 0.9375rem;
+}
+
 /* Donate Page */
 .donate {
     background: var(--bg-section);
@@ -2070,27 +2105,42 @@ body {
 
 .donate-avatar-mega {
     border-color: #f59e0b !important;
-    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2) !important;
-    transform: scale(1.1);
-    margin: 0 4px;
+    transform: scale(1.15);
+    margin: 0 8px;
     z-index: 2;
+    animation: mega-pulse 2.5s infinite;
 }
 
 .donate-avatar-mega:hover {
-    transform: scale(1.2) !important;
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4) !important;
+    transform: scale(1.25) !important;
+    animation-play-state: paused;
 }
 
 .mega-trophy {
     position: absolute;
-    top: -6px;
-    right: -6px;
-    font-size: 16px !important;
+    top: -8px;
+    right: -8px;
+    font-size: 18px !important;
     color: #f59e0b;
     background: var(--bg-page);
     border-radius: 50%;
     z-index: 3;
+    padding: 2px;
+    box-shadow: var(--shadow-sm);
     font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 20;
+    animation: mega-trophy-bounce 3s ease-in-out infinite;
+}
+
+@keyframes mega-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(245, 158, 11, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(245, 158, 11, 0); }
+}
+
+@keyframes mega-trophy-bounce {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    25% { transform: translateY(-2px) rotate(-5deg); }
+    75% { transform: translateY(-1px) rotate(5deg); }
 }
 
 
