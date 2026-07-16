@@ -2042,9 +2042,10 @@ body {
 .donate-avatars {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: 12px;
     align-items: center;
     min-height: 44px;
+    padding: 8px 0;
 }
 
 .donate-avatar {
@@ -2106,7 +2107,6 @@ body {
 .donate-avatar-mega {
     border-color: #f59e0b !important;
     transform: scale(1.15);
-    margin: 0 8px;
     z-index: 2;
     animation: mega-pulse 2.5s infinite;
 }
