@@ -275,17 +275,14 @@
     "tier2-name": "후원자",
     "tier2-desc": "정기 후원자가 되어 장기적인 계획에 도움을 주세요. 이름이 목록에 표시됩니다.",
     "tier3-name": "메가 후원자",
-    "tier3-desc": "Morphe 웹사이트의 메가 후원자 섹션에 로고 또는 이름이 눈에 띄게 표시됩니다.",
+    "tier3-desc": "Morphe의 미래에 큰 영향을 미치고 사용자들이 좋아하는 정기적인 업데이트를 유지할 수 있도록 도와주세요. 귀하의 이름은 후원자 목록에 눈에 띄게 표시됩니다.",
     "tier-contribute": "후원하기",
     "per-month": "/월",
     "tier-popular": "인기",
     "backers-title": "후원자 목록",
     "backers-all": "전체 보기",
     "backers-loading": "로딩 중…",
-    "backers-empty": "Morphe를 처음으로 후원해보세요!",
-    "sponsors-title": "메가 후원자",
-    "sponsors-cta": "메가 후원자 되기",
-    "sponsors-empty": "첫 번째 메가 후원자가 되어보세요!"
+    "backers-empty": "Morphe를 처음으로 후원해보세요!"
   },
   "changelog": {
     "title": "새 소식",

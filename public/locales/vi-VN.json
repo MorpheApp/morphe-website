@@ -275,17 +275,14 @@
     "tier2-name": "Bạn đồng hành",
     "tier2-desc": "Ủng hộ định kỳ giúp duy trì dự án lâu dài. Tên của bạn sẽ được ghi vào danh sách bạn đồng hành của tụi mình.",
     "tier3-name": "Nhà tài trợ",
-    "tier3-desc": "Tên hoặc logo của bạn sẽ được chễm chệ ở vị trí nổi bật nhất trong mục Nhà tài trợ trên trang web Morphe.",
+    "tier3-desc": "Tạo tác động đáng kể đến tương lai của Morphe và giúp chúng tôi duy trì các bản cập nhật thường xuyên mà người dùng yêu thích. Tên của bạn xuất hiện nổi bật trong danh sách những người ủng hộ chúng tôi.",
     "tier-contribute": "Ủng hộ",
     "per-month": "/tháng",
     "tier-popular": "Phổ biến",
     "backers-title": "Bạn đồng hành cùng Morphe",
     "backers-all": "Xem hết",
     "backers-loading": "Đang tải…",
-    "backers-empty": "Trở thành người đầu tiên ủng hộ Morphe!",
-    "sponsors-title": "Nhà tài trợ của Morphe",
-    "sponsors-cta": "Tài trợ",
-    "sponsors-empty": "Trở thành nhà tài trợ đầu tiên cho Morphe!"
+    "backers-empty": "Trở thành người đầu tiên ủng hộ Morphe!"
   },
   "changelog": {
     "title": "Có gì mới",

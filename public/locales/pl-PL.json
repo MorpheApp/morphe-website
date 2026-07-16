@@ -275,17 +275,14 @@
     "tier2-name": "Wspierający",
     "tier2-desc": "Zostań stałym wspierającym i pomóż nam w dalszym rozwoju. Twój nick pojawi się na liście wspierających.",
     "tier3-name": "Mega wspierający",
-    "tier3-desc": "Twoje logo lub nick znajdzie się w wyróżnionej sekcji \"Mega wspierający\" na stronie Morphe.",
+    "tier3-desc": "Wywieraj znaczący wpływ na przyszłość Morphe i pomóż nam utrzymać regularne aktualizacje, które kochają użytkownicy. Twoje imię i nazwisko pojawi się w widocznym miejscu na liście darczyńców.",
     "tier-contribute": "Wesprzyj",
     "per-month": "/mies.",
     "tier-popular": "Popularne",
     "backers-title": "Nasi wspierający",
     "backers-all": "Zobacz wszystkich",
     "backers-loading": "Wczytywanie…",
-    "backers-empty": "Zostań pierwszym wspierającym Morphe!",
-    "sponsors-title": "Mega wspierający",
-    "sponsors-cta": "Zostań mega wspierającym",
-    "sponsors-empty": "Zostań pierwszym mega wspierającym!"
+    "backers-empty": "Zostań pierwszym wspierającym Morphe!"
   },
   "changelog": {
     "title": "Co nowego",

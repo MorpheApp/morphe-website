@@ -178,17 +178,14 @@
     "tier2-name": "Patrocinador",
     "tier2-desc": "Conviértete en un colaborador recurrente y ayúdanos a planificar a largo plazo. Tu nombre aparecerá en nuestra lista de patrocinadores.",
     "tier3-name": "Mega patrocinador",
-    "tier3-desc": "Haz que tu logo o nombre aparezca de forma destacada en la sección de Mega patrocinadores del sitio web de Morphe.",
+    "tier3-desc": "Ten un impacto significativo en el futuro de Morphe y ayúdanos a mantener las actualizaciones regulares que tanto gustan a los usuarios. Tu nombre aparecerá de forma destacada en nuestra lista de patrocinadores.",
     "tier-contribute": "Contribuir",
     "per-month": "/mes",
     "tier-popular": "Popular",
     "backers-title": "Nuestros patrocinadores",
     "backers-all": "Ver todos",
     "backers-loading": "Cargando…",
-    "backers-empty": "¡Sé el primero en apoyar a Morphe!",
-    "sponsors-title": "Mega patrocinadores",
-    "sponsors-cta": "Conviértete en mega patrocinador",
-    "sponsors-empty": "¡Sé el primer mega patrocinador!"
+    "backers-empty": "¡Sé el primero en apoyar a Morphe!"
   },
   "microg": {
     "title": "Descargar",

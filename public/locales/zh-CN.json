@@ -178,17 +178,14 @@
     "tier2-name": "支持者",
     "tier2-desc": "成为定期支持者，帮助我们进行长期规划。你的名字将出现在支持者列表中。",
     "tier3-name": "超级支持者",
-    "tier3-desc": "您的标志或名称将突出显示在 Morphe 网站的超级支持者部分。",
+    "tier3-desc": "对 Morphe 的未来产生重大影响，并帮助我们维持用户喜爱的定期更新。您的名字将显眼地出现在我们的支持者名单上。",
     "tier-contribute": "贡献",
     "per-month": "/月",
     "tier-popular": "热门",
     "backers-title": "我们的支持者",
     "backers-all": "查看全部",
     "backers-loading": "加载中…",
-    "backers-empty": "成为第一个支持 Morphe 的人！",
-    "sponsors-title": "超级支持者",
-    "sponsors-cta": "成为超级支持者",
-    "sponsors-empty": "成为第一个超级支持者！"
+    "backers-empty": "成为第一个支持 Morphe 的人！"
   },
   "microg": {
     "title": "下载",

@@ -178,17 +178,14 @@
     "tier2-name": "サポーター",
     "tier2-desc": "継続的な支援者になり、長期的な計画を支えてください。あなたの名前が一覧に表示されます。",
     "tier3-name": "メガサポーター",
-    "tier3-desc": "Morpheのウェブサイトのメガサポーターセクションにロゴや名前が目立つ形で掲載されます。",
+    "tier3-desc": "Morpheの将来に大きな影響を与え、ユーザーに愛されている定期的なアップデートの維持を支援してください。あなたの名前はサポーターリストに目立つように表示されます。",
     "tier-contribute": "支援する",
     "per-month": "/月",
     "tier-popular": "人気",
     "backers-title": "支援者一覧",
     "backers-all": "すべて表示",
     "backers-loading": "読み込み中…",
-    "backers-empty": "最初にMorpheを支援しましょう！",
-    "sponsors-title": "メガサポーター",
-    "sponsors-cta": "メガサポーターになる",
-    "sponsors-empty": "最初のメガサポーターになりましょう！"
+    "backers-empty": "最初にMorpheを支援しましょう！"
   },
   "microg": {
     "title": "ダウンロード:",

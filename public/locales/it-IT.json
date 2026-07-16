@@ -178,17 +178,14 @@
     "tier2-name": "Sostenitore",
     "tier2-desc": "Diventa un sostenitore ricorrente e aiutaci a pianificare a lungo termine. Il tuo nome apparirà nella lista dei sostenitori.",
     "tier3-name": "Mega sostenitore",
-    "tier3-desc": "Mostra il tuo logo o nome in evidenza nella sezione Mega sostenitori sul sito Morphe.",
+    "tier3-desc": "Avere un impatto significativo sul futuro di Morphe e aiutarci a mantenere gli aggiornamenti regolari che gli utenti amano. Il tuo nome apparirà in primo piano nella nostra lista di sostenitori.",
     "tier-contribute": "Contribuisci",
     "per-month": "/mese",
     "tier-popular": "Popolare",
     "backers-title": "I nostri sostenitori",
     "backers-all": "Vedi tutti",
     "backers-loading": "Caricamento…",
-    "backers-empty": "Sii il primo a supportare Morphe!",
-    "sponsors-title": "Mega sostenitori",
-    "sponsors-cta": "Diventa un mega sostenitore",
-    "sponsors-empty": "Sii il primo mega sostenitore!"
+    "backers-empty": "Sii il primo a supportare Morphe!"
   },
   "microg": {
     "title": "Scarica",

@@ -8,10 +8,7 @@
     var GQL_QUERY = JSON.stringify({
         query: [
             '{ collective(slug: "' + OC_SLUG + '") {',
-            '  sponsors: members(role: BACKER, limit: 200, orderBy: { field: CREATED_AT, direction: DESC }) {',
-            '    nodes { tier { name } account { name imageUrl(height: 128) slug website } }',
-            '  }',
-            '  backers: members(role: BACKER, limit: 200, orderBy: { field: CREATED_AT, direction: DESC }) {',
+            '  members(role: BACKER, limit: 500, orderBy: { field: CREATED_AT, direction: DESC }) {',
             '    totalCount nodes { createdAt totalDonations { value } tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
             '}}'
@@ -25,52 +22,11 @@
         if (stateEmpty) stateEmpty.hidden = false;
     }
 
-    function isSponsor(node) {
+    function isMegaSponsor(node) {
         if (!node.tier || !node.tier.name) return false;
         var name = node.tier.name.toLowerCase();
         return name.indexOf('mega') !== -1 ||
-               name.indexOf('sponsor') !== -1 ||
-               name.indexOf('supporter') !== -1;
-    }
-
-    function buildSponsors(nodes) {
-        var container = document.getElementById('donate-sponsors-avatars');
-        var stateLoad = document.getElementById('donate-sponsors-loading');
-        if (!container) return;
-        if (stateLoad) stateLoad.hidden = true;
-
-        var sponsors = nodes.filter(isSponsor);
-
-        if (sponsors.length === 0) {
-            showEmpty('donate-sponsors-loading', 'donate-sponsors-empty');
-            return;
-        }
-
-        sponsors.forEach(function (node) {
-            var account = node.account;
-            var a = document.createElement('a');
-            a.href      = account.website || ('https://opencollective.com/' + account.slug);
-            a.target    = '_blank';
-            a.rel       = 'noopener noreferrer';
-            a.className = 'donate-sponsor-avatar';
-            a.title     = account.name || 'Sponsor';
-
-            if (account.imageUrl) {
-                var img     = document.createElement('img');
-                img.src     = account.imageUrl;
-                img.alt     = account.name || 'Sponsor';
-                img.loading = 'lazy';
-                img.onerror = function () {
-                    this.remove();
-                    a.textContent = (account.name || '?')[0].toUpperCase();
-                };
-                a.appendChild(img);
-            } else {
-                a.textContent = (account.name || '?')[0].toUpperCase();
-            }
-
-            container.appendChild(a);
-        });
+               name.indexOf('sponsor') !== -1;
     }
 
     function buildBackers(nodes, totalCount) {
@@ -79,17 +35,24 @@
         if (!container) return;
         if (stateLoad) stateLoad.hidden = true;
 
-        var filteredNodes = nodes.filter(function (n) { return !isSponsor(n); });
-
-        if (filteredNodes.length === 0) {
+        if (!nodes || nodes.length === 0) {
             showEmpty('donate-state-loading', 'donate-state-empty');
             return;
         }
 
-        var recurring = filteredNodes.filter(function (n) { return !!n.tier; });
-        var oneTime   = filteredNodes.filter(function (n) { return !n.tier; });
+        // Separate Mega Supporters and others
+        var megaSupporters = nodes.filter(isMegaSponsor);
+        var otherBackers = nodes.filter(function(n) { return !isMegaSponsor(n); });
 
-        recurring.sort(function (a, b) {
+        // Sort Mega Supporters by total donations (most ever)
+        megaSupporters.sort(function (a, b) {
+            var valA = (a.totalDonations && a.totalDonations.value) || 0;
+            var valB = (b.totalDonations && b.totalDonations.value) || 0;
+            return valB - valA;
+        });
+
+        // Sort all other backers strictly by total donations
+        otherBackers.sort(function (a, b) {
             var valA = (a.totalDonations && a.totalDonations.value) || 0;
             var valB = (b.totalDonations && b.totalDonations.value) || 0;
 
@@ -103,30 +66,25 @@
             return dateA - dateB;
         });
 
-        oneTime.sort(function (a, b) {
-            var valA = (a.totalDonations && a.totalDonations.value) || 0;
-            var valB = (b.totalDonations && b.totalDonations.value) || 0;
+        var allBackers = megaSupporters.concat(otherBackers);
 
-            if (valB !== valA) {
-                return valB - valA;
-            }
-
-            // Secondary sort: Most recent first (as it was before)
-            var dateA = new Date(a.createdAt || 0);
-            var dateB = new Date(b.createdAt || 0);
-            return dateB - dateA;
-        });
-
-        var backers = recurring.concat(oneTime);
-
-        backers.forEach(function (node) {
+        allBackers.forEach(function (node) {
             var account = node.account;
+            var isMega = isMegaSponsor(node);
+
             var a = document.createElement('a');
-            a.href      = 'https://opencollective.com/' + account.slug;
+            a.href      = isMega && account.website ? account.website : ('https://opencollective.com/' + account.slug);
             a.target    = '_blank';
             a.rel       = 'noopener noreferrer';
-            a.className = 'donate-avatar';
-            a.title     = account.name || 'Backer';
+            a.className = isMega ? 'donate-avatar donate-avatar-mega' : 'donate-avatar';
+            a.title     = (isMega ? 'Mega Supporter: ' : 'Backer: ') + (account.name || 'Anonymous');
+
+            if (isMega) {
+                var trophy = document.createElement('span');
+                trophy.className = 'material-symbols-rounded mega-trophy';
+                trophy.textContent = 'emoji_events';
+                a.appendChild(trophy);
+            }
 
             if (account.imageUrl) {
                 var img     = document.createElement('img');
@@ -135,18 +93,21 @@
                 img.loading = 'lazy';
                 img.onerror = function () {
                     this.remove();
-                    a.textContent = (account.name || '?')[0].toUpperCase();
+                    var initials = document.createElement('span');
+                    initials.textContent = (account.name || '?')[0].toUpperCase();
+                    a.appendChild(initials);
                 };
                 a.appendChild(img);
             } else {
-                a.textContent = (account.name || '?')[0].toUpperCase();
+                var initials = document.createElement('span');
+                initials.textContent = (account.name || '?')[0].toUpperCase();
+                a.appendChild(initials);
             }
 
             container.appendChild(a);
         });
 
-        var sponsorCount = nodes.filter(isSponsor).length;
-        var remaining = Math.max(0, totalCount - backers.length - sponsorCount);
+        var remaining = Math.max(0, totalCount - allBackers.length);
         if (remaining > 0) {
             var more = document.createElement('a');
             more.href       = 'https://opencollective.com/morpheapp#section-contributors';
@@ -161,7 +122,6 @@
 
     function onFail() {
         showEmpty('donate-state-loading', 'donate-state-empty');
-        showEmpty('donate-sponsors-loading', 'donate-sponsors-empty');
     }
 
     fetch(OC_GQL, {
@@ -175,13 +135,8 @@
         })
         .then(function (data) {
             var collective = data.data && data.data.collective;
-            if (collective) {
-                var sponsorNodes = (collective.sponsors && collective.sponsors.nodes) || [];
-                var backerNodes = (collective.backers && collective.backers.nodes) || [];
-                var totalCount = (collective.backers && collective.backers.totalCount) || 0;
-
-                buildSponsors(sponsorNodes);
-                buildBackers(backerNodes, totalCount);
+            if (collective && collective.members) {
+                buildBackers(collective.members.nodes, collective.members.totalCount);
             } else {
                 onFail();
             }

@@ -178,17 +178,14 @@
     "tier2-name": "Apoiante",
     "tier2-desc": "Torne-se um apoiante recorrente e ajude-nos a planear a longo prazo. O seu nome aparecerá na lista de apoiantes.",
     "tier3-name": "Mega apoiante",
-    "tier3-desc": "Tenha o seu logótipo ou nome em destaque na secção de Mega apoiantes no site Morphe.",
+    "tier3-desc": "Causa um impacto significativo no futuro do Morphe e ajude-nos a manter as atualizações regulares que os utilizadores adoram. O seu nome aparece em destaque na nossa lista de apoiadores.",
     "tier-contribute": "Contribuir",
     "per-month": "/mês",
     "tier-popular": "Popular",
     "backers-title": "Os nossos apoiantes",
     "backers-all": "Ver todos",
     "backers-loading": "A carregar…",
-    "backers-empty": "Seja o primeiro a apoiar o Morphe!",
-    "sponsors-title": "Mega apoiantes",
-    "sponsors-cta": "Torne-se um mega apoiante",
-    "sponsors-empty": "Seja o primeiro mega apoiante!"
+    "backers-empty": "Seja o primeiro a apoiar o Morphe!"
   },
   "microg": {
     "title": "Transferir",
