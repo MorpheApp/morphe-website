@@ -185,10 +185,7 @@
     "backers-title": "Наши поддержавшие",
     "backers-all": "Показать всех",
     "backers-loading": "Загрузка…",
-    "backers-empty": "Станьте первым, кто поддержит Morphe!",
-    "sponsors-title": "Мега-поддержка",
-    "sponsors-cta": "Стать мега-поддержкой",
-    "sponsors-empty": "Станьте первым мега-поддержкой!"
+    "backers-empty": "Станьте первым, кто поддержит Morphe!"
   },
   "microg": {
     "title": "Загрузить",

@@ -282,10 +282,7 @@
     "backers-title": "Våra stödjare",
     "backers-all": "Se alla",
     "backers-loading": "Läser in …",
-    "backers-empty": "Bli den första som stöder Morphe!",
-    "sponsors-title": "Megastödjare",
-    "sponsors-cta": "Bli megastödjare",
-    "sponsors-empty": "Bli den första megastödjaren!"
+    "backers-empty": "Bli den första som stöder Morphe!"
   },
   "changelog": {
     "title": "Nyheter",

@@ -185,10 +185,7 @@
     "backers-title": "支援者一覧",
     "backers-all": "すべて表示",
     "backers-loading": "読み込み中…",
-    "backers-empty": "最初にMorpheを支援しましょう！",
-    "sponsors-title": "メガサポーター",
-    "sponsors-cta": "メガサポーターになる",
-    "sponsors-empty": "最初のメガサポーターになりましょう！"
+    "backers-empty": "最初にMorpheを支援しましょう！"
   },
   "microg": {
     "title": "ダウンロード:",

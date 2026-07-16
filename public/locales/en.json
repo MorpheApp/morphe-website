@@ -282,10 +282,7 @@
     "backers-title": "Our backers",
     "backers-all": "See all",
     "backers-loading": "Loading…",
-    "backers-empty": "Be the first to support Morphe!",
-    "sponsors-title": "Mega Supporters",
-    "sponsors-cta": "Become a mega supporter",
-    "sponsors-empty": "Be the first mega supporter!"
+    "backers-empty": "Be the first to support Morphe!"
   },
   "changelog": {
     "title": "What's New",

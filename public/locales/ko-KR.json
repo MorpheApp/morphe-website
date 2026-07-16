@@ -282,10 +282,7 @@
     "backers-title": "후원자 목록",
     "backers-all": "전체 보기",
     "backers-loading": "로딩 중…",
-    "backers-empty": "Morphe를 처음으로 후원해보세요!",
-    "sponsors-title": "메가 후원자",
-    "sponsors-cta": "메가 후원자 되기",
-    "sponsors-empty": "첫 번째 메가 후원자가 되어보세요!"
+    "backers-empty": "Morphe를 처음으로 후원해보세요!"
   },
   "changelog": {
     "title": "새 소식",

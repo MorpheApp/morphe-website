@@ -185,10 +185,7 @@
     "backers-title": "我们的支持者",
     "backers-all": "查看全部",
     "backers-loading": "加载中…",
-    "backers-empty": "成为第一个支持 Morphe 的人！",
-    "sponsors-title": "超级支持者",
-    "sponsors-cta": "成为超级支持者",
-    "sponsors-empty": "成为第一个超级支持者！"
+    "backers-empty": "成为第一个支持 Morphe 的人！"
   },
   "microg": {
     "title": "下载",

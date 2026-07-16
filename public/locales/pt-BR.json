@@ -185,10 +185,7 @@
     "backers-title": "Nossos apoiadores",
     "backers-all": "Ver todos",
     "backers-loading": "Carregando…",
-    "backers-empty": "Seja o primeiro a apoiar o Morphe!",
-    "sponsors-title": "Mega apoiadores",
-    "sponsors-cta": "Torne-se um mega apoiador",
-    "sponsors-empty": "Seja o primeiro mega apoiador!"
+    "backers-empty": "Seja o primeiro a apoiar o Morphe!"
   },
   "microg": {
     "title": "Baixar",

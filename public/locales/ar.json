@@ -282,10 +282,7 @@
     "backers-title": "داعمونا",
     "backers-all": "عرض الكل",
     "backers-loading": "جارٍ التحميل…",
-    "backers-empty": "كن أول من يدعم Morphe!",
-    "sponsors-title": "الداعمون الكبار",
-    "sponsors-cta": "كن داعماً كبيراً",
-    "sponsors-empty": "كن أول داعم كبير!"
+    "backers-empty": "كن أول من يدعم Morphe!"
   },
   "changelog": {
     "title": "ما الجديد",

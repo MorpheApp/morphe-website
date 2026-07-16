@@ -282,10 +282,7 @@
     "backers-title": "我們的贊助者",
     "backers-all": "查看全部",
     "backers-loading": "載入中…",
-    "backers-empty": "成為第一位贊助 Morphe 的人！",
-    "sponsors-title": "超級贊助者",
-    "sponsors-cta": "成為超級贊助者",
-    "sponsors-empty": "成為第一位超級贊助者！"
+    "backers-empty": "成為第一位贊助 Morphe 的人！"
   },
   "changelog": {
     "title": "更新內容",
