@@ -51,23 +51,22 @@
             return valB - valA;
         });
 
-        // Sort other backers (recurring then one-time, then by value/date)
-        var recurring = otherBackers.filter(function (n) { return !!n.tier; });
-        var oneTime   = otherBackers.filter(function (n) { return !n.tier; });
-
-        var sortByValueAndDate = function (a, b, secondaryNewestFirst) {
+        // Sort all other backers strictly by total donations
+        otherBackers.sort(function (a, b) {
             var valA = (a.totalDonations && a.totalDonations.value) || 0;
             var valB = (b.totalDonations && b.totalDonations.value) || 0;
-            if (valB !== valA) return valB - valA;
+
+            if (valB !== valA) {
+                return valB - valA;
+            }
+
+            // Secondary sort: Longest donating (Oldest first)
             var dateA = new Date(a.createdAt || 0);
             var dateB = new Date(b.createdAt || 0);
-            return secondaryNewestFirst ? (dateB - dateA) : (dateA - dateB);
-        };
+            return dateA - dateB;
+        });
 
-        recurring.sort(function(a, b) { return sortByValueAndDate(a, b, false); });
-        oneTime.sort(function(a, b) { return sortByValueAndDate(a, b, true); });
-
-        var allBackers = megaSupporters.concat(recurring, oneTime);
+        var allBackers = megaSupporters.concat(otherBackers);
 
         allBackers.forEach(function (node) {
             var account = node.account;
