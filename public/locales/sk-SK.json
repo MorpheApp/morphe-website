@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Porušenie zmluvných podmienok",
     "blocked-reason-dropped": "Ukončené",
     "blocked-reason-test": "Testovací záznam",
-    "blocklist-updated": "Zoznam blokovaných aktualizovaný {{date}}"
+    "blocklist-updated": "Zoznam blokovaných aktualizovaný {{date}}",
+    "desktop-qr-caption": "Naskenujte fotoaparátom telefónu a pokračujte",
+    "desktop-divider": "alebo",
+    "desktop-qr-alt": "QR kód, ktorý otvorí tento odkaz vo vašom telefóne",
+    "desktop-copy-link": "Kopírovať odkaz",
+    "desktop-copy-link-done": "Skopírované!"
   }
 }

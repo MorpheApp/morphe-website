@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Verstoß gegen die Nutzungsbedingungen",
     "blocked-reason-dropped": "Eingestellt",
     "blocked-reason-test": "Testeintrag",
-    "blocklist-updated": "Blockliste aktualisiert am {{date}}"
+    "blocklist-updated": "Blockliste aktualisiert am {{date}}",
+    "desktop-qr-caption": "Scannen Sie mit der Kamera Ihres Smartphones, um fortzufahren",
+    "desktop-divider": "oder",
+    "desktop-qr-alt": "QR-Code, der diesen Link auf Ihrem Smartphone öffnet",
+    "desktop-copy-link": "Link kopieren",
+    "desktop-copy-link-done": "Kopiert!"
   }
 }

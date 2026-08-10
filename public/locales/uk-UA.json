@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Порушення умов використання",
     "blocked-reason-dropped": "Припинено",
     "blocked-reason-test": "Тестовий запис",
-    "blocklist-updated": "Список заблокованих оновлено {{date}}"
+    "blocklist-updated": "Список заблокованих оновлено {{date}}",
+    "desktop-qr-caption": "Відскануйте камерою телефону, щоб продовжити",
+    "desktop-divider": "або",
+    "desktop-qr-alt": "QR-код, який відкриває це посилання на телефоні",
+    "desktop-copy-link": "Копіювати посилання",
+    "desktop-copy-link-done": "Скопійовано!"
   }
 }

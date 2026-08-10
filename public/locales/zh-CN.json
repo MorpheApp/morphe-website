@@ -326,6 +326,11 @@
     "blocked-reason-tos": "违反服务条款",
     "blocked-reason-dropped": "已停用",
     "blocked-reason-test": "测试条目",
-    "blocklist-updated": "阻止列表更新于 {{date}}"
+    "blocklist-updated": "阻止列表更新于 {{date}}",
+    "desktop-qr-caption": "使用手机相机扫描以继续",
+    "desktop-divider": "或",
+    "desktop-qr-alt": "在手机上打开此链接的二维码",
+    "desktop-copy-link": "复制链接",
+    "desktop-copy-link-done": "已复制！"
   }
 }

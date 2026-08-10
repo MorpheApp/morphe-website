@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Violación de los términos de servicio",
     "blocked-reason-dropped": "Descontinuado",
     "blocked-reason-test": "Entrada de prueba",
-    "blocklist-updated": "Lista de bloqueo actualizada el {{date}}"
+    "blocklist-updated": "Lista de bloqueo actualizada el {{date}}",
+    "desktop-qr-caption": "Escanea con la cámara de tu teléfono para continuar",
+    "desktop-divider": "o",
+    "desktop-qr-alt": "Código QR que abre este enlace en tu teléfono",
+    "desktop-copy-link": "Copiar enlace",
+    "desktop-copy-link-done": "¡Copiado!"
   }
 }

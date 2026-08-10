@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Schending van servicevoorwaarden",
     "blocked-reason-dropped": "Stopgezet",
     "blocked-reason-test": "Testinvoer",
-    "blocklist-updated": "Bloklijst bijgewerkt op {{date}}"
+    "blocklist-updated": "Bloklijst bijgewerkt op {{date}}",
+    "desktop-qr-caption": "Scan met de camera van je telefoon om door te gaan",
+    "desktop-divider": "of",
+    "desktop-qr-alt": "QR-code die deze link op je telefoon opent",
+    "desktop-copy-link": "Link kopiëren",
+    "desktop-copy-link-done": "Gekopieerd!"
   }
 }

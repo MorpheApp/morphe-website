@@ -321,7 +321,12 @@
     "blocked-reason-tos": "違反服務條款",
     "blocked-reason-dropped": "已停用",
     "blocked-reason-test": "測試條目",
-    "blocklist-updated": "封鎖列表更新於 {{date}}"
+    "blocklist-updated": "封鎖列表更新於 {{date}}",
+    "desktop-qr-caption": "使用手機相機掃描以繼續",
+    "desktop-divider": "或",
+    "desktop-qr-alt": "在手機上開啟此連結的 QR Code",
+    "desktop-copy-link": "複製連結",
+    "desktop-copy-link-done": "已複製！"
   },
   "error": {
     "go-home": "返回首頁",

@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Violation des conditions d’utilisation",
     "blocked-reason-dropped": "Abandonné",
     "blocked-reason-test": "Entrée de test",
-    "blocklist-updated": "Liste de blocage mise à jour le {{date}}"
+    "blocklist-updated": "Liste de blocage mise à jour le {{date}}",
+    "desktop-qr-caption": "Scannez avec l'appareil photo de votre téléphone pour continuer",
+    "desktop-divider": "ou",
+    "desktop-qr-alt": "Code QR qui ouvre ce lien sur votre téléphone",
+    "desktop-copy-link": "Copier le lien",
+    "desktop-copy-link-done": "Copié !"
   }
 }

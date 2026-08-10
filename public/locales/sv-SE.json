@@ -321,7 +321,12 @@
     "blocked-reason-tos": "Brott mot användarvillkoren",
     "blocked-reason-dropped": "Avvecklad",
     "blocked-reason-test": "Testpost",
-    "blocklist-updated": "Blockeringslistan uppdaterad {{date}}"
+    "blocklist-updated": "Blockeringslistan uppdaterad {{date}}",
+    "desktop-qr-caption": "Skanna med telefonens kamera för att fortsätta",
+    "desktop-divider": "eller",
+    "desktop-qr-alt": "QR-kod som öppnar den här länken på din telefon",
+    "desktop-copy-link": "Kopiera länk",
+    "desktop-copy-link-done": "Kopierad!"
   },
   "error": {
     "go-home": "Gå till startsidan",
