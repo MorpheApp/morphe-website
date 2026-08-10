@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Нарушение условий использования",
     "blocked-reason-dropped": "Прекращено",
     "blocked-reason-test": "Тестовая запись",
-    "blocklist-updated": "Список заблокированных обновлён {{date}}"
+    "blocklist-updated": "Список заблокированных обновлён {{date}}",
+    "desktop-qr-caption": "Отсканируйте камерой телефона, чтобы продолжить",
+    "desktop-divider": "или",
+    "desktop-qr-alt": "QR-код, который открывает эту ссылку на телефоне",
+    "desktop-copy-link": "Копировать ссылку",
+    "desktop-copy-link-done": "Скопировано!"
   }
 }

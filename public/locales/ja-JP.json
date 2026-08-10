@@ -326,6 +326,11 @@
     "blocked-reason-tos": "利用規約違反",
     "blocked-reason-dropped": "廃止",
     "blocked-reason-test": "テストエントリ",
-    "blocklist-updated": "ブロックリストの更新日: {{date}}"
+    "blocklist-updated": "ブロックリストの更新日: {{date}}",
+    "desktop-qr-caption": "続けるにはスマートフォンのカメラでスキャンしてください",
+    "desktop-divider": "または",
+    "desktop-qr-alt": "このリンクをスマートフォンで開くQRコード",
+    "desktop-copy-link": "リンクをコピー",
+    "desktop-copy-link-done": "コピーしました！"
   }
 }

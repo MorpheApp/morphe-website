@@ -326,6 +326,11 @@
     "blocked-reason-tos": "Hizmet şartlarını ihlal",
     "blocked-reason-dropped": "Sonlandırıldı",
     "blocked-reason-test": "Test kaydı",
-    "blocklist-updated": "Engelleme listesi {{date}} tarihinde güncellendi"
+    "blocklist-updated": "Engelleme listesi {{date}} tarihinde güncellendi",
+    "desktop-qr-caption": "Devam etmek için telefonunuzun kamerasıyla tarayın",
+    "desktop-divider": "veya",
+    "desktop-qr-alt": "Bu bağlantıyı telefonunuzda açan QR kodu",
+    "desktop-copy-link": "Bağlantıyı kopyala",
+    "desktop-copy-link-done": "Kopyalandı!"
   }
 }

@@ -90,6 +90,15 @@
     <h1 data-i18n="add-source.desktop-title">Open on Android</h1>
     <p class="hero-description" data-i18n="add-source.desktop-subtitle">This link adds a patch source to Morphe, which requires an Android device</p>
 
+    <div class="qr-card">
+        <div class="qr-plate">
+            <div class="qr-code" id="qr-code" data-i18n-aria="add-source.desktop-qr-alt" aria-label="QR code that opens this link on your phone"></div>
+        </div>
+        <p class="qr-card__caption" data-i18n="add-source.desktop-qr-caption">Scan with your phone's camera to continue</p>
+    </div>
+
+    <div class="or-divider" data-i18n="add-source.desktop-divider">or</div>
+
     <div class="steps-card">
         <ol>
             <li data-i18n-html="add-source.desktop-step1">Install <a href="/">Morphe</a> on your Android device</li>
@@ -99,8 +108,14 @@
     </div>
 
     <a href="/" class="btn btn-primary" data-i18n="error.go-home">Go to homepage</a>
+    <button type="button" class="btn btn-secondary" id="btn-copy-link">
+        <span class="material-symbols-rounded" id="copy-link-icon">content_copy</span>
+        <span id="copy-link-text" data-i18n="add-source.desktop-copy-link">Copy link</span>
+    </button>
 </div>
 
+<script src="js/vendor/qrcode-generator.js"></script>
+<script src="js/qr-render.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/add-source.js"></script>
 <script src="js/theme-manager.js"></script>

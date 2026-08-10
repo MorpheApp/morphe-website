@@ -178,7 +178,67 @@
             });
         } else {
             show('state-desktop');
+            renderDesktopQrCode();
         }
+    }
+
+    // Encodes the current page URL so scanning it on a phone opens this same
+    // add-source flow there. Renders once, lazily, only for the desktop state.
+    var qrRendered = false;
+    function renderDesktopQrCode() {
+        if (qrRendered || !window.renderQrCode) return;
+        var container = document.getElementById('qr-code');
+        if (!container) return;
+        qrRendered = true;
+        window.renderQrCode(container, window.location.href, {
+            logo: 'favicon.svg'
+        });
+    }
+
+    var copyLinkBtn = document.getElementById('btn-copy-link');
+    if (copyLinkBtn) {
+        var copyIcon = document.getElementById('copy-link-icon');
+        var copyText = document.getElementById('copy-link-text');
+        var copyResetTimer = null;
+
+        function fallbackCopy(text) {
+            var input = document.createElement('textarea');
+            input.value = text;
+            input.style.position = 'fixed';
+            input.style.opacity = '0';
+            document.body.appendChild(input);
+            input.focus();
+            input.select();
+            var ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+            document.body.removeChild(input);
+            return ok;
+        }
+
+        function showCopied() {
+            if (copyResetTimer) clearTimeout(copyResetTimer);
+            copyIcon.textContent = 'check';
+            copyText.textContent = window.i18n
+                ? window.i18n.t('add-source.desktop-copy-link-done')
+                : 'Copied!';
+            copyResetTimer = setTimeout(function () {
+                copyIcon.textContent = 'content_copy';
+                copyText.textContent = window.i18n
+                    ? window.i18n.t('add-source.desktop-copy-link')
+                    : 'Copy link';
+            }, 1800);
+        }
+
+        copyLinkBtn.addEventListener('click', function () {
+            var link = window.location.href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(link).then(showCopied, function () {
+                    if (fallbackCopy(link)) showCopied();
+                });
+            } else if (fallbackCopy(link)) {
+                showCopied();
+            }
+        });
     }
 
     // Wait for i18n to be ready before showing states

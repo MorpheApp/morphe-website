@@ -446,10 +446,12 @@ body {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-md) var(--spacing-xl);
     border-radius: var(--radius-lg);
     font-weight: 600;
+    font-family: inherit;
     text-decoration: none;
     transition: all var(--transition-base);
     cursor: pointer;
@@ -2323,6 +2325,65 @@ body {
     font-size: 3.5rem;
     line-height: 1;
     margin-bottom: var(--spacing-xl);
+}
+
+/* QR code link */
+.qr-card {
+    margin-bottom: var(--spacing-xl);
+}
+
+.qr-plate {
+    display: inline-flex;
+    padding: var(--spacing-md);
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto;
+}
+
+.qr-code {
+    display: block;
+    line-height: 0;
+}
+
+.qr-code svg {
+    width: 176px;
+    height: 176px;
+    display: block;
+}
+
+.qr-module {
+    fill: #18181b;
+}
+
+.qr-logo-bg {
+    fill: #ffffff;
+}
+
+.qr-card__caption {
+    margin-top: var(--spacing-md);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
 }
 
 .steps-card {

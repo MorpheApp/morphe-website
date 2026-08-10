@@ -321,7 +321,12 @@
     "blocked-reason-tos": "Vi phạm điều khoản dịch vụ",
     "blocked-reason-dropped": "Đã ngừng phát triển",
     "blocked-reason-test": "Mục thử nghiệm",
-    "blocklist-updated": "Cập nhật lần cuối: {{date}}"
+    "blocklist-updated": "Cập nhật lần cuối: {{date}}",
+    "desktop-qr-caption": "Quét bằng camera điện thoại để tiếp tục",
+    "desktop-divider": "hoặc",
+    "desktop-qr-alt": "Mã QR mở liên kết này trên điện thoại của bạn",
+    "desktop-copy-link": "Sao chép liên kết",
+    "desktop-copy-link-done": "Đã sao chép!"
   },
   "error": {
     "go-home": "Về trang chủ",

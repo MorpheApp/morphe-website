@@ -321,7 +321,12 @@
     "blocked-reason-tos": "Terms of service violation",
     "blocked-reason-dropped": "Discontinued",
     "blocked-reason-test": "Test entry",
-    "blocklist-updated": "Blocklist updated {{date}}"
+    "blocklist-updated": "Blocklist updated {{date}}",
+    "desktop-qr-caption": "Scan with your phone's camera to continue",
+    "desktop-divider": "or",
+    "desktop-qr-alt": "QR code that opens this link on your phone",
+    "desktop-copy-link-done": "Copied!",
+    "desktop-copy-link": "Copy link"
   },
   "error": {
     "go-home": "Go to homepage",

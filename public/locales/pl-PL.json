@@ -321,7 +321,12 @@
     "blocked-reason-tos": "Naruszenie regulaminu",
     "blocked-reason-dropped": "Porzucone",
     "blocked-reason-test": "Wpis testowy",
-    "blocklist-updated": "Lista blokad zaktualizowana {{date}}"
+    "blocklist-updated": "Lista blokad zaktualizowana {{date}}",
+    "desktop-qr-caption": "Zeskanuj aparatem telefonu, aby kontynuować",
+    "desktop-divider": "lub",
+    "desktop-qr-alt": "Kod QR, który otwiera ten link na Twoim telefonie",
+    "desktop-copy-link": "Kopiuj link",
+    "desktop-copy-link-done": "Skopiowano!"
   },
   "error": {
     "go-home": "Wróć na stronę główną",

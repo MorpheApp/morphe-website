@@ -321,7 +321,12 @@
     "blocked-reason-tos": "서비스 약관 위반",
     "blocked-reason-dropped": "중단됨",
     "blocked-reason-test": "테스트 항목",
-    "blocklist-updated": "차단 목록 업데이트: {{date}}"
+    "blocklist-updated": "차단 목록 업데이트: {{date}}",
+    "desktop-qr-caption": "계속하려면 휴대폰 카메라로 스캔하세요",
+    "desktop-divider": "또는",
+    "desktop-qr-alt": "이 링크를 휴대폰에서 여는 QR 코드",
+    "desktop-copy-link": "링크 복사",
+    "desktop-copy-link-done": "복사됨!"
   },
   "error": {
     "go-home": "홈으로 가기",

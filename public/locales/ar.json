@@ -321,7 +321,12 @@
     "blocked-reason-tos": "انتهاك شروط الخدمة",
     "blocked-reason-dropped": "متوقف",
     "blocked-reason-test": "إدخال اختباري",
-    "blocklist-updated": "تم تحديث قائمة الحظر في {{date}}"
+    "blocklist-updated": "تم تحديث قائمة الحظر في {{date}}",
+    "desktop-qr-caption": "امسح الرمز باستخدام كاميرا هاتفك للمتابعة",
+    "desktop-divider": "أو",
+    "desktop-qr-alt": "رمز QR يفتح هذا الرابط على هاتفك",
+    "desktop-copy-link": "نسخ الرابط",
+    "desktop-copy-link-done": "تم النسخ!"
   },
   "error": {
     "go-home": "العودة إلى الصفحة الرئيسية",
