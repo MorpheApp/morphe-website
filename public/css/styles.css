@@ -1290,6 +1290,40 @@ body {
     row-gap: var(--spacing-sm);
 }
 
+.faq-search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.faq-search-container .search-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-tertiary);
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+.faq-search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.7rem;
+    border-radius: 2rem;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.faq-search-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.15);
+}
+
 .filter-group {
     display: flex;
     align-items: center;

@@ -4,6 +4,7 @@
     "product-microg": "Download MicroG",
     "support-donate": "Donate",
     "product-changelog": "What's New",
+    "product-faq": "FAQ & Troubleshooting",
     "description": "Next generation Android app patching",
     "product": "Product",
     "product-translate": "Help translate",
@@ -332,5 +333,15 @@
     "go-home": "Go to homepage",
     "404-title": "404 - Page Not Found",
     "not-found": "The page you're looking for can't be found"
+  },
+  "faq-page": {
+    "title": "FAQ & Troubleshooting",
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "search-placeholder": "Search questions...",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation"
   }
 }
