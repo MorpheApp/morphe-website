@@ -54,17 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// FAQ Accordion
+// FAQ Accordion — scoped to homepage #faq section only
 document.addEventListener('DOMContentLoaded', function() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    const faqSection = document.querySelector('#faq');
+    if (!faqSection) return; // not on a page with the homepage FAQ section
+
+    const faqQuestions = faqSection.querySelectorAll('.faq-question');
 
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
             const faqItem = this.closest('.faq-item');
             const isActive = faqItem.classList.contains('active');
 
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
+            // Close all FAQ items within this section
+            faqSection.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
 

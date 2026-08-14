@@ -6,9 +6,7 @@
 
     // --- Accordion expand/collapse ---
     document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.stopImmediatePropagation(); // Prevent main.js listener from toggling it again
-            
+        button.addEventListener('click', () => {
             const item = button.closest('.faq-item');
             if (!item) return;
 
