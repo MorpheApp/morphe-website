@@ -40,9 +40,34 @@
             return;
         }
 
+        // Aggregate backers by account slug to avoid duplicates
+        var uniqueBackers = {};
+        nodes.forEach(function(node) {
+            var slug = node.account.slug;
+            if (!uniqueBackers[slug]) {
+                uniqueBackers[slug] = {
+                    account: node.account,
+                    totalDonations: { value: 0 },
+                    createdAt: node.createdAt,
+                    isMega: isMegaSponsor(node)
+                };
+            }
+            uniqueBackers[slug].totalDonations.value += (node.totalDonations && node.totalDonations.value) || 0;
+            if (isMegaSponsor(node)) {
+                uniqueBackers[slug].isMega = true;
+            }
+            if (node.createdAt && new Date(node.createdAt) < new Date(uniqueBackers[slug].createdAt)) {
+                uniqueBackers[slug].createdAt = node.createdAt;
+            }
+        });
+
+        var aggregatedNodes = Object.keys(uniqueBackers).map(function(slug) {
+            return uniqueBackers[slug];
+        });
+
         // Separate Mega Supporters and others
-        var megaSupporters = nodes.filter(isMegaSponsor);
-        var otherBackers = nodes.filter(function(n) { return !isMegaSponsor(n); });
+        var megaSupporters = aggregatedNodes.filter(function(n) { return n.isMega; });
+        var otherBackers = aggregatedNodes.filter(function(n) { return !n.isMega; });
 
         // Sort Mega Supporters by total donations (most ever)
         megaSupporters.sort(function (a, b) {
@@ -70,7 +95,7 @@
 
         allBackers.forEach(function (node) {
             var account = node.account;
-            var isMega = isMegaSponsor(node);
+            var isMega = node.isMega;
 
             var a = document.createElement('a');
             a.href      = isMega && account.website ? account.website : ('https://opencollective.com/' + account.slug);
@@ -107,7 +132,7 @@
             container.appendChild(a);
         });
 
-        var remaining = Math.max(0, totalCount - allBackers.length);
+        var remaining = Math.max(0, totalCount - nodes.length);
         if (remaining > 0) {
             var more = document.createElement('a');
             more.href       = 'https://opencollective.com/morpheapp#section-contributors';
