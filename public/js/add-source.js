@@ -44,8 +44,19 @@
     // Set source icon
     var iconImg = document.getElementById('source-icon');
     if (iconImg) {
-        iconImg.src = 'http://api.morphe.software/v2/avatar/' + repoOwner
+        var avatarUrl = 'http://api.morphe.software/v2/avatar/' + repoOwner;
+        iconImg.src = avatarUrl;
         iconImg.alt = repoOwner;
+
+        // Check if the repo owner is not validated.
+        fetch(avatarUrl).then(function (res) {
+            var warning = document.getElementById('trust-warning');
+            if (warning) {
+                // If redirect is for a image on this site, then repo owner is unknown.
+                var isUnknown = res.url.indexOf('morphe.software') >= 0;
+                warning.style.display = isUnknown ? 'flex' : 'none';
+            }
+        })
     }
 
     window.addEventListener('load', function () {
