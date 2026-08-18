@@ -72,7 +72,24 @@
         ? 'https://gitlab.com/' + repo
         : 'https://github.com/' + repo;
 
-    var isAndroid = /android/i.test(navigator.userAgent);
+    var isAndroid = (function() {
+        var ua = navigator.userAgent;
+        if (/android/i.test(ua)) return true;
+
+        // Check for Android in "Desktop site" mode
+        if (navigator.userAgentData && navigator.userAgentData.platform === 'Android') return true;
+
+        // Fallback for Firefox and other browsers on Android in "Desktop site" mode
+        // which usually report as Linux and have multi-touch support.
+        var platform = navigator.platform || '';
+        if (/Linux/i.test(platform) && navigator.maxTouchPoints > 1) return true;
+
+        return false;
+    })();
+
+    if (isAndroid) {
+        document.body.classList.add('is-mobile-detected');
+    }
 
     // Populate source info card
     var match = url.match(/(?:github|gitlab)\.com\/([^/?#]+\/[^/?#]+)/);

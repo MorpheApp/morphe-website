@@ -2176,6 +2176,31 @@ body {
     text-align: center;
 }
 
+/* Force mobile-friendly layout when a mobile device is detected in desktop mode */
+body.is-mobile-detected .add-source-page {
+    padding: var(--spacing-md);
+}
+
+body.is-mobile-detected .add-source-page .container {
+    max-width: 600px;
+    width: 92%;
+}
+
+body.is-mobile-detected .add-source-page h1 {
+    font-size: 1.75rem;
+}
+
+body.is-mobile-detected .add-source-page .hero-description {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+body.is-mobile-detected .add-source-page .icon-circle {
+    width: 64px;
+    height: 64px;
+    margin-bottom: var(--spacing-lg);
+}
+
 .add-source-page h1 {
     margin-bottom: var(--spacing-md);
 }
