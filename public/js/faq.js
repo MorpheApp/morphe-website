@@ -21,7 +21,16 @@
             });
 
             item.classList.toggle('active');
-            button.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+            const isActive = item.classList.contains('active');
+            button.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+
+            // Update URL hash without jumping
+            if (isActive && item.id) {
+                history.replaceState(null, null, '#' + item.id);
+            } else if (!isActive && window.location.hash === '#' + item.id) {
+                // Remove hash if the item is closed
+                history.replaceState(null, null, window.location.pathname + window.location.search);
+            }
         });
     });
 
@@ -47,7 +56,20 @@
             }
 
             target.classList.add('active');
-            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const button = target.querySelector('.faq-question');
+            if (button) button.setAttribute('aria-expanded', 'true');
+
+            // Scroll to the item with navbar offset
+            setTimeout(() => {
+                const nav = document.querySelector('.navbar');
+                const navHeight = nav ? nav.offsetHeight : 0;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 30;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }, 100);
         }
     }
 
