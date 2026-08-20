@@ -1,9 +1,73 @@
 const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
+const { marked } = require('marked');
 
 const QUESTIONS_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-documentation/main/docs/morphe-resources/questions.md';
 const TROUBLESHOOTING_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-documentation/main/docs/morphe-resources/troubleshooting.md';
+
+/**
+ * Configure Marked for GitHub-style Markdown
+ */
+marked.setOptions({
+    gfm: true,
+    breaks: true,
+    headerIds: false,
+    mangle: false
+});
+
+/**
+ * Custom renderer to handle GitHub Alerts and ensure relative links are handled
+ * For Marked v11+, the arguments are objects.
+ */
+const renderer = {
+    paragraph({ tokens, text }) {
+        // Handle GitHub Alerts [!NOTE], [!TIP], etc.
+        const alertMatch = text.match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
+        if (alertMatch) {
+            const alertType = alertMatch[1].toUpperCase();
+            const content = text.replace(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/i, '');
+            // Use marked.parseInline to render the content with bold/links/etc.
+            const renderedContent = marked.parseInline(content);
+            return `<div class="faq-alert alert-${alertType.toLowerCase()}"><div class="alert-title"><span class="material-symbols-rounded">info</span> ${alertType}</div>${renderedContent}</div>`;
+        }
+        // For normal paragraphs, we must call parseInline on the tokens to avoid [object Object]
+        return `<p>${this.parser.parseInline(tokens)}</p>`;
+    },
+    link({ href, title, text }) {
+        // Ensure all external links open in new tab
+        const isExternal = href && href.startsWith('http');
+        const target = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `<a href="${href}"${target}${title ? ` title="${title}"` : ''}>${text}</a>`;
+    },
+    heading({ tokens, depth }) {
+        const text = this.parser.parseInline(tokens);
+        return `<h${depth}>${text}</h${depth}>`;
+    },
+    strong({ tokens }) {
+        return `<strong>${this.parser.parseInline(tokens)}</strong>`;
+    },
+    em({ tokens }) {
+        return `<em>${this.parser.parseInline(tokens)}</em>`;
+    },
+    codespan({ text }) {
+        return `<code>${text}</code>`;
+    },
+    list({ items, ordered, start }) {
+        let body = '';
+        for (const item of items) {
+            body += this.listitem(item);
+        }
+        const type = ordered ? 'ol' : 'ul';
+        const startAttr = (ordered && start !== 1) ? ` start="${start}"` : '';
+        return `<${type}${startAttr}>\n${body}</${type}>\n`;
+    },
+    listitem({ tokens }) {
+        return `<li>${this.parser.parseInline(tokens)}</li>\n`;
+    }
+};
+
+marked.use({ renderer });
 
 function fetchUrl(url) {
     return new Promise((resolve, reject) => {
@@ -36,28 +100,8 @@ function escapeHtml(text) {
         .replace(/'/g, '&#039;');
 }
 
-function parseMarkdown(text) {
-    text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    text = text.replace(/__(.+?)__/g, '<strong>$1</strong>');
-    text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
-    text = text.replace(/_(.+?)_/g, '<em>$1</em>');
-    text = text.replace(/`(.+?)`/g, '<code>$1</code>');
-    return text;
-}
-
-function parseLinksFromMarkdown(text) {
-    // Convert markdown links [text](url) to <a> tags
-    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, linkText, url) => {
-        const trimmedUrl = url.trim();
-        if (/^(javascript:|data:)/i.test(trimmedUrl)) return match;
-        return `<a href="${escapeHtml(trimmedUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkText)}</a>`;
-    });
-    return text;
-}
-
 /**
- * Parse markdown with ## N. Title heading format into structured entries.
- * Returns array of { number, title, bodyLines[] }
+ * Parse markdown into structured entries using the ## N. Title heading format.
  */
 function parseEntries(markdown) {
     const lines = markdown.split('\n');
@@ -81,7 +125,6 @@ function parseEntries(markdown) {
             continue;
         }
 
-        // Match ## N. Title (with optional parenthetical subtitle)
         const headingMatch = line.match(/^##\s+(\d+)\.\s+(.+)/);
         if (headingMatch) {
             if (currentEntry) entries.push(currentEntry);
@@ -93,7 +136,6 @@ function parseEntries(markdown) {
             continue;
         }
 
-        // Skip the top-level # heading
         if (line.match(/^#\s+/)) continue;
 
         if (currentEntry) {
@@ -106,85 +148,16 @@ function parseEntries(markdown) {
 }
 
 /**
- * Convert body lines to HTML paragraphs and lists.
- */
-function renderBody(bodyLines) {
-    let html = '';
-    let inList = false;
-    let paragraphBuffer = [];
-
-    function flushParagraph() {
-        if (paragraphBuffer.length > 0) {
-            const text = paragraphBuffer.join(' ').trim();
-            if (text) {
-                let formatted = escapeHtml(text);
-                formatted = parseLinksFromMarkdown(formatted);
-                formatted = parseMarkdown(formatted);
-                html += `<p>${formatted}</p>`;
-            }
-            paragraphBuffer = [];
-        }
-    }
-
-    for (const line of bodyLines) {
-        const trimmed = line.trim();
-
-        // Empty line: flush current paragraph
-        if (!trimmed) {
-            flushParagraph();
-            if (inList) {
-                html += '</ul>';
-                inList = false;
-            }
-            continue;
-        }
-
-        // List item
-        if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
-            flushParagraph();
-            if (!inList) {
-                html += '<ul>';
-                inList = true;
-            }
-            let itemText = trimmed.substring(2).trim();
-            itemText = escapeHtml(itemText);
-            itemText = parseLinksFromMarkdown(itemText);
-            itemText = parseMarkdown(itemText);
-            html += `<li>${itemText}</li>`;
-            continue;
-        }
-
-        // Close list if we hit a non-list, non-empty line
-        if (inList) {
-            html += '</ul>';
-            inList = false;
-        }
-
-        // Accumulate paragraph text
-        paragraphBuffer.push(trimmed);
-    }
-
-    flushParagraph();
-    if (inList) {
-        html += '</ul>';
-    }
-
-    return html;
-}
-
-/**
  * Generate an accordion item for a FAQ/troubleshooting entry.
- * displayNumber: sequential 1-based number for display.
- * sourceNumber: original number from markdown, used for anchor ID.
- * section: 'faq' or 'troubleshooting' (for anchor prefix and data attribute).
  */
 function generateAccordionItem(entry, displayNumber, section) {
-    const anchorId = `${section}-${entry.number}`;
-    const bodyHtml = renderBody(entry.bodyLines);
+    const anchorId = `${section}-${displayNumber}`;
+    const bodyContent = entry.bodyLines.join('\n');
+    const bodyHtml = marked.parse(bodyContent);
 
     return `
 <div class="faq-item" data-section="${section}" id="${anchorId}">
-    <button class="faq-question" data-umami-event="FAQ Page Expand" data-umami-event-question="${escapeHtml(entry.title)}">
+    <button class="faq-question" data-umami-event="FAQ Page Expand" data-umami-event-question="${escapeHtml(entry.title)}" onclick="if(!this.closest('.faq-item').classList.contains('active')) history.replaceState(null, null, '#${anchorId}')">
         <span class="faq-number">${displayNumber}</span>
         <span class="faq-text">${escapeHtml(entry.title)}</span>
         <span class="material-symbols-rounded">expand_more</span>
@@ -217,13 +190,6 @@ async function generateFaq() {
 
     console.log(`✅ Found ${faqEntries.length} FAQ entries and ${troubleshootingEntries.length} troubleshooting entries`);
 
-    if (faqEntries.length === 0) {
-        throw new Error('No FAQ entries parsed — check the markdown format of questions.md');
-    }
-    if (troubleshootingEntries.length === 0) {
-        throw new Error('No troubleshooting entries parsed — check the markdown format of troubleshooting.md');
-    }
-
     // Generate FAQ section
     let html = '<div class="faq-section" data-section="faq">';
     html += '<h2 class="faq-section-title"><span class="material-symbols-rounded faq-section-icon">help</span> <span data-i18n="faq-page.filter-faq">FAQ</span></h2>';
@@ -243,8 +209,18 @@ async function generateFaq() {
     const faqPath = path.join(__dirname, '../public/faq.html');
     let template = await fs.readFile(faqPath, 'utf8');
 
+    // Restore placeholder if already replaced
     if (!template.includes('{{FAQ_CONTENT}}')) {
-        throw new Error('faq.html does not contain {{FAQ_CONTENT}} placeholder');
+        const startMarker = '<div class="faq-list" id="faq-content">';
+        const endMarker = '</div>\n\n        <!-- Source attribution -->';
+        const startIndex = template.indexOf(startMarker);
+        const endIndex = template.indexOf(endMarker);
+
+        if (startIndex !== -1 && endIndex !== -1) {
+            template = template.substring(0, startIndex + startMarker.length) + '\n            {{FAQ_CONTENT}}\n        ' + template.substring(endIndex);
+        } else {
+            throw new Error('faq.html does not contain {{FAQ_CONTENT}} placeholder and could not auto-restore it');
+        }
     }
 
     template = template.replace('{{FAQ_CONTENT}}', html);
