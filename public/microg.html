@@ -33,6 +33,7 @@
         <div class="nav-links">
             <a href="https://morphe-patches.software" class="nav-link" target="_blank" rel="noopener noreferrer"
                data-i18n="community.patches-title" data-umami-event="Nav Patch Bundles Click">More Apps</a>
+            <a href="faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
             <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
             <a href="changelog" class="nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
@@ -58,18 +59,26 @@
 <div class="mobile-drawer" id="mobile-drawer">
     <div class="drawer-scrim" id="drawer-scrim"></div>
     <div class="drawer-sheet">
+        <a href="/" class="drawer-link" data-umami-event="Drawer Home Click">
+            <span class="material-symbols-rounded">home</span>
+            <span data-i18n="footer.product-home">Home</span>
+        </a>
         <a href="https://morphe-patches.software" class="drawer-link" target="_blank" rel="noopener noreferrer" data-umami-event="Drawer Patch Bundles Click">
             <span class="material-symbols-rounded">extension</span>
             <span data-i18n="community.patches-title">More apps</span>
         </a>
-        <a href="changelog" class="drawer-link" data-umami-event="Drawer Changelog Click">
-            <span class="material-symbols-rounded">new_releases</span>
-            <span data-i18n="footer.product-changelog">What's New</span>
+        <a href="faq" class="drawer-link" data-umami-event="Drawer FAQ Click">
+            <span class="material-symbols-rounded">quiz</span>
+            <span data-i18n="nav.faq">FAQ</span>
         </a>
         <hr class="drawer-divider">
         <a href="donate" class="drawer-link" data-umami-event="Drawer Donate Click">
             <span class="material-symbols-rounded">volunteer_activism</span>
             <span data-i18n="footer.support-donate">Donate</span>
+        </a>
+        <a href="changelog" class="drawer-link" data-umami-event="Drawer Changelog Click">
+            <span class="material-symbols-rounded">new_releases</span>
+            <span data-i18n="footer.product-changelog">What's New</span>
         </a>
     </div>
 </div>
@@ -145,14 +154,6 @@
                     <span class="footer-brand-name">Morphe</span>
                 </a>
                 <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
-                   data-umami-event="DMCA Click">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
-                </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
                 <details class="analytics-details">
                     <summary data-i18n="analytics.title">Analytics</summary>
                     <span data-i18n-link="analytics.description"
@@ -161,6 +162,14 @@
                           data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
                     <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
                 </details>
+                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
+                   title="DMCA.com Protection Status"
+                   class="dmca-badge"
+                   data-umami-event="DMCA Click">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
+                         alt="DMCA.com Protection Status" />
+                </a>
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
             </div>
 
             <!-- Navigation columns -->
