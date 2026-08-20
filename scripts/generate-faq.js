@@ -7,17 +7,21 @@ const TROUBLESHOOTING_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-
 
 function fetchUrl(url) {
     return new Promise((resolve, reject) => {
-        https.get(url, (res) => {
-            if (res.statusCode < 200 || res.statusCode >= 300) {
+        const req = https.get(url, (res) => {
+            if (res.statusCode && (res.statusCode < 200 || res.statusCode >= 300)) {
                 reject(new Error(`HTTP ${res.statusCode} fetching ${url}`));
                 res.resume();
                 return;
             }
 
+            res.setEncoding('utf8');
             let data = '';
             res.on('data', chunk => data += chunk);
             res.on('end', () => resolve(data));
-        }).on('error', (err) => {
+        });
+
+        req.setTimeout(15000, () => req.destroy(new Error('Request timed out')));
+        req.on('error', (err) => {
             reject(new Error(`Network error fetching ${url}: ${err.message}`));
         });
     });
@@ -44,7 +48,9 @@ function parseMarkdown(text) {
 function parseLinksFromMarkdown(text) {
     // Convert markdown links [text](url) to <a> tags
     text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, linkText, url) => {
-        return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkText)}</a>`;
+        const trimmedUrl = url.trim();
+        if (/^(javascript:|data:)/i.test(trimmedUrl)) return match;
+        return `<a href="${escapeHtml(trimmedUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkText)}</a>`;
     });
     return text;
 }

@@ -6,15 +6,22 @@
 
     // --- Accordion expand/collapse ---
     document.querySelectorAll('.faq-question').forEach(button => {
+        button.setAttribute('aria-expanded', 'false');
+
         button.addEventListener('click', () => {
             const item = button.closest('.faq-item');
             if (!item) return;
 
             document.querySelectorAll('.faq-item.active').forEach(openItem => {
-                if (openItem !== item) openItem.classList.remove('active');
+                if (openItem !== item) {
+                    openItem.classList.remove('active');
+                    const openBtn = openItem.querySelector('.faq-question');
+                    if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+                }
             });
 
             item.classList.toggle('active');
+            button.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
         });
     });
 
