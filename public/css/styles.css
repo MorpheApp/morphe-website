@@ -1240,6 +1240,140 @@ body {
     font-weight: 400;
 }
 
+/* FAQ specialized content */
+.faq-answer blockquote {
+    border-left: 4px solid var(--border);
+    padding-left: var(--spacing-md);
+    margin: var(--spacing-md) 0 var(--spacing-xl);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.faq-answer h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.faq-answer code {
+    background: var(--gray-100);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: var(--primary-blue);
+}
+
+.faq-answer pre {
+    background: var(--gray-100);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-answer pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: 0.85em;
+}
+
+.faq-answer ul {
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-answer li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
+}
+
+.faq-answer details {
+    background: var(--gray-100);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-answer summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-primary);
+    user-select: none;
+}
+
+.faq-answer summary:focus {
+    outline: none;
+}
+
+.faq-answer details[open] summary {
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-alert {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid transparent;
+}
+
+.faq-alert .alert-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-xs);
+}
+
+.faq-alert .alert-title .material-symbols-rounded {
+    font-size: 16px;
+}
+
+.alert-note {
+    background: rgba(30, 90, 168, 0.05);
+    border-color: rgba(30, 90, 168, 0.2);
+    color: var(--text-secondary);
+}
+
+.alert-note .alert-title {
+    color: var(--primary-blue);
+}
+
+.alert-tip {
+    background: rgba(0, 175, 174, 0.05);
+    border-color: rgba(0, 175, 174, 0.2);
+    color: var(--text-secondary);
+}
+
+.alert-tip .alert-title {
+    color: var(--primary-teal);
+}
+
+.alert-warning, .alert-caution {
+    background: rgba(245, 158, 11, 0.05);
+    border-color: rgba(245, 158, 11, 0.2);
+    color: var(--text-secondary);
+}
+
+.alert-warning .alert-title, .alert-caution .alert-title {
+    color: #F59E0B;
+}
+
+.alert-important {
+    background: rgba(239, 68, 68, 0.05);
+    border-color: rgba(239, 68, 68, 0.2);
+    color: var(--text-secondary);
+}
+
+.alert-important .alert-title {
+    color: #EF4444;
+}
+
 .inline-link {
     color: var(--primary-blue);
     text-decoration: none;

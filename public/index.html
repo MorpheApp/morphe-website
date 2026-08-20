@@ -362,95 +362,14 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
-            <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about Morphe</p>
+            <p class="section-subtitle" data-i18n="faq-page.subtitle">Find answers to common questions and solutions to known issues</p>
         </div>
 
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
-                    <span class="faq-number">1</span>
-                    <span class="faq-text" data-i18n="faq.q2">Is Morphe safe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a2">As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
-                    <span class="faq-number">2</span>
-                    <span class="faq-text" data-i18n="faq.q3">Will Morphe brick my phone?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a3">Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I customize apps to my preference?">
-                    <span class="faq-number">3</span>
-                    <span class="faq-text" data-i18n="faq.q4">Can I customize apps to my preference?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a4">Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
-                    <span class="faq-number">4</span>
-                    <span class="faq-text" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n-link="analytics.description"
-                              data-i18n-link-href="https://umami.is"
-                              data-i18n-link-text="Umami"
-                              data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
-                        <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Why the name Morphe?">
-                    <span class="faq-number">5</span>
-                    <span class="faq-text" data-i18n="faq.q6">Why the name Morphe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a6">Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe magic?">
-                    <span class="faq-number">6</span>
-                    <span class="faq-text" data-i18n="faq.q7">Is Morphe magic?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a7">No. But also yes. It's advanced bytecode manipulation that feels like magic.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I contribute to Morphe?">
-                    <span class="faq-number">7</span>
-                    <span class="faq-text" data-i18n="faq.q8">Can I contribute to Morphe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n-links="faq.a8"
-                              data-i18n-links-data='[{"href":"https://github.com/MorpheApp/","text":"GitHub repos","attrs":{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"GitHub Contribution Click"}},{"href":"/donate","text":"donations","attrs":{"class":"inline-link","data-umami-event":"FAQ Donate Link Click"}}]'></span>
-                    </p>
-                </div>
-            </div>
+        <div style="display: flex; justify-content: center;">
+            <a href="faq" class="btn btn-secondary" data-umami-event="Home FAQ Link Click">
+                <span data-i18n="footer.product-faq">FAQ & Troubleshooting</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
         </div>
     </div>
 </section>
