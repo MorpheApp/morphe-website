@@ -212,7 +212,7 @@ async function generateFaq() {
     // Restore placeholder if already replaced
     if (!template.includes('{{FAQ_CONTENT}}')) {
         const startMarker = '<div class="faq-list" id="faq-content">';
-        const endMarker = '</div>\n\n        <!-- Source attribution -->';
+        const endMarker = '</div>\n        </div>\n    </div>\n</section>';
         const startIndex = template.indexOf(startMarker);
         const endIndex = template.indexOf(endMarker);
 
