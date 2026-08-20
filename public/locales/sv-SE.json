@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "Hitta svar på vanliga frågor och lösningar på kända problem",
     "title": "FAQ & Felsökning",
-    "filter-all": "Alla",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "Felsökning",
     "search-placeholder": "Sök frågor...",

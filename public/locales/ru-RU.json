@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "Найдите ответы на частые вопросы и решения известных проблем",
     "title": "FAQ и устранение неполадок",
-    "filter-all": "Все",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "Устранение неполадок",
     "search-placeholder": "Поиск вопросов...",

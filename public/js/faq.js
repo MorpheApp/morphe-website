@@ -34,7 +34,6 @@
         });
     });
 
-    let currentSectionFilter = 'all';
     let currentSearchQuery = '';
 
     // --- Deep-link: auto-expand if URL hash matches an FAQ anchor ---
@@ -44,17 +43,6 @@
 
         const target = document.querySelector(hash);
         if (target && target.classList.contains('faq-item')) {
-            // Show the correct section filter
-            const section = target.getAttribute('data-section');
-            if (section) {
-                currentSectionFilter = section;
-                applyFilters();
-                // Update active filter button
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.toggle('active', btn.getAttribute('data-filter') === section);
-                });
-            }
-
             target.classList.add('active');
             const button = target.querySelector('.faq-question');
             if (button) button.setAttribute('aria-expanded', 'true');
@@ -73,19 +61,16 @@
         }
     }
 
-    // --- Combined Section Filter and Search ---
+    // --- Search Logic ---
     function applyFilters() {
         document.querySelectorAll('.faq-section').forEach(section => {
-            const sectionType = section.getAttribute('data-section');
             let visibleItemsCount = 0;
-
-            const matchesSection = currentSectionFilter === 'all' || sectionType === currentSectionFilter;
 
             section.querySelectorAll('.faq-item').forEach(item => {
                 const questionText = item.querySelector('.faq-text').textContent.toLowerCase();
                 const matchesSearch = currentSearchQuery === '' || questionText.includes(currentSearchQuery);
 
-                if (matchesSection && matchesSearch) {
+                if (matchesSearch) {
                     item.style.display = '';
                     visibleItemsCount++;
                 } else {
@@ -94,11 +79,7 @@
             });
 
             // Hide the entire section if no items are visible
-            if (visibleItemsCount > 0) {
-                section.style.display = '';
-            } else {
-                section.style.display = 'none';
-            }
+            section.style.display = visibleItemsCount > 0 ? '' : 'none';
         });
     }
 
@@ -109,20 +90,6 @@
             applyFilters();
         });
     }
-
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.getAttribute('data-filter');
-            if (!filter) return;
-
-            // Update active button
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            currentSectionFilter = filter;
-            applyFilters();
-        });
-    });
 
     // Run initial hash check
     expandFromHash();

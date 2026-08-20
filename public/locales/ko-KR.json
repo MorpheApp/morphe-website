@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "자주 묻는 질문에 대한 답변과 알려진 문제의 해결 방법을 찾아보세요",
     "title": "FAQ 및 문제 해결",
-    "filter-all": "전체",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "문제 해결",
     "search-placeholder": "질문 검색...",

@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",
     "title": "SSS ve Sorun Giderme",
-    "filter-all": "Hepsi",
     "filter-faq": "SSS",
     "filter-troubleshooting": "Sorun Giderme",
     "search-placeholder": "Sorularda ara...",

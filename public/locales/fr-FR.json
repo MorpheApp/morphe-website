@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "Trouvez des réponses aux questions courantes et des solutions aux problèmes connus",
     "title": "FAQ et dépannage",
-    "filter-all": "Tout",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "Dépannage",
     "search-placeholder": "Rechercher des questions...",

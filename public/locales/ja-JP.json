@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "よくある質問への回答と既知の問題の解決策を見つける",
     "title": "FAQとトラブルシューティング",
-    "filter-all": "すべて",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "トラブルシューティング",
     "search-placeholder": "質問を検索...",

@@ -327,7 +327,6 @@
   "faq-page": {
     "subtitle": "查找常见问题的解答和已知问题的解决方案",
     "title": "常见问题与故障排除",
-    "filter-all": "全部",
     "filter-faq": "常见问题",
     "filter-troubleshooting": "故障排除",
     "search-placeholder": "搜索问题...",
