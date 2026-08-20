@@ -2723,7 +2723,18 @@ body {
 
 @media (hover: hover) and (pointer: fine) {
     .analytics-details summary:hover {
-        color: var(--gray-300);
+        color: white;
+    }
+}
+
+.footer .inline-link {
+    color: var(--gray-500);
+    text-decoration: underline;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .footer .inline-link:hover {
+        color: white;
     }
 }
 
