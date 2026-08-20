@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "常见问题"
+    "faq": "常见问题",
+    "change-language": "切换语言",
+    "theme-toggle": "切换主题",
+    "menu-toggle": "打开菜单",
+    "scroll-to-top": "返回顶部"
   },
   "hero": {
     "title": "改造您的",
@@ -11,7 +15,9 @@
     "social-label": "加入社区",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "下载官方 Morphe APK。由前 ReVanced 贡献者创建，用于为 YouTube、YouTube Music 和 Reddit 提供广告拦截和自定义功能。",
+    "meta-title": "适用于 YouTube 和 Reddit 的 Morphe 应用 - 官方网站"
   },
   "how-it-works": {
     "title": "Morphe工作原理",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "已复制！"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
-    "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "subtitle": "查找常见问题的解答和已知问题的解决方案",
+    "title": "常见问题与故障排除",
+    "filter-all": "全部",
+    "filter-faq": "常见问题",
+    "filter-troubleshooting": "故障排除",
+    "search-placeholder": "搜索问题...",
+    "meta-description": "Morphe 常见问题与故障排除 - 查找常见问题的解答和已知问题的解决方案",
+    "meta-title": "常见问题与故障排除 - Morphe"
   }
 }

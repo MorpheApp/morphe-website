@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Morphe FAQ & Troubleshooting - Find answers to common questions and solutions to known issues">
-    <title>FAQ & Troubleshooting - Morphe</title>
+    <meta name="description" content="Morphe FAQ & Troubleshooting - Find answers to common questions and solutions to known issues" data-i18n="faq-page.meta-description">
+    <title data-i18n="faq-page.meta-title">FAQ & Troubleshooting - Morphe</title>
     <!-- Theme preloader -->
     <script src="js/theme-preload.js"></script>
     <!-- Language preloader -->
@@ -35,19 +35,20 @@
             <a href="https://morphe-patches.software" class="nav-link" target="_blank" rel="noopener noreferrer"
                data-i18n="community.patches-title" data-umami-event="Nav Patch Bundles Click">More Apps</a>
             <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
+            <a href="changelog" class="nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
             <div class="lang-dropdown" id="langDropdownBar">
-                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language" data-i18n-aria="nav.change-language">
                     <span class="material-symbols-rounded">translate</span>
                 </button>
                 <div class="lang-menu" id="langMenuBar" role="listbox"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click" data-i18n-aria="nav.theme-toggle">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle" data-i18n-aria="nav.menu-toggle">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
@@ -58,6 +59,10 @@
 <div class="mobile-drawer" id="mobile-drawer">
     <div class="drawer-scrim" id="drawer-scrim"></div>
     <div class="drawer-sheet">
+        <a href="/" class="drawer-link" data-umami-event="Drawer Home Click">
+            <span class="material-symbols-rounded">home</span>
+            <span data-i18n="footer.product-home">Home</span>
+        </a>
         <a href="https://morphe-patches.software" class="drawer-link" target="_blank" rel="noopener noreferrer" data-umami-event="Drawer Patch Bundles Click">
             <span class="material-symbols-rounded">extension</span>
             <span data-i18n="community.patches-title">More apps</span>
@@ -66,6 +71,10 @@
         <a href="donate" class="drawer-link" data-umami-event="Drawer Donate Click">
             <span class="material-symbols-rounded">volunteer_activism</span>
             <span data-i18n="footer.support-donate">Donate</span>
+        </a>
+        <a href="changelog" class="drawer-link" data-umami-event="Drawer Changelog Click">
+            <span class="material-symbols-rounded">new_releases</span>
+            <span data-i18n="footer.product-changelog">What's New</span>
         </a>
     </div>
 </div>
@@ -174,7 +183,7 @@
 </footer>
 
 <!-- Scroll to Top Button -->
-<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
+<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click" data-i18n-aria="nav.scroll-to-top">
     <span class="material-symbols-rounded">arrow_upward</span>
 </button>
 

@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Cambia lingua",
+    "theme-toggle": "Cambia tema",
+    "menu-toggle": "Apri menu",
+    "scroll-to-top": "Torna su"
   },
   "hero": {
     "title": "Trasforma la tua",
@@ -11,7 +15,9 @@
     "social-label": "Unisciti alla community",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Scarica l'APK ufficiale di Morphe. Creato da ex collaboratori di ReVanced per patchare YouTube, YouTube Music e Reddit con blocco pubblicitario e funzioni personalizzate.",
+    "meta-title": "Morphe App per YouTube e Reddit - SITO UFFICIALE"
   },
   "how-it-works": {
     "title": "Come funziona Morphe",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Copiato!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Trova risposte a domande comuni e soluzioni a problemi noti",
+    "title": "FAQ e risoluzione dei problemi",
+    "filter-all": "Tutto",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Risoluzione dei problemi",
+    "search-placeholder": "Cerca domande...",
+    "meta-description": "FAQ e risoluzione dei problemi di Morphe - Trova risposte a domande comuni e soluzioni a problemi noti",
+    "meta-title": "FAQ e risoluzione dei problemi - Morphe"
   }
 }

@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Taal wijzigen",
+    "theme-toggle": "Thema omschakelen",
+    "menu-toggle": "Menu openen",
+    "scroll-to-top": "Naar boven"
   },
   "hero": {
     "title": "Transformeer je",
@@ -11,7 +15,9 @@
     "social-label": "Word lid van de community",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Download de officiële Morphe APK. Gemaakt door voormalige ReVanced-bijdragers om YouTube, YouTube Music en Reddit te patchen met advertentieblokkering en aangepaste functies.",
+    "meta-title": "Morphe-app voor YouTube en Reddit - OFFICIËLE SITE"
   },
   "how-it-works": {
     "title": "Hoe Morphe werkt",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Gekopieerd!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Vind antwoorden op veelgestelde vragen en oplossingen voor bekende problemen",
+    "title": "FAQ & Probleemoplossing",
+    "filter-all": "Alle",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Probleemoplossing",
+    "search-placeholder": "Vragen zoeken...",
+    "meta-description": "Morphe FAQ & Probleemoplossing - Vind antwoorden op veelgestelde vragen en oplossingen voor bekende problemen",
+    "meta-title": "FAQ & Probleemoplossing - Morphe"
   }
 }

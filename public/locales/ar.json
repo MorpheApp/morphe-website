@@ -54,7 +54,11 @@
     "feature3-desc": "ثبّت MicroG لمرة واحدة وسيعمل بتناغم مع جميع تطبيقات Morphe الخاصة بك. لا حاجة لإعادة التثبيت عند تحديث YouTube Morphe أو YT Music Morphe."
   },
   "nav": {
-    "faq": "الأسئلة الشائعة"
+    "faq": "الأسئلة الشائعة",
+    "change-language": "تغيير اللغة",
+    "theme-toggle": "تبديل المظهر",
+    "menu-toggle": "تبديل القائمة",
+    "scroll-to-top": "العودة إلى الأعلى"
   },
   "hero": {
     "title": "ارتقِ بتجربة",
@@ -65,7 +69,9 @@
     "social-label": "انضم إلى مجتمعنا",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "قم بتنزيل تطبيق Morphe الرسمي. تم إنشاؤه بواسطة مساهمين سابقين في ReVanced لتعديل YouTube و YouTube Music و Reddit مع ميزات حجب الإعلانات والتخصيص.",
+    "meta-title": "تطبيق Morphe لـ YouTube و Reddit - الموقع الرسمي"
   },
   "app-features": {
     "title": "مزايا التطبيق",
@@ -319,13 +325,13 @@
     "not-found": "عذراً، الصفحة التي تبحث عنها غير موجودة"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
-    "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "subtitle": "اعثر على إجابات للأسئلة الشائعة وحلول للمشاكل المعروفة",
+    "title": "الأسئلة الشائعة واستكشاف الأخطاء وإصلاحها",
+    "filter-all": "الكل",
+    "filter-faq": "الأسئلة الشائعة",
+    "filter-troubleshooting": "استكشاف الأخطاء وإصلاحها",
+    "search-placeholder": "البحث في الأسئلة...",
+    "meta-description": "الأسئلة الشائعة واستكشاف الأخطاء وإصلاحها في Morphe - اعثر على إجابات للأسئلة الشائعة وحلول للمشاكل المعروفة",
+    "meta-title": "الأسئلة الشائعة واستكشاف الأخطاء وإصلاحها - Morphe"
   }
 }

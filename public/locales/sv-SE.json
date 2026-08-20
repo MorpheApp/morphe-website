@@ -54,7 +54,11 @@
     "feature3-desc": "Installera MicroG en gång så fungerar det med alla dina Morphe-appar. Du behöver inte återinstallera det när du uppdaterar YouTube Morphe och YT Music Morphe."
   },
   "nav": {
-    "faq": "Vanliga frågor"
+    "faq": "Vanliga frågor",
+    "change-language": "Ändra språk",
+    "theme-toggle": "Växla tema",
+    "menu-toggle": "Öppna meny",
+    "scroll-to-top": "Till toppen"
   },
   "hero": {
     "title": "Omvandla din",
@@ -65,7 +69,9 @@
     "description": "Från utvecklarna bakom de bästa moddade YouTube-apparna kommer Morphe – det kraftfulla verktyget för appmodifiering som ger dig kontroll",
     "download": "Ladda ner Morphe",
     "learn-more": "Läs mer",
-    "social-label": "Gå med i communityn"
+    "social-label": "Gå med i communityn",
+    "meta-description": "Ladda ner den officiella Morphe APK. Skapad av tidigare ReVanced-bidragsgivare för att patcha YouTube, YouTube Music och Reddit med annonsblockering och anpassade funktioner.",
+    "meta-title": "Morphe-appen för YouTube och Reddit - OFFICIELL WEBBPLATS"
   },
   "app-features": {
     "title": "Appfunktioner",
@@ -319,13 +325,13 @@
     "not-found": "Sidan du söker kan inte hittas"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Hitta svar på vanliga frågor och lösningar på kända problem",
+    "title": "FAQ & Felsökning",
+    "filter-all": "Alla",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Felsökning",
+    "search-placeholder": "Sök frågor...",
+    "meta-description": "Morphe FAQ & Felsökning - Hitta svar på vanliga frågor och lösningar på kända problem",
+    "meta-title": "FAQ & Felsökning - Morphe"
   }
 }

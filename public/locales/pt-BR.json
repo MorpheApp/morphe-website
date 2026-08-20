@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Alterar idioma",
+    "theme-toggle": "Alternar tema",
+    "menu-toggle": "Abrir menu",
+    "scroll-to-top": "Voltar ao topo"
   },
   "hero": {
     "title": "Transforme sua",
@@ -11,7 +15,9 @@
     "social-label": "Junte-se à comunidade",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Baixe o APK oficial do Morphe. Criado por ex-colaboradores do ReVanced para patchear YouTube, YouTube Music e Reddit com bloqueio de anúncios e funções personalizadas.",
+    "meta-title": "App Morphe para YouTube e Reddit - SITE OFICIAL"
   },
   "how-it-works": {
     "title": "Como o Morphe funciona",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Copiado!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Encontre respostas para perguntas comuns e soluções para problemas conhecidos",
+    "title": "FAQ e Resolução de Problemas",
+    "filter-all": "Tudo",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Resolução de Problemas",
+    "search-placeholder": "Pesquisar perguntas...",
+    "meta-description": "FAQ e Resolução de Problemas do Morphe - Encontre respostas para perguntas comuns e soluções para problemas conhecidos",
+    "meta-title": "FAQ e Resolução de Problemas - Morphe"
   }
 }

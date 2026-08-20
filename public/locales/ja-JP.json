@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "よくある質問"
+    "faq": "よくある質問",
+    "change-language": "言語を変更",
+    "theme-toggle": "テーマを切り替え",
+    "menu-toggle": "メニューを開く",
+    "scroll-to-top": "トップへ戻る"
   },
   "hero": {
     "title": "生まれ変わる",
@@ -11,7 +15,9 @@
     "social-label": "コミュニティに参加",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "公式のMorphe APKをダウンロード。元ReVanced貢献者によって作成され、YouTube、YouTube Music、Redditに広告ブロックとカスタム機能を追加します。",
+    "meta-title": "YouTubeとReddit用のMorpheアプリ - 公式サイト"
   },
   "how-it-works": {
     "title": "Morpheの仕組み",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "コピーしました！"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "よくある質問への回答と既知の問題の解決策を見つける",
+    "title": "FAQとトラブルシューティング",
+    "filter-all": "すべて",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "トラブルシューティング",
+    "search-placeholder": "質問を検索...",
+    "meta-description": "MorpheのFAQとトラブルシューティング - よくある質問への回答と既知の問題の解決策を見つける",
+    "meta-title": "FAQとトラブルシューティング - Morphe"
   }
 }

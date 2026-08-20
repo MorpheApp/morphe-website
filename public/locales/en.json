@@ -54,7 +54,11 @@
     "feature3-desc": "Install MicroG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe."
   },
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "theme-toggle": "Toggle theme",
+    "menu-toggle": "Toggle menu",
+    "scroll-to-top": "Scroll to top",
+    "change-language": "Change language"
   },
   "hero": {
     "title": "Transform Your",
@@ -65,7 +69,9 @@
     "description": "From the developers that brought you the greatest modded YouTube apps, comes Morphe - the powerful app modification tool that puts you in control",
     "download": "Download Morphe",
     "learn-more": "Learn More",
-    "social-label": "Join the Community"
+    "social-label": "Join the Community",
+    "meta-description": "Download the official Morphe APK. Created by former ReVanced contributors to patch YouTube, YouTube Music, and Reddit with ad-blocking and custom features.",
+    "meta-title": "Morphe App for YouTube and Reddit - OFFICIAL SITE"
   },
   "app-features": {
     "title": "App Features",
@@ -319,13 +325,13 @@
     "not-found": "The page you're looking for can't be found"
   },
   "faq-page": {
+    "meta-title": "FAQ & Troubleshooting - Morphe",
+    "meta-description": "Morphe FAQ & Troubleshooting - Find answers to common questions and solutions to known issues",
     "title": "FAQ & Troubleshooting",
     "subtitle": "Find answers to common questions and solutions to known issues",
     "filter-all": "All",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "Troubleshooting",
-    "search-placeholder": "Search questions...",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation"
+    "search-placeholder": "Search questions..."
   }
 }

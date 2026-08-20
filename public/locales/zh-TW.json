@@ -54,7 +54,11 @@
     "feature3-desc": "安裝一次 MicroG 即可在所有 Morphe 應用程式中使用。更新 YouTube Morphe 和 YT Music Morphe 時無需重新安裝。"
   },
   "nav": {
-    "faq": "常見問題"
+    "faq": "常見問題",
+    "change-language": "切換語言",
+    "theme-toggle": "切換主題",
+    "menu-toggle": "開啟功能表",
+    "scroll-to-top": "返回頂部"
   },
   "hero": {
     "title": "改造您的",
@@ -65,7 +69,9 @@
     "description": "由打造最強改版 YouTube 應用程式的開發團隊，為您獻上 Morphe — 讓您完全掌控的強大應用程式修改工具",
     "download": "下載 Morphe",
     "learn-more": "瞭解更多",
-    "social-label": "加入社群"
+    "social-label": "加入社群",
+    "meta-description": "下載官方 Morphe APK。由前 ReVanced 貢獻者建立，用於為 YouTube、YouTube Music 和 Reddit 提供廣告攔截和自定義功能。",
+    "meta-title": "適用於 YouTube 和 Reddit 的 Morphe 應用程式 - 官方網站"
   },
   "app-features": {
     "title": "應用程式功能",
@@ -319,13 +325,13 @@
     "not-found": "找不到您要找的頁面"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
-    "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "subtitle": "尋找常見問題的解答和已知問題的解決方案",
+    "title": "常見問題與故障排除",
+    "filter-all": "全部",
+    "filter-faq": "常見問題",
+    "filter-troubleshooting": "故障排除",
+    "search-placeholder": "搜尋問題...",
+    "meta-description": "Morphe 常見問題與故障排除 - 尋找常見問題的解答和已知問題的解決方案",
+    "meta-title": "常見問題與故障排除 - Morphe"
   }
 }

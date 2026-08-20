@@ -54,7 +54,11 @@
     "feature3-desc": "Chỉ cần cài MicroG một lần cho tất cả ứng dụng Morphe. Không cần cài lại khi cập nhật."
   },
   "nav": {
-    "faq": "Hỏi đáp"
+    "faq": "Hỏi đáp",
+    "change-language": "Thay đổi ngôn ngữ",
+    "theme-toggle": "Chuyển đổi giao diện",
+    "menu-toggle": "Mở menu",
+    "scroll-to-top": "Về đầu trang"
   },
   "hero": {
     "title": "Biến đổi",
@@ -65,7 +69,9 @@
     "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng hiệu quả, trao toàn quyền kiểm soát cho bạn",
     "download": "Tải Morphe",
     "learn-more": "Tìm hiểu thêm",
-    "social-label": "Tham gia cộng đồng"
+    "social-label": "Tham gia cộng đồng",
+    "meta-description": "Tải xuống APK Morphe chính thức. Được tạo bởi những người đóng góp cũ của ReVanced để vá lỗi YouTube, YouTube Music và Reddit với tính năng chặn quảng cáo và các tính năng tùy chỉnh.",
+    "meta-title": "Ứng dụng Morphe cho YouTube và Reddit - TRANG WEB CHÍNH THỨC"
   },
   "app-features": {
     "title": "Tính năng nổi bật",
@@ -319,13 +325,13 @@
     "not-found": "Làm gì có trang này, hoặc có khi bay màu rồi cũng nên~"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
-    "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "subtitle": "Tìm câu trả lời cho các câu hỏi thường gặp và giải pháp cho các vấn đề đã biết",
+    "title": "Câu hỏi thường gặp & Khắc phục sự cố",
+    "filter-all": "Tất cả",
+    "filter-faq": "Câu hỏi thường gặp",
+    "filter-troubleshooting": "Khắc phục sự cố",
+    "search-placeholder": "Tìm kiếm câu hỏi...",
+    "meta-description": "Câu hỏi thường gặp & Khắc phục sự cố Morphe - Tìm câu trả lời cho các câu hỏi thường gặp và giải pháp cho các vấn đề đã biết",
+    "meta-title": "Câu hỏi thường gặp & Khắc phục sự cố - Morphe"
   }
 }

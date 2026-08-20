@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Сменить язык",
+    "theme-toggle": "Сменить тему",
+    "menu-toggle": "Открыть меню",
+    "scroll-to-top": "Наверх"
   },
   "hero": {
     "title": "Преобразуйте свой",
@@ -11,7 +15,9 @@
     "social-label": "Присоединяйтесь к сообществу",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Скачайте официальный APK-файл Morphe. Создано бывшими участниками ReVanced для патчинга YouTube, YouTube Music и Reddit с блокировкой рекламы и дополнительными функциями.",
+    "meta-title": "Приложение Morphe для YouTube и Reddit — ОФИЦИАЛЬНЫЙ САЙТ"
   },
   "how-it-works": {
     "title": "Как работает Morphe",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Скопировано!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Найдите ответы на частые вопросы и решения известных проблем",
+    "title": "FAQ и устранение неполадок",
+    "filter-all": "Все",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Устранение неполадок",
+    "search-placeholder": "Поиск вопросов...",
+    "meta-description": "FAQ и устранение неполадок Morphe — найдите ответы на частые вопросы и решения известных проблем",
+    "meta-title": "FAQ и устранение неполадок — Morphe"
   }
 }

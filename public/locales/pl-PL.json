@@ -54,7 +54,11 @@
     "feature3-desc": "Wystarczy jedna instalacja, by obsłużyć wszystkie apki Morphe, nawet po ich aktualizacji."
   },
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Zmień język",
+    "theme-toggle": "Przełącz motyw",
+    "menu-toggle": "Otwórz menu",
+    "scroll-to-top": "Wróć na górę"
   },
   "hero": {
     "title": "Odmień",
@@ -65,7 +69,9 @@
     "description": "Twórcy najlepszych modyfikacji YouTube przedstawiają Morphe - potężne narzędzie, które daje Ci absolutną kontrolę nad Twoimi aplikacjami",
     "download": "Pobierz Morphe",
     "learn-more": "Dowiedz się więcej",
-    "social-label": "Dołącz do społeczności"
+    "social-label": "Dołącz do społeczności",
+    "meta-description": "Pobierz oficjalny plik APK Morphe. Stworzony przez byłych współpracowników ReVanced w celu patchowania YouTube, YouTube Music i Reddit z blokowaniem reklam i niestandardowymi funkcjami.",
+    "meta-title": "Aplikacja Morphe dla YouTube i Reddit - OFICJALNA STRONA"
   },
   "app-features": {
     "title": "Funkcje aplikacji",
@@ -319,13 +325,13 @@
     "not-found": "Nie można znaleźć strony"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Znajdź odpowiedzi na najczęściej zadawane pytania i rozwiązania znanych problemów",
+    "title": "FAQ i rozwiązywanie problemów",
+    "filter-all": "Wszystko",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Rozwiązywanie problemów",
+    "search-placeholder": "Szukaj pytań...",
+    "meta-description": "Morphe FAQ i rozwiązywanie problemów - Znajdź odpowiedzi na najczęściej zadawane pytania i rozwiązania znanych problemów",
+    "meta-title": "FAQ i rozwiązywanie problemów - Morphe"
   }
 }

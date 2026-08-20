@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Zmeniť jazyk",
+    "theme-toggle": "Prepnúť motív",
+    "menu-toggle": "Otvoriť menu",
+    "scroll-to-top": "Hore"
   },
   "hero": {
     "title": "Premeň svoj",
@@ -8,10 +12,12 @@
     "description": "Od vývojárov najlepších upravených YouTube aplikácií prichádza Morphe — výkonný nástroj na úpravu aplikácií",
     "download": "Stiahnuť Morphe",
     "learn-more": "Zistiť viac",
-    "social-label": "Pridaj sa ku komunite",
+    "social-label": "Pridajte sa ku komunite",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Stiahnite si oficiálnu Morphe APK. Vytvorené bývalými prispievateľmi ReVanced na patchovanie YouTube, YouTube Music a Reddit s blokovaním reklám a vlastnými funkciami.",
+    "meta-title": "Aplikácia Morphe pre YouTube a Reddit - OFICIÁLNA STRÁNKA"
   },
   "how-it-works": {
     "title": "Ako funguje Morphe",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Skopírované!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Nájdite odpovede na bežné otázky a riešenia známych problémov",
+    "title": "Časté otázky a riešenie problémov",
+    "filter-all": "Všetko",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Riešenie problémov",
+    "search-placeholder": "Hľadať otázky...",
+    "meta-description": "Morphe Časté otázky a riešenie problémov - Nájdite odpovede na bežné otázky a riešenia známych problémov",
+    "meta-title": "Časté otázky a riešenie problémov - Morphe"
   }
 }

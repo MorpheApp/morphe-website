@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Змінити мову",
+    "theme-toggle": "Змінити тему",
+    "menu-toggle": "Відкрити меню",
+    "scroll-to-top": "Вгору"
   },
   "hero": {
     "title": "Трансформуйте свій",
@@ -11,7 +15,9 @@
     "description": "Від розробників, які створили найкращі модифікації YouTube та YT Music, приходить Morphe - потужний інструмент модифікації застосунків, який дає вам повний контроль",
     "download": "Завантажити Morphe",
     "learn-more": "Дізнатися більше",
-    "social-label": "Приєднуйтесь до спільноти"
+    "social-label": "Приєднуйтесь до спільноти",
+    "meta-description": "Завантажте офіційний APK-файл Morphe. Створено колишніми учасниками ReVanced для патчингу YouTube, YouTube Music та Reddit з блокуванням реклами та додатковими функціями.",
+    "meta-title": "Додаток Morphe для YouTube та Reddit — ОФІЦІЙНИЙ САЙТ"
   },
   "how-it-works": {
     "title": "Як працює Morphe",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Скопійовано!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
+    "subtitle": "Знайдіть відповіді на часті запитання та рішення відомих проблем",
+    "title": "FAQ та усунення несправностей",
+    "filter-all": "Все",
     "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "filter-troubleshooting": "Усунення несправностей",
+    "search-placeholder": "Пошук запитань...",
+    "meta-description": "FAQ та усунення несправностей Morphe — знайдіть відповіді на часті запитання та рішення відомих проблем",
+    "meta-title": "FAQ та усунення несправностей — Morphe"
   }
 }

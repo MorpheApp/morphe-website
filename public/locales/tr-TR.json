@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "SSS"
+    "faq": "SSS",
+    "change-language": "Dili değiştir",
+    "theme-toggle": "Temayı değiştir",
+    "menu-toggle": "Menüyü aç",
+    "scroll-to-top": "Yukarı çık"
   },
   "hero": {
     "title": "Dönüştür",
@@ -11,7 +15,9 @@
     "social-label": "Topluluğa Katıl",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Resmi Morphe APK'sını indirin. YouTube, YouTube Music ve Reddit'i reklam engelleme ve özel özelliklerle yamalamak için eski ReVanced katılımcıları tarafından oluşturulmuştur.",
+    "meta-title": "YouTube ve Reddit için Morphe Uygulaması - RESMİ SİTE"
   },
   "how-it-works": {
     "title": "Morphe Nasıl Çalışır",
@@ -319,13 +325,13 @@
     "desktop-copy-link-done": "Kopyalandı!"
   },
   "faq-page": {
-    "subtitle": "Find answers to common questions and solutions to known issues",
-    "title": "FAQ & Troubleshooting",
-    "filter-all": "All",
-    "filter-faq": "FAQ",
-    "filter-troubleshooting": "Troubleshooting",
-    "source-link": "Content sourced from the Morphe documentation",
-    "view-docs": "View Documentation",
-    "search-placeholder": "Search questions..."
+    "subtitle": "Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",
+    "title": "SSS ve Sorun Giderme",
+    "filter-all": "Hepsi",
+    "filter-faq": "SSS",
+    "filter-troubleshooting": "Sorun Giderme",
+    "search-placeholder": "Sorularda ara...",
+    "meta-description": "Morphe SSS ve Sorun Giderme - Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",
+    "meta-title": "SSS ve Sorun Giderme - Morphe"
   }
 }
