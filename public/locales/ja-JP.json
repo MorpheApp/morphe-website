@@ -329,6 +329,9 @@
     "title": "FAQとトラブルシューティング",
     "search-placeholder": "質問を検索...",
     "meta-description": "MorpheのFAQとトラブルシューティング - よくある質問への回答と既知の問題の解決策を見つける",
-    "meta-title": "FAQとトラブルシューティング - Morphe"
+    "meta-title": "FAQとトラブルシューティング - Morphe",
+    "no-results": "検索結果が見つかりませんでした。",
+    "filter-faq": "よくある質問",
+    "filter-troubleshooting": "トラブルシューティング"
   }
 }

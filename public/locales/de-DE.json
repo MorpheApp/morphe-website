@@ -329,6 +329,9 @@
     "title": "FAQ & Fehlerbehebung",
     "search-placeholder": "Fragen suchen...",
     "meta-description": "Morphe FAQ & Fehlerbehebung - Finden Sie Antworten auf häufige Fragen und Lösungen für bekannte Probleme",
-    "meta-title": "FAQ & Fehlerbehebung - Morphe"
+    "meta-title": "FAQ & Fehlerbehebung - Morphe",
+    "no-results": "Keine Treffer für Ihre Suche gefunden.",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Fehlerbehebung"
   }
 }

@@ -329,6 +329,9 @@
     "title": "SSS ve Sorun Giderme",
     "search-placeholder": "Sorularda ara...",
     "meta-description": "Morphe SSS ve Sorun Giderme - Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",
-    "meta-title": "SSS ve Sorun Giderme - Morphe"
+    "meta-title": "SSS ve Sorun Giderme - Morphe",
+    "no-results": "Aramanızla eşleşen sonuç bulunamadı.",
+    "filter-faq": "SSS",
+    "filter-troubleshooting": "Sorun Giderme"
   }
 }

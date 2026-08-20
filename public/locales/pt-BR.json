@@ -329,6 +329,9 @@
     "title": "FAQ e Resolução de Problemas",
     "search-placeholder": "Pesquisar perguntas...",
     "meta-description": "FAQ e Resolução de Problemas do Morphe - Encontre respostas para perguntas comuns e soluções para problemas conhecidos",
-    "meta-title": "FAQ e Resolução de Problemas - Morphe"
+    "meta-title": "FAQ e Resolução de Problemas - Morphe",
+    "no-results": "Nenhum resultado encontrado para sua pesquisa.",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Resolução de problemas"
   }
 }

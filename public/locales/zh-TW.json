@@ -329,6 +329,9 @@
     "title": "常見問題與故障排除",
     "search-placeholder": "搜尋問題...",
     "meta-description": "Morphe 常見問題與故障排除 - 尋找常見問題的解答和已知問題的解決方案",
-    "meta-title": "常見問題與故障排除 - Morphe"
+    "meta-title": "常見問題與故障排除 - Morphe",
+    "no-results": "未找到符合您的搜尋結果。",
+    "filter-faq": "常見問題",
+    "filter-troubleshooting": "故障排除"
   }
 }

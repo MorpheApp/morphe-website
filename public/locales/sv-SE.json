@@ -329,6 +329,9 @@
     "title": "FAQ & Felsökning",
     "search-placeholder": "Sök frågor...",
     "meta-description": "Morphe FAQ & Felsökning - Hitta svar på vanliga frågor och lösningar på kända problem",
-    "meta-title": "FAQ & Felsökning - Morphe"
+    "meta-title": "FAQ & Felsökning - Morphe",
+    "no-results": "Inga resultat hittades för din sökning.",
+    "filter-faq": "Vanliga frågor",
+    "filter-troubleshooting": "Felsökning"
   }
 }

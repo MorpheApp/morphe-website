@@ -4,14 +4,30 @@
 (function () {
     'use strict';
 
+    const searchInput = document.getElementById('faq-search');
+    const clearButton = document.getElementById('faq-search-clear');
+    const noResults = document.getElementById('faq-no-results');
+    const faqSections = document.querySelectorAll('.faq-section');
+    const faqItems = document.querySelectorAll('.faq-item');
+
     // --- Accordion expand/collapse ---
-    document.querySelectorAll('.faq-question').forEach(button => {
+    faqItems.forEach(item => {
+        const button = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        if (!button || !answer) return;
+
+        // Accessibility setup
         button.setAttribute('aria-expanded', 'false');
+        if (item.id && !answer.id) {
+            answer.id = item.id + '-answer';
+            button.setAttribute('aria-controls', answer.id);
+        }
 
         button.addEventListener('click', () => {
-            const item = button.closest('.faq-item');
-            if (!item) return;
+            const isExpanding = !item.classList.contains('active');
 
+            // Collapse other active items
             document.querySelectorAll('.faq-item.active').forEach(openItem => {
                 if (openItem !== item) {
                     openItem.classList.remove('active');
@@ -21,13 +37,12 @@
             });
 
             item.classList.toggle('active');
-            const isActive = item.classList.contains('active');
-            button.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            button.setAttribute('aria-expanded', isExpanding ? 'true' : 'false');
 
             // Update URL hash without jumping
-            if (isActive && item.id) {
+            if (isExpanding && item.id) {
                 history.replaceState(null, null, '#' + item.id);
-            } else if (!isActive && window.location.hash === '#' + item.id) {
+            } else if (!isExpanding && window.location.hash === '#' + item.id) {
                 // Remove hash if the item is closed
                 history.replaceState(null, null, window.location.pathname + window.location.search);
             }
@@ -36,6 +51,65 @@
 
     let currentSearchQuery = '';
 
+    // --- Search Logic ---
+    function applyFilters() {
+        let totalVisible = 0;
+        const query = currentSearchQuery.toLowerCase().trim();
+
+        faqSections.forEach(section => {
+            let visibleInSection = 0;
+
+            section.querySelectorAll('.faq-item').forEach(item => {
+                const title = item.querySelector('.faq-text')?.textContent || '';
+                const body = item.querySelector('.faq-answer')?.textContent || '';
+                const searchableText = (title + ' ' + body).toLowerCase();
+
+                const matches = query === '' || searchableText.includes(query);
+
+                if (matches) {
+                    item.style.display = '';
+                    visibleInSection++;
+                    totalVisible++;
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('active');
+                    const btn = item.querySelector('.faq-question');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            section.style.display = visibleInSection > 0 ? '' : 'none';
+        });
+
+        // Toggle "No results" message
+        if (noResults) {
+            noResults.classList.toggle('hidden', totalVisible > 0 || query === '');
+        }
+
+        // Toggle clear button
+        if (clearButton) {
+            clearButton.classList.toggle('hidden', query === '');
+        }
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentSearchQuery = e.target.value;
+            applyFilters();
+        });
+    }
+
+    if (clearButton) {
+        clearButton.addEventListener('click', () => {
+            if (searchInput) {
+                searchInput.value = '';
+                currentSearchQuery = '';
+                searchInput.focus();
+                applyFilters();
+            }
+        });
+    }
+
     // --- Deep-link: auto-expand if URL hash matches an FAQ anchor ---
     function expandFromHash() {
         const hash = window.location.hash;
@@ -43,6 +117,11 @@
 
         const target = document.querySelector(hash);
         if (target && target.classList.contains('faq-item')) {
+            // Ensure it's visible if there's a search active
+            target.style.display = '';
+            const section = target.closest('.faq-section');
+            if (section) section.style.display = '';
+
             target.classList.add('active');
             const button = target.querySelector('.faq-question');
             if (button) button.setAttribute('aria-expanded', 'true');
@@ -59,36 +138,6 @@
                 });
             }, 100);
         }
-    }
-
-    // --- Search Logic ---
-    function applyFilters() {
-        document.querySelectorAll('.faq-section').forEach(section => {
-            let visibleItemsCount = 0;
-
-            section.querySelectorAll('.faq-item').forEach(item => {
-                const questionText = item.querySelector('.faq-text').textContent.toLowerCase();
-                const matchesSearch = currentSearchQuery === '' || questionText.includes(currentSearchQuery);
-
-                if (matchesSearch) {
-                    item.style.display = '';
-                    visibleItemsCount++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Hide the entire section if no items are visible
-            section.style.display = visibleItemsCount > 0 ? '' : 'none';
-        });
-    }
-
-    const searchInput = document.getElementById('faq-search');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            currentSearchQuery = e.target.value.toLowerCase().trim();
-            applyFilters();
-        });
     }
 
     // Run initial hash check

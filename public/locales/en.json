@@ -329,6 +329,9 @@
     "meta-description": "Morphe FAQ & Troubleshooting - Find answers to common questions and solutions to known issues",
     "title": "FAQ & Troubleshooting",
     "subtitle": "Find answers to common questions and solutions to known issues",
-    "search-placeholder": "Search questions..."
+    "search-placeholder": "Search questions...",
+    "no-results": "No matches found for your search.",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting"
   }
 }

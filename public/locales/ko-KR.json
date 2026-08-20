@@ -329,6 +329,9 @@
     "title": "FAQ 및 문제 해결",
     "search-placeholder": "질문 검색...",
     "meta-description": "Morphe FAQ 및 문제 해결 - 자주 묻는 질문에 대한 답변과 알려진 문제의 해결 방법을 찾아보세요",
-    "meta-title": "FAQ 및 문제 해결 - Morphe"
+    "meta-title": "FAQ 및 문제 해결 - Morphe",
+    "no-results": "검색 결과가 없습니다.",
+    "filter-faq": "자주 묻는 질문",
+    "filter-troubleshooting": "문제 해결"
   }
 }

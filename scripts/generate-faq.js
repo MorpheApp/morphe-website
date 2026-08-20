@@ -152,17 +152,18 @@ function parseEntries(markdown) {
  */
 function generateAccordionItem(entry, displayNumber, section) {
     const anchorId = `${section}-${displayNumber}`;
+    const answerId = `${anchorId}-answer`;
     const bodyContent = entry.bodyLines.join('\n');
     const bodyHtml = marked.parse(bodyContent);
 
     return `
 <div class="faq-item" data-section="${section}" id="${anchorId}">
-    <button class="faq-question" data-umami-event="FAQ Page Expand" data-umami-event-question="${escapeHtml(entry.title)}" onclick="if(!this.closest('.faq-item').classList.contains('active')) history.replaceState(null, null, '#${anchorId}')">
+    <button class="faq-question" data-umami-event="FAQ Page Expand" data-umami-event-question="${escapeHtml(entry.title)}" aria-controls="${answerId}">
         <span class="faq-number">${displayNumber}</span>
         <span class="faq-text">${escapeHtml(entry.title)}</span>
         <span class="material-symbols-rounded">expand_more</span>
     </button>
-    <div class="faq-answer">
+    <div class="faq-answer" id="${answerId}">
         ${bodyHtml}
     </div>
 </div>`;

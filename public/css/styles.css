@@ -1440,9 +1440,53 @@ body {
     font-size: 1.2rem;
 }
 
+.faq-search-clear {
+    position: absolute;
+    right: 0.8rem;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--transition-base), background var(--transition-base);
+    border-radius: 50%;
+}
+
+.faq-search-clear:hover {
+    color: var(--text-primary);
+    background: var(--gray-100);
+}
+
+.faq-search-clear.hidden {
+    display: none;
+}
+
+.faq-no-results {
+    text-align: center;
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.faq-no-results .material-symbols-rounded {
+    font-size: 48px;
+    color: var(--text-tertiary);
+    opacity: 0.5;
+}
+
+.faq-no-results.hidden {
+    display: none;
+}
+
 .faq-search-input {
     width: 100%;
-    padding: 0.6rem 1rem 0.6rem 2.7rem;
+    padding: 0.6rem 2.7rem;
     border-radius: 2rem;
     border: 1.5px solid var(--border);
     background: var(--surface);

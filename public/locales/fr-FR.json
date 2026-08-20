@@ -329,6 +329,9 @@
     "title": "FAQ et dépannage",
     "search-placeholder": "Rechercher des questions...",
     "meta-description": "FAQ et dépannage Morphe - Trouvez des réponses aux questions courantes et des solutions aux problèmes connus",
-    "meta-title": "FAQ et dépannage - Morphe"
+    "meta-title": "FAQ et dépannage - Morphe",
+    "no-results": "Aucun résultat trouvé pour votre recherche.",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Dépannage"
   }
 }

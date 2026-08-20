@@ -329,6 +329,9 @@
     "title": "Časté otázky a riešenie problémov",
     "search-placeholder": "Hľadať otázky...",
     "meta-description": "Morphe Časté otázky a riešenie problémov - Nájdite odpovede na bežné otázky a riešenia známych problémov",
-    "meta-title": "Časté otázky a riešenie problémov - Morphe"
+    "meta-title": "Časté otázky a riešenie problémov - Morphe",
+    "no-results": "Pre vaše hľadanie sa nenašli žiadne výsledky.",
+    "filter-faq": "Časté otázky",
+    "filter-troubleshooting": "Riešenie problémov"
   }
 }
