@@ -206,6 +206,8 @@
                 // Check if the element is an input or textarea
                 if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                     element.value = translation;
+                } else if (element.tagName === 'META') {
+                    element.setAttribute('content', translation);
                 } else {
                     element.textContent = translation;
                 }

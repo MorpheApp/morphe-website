@@ -64,70 +64,88 @@ function extractKeys() {
     const content = fs.readFileSync(file, 'utf8');
 
     // Extract data-i18n attributes
-    const i18nMatches = content.matchAll(/data-i18n="([^"]+)"/g);
+    // This finds tags with data-i18n and extracts either content="VALUE" (for meta) or the inner text
+    const i18nMatches = content.matchAll(/<(\w+)[^>]+data-i18n="([^"]+)"[^>]*>/g);
     for (const match of i18nMatches) {
-      const key = match[1];
-      // Get the text content between tags as default value
-      const tagRegex = new RegExp(`data-i18n="${key}"[^>]*>([^<]+)<`, 'g');
-      const tagMatch = tagRegex.exec(content);
-      const defaultValue = tagMatch ? tagMatch[1].trim().replace(/\s+/g, ' ') : key;
+      const tag = match[1].toLowerCase();
+      const key = match[2];
+      const tagFull = match[0];
+      let defaultValue = key;
+
+      if (tag === 'meta') {
+        const contentMatch = tagFull.match(/content="([^"]+)"/);
+        if (contentMatch) defaultValue = contentMatch[1];
+      } else {
+        // Find the inner text after this opening tag
+        const remainingContent = content.substring(match.index + tagFull.length);
+        const textMatch = remainingContent.match(/^([^<]+)/);
+        if (textMatch) defaultValue = textMatch[1];
+      }
 
       if (!keys.has(key)) {
-        keys.set(key, defaultValue);
+        keys.set(key, defaultValue.trim().replace(/\s+/g, ' '));
       }
     }
 
     // Extract data-i18n-html attributes (HTML content, e.g. links inside list items)
-    const i18nHtmlMatches = content.matchAll(/data-i18n-html="([^"]+)"/g);
+    const i18nHtmlMatches = content.matchAll(/<(\w+)[^>]+data-i18n-html="([^"]+)"[^>]*>/g);
     for (const match of i18nHtmlMatches) {
-      const key = match[1];
-      // Capture everything between the opening tag's > and the closing tag
-      // Uses a greedy match up to the last </tag> on the same element
-      const tagRegex = new RegExp(`<(\\w+)[^>]*data-i18n-html="${key}"[^>]*>([\\s\\S]*?)<\\/\\1>`, 'g');
-      const tagMatch = tagRegex.exec(content);
-      const defaultValue = tagMatch ? tagMatch[2].trim().replace(/\s+/g, ' ') : key;
+      const tagName = match[1];
+      const key = match[2];
+      const tagFull = match[0];
 
-      if (!keys.has(key)) {
-        keys.set(key, defaultValue);
+      // Capture everything between this opening tag and its matching closing tag
+      const closingTag = `</${tagName}>`;
+      const startIndex = match.index + tagFull.length;
+      const endIndex = content.indexOf(closingTag, startIndex);
+
+      if (endIndex !== -1) {
+        const defaultValue = content.substring(startIndex, endIndex).trim().replace(/\s+/g, ' ');
+        if (!keys.has(key)) {
+          keys.set(key, defaultValue);
+        }
+      } else if (!keys.has(key)) {
+        keys.set(key, key);
       }
     }
 
     // Extract data-i18n-placeholder attributes
-    const placeholderMatches = content.matchAll(/data-i18n-placeholder="([^"]+)"/g);
+    const placeholderMatches = content.matchAll(/<[^>]+data-i18n-placeholder="([^"]+)"[^>]*>/g);
     for (const match of placeholderMatches) {
+      const tagFull = match[0];
       const key = match[1];
-      const placeholderRegex = new RegExp(`data-i18n-placeholder="${key}"[^>]*placeholder="([^"]+)"`, 'g');
-      const placeholderMatch = placeholderRegex.exec(content);
-      const defaultValue = placeholderMatch ? placeholderMatch[1].trim().replace(/\s+/g, ' ') : key;
+      // Use a more specific regex to avoid matching data-i18n-placeholder
+      const placeholderMatch = tagFull.match(/\splaceholder="([^"]+)"/);
+      const defaultValue = placeholderMatch ? placeholderMatch[1] : key;
 
       if (!keys.has(key)) {
-        keys.set(key, defaultValue);
+        keys.set(key, defaultValue.trim().replace(/\s+/g, ' '));
       }
     }
 
     // Extract data-i18n-aria attributes
-    const ariaMatches = content.matchAll(/data-i18n-aria="([^"]+)"/g);
+    const ariaMatches = content.matchAll(/<[^>]+data-i18n-aria="([^"]+)"[^>]*>/g);
     for (const match of ariaMatches) {
+      const tagFull = match[0];
       const key = match[1];
-      const ariaRegex = new RegExp(`data-i18n-aria="${key}"[^>]*aria-label="([^"]+)"`, 'g');
-      const ariaMatch = ariaRegex.exec(content);
-      const defaultValue = ariaMatch ? ariaMatch[1].trim().replace(/\s+/g, ' ') : key;
+      const ariaMatch = tagFull.match(/\saria-label="([^"]+)"/);
+      const defaultValue = ariaMatch ? ariaMatch[1] : key;
 
       if (!keys.has(key)) {
-        keys.set(key, defaultValue);
+        keys.set(key, defaultValue.trim().replace(/\s+/g, ' '));
       }
     }
 
     // Extract data-i18n-title attributes
-    const titleMatches = content.matchAll(/data-i18n-title="([^"]+)"/g);
+    const titleMatches = content.matchAll(/<[^>]+data-i18n-title="([^"]+)"[^>]*>/g);
     for (const match of titleMatches) {
+      const tagFull = match[0];
       const key = match[1];
-      const titleRegex = new RegExp(`data-i18n-title="${key}"[^>]*title="([^"]+)"`, 'g');
-      const titleMatch = titleRegex.exec(content);
-      const defaultValue = titleMatch ? titleMatch[1].trim().replace(/\s+/g, ' ') : key;
+      const titleMatch = tagFull.match(/\stitle="([^"]+)"/);
+      const defaultValue = titleMatch ? titleMatch[1] : key;
 
       if (!keys.has(key)) {
-        keys.set(key, defaultValue);
+        keys.set(key, defaultValue.trim().replace(/\s+/g, ' '));
       }
     }
 
