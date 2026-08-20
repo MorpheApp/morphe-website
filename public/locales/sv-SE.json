@@ -9,7 +9,8 @@
     "product-translate": "Hjälp till att översätta",
     "community": "Community",
     "language": "Språk",
-    "copyright": "Öppet och kostnadsfritt för evigt."
+    "copyright": "Öppet och kostnadsfritt för evigt.",
+    "product-faq": "FAQ & Felsökning"
   },
   "translate": {
     "title": "Hjälp oss att översätta",
@@ -231,23 +232,7 @@
     }
   },
   "faq": {
-    "title": "Vanliga frågor",
-    "subtitle": "Allt du behöver veta om Morphe",
-    "q2": "Är Morphe säkert?",
-    "a2": "Så säkert som det kan vara att modifiera obfuskerad bytekod. All källkod för Morphe är öppen och tillgänglig för alla att granska. Vår community överser och bidrar aktivt till kodbasen.",
-    "q3": "Kan Morphe få min telefon att gå sönder?",
-    "a3": "Bara om din telefon går sönder av sig själv. Annars ska din enhet fortsätta fungera som vanligt. Morphe modifierar endast appaket och rör inte systemfilerna.",
-    "q4": "Kan jag anpassa appar efter eget tycke?",
-    "a4": "Ja, men skyll inte på Morphe om du anpassar din app mer än du klarar av. Vi rekommenderar att du anpassar till den grad du själv föredrar och inget mer.",
-    "q5": "Vad är Morphes integritetspolicy?",
-    "q6": "Varför namnet Morphe?",
-    "a6": "Eftersom \"Android App Modification And Transformation Tool\" (AAMATT) låter inte särskilt slående. Och för att namnet Morphe antyder att det omvandlar dina appar till något bättre.",
-    "q7": "Är Morphe magi?",
-    "a7": "Nej. Men också ja. Det är den avancerade manipuleringen av bytekoden som känns som magi.",
-    "q8": "Kan jag bidra till Morphe?",
-    "a8": "Ja! Se riktlinjerna för bidrag i våra %1. Om du inte har kunskaper inom utveckling uppskattar vi alltid %2 som hjälper oss att betala räkningarna.",
-    "a8-link1": "GitHub-lagringsplatser",
-    "a8-link2": "donationer"
+    "title": "Vanliga frågor"
   },
   "community": {
     "subtitle": "Följ oss, rapportera problem och hjälp till att göra Morphe bättre",
@@ -332,5 +317,15 @@
     "go-home": "Gå till startsidan",
     "404-title": "404 – Sidan hittades inte",
     "not-found": "Sidan du söker kan inte hittas"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

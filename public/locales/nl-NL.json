@@ -125,23 +125,7 @@
     }
   },
   "faq": {
-    "title": "Veelgestelde vragen",
-    "subtitle": "Alles wat je moet weten over Morphe",
-    "q2": "Is Morphe veilig?",
-    "a2": "Zo veilig als bytecode-modificatie kan zijn.",
-    "q3": "Kan Morphe mijn telefoon beschadigen?",
-    "a3": "Alleen als je telefoon dat zelf besluit.",
-    "q4": "Kan ik apps aanpassen?",
-    "a4": "Ja, maar met mate.",
-    "q5": "Wat is het privacybeleid van Morphe?",
-    "q6": "Waarom de naam Morphe?",
-    "a6": "Omdat AAMATT niet goed klinkt.",
-    "q7": "Is Morphe magie?",
-    "a7": "Nee. Maar ook ja.",
-    "q8": "Kan ik bijdragen aan Morphe?",
-    "a8": "Ja! Bekijk onze %1. We waarderen ook %2.",
-    "a8-link1": "GitHub-repositories",
-    "a8-link2": "donaties"
+    "title": "Veelgestelde vragen"
   },
   "footer": {
     "description": "Android-app patching van de volgende generatie",
@@ -153,7 +137,8 @@
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
     "language": "Taal",
-    "product-changelog": "Wat is er nieuw"
+    "product-changelog": "Wat is er nieuw",
+    "product-faq": "FAQ & Probleemoplossing"
   },
   "analytics": {
     "title": "Analyse",
@@ -332,5 +317,15 @@
     "desktop-qr-alt": "QR-code die deze link op je telefoon opent",
     "desktop-copy-link": "Link kopiëren",
     "desktop-copy-link-done": "Gekopieerd!"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

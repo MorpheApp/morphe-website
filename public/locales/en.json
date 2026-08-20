@@ -232,23 +232,7 @@
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about Morphe",
-    "q2": "Is Morphe safe?",
-    "a2": "As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.",
-    "q3": "Will Morphe brick my phone?",
-    "a3": "Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.",
-    "q4": "Can I customize apps to my preference?",
-    "a4": "Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.",
-    "q5": "What's Morphe's privacy policy?",
-    "q6": "Why the name Morphe?",
-    "a6": "Because \"Android App Modification And Transformation Tool\" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.",
-    "q7": "Is Morphe magic?",
-    "a7": "No. But also yes. It's advanced bytecode manipulation that feels like magic.",
-    "q8": "Can I contribute to Morphe?",
-    "a8": "Yes! See the contribution guidelines in our %1. If you don't have developer skills, we always appreciate %2 to help pay the bills.",
-    "a8-link1": "GitHub repos",
-    "a8-link2": "donations"
+    "title": "Frequently Asked Questions"
   },
   "community": {
     "subtitle": "Follow us, report issues, and help make Morphe better",

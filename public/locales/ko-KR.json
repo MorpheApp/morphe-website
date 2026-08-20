@@ -9,7 +9,8 @@
     "product-translate": "번역 참여",
     "community": "커뮤니티",
     "language": "언어",
-    "copyright": "오픈소스로 공개되며, 언제나 무료입니다."
+    "copyright": "오픈소스로 공개되며, 언제나 무료입니다.",
+    "product-faq": "FAQ 및 문제 해결"
   },
   "translate": {
     "title": "번역 참여",
@@ -231,23 +232,7 @@
     }
   },
   "faq": {
-    "title": "자주 묻는 질문",
-    "subtitle": "Morphe를 쓰기 전에 많이 궁금해하는 내용을 모았습니다",
-    "q2": "Morphe는 안전한가요?",
-    "a2": "난독화된 바이트코드를 수정하는 도구라는 점을 감안하면 최대한 안전하게 설계되어 있습니다. Morphe의 모든 소스 코드는 오픈소스로 공개되어 누구나 직접 검토할 수 있고, 커뮤니티도 활발하게 코드 리뷰에 참여하고 있습니다.",
-    "q3": "Morphe를 쓰면 휴대폰이 벽돌이 되나요?",
-    "a3": "휴대폰이 스스로 벽돌이 되기로 결심하지 않는 이상 그럴 일은 없습니다. Morphe는 시스템 파일이 아니라 앱 패키지만 수정합니다.",
-    "q4": "앱을 내 취향대로 바꿀 수 있나요?",
-    "a4": "네. 다만 너무 과하게 손보다가 원래보다 더 복잡해져도 그건 Morphe 탓이 아닙니다. 적당한 선에서 취향껏 조정하는 걸 추천합니다.",
-    "q5": "Morphe의 개인정보 처리 방식은 어떻게 되나요?",
-    "q6": "왜 이름이 Morphe인가요?",
-    "a6": "\"Android App Modification And Transformation Tool\"(AAMATT)보다 훨씬 부르기 쉽고, 앱을 더 나은 형태로 바꾼다는 의미도 담고 있어서입니다.",
-    "q7": "Morphe는 마법인가요?",
-    "a7": "아니요. 그런데 또 그렇게 느껴지긴 합니다. 고급 바이트코드 조작이 워낙 마법처럼 보이거든요.",
-    "q8": "Morphe에 기여할 수 있나요?",
-    "a8": "물론입니다. 자세한 내용은 %1 의 기여 가이드를 확인해 주세요. 개발로 참여하기 어렵다면 운영 비용에 보탬이 되는 %2 도 큰 도움이 됩니다.",
-    "a8-link1": "GitHub 저장소",
-    "a8-link2": "후원"
+    "title": "자주 묻는 질문"
   },
   "community": {
     "subtitle": "소식을 받아보고, 문제를 제보하고, Morphe를 함께 더 좋게 만들어 주세요",
@@ -332,5 +317,15 @@
     "go-home": "홈으로 가기",
     "404-title": "404 - 페이지를 찾을 수 없습니다",
     "not-found": "요청하신 페이지를 찾을 수 없습니다"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

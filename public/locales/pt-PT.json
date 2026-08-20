@@ -125,23 +125,7 @@
     }
   },
   "faq": {
-    "title": "Perguntas frequentes",
-    "subtitle": "Tudo o que precisas de saber sobre o Morphe",
-    "q2": "O Morphe é seguro?",
-    "a2": "Tão seguro quanto a modificação de bytecode ofuscado permite.",
-    "q3": "O Morphe pode danificar o meu telemóvel?",
-    "a3": "Apenas se o telemóvel decidir avariar sozinho.",
-    "q4": "Posso personalizar as apps?",
-    "a4": "Sim, mas sem exageros.",
-    "q5": "Qual é a política de privacidade do Morphe?",
-    "q6": "Porque o nome Morphe?",
-    "a6": "Porque AAMATT não é apelativo.",
-    "q7": "O Morphe é magia?",
-    "a7": "Não. Mas também sim.",
-    "q8": "Posso contribuir para o Morphe?",
-    "a8": "Sim! Consulta os nossos %1. Também apreciamos %2.",
-    "a8-link1": "repositórios GitHub",
-    "a8-link2": "donativos"
+    "title": "Perguntas frequentes"
   },
   "footer": {
     "description": "Patching de aplicações Android de nova geração",
@@ -153,7 +137,8 @@
     "support-donate": "Doar",
     "copyright": "Open source e gratuito para sempre.",
     "language": "Idioma",
-    "product-changelog": "Novidades"
+    "product-changelog": "Novidades",
+    "product-faq": "FAQ e Resolução de Problemas"
   },
   "analytics": {
     "title": "Análise",
@@ -332,5 +317,15 @@
     "desktop-qr-alt": "Código QR que abre esta ligação no seu telemóvel",
     "desktop-copy-link": "Copiar link",
     "desktop-copy-link-done": "Copiado!"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

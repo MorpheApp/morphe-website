@@ -125,23 +125,7 @@
     }
   },
   "faq": {
-    "title": "Questions fréquentes",
-    "subtitle": "Tout ce que vous devez savoir sur Morphe",
-    "q2": "Morphe est-il sûr ?",
-    "a2": "Aussi sûr que peut l’être la modification de bytecode obfusqué. Tout le code source de Morphe est open source et accessible publiquement. La communauté le révise et y contribue activement.",
-    "q3": "Morphe peut-il endommager mon téléphone ?",
-    "a3": "Seulement si votre téléphone décide de se casser tout seul. Sinon, votre appareil restera intact. Morphe modifie uniquement les paquets d’applications et ne touche pas aux fichiers système.",
-    "q4": "Puis-je personnaliser les applications selon mes préférences ?",
-    "a4": "Oui, mais ne blâmez pas Morphe si votre application devient trop personnalisée. Il est recommandé de rester raisonnable.",
-    "q5": "Quelle est la politique de confidentialité de Morphe ?",
-    "q6": "Pourquoi le nom Morphe ?",
-    "a6": "Parce que « Android App Modification And Transformation Tool » n’est pas très accrocheur. Morphe évoque la transformation des applications en quelque chose de meilleur.",
-    "q7": "Morphe est-il magique ?",
-    "a7": "Non. Mais aussi oui. C’est une manipulation avancée du bytecode qui ressemble à de la magie.",
-    "q8": "Puis-je contribuer à Morphe ?",
-    "a8": "Oui ! Consultez les directives de contribution dans nos %1. Si vous n’êtes pas développeur, nous apprécions toujours les %2 pour aider à couvrir les frais.",
-    "a8-link1": "dépôts GitHub",
-    "a8-link2": "dons"
+    "title": "Questions fréquentes"
   },
   "footer": {
     "description": "Le patching d’applications Android de nouvelle génération",
@@ -153,7 +137,8 @@
     "support-donate": "Faire un don",
     "copyright": "Open source et gratuit pour toujours.",
     "language": "Langue",
-    "product-changelog": "Nouveautés"
+    "product-changelog": "Nouveautés",
+    "product-faq": "FAQ et dépannage"
   },
   "analytics": {
     "title": "Analytique",
@@ -332,5 +317,15 @@
     "desktop-qr-alt": "Code QR qui ouvre ce lien sur votre téléphone",
     "desktop-copy-link": "Copier le lien",
     "desktop-copy-link-done": "Copié !"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

@@ -125,23 +125,7 @@
     }
   },
   "faq": {
-    "title": "Často kladené otázky",
-    "subtitle": "Všetko, čo potrebuješ vedieť o Morphe",
-    "q2": "Je Morphe bezpečný?",
-    "a2": "Tak bezpečný, ako len úprava bytecode môže byť.",
-    "q3": "Môže Morphe poškodiť telefón?",
-    "a3": "Iba ak sa telefón rozhodne pokaziť sám.",
-    "q4": "Môžem aplikácie prispôsobiť?",
-    "a4": "Áno, ale s mierou.",
-    "q5": "Aká je politika ochrany súkromia Morphe?",
-    "q6": "Prečo názov Morphe?",
-    "a6": "Pretože AAMATT neznie dobre.",
-    "q7": "Je Morphe mágia?",
-    "a7": "Nie. Ale trochu áno.",
-    "q8": "Môžem prispieť k Morphe?",
-    "a8": "Áno! Pozri si naše %1. Vítame aj %2.",
-    "a8-link1": "GitHub repozitáre",
-    "a8-link2": "dary"
+    "title": "Často kladené otázky"
   },
   "footer": {
     "description": "Patchovanie Android aplikácií novej generácie",
@@ -153,7 +137,8 @@
     "support-donate": "Darovať",
     "copyright": "Open source a navždy zadarmo.",
     "language": "Jazyk",
-    "product-changelog": "Novinky"
+    "product-changelog": "Novinky",
+    "product-faq": "Časté otázky a riešenie problémov"
   },
   "analytics": {
     "title": "Analytika",
@@ -332,5 +317,15 @@
     "desktop-qr-alt": "QR kód, ktorý otvorí tento odkaz vo vašom telefóne",
     "desktop-copy-link": "Kopírovať odkaz",
     "desktop-copy-link-done": "Skopírované!"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

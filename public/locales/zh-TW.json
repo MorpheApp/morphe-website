@@ -9,7 +9,8 @@
     "product-translate": "協助翻譯",
     "community": "社群",
     "language": "語言",
-    "copyright": "永久開源且免費。"
+    "copyright": "永久開源且免費。",
+    "product-faq": "常見問題与故障排除"
   },
   "translate": {
     "title": "協助我們翻譯",
@@ -231,23 +232,7 @@
     }
   },
   "faq": {
-    "title": "常見問題",
-    "subtitle": "關於 Morphe 您需要知道的一切",
-    "q2": "Morphe 安全嗎？",
-    "a2": "和修改混淆位元碼一樣安全。Morphe 的所有原始碼都是開源的，任何人都可以自由檢查。我們的社群積極審查並為程式碼庫做出貢獻。",
-    "q3": "Morphe 會讓我的手機變磚嗎？",
-    "a3": "只有在您的手機決定自己變磚的情況下才會。否則您的裝置就不會有事。Morphe 只修改應用程式套件，不會觸及系統檔案。",
-    "q4": "我可以根據自己的喜好自訂應用程式嗎？",
-    "a4": "可以，但如果您把應用程式自訂到連自己都駕馭不了，請不要怪 Morphe。建議將自訂程度控制在您的喜好水準內，不要過度。",
-    "q5": "Morphe 的隱私權政策是什麼？",
-    "q6": "為什麼叫 Morphe？",
-    "a6": "因為「Android 應用程式修改和轉換工具」（AAMATT）不太好聽。而且 Morphe 暗示它將您的應用程式變形為更好的東西。",
-    "q7": "Morphe 是魔法嗎？",
-    "a7": "不是。但也是。它是像魔法一樣的進階位元碼操作。",
-    "q8": "我可以為 Morphe 做貢獻嗎？",
-    "a8": "可以！請參閱我們 %1 中的貢獻指南。如果您沒有開發技能，我們隨時歡迎 %2 來幫助支付費用。",
-    "a8-link1": "GitHub 儲存庫",
-    "a8-link2": "贊助"
+    "title": "常見問題"
   },
   "community": {
     "subtitle": "關注我們，回報問題，協助改善 Morphe",
@@ -332,5 +317,15 @@
     "go-home": "返回首頁",
     "404-title": "404 - 找不到頁面",
     "not-found": "找不到您要找的頁面"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

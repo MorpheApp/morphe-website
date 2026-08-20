@@ -9,7 +9,8 @@
     "product-translate": "Pomóż w tłumaczeniu",
     "community": "Społeczność",
     "language": "Język",
-    "copyright": "Otwarte i zawsze darmowe."
+    "copyright": "Otwarte i zawsze darmowe.",
+    "product-faq": "FAQ i rozwiązywanie problemów"
   },
   "translate": {
     "title": "Pomóż nam w tłumaczeniu",
@@ -231,23 +232,7 @@
     }
   },
   "faq": {
-    "title": "Często zadawane pytania",
-    "subtitle": "Wszystko, co musisz wiedzieć o Morphe",
-    "q2": "Czy Morphe jest bezpieczne?",
-    "a2": "Tak bezpieczne, jak tylko może być modyfikowanie zaciemnionego kodu bajtowego. Cały kod Morphe jest otwarty, więc każdy może go przejrzeć. Nasza społeczność na bieżąco go sprawdza i rozwija.",
-    "q3": "Czy Morphe zamieni mój telefon w cegłę?",
-    "a3": "Tylko jeśli Twój telefon sam uzna, że ma na to ochotę. Morphe modyfikuje tylko pakiety aplikacji i nie dotyka plików systemowych, więc Twoje urządzenie jest bezpieczne.",
-    "q4": "Czy mogę dostosować aplikacje pod siebie?",
-    "a4": "Jasne, ale nie miej pretensji do Morphe, jeśli od nadmiaru funkcji zakręci Ci się w głowie. Zalecamy modowanie z umiarem.",
-    "q5": "Jaka jest polityka prywatności Morphe?",
-    "q6": "Skąd nazwa Morphe?",
-    "a6": "Gdyż nazwa \"Android App Modification And Transformation Tool\" (AAMATT) nie brzmi zbyt chwytliwie. Poza tym Morphe kojarzy się z metamorfozą Twoich aplikacji w coś znacznie lepszego.",
-    "q7": "Czy Morphe to magia?",
-    "a7": "I tak i nie. To po prostu zaawansowana manipulacja kodem, która daje magiczne efekty.",
-    "q8": "Czy mogę pomóc w rozwoju Morphe?",
-    "a8": "Pewnie! Sprawdź wytyczne dla twórców w naszych %1. Jeśli nie programujesz, zawsze doceniamy %2, które pomagają nam opłacić rachunki.",
-    "a8-link1": "repozytoriach na GitHubie",
-    "a8-link2": "darowizny"
+    "title": "Często zadawane pytania"
   },
   "community": {
     "subtitle": "Obserwuj nas, zgłaszaj błędy i pomóż ulepszać Morphe",
@@ -332,5 +317,15 @@
     "go-home": "Wróć na stronę główną",
     "404-title": "404 - Nie znaleziono strony",
     "not-found": "Nie można znaleźć strony"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

@@ -125,23 +125,7 @@
     }
   },
   "faq": {
-    "title": "常见问题",
-    "subtitle": "关于Morphe您需要知道的一切",
-    "q2": "Morphe安全吗？",
-    "a2": "和修改混淆字节码一样安全。Morphe的所有源代码都是开源的，任何人都可以自由检查。我们的社区积极审查并为代码库做出贡献。",
-    "q3": "Morphe会使我的手机变砖吗？",
-    "a3": "只有在您的手机决定自己变砖的情况下才会。否则您的设备会很好。Morphe只修改应用包，不会触及系统文件。",
-    "q4": "我可以根据自己的喜好自定义应用吗？",
-    "a4": "可以，但如果您的应用过于定制化而无法处理，请不要怪Morphe。建议将自定义程度控制在您的喜好水平内，不要过度。",
-    "q5": "Morphe的隐私政策是什么？",
-    "q6": "为什么叫Morphe？",
-    "a6": "因为\"Android应用修改和转换工具\"（AAMATT）不太好听。而且Morphe暗示它将您的应用变形为更好的东西。",
-    "q7": "Morphe是魔法吗？",
-    "a7": "不是。但也是。它是像魔法一样的高级字节码操作。",
-    "q8": "我可以为Morphe做贡献吗？",
-    "a8": "可以！请参阅我们 %1 中的贡献指南。如果您没有开发技能，我们随时欢迎 %2 来帮助支付费用。",
-    "a8-link1": "GitHub仓库",
-    "a8-link2": "捐赠"
+    "title": "常见问题"
   },
   "footer": {
     "description": "新一代Android应用打补丁工具",
@@ -153,7 +137,8 @@
     "support-donate": "捐赠",
     "copyright": "永久开源和免费。",
     "language": "语言",
-    "product-changelog": "更新内容"
+    "product-changelog": "更新内容",
+    "product-faq": "常见问题与故障排除"
   },
   "analytics": {
     "title": "分析",
@@ -332,5 +317,15 @@
     "desktop-qr-alt": "在手机上打开此链接的二维码",
     "desktop-copy-link": "复制链接",
     "desktop-copy-link-done": "已复制！"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }

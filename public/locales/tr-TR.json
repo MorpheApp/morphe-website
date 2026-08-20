@@ -125,23 +125,7 @@
     }
   },
   "faq": {
-    "title": "Sıkça Sorulan Sorular",
-    "subtitle": "Morphe hakkında bilmen gereken her şey",
-    "q2": "Morphe güvenli mi?",
-    "a2": "Bytecode düzenlemenin mümkün olduğu kadar güvenli.",
-    "q3": "Morphe telefonuma zarar verir mi?",
-    "a3": "Telefonun kendi kendine bozulmazsa hayır.",
-    "q4": "Uygulamaları özelleştirebilir miyim?",
-    "a4": "Evet, ama abartma.",
-    "q5": "Morphe'nin gizlilik politikası nedir?",
-    "q6": "Neden Morphe ismi?",
-    "a6": "Çünkü AAMATT kulağa hoş gelmiyor.",
-    "q7": "Morphe sihir mi?",
-    "a7": "Hayır. Ama biraz evet.",
-    "q8": "Morphe'ye katkıda bulunabilir miyim?",
-    "a8": "Evet! %1 bak. %2 da memnuniyetle karşılanır.",
-    "a8-link1": "GitHub depolarımıza",
-    "a8-link2": "Bağışlar"
+    "title": "Sıkça Sorulan Sorular"
   },
   "footer": {
     "description": "Yeni nesil Android uygulama yamalama",
@@ -153,7 +137,8 @@
     "support-donate": "Bağış Yap",
     "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
     "language": "Dil",
-    "product-changelog": "Yenilikler"
+    "product-changelog": "Yenilikler",
+    "product-faq": "SSS ve Sorun Giderme"
   },
   "analytics": {
     "title": "Analitik",
@@ -332,5 +317,15 @@
     "desktop-qr-alt": "Bu bağlantıyı telefonunuzda açan QR kodu",
     "desktop-copy-link": "Bağlantıyı kopyala",
     "desktop-copy-link-done": "Kopyalandı!"
+  },
+  "faq-page": {
+    "subtitle": "Find answers to common questions and solutions to known issues",
+    "title": "FAQ & Troubleshooting",
+    "filter-all": "All",
+    "filter-faq": "FAQ",
+    "filter-troubleshooting": "Troubleshooting",
+    "source-link": "Content sourced from the Morphe documentation",
+    "view-docs": "View Documentation",
+    "search-placeholder": "Search questions..."
   }
 }
