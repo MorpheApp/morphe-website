@@ -4,13 +4,13 @@
     "product-microg": "Pobierz MicroG",
     "support-donate": "Wesprzyj",
     "product-changelog": "Co nowego",
+    "product-faq": "FAQ i rozwiązywanie problemów",
     "description": "Nowa generacja modyfikacji aplikacji na Androida",
     "product": "Produkt",
     "product-translate": "Pomóż w tłumaczeniu",
     "community": "Społeczność",
     "language": "Język",
-    "copyright": "Otwarte i zawsze darmowe.",
-    "product-faq": "FAQ i rozwiązywanie problemów"
+    "copyright": "Otwarte i zawsze darmowe."
   },
   "translate": {
     "title": "Pomóż nam w tłumaczeniu",
@@ -55,10 +55,10 @@
   },
   "nav": {
     "faq": "FAQ",
-    "change-language": "Zmień język",
     "theme-toggle": "Przełącz motyw",
-    "menu-toggle": "Otwórz menu",
-    "scroll-to-top": "Wróć na górę"
+    "menu-toggle": "Przełącz menu",
+    "scroll-to-top": "Przewiń do góry",
+    "change-language": "Zmień język"
   },
   "hero": {
     "title": "Odmień",
@@ -70,7 +70,7 @@
     "download": "Pobierz Morphe",
     "learn-more": "Dowiedz się więcej",
     "social-label": "Dołącz do społeczności",
-    "meta-description": "Pobierz oficjalny plik APK Morphe. Stworzony przez byłych współpracowników ReVanced w celu patchowania YouTube, YouTube Music i Reddit z blokowaniem reklam i niestandardowymi funkcjami.",
+    "meta-description": "Pobierz oficjalny plik APK Morphe. Stworzony przez byłych współtwórców ReVanced do modyfikowania YouTube'a, YouTube Music i Reddit, dodając blokowanie reklam i niestandardowe funkcje.",
     "meta-title": "Aplikacja Morphe dla YouTube i Reddit - OFICJALNA STRONA"
   },
   "app-features": {
@@ -325,11 +325,11 @@
     "not-found": "Nie można znaleźć strony"
   },
   "faq-page": {
-    "subtitle": "Znajdź odpowiedzi na najczęściej zadawane pytania i rozwiązania znanych problemów",
-    "title": "FAQ i rozwiązywanie problemów",
-    "search-placeholder": "Szukaj pytań...",
-    "meta-description": "Morphe FAQ i rozwiązywanie problemów - Znajdź odpowiedzi na najczęściej zadawane pytania i rozwiązania znanych problemów",
     "meta-title": "FAQ i rozwiązywanie problemów - Morphe",
+    "meta-description": "FAQ i rozwiązywanie problemów Morphe - Znajdź odpowiedzi na częste pytania i rozwiązania znanych problemów",
+    "title": "FAQ i rozwiązywanie problemów",
+    "subtitle": "Znajdź odpowiedzi na częste pytania i rozwiązania znanych problemów",
+    "search-placeholder": "Szukaj pytań...",
     "no-results": "Nie znaleziono wyników dla Twojego wyszukiwania.",
     "filter-faq": "FAQ",
     "filter-troubleshooting": "Rozwiązywanie problemów"
