@@ -3,8 +3,7 @@ const path = require('path');
 const https = require('https');
 const { marked } = require('marked');
 
-const QUESTIONS_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-documentation/main/docs/morphe-resources/questions.md';
-const TROUBLESHOOTING_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-documentation/main/docs/morphe-resources/troubleshooting.md';
+const DOCS_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-documentation/refs/heads/main/docs/morphe-resources/troubleshooting_questions.md';
 
 /**
  * Configure Marked for GitHub-style Markdown
@@ -219,22 +218,18 @@ function generateAccordionItem(entry, displayNumber, section) {
 async function generateFaq() {
     console.log('📦 Fetching FAQ and troubleshooting content...');
 
-    const [questionsMd, troubleshootingMd] = await Promise.all([
-        fetchUrl(QUESTIONS_URL),
-        fetchUrl(TROUBLESHOOTING_URL)
-    ]);
+    const content = await fetchUrl(DOCS_URL);
 
-    if (!questionsMd || !questionsMd.trim()) {
-        throw new Error(`Fetched empty content from ${QUESTIONS_URL}`);
-    }
-    if (!troubleshootingMd || !troubleshootingMd.trim()) {
-        throw new Error(`Fetched empty content from ${TROUBLESHOOTING_URL}`);
+    if (!content || !content.trim()) {
+        throw new Error(`Fetched empty content from ${DOCS_URL}`);
     }
 
     console.log('📝 Parsing content...');
 
-    const faqEntries = parseEntries(questionsMd);
-    const troubleshootingEntries = parseEntries(troubleshootingMd);
+    const [troubleshootingMd, faqMd] = content.split('## Frequently asked questions');
+
+    const faqEntries = parseEntries(faqMd || '');
+    const troubleshootingEntries = parseEntries(troubleshootingMd || '');
 
     console.log(`✅ Found ${faqEntries.length} FAQ entries and ${troubleshootingEntries.length} troubleshooting entries`);
 
