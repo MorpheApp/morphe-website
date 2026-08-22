@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download the latest MicroG-RE APK for Morphe to enable YouTube and YouTube Music login, Google account support, and seamless playback integration.">
-    <title>Download MicroG - Morphe</title>
+    <meta name="description" content="Morphe FAQ & Troubleshooting - Find answers to common questions and solutions to known issues" data-i18n="faq-page.meta-description">
+    <title data-i18n="faq-page.meta-title">FAQ & Troubleshooting - Morphe</title>
     <!-- Theme preloader -->
     <script src="js/theme-preload.js"></script>
     <!-- Language preloader -->
@@ -23,6 +23,7 @@
     <script src="js/analytics.js"></script>
 </head>
 <body>
+
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
@@ -33,22 +34,21 @@
         <div class="nav-links">
             <a href="https://morphe-patches.software" class="nav-link" target="_blank" rel="noopener noreferrer"
                data-i18n="community.patches-title" data-umami-event="Nav Patch Bundles Click">More Apps</a>
-            <a href="faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
             <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
             <a href="changelog" class="nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
             <div class="lang-dropdown" id="langDropdownBar">
-                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language" data-i18n-aria="nav.change-language">
                     <span class="material-symbols-rounded">translate</span>
                 </button>
                 <div class="lang-menu" id="langMenuBar" role="listbox"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click" data-i18n-aria="nav.theme-toggle">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle" data-i18n-aria="nav.menu-toggle">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
@@ -83,61 +83,40 @@
     </div>
 </div>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-container" style="grid-template-columns: 1fr; text-align: center;">
-        <div class="hero-content" style="align-items: center;">
-            <h1 class="hero-title"><span data-i18n="microg.title">Download</span> <span class="gradient-text">MicroG</span></h1>
-            <p class="hero-description" data-i18n="microg.description">
-                MicroG is required to use YouTube Morphe and YT Music Morphe
-            </p>
-            <div class="hero-buttons">
-                <a href="DOWNLOAD_URL_TEMPLATE" class="btn btn-primary" data-umami-event="Download MicroG Button Click">
-                    <span class="material-symbols-rounded">download</span>
-                    <span data-i18n="microg.download">Download MicroG</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Info Section -->
-<section id="what-is-microg" class="how-it-works" style="background: var(--bg-section);">
+<!-- FAQ & Troubleshooting Page -->
+<section class="changelog">
     <div class="container">
-        <div class="section-header">
-            <h2 class="section-title" data-i18n="microg.what-title">What is MicroG?</h2>
+        <div class="changelog-hero">
+            <h1 class="hero-title"><span class="gradient-text" data-i18n="faq-page.title">FAQ & Troubleshooting</span></h1>
+            <p class="hero-description" data-i18n="faq-page.subtitle">Find answers to common questions and solutions to known issues</p>
         </div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">lock</span>
-                </div>
-                <h3 class="feature-title" data-i18n="microg.feature1-title">Google Services</h3>
-                <p class="feature-description" data-i18n="microg.feature1-desc">
-                    MicroG provides Google Play Services support, enabling the use of your Google account with YouTube Morphe and YT Music Morphe.
-                </p>
+        <!-- Filters -->
+        <div class="changelog-filters">
+            <div class="faq-search-container" style="max-width: 600px;">
+                <span class="material-symbols-rounded search-icon">search</span>
+                <input type="text" id="faq-search" class="faq-search-input" data-i18n-placeholder="faq-page.search-placeholder" data-i18n-aria="faq-page.search-placeholder" placeholder="Search questions...">
+                <button id="faq-search-clear" class="faq-search-clear hidden" aria-label="Clear search">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
             </div>
+        </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">shield</span>
-                </div>
-                <h3 class="feature-title" data-i18n="microg.feature2-title">Privacy Focused</h3>
-                <p class="feature-description" data-i18n="microg.feature2-desc">
-                    MicroG is an open-source reimplementation of Google services that respects your privacy while providing essential functionality.
-                </p>
-            </div>
+        <!-- FAQ Content (will be generated by build script) -->
+        <div class="faq-list" id="faq-content">
+            {{FAQ_CONTENT}}
+        </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <span class="material-symbols-rounded">schedule</span>
-                </div>
-                <h3 class="feature-title" data-i18n="microg.feature3-title">One-Time Install</h3>
-                <p class="feature-description" data-i18n="microg.feature3-desc">
-                    Install MicroG once and it works with all your Morphe apps. No need to reinstall when updating YouTube Morphe and YT Music Morphe.
-                </p>
-            </div>
+        <!-- No Results -->
+        <div id="faq-no-results" class="faq-no-results hidden">
+            <span class="material-symbols-rounded">search_off</span>
+            <p data-i18n="faq-page.no-results">No matches found for your search.</p>
+        </div>
+
+        <!-- Hidden elements for i18n extraction -->
+        <div style="display: none;" aria-hidden="true">
+            <span data-i18n="faq-page.filter-faq">FAQ</span>
+            <span data-i18n="faq-page.filter-troubleshooting">Troubleshooting</span>
         </div>
     </div>
 </section>
@@ -211,8 +190,14 @@
     </div>
 </footer>
 
-<script src="js/i18n.js"></script>
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click" data-i18n-aria="nav.scroll-to-top">
+    <span class="material-symbols-rounded">arrow_upward</span>
+</button>
+
 <script src="js/theme-manager.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/faq.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

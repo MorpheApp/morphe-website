@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "SSS"
+    "faq": "SSS",
+    "change-language": "Dili değiştir",
+    "theme-toggle": "Temayı değiştir",
+    "menu-toggle": "Menüyü aç",
+    "scroll-to-top": "Yukarı çık"
   },
   "hero": {
     "title": "Dönüştür",
@@ -11,7 +15,9 @@
     "social-label": "Topluluğa Katıl",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Resmi Morphe APK'sını indirin. YouTube, YouTube Music ve Reddit'i reklam engelleme ve özel özelliklerle yamalamak için eski ReVanced katılımcıları tarafından oluşturulmuştur.",
+    "meta-title": "YouTube ve Reddit için Morphe Uygulaması - RESMİ SİTE"
   },
   "how-it-works": {
     "title": "Morphe Nasıl Çalışır",
@@ -125,23 +131,7 @@
     }
   },
   "faq": {
-    "title": "Sıkça Sorulan Sorular",
-    "subtitle": "Morphe hakkında bilmen gereken her şey",
-    "q2": "Morphe güvenli mi?",
-    "a2": "Bytecode düzenlemenin mümkün olduğu kadar güvenli.",
-    "q3": "Morphe telefonuma zarar verir mi?",
-    "a3": "Telefonun kendi kendine bozulmazsa hayır.",
-    "q4": "Uygulamaları özelleştirebilir miyim?",
-    "a4": "Evet, ama abartma.",
-    "q5": "Morphe'nin gizlilik politikası nedir?",
-    "q6": "Neden Morphe ismi?",
-    "a6": "Çünkü AAMATT kulağa hoş gelmiyor.",
-    "q7": "Morphe sihir mi?",
-    "a7": "Hayır. Ama biraz evet.",
-    "q8": "Morphe'ye katkıda bulunabilir miyim?",
-    "a8": "Evet! %1 bak. %2 da memnuniyetle karşılanır.",
-    "a8-link1": "GitHub depolarımıza",
-    "a8-link2": "Bağışlar"
+    "title": "Sıkça Sorulan Sorular"
   },
   "footer": {
     "description": "Yeni nesil Android uygulama yamalama",
@@ -153,7 +143,8 @@
     "support-donate": "Bağış Yap",
     "copyright": "Açık kaynak ve sonsuza kadar ücretsiz.",
     "language": "Dil",
-    "product-changelog": "Yenilikler"
+    "product-changelog": "Yenilikler",
+    "product-faq": "SSS ve Sorun Giderme"
   },
   "analytics": {
     "title": "Analitik",
@@ -332,5 +323,15 @@
     "desktop-qr-alt": "Bu bağlantıyı telefonunuzda açan QR kodu",
     "desktop-copy-link": "Bağlantıyı kopyala",
     "desktop-copy-link-done": "Kopyalandı!"
+  },
+  "faq-page": {
+    "subtitle": "Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",
+    "title": "SSS ve Sorun Giderme",
+    "search-placeholder": "Sorularda ara...",
+    "meta-description": "Morphe SSS ve Sorun Giderme - Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",
+    "meta-title": "SSS ve Sorun Giderme - Morphe",
+    "no-results": "Aramanızla eşleşen sonuç bulunamadı.",
+    "filter-faq": "SSS",
+    "filter-troubleshooting": "Sorun Giderme"
   }
 }

@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download the official Morphe APK.
-    Created by former ReVanced contributors to patch YouTube, YouTube Music, and Reddit
-    with ad-blocking and custom features.">
-    <title>Morphe App for YouTube and Reddit - OFFICIAL SITE</title>
+    <meta name="description" content="Download the official Morphe APK. Created by former ReVanced contributors to patch YouTube, YouTube Music, and Reddit with ad-blocking and custom features." data-i18n="hero.meta-description">
+    <title data-i18n="hero.meta-title">Morphe App for YouTube and Reddit - OFFICIAL SITE</title>
     <!-- Theme preloader -->
     <script src="js/theme-preload.js"></script>
     <!-- Language preloader -->
@@ -35,22 +33,22 @@
         <div class="nav-links">
             <a href="https://morphe-patches.software/" class="nav-link" target="_blank" rel="noopener"
                data-i18n="community.patches-title" data-umami-event="Nav Patch Bundles Click">More Apps</a>
-            <a href="#faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
+            <a href="faq" class="nav-link" data-i18n="nav.faq" data-umami-event="Nav FAQ Click">FAQ</a>
             <a href="donate" class="nav-link" data-i18n="footer.support-donate" data-umami-event="Nav Donate Click">Donate</a>
             <a href="changelog" class="nav-link" data-i18n="footer.product-changelog" data-umami-event="Nav What's New Click">What's New</a>
         </div>
         <div class="nav-actions">
             <div class="lang-dropdown" id="langDropdownBar">
-                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language">
+                <button class="lang-trigger-compact" id="langTriggerBar" type="button" aria-label="Change language" data-i18n-aria="nav.change-language">
                     <span class="material-symbols-rounded">translate</span>
                 </button>
                 <div class="lang-menu" id="langMenuBar" role="listbox"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme Toggle Click" data-i18n-aria="nav.theme-toggle">
                 <span class="material-symbols-rounded theme-icon" id="theme-icon-sun">light_mode</span>
                 <span class="material-symbols-rounded theme-icon hidden" id="theme-icon-moon">dark_mode</span>
             </button>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-umami-event="Mobile Menu Toggle" data-i18n-aria="nav.menu-toggle">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
@@ -66,7 +64,7 @@
             <span class="material-symbols-rounded">extension</span>
             <span data-i18n="community.patches-title">More apps</span>
         </a>
-        <a href="#faq" class="drawer-link" data-umami-event="Drawer FAQ Click">
+        <a href="faq" class="drawer-link" data-umami-event="Drawer FAQ Click">
             <span class="material-symbols-rounded">quiz</span>
             <span data-i18n="nav.faq">FAQ</span>
         </a>
@@ -362,95 +360,14 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
-            <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about Morphe</p>
+            <p class="section-subtitle" data-i18n="faq-page.subtitle">Find answers to common questions and solutions to known issues</p>
         </div>
 
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe safe?">
-                    <span class="faq-number">1</span>
-                    <span class="faq-text" data-i18n="faq.q2">Is Morphe safe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a2">As safe as modifying obfuscated bytecode can be. All source code for Morphe is open source and free for anyone to inspect. Our community actively reviews and contributes to the codebase.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Will Morphe brick my phone?">
-                    <span class="faq-number">2</span>
-                    <span class="faq-text" data-i18n="faq.q3">Will Morphe brick my phone?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a3">Only if your phone decides to brick itself. Otherwise your device will be fine. Morphe only modifies app packages and doesn't touch system files.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I customize apps to my preference?">
-                    <span class="faq-number">3</span>
-                    <span class="faq-text" data-i18n="faq.q4">Can I customize apps to my preference?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a4">Yes, but don't blame Morphe if your app becomes too customized for you to handle. It's recommended to customize up to your preference level and no more.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="What's Morphe's privacy policy?">
-                    <span class="faq-number">4</span>
-                    <span class="faq-text" data-i18n="faq.q5">What's Morphe's privacy policy?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n-link="analytics.description"
-                              data-i18n-link-href="https://umami.is"
-                              data-i18n-link-text="Umami"
-                              data-i18n-link-attrs='{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
-                        <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Why the name Morphe?">
-                    <span class="faq-number">5</span>
-                    <span class="faq-text" data-i18n="faq.q6">Why the name Morphe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a6">Because "Android App Modification And Transformation Tool" (AAMATT) is not very catchy. And because Morphe implies it morphs your apps into something better.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Is Morphe magic?">
-                    <span class="faq-number">6</span>
-                    <span class="faq-text" data-i18n="faq.q7">Is Morphe magic?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p data-i18n="faq.a7">No. But also yes. It's advanced bytecode manipulation that feels like magic.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" data-umami-event="FAQ Expand" data-umami-event-question="Can I contribute to Morphe?">
-                    <span class="faq-number">7</span>
-                    <span class="faq-text" data-i18n="faq.q8">Can I contribute to Morphe?</span>
-                    <span class="material-symbols-rounded">expand_more</span>
-                </button>
-                <div class="faq-answer">
-                    <p>
-                        <span data-i18n-links="faq.a8"
-                              data-i18n-links-data='[{"href":"https://github.com/MorpheApp/","text":"GitHub repos","attrs":{"target":"_blank","rel":"noopener noreferrer","class":"inline-link","data-umami-event":"GitHub Contribution Click"}},{"href":"/donate","text":"donations","attrs":{"class":"inline-link","data-umami-event":"FAQ Donate Link Click"}}]'></span>
-                    </p>
-                </div>
-            </div>
+        <div style="display: flex; justify-content: center;">
+            <a href="faq" class="btn btn-secondary" data-umami-event="Home FAQ Link Click">
+                <span data-i18n="footer.product-faq">FAQ & Troubleshooting</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
         </div>
     </div>
 </section>
@@ -512,14 +429,6 @@
                     <span class="footer-brand-name">Morphe</span>
                 </a>
                 <p class="footer-tagline" data-i18n="footer.description">Next generation Android app patching</p>
-                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                   title="DMCA.com Protection Status"
-                   class="dmca-badge"
-                   data-umami-event="DMCA Click">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
-                         alt="DMCA.com Protection Status" />
-                </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
                 <details class="analytics-details">
                     <summary data-i18n="analytics.title">Analytics</summary>
                     <span data-i18n-link="analytics.description"
@@ -528,6 +437,14 @@
                           data-i18n-link-attrs='{"target":"_blank","rel":"noopener","class":"inline-link","data-umami-event":"Umami Link Click"}'></span>
                     <span data-i18n="analytics.disclaimer">Morphe does not add analytics or data collection to any patched apps.</span>
                 </details>
+                <a href="https://www.dmca.com/Protection/Status.aspx?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
+                   title="DMCA.com Protection Status"
+                   class="dmca-badge"
+                   data-umami-event="DMCA Click">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
+                         alt="DMCA.com Protection Status" />
+                </a>
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
             </div>
 
             <!-- Navigation columns -->
@@ -536,6 +453,7 @@
                     <h4 data-i18n="footer.product">Product</h4>
                     <a href="/" data-i18n="footer.product-home" data-umami-event="Footer Home Click">Home</a>
                     <a href="changelog" data-i18n="footer.product-changelog" data-umami-event="Footer What's New Click">What's New</a>
+                    <a href="faq" data-i18n="footer.product-faq" data-umami-event="Footer FAQ Click">FAQ & Troubleshooting</a>
                     <a href="microg" data-i18n="footer.product-microg" data-umami-event="Footer MicroG Click">Download MicroG</a>
                     <a href="translate" data-i18n="footer.product-translate" data-umami-event="Footer Translate Click">Help translate</a>
                     <a href="donate" data-i18n="footer.support-donate" data-umami-event="Footer Donate Click">Donate</a>
@@ -569,7 +487,7 @@
 </footer>
 
 <!-- Scroll to Top Button -->
-<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click">
+<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" data-umami-event="Scroll to Top Click" data-i18n-aria="nav.scroll-to-top">
     <span class="material-symbols-rounded">arrow_upward</span>
 </button>
 

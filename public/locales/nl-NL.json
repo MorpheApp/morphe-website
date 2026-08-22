@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Taal wijzigen",
+    "theme-toggle": "Thema omschakelen",
+    "menu-toggle": "Menu openen",
+    "scroll-to-top": "Naar boven"
   },
   "hero": {
     "title": "Transformeer je",
@@ -11,7 +15,9 @@
     "social-label": "Word lid van de community",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Download de officiële Morphe APK. Gemaakt door voormalige ReVanced-bijdragers om YouTube, YouTube Music en Reddit te patchen met advertentieblokkering en aangepaste functies.",
+    "meta-title": "Morphe-app voor YouTube en Reddit - OFFICIËLE SITE"
   },
   "how-it-works": {
     "title": "Hoe Morphe werkt",
@@ -125,23 +131,7 @@
     }
   },
   "faq": {
-    "title": "Veelgestelde vragen",
-    "subtitle": "Alles wat je moet weten over Morphe",
-    "q2": "Is Morphe veilig?",
-    "a2": "Zo veilig als bytecode-modificatie kan zijn.",
-    "q3": "Kan Morphe mijn telefoon beschadigen?",
-    "a3": "Alleen als je telefoon dat zelf besluit.",
-    "q4": "Kan ik apps aanpassen?",
-    "a4": "Ja, maar met mate.",
-    "q5": "Wat is het privacybeleid van Morphe?",
-    "q6": "Waarom de naam Morphe?",
-    "a6": "Omdat AAMATT niet goed klinkt.",
-    "q7": "Is Morphe magie?",
-    "a7": "Nee. Maar ook ja.",
-    "q8": "Kan ik bijdragen aan Morphe?",
-    "a8": "Ja! Bekijk onze %1. We waarderen ook %2.",
-    "a8-link1": "GitHub-repositories",
-    "a8-link2": "donaties"
+    "title": "Veelgestelde vragen"
   },
   "footer": {
     "description": "Android-app patching van de volgende generatie",
@@ -153,7 +143,8 @@
     "support-donate": "Doneren",
     "copyright": "Open source en voor altijd gratis.",
     "language": "Taal",
-    "product-changelog": "Wat is er nieuw"
+    "product-changelog": "Wat is er nieuw",
+    "product-faq": "FAQ & Probleemoplossing"
   },
   "analytics": {
     "title": "Analyse",
@@ -332,5 +323,15 @@
     "desktop-qr-alt": "QR-code die deze link op je telefoon opent",
     "desktop-copy-link": "Link kopiëren",
     "desktop-copy-link-done": "Gekopieerd!"
+  },
+  "faq-page": {
+    "subtitle": "Vind antwoorden op veelgestelde vragen en oplossingen voor bekende problemen",
+    "title": "FAQ & Probleemoplossing",
+    "search-placeholder": "Vragen zoeken...",
+    "meta-description": "Morphe FAQ & Probleemoplossing - Vind antwoorden op veelgestelde vragen en oplossingen voor bekende problemen",
+    "meta-title": "FAQ & Probleemoplossing - Morphe",
+    "no-results": "Geen resultaten gevonden voor je zoekopdracht.",
+    "filter-faq": "Veelgestelde vragen",
+    "filter-troubleshooting": "Probleemoplossing"
   }
 }

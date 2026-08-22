@@ -6,6 +6,7 @@
     "i18n:check": "node scripts/check-translations.js",
     "precommit": "npm run i18n:extract && npm run i18n:check",
     "changelog:generate": "node scripts/generate-changelog.js",
+    "faq:generate": "node scripts/generate-faq.js",
     "minify": "node scripts/minify.js",
     "inline": "node scripts/inline.js"
   },
@@ -16,6 +17,7 @@
     "terser": "^5.50.0"
   },
   "dependencies": {
+    "marked": "^18.0.10",
     "web-resource-inliner": "^8.0.0"
   }
 }

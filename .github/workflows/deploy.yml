@@ -61,6 +61,12 @@ jobs:
           node scripts/generate-changelog.js
           echo "Changelog generated"
 
+      - name: Generate FAQ HTML
+        run: |
+          echo "Generating FAQ page..."
+          node scripts/generate-faq.js
+          echo "FAQ page generated"
+
       - name: Fetch and Update Morphe Download Link
         run: |
           MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/app-release.json"

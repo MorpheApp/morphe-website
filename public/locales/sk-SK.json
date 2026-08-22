@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Zmeniť jazyk",
+    "theme-toggle": "Prepnúť motív",
+    "menu-toggle": "Otvoriť menu",
+    "scroll-to-top": "Hore"
   },
   "hero": {
     "title": "Premeň svoj",
@@ -8,10 +12,12 @@
     "description": "Od vývojárov najlepších upravených YouTube aplikácií prichádza Morphe — výkonný nástroj na úpravu aplikácií",
     "download": "Stiahnuť Morphe",
     "learn-more": "Zistiť viac",
-    "social-label": "Pridaj sa ku komunite",
+    "social-label": "Pridajte sa ku komunite",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Stiahnite si oficiálnu Morphe APK. Vytvorené bývalými prispievateľmi ReVanced na patchovanie YouTube, YouTube Music a Reddit s blokovaním reklám a vlastnými funkciami.",
+    "meta-title": "Aplikácia Morphe pre YouTube a Reddit - OFICIÁLNA STRÁNKA"
   },
   "how-it-works": {
     "title": "Ako funguje Morphe",
@@ -125,23 +131,7 @@
     }
   },
   "faq": {
-    "title": "Často kladené otázky",
-    "subtitle": "Všetko, čo potrebuješ vedieť o Morphe",
-    "q2": "Je Morphe bezpečný?",
-    "a2": "Tak bezpečný, ako len úprava bytecode môže byť.",
-    "q3": "Môže Morphe poškodiť telefón?",
-    "a3": "Iba ak sa telefón rozhodne pokaziť sám.",
-    "q4": "Môžem aplikácie prispôsobiť?",
-    "a4": "Áno, ale s mierou.",
-    "q5": "Aká je politika ochrany súkromia Morphe?",
-    "q6": "Prečo názov Morphe?",
-    "a6": "Pretože AAMATT neznie dobre.",
-    "q7": "Je Morphe mágia?",
-    "a7": "Nie. Ale trochu áno.",
-    "q8": "Môžem prispieť k Morphe?",
-    "a8": "Áno! Pozri si naše %1. Vítame aj %2.",
-    "a8-link1": "GitHub repozitáre",
-    "a8-link2": "dary"
+    "title": "Často kladené otázky"
   },
   "footer": {
     "description": "Patchovanie Android aplikácií novej generácie",
@@ -153,7 +143,8 @@
     "support-donate": "Darovať",
     "copyright": "Open source a navždy zadarmo.",
     "language": "Jazyk",
-    "product-changelog": "Novinky"
+    "product-changelog": "Novinky",
+    "product-faq": "Časté otázky a riešenie problémov"
   },
   "analytics": {
     "title": "Analytika",
@@ -332,5 +323,15 @@
     "desktop-qr-alt": "QR kód, ktorý otvorí tento odkaz vo vašom telefóne",
     "desktop-copy-link": "Kopírovať odkaz",
     "desktop-copy-link-done": "Skopírované!"
+  },
+  "faq-page": {
+    "subtitle": "Nájdite odpovede na bežné otázky a riešenia známych problémov",
+    "title": "Časté otázky a riešenie problémov",
+    "search-placeholder": "Hľadať otázky...",
+    "meta-description": "Morphe Časté otázky a riešenie problémov - Nájdite odpovede na bežné otázky a riešenia známych problémov",
+    "meta-title": "Časté otázky a riešenie problémov - Morphe",
+    "no-results": "Pre vaše hľadanie sa nenašli žiadne výsledky.",
+    "filter-faq": "Časté otázky",
+    "filter-troubleshooting": "Riešenie problémov"
   }
 }
