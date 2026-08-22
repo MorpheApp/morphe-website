@@ -1295,7 +1295,8 @@ body {
     font-size: 0.85em;
 }
 
-.faq-answer ul {
+.faq-answer ul,
+.faq-answer ol {
     padding-left: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
 }

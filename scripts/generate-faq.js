@@ -72,7 +72,11 @@ const renderer = {
         // Markdown allows raw block-level HTML inside a paragraph; wrapping it in
         // <p> would close the paragraph early and orphan the closing tag.
         if (BLOCK_HTML.test(text)) {
-            return this.parser.parseInline(tokens);
+            // `breaks: true` turns the newlines around those tags into <br>,
+            // which shows up as blank space inside the block.
+            return this.parser.parseInline(tokens)
+                .replace(/(<\/?(?:details|summary)>)(?:\s*<br>)+/gi, '$1')
+                .replace(/(?:<br>\s*)+(<\/?(?:details|summary)>)/gi, '$1');
         }
         // For normal paragraphs, we must call parseInline on the tokens to avoid [object Object]
         return `<p>${this.parser.parseInline(tokens)}</p>`;
