@@ -9,7 +9,8 @@
     "product-translate": "Hỗ trợ dịch",
     "community": "Cộng đồng",
     "language": "Ngôn ngữ",
-    "copyright": "Mã nguồn mở và miễn phí mãi mãi."
+    "copyright": "Mã nguồn mở và miễn phí mãi mãi.",
+    "product-faq": "FAQ & Khắc phục sự cố"
   },
   "translate": {
     "title": "Hỗ trợ dịch",
@@ -53,7 +54,11 @@
     "feature3-desc": "Chỉ cần cài MicroG một lần cho tất cả ứng dụng Morphe. Không cần cài lại khi cập nhật."
   },
   "nav": {
-    "faq": "Hỏi đáp"
+    "faq": "Hỏi đáp",
+    "change-language": "Thay đổi ngôn ngữ",
+    "theme-toggle": "Chuyển đổi giao diện",
+    "menu-toggle": "Mở menu",
+    "scroll-to-top": "Về đầu trang"
   },
   "hero": {
     "title": "Biến đổi",
@@ -64,7 +69,9 @@
     "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng hiệu quả, trao toàn quyền kiểm soát cho bạn",
     "download": "Tải Morphe",
     "learn-more": "Tìm hiểu thêm",
-    "social-label": "Tham gia cộng đồng"
+    "social-label": "Tham gia cộng đồng",
+    "meta-description": "Tải xuống APK Morphe chính thức. Được tạo bởi những người đóng góp cũ của ReVanced để vá lỗi YouTube, YouTube Music và Reddit với tính năng chặn quảng cáo và các tính năng tùy chỉnh.",
+    "meta-title": "Ứng dụng Morphe cho YouTube và Reddit - TRANG WEB CHÍNH THỨC"
   },
   "app-features": {
     "title": "Tính năng nổi bật",
@@ -231,23 +238,7 @@
     }
   },
   "faq": {
-    "title": "Câu hỏi thường gặp",
-    "subtitle": "Tất cả những gì bạn cần biết về Morphe",
-    "q2": "Morphe có an toàn không?",
-    "a2": "Với những can thiệp sâu vào bytecode đã bị mã hoá, không thể nói là an toàn tuyệt đối. Tuy vậy, Morphe luôn tối ưu để đảm bảo mức an toàn cao nhất trong khả năng. Toàn bộ mã nguồn của Morphe là mã nguồn mở để mọi người kiểm tra và đóng góp.",
-    "q3": "Morphe có làm hỏng điện thoại không?",
-    "a3": "Chỉ khi điện thoại tự muốn \"toang\". Còn bình thường thì hoàn toàn ổn vì Morphe chỉ chỉnh sửa gói ứng dụng, không đụng tới hệ thống.",
-    "q4": "Tôi có thể tuỳ biến ứng dụng theo ý mình không?",
-    "a4": "Có, nhưng đừng trách Morphe nếu bạn chỉnh quá tay rồi không nhận ra ứng dụng nữa.",
-    "q5": "Chính sách quyền riêng tư của Morphe là gì?",
-    "q6": "Tại sao lại đặt tên là Morphe?",
-    "a6": "Vì 'Android App Modification And Transformation Tool' (AAMATT) nghe không hay lắm. Với lại Morphe gợi ý việc biến đổi ứng dụng thành thứ tốt hơn.",
-    "q7": "Morphe có phải ảo quá không?",
-    "a7": "Không. Cảm giác thì giống vậy. Nhưng thực chất là thao tác bytecode cũng rất nâng cao.",
-    "q8": "Tôi có thể đóng góp cho Morphe không?",
-    "a8": "Có chứ! Xem hướng dẫn đóng góp tại %1. Nếu không biết code thì tụi mình cũng cực kỳ trân trọng các khoản %2 để giúp duy trì dự án.",
-    "a8-link1": "Kho lưu trữ GitHub",
-    "a8-link2": "đóng góp"
+    "title": "Câu hỏi thường gặp"
   },
   "community": {
     "subtitle": "Hãy theo dõi chúng tôi và cùng nhau cải thiện Morphe mỗi ngày",
@@ -332,5 +323,15 @@
     "go-home": "Về trang chủ",
     "404-title": "404 - Lạc trôi rồi",
     "not-found": "Làm gì có trang này, hoặc có khi bay màu rồi cũng nên~"
+  },
+  "faq-page": {
+    "subtitle": "Tìm câu trả lời cho các câu hỏi thường gặp và giải pháp cho các vấn đề đã biết",
+    "title": "Câu hỏi thường gặp & Khắc phục sự cố",
+    "search-placeholder": "Tìm kiếm câu hỏi...",
+    "meta-description": "Câu hỏi thường gặp & Khắc phục sự cố Morphe - Tìm câu trả lời cho các câu hỏi thường gặp và giải pháp cho các vấn đề đã biết",
+    "meta-title": "Câu hỏi thường gặp & Khắc phục sự cố - Morphe",
+    "no-results": "Không tìm thấy kết quả nào cho tìm kiếm của bạn.",
+    "filter-faq": "Câu hỏi thường gặp",
+    "filter-troubleshooting": "Khắc phục sự cố"
   }
 }

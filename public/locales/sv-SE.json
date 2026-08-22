@@ -9,7 +9,8 @@
     "product-translate": "Hjälp till att översätta",
     "community": "Community",
     "language": "Språk",
-    "copyright": "Öppet och kostnadsfritt för evigt."
+    "copyright": "Öppet och kostnadsfritt för evigt.",
+    "product-faq": "FAQ & Felsökning"
   },
   "translate": {
     "title": "Hjälp oss att översätta",
@@ -53,7 +54,11 @@
     "feature3-desc": "Installera MicroG en gång så fungerar det med alla dina Morphe-appar. Du behöver inte återinstallera det när du uppdaterar YouTube Morphe och YT Music Morphe."
   },
   "nav": {
-    "faq": "Vanliga frågor"
+    "faq": "Vanliga frågor",
+    "change-language": "Ändra språk",
+    "theme-toggle": "Växla tema",
+    "menu-toggle": "Öppna meny",
+    "scroll-to-top": "Till toppen"
   },
   "hero": {
     "title": "Omvandla din",
@@ -64,7 +69,9 @@
     "description": "Från utvecklarna bakom de bästa moddade YouTube-apparna kommer Morphe – det kraftfulla verktyget för appmodifiering som ger dig kontroll",
     "download": "Ladda ner Morphe",
     "learn-more": "Läs mer",
-    "social-label": "Gå med i communityn"
+    "social-label": "Gå med i communityn",
+    "meta-description": "Ladda ner den officiella Morphe APK. Skapad av tidigare ReVanced-bidragsgivare för att patcha YouTube, YouTube Music och Reddit med annonsblockering och anpassade funktioner.",
+    "meta-title": "Morphe-appen för YouTube och Reddit - OFFICIELL WEBBPLATS"
   },
   "app-features": {
     "title": "Appfunktioner",
@@ -231,23 +238,7 @@
     }
   },
   "faq": {
-    "title": "Vanliga frågor",
-    "subtitle": "Allt du behöver veta om Morphe",
-    "q2": "Är Morphe säkert?",
-    "a2": "Så säkert som det kan vara att modifiera obfuskerad bytekod. All källkod för Morphe är öppen och tillgänglig för alla att granska. Vår community överser och bidrar aktivt till kodbasen.",
-    "q3": "Kan Morphe få min telefon att gå sönder?",
-    "a3": "Bara om din telefon går sönder av sig själv. Annars ska din enhet fortsätta fungera som vanligt. Morphe modifierar endast appaket och rör inte systemfilerna.",
-    "q4": "Kan jag anpassa appar efter eget tycke?",
-    "a4": "Ja, men skyll inte på Morphe om du anpassar din app mer än du klarar av. Vi rekommenderar att du anpassar till den grad du själv föredrar och inget mer.",
-    "q5": "Vad är Morphes integritetspolicy?",
-    "q6": "Varför namnet Morphe?",
-    "a6": "Eftersom \"Android App Modification And Transformation Tool\" (AAMATT) låter inte särskilt slående. Och för att namnet Morphe antyder att det omvandlar dina appar till något bättre.",
-    "q7": "Är Morphe magi?",
-    "a7": "Nej. Men också ja. Det är den avancerade manipuleringen av bytekoden som känns som magi.",
-    "q8": "Kan jag bidra till Morphe?",
-    "a8": "Ja! Se riktlinjerna för bidrag i våra %1. Om du inte har kunskaper inom utveckling uppskattar vi alltid %2 som hjälper oss att betala räkningarna.",
-    "a8-link1": "GitHub-lagringsplatser",
-    "a8-link2": "donationer"
+    "title": "Vanliga frågor"
   },
   "community": {
     "subtitle": "Följ oss, rapportera problem och hjälp till att göra Morphe bättre",
@@ -332,5 +323,15 @@
     "go-home": "Gå till startsidan",
     "404-title": "404 – Sidan hittades inte",
     "not-found": "Sidan du söker kan inte hittas"
+  },
+  "faq-page": {
+    "subtitle": "Hitta svar på vanliga frågor och lösningar på kända problem",
+    "title": "FAQ & Felsökning",
+    "search-placeholder": "Sök frågor...",
+    "meta-description": "Morphe FAQ & Felsökning - Hitta svar på vanliga frågor och lösningar på kända problem",
+    "meta-title": "FAQ & Felsökning - Morphe",
+    "no-results": "Inga resultat hittades för din sökning.",
+    "filter-faq": "Vanliga frågor",
+    "filter-troubleshooting": "Felsökning"
   }
 }

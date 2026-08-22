@@ -58,8 +58,14 @@ jobs:
       - name: Generate Changelog HTML
         run: |
           echo "Generating changelog..."
-          node scripts/generate-changelog.js
+          npm run changelog:generate
           echo "Changelog generated"
+
+      - name: Generate FAQ HTML
+        run: |
+          echo "Generating FAQ page..."
+          npm run faq:generate
+          echo "FAQ page generated"
 
       - name: Fetch and Update Morphe Download Link
         run: |

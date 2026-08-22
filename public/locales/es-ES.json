@@ -1,6 +1,10 @@
 {
   "nav": {
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "change-language": "Cambiar idioma",
+    "theme-toggle": "Cambiar tema",
+    "menu-toggle": "Abrir menú",
+    "scroll-to-top": "Volver arriba"
   },
   "hero": {
     "title": "Transforma tu",
@@ -11,7 +15,9 @@
     "social-label": "Únete a la comunidad",
     "title-highlight-youtube": "YouTube",
     "title-highlight-ytmusic": "YT Music",
-    "title-highlight-reddit": "Reddit"
+    "title-highlight-reddit": "Reddit",
+    "meta-description": "Descarga la APK oficial de Morphe. Creado por antiguos colaboradores de ReVanced para parchear YouTube, YouTube Music y Reddit con bloqueo de anuncios y funciones personalizadas.",
+    "meta-title": "Morphe App para YouTube y Reddit - SITIO OFICIAL"
   },
   "how-it-works": {
     "title": "Cómo funciona Morphe",
@@ -125,23 +131,7 @@
     }
   },
   "faq": {
-    "title": "Preguntas frecuentes",
-    "subtitle": "Todo lo que necesitas saber sobre Morphe",
-    "q2": "¿Es seguro Morphe?",
-    "a2": "Tan seguro como puede ser modificar bytecode ofuscado. Todo el código fuente de Morphe es de código abierto y está disponible para su revisión. Nuestra comunidad lo revisa y mejora activamente.",
-    "q3": "¿Morphe puede dañar mi teléfono?",
-    "a3": "Solo si tu teléfono decide dañarse por sí solo. De lo contrario, tu dispositivo estará bien. Morphe solo modifica paquetes de aplicaciones y no toca archivos del sistema.",
-    "q4": "¿Puedo personalizar las aplicaciones a mi gusto?",
-    "a4": "Sí, pero no culpes a Morphe si tu aplicación queda demasiado personalizada. Se recomienda personalizar solo hasta tu nivel de comodidad.",
-    "q5": "¿Cuál es la política de privacidad de Morphe?",
-    "q6": "¿Por qué el nombre Morphe?",
-    "a6": "Porque \"Android App Modification And Transformation Tool\" (AAMATT) no suena muy atractivo. Y porque Morphe implica transformar tus aplicaciones en algo mejor.",
-    "q7": "¿Morphe es magia?",
-    "a7": "No. Pero también sí. Es manipulación avanzada de bytecode que se siente como magia.",
-    "q8": "¿Puedo contribuir a Morphe?",
-    "a8": "¡Sí! Consulta las guías de contribución en nuestros %1. Si no tienes habilidades de desarrollo, siempre agradecemos %2 para ayudar a cubrir los gastos.",
-    "a8-link1": "repositorios de GitHub",
-    "a8-link2": "donaciones"
+    "title": "Preguntas frecuentes"
   },
   "footer": {
     "description": "Parchado de aplicaciones Android de próxima generación",
@@ -153,7 +143,8 @@
     "support-donate": "Donar",
     "copyright": "Código abierto y gratuito para siempre.",
     "language": "Idioma",
-    "product-changelog": "Novedades"
+    "product-changelog": "Novedades",
+    "product-faq": "Preguntas frecuentes y solución de problemas"
   },
   "analytics": {
     "title": "Analítica",
@@ -332,5 +323,15 @@
     "desktop-qr-alt": "Código QR que abre este enlace en tu teléfono",
     "desktop-copy-link": "Copiar enlace",
     "desktop-copy-link-done": "¡Copiado!"
+  },
+  "faq-page": {
+    "subtitle": "Encuentre respuestas a preguntas comunes y soluciones a problemas conocidos",
+    "title": "Preguntas frecuentes y solución de problemas",
+    "search-placeholder": "Buscar preguntas...",
+    "meta-description": "Preguntas frecuentes y solución de problemas de Morphe: encuentre respuestas a preguntas comunes y soluciones a problemas conocidos",
+    "meta-title": "Preguntas frecuentes y solución de problemas - Morphe",
+    "no-results": "No se encontraron coincidencias para tu búsqueda.",
+    "filter-faq": "Preguntas frecuentes",
+    "filter-troubleshooting": "Solución de problemas"
   }
 }
