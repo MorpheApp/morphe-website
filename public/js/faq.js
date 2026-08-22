@@ -10,6 +10,21 @@
     const faqSections = document.querySelectorAll('.faq-section');
     const faqItems = document.querySelectorAll('.faq-item');
 
+    /**
+     * Answers are collapsed with max-height, which needs a real value to
+     * animate to. Measure the content instead of relying on a fixed cap,
+     * otherwise long answers get cut off.
+     */
+    function measureAnswer(item) {
+        const answer = item.querySelector('.faq-answer');
+        if (!answer) return;
+        answer.style.setProperty('--faq-answer-height', answer.scrollHeight + 'px');
+    }
+
+    function remeasureOpenAnswers() {
+        document.querySelectorAll('.faq-item.active').forEach(measureAnswer);
+    }
+
     // --- Accordion expand/collapse ---
     faqItems.forEach(item => {
         const button = item.querySelector('.faq-question');
@@ -38,6 +53,8 @@
 
             item.classList.toggle('active');
             button.setAttribute('aria-expanded', isExpanding ? 'true' : 'false');
+
+            if (isExpanding) measureAnswer(item);
 
             // Update URL hash without jumping
             if (isExpanding && item.id) {
@@ -123,6 +140,7 @@
             if (section) section.style.display = '';
 
             target.classList.add('active');
+            measureAnswer(target);
             const button = target.querySelector('.faq-question');
             if (button) button.setAttribute('aria-expanded', 'true');
 
@@ -138,6 +156,23 @@
                 });
             }, 100);
         }
+    }
+
+    // Content can change height after it is measured: a nested <details> is
+    // opened, the viewport is resized, or a webfont finishes loading.
+    document.addEventListener('toggle', (e) => {
+        const item = e.target.closest && e.target.closest('.faq-item.active');
+        if (item) measureAnswer(item);
+    }, true);
+
+    let resizeFrame = null;
+    window.addEventListener('resize', () => {
+        if (resizeFrame) cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(remeasureOpenAnswers);
+    });
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(remeasureOpenAnswers);
     }
 
     // Run initial hash check

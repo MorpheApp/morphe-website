@@ -20,16 +20,59 @@ marked.setOptions({
  * Custom renderer to handle GitHub Alerts and ensure relative links are handled
  * For Marked v11+, the arguments are objects.
  */
+const ALERT_MARKER = /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/i;
+
+// Raw block-level HTML that must never be wrapped in a <p>.
+const BLOCK_HTML = /<\/?(details|summary|div|section|table|ul|ol|li|pre|blockquote|h[1-6])\b/i;
+
+/**
+ * Detect a GitHub Alert marker at the start of a blockquote and strip it from
+ * the tokens, so the paragraph renderer emits the remaining text as usual.
+ */
+function extractAlertType(tokens) {
+    const first = tokens[0];
+    if (!first || first.type !== 'paragraph') return null;
+
+    const match = first.text.match(ALERT_MARKER);
+    if (!match) return null;
+
+    first.text = first.text.replace(ALERT_MARKER, '');
+
+    const inline = first.tokens || [];
+    if (inline.length && inline[0].type === 'text') {
+        inline[0].text = inline[0].text.replace(ALERT_MARKER, '');
+        inline[0].raw = inline[0].text;
+    }
+
+    // With `breaks: true` the marker is its own text token followed by a <br>.
+    // Drop both, otherwise the alert opens with a blank line.
+    while (inline.length &&
+        ((inline[0].type === 'text' && inline[0].text.trim() === '') || inline[0].type === 'br')) {
+        inline.shift();
+    }
+
+    return match[1].toUpperCase();
+}
+
 const renderer = {
+    blockquote({ tokens }) {
+        // GitHub Alerts must wrap the *whole* quote. Wrapping only the paragraph
+        // that carries the [!TYPE] marker splits raw HTML blocks such as
+        // <details>...</details> across the wrapper and produces crossed tags.
+        const alertType = extractAlertType(tokens);
+        const body = this.parser.parse(tokens);
+
+        if (alertType) {
+            return `<div class="faq-alert alert-${alertType.toLowerCase()}"><div class="alert-title"><span class="material-symbols-rounded">info</span> ${alertType}</div>${body}</div>`;
+        }
+
+        return `<blockquote>${body}</blockquote>`;
+    },
     paragraph({ tokens, text }) {
-        // Handle GitHub Alerts [!NOTE], [!TIP], etc.
-        const alertMatch = text.match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
-        if (alertMatch) {
-            const alertType = alertMatch[1].toUpperCase();
-            const content = text.replace(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/i, '');
-            // Use marked.parseInline to render the content with bold/links/etc.
-            const renderedContent = marked.parseInline(content);
-            return `<div class="faq-alert alert-${alertType.toLowerCase()}"><div class="alert-title"><span class="material-symbols-rounded">info</span> ${alertType}</div>${renderedContent}</div>`;
+        // Markdown allows raw block-level HTML inside a paragraph; wrapping it in
+        // <p> would close the paragraph early and orphan the closing tag.
+        if (BLOCK_HTML.test(text)) {
+            return this.parser.parseInline(tokens);
         }
         // For normal paragraphs, we must call parseInline on the tokens to avoid [object Object]
         return `<p>${this.parser.parseInline(tokens)}</p>`;

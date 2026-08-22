@@ -1230,7 +1230,8 @@ body {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    /* Measured by faq.js; the fallback only has to cover a short answer. */
+    max-height: var(--faq-answer-height, 1200px);
 }
 
 .faq-answer p {
@@ -1238,6 +1239,20 @@ body {
     color: var(--text-secondary);
     line-height: 1.6;
     font-weight: 400;
+}
+
+.faq-answer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color var(--transition-base);
+    word-break: break-word;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .faq-answer a:hover {
+        color: var(--primary-teal);
+        text-decoration: underline;
+    }
 }
 
 /* FAQ specialized content */
@@ -1500,6 +1515,72 @@ body {
     outline: none;
     border-color: var(--primary-blue);
     box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.15);
+}
+
+/* FAQ page: section panels (FAQ / Troubleshooting) */
+.faq-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-section + .faq-section {
+    margin-top: var(--spacing-xl);
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+}
+
+.faq-section[data-section="faq"]::before {
+    background: linear-gradient(180deg, var(--primary-blue), #4A7FC8);
+}
+
+.faq-section[data-section="troubleshooting"]::before {
+    background: linear-gradient(180deg, var(--primary-teal), #20CFCE);
+}
+
+.faq-section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin: 0;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.faq-section-icon {
+    flex-shrink: 0;
+    font-size: 22px;
+}
+
+.faq-section[data-section="faq"] .faq-section-icon {
+    color: var(--primary-blue);
+}
+
+.faq-section[data-section="troubleshooting"] .faq-section-icon {
+    color: var(--primary-teal);
+}
+
+.faq-section .faq-item:first-of-type .faq-question {
+    padding-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
 }
 
 .filter-group {
@@ -3511,6 +3592,11 @@ html[data-theme] {
 
 [dir="rtl"] .version-card[data-type="patches"] {
     border-right-color: var(--primary-teal);
+}
+
+[dir="rtl"] .faq-section::before {
+    left: auto;
+    right: 0;
 }
 
 [dir="rtl"] .feature-slide-icon {
