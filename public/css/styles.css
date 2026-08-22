@@ -1272,7 +1272,7 @@ body {
 }
 
 .faq-answer code {
-    background: var(--gray-100);
+    background: var(--gray-200);
     padding: 0.2rem 0.4rem;
     border-radius: var(--radius-sm);
     font-family: 'Courier New', monospace;
@@ -1281,7 +1281,7 @@ body {
 }
 
 .faq-answer pre {
-    background: var(--gray-100);
+    background: var(--gray-200);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     overflow-x: auto;
@@ -1307,7 +1307,7 @@ body {
 }
 
 .faq-answer details {
-    background: var(--gray-100);
+    background: var(--gray-200);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
