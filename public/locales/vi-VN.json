@@ -4,13 +4,13 @@
     "product-microg": "Tải MicroG",
     "support-donate": "Ủng hộ",
     "product-changelog": "Có gì mới",
+    "product-faq": "Hỏi đáp & Sửa lỗi",
     "description": "Công cụ vá ứng dụng Android thế hệ mới",
     "product": "Sản phẩm",
     "product-translate": "Hỗ trợ dịch",
     "community": "Cộng đồng",
     "language": "Ngôn ngữ",
-    "copyright": "Mã nguồn mở và miễn phí mãi mãi.",
-    "product-faq": "FAQ & Khắc phục sự cố"
+    "copyright": "Mã nguồn mở và miễn phí mãi mãi."
   },
   "translate": {
     "title": "Hỗ trợ dịch",
@@ -55,10 +55,10 @@
   },
   "nav": {
     "faq": "Hỏi đáp",
-    "change-language": "Thay đổi ngôn ngữ",
-    "theme-toggle": "Chuyển đổi giao diện",
+    "theme-toggle": "Chuyển giao diện",
     "menu-toggle": "Mở menu",
-    "scroll-to-top": "Về đầu trang"
+    "scroll-to-top": "Lên đầu trang",
+    "change-language": "Đổi ngôn ngữ"
   },
   "hero": {
     "title": "Biến đổi",
@@ -70,8 +70,8 @@
     "download": "Tải Morphe",
     "learn-more": "Tìm hiểu thêm",
     "social-label": "Tham gia cộng đồng",
-    "meta-description": "Tải xuống APK Morphe chính thức. Được tạo bởi những người đóng góp cũ của ReVanced để vá lỗi YouTube, YouTube Music và Reddit với tính năng chặn quảng cáo và các tính năng tùy chỉnh.",
-    "meta-title": "Ứng dụng Morphe cho YouTube và Reddit - TRANG WEB CHÍNH THỨC"
+    "meta-description": "Tải APK Morphe chính chủ. Được phát triển bởi các cựu cộng tác viên ReVanced giúp vá YouTube, YouTube Music và Reddit với tính năng chặn quảng cáo cùng nhiều tính năng khác.",
+    "meta-title": "Morphe - Bản mod YouTube & Reddit - TRANG CHÍNH CHỦ"
   },
   "app-features": {
     "title": "Tính năng nổi bật",
@@ -266,7 +266,7 @@
     "tier2-name": "Bạn đồng hành",
     "tier2-desc": "Ủng hộ định kỳ giúp duy trì dự án lâu dài. Tên của bạn sẽ được ghi vào danh sách bạn đồng hành của tụi mình.",
     "tier3-name": "Nhà tài trợ",
-    "tier3-desc": "Tạo tác động đáng kể đến tương lai của Morphe và giúp chúng tôi duy trì các bản cập nhật thường xuyên mà người dùng yêu thích. Tên của bạn xuất hiện nổi bật trong danh sách những người ủng hộ chúng tôi.",
+    "tier3-desc": "Góp một phần lớn vào hành trình phát triển của Morphe và giúp tụi mình duy trì các bản cập nhật đều đặn mà người dùng muốn. Tên của bạn sẽ được chễm chệ ở vị trí nổi bật nhất trong danh sách bạn đồng hành của tụi mình.",
     "tier-contribute": "Ủng hộ",
     "per-month": "/tháng",
     "tier-popular": "Phổ biến",
@@ -315,9 +315,9 @@
     "blocklist-updated": "Cập nhật lần cuối: {{date}}",
     "desktop-qr-caption": "Quét bằng camera điện thoại để tiếp tục",
     "desktop-divider": "hoặc",
-    "desktop-qr-alt": "Mã QR mở liên kết này trên điện thoại của bạn",
-    "desktop-copy-link": "Sao chép liên kết",
-    "desktop-copy-link-done": "Đã sao chép!"
+    "desktop-qr-alt": "Mã QR để mở liên kết này trên điện thoại",
+    "desktop-copy-link-done": "Đã sao chép!",
+    "desktop-copy-link": "Sao chép liên kết"
   },
   "error": {
     "go-home": "Về trang chủ",
@@ -325,13 +325,13 @@
     "not-found": "Làm gì có trang này, hoặc có khi bay màu rồi cũng nên~"
   },
   "faq-page": {
-    "subtitle": "Tìm câu trả lời cho các câu hỏi thường gặp và giải pháp cho các vấn đề đã biết",
-    "title": "Câu hỏi thường gặp & Khắc phục sự cố",
-    "search-placeholder": "Tìm kiếm câu hỏi...",
-    "meta-description": "Câu hỏi thường gặp & Khắc phục sự cố Morphe - Tìm câu trả lời cho các câu hỏi thường gặp và giải pháp cho các vấn đề đã biết",
-    "meta-title": "Câu hỏi thường gặp & Khắc phục sự cố - Morphe",
-    "no-results": "Không tìm thấy kết quả nào cho tìm kiếm của bạn.",
-    "filter-faq": "Câu hỏi thường gặp",
-    "filter-troubleshooting": "Khắc phục sự cố"
+    "meta-title": "Hỏi đáp & Sửa lỗi - Morphe",
+    "meta-description": "Hỏi đáp & Sửa lỗi Morphe - Giải đáp các thắc mắc phổ biến và tổng hợp cách xử lý các lỗi thường gặp",
+    "title": "Hỏi đáp & Sửa lỗi",
+    "subtitle": "Giải đáp các thắc mắc phổ biến và tổng hợp cách xử lý các lỗi thường gặp",
+    "search-placeholder": "Tìm câu hỏi...",
+    "no-results": "Không tìm thấy kết quả phù hợp.",
+    "filter-faq": "Hỏi đáp",
+    "filter-troubleshooting": "Sửa lỗi"
   }
 }
