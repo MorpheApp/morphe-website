@@ -84,14 +84,14 @@ jobs:
       - name: Fetch and Update MicroG Download Link
         run: |
           MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/MorpheApp/MicroG-RE/refs/heads/main/build.gradle"
-          # parse out "ext.appVersionName = x.xx"
-          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep "appVersionName" | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
+          # parse out: def ourGmsVersionName = "x.x.x"
+          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep -E '^\s*def ourGmsVersionName\s*=\s*"[0-9.]+"' | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
           if [ -z "$VERSION" ]; then
-            echo "Error: Could not find appVersionName in build.gradle." >&2
+            echo "Error: Could not find ourGmsVersionName in build.gradle." >&2
             exit 1
           fi
           DOWNLOAD_URL="https://github.com/MorpheApp/MicroG-RE/releases/download/$VERSION/microg-$VERSION.apk"
-
+          
           # Update microg.html with the download link          
           sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/microg.html
           echo "Updated public/microg.html with MicroG download link."
