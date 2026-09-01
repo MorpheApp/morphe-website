@@ -4,13 +4,13 @@
     "product-microg": "Ladda ner MicroG",
     "support-donate": "Donera",
     "product-changelog": "Nyheter",
+    "product-faq": "Vanliga frågor och felsökning",
     "description": "Nästa generations modifiering av Android-appar",
     "product": "Produkt",
     "product-translate": "Hjälp till att översätta",
     "community": "Community",
     "language": "Språk",
-    "copyright": "Öppet och kostnadsfritt för evigt.",
-    "product-faq": "FAQ & Felsökning"
+    "copyright": "Öppet och kostnadsfritt för evigt."
   },
   "translate": {
     "title": "Hjälp oss att översätta",
@@ -55,10 +55,10 @@
   },
   "nav": {
     "faq": "Vanliga frågor",
-    "change-language": "Ändra språk",
     "theme-toggle": "Växla tema",
     "menu-toggle": "Öppna meny",
-    "scroll-to-top": "Till toppen"
+    "scroll-to-top": "Skrolla högst upp",
+    "change-language": "Byt språk"
   },
   "hero": {
     "title": "Omvandla din",
@@ -70,8 +70,8 @@
     "download": "Ladda ner Morphe",
     "learn-more": "Läs mer",
     "social-label": "Gå med i communityn",
-    "meta-description": "Ladda ner den officiella Morphe APK. Skapad av tidigare ReVanced-bidragsgivare för att patcha YouTube, YouTube Music och Reddit med annonsblockering och anpassade funktioner.",
-    "meta-title": "Morphe-appen för YouTube och Reddit - OFFICIELL WEBBPLATS"
+    "meta-description": "Ladda ner den officiella APK-filen för Morphe. Skapad av tidigare bidragsgivare till ReVanced för att modifiera YouTube, YouTube Music och Reddit med annonsblockering och anpassade funktioner.",
+    "meta-title": "Appen Morphe för YouTube och Reddit – OFFICIELL WEBBPLATS"
   },
   "app-features": {
     "title": "Appfunktioner",
@@ -174,7 +174,7 @@
     "quote_7": {
       "text": "Jag visade Morphe för min teknikokunniga pappa. Nu modifierar han appar bättre än jag. Jag ifrågasätter hela min karriär inom IT.",
       "author": "Tom Anderson",
-      "role": "Existentiell kris-havare"
+      "role": "Person i existentiell kris"
     },
     "quote_8": {
       "text": "Min ex-flickvän blev ihop med mig igen efter att jag började använda Morphe. En tillfällighet? Knappast!",
@@ -246,7 +246,7 @@
     "reddit-desc": "Delta i diskussioner, dela tips och kom i kontakt med andra Morphe-användare.",
     "crowdin-desc": "Hjälp till att göra Morphe tillgängligt för alla genom att översätta det till ditt språk.",
     "patches-title": "Fler appar",
-    "patches-desc": "Gemenskapsunderhållna patchpaket, byggda och stödda av slutanvändare."
+    "patches-desc": "Community-underhållna tilläggspaket som skapas och stöds av slutanvändare."
   },
   "donate": {
     "title": "Stöd",
@@ -266,7 +266,7 @@
     "tier2-name": "Stödjare",
     "tier2-desc": "Bli en återkommande stödjare och hjälp oss att planera långsiktigt. Ditt namn visas i vår lista över stödjare.",
     "tier3-name": "Megastödjare",
-    "tier3-desc": "Gör en betydande inverkan på Morphes framtid och hjälp oss att upprätthålla de regelbundna uppdateringar som användarna älskar. Ditt namn syns tydligt på vår lista över supportrar.",
+    "tier3-desc": "Bidra till Morphes framtid på ett betydande sätt och hjälp oss att upprätthålla de regelbundna uppdateringar som användarna älskar. Ditt namn visas tydligt i vår lista över stödjare.",
     "tier-contribute": "Bidra",
     "per-month": "/mån.",
     "tier-popular": "Populärt",
@@ -293,27 +293,27 @@
     "warning": "Lägg bara till källor från utgivare du litar på. Tilläggskällor kan modifiera dina appar",
     "open-btn": "Öppna i Morphe",
     "back-home": "Tillbaka till startsidan",
-    "go-back": "Gå tillbaka",
+    "go-back": "Tillbaka",
     "success-title": "Öppnar Morphe …",
     "success-subtitle": "Källan läggs till. Du kan stänga den här sidan",
     "development-title": "Under utveckling",
-    "development-subtitle": "Denna Morphe-patchkälla är fortfarande under utveckling. Kom tillbaks senare.",
+    "development-subtitle": "Den här Morphe-tilläggskällan är fortfarande under utveckling. Kom tillbaka senare.",
     "desktop-title": "Öppna på Android",
     "desktop-subtitle": "Den här länken lägger till en tilläggskälla i Morphe, vilket kräver en Android-enhet",
     "desktop-step1": "Installera <a href=\"/\">Morphe</a> på din Android-enhet",
     "desktop-step2": "Öppna den här länken på din Android-enhet",
     "desktop-step3": "Tryck på <strong>Öppna i Morphe</strong>",
     "blocked-title": "Källa blockerad",
-    "blocked-subtitle": "Denna patch-källa har flaggats som osäker och kan inte läggas till i Morphe",
-    "blocked-warning": "Förråd som distribuerar skadliga patchar, utger sig för att vara andra utvecklare eller bryter mot våra användarvillkor blockeras för att skydda användare",
+    "blocked-subtitle": "Den här tilläggskällan har flaggats som osäker och kan inte läggas till i Morphe",
+    "blocked-warning": "Lagringsplatser som distribuerar skadliga tillägg, utger sig för att vara andra utvecklare eller bryter mot våra användarvillkor blockeras för att skydda användare",
     "blocked-reason-label": "Kategori",
     "blocked-reason-impersonation": "Identitetsstöld",
-    "blocked-reason-malware": "Skadliga patchar",
+    "blocked-reason-malware": "Skadliga tillägg",
     "blocked-reason-tos": "Brott mot användarvillkoren",
-    "blocked-reason-dropped": "Avvecklad",
+    "blocked-reason-dropped": "Nedlagt",
     "blocked-reason-test": "Testpost",
-    "blocklist-updated": "Blockeringslistan uppdaterad {{date}}",
-    "desktop-qr-caption": "Skanna med telefonens kamera för att fortsätta",
+    "blocklist-updated": "Blockeringslistan uppdaterades den {{date}}",
+    "desktop-qr-caption": "Läs med telefonens kamera för att fortsätta",
     "desktop-divider": "eller",
     "desktop-qr-alt": "QR-kod som öppnar den här länken på din telefon",
     "desktop-copy-link": "Kopiera länk",
@@ -322,15 +322,15 @@
   "error": {
     "go-home": "Gå till startsidan",
     "404-title": "404 – Sidan hittades inte",
-    "not-found": "Sidan du söker kan inte hittas"
+    "not-found": "Sidan du söker efter hittades inte"
   },
   "faq-page": {
+    "meta-title": "Vanliga frågor och felsökning – Morphe",
+    "meta-description": "Vanliga frågor och felsökning för Morphe – Hitta svar på vanliga frågor och lösningar på kända problem",
+    "title": "Vanliga frågor och felsökning",
     "subtitle": "Hitta svar på vanliga frågor och lösningar på kända problem",
-    "title": "FAQ & Felsökning",
-    "search-placeholder": "Sök frågor...",
-    "meta-description": "Morphe FAQ & Felsökning - Hitta svar på vanliga frågor och lösningar på kända problem",
-    "meta-title": "FAQ & Felsökning - Morphe",
-    "no-results": "Inga resultat hittades för din sökning.",
+    "search-placeholder": "Sök bland frågor ...",
+    "no-results": "Inga träffar hittades för din sökning.",
     "filter-faq": "Vanliga frågor",
     "filter-troubleshooting": "Felsökning"
   }
