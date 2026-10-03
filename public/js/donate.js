@@ -23,7 +23,7 @@
     }
 
     function isMegaSponsor(node) {
-        if (!node.tier || !node.tier.name) return false;
+        if (!node || !node.tier || !node.tier.name) return false;
         var name = node.tier.name.toLowerCase();
         return name.indexOf('mega') !== -1 ||
                name.indexOf('sponsor') !== -1;
@@ -35,18 +35,24 @@
         if (!container) return;
         if (stateLoad) stateLoad.hidden = true;
 
-        if (!nodes || nodes.length === 0) {
+        if (!nodes || !Array.isArray(nodes) || nodes.length === 0) {
             showEmpty('donate-state-loading', 'donate-state-empty');
             return;
         }
 
         // Aggregate backers by account slug to avoid duplicates
         var uniqueBackers = {};
+        var validNodesCount = 0;
+
         nodes.forEach(function(node) {
-            var slug = node.account.slug;
+            if (!node || !node.account) return;
+            validNodesCount++;
+
+            var account = node.account;
+            var slug = account.slug || account.id || ('anon-' + Math.random().toString(36).substring(2, 9));
             if (!uniqueBackers[slug]) {
                 uniqueBackers[slug] = {
-                    account: node.account,
+                    account: account,
                     totalDonations: { value: 0 },
                     createdAt: node.createdAt,
                     isMega: isMegaSponsor(node)
@@ -64,6 +70,11 @@
         var aggregatedNodes = Object.keys(uniqueBackers).map(function(slug) {
             return uniqueBackers[slug];
         });
+
+        if (aggregatedNodes.length === 0) {
+            showEmpty('donate-state-loading', 'donate-state-empty');
+            return;
+        }
 
         // Separate Mega Supporters and others
         var megaSupporters = aggregatedNodes.filter(function(n) { return n.isMega; });
@@ -96,13 +107,14 @@
         allBackers.forEach(function (node) {
             var account = node.account;
             var isMega = node.isMega;
+            var displayName = (account.name && account.name.trim()) || 'Backer';
 
             var a = document.createElement('a');
-            a.href      = isMega && account.website ? account.website : ('https://opencollective.com/' + account.slug);
+            a.href      = isMega && account.website ? account.website : ('https://opencollective.com/' + (account.slug || ''));
             a.target    = '_blank';
             a.rel       = 'noopener noreferrer';
             a.className = isMega ? 'donate-avatar donate-avatar-mega' : 'donate-avatar';
-            a.title     = (isMega ? 'Mega Supporter: ' : 'Backer: ') + (account.name || 'Anonymous');
+            a.title     = (isMega ? 'Mega Supporter: ' : 'Backer: ') + displayName;
 
             if (isMega) {
                 var trophy = document.createElement('span');
@@ -114,25 +126,25 @@
             if (account.imageUrl) {
                 var img     = document.createElement('img');
                 img.src     = account.imageUrl;
-                img.alt     = account.name || 'Backer';
+                img.alt     = displayName;
                 img.loading = 'lazy';
                 img.onerror = function () {
                     this.remove();
                     var initials = document.createElement('span');
-                    initials.textContent = (account.name || '?')[0].toUpperCase();
+                    initials.textContent = displayName[0].toUpperCase();
                     a.appendChild(initials);
                 };
                 a.appendChild(img);
             } else {
                 var initials = document.createElement('span');
-                initials.textContent = (account.name || '?')[0].toUpperCase();
+                initials.textContent = displayName[0].toUpperCase();
                 a.appendChild(initials);
             }
 
             container.appendChild(a);
         });
 
-        var remaining = Math.max(0, totalCount - nodes.length);
+        var remaining = Math.max(0, totalCount - validNodesCount);
         if (remaining > 0) {
             var more = document.createElement('a');
             more.href       = 'https://opencollective.com/morpheapp#section-contributors';
