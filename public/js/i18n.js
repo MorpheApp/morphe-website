@@ -181,26 +181,6 @@
             }));
         }
 
-        /**
-         * Strip script tags and event-handler/javascript: attributes before
-         * inserting translation-provided HTML into the DOM (CWE-79 hardening).
-         */
-        sanitizeHtml(html) {
-            const template = document.createElement('template');
-            template.innerHTML = String(html);
-            template.content.querySelectorAll('script').forEach(el => el.remove());
-            template.content.querySelectorAll('*').forEach(el => {
-                Array.from(el.attributes).forEach(attr => {
-                    const isEventHandler = /^on/i.test(attr.name);
-                    const isJsUrl = /^(href|src)$/i.test(attr.name) && /^\s*javascript:/i.test(attr.value);
-                    if (isEventHandler || isJsUrl) {
-                        el.removeAttribute(attr.name);
-                    }
-                });
-            });
-            return template.innerHTML;
-        }
-
         translate(key) {
             const keys = key.split('.');
             let value = this.translations;
@@ -236,7 +216,7 @@
             // Translate elements with data-i18n-html for HTML content
             document.querySelectorAll('[data-i18n-html]').forEach(element => {
                 const key = element.getAttribute('data-i18n-html');
-                element.innerHTML = this.sanitizeHtml(this.translate(key));
+                element.innerHTML = this.translate(key);
             });
 
             // Translate elements with data-i18n-link: replaces %s in translation with a link
