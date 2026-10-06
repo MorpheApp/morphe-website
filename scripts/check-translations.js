@@ -14,9 +14,18 @@
 
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
 const LOCALES_DIR = 'public/locales';
+const HTML_DIR = 'public';
 const BASE_LOCALE = 'en';
+
+// HTML tags/attributes allowed in translations rendered via data-i18n-html.
+// Keep this in sync with what's actually used in public/**/*.html — see
+// findHtmlAllowlistViolations() below for enforcement.
+const ALLOWED_HTML_TAGS = new Set(['a', 'strong', 'em', 'br']);
+const ALLOWED_HTML_ATTRS = { a: new Set(['href']) };
+const UNSAFE_URL_SCHEMES = /^\s*(javascript|data|vbscript):/i;
 
 // Keys whose values are intentionally identical across all locales (e.g. brand names).
 // Excluded from "untranslated" warnings in completeness check.
@@ -93,6 +102,121 @@ function getValue(obj, keyPath) {
   }
 
   return value;
+}
+
+/**
+ * Discover which translation keys are rendered via innerHTML (CWE-79
+ * control point), by scanning the HTML templates for the attributes that
+ * i18n.js uses to decide how to render a translation — mirrors the
+ * attribute scanning in scripts/generate-i18n-keys.js.
+ *
+ * Returns a Map<key, 'html-allowlist' | 'no-html'>:
+ * - 'html-allowlist': value may contain a restricted set of HTML
+ *   (data-i18n-html) and is checked against ALLOWED_HTML_TAGS/ATTRS.
+ * - 'no-html': value is only ever supposed to be plain text with a
+ *   %s/%N placeholder (data-i18n-link/data-i18n-links and their per-link
+ *   text overrides) and must not contain any HTML tag at all.
+ */
+function findHtmlRenderedKeys() {
+  const keys = new Map();
+  const htmlFiles = glob.sync(`${HTML_DIR}/**/*.html`);
+
+  htmlFiles.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+
+    for (const match of content.matchAll(/data-i18n-html="([^"]+)"/g)) {
+      keys.set(match[1], 'html-allowlist');
+    }
+
+    for (const match of content.matchAll(/data-i18n-link="([^"]+)"/g)) {
+      keys.set(match[1], 'no-html');
+    }
+
+    for (const match of content.matchAll(/data-i18n-links="([^"]+)"/g)) {
+      const key = match[1];
+      keys.set(key, 'no-html');
+
+      const dataAttrRegex = new RegExp(`data-i18n-links="${key}"[^>]*data-i18n-links-data='([^']+)'`);
+      const dataMatch = dataAttrRegex.exec(content);
+      if (dataMatch) {
+        try {
+          const links = JSON.parse(dataMatch[1]);
+          links.forEach((_, index) => keys.set(`${key}-link${index + 1}`, 'no-html'));
+        } catch (e) { /* ignore parse errors */ }
+      }
+    }
+  });
+
+  return keys;
+}
+
+/**
+ * Validate a data-i18n-html value against the HTML allowlist.
+ * Returns an array of human-readable violation strings (empty if safe).
+ */
+function findHtmlAllowlistViolations(html) {
+  const violations = [];
+  const tagRe = /<\/?([a-zA-Z][a-zA-Z0-9]*)((?:\s+[^<>]*)?)\/?>/g;
+  let match;
+
+  while ((match = tagRe.exec(html)) !== null) {
+    const tag = match[1].toLowerCase();
+
+    if (!ALLOWED_HTML_TAGS.has(tag)) {
+      violations.push(`disallowed tag <${tag}>`);
+      continue;
+    }
+
+    const allowedAttrs = ALLOWED_HTML_ATTRS[tag] || new Set();
+    const attrRe = /([a-zA-Z0-9:-]+)\s*=\s*"([^"]*)"/g;
+    let attrMatch;
+    while ((attrMatch = attrRe.exec(match[2] || '')) !== null) {
+      const attrName = attrMatch[1].toLowerCase();
+      const attrValue = attrMatch[2];
+
+      if (!allowedAttrs.has(attrName)) {
+        violations.push(`disallowed attribute "${attrName}" on <${tag}>`);
+      } else if (attrName === 'href' && UNSAFE_URL_SCHEMES.test(attrValue)) {
+        violations.push(`unsafe href scheme on <${tag}>: "${attrValue}"`);
+      }
+    }
+  }
+
+  return violations;
+}
+
+/**
+ * Validate a data-i18n-link/data-i18n-links value: no HTML tag is ever
+ * legitimate here, only plain text with a %s/%N placeholder.
+ * Returns an array of human-readable violation strings (empty if safe).
+ */
+function findNoHtmlViolations(text) {
+  const matches = String(text).match(/<\/?[a-zA-Z][^<>]*>/g);
+  return matches ? matches.map(tag => `HTML not allowed here, found ${tag}`) : [];
+}
+
+/**
+ * Check all locales for unsafe HTML in translations that get rendered via
+ * innerHTML (CWE-79 control point). Ignores testimonials section.
+ */
+function checkHtmlSafety(locales) {
+  const htmlKeys = findHtmlRenderedKeys();
+  const violations = [];
+
+  Object.keys(locales).sort().forEach(locale => {
+    htmlKeys.forEach((category, key) => {
+      const value = getValue(locales[locale], key);
+      if (value === undefined || value === null) return;
+
+      const issues = category === 'html-allowlist'
+        ? findHtmlAllowlistViolations(value)
+        : findNoHtmlViolations(value);
+
+      issues.forEach(issue => violations.push({ locale, key, issue }));
+    });
+  });
+
+  return violations;
 }
 
 /**
@@ -244,6 +368,19 @@ function generateReport(locales) {
     console.log('✓ No zombie keys found\n');
   }
 
+  // HTML safety check (CWE-79 control point)
+  const htmlViolations = checkHtmlSafety(locales);
+  if (htmlViolations.length > 0) {
+    console.log('HTML SAFETY:');
+    console.log('-'.repeat(60));
+    htmlViolations.forEach(v => {
+      console.error(`✖ Error: [${v.locale}] ${v.key}: ${v.issue}`);
+    });
+    console.log();
+  } else {
+    console.log('✓ No unsafe HTML found in translations\n');
+  }
+
   // Summary
   console.log('='.repeat(60));
   const completions = Object.values(completeness).map(d => d.percentage);
@@ -255,7 +392,7 @@ function generateReport(locales) {
   console.log(`Average completion: ${displayAvg}%`);
   console.log('='.repeat(60));
 
-  return completeness;
+  return { completeness, htmlViolations };
 }
 
 /**
@@ -349,16 +486,20 @@ function main() {
     process.exit(1);
   }
 
-  const completeness = generateReport(locales);
+  const { completeness, htmlViolations } = generateReport(locales);
 
   // Check for any translation errors
   const hasTranslationError = Object.values(completeness).some(
     data => data.missing > 0 || data.untranslated > 0
   );
+  const hasHtmlSafetyError = htmlViolations.length > 0;
 
-  if (syncError || hasTranslationError) {
+  if (syncError || hasTranslationError || hasHtmlSafetyError) {
     if (hasTranslationError) {
       console.error('✖ Error: Some translations are missing or incomplete.');
+    }
+    if (hasHtmlSafetyError) {
+      console.error('✖ Error: Unsafe HTML found in translation(s). See HTML SAFETY section above.');
     }
     process.exit(1);
   } else {
@@ -371,4 +512,13 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { loadLocales, checkCompleteness, findZombieKeys, getAllKeys };
+module.exports = {
+  loadLocales,
+  checkCompleteness,
+  findZombieKeys,
+  getAllKeys,
+  findHtmlRenderedKeys,
+  findHtmlAllowlistViolations,
+  findNoHtmlViolations,
+  checkHtmlSafety
+};

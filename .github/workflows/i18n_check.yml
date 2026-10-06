@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run i18n HTML-safety regression tests
+        run: npm run test:i18n-html-safety
+
       - name: Check translation completeness
         id: check_status
         run: |
