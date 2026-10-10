@@ -18,7 +18,7 @@
     "terser": "^5.51.2"
   },
   "dependencies": {
-    "marked": "^18.0.14",
+    "marked": "^18.1.0",
     "web-resource-inliner": "^8.0.0"
   }
 }
