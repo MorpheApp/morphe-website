@@ -39,6 +39,7 @@ const SKIP_KEYS = new Set([
   'app-features.sponsorblock',    // brand name
   'nav.faq',                      // universal abbreviation
   'changelog.filter-manager',     // app name
+  'changelog.filter-desktop',     // app name
   'changelog.filter-patches',     // technical term
 ]);
 

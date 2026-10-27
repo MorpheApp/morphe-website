@@ -68,6 +68,9 @@
     "title-highlight-reddit": "Reddit",
     "description": "由打造最強改版 YouTube 應用程式的開發團隊，為您獻上 Morphe — 讓您完全掌控的強大應用程式修改工具",
     "download": "下載 Morphe",
+    "download-detail": "適用於 Android 裝置",
+    "download-desktop": "下載桌面版",
+    "download-desktop-detail": "需要 Java 21+ 才能執行",
     "learn-more": "瞭解更多",
     "social-label": "加入社群",
     "meta-description": "下載官方 Morphe APK。由前 ReVanced 貢獻者建立，用於為 YouTube、YouTube Music 和 Reddit 提供廣告攔截和自定義功能。",
@@ -280,10 +283,12 @@
     "subtitle": "完整的更新與改善歷史",
     "filter-all": "全部",
     "filter-manager": "管理程式",
+    "filter-desktop": "桌面版",
     "filter-patches": "修補",
     "show-dev": "顯示預先發行版本",
     "older-releases": "想找更早的版本嗎？",
     "view-manager": "檢視管理程式版本",
+    "view-desktop": "檢視桌面版版本",
     "view-patches": "檢視修補版本"
   },
   "add-source": {

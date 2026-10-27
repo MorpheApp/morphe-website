@@ -95,11 +95,6 @@
         // Check for Android in "Desktop site" mode
         if (navigator.userAgentData && navigator.userAgentData.platform === 'Android') return true;
 
-        // Fallback for Firefox and other browsers on Android in "Desktop site" mode
-        // which usually report as Linux and have multi-touch support.
-        var platform = navigator.platform || '';
-        if (/Linux/i.test(platform) && navigator.maxTouchPoints > 1) return true;
-
         return false;
     })();
 

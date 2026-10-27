@@ -592,6 +592,61 @@ body {
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn-mobile {
+    display: none;
+}
+
+.hero-btn-desktop {
+    display: inline-flex;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.75rem 1.35rem;
+    text-align: left;
+}
+
+.hero-btn .btn-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.hero-btn .btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.25;
+}
+
+.hero-btn .btn-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hero-btn .btn-detail {
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.85;
+    white-space: nowrap;
+}
+
+.hero-btn.btn-secondary .btn-detail {
+    color: var(--text-secondary);
+    opacity: 0.9;
+}
+
+body.is-mobile-detected .hero-btn-mobile {
+    display: inline-flex !important;
+}
+
+body.is-mobile-detected .hero-btn-desktop {
+    display: none !important;
 }
 
 /* App Features Showcase */
@@ -1718,6 +1773,10 @@ body {
     background: linear-gradient(180deg, var(--primary-blue), #4A7FC8);
 }
 
+.version-card[data-type="desktop"]::before {
+    background: linear-gradient(180deg, #6366F1, #8B5CF6);
+}
+
 .version-card[data-type="patches"]::before {
     background: linear-gradient(180deg, var(--primary-teal), #20CFCE);
 }
@@ -1929,6 +1988,12 @@ body {
     background: rgba(30, 90, 168, 0.1);
     color: var(--primary-blue);
     outline: 1px solid rgba(30, 90, 168, 0.2);
+}
+
+.type-badge.desktop {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366F1;
+    outline: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .type-badge.patches {
@@ -3268,6 +3333,14 @@ body.is-mobile-detected.add-source-page #state-android .hero-description {
         font-size: 1.125rem;
     }
 
+    .hero-btn-mobile {
+        display: inline-flex;
+    }
+
+    .hero-btn-desktop {
+        display: none !important;
+    }
+
     /* App features showcase */
     .app-tabs {
         flex-wrap: wrap;
@@ -3727,6 +3800,14 @@ html[data-theme] {
     text-align: center;
 }
 
+[dir="rtl"] .hero-btn {
+    text-align: right;
+}
+
+[dir="rtl"] .hero-btn .btn-text {
+    align-items: flex-end;
+}
+
 [dir="rtl"] .feature-card,
 [dir="rtl"] .community-card,
 [dir="rtl"] .testimonial-card,
@@ -3770,6 +3851,10 @@ html[data-theme] {
 
 [dir="rtl"] .version-card[data-type="patches"] {
     border-right-color: var(--primary-teal);
+}
+
+[dir="rtl"] .version-card[data-type="desktop"] {
+    border-right-color: #6366F1;
 }
 
 [dir="rtl"] .faq-section::before {

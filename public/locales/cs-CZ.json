@@ -11,6 +11,9 @@
     "title-highlight": "Android zážitek",
     "description": "Od vývojářů nejlepších upravených aplikací YouTube přichází Morphe — výkonný nástroj pro úpravu aplikací",
     "download": "Stáhnout Morphe",
+    "download-detail": "Pro zařízení Android",
+    "download-desktop": "Stáhnout Desktop",
+    "download-desktop-detail": "Ke spuštění vyžaduje Java 21+",
     "learn-more": "Zjistit více",
     "social-label": "Připojte se ke komunitě",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "Kompletní historie aktualizací a vylepšení",
     "filter-all": "Vše",
     "filter-manager": "Správce",
+    "filter-desktop": "Desktop",
     "filter-patches": "Záplaty",
     "show-dev": "Zobrazit předběžné verze",
     "older-releases": "Hledáte starší verze?",
     "view-manager": "Zobrazit verze Správce",
+    "view-desktop": "Zobrazit verze Desktop",
     "view-patches": "Zobrazit verze záplat"
   },
   "app-features": {

@@ -11,6 +11,9 @@
     "title-highlight": "Android deneyiminizi",
     "description": "En iyi modlu YouTube uygulamalarını sunan ekipten Morphe karşınızda — kontrolü tamamen sizin elinize bırakan güçlü uygulama modlama aracı.",
     "download": "Morphe'yi İndir",
+    "download-detail": "Android cihazlar için",
+    "download-desktop": "Desktop'ı İndir",
+    "download-desktop-detail": "Çalıştırmak için Java 21+ gerekir",
     "learn-more": "Daha Fazla Bilgi",
     "social-label": "Topluluğa Katılın",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "Güncellemelerin ve iyileştirmelerin tam geçmişi",
     "filter-all": "Tümü",
     "filter-manager": "Manager",
+    "filter-desktop": "Desktop",
     "filter-patches": "Yamalar",
     "show-dev": "Ön sürümleri göster",
     "older-releases": "Eski sürümleri mi arıyorsunuz?",
     "view-manager": "Manager sürümlerini görüntüle",
+    "view-desktop": "Desktop sürümlerini görüntüle",
     "view-patches": "Yamalar sürümlerini görüntüle"
   },
   "app-features": {

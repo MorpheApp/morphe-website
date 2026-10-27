@@ -11,6 +11,9 @@
     "title-highlight": "Android-ervaring",
     "description": "Van de makers van de beste aangepaste YouTube-apps komt Morphe — de krachtige tool waarmee jij de controle hebt",
     "download": "Morphe downloaden",
+    "download-detail": "Voor Android-apparaten",
+    "download-desktop": "Download Desktop",
+    "download-desktop-detail": "Vereist Java 21+ om uit te voeren",
     "learn-more": "Meer informatie",
     "social-label": "Word lid van de community",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "Volledige geschiedenis van updates en verbeteringen",
     "filter-all": "Alles",
     "filter-manager": "Manager",
+    "filter-desktop": "Desktop",
     "filter-patches": "Patches",
     "show-dev": "Vooruitgebrachte releases tonen",
     "older-releases": "Op zoek naar oudere releases?",
     "view-manager": "Manager-releases bekijken",
+    "view-desktop": "Desktop-releases bekijken",
     "view-patches": "Patches-releases bekijken"
   },
   "app-features": {

@@ -14,6 +14,9 @@
     "title-highlight-reddit": "Reddit",
     "description": "Від розробників, які створили найкращі модифікації YouTube та YT Music, приходить Morphe - потужний інструмент модифікації застосунків, який дає вам повний контроль",
     "download": "Завантажити Morphe",
+    "download-detail": "Для пристроїв Android",
+    "download-desktop": "Завантажити для ПК",
+    "download-desktop-detail": "Потрібно Java 21+ для запуску",
     "learn-more": "Дізнатися більше",
     "social-label": "Приєднуйтесь до спільноти",
     "meta-description": "Завантажте офіційний APK-файл Morphe. Створено колишніми учасниками ReVanced для патчингу YouTube, YouTube Music та Reddit з блокуванням реклами та додатковими функціями.",
@@ -224,10 +227,12 @@
     "subtitle": "Повна історія оновлень та покращень",
     "filter-all": "Усі",
     "filter-manager": "Менеджер",
+    "filter-desktop": "Desktop",
     "filter-patches": "Патчі",
     "show-dev": "Показати передрелізи",
     "older-releases": "Шукаєте старіші релізи?",
     "view-manager": "Переглянути релізи менеджера",
+    "view-desktop": "Переглянути релізи Desktop",
     "view-patches": "Переглянути релізи патчів"
   },
   "app-features": {

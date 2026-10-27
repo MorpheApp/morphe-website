@@ -68,6 +68,9 @@
     "title-highlight-reddit": "Reddit-app",
     "description": "Från utvecklarna bakom de bästa moddade YouTube-apparna kommer Morphe – det kraftfulla verktyget för appmodifiering som ger dig kontroll",
     "download": "Ladda ner Morphe",
+    "download-detail": "För Android-enheter",
+    "download-desktop": "Ladda ner Desktop",
+    "download-desktop-detail": "Kräver Java 21+ för att köras",
     "learn-more": "Läs mer",
     "social-label": "Gå med i communityn",
     "meta-description": "Ladda ner den officiella APK-filen för Morphe. Skapad av tidigare bidragsgivare till ReVanced för att modifiera YouTube, YouTube Music och Reddit med annonsblockering och anpassade funktioner.",
@@ -280,10 +283,12 @@
     "subtitle": "En fullständig historik över uppdateringar och förbättringar",
     "filter-all": "Alla",
     "filter-manager": "Manager",
+    "filter-desktop": "Desktop",
     "filter-patches": "Tillägg",
     "show-dev": "Visa förhandsversioner",
     "older-releases": "Vill du se äldre versioner?",
     "view-manager": "Visa Manager-versioner",
+    "view-desktop": "Visa Desktop-versioner",
     "view-patches": "Visa tilläggsversioner"
   },
   "add-source": {

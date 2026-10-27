@@ -11,6 +11,9 @@
     "title-highlight": "Android体验",
     "description": "来自为您带来最佳改版YouTube应用的开发者，Morphe - 强大的应用修改工具，让您掌控一切",
     "download": "下载Morphe",
+    "download-detail": "适用于 Android 设备",
+    "download-desktop": "下载桌面版",
+    "download-desktop-detail": "需要 Java 21+ 才能运行",
     "learn-more": "了解更多",
     "social-label": "加入社区",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "完整的更新与改进历史",
     "filter-all": "全部",
     "filter-manager": "管理器",
+    "filter-desktop": "桌面版",
     "filter-patches": "补丁",
     "show-dev": "显示预发布版本",
     "older-releases": "在找更早的版本吗？",
     "view-manager": "查看管理器版本",
+    "view-desktop": "查看桌面版发布历史",
     "view-patches": "查看补丁版本"
   },
   "app-features": {

@@ -68,6 +68,9 @@
     "title-highlight-reddit": "Reddit",
     "description": "Đến từ đội ngũ đứng sau những bản mod YouTube đình đám nhất, Morphe là công cụ chỉnh sửa ứng dụng hiệu quả, trao toàn quyền kiểm soát cho bạn",
     "download": "Tải Morphe",
+    "download-detail": "Dành cho thiết bị Android",
+    "download-desktop": "Tải Desktop",
+    "download-desktop-detail": "Yêu cầu Java 21+ để chạy",
     "learn-more": "Tìm hiểu thêm",
     "social-label": "Tham gia cộng đồng",
     "meta-description": "Tải APK Morphe chính chủ. Được phát triển bởi các cựu cộng tác viên ReVanced giúp vá YouTube, YouTube Music và Reddit với tính năng chặn quảng cáo cùng nhiều tính năng khác.",
@@ -280,10 +283,12 @@
     "subtitle": "Lịch sử cập nhật và cải tiến đầy đủ",
     "filter-all": "Tất cả",
     "filter-manager": "Trình quản lý",
+    "filter-desktop": "Desktop",
     "filter-patches": "Bản vá",
     "show-dev": "Hiện bản thử nghiệm",
     "older-releases": "Tìm bản phát hành cũ hơn?",
     "view-manager": "Xem bản phát hành trình quản lý",
+    "view-desktop": "Xem các bản phát hành Desktop",
     "view-patches": "Xem bản phát hành bản vá"
   },
   "add-source": {

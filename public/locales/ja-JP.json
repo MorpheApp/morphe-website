@@ -11,6 +11,9 @@
     "title-highlight": "Androidアプリ",
     "description": "最高の改造版YouTubeアプリを手がけた開発陣が送る、アプリを自由にカスタマイズする強力な改造ツール「Morphe」",
     "download": "Morpheをダウンロード",
+    "download-detail": "Android端末向け",
+    "download-desktop": "Desktopをダウンロード",
+    "download-desktop-detail": "実行にはJava 21+が必要です",
     "learn-more": "詳細を見る",
     "social-label": "コミュニティに参加",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "更新および改善の完全な履歴",
     "filter-all": "すべて",
     "filter-manager": "マネージャー",
+    "filter-desktop": "Desktop",
     "filter-patches": "パッチ",
     "show-dev": "プレリリース版を表示",
     "older-releases": "過去のバージョンをお探しですか？",
     "view-manager": "マネージャーのバージョン一覧を見る",
+    "view-desktop": "Desktopのバージョン一覧を見る",
     "view-patches": "パッチのバージョン一覧を見る"
   },
   "app-features": {

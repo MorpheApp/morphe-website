@@ -67,7 +67,7 @@ jobs:
           npm run faq:generate
           echo "FAQ page generated"
 
-      - name: Fetch and Update Morphe Download Link
+      - name: Fetch and Update Morphe Manager Download Link
         run: |
           MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/app-release.json"
           VERSION=$(curl -s "$MANAGER_PROPS_URL" | jq -r '.version')
@@ -79,7 +79,21 @@ jobs:
           
           # Update index.html with the download link
           sed -i "s|DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/index.html
-          echo "Updated index.html with Morphe download link."
+          echo "Updated index.html with Morphe Manager download link."
+
+      - name: Fetch and Update Morphe Desktop Download Link
+        run: |
+          DESKTOP_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-desktop/refs/heads/main/gradle.properties"
+          VERSION=$(curl -s "$DESKTOP_PROPS_URL" | grep -E '^\s*version\s*=\s*' | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
+          if [ -z "$VERSION" ]; then
+            echo "Error: Could not find version string in gradle.properties." >&2
+            exit 1
+          fi
+          DOWNLOAD_URL="https://github.com/MorpheApp/morphe-desktop/releases/download/v$VERSION/morphe-desktop-$VERSION-all.jar"
+          
+          # Update index.html with the desktop download link
+          sed -i "s|DESKTOP_DOWNLOAD_URL_TEMPLATE|$DOWNLOAD_URL|g" public/index.html
+          echo "Updated index.html with Morphe Desktop download link."
 
       - name: Fetch and Update MicroG Download Link
         run: |

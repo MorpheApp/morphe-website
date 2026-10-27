@@ -219,3 +219,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check
     toggleScrollButton();
 });
+
+// Mobile device detection for download button visibility
+(function() {
+    var ua = navigator.userAgent;
+    var isMobile = /android|iphone|ipad|ipod/i.test(ua) ||
+        (navigator.userAgentData && /android/i.test(navigator.userAgentData.platform));
+
+    if (isMobile) {
+        if (document.body) {
+            document.body.classList.add('is-mobile-detected');
+        } else {
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.classList.add('is-mobile-detected');
+            });
+        }
+    }
+})();

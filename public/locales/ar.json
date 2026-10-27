@@ -65,6 +65,9 @@
     "title-highlight": "أندرويد",
     "description": "من صُناع أعظم تطبيقات YouTube المُعدلة،\r\n                يأتيكم Morphe - أداة تعديل التطبيقات الجبّارة التي تضع زمام التحكم بين يديك",
     "download": "تنزيل Morphe",
+    "download-detail": "لأجهزة أندرويد",
+    "download-desktop": "تحميل للكمبيوتر",
+    "download-desktop-detail": "يتطلب Java 21+ للتشغيل",
     "learn-more": "اكتشف المزيد",
     "social-label": "انضم إلى مجتمعنا",
     "title-highlight-youtube": "YouTube",
@@ -280,10 +283,12 @@
     "subtitle": "سجلٌ حافل وشامل للتحديثات والتحسينات",
     "filter-all": "الكل",
     "filter-manager": "المدير",
+    "filter-desktop": "سطح المكتب",
     "filter-patches": "التعديلات",
     "show-dev": "إظهار الإصدارات التجريبية",
     "older-releases": "هل تبحث عن إصدارات أقدم؟",
     "view-manager": "عرض إصدارات المدير",
+    "view-desktop": "عرض إصدارات سطح المكتب",
     "view-patches": "عرض إصدارات التعديلات"
   },
   "add-source": {

@@ -190,6 +190,12 @@
     outline-color: rgba(74, 127, 200, 0.3);
 }
 
+[data-theme="dark"] .type-badge.desktop {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818CF8;
+    outline-color: rgba(99, 102, 241, 0.3);
+}
+
 [data-theme="dark"] .type-badge.patches {
     background: rgba(32, 207, 206, 0.12);
     color: var(--primary-teal);

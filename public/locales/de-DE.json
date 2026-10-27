@@ -11,6 +11,9 @@
     "title-highlight": "Android-Erfahrung",
     "description": "Von den Entwicklern der besten modifizierten YouTube-Apps kommt Morphe – ein leistungsstarkes Tool zur App-Modifikation, das dir die volle Kontrolle gibt",
     "download": "Morphe herunterladen",
+    "download-detail": "Für Android-Geräte",
+    "download-desktop": "Desktop herunterladen",
+    "download-desktop-detail": "Erfordert Java 21+ zum Ausführen",
     "learn-more": "Mehr erfahren",
     "social-label": "Community beitreten",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "Vollständige Historie aller Updates und Verbesserungen",
     "filter-all": "Alle",
     "filter-manager": "Manager",
+    "filter-desktop": "Desktop",
     "filter-patches": "Patches",
     "show-dev": "Vorabversionen anzeigen",
     "older-releases": "Ältere Versionen suchen?",
     "view-manager": "Manager-Versionen anzeigen",
+    "view-desktop": "Desktop-Versionen anzeigen",
     "view-patches": "Patches-Versionen anzeigen"
   },
   "app-features": {

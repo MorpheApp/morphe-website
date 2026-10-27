@@ -65,6 +65,9 @@
     "title-highlight": "Android 경험을",
     "description": "유명한 YouTube 모드 앱을 만들어 온 개발진이 선보이는 Morphe. 앱을 내 방식대로 바꿀 수 있게 해주는 강력한 패칭 도구입니다.",
     "download": "Morphe 다운로드",
+    "download-detail": "Android 기기용",
+    "download-desktop": "Desktop 다운로드",
+    "download-desktop-detail": "실행하려면 Java 21+가 필요합니다",
     "learn-more": "자세히 보기",
     "social-label": "커뮤니티 참여",
     "title-highlight-youtube": "YouTube",
@@ -280,10 +283,12 @@
     "subtitle": "업데이트와 개선 사항을 한눈에 확인하세요",
     "filter-all": "전체",
     "filter-manager": "매니저",
+    "filter-desktop": "Desktop",
     "filter-patches": "패치",
     "show-dev": "프리릴리스 보기",
     "older-releases": "예전 릴리스를 찾고 있나요?",
     "view-manager": "매니저 릴리스 보기",
+    "view-desktop": "Desktop 릴리스 보기",
     "view-patches": "패치 릴리스 보기"
   },
   "add-source": {

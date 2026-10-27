@@ -4,6 +4,7 @@ const https = require('https');
 
 const MANAGER_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/dev/CHANGELOG.md';
 const PATCHES_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-patches/refs/heads/dev/CHANGELOG.md';
+const DESKTOP_URL = 'https://raw.githubusercontent.com/MorpheApp/morphe-desktop/refs/heads/dev/CHANGELOG.md';
 
 function repoUrlFromRaw(rawUrl) {
     const match = rawUrl.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\//);
@@ -14,9 +15,11 @@ function repoUrlFromRaw(rawUrl) {
 
 const MANAGER_REPO = repoUrlFromRaw(MANAGER_URL);
 const PATCHES_REPO = repoUrlFromRaw(PATCHES_URL);
+const DESKTOP_REPO = repoUrlFromRaw(DESKTOP_URL);
 
 const MAX_MANAGER_RELEASES = 10;
 const MAX_PATCHES_RELEASES = 10;
+const MAX_DESKTOP_RELEASES = 10;
 
 const categoryConfig = {
     'features': { icon: 'auto_awesome', class: 'icon-added' },
@@ -205,9 +208,14 @@ function parseLinks(text, repoUrl) {
 
 function generateVersionCard(version, repoUrl) {
     const releaseUrl = `${repoUrl}/releases/tag/v${version.version}`;
-    const typeBadge = version.type === 'manager'
-        ? '<span class="type-badge manager" data-i18n="changelog.filter-manager">Manager</span>'
-        : '<span class="type-badge patches" data-i18n="changelog.filter-patches">Patches</span>';
+    let typeBadge = '';
+    if (version.type === 'manager') {
+        typeBadge = '<span class="type-badge manager" data-i18n="changelog.filter-manager">Manager</span>';
+    } else if (version.type === 'desktop') {
+        typeBadge = '<span class="type-badge desktop" data-i18n="changelog.filter-desktop">Desktop</span>';
+    } else {
+        typeBadge = '<span class="type-badge patches" data-i18n="changelog.filter-patches">Patches</span>';
+    }
 
     let html = `
 <div class="version-card" data-type="${version.type}" data-dev="${version.isDev}">
@@ -256,15 +264,17 @@ function generateVersionCard(version, repoUrl) {
 async function generateChangelog() {
     console.log('📦 Fetching changelogs...');
 
-    const [managerMd, patchesMd] = await Promise.all([
+    const [managerMd, patchesMd, desktopMd] = await Promise.all([
         fetchUrl(MANAGER_URL),
-        fetchUrl(PATCHES_URL)
+        fetchUrl(PATCHES_URL),
+        fetchUrl(DESKTOP_URL)
     ]);
 
     console.log('📝 Parsing changelogs...');
 
     const managerVersions = parseChangelog(managerMd, 'manager');
     const patchesVersions = parseChangelog(patchesMd, 'patches');
+    const desktopVersions = parseChangelog(desktopMd, 'desktop');
 
     function limitStableWithDev(versions, maxStable) {
         const stable = versions
@@ -289,8 +299,9 @@ async function generateChangelog() {
 
     const limitedManagerVersions = limitStableWithDev(managerVersions, MAX_MANAGER_RELEASES);
     const limitedPatchesVersions = limitStableWithDev(patchesVersions, MAX_PATCHES_RELEASES);
+    const limitedDesktopVersions = limitStableWithDev(desktopVersions, MAX_DESKTOP_RELEASES);
 
-    const allVersions = [...limitedManagerVersions, ...limitedPatchesVersions]
+    const allVersions = [...limitedManagerVersions, ...limitedPatchesVersions, ...limitedDesktopVersions]
         .sort((a, b) => {
             // First sort by date (newest first)
             const dateCompare = new Date(b.date) - new Date(a.date);
@@ -304,7 +315,9 @@ async function generateChangelog() {
 
     let html = '';
     allVersions.forEach(version => {
-        const repoUrl = version.type === 'manager' ? MANAGER_REPO : PATCHES_REPO;
+        let repoUrl = PATCHES_REPO;
+        if (version.type === 'manager') repoUrl = MANAGER_REPO;
+        else if (version.type === 'desktop') repoUrl = DESKTOP_REPO;
         html += generateVersionCard(version, repoUrl);
     });
 

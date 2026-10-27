@@ -11,6 +11,9 @@
     "title-highlight": "опыт с Android",
     "description": "От разработчиков, создавших лучшие модификации YouTube и YT Music, приходит Morphe – мощный инструмент модификации приложений, который дает вам полный контроль",
     "download": "Загрузить Morphe",
+    "download-detail": "Для устройств Android",
+    "download-desktop": "Скачать для ПК",
+    "download-desktop-detail": "Требуется Java 21+ для запуска",
     "learn-more": "Узнать больше",
     "social-label": "Присоединяйтесь к сообществу",
     "title-highlight-youtube": "YouTube",
@@ -224,10 +227,12 @@
     "subtitle": "Полная история обновлений и улучшений",
     "filter-all": "Все",
     "filter-manager": "Менеджер",
+    "filter-desktop": "Desktop",
     "filter-patches": "Патчи",
     "show-dev": "Показать пререлизы",
     "older-releases": "Ищете более старые релизы?",
     "view-manager": "Просмотреть релизы менеджера",
+    "view-desktop": "Просмотреть релизы Desktop",
     "view-patches": "Просмотреть релизы патчей"
   },
   "app-features": {
