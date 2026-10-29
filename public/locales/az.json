@@ -1,0 +1,343 @@
+{
+  "footer": {
+    "product-home": "Əsas səhifə",
+    "product-microg": "MicroG-ni yükləyin",
+    "support-donate": "İanə edin",
+    "product-changelog": "Yeniliklər nələrdir",
+    "product-faq": "Tez-tez verilən suallar və nasazlıqların aradan qaldırılması",
+    "description": "Növbəti nəsil Android tətbiq yamalama",
+    "product": "Məhsul",
+    "product-translate": "Tərcümə etməyə kömək edin",
+    "community": "İcma",
+    "language": "Dil",
+    "copyright": "Açıq mənbəli və həmişəlik pulsuzdur."
+  },
+  "translate": {
+    "title": "Bizə tərcümə etməyə kömək edin",
+    "description": "Morphe-ni öz dilinizə tərcümə edərək onu dünya üzrə milyonlarla istifadəçi üçün əlçatan edin",
+    "cta": "Burada tərcümə etməyə başlayın",
+    "how-title": "Necə töhfə vermək olar",
+    "step1-title": "1. Crowdin-də qeydiyyatdan keçin",
+    "step1-desc": "Pulsuz Crowdin hesabı yaradın. Bu yalnız bir dəqiqə çəkir və sizə Morphe və digər açıq mənbəli layihələri tərcümə etmək imkanı verir.",
+    "step2-title": "2. Dilinizi seçin",
+    "step2-desc": "Tərcümə etmək istədiyiniz dili seçin. Siz yeni tərcümələrə töhfə verə və ya mövcud olanları təkmilləşdirə bilərsiniz.",
+    "step3-title": "3. Tərcümə etməyə başlayın",
+    "step3-desc": "Sətrləri tərcümə etmək üçün Crowdin-in intuitiv interfeysindən istifadə edin. Hər bir töhfə Morphe-ni daha çox istifadəçi üçün əlçatan etməyə kömək edir.",
+    "step4-title": "4. Təsirinizi görün",
+    "step4-desc": "Tərcümələriniz nəzərdən keçiriləcək və gələcək Morphe buraxılışlarına daxil ediləcək ki, bu da bütün dünyadakı istifadəçilərə kömək edəcək.",
+    "why-title": "Niyə tərcümə etməli?",
+    "why-subtitle": "Hər tərcümə olunmuş sətr Morphe-ni ona ehtiyacı olan birinə daha da yaxınlaşdırır",
+    "why-1": "İcmanıza kömək edin",
+    "why-1-desc": "Ətrafınızdakı hər kəsin heç bir maneə olmadan zövq ala bilməsi üçün Morphe-ni ana dilinizdə əlçatan edin.",
+    "why-2": "Morphe-ni qlobal edin",
+    "why-2-desc": "Morphe-ni yeni dillərə və regionlara gətirməklə bütün dünyada milyonlarla istifadəçiyə çatsın.",
+    "why-3": "Açıq mənbəyə töhfə verin",
+    "why-3-desc": "Tərcümə açıq mənbə töhfəsinin mənalı bir formasıdır — heç bir kodlaşdırma bacarığı tələb olunmur.",
+    "why-4": "Təsirinizi görün",
+    "why-4-desc": "Tərcümələriniz bütün dünyadakı istifadəçilərə çataraq real Morphe buraxılışlarında nəzərdən keçirilir və göndərilir."
+  },
+  "analytics": {
+    "title": "Analitika",
+    "description": "Bu vebsayt %s və Google Analytics 4 istifadə edir: Heç bir kuki, reklamlama yoxdur, profilləşdirmə yoxdur və heç bir məlumat satılmır və ya paylaşılmır.",
+    "disclaimer": "Morphe heç bir yamalanmış tətbiqə analitika və ya məlumat toplama əlavə etmir."
+  },
+  "microg": {
+    "title": "Yüklə",
+    "description": "YouTube Morphe və YT Music Morphe-dən istifadə etmək üçün MicroG tələb olunur",
+    "download": "MicroG-ni yükləyin",
+    "what-title": "MicroG nədir?",
+    "feature1-title": "Google Xidmətləri",
+    "feature1-desc": "MicroG Google Play Xidmətləri dəstəyini təmin edir, bu da Google hesabınızın YouTube Morphe və YT Music Morphe ilə istifadəsinə imkan yaradır.",
+    "feature2-title": "Məxfiliyə yönəlmişdir",
+    "feature2-desc": "MicroG vacib funksionallığı təmin edərkən məxfiliyinizi qoruyan Google xidmətlərinin açıq mənbəli yenidən tətbiqidir.",
+    "feature3-title": "Birdəfəlik Quraşdırma",
+    "feature3-desc": "MicroG-ni bir dəfə quraşdırın və o, bütün Morphe tətbiqlərinizlə işləyir. YouTube Morphe və YT Music Morphe-ni yeniləyərkən yenidən quraşdırmağa ehtiyac yoxdur."
+  },
+  "nav": {
+    "faq": "Tez-tez verilən suallar",
+    "theme-toggle": "Koloriti dəyiş",
+    "menu-toggle": "Menyuya keçid",
+    "scroll-to-top": "Yuxarı sürüşdür",
+    "change-language": "Dili dəyiş"
+  },
+  "hero": {
+    "title": "Dəyişdirin Sizin",
+    "title-highlight": "Android Təcrübəsi",
+    "title-highlight-youtube": "YouTube",
+    "title-highlight-ytmusic": "YT Music",
+    "title-highlight-reddit": "Reddit",
+    "description": "Sizə ən yaxşı modifikasiya edilmiş YouTube tətbiqlərini gətirən tərtibatçılardan, sizi idarəetməyə qoyan güclü tətbiq modifikasiya aləti - Morphe gəlir",
+    "download": "Morphe-ni yükləyin",
+    "download-detail": "Android cihazları üçün",
+    "download-desktop": "Masaüstü versiyanı yükləyin",
+    "download-desktop-detail": "İşləmək üçün Java 21+ tələb olunur",
+    "learn-more": "Daha çox öyrən",
+    "social-label": "İcmaya qoşulun",
+    "meta-description": "Rəsmi Morphe APK-nı yükləyin. YouTube, YouTube Music və Reddit-i reklam bloklanması və xüsusi xüsusiyyətlərlə yamamaq üçün keçmiş ReVanced töhfəvericiləri tərəfindən yaradılmışdır.",
+    "meta-title": "YouTube və Reddit üçün Morphe Tətbiqi - RƏSMİ SAYT"
+  },
+  "app-features": {
+    "title": "Tətbiq xüsusiyyətləri",
+    "subtitle": "Sevimli tətbiqləriniz üçün güclü yamalar",
+    "tab-youtube": "YouTube Morphe",
+    "tab-ytmusic": "YT Music Morphe",
+    "tab-reddit": "Reddit Morphe",
+    "youtube-desc": "Reklam bloklanması, SponsorBlock dəstəyi, təkmilləşdirilmiş pleyer idarəetmələri və qabaqcıl məxfilik təkmilləşdirmələri ilə fərdiləşdirilmiş YouTube təcrübəsi",
+    "ad-blocking": "Reklam Bloklanması",
+    "yt-ad-blocking-desc": "Fasiləsiz izləmə üçün əsas lentdən və video pleyerdən bütün reklamları silir.",
+    "sponsorblock": "SponsorBlock",
+    "sponsorblock-desc": "Sponsorlu seqmentləri və videonun digər qeyri-vacib hissələrini avtomatik olaraq ötürür.",
+    "return-dislikes": "Bəyənməmələri Geri Qaytar",
+    "return-dislikes-desc": "Daha yaxşı baxış qərarları verə bilməniz üçün icma tərəfindən idarə olunan bəyənməmə saylarını göstərir.",
+    "ui-customization": "İstifadəçi interfeysinin fərdiləşdirilməsi",
+    "yt-ui-desc": "Shorts-u gizlədin, naviqasiya panelini tənzimləyin və istənməyən layout elementlərini silin.",
+    "player-enhancements": "Pleyer Təkmilləşdirmələri",
+    "player-desc": "Xüsusi oxutma sürətləri, defolt video keyfiyyəti və təkmilləşdirilmiş axtarış paneli davranışı.",
+    "swipe-controls": "Sürüşdürmə İdarəetmələri",
+    "swipe-desc": "İntuitiv toxunma jestləri ilə parlaqlığı və səsi tənzimləyin.",
+    "themes": "Koloritin Fərdiləşdirilməsi",
+    "yt-themes-desc": "Təmiz qara, Material You və əlavə kolorit üslubları.",
+    "privacy": "Məxfilik Təkmilləşdirmələri",
+    "yt-privacy-desc": "İzləmə parametrlərini silməklə paylaşım linklərini təmizləyir.",
+    "ytmusic-desc": "Reklam bloklanması, fərdiləşdirilə bilən koloritlər, audio təkmilləşdirmələri və daha təmiz interfeys ilə təkmilləşdirilmiş YouTube Music təcrübəsi",
+    "ytm-ad-desc": "Musiqi oxutma zamanı bütün reklamları silir.",
+    "audio-quality": "Audio Keyfiyyəti",
+    "audio-desc": "Dinamik diapazon sıxılmasını söndürün və orijinal audio treklərə üstünlük verin.",
+    "ytm-themes-desc": "Material You üslubları daxil olmaqla xüsusi tünd və açıq fonlar.",
+    "interface-cleanup": "İnterfeysin təmizlənməsi",
+    "ytm-ui-desc": "Daha təmiz təcrübə üçün lazımsız düymələri və UI komponentlərini gizlədin.",
+    "repeat": "Daimi Təkrar",
+    "repeat-desc": "Seanslar arasında qalan təkmilləşdirilmiş təkrar davranışı.",
+    "link-sanitization": "Linkin Sanitarlaşdırılması",
+    "ytm-link-desc": "Paylaşılan linklərdən izləmə parametrlərini silir.",
+    "custom-branding": "Xüsusi Brendinq",
+    "branding-desc": "Könüllü tətbiq adı və nişan fərdiləşdirməsi.",
+    "nav-bar": "Naviqasiya Paneli",
+    "nav-bar-desc": "Qarmaqarışıqlığı azaltmaq üçün aşağı naviqasiya panelini və onun etiketlərini gizlədin və ya fərdiləşdirin.",
+    "reddit-desc": "Reklam bloklanması, interfeysin fərdiləşdirilməsi, birbaşa link idarə edilməsi və təkmilləşdirilmiş məxfilik ilə sadələşdirilmiş Reddit təcrübəsi",
+    "reddit-ad-desc": "Daha təmiz baxış təcrübəsi üçün lentdaxili reklamları silir.",
+    "reddit-ui-desc": "Naviqasiya düymələrini, yan panel elementlərini və tövsiyə olunan rəfləri gizlədin.",
+    "auto-dismiss": "Avtomatik Dialoqun Bağlanması",
+    "dismiss-desc": "Təkrarlanan icma xəbərdarlığı pop-aplarını avtomatik olaraq silir.",
+    "direct-links": "Birbaşa Xarici Keçidlər",
+    "direct-links-desc": "Yönləndirmə izləməsi olmadan birbaşa təyinat yerinə gedərək linkləri açın.",
+    "reddit-link-desc": "Daha yaxşı məxfilik üçün paylaşılan URL-lərdən izləmə parametrlərini silir.",
+    "clean-nav": "Daha Təmiz Naviqasiya",
+    "clean-nav-desc": "Fokuslanmış baxış üçün daha az diqqət yayındıran sadələşdirilmiş layout.",
+    "screenshot": "Ekran Şəkli Azadlığı",
+    "screenshot-desc": "Tətbiq daxilində ekran şəkilləri çəkərkən görünən pop-apı deaktiv edir.",
+    "spoof-signature": "Bildiriş Xətası",
+    "spoof-signature-desc": "Yamalandıqdan sonra işləməyə bilən təkan bildirişlərini bərpa etmək üçün tətbiq imzasını saxtalaşdırır."
+  },
+  "how-it-works": {
+    "title": "Morphe Necə İşləyir",
+    "subtitle": "Sadə, güclü və hər kəs üçün qurulmuşdur",
+    "step1-title": "1. Morphe-ni yükləyin",
+    "step1-desc": "Morphe-nin ən son versiyasını yükləyin və onu Android cihazınıza quraşdırın.",
+    "step2-title": "2. Tətbiqinizi seçin",
+    "step2-desc": "Dəyişdirmək istədiyiniz tətbiqi seçin.",
+    "step3-title": "3. Yamaları tətbiq edin",
+    "step3-desc": "Morphe seçdiyiniz tətbiqi avtomatik olaraq yamalayacaq.",
+    "step4-title": "4. Quraşdırın və həzz alın",
+    "step4-desc": "Yamalanmış tətbiqi quraşdırın və fərdiləşdirilmiş təcrübənizdən həzz alın."
+  },
+  "testimonials": {
+    "title": "İstifadəçilər nə deyir",
+    "subtitle": "Real istifadəçilərin rəyləri və qətiyyən uydurulmayıb",
+    "quote_1": {
+      "text": "Mən əvvəllər saatlarla əl ilə yamalar konfiqurasiya edirdim. İndi sadəcə 'Patch' klikləyirəm və qəhvə düzəltməyə gedirəm. Qayıdanda artıq hazırdır. İnqilabi!",
+      "author": "Lisa Smith",
+      "role": "Qəhvəsevər"
+    },
+    "quote_2": {
+      "text": "Hər hansı digər yamalayıcı gözübağlı beyin cərrahiyyəsi etmək kimi hiss olunur. Amma Morphe ilə bu, bir neçə kliklənmədır və mənim yamalanmış tətbiqim superyüklənib və əvvəlkindən daha möhtəşəmdir.",
+      "author": "Alex Chen",
+      "role": "Güclü İstifadəçi"
+    },
+    "quote_3": {
+      "text": "Vanced kimidir, lakin daha yaxşıdır və qəribə korporativ party ab-havası yoxdur.",
+      "author": "Sarah Johnson",
+      "role": "Keçmiş Vanced İstifadəçisi"
+    },
+    "quote_4": {
+      "text": "87 yaşlı nənəm məndən YouTube-umun nə üçün fərqli görünəni soruşdu. Ona Morphe-ni göstərdim və indi o, bütün qocalar evi üçün tətbiqləri yamalayır.",
+      "author": "David Kin",
+      "role": "Qürurlu Nəvə"
+    },
+    "quote_5": {
+      "text": "Mən digər yamalayıcıları sınadım və telefonum yanıb kül oldu. Morphe ilə telefonum sadəcə mükəmməl şəkildə dəyişdirilib. 10/10 olardı ki, bir də öz-özünə alışmasın.",
+      "author": "Ryan Martinez",
+      "role": "Yanğın Təhlükəsizliyi Müdafiəçisi"
+    },
+    "quote_6": {
+      "text": "Morphe yamalayan zaman pişikim telefonumu masadan yıxdı. Telefon sağ qaldı və yamalanma yenə də uğurla başa çatdı. Pişik tərəfindən bəyənildi.",
+      "author": "Emma Jones",
+      "role": "Pişik Sahibi"
+    },
+    "quote_7": {
+      "text": "Mən Morphe-ni texnologiyadan başı çıxmayan atama göstərdim. O, indi tətbiqləri məndən daha yaxşı yamalayır. İT sahəsindəki bütün karyeramı sorğulayuram.",
+      "author": "Tom Anderson",
+      "role": "Ekzistensial Böhran Keçirən"
+    },
+    "quote_8": {
+      "text": "Keçmiş sevgilim mən Morphe-dən istifadə etməyə başlayandan sonra mənimlə yenidən barışdı. Təsadüf? Düşünmürəm!",
+      "author": "Mike Thompson",
+      "role": "Münasibət Mütəxəssisi"
+    },
+    "quote_9": {
+      "text": "Morphe məni diş məcunu haqqında 60 saniyəlik keçilməz reklamdan xilas edən yeganə şeydir.",
+      "author": "Casey Morgan",
+      "role": "Stomatoloq Deyil"
+    },
+    "quote_10": {
+      "text": "Mən düşünürdüm ki, Morphe qaranlıq yunan tanrısıdır. Sən demə daha yaxşı imiş.",
+      "author": "Oliver Grant",
+      "role": "Kollec Tarix İxtisası Tələbəsi"
+    },
+    "quote_11": {
+      "text": "Morphe-ni tapmamışdan əvvəl düşünürdüm ki, APK yeni K-pop qrupudur. İndi daha yaxşı bilirəm.",
+      "author": "Jeff Cooper",
+      "role": "Çaşıq Əmi"
+    },
+    "quote_12": {
+      "text": "Morphe-nin yükləmək üçün pulsuz olduğunu görəndə, mənə pulsuz yemək nümunələri təklif edən biri kimi reaksiya verdim. Mən düşünmürəm, hərəkət edirəm.",
+      "author": "Tyler James",
+      "role": "Refleks Əsaslı Qərar Qəbul Edən"
+    },
+    "quote_13": {
+      "text": "Morphe mənim Wi-Fi-ımı düzəltdi, vergilərimi ödədi və dünyadakı aclığı həll etdi. Əslində yox, amma o, YouTube-u mükəmməl yamadı.",
+      "author": "Sarah Williams",
+      "role": "Mübarizə Edən"
+    },
+    "quote_14": {
+      "text": "Mən itimə Morphe-ni göstərdim və indi o, texnologiyadan məndən daha yaxşı istifadə edir.",
+      "author": "Kevin Park",
+      "role": "Keçmiş Texnologiya Mütəxəssisi"
+    },
+    "quote_15": {
+      "text": "Morphe tətbiqlərimi o qədər yaxşı yamaladı ki, indi onun mənim həyat seçimimi də yamalaya biləcəyini düşünürəm.",
+      "author": "Doug Miller",
+      "role": "Özünü Yüksəltmə Həvəskarı"
+    },
+    "quote_16": {
+      "text": "Yanlış düyməni kliklədim və təsadüfən milyoner oldum. Necə baş verdiyinə əmin deyiləm, amma Morphe də işdə idi.",
+      "author": "Lucky Luke",
+      "role": "Təsadüfi Milyarder"
+    },
+    "quote_17": {
+      "text": "Morphe-nin reklam bloklama xüsusiyyəti sayəsində mən nəhayət tədqiqatımı başa çatdırmaq və bəşəriyyətin tarixinin gedişatını dəyişdirmək üçün zehni aydınlıq əldə etdim. Morphe Nobel mükafatına məndən daha çox layiqdir.",
+      "author": "Dr. Sheldon Lee",
+      "role": "Nəzəri Fizik"
+    },
+    "quote_18": {
+      "text": "Mən dostlarıma Morphe-ni göstərdim və indi onlar mənim növsevi texnologiya sehrbazı olduğumu düşünürlər. Mən onları düzəltmirəm.",
+      "author": "Owen Price",
+      "role": "Sehrbaz"
+    },
+    "quote_19": {
+      "text": "Morphe o qədər çox reklamı blokladı ki, telefonum daha yüngül hiss olunur. Məncə o, emosional çəkisini itirdi.",
+      "author": "Sienna Brooks",
+      "role": "Rəqəmsal Minimalist"
+    }
+  },
+  "faq": {
+    "title": "Tez-tez verilən suallar"
+  },
+  "community": {
+    "subtitle": "Bizi izləyin, problemləri bildirin və Morphe-ni daha yaxşı etməyə kömək edin",
+    "github-desc": "Mənbə koduna baxın, səhvləri bildirin və Morphe-nin inkişafına töhfə verin.",
+    "reddit-desc": "Müzakirələrə qoşulun, məsləhətləri paylaşın və digər Morphe istifadəçiləri ilə əlaqə saxlayın.",
+    "crowdin-desc": "Morphe-ni öz dilinizə tərcümə etməyə kömək edin və onu hər kəs üçün əlçatan edin.",
+    "patches-title": "Digər Tətbiqlər",
+    "patches-desc": "İcma tərəfindən idarə olunan yamaq dəstləri, son istifadəçilər tərəfindən yaradılmış və dəstəklənir."
+  },
+  "donate": {
+    "title": "Dəstək",
+    "description": "Töhfəniz Morphe-ni inkişaf etdirməyə və təkmilləşdirməyə davam etməyimizə kömək edir",
+    "why-1": "Morphe-ni pulsuz və açıq mənbəli saxlayın",
+    "why-2": "Davam edən inkişafı dəstəkləyin",
+    "why-3": "İnfrastruktur xərclərini ödəməyə kömək edin",
+    "why-4": "Daha sürətli səhv düzəlişləri və xüsusiyyətləri aktivləşdirin",
+    "oc-title": "Open Collective-də bizə dəstək olun",
+    "oc-desc": "100% şəffaf — hər dolların necə yığıldığını və xərcləndiyini dəqiq görün. Birdəfəlik və ya təkrar olunan, istənilən məbləğ kömək edir.",
+    "oc-btn": "İndi ianə edin",
+    "tiers-title": "Dəstək səviyyənizi seçin",
+    "tiers-desc": "Hər bir töhfə bir dəyişiklik edir",
+    "tier1-name": "Birdəfəlik",
+    "tier1-amount": "İstənilən məbləğ",
+    "tier1-desc": "Bizə bir qəhvə alın. Minnətdarlığınızı göstərmək üçün tək bir töhfə — heç bir öhdəlik tələb olunmur.",
+    "tier2-name": "Dəstəkçi",
+    "tier2-desc": "Daimi tərəfdar olun və uzunmüddətli planlaşdırmağımıza kömək edin. Adınız dəstəkçilər siyahımızda görünür.",
+    "tier3-name": "Meqa Dəstəkçi",
+    "tier3-desc": "Morphe-nin gələcəyinə əhəmiyyətli təsir göstərin və istifadəçilərin sevdiyi müntəzəm yeniləmələri qoruyub saxlamağımıza kömək edin. Adınız dəstəkçilər siyahımızda qabarıq şəkildə görünür.",
+    "tier-contribute": "Töhfə ver",
+    "per-month": "/ay",
+    "tier-popular": "Populyar",
+    "backers-title": "Dəstəkçilərimiz",
+    "backers-all": "Hamısına bax",
+    "backers-loading": "Yüklənir…",
+    "backers-empty": "Morphe-ni dəstəkləyən ilk siz olun!"
+  },
+  "changelog": {
+    "title": "Yeniliklər nələrdir",
+    "subtitle": "Yeniləmələrin və təkmilləşdirmələrin tam tarixi",
+    "filter-all": "Hamısı",
+    "filter-manager": "Menecer",
+    "filter-desktop": "Masaüstü",
+    "filter-patches": "Yamalar",
+    "show-dev": "İlkin buraxılışları göstər",
+    "older-releases": "Köhnə buraxılışları axtarırsınız?",
+    "view-manager": "Menecer Buraxılışlarına Bax",
+    "view-desktop": "Masaüstü Buraxılışlarına Bax",
+    "view-patches": "Yamalar Buraxılışlarına Bax"
+  },
+  "add-source": {
+    "subtitle": "Bu yamaq mənbəsini Morphe-yə əlavə etmək istəyirsiniz?",
+    "source-label": "Mənbə",
+    "only-app": "Yalnız bu tətbiq əlavə olunub. Digər tətbiqləri mənbənin tətbiq siyahısından əlavə edə bilərsiniz",
+    "only-universal": "Yalnız universal yamalar əlavə olunub. Mənbənin tətbiq siyahısından tətbiqlər əlavə edə bilərsiniz",
+    "warning": "Yalnız etibar etdiyiniz müəlliflərin mənbələrini əlavə edin. Yamaq mənbələri tətbiqlərinizi dəyişdirə bilər",
+    "open-btn": "Morphe-də aç",
+    "back-home": "Əsas Səhifəyə Qayıt",
+    "go-back": "Geri qayıt",
+    "success-title": "Morphe açılır…",
+    "success-subtitle": "Mənbə əlavə olunur. Bu səhifəni bağlaya bilərsiniz",
+    "development-title": "İşlənilməkdədir",
+    "development-subtitle": "Bu Morphe yamaq mənbəsi hələ də hazırlanır. Lütfən, daha sonra yenidən yoxlayın",
+    "desktop-title": "Android-də aç",
+    "desktop-subtitle": "Bu keçid Morphe-yə Android cihazı tələb edən yamaq mənbəyi əlavə edir",
+    "desktop-step1": "Android cihazınızda <a href=\"/\">Morphe</a> quraşdırın",
+    "desktop-step2": "Bu keçidi Android cihazınızda açın",
+    "desktop-step3": "<strong>Morphe-də aç</strong> üzərinə toxunun",
+    "blocked-title": "Mənbə bloklanıb",
+    "blocked-subtitle": "Bu yamaq mənbəsi etibarsız kimi işarələnib və Morphe-yə əlavə edilə bilməz",
+    "blocked-warning": "Zərərli yamalar yayan, digər tərtibatçıları təqlid edən və ya xidmət şərtlərimizi pozan repozitoriyalar istifadəçiləri qorumaq üçün bloklanır",
+    "blocked-reason-label": "Kateqoriya",
+    "blocked-reason-impersonation": "Təqlid etmə",
+    "blocked-reason-malware": "Zərərli yamalar",
+    "blocked-reason-tos": "Xidmət şərtlərinin pozulması",
+    "blocked-reason-dropped": "Dayandırılıb",
+    "blocked-reason-test": "Test girişi",
+    "blocklist-updated": "Blok siyahısı yeniləndi {{date}}",
+    "desktop-qr-caption": "Davam etmək üçün telefonunuzun kamerası ilə skan edin",
+    "desktop-divider": "və ya",
+    "desktop-qr-alt": "Bu keçidi telefonunuzda açan QR kod",
+    "desktop-copy-link-done": "Kopyalandı!",
+    "desktop-copy-link": "Keçidi kopyala"
+  },
+  "error": {
+    "go-home": "Əsas səhifəyə get",
+    "404-title": "404 - Səhifə Tapılmadı",
+    "not-found": "Axtardığınız səhifə tapılmır"
+  },
+  "faq-page": {
+    "meta-title": "Tez-tez verilən suallar və nasazlıqların aradan qaldırılması - Morphe",
+    "meta-description": "Morphe Tez-tez verilən suallar və nasazlıqların aradan qaldırılması - Ümumi suallara cavablar və məlum problemlərin həllini tapın",
+    "title": "Tez-tez verilən suallar və nasazlıqların aradan qaldırılması",
+    "subtitle": "Ümumi suallara cavablar və məlum problemlərin həllini tapın",
+    "search-placeholder": "Sualları axtarın...",
+    "no-results": "Axtarışınız üçün heç bir uyğunluq tapılmadı.",
+    "filter-faq": "Tez-tez verilən suallar",
+    "filter-troubleshooting": "Nasazlıqların aradan qaldırılması"
+  }
+}

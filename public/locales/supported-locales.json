@@ -87,6 +87,11 @@
       "region": null
     },
     {
+      "code": "az",
+      "name": "Azərbaycanca",
+      "region": "AZ"
+      },
+    {
       "code": "ja-JP",
       "name": "日本語",
       "region": "JP"
