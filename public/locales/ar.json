@@ -276,7 +276,8 @@
     "backers-title": "داعمونا",
     "backers-all": "عرض الكل",
     "backers-loading": "جارٍ التحميل…",
-    "backers-empty": "كن أول من يدعم Morphe!"
+    "backers-empty": "كن أول من يدعم Morphe!",
+    "backers-thanks": "كل داعم يساعد في إبقاء Morphe مجانيًا ومفتوح المصدر. شكرًا لكم جميعًا."
   },
   "changelog": {
     "title": "ما الجديد",

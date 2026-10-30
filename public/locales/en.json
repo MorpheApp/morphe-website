@@ -276,7 +276,8 @@
     "backers-title": "Our backers",
     "backers-all": "See all",
     "backers-loading": "Loading…",
-    "backers-empty": "Be the first to support Morphe!"
+    "backers-empty": "Be the first to support Morphe!",
+    "backers-thanks": "Every backer helps keep Morphe free and open. Thank you all."
   },
   "changelog": {
     "title": "What's New",
