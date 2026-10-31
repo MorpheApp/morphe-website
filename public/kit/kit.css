@@ -714,6 +714,88 @@ code, kbd, pre, samp {
     box-shadow: var(--shadow-brand);
 }
 
+/* Dropdown menu: a card that scales out of the corner it opens from.
+   Add .up when it opens above its trigger and .start when it lines up with the trigger's start edge */
+.kit-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 60;
+    min-width: 200px;
+    padding: 6px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-xl);
+    transform-origin: top right;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px) scale(0.97);
+    transition: opacity 0.15s ease, transform 0.3s var(--spring), visibility 0.15s;
+}
+
+.kit-menu.start { right: auto; left: 0; transform-origin: top left; }
+.kit-menu.up { top: auto; bottom: calc(100% + 8px); transform: translateY(4px) scale(0.97); transform-origin: bottom right; }
+.kit-menu.up.start { transform-origin: bottom left; }
+
+[dir="rtl"] .kit-menu { right: auto; left: 0; transform-origin: top left; }
+[dir="rtl"] .kit-menu.start { left: auto; right: 0; transform-origin: top right; }
+[dir="rtl"] .kit-menu.up { transform-origin: bottom left; }
+[dir="rtl"] .kit-menu.up.start { transform-origin: bottom right; }
+
+.kit-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.kit-menu-scroll {
+    display: grid;
+    gap: 2px;
+    max-height: min(320px, 60vh);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.kit-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.55rem 0.65rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: none;
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 550;
+    text-align: start;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background var(--transition-base), color var(--transition-base);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .kit-menu-item:hover { background: var(--bg-control); color: var(--text-primary); }
+}
+
+.kit-menu-item:focus-visible { outline: 2px solid var(--primary-teal); outline-offset: -2px; }
+
+.kit-menu-item .check-mark {
+    flex: none;
+    font-size: 18px;
+    opacity: 0;
+    color: var(--primary-teal);
+}
+
+.kit-menu-item.selected {
+    color: var(--text-primary);
+    font-weight: 650;
+}
+
+.kit-menu-item.selected .check-mark { opacity: 1; }
+
 /* Footer: follows the theme, layout is up to each site */
 .footer {
     position: relative;

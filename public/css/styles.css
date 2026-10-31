@@ -8,155 +8,54 @@ html:not(.i18n-loading) body {
     transition: opacity 0.2s ease-in;
 }
 
-/* Language Dropdown (navbar + footer) */
+/* Language dropdown (navbar + footer); the menu itself is the kit menu */
 .lang-dropdown {
     position: relative;
     display: inline-flex;
-}
-
-.lang-trigger-compact.open {
-    background: rgba(30, 90, 168, 0.12);
-    color: var(--primary-blue);
 }
 
 .lang-trigger {
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 100%;
     padding: 8px 14px;
-    border-radius: var(--radius-lg);
     border: none;
-    background: var(--gray-100);
+    border-radius: var(--radius-lg);
+    background: var(--bg-control);
     color: var(--text-secondary);
+    font: inherit;
     font-size: 0.875rem;
     font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: background var(--transition-base), color var(--transition-base);
     white-space: nowrap;
-    width: 100%;
+    cursor: pointer;
+    transition: background var(--transition-base), color var(--transition-base);
     -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .lang-trigger:hover {
-        background: var(--gray-200);
-    }
+    .lang-trigger:hover { background: var(--bg-control-hover); }
 }
 
-.lang-trigger.open {
-    background: rgba(30, 90, 168, 0.12);
+.lang-trigger.open,
+.lang-trigger-compact.open {
+    background: color-mix(in srgb, var(--primary-blue) 14%, transparent);
     color: var(--primary-blue);
 }
 
-.lang-trigger .material-symbols-rounded {
-    font-size: 18px;
-}
+.lang-trigger .material-symbols-rounded { font-size: 18px; }
 
 .lang-trigger .arrow {
-    font-size: 18px;
-    margin-left: auto;
-    transition: transform var(--transition-base);
+    margin-inline-start: auto;
+    transition: transform 0.35s var(--spring);
 }
 
-.lang-trigger.open .arrow {
-    transform: rotate(180deg);
-}
+.lang-trigger.open .arrow { transform: rotate(180deg); }
 
-.lang-menu {
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
-    min-width: 180px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    z-index: 2000;
-    display: none;
-    padding: 0;
-    overflow: hidden;
-    animation: langMenuOpen 0.18s ease;
-}
+/* Above the sticky header */
+.lang-menu { z-index: 2000; }
 
-.lang-menu.open {
-    display: block;
-}
-
-.lang-menu-scroll {
-    max-height: 300px;
-    overflow-y: auto;
-    padding: 4px 0;
-}
-
-.lang-menu-scroll::-webkit-scrollbar {
-    width: 4px;
-}
-
-.lang-menu-scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.lang-menu-scroll::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 4px;
-}
-
-.lang-menu-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 14px;
-    font-size: 0.875rem;
-    color: var(--text-primary);
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border: none;
-    background: none;
-    white-space: nowrap;
-    transition: background var(--transition-base);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .lang-menu-item:hover {
-        background: var(--gray-100);
-    }
-}
-
-.lang-menu-item.selected {
-    background: rgba(30, 90, 168, 0.08);
-    color: var(--primary-blue);
-    font-weight: 600;
-}
-
-.lang-menu-item .check-mark {
-    font-size: 16px;
-    opacity: 0;
-    width: 16px;
-    flex-shrink: 0;
-}
-
-.lang-menu-item.selected .check-mark {
-    opacity: 1;
-}
-
-.lang-menu-item .lang-name {
-    flex: 1;
-}
-
-@keyframes langMenuOpen {
-    from {
-        opacity: 0;
-        transform: scaleY(0.9);
-        transform-origin: top;
-    }
-    to {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-}
+.lang-menu .lang-name { flex: 1; }
 
 /* Hero Section */
 .hero {
@@ -2858,47 +2757,6 @@ html[data-theme] {
         background: var(--primary-blue);
     }
 
-}
-
-[data-theme="dark"] .lang-trigger-compact.open {
-    background: rgba(74, 127, 200, 0.18);
-    color: var(--primary-blue);
-}
-
-[data-theme="dark"] .lang-trigger {
-    background: var(--gray-100);
-    color: var(--text-secondary);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    [data-theme="dark"] .lang-trigger:hover {
-        background: var(--gray-200);
-    }
-}
-
-[data-theme="dark"] .lang-trigger.open {
-    background: rgba(74, 127, 200, 0.18);
-    color: var(--primary-blue);
-}
-
-[data-theme="dark"] .lang-menu {
-    background: var(--gray-100);
-    border-color: var(--border);
-}
-
-[data-theme="dark"] .lang-menu-item {
-    color: var(--text-primary);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    [data-theme="dark"] .lang-menu-item:hover {
-        background: var(--gray-200);
-    }
-}
-
-[data-theme="dark"] .lang-menu-item.selected {
-    background: rgba(74, 127, 200, 0.15);
-    color: var(--primary-blue);
 }
 
 /* Phones: compact cards and a single scrollable row of app tabs */
