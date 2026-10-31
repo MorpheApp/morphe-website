@@ -351,7 +351,6 @@
             });
 
             menu.appendChild(scroll);
-            menu.classList.add('kit-menu');
 
             // Determine if this dropdown is inside the footer (needs fixed positioning to escape overflow:hidden)
             const isFooterDropdown = trigger.closest('.footer') !== null;
