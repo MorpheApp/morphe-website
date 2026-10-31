@@ -19,10 +19,6 @@ html:not(.i18n-loading) body {
     color: var(--primary-blue);
 }
 
-.lang-trigger-compact .material-symbols-rounded {
-    font-size: 20px;
-}
-
 .lang-trigger {
     display: flex;
     align-items: center;
@@ -472,10 +468,8 @@ body.is-mobile-detected .hero-btn-desktop {
 }
 
 /* Shared card transition */
-.feature-card,
 .community-card,
 .feature-slide,
-.testimonial-card,
 .version-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -601,7 +595,6 @@ body.is-mobile-detected .hero-btn-desktop {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     color: var(--gray-600);
@@ -785,7 +778,6 @@ body.is-mobile-detected .hero-btn-desktop {
     background: var(--gray-200);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
-    overflow-x: auto;
     margin-bottom: var(--spacing-xl);
 }
 
@@ -925,22 +917,6 @@ body.is-mobile-detected .hero-btn-desktop {
     margin: 0 auto;
 }
 
-.changelog-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.changelog-filters {
-    display: flex;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-2xl);
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    row-gap: var(--spacing-sm);
-}
-
 .faq-search-container {
     position: relative;
     width: 100%;
@@ -1004,11 +980,9 @@ body.is-mobile-detected .hero-btn-desktop {
 .faq-search-input {
     width: 100%;
     padding: 0.6rem 2.7rem;
-    border-radius: 2rem;
     border: 1.5px solid var(--border);
     background: var(--surface);
     color: var(--text-primary);
-    font-size: 0.95rem;
     font-family: inherit;
     transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
@@ -2443,14 +2417,6 @@ body.is-mobile-detected.add-source-page #state-android .hero-description {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
     .hero-title {
         font-size: 2.5rem;
         white-space: normal;
