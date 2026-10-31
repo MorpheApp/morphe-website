@@ -122,7 +122,6 @@
 
         // Toggle clear button
         if (clearButton) {
-            clearButton.classList.toggle('hidden', query === '');
         }
     }
 

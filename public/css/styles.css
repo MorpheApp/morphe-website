@@ -8,6 +8,17 @@ html:not(.i18n-loading) body {
     transition: opacity 0.2s ease-in;
 }
 
+/* Card fills: a light blue tint in light mode, the plain card colour in dark mode */
+:root {
+    --card-tint: var(--primary-light-blue);
+    --card-plain: var(--bg-page);
+}
+
+[data-theme="dark"] {
+    --card-tint: var(--bg-card);
+    --card-plain: var(--bg-card);
+}
+
 /* Language dropdown (navbar + footer); the menu itself is the kit menu */
 .lang-dropdown {
     position: relative;
@@ -261,7 +272,7 @@ body.is-mobile-detected .hero-btn-desktop {
 }
 
 .feature-slide {
-    background: var(--primary-light-blue);
+    background: var(--card-tint);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
@@ -318,7 +329,7 @@ body.is-mobile-detected .hero-btn-desktop {
 }
 
 .community-card {
-    background: var(--primary-light-blue);
+    background: var(--card-tint);
     border: 1px solid var(--border);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
@@ -387,7 +398,7 @@ body.is-mobile-detected .hero-btn-desktop {
 }
 
 .feature-card {
-    background: var(--primary-light-blue);
+    background: var(--card-tint);
     border: 1px solid var(--border);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
@@ -485,7 +496,7 @@ body.is-mobile-detected .hero-btn-desktop {
 
 .carousel-button {
     position: relative;
-    background: white;
+    background: var(--card-plain);
     border: 1px solid var(--border);
     width: 48px;
     height: 48px;
@@ -496,7 +507,7 @@ body.is-mobile-detected .hero-btn-desktop {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    color: var(--gray-600);
+    color: var(--text-secondary);
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -550,11 +561,11 @@ body.is-mobile-detected .hero-btn-desktop {
 
 .carousel-button:disabled:hover
 .material-symbols-rounded {
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 .testimonial-card {
-    background: var(--primary-light-blue);
+    background: var(--card-tint);
     border: 1px solid var(--border);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
@@ -816,45 +827,7 @@ body.is-mobile-detected .hero-btn-desktop {
     margin: 0 auto;
 }
 
-.faq-search-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-}
-
-.faq-search-container .search-icon {
-    position: absolute;
-    left: 1rem;
-    color: var(--text-tertiary);
-    pointer-events: none;
-    font-size: 1.2rem;
-}
-
-.faq-search-clear {
-    position: absolute;
-    right: 0.8rem;
-    background: none;
-    border: none;
-    padding: 4px;
-    cursor: pointer;
-    color: var(--text-tertiary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color var(--transition-base), background var(--transition-base);
-    border-radius: 50%;
-}
-
-.faq-search-clear:hover {
-    color: var(--text-primary);
-    background: var(--gray-100);
-}
-
-.faq-search-clear.hidden {
-    display: none;
-}
+.faq-search-container { max-width: 600px; }
 
 .faq-no-results {
     text-align: center;
@@ -874,22 +847,6 @@ body.is-mobile-detected .hero-btn-desktop {
 
 .faq-no-results.hidden {
     display: none;
-}
-
-.faq-search-input {
-    width: 100%;
-    padding: 0.6rem 2.7rem;
-    border: 1.5px solid var(--border);
-    background: var(--surface);
-    color: var(--text-primary);
-    font-family: inherit;
-    transition: border-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-.faq-search-input:focus {
-    outline: none;
-    border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.15);
 }
 
 /* FAQ list (FAQ page and home teaser) */
@@ -1022,13 +979,6 @@ body.is-mobile-detected .hero-btn-desktop {
     font-weight: 550;
 }
 
-.faq-search-input {
-    height: 52px;
-    border-radius: 16px;
-    font-size: 1rem;
-    box-shadow: var(--shadow-md);
-}
-
 /* Changelog */
 .changelog-filters {
     display: flex;
@@ -1038,49 +988,6 @@ body.is-mobile-detected .hero-btn-desktop {
     gap: 0.75rem 1.25rem;
     margin-bottom: 2rem;
 }
-
-.filter-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    cursor: pointer;
-    user-select: none;
-}
-
-.filter-toggle input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-}
-
-.toggle-slider {
-    position: relative;
-    width: 38px;
-    height: 22px;
-    border-radius: 999px;
-    background: var(--gray-300);
-    transition: background var(--transition-base);
-}
-
-.toggle-slider::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.4s var(--spring);
-}
-
-.filter-toggle input:checked + .toggle-slider { background: var(--primary-teal); }
-.filter-toggle input:checked + .toggle-slider::before { transform: translateX(16px); }
-.filter-toggle input:focus-visible + .toggle-slider { outline: 2px solid var(--primary-teal); outline-offset: 2px; }
 
 /* Releases hang off one rail, dot coloured by product */
 .changelog-grid {
@@ -1648,7 +1555,7 @@ body.is-mobile-detected .hero-btn-desktop {
 
 /* Backers */
 .donate-backers {
-    background: var(--bg-page);
+    background: var(--card-plain);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
@@ -1753,7 +1660,7 @@ body.is-mobile-detected .hero-btn-desktop {
 }
 
 .donate-avatar-more {
-    background: var(--gray-100);
+    background: var(--bg-control-hover);
     color: var(--text-secondary);
     font-size: 0.75rem;
     font-weight: 600;
@@ -2115,26 +2022,6 @@ body.is-mobile-detected.add-source-page #state-android .hero-description {
 /* QR code link */
 .qr-card {
     margin-bottom: var(--spacing-xl);
-}
-
-.qr-plate {
-    display: inline-flex;
-    padding: var(--spacing-md);
-    background: #ffffff;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
-    margin: 0 auto;
-}
-
-.qr-code {
-    display: block;
-    line-height: 0;
-}
-
-.qr-code svg {
-    width: 176px;
-    height: 176px;
-    display: block;
 }
 
 .qr-module {
@@ -2644,11 +2531,6 @@ html[data-theme] {
     text-align: right;
 }
 
-[dir="rtl"] .toggle-slider::before {
-    left: auto;
-    right: 2px;
-}
-
 [dir="rtl"] .feature-slide-icon {
     margin-left: auto;
     margin-right: 0;
@@ -2674,58 +2556,19 @@ html[data-theme] {
     }
 }
 
-/* Dark theme adjustments */
-[data-theme="dark"] .feature-card {
-    background: var(--bg-card);
-}
-
-[data-theme="dark"] .community-card {
-    background: var(--bg-card);
-}
-
+/* Theme specific: the white icons sit a little softer on dark cards */
 [data-theme="dark"] .community-icon-img {
     filter: brightness(0) invert(1);
     opacity: 0.85;
 }
 
-[data-theme="dark"] .testimonial-card {
-    background: var(--bg-card);
+/* Phones: arrows float over the slides, so they get a frosted fill */
+@media (max-width: 768px) {
+    .carousel-button {
+        background: color-mix(in srgb, var(--card-plain) 80%, transparent);
+        backdrop-filter: blur(10px);
+    }
 }
-
-[data-theme="dark"] .testimonial-card::before {
-    color: var(--gray-200);
-}
-
-[data-theme="dark"] .donate-backers {
-    background: var(--bg-card);
-}
-
-[data-theme="dark"] .donate-sponsors-card {
-    border-color: #d97706;
-}
-
-[data-theme="dark"] .donate-avatar-more {
-    background: var(--gray-200);
-    color: var(--text-secondary);
-}
-
-[data-theme="dark"] .btn-donate {
-    background: rgba(255,255,255,0.95);
-    color: var(--primary-blue);
-}
-
-
-[data-theme="dark"] .carousel-button {
-    background: var(--bg-card);
-    border-color: var(--border);
-    color: var(--text-secondary);
-}
-
-/* App Features Showcase */
-[data-theme="dark"] .feature-slide {
-    background: var(--bg-card);
-}
-
 
 /* Cards keep transform/box-shadow for hover animations */
 .feature-card,
@@ -2739,25 +2582,6 @@ html[data-theme] {
                 box-shadow 0.3s ease;
 }
 
-/* Mobile dark mode adjustments */
-@media (max-width: 768px) {
-    [data-theme="dark"] .carousel-button {
-        background: rgba(39, 39, 42, 0.8);
-        backdrop-filter: blur(10px);
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-    [data-theme="dark"] .carousel-button:hover {
-            background: rgba(39, 39, 42, 0.9);
-    }
-}
-
-    [data-theme="dark"] .carousel-button:active {
-        background: var(--primary-blue);
-    }
-
-}
 
 /* Phones: compact cards and a single scrollable row of app tabs */
 @media (max-width: 600px) {

@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         '.donate-card',
         '.donate-tiers-header',
         '.donate-backers',
-        '.donate-sponsors-card',
         '.community-card',
         '.microg-feature',
         '.translate-step',

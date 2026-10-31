@@ -796,6 +796,173 @@ code, kbd, pre, samp {
 
 .kit-menu-item.selected .check-mark { opacity: 1; }
 
+/* Switch: a <label> around a checkbox, or a <button role="switch" aria-checked> */
+.kit-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.kit-switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.kit-switch-track {
+    position: relative;
+    flex: none;
+    width: 36px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--gray-300);
+    transition: background var(--transition-base);
+}
+
+.kit-switch-track::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    inset-inline-start: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.4s var(--spring);
+}
+
+.kit-switch input:checked + .kit-switch-track,
+.kit-switch[aria-checked="true"] > .kit-switch-track { background: var(--primary-teal); }
+
+.kit-switch input:checked + .kit-switch-track::after,
+.kit-switch[aria-checked="true"] > .kit-switch-track::after { transform: translateX(16px); }
+
+[dir="rtl"] .kit-switch input:checked + .kit-switch-track::after,
+[dir="rtl"] .kit-switch[aria-checked="true"] > .kit-switch-track::after { transform: translateX(-16px); }
+
+.kit-switch input:focus-visible + .kit-switch-track,
+.kit-switch:focus-visible > .kit-switch-track { outline: 2px solid var(--primary-teal); outline-offset: 2px; }
+
+.kit-switch:focus-visible { outline: none; }
+
+/* Search field: icon, input and a clear button that shows once there is text.
+   .kit-search-lg for a page's main search, .kit-search-sm inside panels */
+.kit-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 44px;
+    padding-inline: 0.875rem 0.5rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    color: var(--text-tertiary);
+    cursor: text;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.kit-search:focus-within {
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary-teal) 18%, transparent);
+}
+
+.kit-search-icon { flex: none; font-size: 20px; pointer-events: none; }
+
+.kit-search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.kit-search-input::placeholder { color: var(--text-tertiary); }
+.kit-search-input::-webkit-search-cancel-button { display: none; }
+
+.kit-search-clear {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    transition: opacity 0.15s ease, color var(--transition-base), background var(--transition-base);
+}
+
+.kit-search-clear .material-symbols-rounded { font-size: 20px; }
+
+@media (hover: hover) and (pointer: fine) {
+    .kit-search-clear:hover { color: var(--text-primary); background: var(--bg-control); }
+}
+
+/* Hidden while the input is empty, so the input needs a placeholder */
+.kit-search:has(.kit-search-input:placeholder-shown) .kit-search-clear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.kit-search-lg {
+    height: 60px;
+    padding-inline: 1.25rem 0.75rem;
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+}
+
+.kit-search-lg .kit-search-icon { font-size: 22px; }
+.kit-search-lg .kit-search-input { font-size: 1.1rem; font-weight: 500; }
+
+.kit-search-sm {
+    height: 40px;
+    padding-inline: 0.75rem 0.375rem;
+    border-width: 1px;
+    border-radius: var(--radius-md);
+}
+
+.kit-search-sm .kit-search-icon { font-size: 18px; }
+.kit-search-sm .kit-search-input { font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+    .kit-search-lg { height: 54px; padding-inline: 1rem 0.5rem; }
+}
+
+/* QR plate: a white square that keeps a scannable code readable in both themes. Size with --qr-size */
+.kit-qr {
+    display: inline-grid;
+    place-items: center;
+    width: var(--qr-size, 208px);
+    aspect-ratio: 1;
+    padding: 12px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+    line-height: 0;
+}
+
+.kit-qr svg { display: block; width: 100%; height: 100%; }
+
 /* Footer: follows the theme, layout is up to each site */
 .footer {
     position: relative;
