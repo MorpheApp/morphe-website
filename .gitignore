@@ -1,18 +1,14 @@
-# Default ignored files
-/.idea/**
-/node_modules/**
-
-# Dependencies
+# Dependencies (package-lock.json stays tracked for npm ci)
 node_modules/
-package-lock.json
 
 # Wrangler
 .wrangler/
 .dev.vars
 .mf/
 
-# IDEs
+# IDEs and assistants
 .idea/
+.claude/
 .vscode/
 *.swp
 *.swo
