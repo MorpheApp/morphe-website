@@ -2399,8 +2399,9 @@ body.is-mobile-detected.add-source-page #state-android .hero-description {
         margin-top: 0.25rem;
     }
 
+    /* Same side gutter as the other pages, the filter row bleeds by exactly this much */
     .changelog {
-        padding: var(--spacing-xl) var(--spacing-sm);
+        padding: var(--spacing-xl) var(--spacing-md);
     }
 
     .section-title {
