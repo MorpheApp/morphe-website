@@ -498,7 +498,8 @@ code, kbd, pre, samp {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    /* border-box so the gradient's far edge doesn't repeat along the transparent border */
+    background: var(--gradient-primary) border-box;
     color: white;
     box-shadow: var(--shadow-brand);
 }
