@@ -2943,8 +2943,9 @@ html[data-theme] {
         width: auto;
         max-width: none;
         overflow-x: auto;
-        margin-inline: calc(-1 * var(--spacing-md));
-        padding: 2px var(--spacing-md);
+        /* scroller clips, so pad room for the pill glow and take it back with margins */
+        margin: -8px calc(-1 * var(--spacing-md)) calc(var(--spacing-xl) - 28px);
+        padding: 8px var(--spacing-md) 28px;
         scrollbar-width: none;
     }
 
@@ -3023,8 +3024,9 @@ html[data-theme] {
         justify-content: flex-start;
         max-width: calc(100% + 2 * var(--spacing-md));
         overflow-x: auto;
-        margin-inline: calc(-1 * var(--spacing-md));
-        padding: 2px var(--spacing-md);
+        /* room for the pill glow, same as the app tabs */
+        margin: -8px calc(-1 * var(--spacing-md)) -28px;
+        padding: 8px var(--spacing-md) 28px;
         scrollbar-width: none;
     }
 
