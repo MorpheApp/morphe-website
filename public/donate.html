@@ -6,14 +6,15 @@
     <meta name="description" content="Support Morphe with a donation and help fund ongoing development, updates, and new features. Your contribution keeps the project growing.">
     <title>Support Morphe - Donate</title>
     <!-- Theme preloader -->
-    <script src="js/theme-preload.js"></script>
+    <script src="kit/theme-preload.js"></script>
     <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400..900&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..40,400..600,0..1,0&icon_names=apk_install,app_registration,apps,arrow_forward,arrow_upward,auto_awesome,block,bookmark,bug_report,build,calendar_today,check,chevron_left,chevron_right,close,code,coffee,comments_disabled,content_copy,contextual_token,dark_mode,dns,download,edit,emoji_events,expand_more,extension,favorite,group,help,home,info,install_desktop,language,light_mode,link,lock,menu,monitor,music_note,new_releases,notes,notifications,open_in_new,palette,photo_camera,privacy_tip,public,quiz,repeat,rocket_launch,schedule,search,search_off,settings_applications,shield,speed,star,swipe,table_rows,thumb_up,translate,update,volunteer_activism,warning&display=block">
+    <link rel="stylesheet" href="kit/kit.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="icon" href="favicon.ico"/>
@@ -131,7 +132,7 @@
                     <a href="https://opencollective.com/morpheapp/donate"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="donate-tier"
+                       class="donate-tier lit"
                        style="--tier-accent: var(--primary-teal);"
                        data-umami-event="OC Tier OneTime Click">
                         <div class="donate-tier-emoji"><span class="material-symbols-rounded">coffee</span></div>
@@ -149,7 +150,7 @@
                     <a href="https://opencollective.com/morpheapp/contribute/backers-100541/checkout"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="donate-tier featured"
+                       class="donate-tier featured lit"
                        style="--tier-accent: var(--primary-blue);"
                        data-umami-event="OC Tier Monthly Click">
                         <div class="donate-tier-badge" data-i18n="donate.tier-popular">Popular</div>
@@ -166,7 +167,7 @@
                     <a href="https://opencollective.com/morpheapp/contribute/sponsors-100542/checkout"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="donate-tier"
+                       class="donate-tier lit"
                        style="--tier-accent: #f59e0b;"
                        data-umami-event="OC Tier Sponsor Click">
                         <div class="donate-tier-emoji"><span class="material-symbols-rounded">emoji_events</span></div>
@@ -187,6 +188,7 @@
                     <div class="donate-backers-title">
                         <span class="material-symbols-rounded">favorite</span>
                         <span data-i18n="donate.backers-title">Our backers</span>
+                        <span class="donate-backers-count" id="donate-backers-count" hidden></span>
                     </div>
                     <a href="https://opencollective.com/morpheapp#section-contributors"
                        target="_blank"
@@ -197,6 +199,8 @@
                         <span class="material-symbols-rounded">open_in_new</span>
                     </a>
                 </div>
+                <p class="donate-backers-thanks" data-i18n="donate.backers-thanks">Every backer helps keep Morphe free and open. Thank you all.</p>
+                <div class="donate-spotlight" id="donate-spotlight" hidden></div>
                 <div class="donate-avatars" id="donate-avatars">
                     <div id="donate-state-loading" data-i18n="donate.backers-loading">Loading…</div>
                     <div id="donate-state-empty" data-i18n="donate.backers-empty" hidden>Be the first to support Morphe!</div>
@@ -255,7 +259,7 @@
                     <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
                          alt="DMCA.com Protection Status" />
                 </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" defer></script>
             </div>
 
             <!-- Navigation columns -->
@@ -297,7 +301,7 @@
     </div>
 </footer>
 
-<script src="js/theme-manager.js"></script>
+<script src="kit/kit.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script src="js/donate.js"></script>

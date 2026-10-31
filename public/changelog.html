@@ -6,14 +6,15 @@
     <meta name="description" content="Morphe What's New - Latest updates for Manager and Patches">
     <title>What's New - Morphe</title>
     <!-- Theme preloader -->
-    <script src="js/theme-preload.js"></script>
+    <script src="kit/theme-preload.js"></script>
     <!-- Language preloader -->
     <script src="js/lang-preload.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400..900&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..40,400..600,0..1,0&icon_names=apk_install,app_registration,apps,arrow_forward,arrow_upward,auto_awesome,block,bookmark,bug_report,build,calendar_today,check,chevron_left,chevron_right,close,code,coffee,comments_disabled,content_copy,contextual_token,dark_mode,dns,download,edit,emoji_events,expand_more,extension,favorite,group,help,home,info,install_desktop,language,light_mode,link,lock,menu,monitor,music_note,new_releases,notes,notifications,open_in_new,palette,photo_camera,privacy_tip,public,quiz,repeat,rocket_launch,schedule,search,search_off,settings_applications,shield,speed,star,swipe,table_rows,thumb_up,translate,update,volunteer_activism,warning&display=block">
+    <link rel="stylesheet" href="kit/kit.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
     <link rel="icon" href="favicon.ico"/>
@@ -89,7 +90,7 @@
 
         <!-- Filters -->
         <div class="changelog-filters">
-            <div class="filter-buttons">
+            <div class="filter-buttons pill-tabs brand" role="tablist">
                 <button class="filter-btn active" data-filter="all" data-umami-event="Changelog Filter All">
                     <span data-i18n="changelog.filter-all">All</span>
                 </button>
@@ -104,9 +105,9 @@
                 </button>
             </div>
 
-            <label class="filter-toggle">
+            <label class="kit-switch">
                 <input type="checkbox" id="show-dev" role="switch" data-umami-event="Changelog Toggle Dev">
-                <span class="toggle-slider"></span>
+                <span class="kit-switch-track"></span>
                 <span class="toggle-label" data-i18n="changelog.show-dev">Show pre-releases</span>
             </label>
         </div>
@@ -177,7 +178,7 @@
                     <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=58df7b1f-ce9f-4a91-9b07-c79cf576230b"
                          alt="DMCA.com Protection Status" />
                 </a>
-                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" defer></script>
             </div>
 
             <!-- Navigation columns -->
@@ -224,7 +225,7 @@
     <span class="material-symbols-rounded">arrow_upward</span>
 </button>
 
-<script src="js/theme-manager.js"></script>
+<script src="kit/kit.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/changelog.js"></script>
 <script src="js/main.js"></script>
