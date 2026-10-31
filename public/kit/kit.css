@@ -699,7 +699,7 @@ code, kbd, pre, samp {
     outline-color: transparent;
 }
 
-.pill-tabs .pill {
+.pill-tabs .kit-pill {
     position: absolute;
     z-index: -1;
     border-radius: 2rem;
@@ -709,7 +709,7 @@ code, kbd, pre, samp {
     transition: left 0.5s var(--spring), top 0.5s var(--spring), width 0.5s var(--spring), height 0.5s var(--spring), background 0.5s ease;
 }
 
-.pill-tabs.brand .pill {
+.pill-tabs.brand .kit-pill {
     background: var(--gradient-primary);
     box-shadow: var(--shadow-brand);
 }

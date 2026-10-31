@@ -175,7 +175,7 @@
 
     // Pill tabs: the gradient pill slides to the active tab
     function placePill(group) {
-        const pill = group.querySelector(':scope > .pill');
+        const pill = group.querySelector(':scope > .kit-pill');
         const active = group.querySelector(':scope > button.active, :scope > button[aria-selected="true"]');
         if (!pill || !active || !group.offsetParent) return;
         pill.style.left = active.offsetLeft + 'px';
@@ -186,9 +186,9 @@
 
     function setupPillTabs(root) {
         (root || document).querySelectorAll('.pill-tabs').forEach(group => {
-            if (!group.querySelector(':scope > .pill')) {
+            if (!group.querySelector(':scope > .kit-pill')) {
                 const pill = document.createElement('span');
-                pill.className = 'pill';
+                pill.className = 'kit-pill';
                 pill.setAttribute('aria-hidden', 'true');
                 group.prepend(pill);
             }
