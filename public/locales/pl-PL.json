@@ -290,7 +290,9 @@
     "older-releases": "Szukasz starszych wersji?",
     "view-manager": "Zobacz wydania menedżera",
     "view-desktop": "Zobacz wydania na komputer",
-    "view-patches": "Zobacz wydania modyfikacji"
+    "view-patches": "Zobacz wydania modyfikacji",
+    "no-results": "Nie znaleziono wydań dla bieżących filtrów.",
+    "no-results-hint": "Zmień filtry lub pokaż wersje przedpremierowe."
   },
   "add-source": {
     "subtitle": "Czy chcesz dodać to źródło modyfikacji do Morphe?",

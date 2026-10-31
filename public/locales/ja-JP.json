@@ -234,7 +234,9 @@
     "older-releases": "過去のバージョンをお探しですか？",
     "view-manager": "マネージャーのバージョン一覧を見る",
     "view-desktop": "Desktopのバージョン一覧を見る",
-    "view-patches": "パッチのバージョン一覧を見る"
+    "view-patches": "パッチのバージョン一覧を見る",
+    "no-results": "現在のフィルターに一致するリリースはありません。",
+    "no-results-hint": "フィルターを変更するか、プレリリース版を表示してください。"
   },
   "app-features": {
     "title": "アプリの機能",

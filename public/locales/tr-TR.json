@@ -234,7 +234,9 @@
     "older-releases": "Eski sürümleri mi arıyorsunuz?",
     "view-manager": "Manager sürümlerini görüntüle",
     "view-desktop": "Desktop sürümlerini görüntüle",
-    "view-patches": "Yamalar sürümlerini görüntüle"
+    "view-patches": "Yamalar sürümlerini görüntüle",
+    "no-results": "Mevcut filtrelerle eşleşen sürüm bulunamadı.",
+    "no-results-hint": "Filtreleri değiştirmeyi veya ön sürümleri göstermeyi deneyin."
   },
   "app-features": {
     "title": "Uygulama Özellikleri",

@@ -290,7 +290,9 @@
     "older-releases": "Vill du se äldre versioner?",
     "view-manager": "Visa Manager-versioner",
     "view-desktop": "Visa Desktop-versioner",
-    "view-patches": "Visa tilläggsversioner"
+    "view-patches": "Visa tilläggsversioner",
+    "no-results": "Inga versioner hittades med nuvarande filter.",
+    "no-results-hint": "Justera filtren eller visa förhandsversioner."
   },
   "add-source": {
     "subtitle": "Vill du lägga till den här tilläggskällan i Morphe?",

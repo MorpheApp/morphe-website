@@ -270,7 +270,7 @@
             noResults.innerHTML =
                 '<p data-i18n="changelog.no-results">No releases found with current filters.</p>' +
                 '<p style="margin-top: var(--spacing-sm); font-size: 0.875rem; color: var(--text-tertiary);" ' +
-                'data-i18n="changelog.no-results-hint">Try adjusting your filters or enable dev releases.</p>';
+                'data-i18n="changelog.no-results-hint">Try adjusting your filters or show pre-releases.</p>';
             content.appendChild(noResults);
         }
     }

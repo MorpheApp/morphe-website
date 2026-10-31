@@ -234,7 +234,9 @@
     "older-releases": "Op zoek naar oudere releases?",
     "view-manager": "Manager-releases bekijken",
     "view-desktop": "Desktop-releases bekijken",
-    "view-patches": "Patches-releases bekijken"
+    "view-patches": "Patches-releases bekijken",
+    "no-results": "Geen releases gevonden met de huidige filters.",
+    "no-results-hint": "Pas de filters aan of toon vooruitgebrachte releases."
   },
   "app-features": {
     "title": "App-functies",

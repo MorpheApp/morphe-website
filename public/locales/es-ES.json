@@ -234,7 +234,9 @@
     "older-releases": "¿Buscas versiones anteriores?",
     "view-manager": "Ver versiones de Manager",
     "view-desktop": "Ver versiones de Desktop",
-    "view-patches": "Ver versiones de Parches"
+    "view-patches": "Ver versiones de Parches",
+    "no-results": "No se encontraron versiones con los filtros actuales.",
+    "no-results-hint": "Prueba a ajustar los filtros o a mostrar las versiones previas."
   },
   "app-features": {
     "title": "Funciones de la App",

@@ -32,6 +32,8 @@ const JS_ONLY_KEYS = [
   'add-source.blocked-reason-test',
   'add-source.blocklist-updated',
   'add-source.desktop-copy-link-done',
+  'changelog.no-results',
+  'changelog.no-results-hint',
 ];
 
 /**

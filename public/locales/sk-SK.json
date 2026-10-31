@@ -234,7 +234,9 @@
     "older-releases": "Hľadáte staršie verzie?",
     "view-manager": "Zobraziť verzie správcu",
     "view-desktop": "Zobraziť verzie Desktop",
-    "view-patches": "Zobraziť verzie záplat"
+    "view-patches": "Zobraziť verzie záplat",
+    "no-results": "Pre aktuálne filtre sa nenašli žiadne vydania.",
+    "no-results-hint": "Skúste upraviť filtre alebo zobraziť predbežné verzie."
   },
   "app-features": {
     "title": "Funkcie Aplikácie",
