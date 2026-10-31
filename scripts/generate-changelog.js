@@ -196,11 +196,11 @@ function parseMarkdown(text) {
 
 function parseLinks(text, repoUrl) {
     text = text.replace(/\(#(\d+)\)/g, (match, issue) => {
-        return `(<a href="${repoUrl}/issues/${issue}" target="_blank" rel="noopener noreferrer">#${issue}</a>)`;
+        return `<a class="change-ref" href="${repoUrl}/issues/${issue}" target="_blank" rel="noopener noreferrer">#${issue}</a>`;
     });
 
     text = text.replace(/\(([a-f0-9]{7,8})\)/g, (match, commit) => {
-        return `(<a href="${repoUrl}/commit/${commit}" target="_blank" rel="noopener noreferrer">${commit}</a>)`;
+        return `<a class="change-ref" href="${repoUrl}/commit/${commit}" target="_blank" rel="noopener noreferrer">${commit}</a>`;
     });
 
     return text;

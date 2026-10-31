@@ -276,7 +276,8 @@
     "backers-title": "我們的贊助者",
     "backers-all": "查看全部",
     "backers-loading": "載入中…",
-    "backers-empty": "成為第一位贊助 Morphe 的人！"
+    "backers-empty": "成為第一位贊助 Morphe 的人！",
+    "backers-thanks": "每一位支持者都在幫助 Morphe 保持免費與開放。感謝大家。"
   },
   "changelog": {
     "title": "更新內容",
@@ -289,7 +290,9 @@
     "older-releases": "想找更早的版本嗎？",
     "view-manager": "檢視管理程式版本",
     "view-desktop": "檢視桌面版版本",
-    "view-patches": "檢視修補版本"
+    "view-patches": "檢視修補版本",
+    "no-results": "沒有符合目前篩選條件的版本。",
+    "no-results-hint": "請調整篩選條件或顯示預先發行版本。"
   },
   "add-source": {
     "subtitle": "是否要將此修補來源新增到 Morphe？",

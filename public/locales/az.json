@@ -276,7 +276,8 @@
     "backers-title": "Dəstəkçilərimiz",
     "backers-all": "Hamısına bax",
     "backers-loading": "Yüklənir…",
-    "backers-empty": "Morphe-ni dəstəkləyən ilk siz olun!"
+    "backers-empty": "Morphe-ni dəstəkləyən ilk siz olun!",
+    "backers-thanks": "Hər bir dəstəkçi Morphe-nin pulsuz və açıq qalmasına kömək edir. Hamınıza təşəkkür edirik."
   },
   "changelog": {
     "title": "Yeniliklər nələrdir",
@@ -289,7 +290,9 @@
     "older-releases": "Köhnə buraxılışları axtarırsınız?",
     "view-manager": "Menecer Buraxılışlarına Bax",
     "view-desktop": "Masaüstü Buraxılışlarına Bax",
-    "view-patches": "Yamalar Buraxılışlarına Bax"
+    "view-patches": "Yamalar Buraxılışlarına Bax",
+    "no-results": "Cari filtrlərə uyğun buraxılış tapılmadı.",
+    "no-results-hint": "Filtrləri dəyişin və ya ilkin buraxılışları göstərin."
   },
   "add-source": {
     "subtitle": "Bu yamaq mənbəsini Morphe-yə əlavə etmək istəyirsiniz?",

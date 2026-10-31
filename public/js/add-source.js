@@ -63,7 +63,7 @@
     // Set source icon
     var iconImg = document.getElementById('source-icon');
     if (iconImg) {
-        var avatarUrl = 'http://api.morphe.software/v2/avatar/' + repoOwner;
+        var avatarUrl = 'https://api.morphe.software/v2/avatar/' + repoOwner;
         iconImg.src = avatarUrl;
         iconImg.alt = repoOwner;
 

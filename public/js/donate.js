@@ -102,7 +102,17 @@
             return dateA - dateB;
         });
 
-        var allBackers = megaSupporters.concat(otherBackers);
+        var countEl = document.getElementById('donate-backers-count');
+        if (countEl && totalCount) {
+            countEl.textContent = totalCount.toLocaleString();
+            countEl.hidden = false;
+        }
+
+        renderSpotlight(megaSupporters);
+        // A few rows are enough; the rest sit behind the "+N" link to Open Collective
+        var cap = window.matchMedia('(max-width: 600px)').matches ? 35 : 119;
+        var allBackers = otherBackers.slice(0, cap);
+        var hiddenBackers = otherBackers.length - allBackers.length;
 
         allBackers.forEach(function (node) {
             var account = node.account;
@@ -116,14 +126,7 @@
             a.className = isMega ? 'donate-avatar donate-avatar-mega' : 'donate-avatar';
             a.title     = (isMega ? 'Mega Supporter: ' : 'Backer: ') + displayName;
 
-            if (isMega) {
-                var trophy = document.createElement('span');
-                trophy.className = 'material-symbols-rounded mega-trophy';
-                trophy.textContent = 'emoji_events';
-                a.appendChild(trophy);
-            }
-
-            if (account.imageUrl) {
+            if (account.imageUrl && hasOwnAvatar(account.imageUrl)) {
                 var img     = document.createElement('img');
                 img.src     = account.imageUrl;
                 img.alt     = displayName;
@@ -136,15 +139,13 @@
                 };
                 a.appendChild(img);
             } else {
-                var initials = document.createElement('span');
-                initials.textContent = displayName[0].toUpperCase();
-                a.appendChild(initials);
+                fillPlaceholder(a, displayName, account.slug);
             }
 
             container.appendChild(a);
         });
 
-        var remaining = Math.max(0, totalCount - validNodesCount);
+        var remaining = Math.max(0, totalCount - validNodesCount) + hiddenBackers;
         if (remaining > 0) {
             var more = document.createElement('a');
             more.href       = 'https://opencollective.com/morpheapp#section-contributors';
@@ -155,6 +156,109 @@
             more.title      = remaining + ' more backers';
             container.appendChild(more);
         }
+    }
+
+    // Uploaded avatars carry a hash segment (/slug/227f30c/avatar/...); generated ones do not
+    function hasOwnAvatar(url) {
+        return /\/[0-9a-f]{6,}\/avatar\//i.test(url);
+    }
+
+    var ANONYMOUS = /^(guest|incognito|anonymous|backer|)$/i;
+    var TINTS = 6;
+
+    // Generated avatars become a soft brand tint with an initial, or a heart for anonymous backers
+    function fillPlaceholder(el, name, seed) {
+        var clean = (name || '').trim();
+        // Seed by account so many "Guest" backers do not all share one colour
+        var key = seed || clean;
+        var hash = 0;
+        for (var i = 0; i < key.length; i++) hash = (hash * 31 + key.charCodeAt(i)) >>> 0;
+        el.classList.add('donate-avatar-placeholder', 'tint-' + (hash % TINTS));
+        if (ANONYMOUS.test(clean)) {
+            var heart = document.createElement('span');
+            heart.className = 'material-symbols-rounded';
+            heart.textContent = 'favorite';
+            el.appendChild(heart);
+        } else {
+            var initial = document.createElement('span');
+            initial.textContent = clean[0].toUpperCase();
+            el.appendChild(initial);
+        }
+    }
+
+    // Top supporters sit above the grid with their own card
+    function renderSpotlight(nodes) {
+        var box = document.getElementById('donate-spotlight');
+        if (!box || !nodes.length) return;
+        var lang = (window.i18n && window.i18n.getCurrentLanguage && window.i18n.getCurrentLanguage()) || document.documentElement.lang || 'en';
+        var label = (window.i18n && window.i18n.translate && window.i18n.translate('donate.tier3-name')) || 'Mega Supporter';
+        if (label === 'donate.tier3-name') label = 'Mega Supporter';
+
+        nodes.forEach(function (node) {
+            var account = node.account;
+            var name = (account.name && account.name.trim()) || 'Backer';
+            var card = document.createElement('a');
+            card.className = 'donate-spotlight-card';
+            card.href = account.website || ('https://opencollective.com/' + (account.slug || ''));
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+            card.setAttribute('data-umami-event', 'Mega Supporter Click');
+
+            var ring = document.createElement('span');
+            ring.className = 'spotlight-ring';
+            var face = document.createElement('span');
+            face.className = 'spotlight-face';
+            if (account.imageUrl && hasOwnAvatar(account.imageUrl)) {
+                var img = document.createElement('img');
+                img.src = account.imageUrl;
+                img.alt = '';
+                img.onerror = function () { this.remove(); face.textContent = name[0].toUpperCase(); };
+                face.appendChild(img);
+            } else {
+                face.textContent = name[0].toUpperCase();
+            }
+            ring.appendChild(face);
+
+            var info = document.createElement('span');
+            info.className = 'spotlight-info';
+
+            var badge = document.createElement('span');
+            badge.className = 'spotlight-badge';
+            badge.innerHTML = '<span class="material-symbols-rounded">emoji_events</span>';
+            var badgeText = document.createElement('span');
+            badgeText.setAttribute('data-i18n', 'donate.tier3-name');
+            badgeText.textContent = label;
+            badge.appendChild(badgeText);
+
+            var title = document.createElement('span');
+            title.className = 'spotlight-name';
+            title.textContent = name;
+
+            info.appendChild(badge);
+            info.appendChild(title);
+
+            if (node.createdAt) {
+                var since = document.createElement('span');
+                since.className = 'spotlight-since';
+                var date = new Date(node.createdAt);
+                var text = isNaN(date) ? '' : new Intl.DateTimeFormat(lang, { month: 'short', year: 'numeric' }).format(date);
+                if (text) {
+                    since.innerHTML = '<span class="material-symbols-rounded">favorite</span>';
+                    since.appendChild(document.createTextNode(text));
+                    info.appendChild(since);
+                }
+            }
+
+            var go = document.createElement('span');
+            go.className = 'material-symbols-rounded spotlight-go';
+            go.textContent = 'open_in_new';
+
+            card.appendChild(ring);
+            card.appendChild(info);
+            card.appendChild(go);
+            box.appendChild(card);
+        });
+        box.hidden = false;
     }
 
     function onFail() {

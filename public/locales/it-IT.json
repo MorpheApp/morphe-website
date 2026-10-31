@@ -179,7 +179,8 @@
     "backers-title": "I nostri sostenitori",
     "backers-all": "Vedi tutti",
     "backers-loading": "Caricamento…",
-    "backers-empty": "Sii il primo a supportare Morphe!"
+    "backers-empty": "Sii il primo a supportare Morphe!",
+    "backers-thanks": "Ogni sostenitore aiuta a mantenere Morphe gratuito e aperto. Grazie a tutti."
   },
   "microg": {
     "title": "Scarica",
@@ -233,7 +234,9 @@
     "older-releases": "Cerchi versioni precedenti?",
     "view-manager": "Visualizza versioni Manager",
     "view-desktop": "Visualizza versioni Desktop",
-    "view-patches": "Visualizza versioni Patch"
+    "view-patches": "Visualizza versioni Patch",
+    "no-results": "Nessuna versione trovata con i filtri attuali.",
+    "no-results-hint": "Prova a modificare i filtri o a mostrare le anteprime."
   },
   "app-features": {
     "title": "Funzionalità dell'App",

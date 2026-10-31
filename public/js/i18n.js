@@ -330,12 +330,13 @@
             if (!trigger || !menu) return;
 
             const scroll = document.createElement('div');
-            scroll.className = 'lang-menu-scroll';
+            scroll.className = 'kit-menu-scroll kit-scroll';
 
             SUPPORTED_LOCALES.forEach(locale => {
                 const btn = document.createElement('button');
                 btn.type = 'button';
-                btn.className = 'lang-menu-item' + (locale.code === this.currentLang ? ' selected' : '');
+                btn.className = 'kit-menu-item lang-menu-item' + (locale.code === this.currentLang ? ' selected' : '');
+                btn.setAttribute('role', 'option');
                 btn.setAttribute('data-code', locale.code);
                 btn.innerHTML =
                     '<span class="material-symbols-rounded check-mark">check</span>' +
@@ -362,29 +363,32 @@
                 menu.style.left = 'auto';
                 menu.style.right = 'auto';
                 menu.style.minWidth = '200px';
+                // Lines up with the trigger's start edge, so it grows out of that corner
+                menu.classList.add('start');
             }
 
             const positionMenu = () => {
                 if (!isFooterDropdown) return;
                 const rect = trigger.getBoundingClientRect();
-                const menuHeight = Math.min(320, SUPPORTED_LOCALES.length * 37 + 8);
+                const menuHeight = Math.min(334, SUPPORTED_LOCALES.length * 38 + 14);
                 const spaceAbove = rect.top;
                 const spaceBelow = window.innerHeight - rect.bottom;
 
                 // Prefer opening upward since trigger is at the bottom of the page
-                if (spaceAbove > menuHeight || spaceAbove > spaceBelow) {
+                const up = spaceAbove > menuHeight || spaceAbove > spaceBelow;
+                menu.classList.toggle('up', up);
+                if (up) {
                     menu.style.bottom = (window.innerHeight - rect.top + 6) + 'px';
                     menu.style.top = 'auto';
                 } else {
                     menu.style.top = (rect.bottom + 6) + 'px';
                     menu.style.bottom = 'auto';
                 }
-                // Align left edge with trigger, but keep inside viewport
-                let left = rect.left;
-                const menuWidth = 200;
-                if (left + menuWidth > window.innerWidth - 8) {
-                    left = window.innerWidth - menuWidth - 8;
-                }
+                // Line up with the trigger's start edge, but keep inside the viewport
+                const menuWidth = menu.offsetWidth || 200;
+                const rtl = document.documentElement.dir === 'rtl';
+                let left = rtl ? rect.right - menuWidth : rect.left;
+                left = Math.max(8, Math.min(left, window.innerWidth - menuWidth - 8));
                 menu.style.left = left + 'px';
             };
 
@@ -397,6 +401,9 @@
                     positionMenu();
                     menu.classList.add('open');
                     trigger.classList.add('open');
+                    // Start with the current language in view
+                    const selected = scroll.querySelector('.selected');
+                    if (selected) scroll.scrollTop = selected.offsetTop - (scroll.clientHeight - selected.offsetHeight) / 2;
                 }
             });
 

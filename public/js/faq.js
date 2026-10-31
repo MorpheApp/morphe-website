@@ -66,6 +66,23 @@
         });
     });
 
+    faqItems.forEach(item => {
+        item.classList.add('lit');
+        // Questions and answers come from the docs in English; keep their own direction on RTL pages
+        item.querySelector('.faq-text')?.setAttribute('dir', 'auto');
+        item.querySelector('.faq-answer')?.setAttribute('dir', 'auto');
+    });
+
+    // Item count beside each section title
+    faqSections.forEach(section => {
+        const title = section.querySelector('.faq-section-title');
+        if (!title || title.querySelector('.faq-count')) return;
+        const count = document.createElement('span');
+        count.className = 'faq-count';
+        count.textContent = section.querySelectorAll('.faq-item').length;
+        title.appendChild(count);
+    });
+
     let currentSearchQuery = '';
 
     // --- Search Logic ---
@@ -105,7 +122,6 @@
 
         // Toggle clear button
         if (clearButton) {
-            clearButton.classList.toggle('hidden', query === '');
         }
     }
 

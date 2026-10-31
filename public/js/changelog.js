@@ -52,6 +52,10 @@
         }
 
         init() {
+            document.querySelectorAll('.version-card').forEach(card => card.classList.add('lit'));
+            // Release notes are English; keep them left to right on RTL pages
+            document.querySelectorAll('.change-list li, .change-category').forEach(el => el.setAttribute('dir', 'auto'));
+            this.collapseLongLists();
             this.setupFilters();
             this.setupToggle();
             this.setupI18nIntegration();
@@ -77,20 +81,50 @@
             }
         }
 
+        /**
+         * Long releases show their first items; a "+N" chip reveals the rest.
+         * The chip has no words, so it reads the same in every language.
+         */
+        collapseLongLists() {
+            const LIMIT = 6;
+            document.querySelectorAll('.version-card .change-list').forEach(list => {
+                const items = list.children;
+                if (items.length <= LIMIT + 2) return;
+                for (let i = LIMIT; i < items.length; i++) items[i].classList.add('is-extra');
+                const more = document.createElement('button');
+                more.type = 'button';
+                more.className = 'change-more';
+                more.setAttribute('aria-expanded', 'false');
+                more.innerHTML = `+${items.length - LIMIT}<span class="material-symbols-rounded">expand_more</span>`;
+                more.addEventListener('click', () => {
+                    list.classList.add('expanded');
+                    more.remove();
+                });
+                list.after(more);
+            });
+        }
+
         setupFilters() {
             const filterButtons = document.querySelectorAll('.filter-btn');
 
+            if (filterButtons[0] && window.kit) {
+                requestAnimationFrame(() => window.kit.setupPillTabs(filterButtons[0].parentElement.parentElement));
+            }
             filterButtons.forEach(button => {
                 // Set active state from saved filter
                 button.classList.toggle('active', button.dataset.filter === this.currentFilter);
+                button.setAttribute('aria-selected', button.dataset.filter === this.currentFilter);
 
                 button.addEventListener('click', () => {
                     this.currentFilter = button.dataset.filter;
                     localStorage.setItem(STORAGE_KEY_FILTER, this.currentFilter);
 
                     // Update active states
-                    filterButtons.forEach(b => b.classList.remove('active'));
-                    button.classList.add('active');
+                    filterButtons.forEach(b => {
+                        b.classList.toggle('active', b === button);
+                        b.setAttribute('aria-selected', b === button);
+                    });
+                    if (window.kit) window.kit.placePill(button.parentElement);
 
                     this.applyFilters();
                 });
@@ -236,7 +270,7 @@
             noResults.innerHTML =
                 '<p data-i18n="changelog.no-results">No releases found with current filters.</p>' +
                 '<p style="margin-top: var(--spacing-sm); font-size: 0.875rem; color: var(--text-tertiary);" ' +
-                'data-i18n="changelog.no-results-hint">Try adjusting your filters or enable dev releases.</p>';
+                'data-i18n="changelog.no-results-hint">Try adjusting your filters or show pre-releases.</p>';
             content.appendChild(noResults);
         }
     }

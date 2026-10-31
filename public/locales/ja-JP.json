@@ -179,7 +179,8 @@
     "backers-title": "支援者一覧",
     "backers-all": "すべて表示",
     "backers-loading": "読み込み中…",
-    "backers-empty": "最初にMorpheを支援しましょう！"
+    "backers-empty": "最初にMorpheを支援しましょう！",
+    "backers-thanks": "皆さまのご支援が Morphe を無料でオープンなまま保っています。本当にありがとうございます。"
   },
   "microg": {
     "title": "ダウンロード:",
@@ -233,7 +234,9 @@
     "older-releases": "過去のバージョンをお探しですか？",
     "view-manager": "マネージャーのバージョン一覧を見る",
     "view-desktop": "Desktopのバージョン一覧を見る",
-    "view-patches": "パッチのバージョン一覧を見る"
+    "view-patches": "パッチのバージョン一覧を見る",
+    "no-results": "現在のフィルターに一致するリリースはありません。",
+    "no-results-hint": "フィルターを変更するか、プレリリース版を表示してください。"
   },
   "app-features": {
     "title": "アプリの機能",

@@ -1,10 +1,6 @@
 // App Features Carousel — configuration constants
 // To add a new app: add an entry to APP_CONFIG
 const APP_CONFIG = {
-    // Shared gradient endpoints (mid + end are the same for all apps)
-    GRADIENT_MID: '#1E5AA8',
-    GRADIENT_END: '#00AFAE',
-
     // Autoplay interval in milliseconds. Set to 0 to disable autoplay.
     AUTOPLAY_MS: 0,
 
@@ -15,13 +11,6 @@ const APP_CONFIG = {
         reddit:   { accent: '#FF4500' },
     }
 };
-
-// Build a CSS gradient string for a given app id
-function appGradient(appId) {
-    const cfg = APP_CONFIG.apps[appId];
-    if (!cfg) return `linear-gradient(135deg, ${APP_CONFIG.GRADIENT_MID}, ${APP_CONFIG.GRADIENT_END})`;
-    return `linear-gradient(135deg, ${cfg.accent}, ${APP_CONFIG.GRADIENT_MID}, ${APP_CONFIG.GRADIENT_END})`;
-}
 
 // Carousel logic
 (function () {
@@ -37,30 +26,12 @@ function appGradient(appId) {
     function getCount() { return pages.length; }
 
     function applyAppTheme(appId) {
-        const gradient = appGradient(appId);
-
-        // Active tab background
-        tabs.forEach(tab => {
-            if (tab.dataset.app === appId) {
-                tab.style.background = gradient;
-                tab.style.borderColor = 'transparent';
-                tab.style.color = 'white';
-                tab.style.boxShadow = '0 4px 16px rgba(0,0,0,0.18)';
-            } else {
-                tab.style.background = '';
-                tab.style.borderColor = '';
-                tab.style.color = '';
-                tab.style.boxShadow = '';
-            }
-        });
-
-        // Feature slide icons on the active page
-        const activePage = pages[currentIndex];
-        if (activePage) {
-            activePage.querySelectorAll('.feature-slide-icon').forEach(icon => {
-                icon.style.background = gradient;
-            });
-        }
+        const cfg = APP_CONFIG.apps[appId];
+        // The section owns --accent; the tab pill and the icon tiles read it
+        const section = panel.closest('.features-section');
+        if (section && cfg) section.style.setProperty('--accent', cfg.accent);
+        const group = tabs[0] && tabs[0].parentElement;
+        if (group && window.kit) window.kit.placePill(group);
     }
 
     function goTo(index, animate = true) {

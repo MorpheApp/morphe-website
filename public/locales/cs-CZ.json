@@ -179,7 +179,8 @@
     "backers-title": "Naši přispěvatelé",
     "backers-all": "Zobrazit vše",
     "backers-loading": "Načítání…",
-    "backers-empty": "Buďte první, kdo podpoří Morphe!"
+    "backers-empty": "Buďte první, kdo podpoří Morphe!",
+    "backers-thanks": "Každý podporovatel pomáhá udržet Morphe zdarma a otevřený. Děkujeme vám všem."
   },
   "microg": {
     "title": "Stáhnout",
@@ -233,7 +234,9 @@
     "older-releases": "Hledáte starší verze?",
     "view-manager": "Zobrazit verze Správce",
     "view-desktop": "Zobrazit verze Desktop",
-    "view-patches": "Zobrazit verze záplat"
+    "view-patches": "Zobrazit verze záplat",
+    "no-results": "S aktuálními filtry nebyla nalezena žádná vydání.",
+    "no-results-hint": "Zkuste upravit filtry nebo zobrazit předběžné verze."
   },
   "app-features": {
     "title": "Funkce Aplikace",

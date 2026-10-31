@@ -276,7 +276,8 @@
     "backers-title": "Bạn đồng hành cùng Morphe",
     "backers-all": "Xem hết",
     "backers-loading": "Đang tải…",
-    "backers-empty": "Trở thành người đầu tiên ủng hộ Morphe!"
+    "backers-empty": "Trở thành người đầu tiên ủng hộ Morphe!",
+    "backers-thanks": "Mỗi người ủng hộ đều giúp Morphe luôn miễn phí và mở. Cảm ơn tất cả các bạn."
   },
   "changelog": {
     "title": "Có gì mới",
@@ -289,7 +290,9 @@
     "older-releases": "Tìm bản phát hành cũ hơn?",
     "view-manager": "Xem bản phát hành trình quản lý",
     "view-desktop": "Xem các bản phát hành Desktop",
-    "view-patches": "Xem bản phát hành bản vá"
+    "view-patches": "Xem bản phát hành bản vá",
+    "no-results": "Không tìm thấy bản phát hành nào với bộ lọc hiện tại.",
+    "no-results-hint": "Hãy thử điều chỉnh bộ lọc hoặc hiện bản thử nghiệm."
   },
   "add-source": {
     "subtitle": "Bạn có muốn thêm nguồn vá này vào Morphe không?",

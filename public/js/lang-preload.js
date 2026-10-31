@@ -43,8 +43,8 @@
         const baseLang = lang.split('-')[0];
         document.documentElement.dir = rtlLanguages.includes(baseLang) ? 'rtl' : 'ltr';
 
-        // Hide content until i18n loads
-        document.documentElement.classList.add('i18n-loading');
+        // Hide content until i18n loads; the HTML already ships in English
+        if (lang !== 'en') document.documentElement.classList.add('i18n-loading');
 
     } catch (e) {
         console.error('Language preload failed:', e);

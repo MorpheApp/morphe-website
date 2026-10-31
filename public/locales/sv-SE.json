@@ -276,7 +276,8 @@
     "backers-title": "Våra givare",
     "backers-all": "Se alla",
     "backers-loading": "Läser in …",
-    "backers-empty": "Bli den första som stöder Morphe!"
+    "backers-empty": "Bli den första som stöder Morphe!",
+    "backers-thanks": "Varje supporter hjälper till att hålla Morphe gratis och öppet. Tack till er alla."
   },
   "changelog": {
     "title": "Nyheter",
@@ -289,7 +290,9 @@
     "older-releases": "Vill du se äldre versioner?",
     "view-manager": "Visa Manager-versioner",
     "view-desktop": "Visa Desktop-versioner",
-    "view-patches": "Visa tilläggsversioner"
+    "view-patches": "Visa tilläggsversioner",
+    "no-results": "Inga versioner hittades med nuvarande filter.",
+    "no-results-hint": "Justera filtren eller visa förhandsversioner."
   },
   "add-source": {
     "subtitle": "Vill du lägga till den här tilläggskällan i Morphe?",

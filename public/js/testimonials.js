@@ -25,7 +25,7 @@
     function createTestimonialCard(testimonial) {
         const avatar = testimonial.author ? testimonial.author.charAt(0).toUpperCase() : '?';
         return `
-            <div class="testimonial-card">
+            <div class="testimonial-card lit">
                 <div class="testimonial-content">
                     <p class="testimonial-text">${testimonial.text}</p>
                 </div>

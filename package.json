@@ -12,13 +12,10 @@
     "inline": "node scripts/inline.js"
   },
   "devDependencies": {
-    "glob": "^13.0.6",
-    "html-inline": "^1.2.0",
+    "glob": "^14.0.3",
     "html-minifier-terser": "^7.2.0",
-    "terser": "^5.51.2"
-  },
-  "dependencies": {
-    "marked": "^18.1.1",
+    "marked": "^18.1.2",
+    "terser": "^5.51.2",
     "web-resource-inliner": "^8.0.0"
   }
 }
