@@ -277,7 +277,7 @@
     "backers-all": "Zobacz wszystkich",
     "backers-loading": "Wczytywanie…",
     "backers-empty": "Zostań pierwszym wspierającym Morphe!",
-    "backers-thanks": "Każdy wspierający pomaga utrzymać Morphe jako darmowy i otwarty. Dziękujemy wam wszystkim."
+    "backers-thanks": "Każdy wspierający pomaga utrzymać Morphe darmowym i otwartym. Dziękujemy Wam wszystkim."
   },
   "changelog": {
     "title": "Co nowego",
@@ -292,7 +292,7 @@
     "view-desktop": "Zobacz wydania na komputer",
     "view-patches": "Zobacz wydania modyfikacji",
     "no-results": "Nie znaleziono wydań dla bieżących filtrów.",
-    "no-results-hint": "Zmień filtry lub pokaż wersje przedpremierowe."
+    "no-results-hint": "Spróbuj dostosować filtry lub pokaż wersje przedpremierowe."
   },
   "add-source": {
     "subtitle": "Czy chcesz dodać to źródło modyfikacji do Morphe?",
