@@ -2918,6 +2918,7 @@ html[data-theme] {
         width: 38px;
         height: 38px;
         padding: 0;
+        gap: 0;
         justify-content: center;
         font-size: 0;
     }

@@ -5,15 +5,82 @@
     var OC_SLUG = 'morpheapp';
     var OC_GQL  = 'https://api.opencollective.com/graphql/v2';
 
-    var GQL_QUERY = JSON.stringify({
-        query: [
+    // API page size. Results are paged so older backers are never cut off
+    var PAGE_SIZE = 1000;
+
+    // Anyone with an Open Collective profile who gave at least this much in the recent window
+    // also counts as a Mega Supporter. Guest checkouts have no profile page to link to
+    var MEGA_RECENT_AMOUNT = 50;
+    var MEGA_RECENT_DAYS   = 30;
+
+    function membersQuery(offset) {
+        return [
             '{ collective(slug: "' + OC_SLUG + '") {',
-            '  members(role: BACKER, limit: 500, orderBy: { field: CREATED_AT, direction: DESC }) {',
+            '  members(role: BACKER, limit: ' + PAGE_SIZE + ', offset: ' + offset + ', orderBy: { field: CREATED_AT, direction: DESC }) {',
             '    totalCount nodes { createdAt totalDonations { value } tier { name } account { name imageUrl(height: 128) slug website } }',
             '  }',
             '}}'
-        ].join(' ')
-    });
+        ].join(' ');
+    }
+
+    function recentContributionsQuery(offset, dateFrom) {
+        return [
+            '{ transactions(account: { slug: "' + OC_SLUG + '" }, type: CREDIT, kind: [CONTRIBUTION],',
+            '  dateFrom: "' + dateFrom + '", limit: ' + PAGE_SIZE + ', offset: ' + offset + ') {',
+            '  totalCount nodes { amount { value } fromAccount { slug isIncognito ... on Individual { isGuest } } }',
+            '}}'
+        ].join(' ');
+    }
+
+    function gql(query) {
+        return fetch(OC_GQL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: query })
+        }).then(function (r) {
+            if (!r.ok) throw new Error('GraphQL error');
+            return r.json();
+        }).then(function (data) {
+            if (data.errors && data.errors.length) throw new Error(data.errors[0].message);
+            return data.data;
+        });
+    }
+
+    // Fetches every page. pick() returns the { totalCount, nodes } collection from a response
+    function fetchAll(buildQuery, pick) {
+        var all = [];
+        function next(offset) {
+            return gql(buildQuery(offset)).then(function (data) {
+                var page = pick(data);
+                if (!page) throw new Error('Missing collection in response');
+                var nodes = page.nodes || [];
+                all = all.concat(nodes);
+                if (nodes.length > 0 && all.length < page.totalCount) {
+                    return next(offset + nodes.length);
+                }
+                return { totalCount: page.totalCount, nodes: all };
+            });
+        }
+        return next(0);
+    }
+
+    // Total contributed per account slug within the recent window
+    function fetchRecentTotals() {
+        var dateFrom = new Date(Date.now() - MEGA_RECENT_DAYS * 24 * 60 * 60 * 1000).toISOString();
+        return fetchAll(
+            function (offset) { return recentContributionsQuery(offset, dateFrom); },
+            function (data) { return data && data.transactions; }
+        ).then(function (result) {
+            var totals = {};
+            result.nodes.forEach(function (tx) {
+                var from = tx && tx.fromAccount;
+                if (!from || !from.slug || from.isGuest || from.isIncognito) return;
+                var slug = from.slug;
+                totals[slug] = (totals[slug] || 0) + ((tx.amount && tx.amount.value) || 0);
+            });
+            return totals;
+        });
+    }
 
     function showEmpty(stateLoadId, stateEmptyId) {
         var stateLoad  = document.getElementById(stateLoadId);
@@ -22,14 +89,14 @@
         if (stateEmpty) stateEmpty.hidden = false;
     }
 
-    function isMegaSponsor(node) {
+    function isMegaTier(node) {
         if (!node || !node.tier || !node.tier.name) return false;
         var name = node.tier.name.toLowerCase();
         return name.indexOf('mega') !== -1 ||
                name.indexOf('sponsor') !== -1;
     }
 
-    function buildBackers(nodes, totalCount) {
+    function buildBackers(nodes, totalCount, recentTotals) {
         var container = document.getElementById('donate-avatars');
         var stateLoad = document.getElementById('donate-state-loading');
         if (!container) return;
@@ -55,11 +122,11 @@
                     account: account,
                     totalDonations: { value: 0 },
                     createdAt: node.createdAt,
-                    isMega: isMegaSponsor(node)
+                    isMega: (recentTotals[slug] || 0) >= MEGA_RECENT_AMOUNT
                 };
             }
             uniqueBackers[slug].totalDonations.value += (node.totalDonations && node.totalDonations.value) || 0;
-            if (isMegaSponsor(node)) {
+            if (isMegaTier(node)) {
                 uniqueBackers[slug].isMega = true;
             }
             if (node.createdAt && new Date(node.createdAt) < new Date(uniqueBackers[slug].createdAt)) {
@@ -214,6 +281,11 @@
                 img.alt = '';
                 img.onerror = function () { this.remove(); face.textContent = name[0].toUpperCase(); };
                 face.appendChild(img);
+            } else if (ANONYMOUS.test(name)) {
+                var heart = document.createElement('span');
+                heart.className = 'material-symbols-rounded';
+                heart.textContent = 'favorite';
+                face.appendChild(heart);
             } else {
                 face.textContent = name[0].toUpperCase();
             }
@@ -261,26 +333,25 @@
         box.hidden = false;
     }
 
-    function onFail() {
+    function onFail(err) {
+        console.error('Failed to load backers', err);
         showEmpty('donate-state-loading', 'donate-state-empty');
     }
 
-    fetch(OC_GQL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: GQL_QUERY
-    })
-        .then(function (r) {
-            if (!r.ok) throw new Error('GraphQL error');
-            return r.json();
-        })
-        .then(function (data) {
-            var collective = data.data && data.data.collective;
-            if (collective && collective.members) {
-                buildBackers(collective.members.nodes, collective.members.totalCount);
-            } else {
-                onFail();
-            }
+    var membersRequest = fetchAll(
+        membersQuery,
+        function (data) { return data && data.collective && data.collective.members; }
+    );
+
+    // Recent totals only add badges, so a failure here should not hide the backer list
+    var recentRequest = fetchRecentTotals().catch(function (err) {
+        console.error('Failed to load recent contributions', err);
+        return {};
+    });
+
+    Promise.all([membersRequest, recentRequest])
+        .then(function (results) {
+            buildBackers(results[0].nodes, results[0].totalCount, results[1]);
         })
         .catch(onFail);
 })();
