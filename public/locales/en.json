@@ -309,9 +309,6 @@
     "development-subtitle": "This Morphe patch source is still being developed. Please check back later",
     "desktop-title": "Open on Android",
     "desktop-subtitle": "This link adds a patch source to Morphe, which requires an Android device",
-    "desktop-step1": "Install <a href=\"/\">Morphe</a> on your Android device",
-    "desktop-step2": "Open this link on your Android device",
-    "desktop-step3": "Tap <strong>Open in Morphe</strong>",
     "blocked-title": "Source blocked",
     "blocked-subtitle": "This patch source has been flagged as unsafe and cannot be added to Morphe",
     "blocked-warning": "Repositories that distribute malicious patches, impersonate other developers, or violate our terms of service are blocked to protect users",
@@ -323,10 +320,14 @@
     "blocked-reason-test": "Test entry",
     "blocklist-updated": "Blocklist updated {{date}}",
     "desktop-qr-caption": "Scan with your phone's camera to continue",
-    "desktop-divider": "or",
     "desktop-qr-alt": "QR code that opens this link on your phone",
-    "desktop-copy-link-done": "Copied!",
-    "desktop-copy-link": "Copy link"
+    "desktop-expandable-title": "Using Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop & Git Repository",
+    "desktop-repo-desc": "Copy the repository URL and add it under Sources in Morphe Desktop:",
+    "desktop-copy-repo": "Copy repository URL",
+    "desktop-copy-repo-done": "Copied repository URL!",
+    "desktop-copy-link-done": "Copied page link!",
+    "desktop-copy-link": "Copy page link"
   },
   "error": {
     "go-home": "Go to homepage",

@@ -309,9 +309,6 @@
     "development-subtitle": "To źródło modyfikacji Morphe jest nadal rozwijane. Zajrzyj tu później",
     "desktop-title": "Otwórz na Androidzie",
     "desktop-subtitle": "Ten link dodaje źródło modyfikacji do Morphe, co wymaga Androida",
-    "desktop-step1": "Zainstaluj <a href=\"/\">Morphe</a> na swoim Androidzie",
-    "desktop-step2": "Otwórz ten link na swoim Androidzie",
-    "desktop-step3": "Dotknij <strong>Otwórz w Morphe</strong>",
     "blocked-title": "Źródło zablokowane",
     "blocked-subtitle": "To źródło modyfikacji zostało oznaczone jako niebezpieczne i nie może zostać dodane do Morphe",
     "blocked-warning": "Repozytoria, które udostępniają złośliwe modyfikacje, podszywają się pod innych twórców lub naruszają nasz regulamin, są blokowane w celu ochrony użytkowników",
@@ -323,10 +320,14 @@
     "blocked-reason-test": "Wpis testowy",
     "blocklist-updated": "Lista blokad zaktualizowana {{date}}",
     "desktop-qr-caption": "Zeskanuj aparatem telefonu, aby kontynuować",
-    "desktop-divider": "lub",
     "desktop-qr-alt": "Kod QR, który otwiera ten link na telefonie",
-    "desktop-copy-link-done": "Skopiowano!",
-    "desktop-copy-link": "Kopiuj link"
+    "desktop-expandable-title": "Używasz Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop i repozytorium Git",
+    "desktop-repo-desc": "Skopiuj adres repozytorium i dodaj go w sekcji Źródła w Morphe Desktop:",
+    "desktop-copy-repo": "Kopiuj adres repozytorium",
+    "desktop-copy-repo-done": "Skopiowano adres repozytorium!",
+    "desktop-copy-link-done": "Skopiowano link do strony!",
+    "desktop-copy-link": "Kopiuj link do strony"
   },
   "error": {
     "go-home": "Wróć na stronę główną",

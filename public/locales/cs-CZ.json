@@ -314,9 +314,6 @@
     "development-subtitle": "Tento zdroj patchů Morphe se stále vyvíjí. Zkuste to prosím později",
     "desktop-title": "Otevřít v Androidu",
     "desktop-subtitle": "Tento odkaz přidá zdroj patchů do Morphe, což vyžaduje zařízení s Androidem",
-    "desktop-step1": "Nainstalujte <a href=\"/\">Morphe</a> do svého zařízení s Androidem",
-    "desktop-step2": "Otevřete tento odkaz na svém zařízení s Androidem",
-    "desktop-step3": "Klepněte na <strong>Otevřít v Morphe</strong>",
     "blocked-title": "Zdroj zablokován",
     "blocked-subtitle": "Tento zdroj patchů byl označen jako nebezpečný a nelze jej přidat do Morphe",
     "blocked-warning": "Repozitáře, které šíří škodlivé patche, vydávají se za jiné vývojáře nebo porušují naše smluvní podmínky, jsou blokovány pro ochranu uživatelů",
@@ -328,10 +325,14 @@
     "blocked-reason-test": "Testovací záznam",
     "blocklist-updated": "Seznam blokovaných aktualizován {{date}}",
     "desktop-qr-caption": "Pro pokračování naskenujte fotoaparátem telefonu",
-    "desktop-divider": "nebo",
     "desktop-qr-alt": "QR kód, který otevře tento odkaz ve vašem telefonu",
-    "desktop-copy-link": "Kopírovat odkaz",
-    "desktop-copy-link-done": "Zkopírováno!"
+    "desktop-copy-link": "Kopírovat odkaz na stránku",
+    "desktop-copy-link-done": "Odkaz na stránku zkopírován!",
+    "desktop-expandable-title": "Používáte Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop a Git repozitář",
+    "desktop-repo-desc": "Zkopírujte URL repozitáře a přidejte ji v Morphe Desktop pod Zdroje:",
+    "desktop-copy-repo": "Kopírovat URL repozitáře",
+    "desktop-copy-repo-done": "URL repozitáře zkopírována!"
   },
   "faq-page": {
     "subtitle": "Najděte odpovědi na běžné dotazy a řešení známých problémů",

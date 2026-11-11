@@ -309,9 +309,6 @@
     "development-subtitle": "مصدر تصحيحات Morphe هذا لا يزال قيد التطوير. يرجى التحقق مرة أخرى لاحقًا.",
     "desktop-title": "الفتح على أندرويد",
     "desktop-subtitle": "هذا الرابط يقوم بإضافة مصدر تعديل إلى Morphe، وهو إجراء يتطلب جهاز أندرويد.",
-    "desktop-step1": "ثبّت <a href=\"/\">Morphe</a> على جهاز أندرويد الخاص بك",
-    "desktop-step2": "افتح هذا الرابط على جهاز أندرويد الخاص بك",
-    "desktop-step3": "انقر على <strong>الفتح في Morphe</strong>",
     "blocked-title": "تم حظر المصدر",
     "blocked-subtitle": "تم وضع علامة على مصدر التصحيحات هذا كغير آمن ولا يمكن إضافته إلى Morphe",
     "blocked-warning": "يتم حظر المستودعات التي توزع تصحيحات ضارة أو تنتحل هوية مطورين آخرين أو تنتهك شروط الخدمة لحماية المستخدمين",
@@ -323,10 +320,14 @@
     "blocked-reason-test": "إدخال اختباري",
     "blocklist-updated": "تم تحديث قائمة الحظر في {{date}}",
     "desktop-qr-caption": "امسح الرمز باستخدام كاميرا هاتفك للمتابعة",
-    "desktop-divider": "أو",
     "desktop-qr-alt": "رمز QR يفتح هذا الرابط على هاتفك",
-    "desktop-copy-link": "نسخ الرابط",
-    "desktop-copy-link-done": "تم النسخ!"
+    "desktop-copy-link": "نسخ رابط الصفحة",
+    "desktop-copy-link-done": "تم نسخ رابط الصفحة!",
+    "desktop-expandable-title": "هل تستخدم Morphe Desktop؟",
+    "desktop-repo-title": "Morphe Desktop ومستودع Git",
+    "desktop-repo-desc": "انسخ رابط المستودع وأضفه ضمن المصادر في Morphe Desktop:",
+    "desktop-copy-repo": "نسخ رابط المستودع",
+    "desktop-copy-repo-done": "تم نسخ رابط المستودع!"
   },
   "error": {
     "go-home": "العودة إلى الصفحة الرئيسية",

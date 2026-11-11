@@ -309,9 +309,6 @@
     "development-subtitle": "Nguồn vá Morphe này vẫn đang trong quá trình phát triển. Hãy quay lại sau nhé",
     "desktop-title": "Mở bằng thiết bị Android",
     "desktop-subtitle": "Liên kết này dùng để thêm nguồn vá vào Morphe, nên cần mở bằng thiết bị Android",
-    "desktop-step1": "Cài <a href=\"/\">Morphe</a> trên thiết bị Android",
-    "desktop-step2": "Mở liên kết này bằng thiết bị Android",
-    "desktop-step3": "Bấm <strong>Mở bằng Morphe</strong>",
     "blocked-title": "Nguồn vá đã bị chặn",
     "blocked-subtitle": "Nguồn vá này đã được báo cáo là không an toàn và không thể thêm vào Morphe",
     "blocked-warning": "Để bảo vệ người dùng, các repo chứa và phát tán bản vá độc hại, giả danh nhà phát triển hoặc vi phạm điều khoản dịch vụ sẽ bị chặn",
@@ -323,10 +320,14 @@
     "blocked-reason-test": "Mục thử nghiệm",
     "blocklist-updated": "Cập nhật lần cuối: {{date}}",
     "desktop-qr-caption": "Quét bằng camera điện thoại để tiếp tục",
-    "desktop-divider": "hoặc",
     "desktop-qr-alt": "Mã QR để mở liên kết này trên điện thoại",
-    "desktop-copy-link-done": "Đã sao chép!",
-    "desktop-copy-link": "Sao chép liên kết"
+    "desktop-copy-link-done": "Đã sao chép liên kết trang!",
+    "desktop-copy-link": "Sao chép liên kết trang",
+    "desktop-expandable-title": "Bạn đang sử dụng Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop & Kho lưu trữ Git",
+    "desktop-repo-desc": "Sao chép URL kho lưu trữ và thêm vào Nguồn trong Morphe Desktop:",
+    "desktop-copy-repo": "Sao chép URL kho lưu trữ",
+    "desktop-copy-repo-done": "Đã sao chép URL kho lưu trữ!"
   },
   "error": {
     "go-home": "Về trang chủ",

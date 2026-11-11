@@ -313,50 +313,181 @@
         });
     }
 
+    function fallbackCopy(text) {
+        var input = document.createElement('textarea');
+        input.value = text;
+        input.style.position = 'fixed';
+        input.style.opacity = '0';
+        document.body.appendChild(input);
+        input.focus();
+        input.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        document.body.removeChild(input);
+        return ok;
+    }
+
+    function copyToClipboard(text, onSuccess) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(onSuccess, function () {
+                if (fallbackCopy(text)) onSuccess();
+            });
+        } else if (fallbackCopy(text)) {
+            onSuccess();
+        }
+    }
+
     var copyLinkBtn = document.getElementById('btn-copy-link');
     if (copyLinkBtn) {
-        var copyIcon = document.getElementById('copy-link-icon');
-        var copyText = document.getElementById('copy-link-text');
-        var copyResetTimer = null;
+        var copyLinkIcon = document.getElementById('copy-link-icon');
+        var copyLinkText = document.getElementById('copy-link-text');
+        var copyLinkTimer = null;
 
-        function fallbackCopy(text) {
-            var input = document.createElement('textarea');
-            input.value = text;
-            input.style.position = 'fixed';
-            input.style.opacity = '0';
-            document.body.appendChild(input);
-            input.focus();
-            input.select();
-            var ok = false;
-            try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-            document.body.removeChild(input);
-            return ok;
-        }
-
-        function showCopied() {
-            if (copyResetTimer) clearTimeout(copyResetTimer);
-            copyIcon.textContent = 'check';
-            copyText.textContent = window.i18n
+        function showLinkCopied() {
+            if (copyLinkTimer) clearTimeout(copyLinkTimer);
+            copyLinkIcon.textContent = 'check';
+            copyLinkText.textContent = window.i18n
                 ? window.i18n.t('add-source.desktop-copy-link-done')
                 : 'Copied!';
-            copyResetTimer = setTimeout(function () {
-                copyIcon.textContent = 'content_copy';
-                copyText.textContent = window.i18n
+            copyLinkTimer = setTimeout(function () {
+                copyLinkIcon.textContent = 'content_copy';
+                copyLinkText.textContent = window.i18n
                     ? window.i18n.t('add-source.desktop-copy-link')
-                    : 'Copy link';
+                    : 'Copy page link';
             }, 1800);
         }
 
         copyLinkBtn.addEventListener('click', function () {
-            var link = window.location.href;
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(link).then(showCopied, function () {
-                    if (fallbackCopy(link)) showCopied();
-                });
-            } else if (fallbackCopy(link)) {
-                showCopied();
-            }
+            copyToClipboard(window.location.href, showLinkCopied);
         });
+    }
+
+    var copyRepoBtn = document.getElementById('btn-copy-repo');
+    if (copyRepoBtn) {
+        var copyRepoIcon = document.getElementById('copy-repo-icon');
+        var copyRepoText = document.getElementById('copy-repo-text');
+        var copyRepoTimer = null;
+
+        function showRepoCopied() {
+            if (copyRepoTimer) clearTimeout(copyRepoTimer);
+            copyRepoIcon.textContent = 'check';
+            copyRepoText.textContent = window.i18n
+                ? window.i18n.t('add-source.desktop-copy-repo-done')
+                : 'Copied repository URL!';
+            copyRepoTimer = setTimeout(function () {
+                copyRepoIcon.textContent = 'code';
+                copyRepoText.textContent = window.i18n
+                    ? window.i18n.t('add-source.desktop-copy-repo')
+                    : 'Copy repository URL';
+            }, 1800);
+        }
+
+        copyRepoBtn.addEventListener('click', function () {
+            copyToClipboard(url, showRepoCopied);
+        });
+    }
+
+    // Smooth accordion animation for desktop expandable section
+    var expandable = document.getElementById('desktop-expandable');
+    if (expandable) {
+        var animWrapper = document.getElementById('desktop-expandable-anim');
+        var summaryEl = expandable.querySelector('summary');
+        var contentEl = animWrapper ? animWrapper.querySelector('.desktop-expandable__content') : null;
+        var currentCleanup = null;
+
+        if (summaryEl && animWrapper && contentEl) {
+            summaryEl.addEventListener('click', function (e) {
+                var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if (reduceMotion) return;
+
+                e.preventDefault();
+
+                if (currentCleanup) {
+                    currentCleanup();
+                    currentCleanup = null;
+                }
+
+                var isClosing = !expandable.classList.contains('is-closing') && expandable.hasAttribute('open');
+
+                if (isClosing) {
+                    var currentHeight = animWrapper.offsetHeight;
+                    if (currentHeight === 0) {
+                        expandable.removeAttribute('open');
+                        expandable.classList.remove('is-closing');
+                        animWrapper.style.height = '';
+                        animWrapper.style.opacity = '';
+                        return;
+                    }
+
+                    expandable.classList.add('is-closing');
+                    expandable.classList.remove('is-opening');
+                    animWrapper.style.height = currentHeight + 'px';
+                    animWrapper.style.opacity = getComputedStyle(animWrapper).opacity;
+                    void animWrapper.offsetHeight;
+
+                    animWrapper.style.height = '0px';
+                    animWrapper.style.opacity = '0';
+
+                    function onCloseEnd(evt) {
+                        if (evt && (evt.target !== animWrapper || evt.propertyName !== 'height')) return;
+                        animWrapper.removeEventListener('transitionend', onCloseEnd);
+                        expandable.removeAttribute('open');
+                        expandable.classList.remove('is-closing');
+                        animWrapper.style.height = '';
+                        animWrapper.style.opacity = '';
+                        currentCleanup = null;
+                    }
+                    animWrapper.addEventListener('transitionend', onCloseEnd);
+                    currentCleanup = function () {
+                        animWrapper.removeEventListener('transitionend', onCloseEnd);
+                    };
+                } else {
+                    expandable.classList.remove('is-closing');
+                    expandable.classList.add('is-opening');
+
+                    var isAlreadyOpen = expandable.hasAttribute('open');
+                    var startHeight = isAlreadyOpen ? animWrapper.offsetHeight : 0;
+                    var startOpacity = isAlreadyOpen ? getComputedStyle(animWrapper).opacity : '0';
+
+                    animWrapper.style.height = startHeight + 'px';
+                    animWrapper.style.opacity = startOpacity;
+
+                    if (!isAlreadyOpen) {
+                        expandable.setAttribute('open', '');
+                    }
+                    void animWrapper.offsetHeight;
+
+                    var rafId = requestAnimationFrame(function () {
+                        var targetHeight = contentEl.offsetHeight;
+                        if (targetHeight === startHeight) {
+                            expandable.classList.remove('is-opening');
+                            animWrapper.style.height = '';
+                            animWrapper.style.opacity = '';
+                            currentCleanup = null;
+                            return;
+                        }
+                        animWrapper.style.height = targetHeight + 'px';
+                        animWrapper.style.opacity = '1';
+
+                        function onOpenEnd(evt) {
+                            if (evt && (evt.target !== animWrapper || evt.propertyName !== 'height')) return;
+                            animWrapper.removeEventListener('transitionend', onOpenEnd);
+                            expandable.classList.remove('is-opening');
+                            animWrapper.style.height = '';
+                            animWrapper.style.opacity = '';
+                            currentCleanup = null;
+                        }
+                        animWrapper.addEventListener('transitionend', onOpenEnd);
+                        currentCleanup = function () {
+                            animWrapper.removeEventListener('transitionend', onOpenEnd);
+                        };
+                    });
+                    currentCleanup = function () {
+                        cancelAnimationFrame(rafId);
+                    };
+                }
+            });
+        }
     }
 
     // Wait for i18n to be ready before showing states

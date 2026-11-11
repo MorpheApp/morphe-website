@@ -314,9 +314,6 @@
     "development-subtitle": "Esta fonte de patches do Morphe ainda está sendo desenvolvida. Por favor, verifique novamente mais tarde.",
     "desktop-title": "Abrir no Android",
     "desktop-subtitle": "Este link adiciona uma fonte de patches ao Morphe, o que requer um dispositivo Android",
-    "desktop-step1": "Instale o <a href=\"/\">Morphe</a> no seu dispositivo Android",
-    "desktop-step2": "Abra este link no seu dispositivo Android",
-    "desktop-step3": "Toque em <strong>Abrir no Morphe</strong>",
     "blocked-title": "Fonte bloqueada",
     "blocked-subtitle": "Esta fonte de patches foi marcada como insegura e não pode ser adicionada ao Morphe",
     "blocked-warning": "Repositórios que distribuem patches maliciosos, se passam por outros desenvolvedores ou violam nossos termos de serviço são bloqueados para proteger os usuários",
@@ -328,10 +325,14 @@
     "blocked-reason-test": "Entrada de teste",
     "blocklist-updated": "Lista de bloqueio atualizada em {{date}}",
     "desktop-qr-caption": "Escaneie com a câmera do seu celular para continuar",
-    "desktop-divider": "ou",
     "desktop-qr-alt": "Código QR que abre este link no seu celular",
-    "desktop-copy-link": "Copiar link",
-    "desktop-copy-link-done": "Copiado!"
+    "desktop-copy-link": "Copiar link da página",
+    "desktop-copy-link-done": "Link da página copiado!",
+    "desktop-expandable-title": "Usa o Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop e Repositório Git",
+    "desktop-repo-desc": "Copie a URL do repositório e adicione-a em Fontes no Morphe Desktop:",
+    "desktop-copy-repo": "Copiar URL do repositório",
+    "desktop-copy-repo-done": "URL do repositório copiada!"
   },
   "faq-page": {
     "subtitle": "Encontre respostas para perguntas comuns e soluções para problemas conhecidos",

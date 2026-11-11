@@ -309,9 +309,6 @@
     "development-subtitle": "Den här Morphe-tilläggskällan är fortfarande under utveckling. Kom tillbaka senare.",
     "desktop-title": "Öppna på Android",
     "desktop-subtitle": "Den här länken lägger till en tilläggskälla i Morphe, vilket kräver en Android-enhet",
-    "desktop-step1": "Installera <a href=\"/\">Morphe</a> på din Android-enhet",
-    "desktop-step2": "Öppna den här länken på din Android-enhet",
-    "desktop-step3": "Tryck på <strong>Öppna i Morphe</strong>",
     "blocked-title": "Källa blockerad",
     "blocked-subtitle": "Den här tilläggskällan har flaggats som osäker och kan inte läggas till i Morphe",
     "blocked-warning": "Lagringsplatser som distribuerar skadliga tillägg, utger sig för att vara andra utvecklare eller bryter mot våra användarvillkor blockeras för att skydda användare",
@@ -323,10 +320,14 @@
     "blocked-reason-test": "Testpost",
     "blocklist-updated": "Blockeringslistan uppdaterades den {{date}}",
     "desktop-qr-caption": "Läs med telefonens kamera för att fortsätta",
-    "desktop-divider": "eller",
     "desktop-qr-alt": "QR-kod som öppnar den här länken på din telefon",
-    "desktop-copy-link": "Kopiera länk",
-    "desktop-copy-link-done": "Kopierad!"
+    "desktop-copy-link": "Kopiera sidlänk",
+    "desktop-copy-link-done": "Sidlänk kopierad!",
+    "desktop-expandable-title": "Använder du Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop & Git-arkiv",
+    "desktop-repo-desc": "Kopiera arkivets URL och lägg till den under Källor i Morphe Desktop:",
+    "desktop-copy-repo": "Kopiera arkivets URL",
+    "desktop-copy-repo-done": "Arkivets URL kopierad!"
   },
   "error": {
     "go-home": "Gå till startsidan",

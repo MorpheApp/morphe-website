@@ -2067,6 +2067,82 @@ body.is-mobile-detected.add-source-page #state-android .hero-description {
     text-align: left;
 }
 
+.desktop-expandable {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--spacing-xl);
+    text-align: left;
+    overflow: hidden;
+}
+
+.desktop-expandable summary.desktop-expandable__summary {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+.desktop-expandable summary.desktop-expandable__summary::-webkit-details-marker {
+    display: none;
+}
+
+.desktop-expandable summary .arrow {
+    margin-left: auto;
+    font-size: 20px;
+    transition: transform 0.4s var(--spring);
+}
+
+.desktop-expandable[open]:not(.is-closing) summary .arrow {
+    transform: rotate(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .desktop-expandable summary.desktop-expandable__summary:hover {
+        color: var(--text-primary);
+        background-color: var(--bg-control);
+    }
+}
+
+.desktop-expandable__anim {
+    overflow: hidden;
+    transition: height 0.4s var(--ease-emph), opacity 0.3s ease;
+}
+
+.desktop-expandable.is-closing .desktop-expandable__anim {
+    transition: height 0.32s var(--ease-emph), opacity 0.25s ease;
+}
+
+.desktop-expandable__content {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    border-top: 1px solid var(--border);
+}
+
+.desktop-option {
+    padding-top: var(--spacing-md);
+}
+
+.desktop-option__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.desktop-option__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
 .steps-card ol {
     margin: 0;
     padding-left: 1.25rem;

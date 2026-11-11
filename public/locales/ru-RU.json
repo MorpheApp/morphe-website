@@ -314,9 +314,6 @@
     "development-subtitle": "Этот источник патчей Morphe все еще находится в разработке. Пожалуйста, зайдите позже.",
     "desktop-title": "Открыть на Android",
     "desktop-subtitle": "Эта ссылка добавляет источник патчей в Morphe, для чего требуется устройство Android",
-    "desktop-step1": "Установите <a href=\"/\">Morphe</a> на своё устройство Android",
-    "desktop-step2": "Откройте эту ссылку на своём устройстве Android",
-    "desktop-step3": "Нажмите <strong>Открыть в Morphe</strong>",
     "blocked-title": "Источник заблокирован",
     "blocked-subtitle": "Этот источник патчей помечен как небезопасный и не может быть добавлен в Morphe",
     "blocked-warning": "Репозитории, распространяющие вредоносные патчи, выдающие себя за других разработчиков или нарушающие условия использования, блокируются для защиты пользователей",
@@ -328,10 +325,14 @@
     "blocked-reason-test": "Тестовая запись",
     "blocklist-updated": "Список заблокированных обновлён {{date}}",
     "desktop-qr-caption": "Отсканируйте камерой телефона, чтобы продолжить",
-    "desktop-divider": "или",
     "desktop-qr-alt": "QR-код, который открывает эту ссылку на телефоне",
-    "desktop-copy-link": "Копировать ссылку",
-    "desktop-copy-link-done": "Скопировано!"
+    "desktop-copy-link": "Скопировать ссылку на страницу",
+    "desktop-copy-link-done": "Ссылка на страницу скопирована!",
+    "desktop-expandable-title": "Используете Morphe Desktop?",
+    "desktop-repo-title": "Morphe Desktop и репозиторий Git",
+    "desktop-repo-desc": "Скопируйте URL репозитория и добавьте его в раздел «Источники» в Morphe Desktop:",
+    "desktop-copy-repo": "Скопировать URL репозитория",
+    "desktop-copy-repo-done": "URL репозитория скопирован!"
   },
   "faq-page": {
     "subtitle": "Найдите ответы на частые вопросы и решения известных проблем",
