@@ -314,9 +314,6 @@
     "development-subtitle": "Bu Morphe yama kaynağı henüz geliştirme aşamasındadır. Lütfen daha sonra tekrar kontrol edin.",
     "desktop-title": "Android'de aç",
     "desktop-subtitle": "Bu bağlantı Morphe'e bir yama kaynağı ekler ve bir Android cihaz gerektirir",
-    "desktop-step1": "Android cihazınıza <a href=\"/\">Morphe</a> yükleyin",
-    "desktop-step2": "Bu bağlantıyı Android cihazınızda açın",
-    "desktop-step3": "<strong>Morphe'de aç</strong> seçeneğine dokunun",
     "blocked-title": "Kaynak engellendi",
     "blocked-subtitle": "Bu yama kaynağı güvensiz olarak işaretlendi ve Morphe'ye eklenemez",
     "blocked-warning": "Kötü amaçlı yamalar dağıtan, başka geliştiricilerin kimliğine bürünen veya hizmet şartlarımızı ihlal eden depolar, kullanıcıları korumak için engellenir",
@@ -328,10 +325,14 @@
     "blocked-reason-test": "Test kaydı",
     "blocklist-updated": "Engelleme listesi {{date}} tarihinde güncellendi",
     "desktop-qr-caption": "Devam etmek için telefonunuzun kamerasıyla tarayın",
-    "desktop-divider": "veya",
     "desktop-qr-alt": "Bu bağlantıyı telefonunuzda açan QR kodu",
-    "desktop-copy-link": "Bağlantıyı kopyala",
-    "desktop-copy-link-done": "Kopyalandı!"
+    "desktop-copy-link": "Sayfa bağlantısını kopyala",
+    "desktop-copy-link-done": "Sayfa bağlantısı kopyalandı!",
+    "desktop-expandable-title": "Morphe Desktop mu kullanıyorsunuz?",
+    "desktop-repo-title": "Morphe Desktop ve Git Deposu",
+    "desktop-repo-desc": "Depo bağlantısını kopyalayın ve Morphe Desktop'ta Kaynaklar altına ekleyin:",
+    "desktop-copy-repo": "Depo bağlantısını kopyala",
+    "desktop-copy-repo-done": "Depo bağlantısı kopyalandı!"
   },
   "faq-page": {
     "subtitle": "Sıkça sorulan soruların yanıtlarını ve bilinen sorunların çözümlerini bulun",

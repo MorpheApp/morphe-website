@@ -314,9 +314,6 @@
     "development-subtitle": "此 Morphe 补丁源仍处于开发阶段。请稍后再回来查看。",
     "desktop-title": "在 Android 上打开",
     "desktop-subtitle": "此链接会向 Morphe 添加一个补丁源，需要 Android 设备",
-    "desktop-step1": "在你的 Android 设备上安装 <a href=\"/\">Morphe</a>",
-    "desktop-step2": "在你的 Android 设备上打开此链接",
-    "desktop-step3": "点击 <strong>在 Morphe 中打开</strong>",
     "blocked-title": "已阻止来源",
     "blocked-subtitle": "该补丁源已被标记为不安全，无法添加到 Morphe",
     "blocked-warning": "分发恶意补丁、冒充其他开发者或违反服务条款的仓库将被阻止，以保护用户",
@@ -328,10 +325,14 @@
     "blocked-reason-test": "测试条目",
     "blocklist-updated": "阻止列表更新于 {{date}}",
     "desktop-qr-caption": "使用手机相机扫描以继续",
-    "desktop-divider": "或",
     "desktop-qr-alt": "在手机上打开此链接的二维码",
-    "desktop-copy-link": "复制链接",
-    "desktop-copy-link-done": "已复制！"
+    "desktop-copy-link": "复制页面链接",
+    "desktop-copy-link-done": "已复制页面链接！",
+    "desktop-expandable-title": "正在使用 Morphe Desktop？",
+    "desktop-repo-title": "Morphe Desktop 与 Git 仓库",
+    "desktop-repo-desc": "复制仓库 URL 并在 Morphe Desktop 的“来源”中添加：",
+    "desktop-copy-repo": "复制仓库 URL",
+    "desktop-copy-repo-done": "已复制仓库 URL！"
   },
   "faq-page": {
     "subtitle": "查找常见问题的解答和已知问题的解决方案",

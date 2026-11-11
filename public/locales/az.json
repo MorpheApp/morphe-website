@@ -309,9 +309,6 @@
     "development-subtitle": "Bu Morphe yamaq mənbəsi hələ də hazırlanır. Lütfən, daha sonra yenidən yoxlayın",
     "desktop-title": "Android-də aç",
     "desktop-subtitle": "Bu keçid Morphe-yə Android cihazı tələb edən yamaq mənbəyi əlavə edir",
-    "desktop-step1": "Android cihazınızda <a href=\"/\">Morphe</a> quraşdırın",
-    "desktop-step2": "Bu keçidi Android cihazınızda açın",
-    "desktop-step3": "<strong>Morphe-də aç</strong> üzərinə toxunun",
     "blocked-title": "Mənbə bloklanıb",
     "blocked-subtitle": "Bu yamaq mənbəsi etibarsız kimi işarələnib və Morphe-yə əlavə edilə bilməz",
     "blocked-warning": "Zərərli yamaqlar yayan, digər tərtibatçıları təqlid edən və ya xidmət şərtlərimizi pozan depolar istifadəçiləri qorumaq üçün bloklanır",
@@ -323,10 +320,14 @@
     "blocked-reason-test": "Test girişi",
     "blocklist-updated": "Blok siyahısı yeniləndi {{date}}",
     "desktop-qr-caption": "Davam etmək üçün telefonunuzun kamerası ilə skanlayın",
-    "desktop-divider": "və ya",
     "desktop-qr-alt": "Bu keçidi telefonunuzda açan QR kod",
-    "desktop-copy-link-done": "Kopyalandı!",
-    "desktop-copy-link": "Keçidi kopyala"
+    "desktop-copy-link-done": "Səhifə linki kopyalandı!",
+    "desktop-copy-link": "Səhifə linkini kopyala",
+    "desktop-expandable-title": "Morphe Desktop istifadə edirsiniz?",
+    "desktop-repo-title": "Morphe Desktop və Git Repozitoriyası",
+    "desktop-repo-desc": "Repozitoriya linkini kopyalayın və Morphe Desktop-da Mənbələr bölməsinə əlavə edin:",
+    "desktop-copy-repo": "Repozitoriya linkini kopyala",
+    "desktop-copy-repo-done": "Repozitoriya linki kopyalandı!"
   },
   "error": {
     "go-home": "Əsas səhifəyə get",

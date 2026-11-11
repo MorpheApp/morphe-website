@@ -111,20 +111,30 @@
         <p class="qr-card__caption" data-i18n="add-source.desktop-qr-caption">Scan with your phone's camera to continue</p>
     </div>
 
-    <div class="or-divider" data-i18n="add-source.desktop-divider">or</div>
-
-    <div class="steps-card">
-        <ol>
-            <li data-i18n-html="add-source.desktop-step1">Install <a href="/">Morphe</a> on your Android device</li>
-            <li data-i18n="add-source.desktop-step2">Open this link on your Android device</li>
-            <li data-i18n-html="add-source.desktop-step3">Tap <strong>Open in Morphe</strong></li>
-        </ol>
-    </div>
+    <details class="desktop-expandable" id="desktop-expandable">
+        <summary class="desktop-expandable__summary">
+            <span class="material-symbols-rounded">install_desktop</span>
+            <span data-i18n="add-source.desktop-expandable-title">Using Morphe Desktop?</span>
+            <span class="material-symbols-rounded arrow">expand_more</span>
+        </summary>
+        <div class="desktop-expandable__anim" id="desktop-expandable-anim">
+            <div class="desktop-expandable__content">
+                <div class="desktop-option">
+                    <div class="desktop-option__title" data-i18n="add-source.desktop-repo-title">Morphe Desktop & Git Repository</div>
+                    <p class="desktop-option__desc" data-i18n="add-source.desktop-repo-desc">Copy the repository URL and add it under Sources in Morphe Desktop:</p>
+                    <button type="button" class="btn btn-secondary" id="btn-copy-repo">
+                        <span class="material-symbols-rounded" id="copy-repo-icon">code</span>
+                        <span id="copy-repo-text" data-i18n="add-source.desktop-copy-repo">Copy repository URL</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </details>
 
     <a href="/" class="btn btn-primary" data-i18n="error.go-home">Go to homepage</a>
     <button type="button" class="btn btn-secondary" id="btn-copy-link">
         <span class="material-symbols-rounded" id="copy-link-icon">content_copy</span>
-        <span id="copy-link-text" data-i18n="add-source.desktop-copy-link">Copy link</span>
+        <span id="copy-link-text" data-i18n="add-source.desktop-copy-link">Copy page link</span>
     </button>
 </div>
 
