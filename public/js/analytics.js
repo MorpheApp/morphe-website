@@ -9,6 +9,8 @@
   analytics.src = 'https://analytics.morphe.software/script.js';
   analytics.setAttribute('data-website-id', WEBSITE_ID);
   analytics.setAttribute('data-performance', 'true');
+  // FAQ items write their id into the #hash on open/close; without this each toggle is a pageview.
+  analytics.setAttribute('data-exclude-hash', 'true');
   analytics.onerror = function() {};
   document.head.appendChild(analytics);
 
@@ -88,12 +90,4 @@
 
   document.head.appendChild(gaScript);
 
-  // --- Track browser language for localization insights ---
-  window.addEventListener('load', () => {
-    if (window.umami) {
-      umami.track('Browser', {
-        language: navigator.language
-      });
-    }
-  });
 })();
