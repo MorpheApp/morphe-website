@@ -12,7 +12,7 @@
     "inline": "node scripts/inline.js"
   },
   "devDependencies": {
-    "glob": "^14.0.4",
+    "glob": "^14.0.6",
     "html-minifier-terser": "^7.2.0",
     "marked": "^18.2.0",
     "terser": "^5.51.2",
