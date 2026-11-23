@@ -68,7 +68,6 @@ jobs:
           echo "FAQ page generated"
 
       - name: Fetch and Update Morphe Manager Download Link
-        id: manager
         run: |
           MANAGER_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-manager/refs/heads/main/app-release.json"
           VERSION=$(curl -s "$MANAGER_PROPS_URL" | jq -r '.version')
@@ -80,7 +79,7 @@ jobs:
           # Skip the remaining steps (including deploy) without failing the workflow.
           if [[ "$VERSION" == *-dev* ]]; then
             echo "Morphe Manager main branch has a dev version ($VERSION), skipping deployment."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "SKIP_DEPLOY=true" >> "$GITHUB_ENV"
             exit 0
           fi
           DOWNLOAD_URL="https://github.com/MorpheApp/morphe-manager/releases/download/v$VERSION/morphe-manager-$VERSION.apk"
@@ -90,7 +89,7 @@ jobs:
           echo "Updated index.html with Morphe Manager download link."
 
       - name: Fetch and Update Morphe Desktop Download Link
-        if: steps.manager.outputs.skip != 'true'
+        if: env.SKIP_DEPLOY != 'true'
         run: |
           DESKTOP_PROPS_URL="https://raw.githubusercontent.com/MorpheApp/morphe-desktop/refs/heads/main/gradle.properties"
           VERSION=$(curl -s "$DESKTOP_PROPS_URL" | grep -E '^\s*version\s*=\s*' | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
@@ -105,14 +104,20 @@ jobs:
           echo "Updated index.html with Morphe Desktop download link."
 
       - name: Fetch and Update MicroG Download Link
-        if: steps.manager.outputs.skip != 'true'
+        if: env.SKIP_DEPLOY != 'true'
         run: |
           MICROG_BUILD_GRADLE_URL="https://raw.githubusercontent.com/MorpheApp/MicroG-RE/refs/heads/main/build.gradle"
           # parse out: def ourGmsVersionName = "x.x.x"
-          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep -E '^\s*def ourGmsVersionName\s*=\s*"[0-9.]+"' | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
+          VERSION=$(curl -s $MICROG_BUILD_GRADLE_URL | grep -E '^\s*def ourGmsVersionName\s*=\s*"[0-9.]+(-dev[^"]*)?"' | head -n 1 | cut -d '=' -f 2 | tr -d " '\"[:space:]")
           if [ -z "$VERSION" ]; then
             echo "Error: Could not find ourGmsVersionName in build.gradle." >&2
             exit 1
+          fi
+          # A MicroG release is likely in progress and main briefly has a dev version.
+          if [[ "$VERSION" == *-dev* ]]; then
+            echo "MicroG main branch has a dev version ($VERSION), skipping deployment."
+            echo "SKIP_DEPLOY=true" >> "$GITHUB_ENV"
+            exit 0
           fi
           DOWNLOAD_URL="https://github.com/MorpheApp/MicroG-RE/releases/download/$VERSION/microg-$VERSION.apk"
           
@@ -122,19 +127,19 @@ jobs:
 
       # Must inline first then minify
       - name: Inline HTML/CSS/JS
-        if: steps.manager.outputs.skip != 'true'
+        if: env.SKIP_DEPLOY != 'true'
         run: npm run inline
 
       - name: Minify HTML/CSS/JS
-        if: steps.manager.outputs.skip != 'true'
+        if: env.SKIP_DEPLOY != 'true'
         run: npm run minify
 
       - name: Install Wrangler
-        if: steps.manager.outputs.skip != 'true'
+        if: env.SKIP_DEPLOY != 'true'
         run: npm install -g wrangler
 
       - name: Deploy with Wrangler
-        if: steps.manager.outputs.skip != 'true'
+        if: env.SKIP_DEPLOY != 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
