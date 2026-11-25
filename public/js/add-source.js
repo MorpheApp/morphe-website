@@ -25,13 +25,26 @@
 
     var blocklistPromise = fetchBlocklist();
 
-    // Host marks cut into the avatar's corner, from the Simple Icons set
-    var GITHUB_MARK = '<svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.9 1.3 1.9 1.3 3.1 0 4.7-2.8 5.7-5.5 6 .5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>';
-    var GITLAB_MARK = '<svg viewBox="0 0 24 24"><path d="m23.6 9.6-.03-.09-3.26-8.5a.85.85 0 0 0-1.62.06l-2.2 6.74H7.5L5.3 1.07a.85.85 0 0 0-1.62-.06L.43 9.5l-.03.09a6.06 6.06 0 0 0 2 7l.02.01.03.02 4.98 3.73 2.46 1.86 1.5 1.13a1 1 0 0 0 1.22 0l1.5-1.13 2.46-1.86 5-3.75.02-.01a6.06 6.06 0 0 0 2-7"/></svg>';
+    // Hosts a source can live on, by the key Manager and the bundles site name them by in links.
+    // Their marks are cut into the avatar's corner, from the Simple Icons set
+    var HOSTS = {
+        github: {
+            domain: 'github.com',
+            mark: '<svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.9 1.3 1.9 1.3 3.1 0 4.7-2.8 5.7-5.5 6 .5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>'
+        },
+        gitlab: {
+            domain: 'gitlab.com',
+            mark: '<svg viewBox="0 0 24 24"><path d="m23.6 9.6-.03-.09-3.26-8.5a.85.85 0 0 0-1.62.06l-2.2 6.74H7.5L5.3 1.07a.85.85 0 0 0-1.62-.06L.43 9.5l-.03.09a6.06 6.06 0 0 0 2 7l.02.01.03.02 4.98 3.73 2.46 1.86 1.5 1.13a1 1 0 0 0 1.22 0l1.5-1.13 2.46-1.86 5-3.75.02-.01a6.06 6.06 0 0 0 2-7"/></svg>'
+        },
+        codeberg: {
+            domain: 'codeberg.org',
+            mark: '<svg viewBox="0 0 24 24"><path d="M11.999.747A11.974 11.974 0 0 0 0 12.75c0 2.254.635 4.465 1.833 6.376L11.837 6.19c.072-.092.251-.092.323 0l4.178 5.402h-2.992l.065.239h3.113l.882 1.138h-3.674l.103.374h3.86l.777 1.003h-4.358l.135.483h4.593l.695.894h-5.038l.165.589h5.326l.609.785h-5.717l.182.65h6.038l.562.727h-6.397l.183.65h6.717A12.003 12.003 0 0 0 24 12.75 11.977 11.977 0 0 0 11.999.747zm3.654 19.104.182.65h5.326c.173-.204.353-.433.513-.65zm.385 1.377.18.65h3.563c.233-.198.485-.428.712-.65zm.383 1.377.182.648h1.203c.356-.204.685-.412 1.042-.648z"/></svg>'
+        }
+    };
 
-    var params    = new URLSearchParams(window.location.search);
-    var githubRepo = params.get('github') || '';
-    var gitlabRepo = params.get('gitlab') || '';
+    var params   = new URLSearchParams(window.location.search);
+    var provider = Object.keys(HOSTS).filter(function (key) { return params.get(key); })[0];
+    var repo     = provider ? params.get(provider) : '';
     var name       = params.get('name') || '';
     // App the link was opened for, by package and by name. Manager adds the source for it alone,
     // or for its universal patches alone when the bundles site passes UNIVERSAL_APP in its place
@@ -40,21 +53,18 @@
     var appName    = params.get('appName') || '';
     var appIcon    = params.get('appIcon') || '';
 
-    var isGitLab = !!gitlabRepo;
-    var repo     = gitlabRepo || githubRepo;
-
     // No repo param - redirect home
     if (!repo) { window.location.href = '/'; return; }
 
     var isDevelopment = repo === 'xyz-user/xyz-patches';
-    var providerKey   = (isGitLab ? 'gitlab' : 'github') + '=' + repo.toLowerCase();
+    var providerKey   = provider + '=' + repo.toLowerCase();
 
     var repoOwner = repo.split('/')[0];
 
     function getTrackingData() {
         var data = {
             repo: repo.toLowerCase(),
-            provider: isGitLab ? 'gitlab' : 'github'
+            provider: provider
         };
         if (appPackage) data.app = appPackage;
         return data;
@@ -84,9 +94,8 @@
         }
     });
 
-    var url = isGitLab
-        ? 'https://gitlab.com/' + repo
-        : 'https://github.com/' + repo;
+    var host = HOSTS[provider].domain;
+    var url  = 'https://' + host + '/' + repo;
 
     var isAndroid = (function() {
         var ua = navigator.userAgent;
@@ -103,12 +112,10 @@
     }
 
     // Header and rows the way Manager shows them: the repository as the title, its owner under it
-    var match = url.match(/(?:github|gitlab)\.com\/([^/?#]+\/[^/?#]+)/);
-    var repoPath = match ? match[1] : repo;
-    var host = isGitLab ? 'gitlab.com' : 'github.com';
+    var repoPath = repo.split(/[?#]/)[0].split('/').slice(0, 2).join('/');
     document.getElementById('source-name').textContent = name || repoPath.split('/')[1] || repoPath;
     document.getElementById('source-owner').textContent = host + '/' + repoOwner;
-    document.getElementById('source-host-mark').innerHTML = isGitLab ? GITLAB_MARK : GITHUB_MARK;
+    document.getElementById('source-host-mark').innerHTML = HOSTS[provider].mark;
 
     var blockedTitleEl = document.getElementById('blocked-source-title');
     if (blockedTitleEl) blockedTitleEl.textContent = name || repoPath;
@@ -153,8 +160,7 @@
     var encodedName  = name ? encodeURIComponent(name) : '';
     var encodedApp   = appPackage ? encodeURIComponent(appPackage) : '';
     var encodedAppName = appPackage && appName ? encodeURIComponent(appName) : '';
-    var repoParam    = isGitLab ? 'gitlab' : 'github';
-    var intentParams = repoParam + '=' + encodedRepo +
+    var intentParams = provider + '=' + encodedRepo +
         (encodedName ? '&name=' + encodedName : '') +
         (encodedApp ? '&app=' + encodedApp : '') +
         (encodedAppName ? '&appName=' + encodedAppName : '');
